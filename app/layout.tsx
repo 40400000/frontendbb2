@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NavigationMenuDemo } from "@/components/navigation-menu-demo";
+import { Button } from "@/components/ui/button";
+import PromotionBanner from '@/components/promotion-banner';
+import { ThemeProvider } from "@/components/theme-provider";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +28,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+      
+          <header className="sticky top-0 z-50 w-full bg-background">
+            <div className="container flex h-17 items-center justify-between mx-auto px-4">
+              <div className="flex items-center space-x-4">
+                <span className="font-bold text-lg">Bolbaas</span>
+                <NavigationMenuDemo />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Button variant="outline">Inloggen</Button>
+                <Button>Aanmelden</Button>
+              </div>
+            </div>
+          </header>
+          <main className="container mx-auto pt-8">
+            {children}
+          </main>
+          <div className="container mx-auto">
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

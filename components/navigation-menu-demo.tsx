@@ -1,0 +1,608 @@
+"use client"
+
+import * as React from "react"
+import Link from "next/link"
+import { useState } from "react"
+
+import { cn } from "@/lib/utils"
+import { Icons } from "@/components/icons"
+import {
+  NavigationMenu,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import {
+  BarChart,
+  LineChart,
+  ShoppingCart,
+  FileText,
+  Mail,
+  Calculator,
+  PieChart,
+  Search,
+  Sparkles,
+  Image,
+  FileClock,
+  TestTubeDiagonal,
+  Target,
+  Activity,
+  KeyRound,
+  Briefcase,
+  ShieldAlert,
+  Truck,
+} from "lucide-react"
+
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+  highlight?: boolean;
+}
+
+const components: { title: string; href: string; description: string }[] = [
+  {
+    title: "Alert Dialog",
+    href: "/docs/primitives/alert-dialog",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Hover Card",
+    href: "/docs/primitives/hover-card",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Progress",
+    href: "/docs/primitives/progress",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+  {
+    title: "Scroll-area",
+    href: "/docs/primitives/scroll-area",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Tabs",
+    href: "/docs/primitives/tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Tooltip",
+    href: "/docs/primitives/tooltip",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+  },
+]
+
+const featureCategories: {
+  [key: string]: {
+    title: string;
+    colorClass: string;
+    iconClass: string;
+    items: FeatureItem[];
+  };
+} = {
+  insights: {
+    title: "Inzichten",
+    colorClass: "hover:bg-blue-50 group-hover:border-blue-200",
+    iconClass: "text-blue-500",
+    items: [
+      {
+        title: "Ranking inzichten",
+        description: "Volg en analyseer je product rankings",
+        icon: "LineChart",
+        href: "/features/ranking-insights"
+      },
+      {
+        title: "Verkoop inzichten",
+        description: "Uitgebreid overzicht van je verkoopprestaties",
+        icon: "BarChart",
+        href: "/features/sales-dashboard"
+      },
+      {
+        title: "Product inzichten",
+        description: "Gedetailleerde analyse van je productprestaties",
+        icon: "LineChart",
+        href: "/features/product-insights"
+      },
+      {
+        title: "Bestellingen inzichten",
+        description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
+        icon: "ShoppingCart",
+        href: "/features/order-insights"
+      },
+      {
+        title: "Levering tracker",
+        description: "Volg de status van je leveringen",
+        icon: "Truck",
+        href: "/features/delivery-tracker"
+      },
+    ]
+  },
+  tools: {
+    title: "Tools",
+    colorClass: "hover:bg-purple-50 group-hover:border-purple-200",
+    iconClass: "text-purple-500",
+    items: [
+      {
+        title: "Keyword database",
+        description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools",
+        icon: "Search",
+        href: "/features/keyword-analysis",
+        highlight: true,
+      },
+      {
+        title: "Winst & ACoS calculator",
+        description: "Bereken winstgevendheid van producten en campagnes",
+        icon: "PieChart",
+        href: "/features/profit-calculator"
+      },
+      {
+        title: "Listing AI",
+        description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
+        icon: "Sparkles",
+        href: "/features/listing-ai"
+      },
+      {
+        title: "A/B testen van listings",
+        description: "Test verschillende listing varianten voor optimalisatie",
+        icon: "TestTubeDiagonal",
+        href: "/features/ab-testing"
+      },
+    ]
+  },
+  automation: {
+    title: "Automatisering",
+    colorClass: "hover:bg-pink-50 group-hover:border-pink-200",
+    iconClass: "text-pink-500",
+    items: [
+      {
+        title: "Factuur automatisering",
+        description: "Geautomatiseerde factuur generatie en beheer",
+        icon: "FileText",
+        href: "/features/invoice-automation"
+      },
+      {
+        title: "E-mail automatisering",
+        description: "Verzamel meer reviews met geautomatiseerde e-mails",
+        icon: "Mail",
+        href: "/features/email-automation"
+      },
+      {
+        title: "BTW-aangifte automatisering",
+        description: "Geautomatiseerde BTW-aangifte berekening",
+        icon: "Calculator",
+        href: "/features/tax-automation"
+      },
+      {
+        title: "Automatische changelog",
+        description: "Houd wijzigingen in listings automatisch bij",
+        icon: "FileClock",
+        href: "/features/changelog-automation"
+      },
+    ]
+  },
+  tracking: {
+    title: "Tracking",
+    colorClass: "hover:bg-green-50 group-hover:border-green-200",
+    iconClass: "text-green-500",
+    items: [
+      {
+        title: "Precision tracking",
+        description: "Nauwkeurige tracking van je belangrijkste statistieken",
+        icon: "Target",
+        href: "/features/precision-tracking",
+        highlight: true,
+      },
+      {
+        title: "Dynamic tracking",
+        description: "Dynamische aanpassing van tracking parameters",
+        icon: "Activity",
+        href: "/features/dynamic-tracking"
+      },
+      {
+        title: "Keyword tracking",
+        description: "Volg de prestaties van specifieke zoekwoorden",
+        icon: "KeyRound",
+        href: "/features/keyword-tracking"
+      },
+      {
+        title: "Project management",
+        description: "Beheer je projecten en taken efficiënt",
+        icon: "Briefcase",
+        href: "/features/project-management"
+      },
+      {
+        title: "Listing Hijacker tracker",
+        description: "krijg meldingen als jou listing wordt gehijacked",
+        icon: "ShieldAlert",
+        href: "/features/listing-hijacker-tracker"
+      },
+    ]
+  }
+}
+
+// Helper function to render icons based on name
+function renderIcon(iconName: string, className: string) {
+  switch (iconName) {
+    // Insights
+    case "LineChart": return <Icons.lineChart className={className} />;
+    case "BarChart": return <Icons.barChart className={className} />;
+    case "ShoppingCart": return <Icons.shoppingCart className={className} />;
+    case "Truck": return <Truck className={className} />;
+    // Tools
+    case "Search": return <Icons.search className={className} />;
+    case "PieChart": return <Icons.pieChart className={className} />;
+    case "Sparkles": return <Icons.sparkles className={className} />;
+    case "TestTubeDiagonal": return <TestTubeDiagonal className={className} />;
+    // Automation
+    case "FileText": return <Icons.fileText className={className} />;
+    case "Mail": return <Icons.mail className={className} />;
+    case "Calculator": return <Icons.calculator className={className} />;
+    case "FileClock": return <FileClock className={className} />;
+    // Tracking
+    case "Target": return <Target className={className} />;
+    case "Activity": return <Activity className={className} />;
+    case "KeyRound": return <KeyRound className={className} />;
+    case "Briefcase": return <Briefcase className={className} />;
+    case "ShieldAlert": return <ShieldAlert className={className} />;
+    default: return null;
+  }
+}
+
+// Define menu identifiers
+type MenuId = "ai" | "automation" | "data" | "tracking" | null;
+
+// Content rendering component/helper
+function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
+  if (!activeMenu) return null;
+
+  const SidebarContent = ({ title, subtitle }: { title: string; subtitle: string }) => (
+    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent px-4 py-5 z-10">
+      <p className="text-xl font-bold text-white">{title}</p>
+      <p className="text-base font-medium text-white/90">{subtitle}</p>
+    </div>
+  );
+
+  // Define content for each menu
+  const menuContents: Record<Exclude<MenuId, null>, React.ReactNode> = {
+    ai: (
+      <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
+        <div className="w-[200px] border-r">
+          <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+            <SidebarContent title="Bolbaas AI Tools" subtitle="Ontdek onze tools" />
+          </div>
+        </div>
+        <div className="flex flex-1 gap-0">
+          {featureCategories.tools.items.map((item, index, arr) => {
+            const category = featureCategories.tools;
+            return (
+              <div key={item.title} className={cn(
+                "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                index < arr.length - 1 && "border-r border-border"
+              )}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "flex flex-col items-start gap-2.5 p-2 relative h-full border border-transparent"
+                  )}>
+                  <div className={cn(
+                    "flex h-8 w-8 shrink-0 items-center justify-center rounded border bg-background transition-colors"
+                  )}>
+                    <div className={category.iconClass}>
+                      {renderIcon(item.icon, "h-4 w-4")}
+                    </div>
+                  </div>
+                  <div className="flex flex-col mt-auto">
+                    {item.highlight && (
+                      <span className="inline-flex items-center rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 mb-1 self-start">
+                        NIEUW
+                      </span>
+                    )}
+                    <div className="text-base font-semibold group-hover:text-black">
+                      {item.title}
+                    </div>
+                    <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                      {item.description}
+                    </p>
+                    <span className="inline-block border border-white text-white group-hover:border-purple-500 group-hover:text-purple-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                      Lees meer
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ),
+    automation: (
+       <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
+              <div className="w-[200px] border-r">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                   <SidebarContent title="Bolbaas Automatisering" subtitle="Beheer je winkel" />
+                </div>
+              </div>
+               <div className="flex flex-1 gap-0">
+                 {featureCategories.automation.items.map((item, index, arr) => {
+                    const category = featureCategories.automation;
+                    return (
+                      <div key={item.title} className={cn(
+                        "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                        index < arr.length - 1 && "border-r border-border"
+                      )}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "flex flex-col items-start gap-2.5 p-2 relative h-full border border-transparent"
+                          )}>
+                          <div className={cn(
+                            "flex h-8 w-8 shrink-0 items-center justify-center rounded border bg-background transition-colors"
+                          )}>
+                            <div className={category.iconClass}>
+                              {renderIcon(item.icon, "h-4 w-4")}
+                            </div>
+                          </div>
+                          <div className="flex flex-col mt-auto">
+                            {item.highlight && (
+                              <span className="inline-flex items-center rounded-full bg-pink-100 px-2 py-0.5 text-xs font-medium text-pink-800 mb-1 self-start">
+                                NIEUW
+                              </span>
+                            )}
+                            <div className="text-base font-semibold group-hover:text-black">
+                              {item.title}
+                            </div>
+                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                              {item.description}
+                            </p>
+                            <span className="inline-block border border-white text-white group-hover:border-pink-500 group-hover:text-pink-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                              Lees meer
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+               </div>
+            </div>
+    ),
+    data: (
+        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
+              <div className="w-[200px] border-r">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                    <SidebarContent title="Bolbaas Data Inzichten" subtitle="Diepgaande data analyse" />
+                </div>
+              </div>
+               <div className="flex flex-1 gap-0">
+                 {featureCategories.insights.items.map((item, index, arr) => {
+                    const category = featureCategories.insights;
+                    return (
+                     <div key={item.title} className={cn(
+                       "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                       index < arr.length - 1 && "border-r border-border"
+                     )}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "flex flex-col items-start gap-2.5 p-2 relative h-full border border-transparent"
+                          )}>
+                           <div className={cn(
+                            "flex h-8 w-8 shrink-0 items-center justify-center rounded border bg-background transition-colors"
+                           )}>
+                            <div className={category.iconClass}>
+                              {renderIcon(item.icon, "h-4 w-4")}
+                            </div>
+                          </div>
+                          <div className="flex flex-col mt-auto">
+                            {item.highlight && (
+                              <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-800 mb-1 self-start">
+                                NIEUW
+                              </span>
+                            )}
+                            <div className="text-base font-semibold group-hover:text-black">
+                              {item.title}
+                            </div>
+                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                              {item.description}
+                            </p>
+                            <span className="inline-block border border-white text-white group-hover:border-blue-500 group-hover:text-blue-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                              Lees meer
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+               </div>
+            </div>
+    ),
+    tracking: (
+       <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
+              <div className="w-[200px] border-r">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                    <SidebarContent title="Bolbaas Tracking" subtitle="Monitor je prestaties" />
+                </div>
+              </div>
+               <div className="flex flex-1 gap-0">
+                 {featureCategories.tracking.items.map((item, index, arr) => {
+                    const category = featureCategories.tracking;
+                    return (
+                      <div key={item.title} className={cn(
+                        "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                        index < arr.length - 1 && "border-r border-border"
+                      )}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "flex flex-col items-start gap-2.5 p-2 relative h-full border border-transparent"
+                          )}>
+                           <div className={cn(
+                            "flex h-8 w-8 shrink-0 items-center justify-center rounded border bg-background transition-colors"
+                           )}>
+                            <div className={category.iconClass}>
+                              {renderIcon(item.icon, "h-4 w-4")}
+                            </div>
+                          </div>
+                           <div className="flex flex-col mt-auto">
+                            {item.highlight && (
+                              <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800 mb-1 self-start">
+                                NIEUW
+                              </span>
+                            )}
+                            <div className="text-base font-semibold group-hover:text-black">
+                              {item.title}
+                            </div>
+                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                              {item.description}
+                            </p>
+                            <span className="inline-block border border-white text-white group-hover:border-green-500 group-hover:text-green-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                              Lees meer
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+               </div>
+            </div>
+    ),
+  };
+
+  return menuContents[activeMenu];
+}
+
+export function NavigationMenuDemo() {
+  const [activeMenu, setActiveMenu] = useState<MenuId>(null);
+  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (menuId: Exclude<MenuId, null>) => {
+     if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveMenu(menuId);
+  };
+
+  const handleMouseLeave = () => {
+    // Delay closing the menu slightly
+    timeoutRef.current = setTimeout(() => {
+      setActiveMenu(null);
+    }, 100); // 100ms delay
+  };
+
+   const handleDropdownMouseEnter = () => {
+    // Clear timeout if mouse enters the dropdown content area
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+
+  const handleSimpleLinkEnter = () => {
+    // Immediately close any active menu when hovering over a simple link
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveMenu(null);
+  };
+
+
+  return (
+    <div className="relative" onMouseLeave={handleMouseLeave}>
+      <NavigationMenu className="bg-background z-10 relative">
+        <NavigationMenuList>
+          {/* AI Tools Trigger */}
+          <div
+            onMouseEnter={() => handleMouseEnter("ai")}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
+              activeMenu === "ai" && "after:opacity-100" // Keep active
+            )}
+          >
+            AI tools
+          </div>
+
+          {/* Automatisering Trigger */}
+           <div
+             onMouseEnter={() => handleMouseEnter("automation")}
+             className={cn(
+               navigationMenuTriggerStyle(),
+               "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
+               activeMenu === "automation" && "after:opacity-100" // Keep active
+             )}
+            >
+             Automatisering
+           </div>
+
+          {/* Data inzichten Trigger */}
+          <div
+            onMouseEnter={() => handleMouseEnter("data")}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
+              activeMenu === "data" && "after:opacity-100" // Keep active
+            )}
+          >
+             Data inzichten
+           </div>
+
+          {/* Tracking Trigger */}
+          <div
+            onMouseEnter={() => handleMouseEnter("tracking")}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
+              activeMenu === "tracking" && "after:opacity-100" // Keep active
+            )}
+          >
+            Tracking
+          </div>
+
+          {/* Prijzen Link (only hover effect) */}
+          <li
+            className="list-none relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100"
+            onMouseEnter={handleSimpleLinkEnter}
+          >
+            <Link href="/prijzen" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Prijzen
+              </NavigationMenuLink>
+            </Link>
+          </li>
+
+          {/* Contact Link (only hover effect) */}
+          <li
+            className="list-none relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100"
+            onMouseEnter={handleSimpleLinkEnter}
+          >
+            <Link href="/contact" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Contact
+              </NavigationMenuLink>
+            </Link>
+          </li>
+        </NavigationMenuList>
+      </NavigationMenu>
+
+      {/* Dropdown Container with keyed MenuContent */}
+       {activeMenu && (
+        <div
+          onMouseEnter={handleDropdownMouseEnter}
+          className="fixed top-16 left-0 right-0 bg-background shadow-lg z-50 overflow-hidden"
+        >
+           {/* Wrap MenuContent in a container */}
+           <div className="container mx-auto">
+             <MenuContent key={activeMenu} activeMenu={activeMenu} />
+           </div>
+        </div>
+      )}
+    </div>
+  );
+} 

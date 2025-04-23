@@ -13,11 +13,11 @@ import {
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 // import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
 import HighlightedSection from '@/components/highlighted-section'; // Corrected import path
-import { BackgroundVideo } from "@/components/ui/background-video"; // Import the background video
+import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import the background photo
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
 
-export default function HomePage() {
+export default function AutomatiseringPage() {
   // Updated features array with category titles, icons, color class, and description
   const featureCategories = [
     { title: "Inzichten", IconComponent: LineChart, iconClass: "text-blue-500", description: "Verkrijg inzicht in bestellingen, producten en rankings." },
@@ -31,8 +31,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Fixed Background Video */}
-      <BackgroundVideo className="fixed inset-0 -z-10" />
+      {/* Fixed Background Photo */}
+      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={1} />
 
       {/* Scrollable Content Container */}
       <div className="relative z-0 flex flex-col min-h-screen">
@@ -69,7 +69,7 @@ export default function HomePage() {
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  De zekerheid van data en automatisering voor bol.com partners
+                  Automatiseer je bol.com store en aftersales
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-gray-600 dark:text-gray-400 md:text-xl lg:text-2xl">
@@ -107,28 +107,7 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-16 right-0 w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform translate-x-1/2 pointer-events-none">
-            {/* Image 1 (Bottom Layer) */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/HERO1-TYgsdR7pqmNzDsPZQJGDb0A0H0sbeH.png"
-              alt="Showcase Screenshot 1"
-              width={800}
-              height={600}
-              quality={85}
-              priority
-              className="relative rounded-lg shadow-xl transform -translate-y-10 -translate-x-10 border border-neutral-800"
-            />
-            {/* Image 2 (Top Layer - Overlapping) */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/HERO2-TaFELc5XTx6Q6Uuzhyg3K7vko9IG0I.png"
-              alt="Showcase Screenshot 2"
-              width={800}
-              height={600}
-              quality={85}
-              priority
-              className="absolute top-0 left-0 rounded-lg shadow-2xl transform translate-y-10 translate-x-10 z-10 border border-neutral-800"
-            />
-          </div>
+ 
         </section>
 
         {/* Features Grid - Aligned with overlay, uses section bottom border & container L/R borders
