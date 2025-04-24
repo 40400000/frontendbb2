@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import PromotionBanner from '@/components/promotion-banner';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -49,7 +50,8 @@ export default function RootLayout({
               </div>
             </div>
           </header>
-          <main className="container mx-auto pt-8">
+          <Breadcrumbs />
+          <main className="container mx-auto pt-0">
             {children}
           </main>
           <div className="container mx-auto">

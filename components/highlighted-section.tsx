@@ -60,10 +60,10 @@ const automationCategory: FeatureCategory = {
       href: "/features/tax-automation"
     },
     {
-      title: "Automatische changelog",
-      description: "Houd wijzigingen in listings van jou en je concurrenten automatisch bij",
+      title: "Baaspilot",
+      description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
       icon: "FileClock",
-      href: "/features/changelog-automation"
+      href: "/features/baaspilot"
     },
     
   ]

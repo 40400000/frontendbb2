@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useState } from "react"
+import { usePathname } from 'next/navigation'
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
@@ -39,6 +40,7 @@ interface FeatureItem {
   icon: string;
   href: string;
   highlight?: boolean;
+  comingSoon?: boolean;
 }
 
 const components: { title: string; href: string; description: string }[] = [
@@ -93,34 +95,34 @@ const featureCategories: {
     iconClass: "text-blue-500",
     items: [
       {
-        title: "Ranking inzichten",
-        description: "Volg en analyseer je product rankings",
+        title: "Aanpasbare dashboards en views",
+        description: "Zie alles precies zoals je het wilt zien.",
         icon: "LineChart",
         href: "/features/ranking-insights"
       },
       {
-        title: "Verkoop inzichten",
+        title: "Product prestaties ",
         description: "Uitgebreid overzicht van je verkoopprestaties",
         icon: "BarChart",
         href: "/features/sales-dashboard"
       },
       {
-        title: "Product inzichten",
+        title: "Bestellingen",
         description: "Gedetailleerde analyse van je productprestaties",
         icon: "LineChart",
         href: "/features/product-insights"
       },
       {
-        title: "Bestellingen inzichten",
+        title: "Winst en omzet analyses ",
         description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
         icon: "ShoppingCart",
         href: "/features/order-insights"
       },
       {
-        title: "Levering tracker",
-        description: "Volg de status van je leveringen",
-        icon: "Truck",
-        href: "/features/delivery-tracker"
+        title: "Listing Hijacker tracker",
+        description: "krijg meldingen als jou listing wordt gehijacked",
+        icon: "ShieldAlert",
+        href: "/features/listing-hijacker-tracker"
       },
     ]
   },
@@ -131,22 +133,22 @@ const featureCategories: {
     items: [
       {
         title: "Keyword database",
-        description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools",
+        description: "Geavanceerde keyword onderzoek op basis van meer dan 12 miljoen keywords en producten",
         icon: "Search",
         href: "/features/keyword-analysis",
         highlight: true,
-      },
-      {
-        title: "Winst & ACoS calculator",
-        description: "Bereken winstgevendheid van producten en campagnes",
-        icon: "PieChart",
-        href: "/features/profit-calculator"
       },
       {
         title: "Listing AI",
         description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
         icon: "Sparkles",
         href: "/features/listing-ai"
+      },
+      {
+        title: "Winst & ACoS calculator",
+        description: "Bereken winstgevendheid van producten en campagnes",
+        icon: "PieChart",
+        href: "/features/profit-calculator"
       },
       {
         title: "A/B testen van listings",
@@ -163,7 +165,7 @@ const featureCategories: {
     items: [
       {
         title: "Factuur automatisering",
-        description: "Geautomatiseerde factuur generatie en beheer",
+        description: "Geautomatiseerde BTW-factuur uploads en boekhouding",
         icon: "FileText",
         href: "/features/invoice-automation"
       },
@@ -175,15 +177,15 @@ const featureCategories: {
       },
       {
         title: "BTW-aangifte automatisering",
-        description: "Geautomatiseerde BTW-aangifte berekening",
+        description: "Geautomatiseerde BTW-aangifte berekening. Weet precies hoeveel BTW je moet betalen.",
         icon: "Calculator",
         href: "/features/tax-automation"
       },
       {
-        title: "Automatische changelog",
-        description: "Houd wijzigingen in listings automatisch bij",
+        title: "Baaspilot",
+        description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
         icon: "FileClock",
-        href: "/features/changelog-automation"
+        href: "/features/baaspilot"
       },
     ]
   },
@@ -193,14 +195,14 @@ const featureCategories: {
     iconClass: "text-green-500",
     items: [
       {
-        title: "Precision tracking",
+        title: "Precision product tracking",
         description: "Nauwkeurige tracking van je belangrijkste statistieken",
         icon: "Target",
         href: "/features/precision-tracking",
         highlight: true,
       },
       {
-        title: "Dynamic tracking",
+        title: "Dynamic product tracking",
         description: "Dynamische aanpassing van tracking parameters",
         icon: "Activity",
         href: "/features/dynamic-tracking"
@@ -218,10 +220,11 @@ const featureCategories: {
         href: "/features/project-management"
       },
       {
-        title: "Listing Hijacker tracker",
-        description: "krijg meldingen als jou listing wordt gehijacked",
-        icon: "ShieldAlert",
-        href: "/features/listing-hijacker-tracker"
+        title: "Omzet research",
+        description: "Bekijk de omzet van meer dan 4 miljoen producten op bol.com",
+        icon: "Truck",
+        href: "/features/delivery-tracker",
+        comingSoon: true
       },
     ]
   }
@@ -299,18 +302,31 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                     </div>
                   </div>
                   <div className="flex flex-col mt-auto">
-                    {item.highlight && (
+                    {item.comingSoon ? (
+                      <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800 mb-1 self-start">
+                        BINNENKORT
+                      </span>
+                    ) : item.highlight && (
                       <span className="inline-flex items-center rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 mb-1 self-start">
                         NIEUW
                       </span>
                     )}
-                    <div className="text-base font-semibold group-hover:text-black">
+                    <div className={cn(
+                      "text-base font-semibold group-hover:text-black",
+                      item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
+                    )}>
                       {item.title}
                     </div>
-                    <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                    <p className={cn(
+                      "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                      item.comingSoon && "group-hover:text-muted-foreground"
+                    )}>
                       {item.description}
                     </p>
-                    <span className="inline-block border border-white text-white group-hover:border-purple-500 group-hover:text-purple-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                    <span className={cn(
+                      "inline-block border border-white text-white group-hover:border-purple-500 group-hover:text-purple-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                      item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
+                    )}>
                       Lees meer
                     </span>
                   </div>
@@ -349,18 +365,31 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                             </div>
                           </div>
                           <div className="flex flex-col mt-auto">
-                            {item.highlight && (
+                            {item.comingSoon ? (
+                              <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800 mb-1 self-start">
+                                BINNENKORT
+                              </span>
+                            ) : item.highlight && (
                               <span className="inline-flex items-center rounded-full bg-pink-100 px-2 py-0.5 text-xs font-medium text-pink-800 mb-1 self-start">
                                 NIEUW
                               </span>
                             )}
-                            <div className="text-base font-semibold group-hover:text-black">
+                            <div className={cn(
+                              "text-base font-semibold group-hover:text-black",
+                              item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
+                            )}>
                               {item.title}
                             </div>
-                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                            <p className={cn(
+                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              item.comingSoon && "group-hover:text-muted-foreground"
+                            )}>
                               {item.description}
                             </p>
-                            <span className="inline-block border border-white text-white group-hover:border-pink-500 group-hover:text-pink-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                            <span className={cn(
+                               "inline-block border border-white text-white group-hover:border-pink-500 group-hover:text-pink-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
+                            )}>
                               Lees meer
                             </span>
                           </div>
@@ -374,7 +403,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     data: (
         <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
               <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
                     <SidebarContent title="Bolbaas Data Inzichten" subtitle="Diepgaande data analyse" />
                 </div>
               </div>
@@ -399,18 +428,31 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                             </div>
                           </div>
                           <div className="flex flex-col mt-auto">
-                            {item.highlight && (
+                            {item.comingSoon ? (
+                              <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800 mb-1 self-start">
+                                BINNENKORT
+                              </span>
+                            ) : item.highlight && (
                               <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-800 mb-1 self-start">
                                 NIEUW
                               </span>
                             )}
-                            <div className="text-base font-semibold group-hover:text-black">
+                            <div className={cn(
+                              "text-base font-semibold group-hover:text-black",
+                              item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
+                            )}>
                               {item.title}
                             </div>
-                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                            <p className={cn(
+                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              item.comingSoon && "group-hover:text-muted-foreground"
+                            )}>
                               {item.description}
                             </p>
-                            <span className="inline-block border border-white text-white group-hover:border-blue-500 group-hover:text-blue-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                            <span className={cn(
+                               "inline-block border border-white text-white group-hover:border-blue-500 group-hover:text-blue-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
+                            )}>
                               Lees meer
                             </span>
                           </div>
@@ -424,7 +466,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     tracking: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
               <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
                     <SidebarContent title="Bolbaas Tracking" subtitle="Monitor je prestaties" />
                 </div>
               </div>
@@ -449,18 +491,31 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                             </div>
                           </div>
                            <div className="flex flex-col mt-auto">
-                            {item.highlight && (
+                            {item.comingSoon ? (
+                              <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800 mb-1 self-start">
+                                BINNENKORT
+                              </span>
+                            ) : item.highlight && (
                               <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800 mb-1 self-start">
                                 NIEUW
                               </span>
                             )}
-                            <div className="text-base font-semibold group-hover:text-black">
+                            <div className={cn(
+                              "text-base font-semibold group-hover:text-black",
+                              item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
+                            )}>
                               {item.title}
                             </div>
-                            <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1">
+                            <p className={cn(
+                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              item.comingSoon && "group-hover:text-muted-foreground"
+                            )}>
                               {item.description}
                             </p>
-                            <span className="inline-block border border-white text-white group-hover:border-green-500 group-hover:text-green-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start">
+                            <span className={cn(
+                               "inline-block border border-white text-white group-hover:border-green-500 group-hover:text-green-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
+                            )}>
                               Lees meer
                             </span>
                           </div>
@@ -514,6 +569,8 @@ export function NavigationMenuDemo() {
 
 
   return (
+   <div> {/* Outer wrapper div */}
+    {/* Navigation Bar and Dropdown Wrapper */}
     <div className="relative" onMouseLeave={handleMouseLeave}>
       <NavigationMenu className="bg-background z-10 relative">
         <NavigationMenuList>
@@ -526,7 +583,7 @@ export function NavigationMenuDemo() {
               activeMenu === "ai" && "after:opacity-100" // Keep active
             )}
           >
-            AI tools
+            AI & Tools
           </div>
 
           {/* Automatisering Trigger */}
@@ -591,18 +648,18 @@ export function NavigationMenuDemo() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Dropdown Container with keyed MenuContent */}
+      {/* Dropdown Container with keyed MenuContent (fixed position, higher z-index) */}
        {activeMenu && (
         <div
           onMouseEnter={handleDropdownMouseEnter}
           className="fixed top-16 left-0 right-0 bg-background shadow-lg z-50 overflow-hidden"
         >
-           {/* Wrap MenuContent in a container */}
            <div className="container mx-auto">
              <MenuContent key={activeMenu} activeMenu={activeMenu} />
            </div>
         </div>
       )}
     </div>
+   </div> // Closing outer wrapper div
   );
 } 
