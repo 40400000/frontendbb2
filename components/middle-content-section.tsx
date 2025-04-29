@@ -12,7 +12,7 @@ export function MiddleContentSection() {
       <div className="absolute inset-0 w-screen bg-black -z-10 left-1/2 -translate-x-1/2"></div> {/* Changed bg-muted/30 to bg-black */}
 
       {/* Container centers content normally ON TOP of the background - Removed padding */}
-      <div className="container relative px-0"> {/* Removed px-4 */}
+      <div className="container relative px-0 z-55"> {/* Removed px-4 - Added z-10 */}
         {/* 4-column grid structure - Removed gap */}
         {/* On mobile (default), it implicitly might stack or could be adjusted to 2 cols if needed */}
         <div className="grid grid-cols-1 sm:grid-cols-4"> {/* Removed gap-8 */}

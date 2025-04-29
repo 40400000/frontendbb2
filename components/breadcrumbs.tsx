@@ -26,10 +26,10 @@ const featureCategories: {
     iconClass: "text-blue-500",
     items: [
       {
-        title: "Ranking inzichten",
+        title: "Data inzichten",
         description: "Volg en analyseer je product rankings",
         icon: "LineChart",
-        href: "/features/ranking-insights"
+        href: "/features/data-inzichten"
       },
       {
         title: "Verkoop inzichten",
