@@ -132,7 +132,7 @@ export default function AutomatiseringPage() {
             <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2 z-55 bg-white"></div>
 
             {/* NEW Centered Content Area */}
-            <div className="relative z-[70] w-1/2 mx-auto pt-16 text-black"> {/* Centered, 50% width, above background, top padding */}
+            <div className="relative z-[70] w-1/2 mx-auto pt-16 pb-16 text-black"> {/* Centered, 50% width, above background, top padding */}
             <p className="text-xs text-gray-600">MEER DAN 12 MILJOEN GEANALYSEERDE PRODUCTEN EN KEYWORDS</p> {/* Added number */}
 
               <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-6">Minder werk, meer omzet: <br /> bol store automatisering die werkt.
@@ -140,36 +140,24 @@ export default function AutomatiseringPage() {
               <p className="mb-4 text-base">Werk slimmer, niet harder. Laat Bolbaas je store automatiseren en groeien.</p>
             </div>
 
-            <div className="relative z-[70] w-1/2 mx-auto pt-16 text-black"> {/* Centered, 50% width, above background, top padding */}
-
-              <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-3">Facturen
-              </h2>
-
-                  <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-3">E-mails
-              </h2>
-
-              <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-3">BTW berekening
-              </h2>
-            </div>
-
           </section> {/* End bleed section */}
 
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section className="relative w-full py-4"> {/* Standard section padding - ADDED relative */}
+          <section id="factuur-automatisering" className="relative w-full py-4"> {/* Standard section padding - ADDED relative & ID */}
           {/* Full-width background element */}
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 
           {/* Facturen Image Group Container - Mirrored position/size of Email section */}
           <div className="w-[50%] z-55 absolute top-64 right-0 transform translate-x-[15%]"> {/* Moved down slightly */}
             {/* Small Image 1 (Facturen Acties) - Re-adjusted position */}
-            <Image
+            {/* <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturen-acties-SVNLW2UmidUza4cYzKz2zcMs7eRz1r.png"
               alt="Facturen Acties Badge"
               width={150} // Keeping badge size small
               height={150} // Keeping badge size small
               className="absolute top-8 left-[-7rem] z-10 rounded-xl shadow-lg border border-neutral-800" // Moved up and left // Added border
-            />
+            /> */}
             {/* Small Image 2 (Facturen Green Badges) - Re-adjusted position */}
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturen-green%20badges-i7n7AaNQ8Qcvws0I9TGtnCNsl4DiRl.png"
@@ -260,7 +248,7 @@ export default function AutomatiseringPage() {
           <div className="h-30"></div>
 
         {/* Moved Bleed Background Section - Inline Styling */}
-        <section className="relative w-full py-16 md:py-24 lg:py-32"> {/* Standard section padding - Added relative */}
+        <section id="email-automatisering" className="relative w-full py-16 md:py-24 lg:py-32"> {/* Standard section padding - Added relative & ID */}
           {/* Full-width background element */}
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 

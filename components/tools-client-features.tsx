@@ -63,7 +63,7 @@ export function ToolsClientFeatures() {
           {/* Flex Row for Content and Image */}
           <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between">
             {/* Left side: Text content (No Heading Here) - Add ref here */}
-            <div ref={btwTextRef} className="relative w-[30%] text-white"> {/* Adjusted width */}
+            <div ref={btwTextRef} className="relative w-[25%] text-white"> {/* Adjusted width */}
               {/* Content starts here */}
               <div className="p-0 text-md">
                 <span className="text-sm text-gray-500">01</span>
@@ -77,11 +77,11 @@ export function ToolsClientFeatures() {
             {/* Right side: Image - Add conditional styling - RE-ADDED */}
             <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBtwVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width */}
               <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png"
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/winst-calculator-3-EwC1kxj0Odx5l91wIfWNyeO8yBeKid.png"
                 alt="Winst & ACoS Calculator Visualisatie" // Updated alt text
                 width={1200} // Increased width
                 height={675} // Increased height based on aspect ratio
-                className="rounded-lg shadow-lg object-cover" // Added object-cover
+                className="rounded-xl shadow-lg object-cover object-right border-border" // Added object-cover and object-right
               />
             </div>
           </div>
@@ -122,11 +122,11 @@ export function ToolsClientFeatures() {
           <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width for responsiveness */}
            {/* Image for A/B Testen */} 
            <Image
-             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png" // Placeholder, assuming same image for now
+             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/ab-testenopen2-ZN9PvyKxsg2tcNw7Yd1OCct3OLYPZc.png" // Placeholder, assuming same image for now
              alt="A/B Testen Visualisatie" // Updated alt text
              width={1200}
              height={675}
-             className="rounded-lg shadow-lg object-cover"
+             className="rounded-xl shadow-lg object-cover"
            />
           </div>
          </div>

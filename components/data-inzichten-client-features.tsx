@@ -77,11 +77,11 @@ export function DataInzichtenClientFeatures() {
             {/* Right side: Image - Add conditional styling - RE-ADDED */}
             <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBtwVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width for responsiveness */}
               <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png"
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/salesschatting-NccXS6y7ZXG03guwvDCMYmk2X9MY4R.png"
                 alt="Sales Voorspellingen Visualisatie" // Updated alt text
                 width={1200} // Increased width
                 height={675} // Increased height based on aspect ratio
-                className="rounded-lg shadow-lg object-cover" // Added object-cover
+                className="shadow-lg object-cover rounded-xl" // Added object-cover
               />
             </div>
           </div>
@@ -97,10 +97,10 @@ export function DataInzichtenClientFeatures() {
              <div className="p-0 text-md">
                <span className="text-sm text-gray-500">02</span>
                <p className="flex items-center text-lg md:text-xl font-semibold my-6">
-                 Levering tracker
+                 Order tracker
                </p>
                <p className="text-sm mt-1 text-white">
-                 Weet precies wat er met je leveringen gebeurt.
+                 Weet precies wat er met je orders gebeurt. Zie status van e-mails, facutren en bezorging.
                </p>
              </div>
              <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
@@ -122,7 +122,7 @@ export function DataInzichtenClientFeatures() {
           <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width for responsiveness */}
            {/* Image for Levering tracker */} 
            <Image
-             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png" // Placeholder, assuming same image for now
+             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/orderevents-QjbCBWY14JxgXd81frcvU8MjWucJMH.png" // Placeholder, assuming same image for now
              alt="Levering Tracker Visualisatie" // Updated alt text
              width={1200}
              height={675}

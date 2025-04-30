@@ -167,25 +167,25 @@ const featureCategories: {
         title: "Factuur automatisering",
         description: "Geautomatiseerde BTW-factuur uploads en boekhouding",
         icon: "FileText",
-        href: "/features/invoice-automation"
+        href: "/features/automatisering#factuur-automatisering"
       },
       {
         title: "E-mail automatisering",
         description: "Verzamel meer reviews met geautomatiseerde e-mails",
         icon: "Mail",
-        href: "/features/email-automation"
+        href: "/features/automatisering#email-automatisering"
       },
       {
         title: "BTW-aangifte automatisering",
         description: "Geautomatiseerde BTW-aangifte berekening. Weet precies hoeveel BTW je moet betalen.",
         icon: "Calculator",
-        href: "/features/tax-automation"
+        href: "/features/automatisering#btw-berekening"
       },
       {
         title: "Baaspilot",
         description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
         icon: "FileClock",
-        href: "/features/baaspilot"
+        href: "/features/automatisering#baaspilot"
       },
     ]
   },

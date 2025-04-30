@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image"; // Import Next Image
+import { Badge } from "@/components/ui/badge"; // Import Badge
 // Import necessary icons from lucide-react
 import {
   LineChart,
@@ -10,7 +11,8 @@ import {
   ShoppingCart,
   Package, // Added Package icon
   Download, // Added Download icon
-  Upload,   // Added Upload icon
+  Upload,
+  Database,   // Added Upload icon
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 // import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
@@ -119,7 +121,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </section>
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section className="relative w-full py-4 min-h-[150vh]"> {/* Standard section padding */}
+          <section className="relative w-full py-4 min-h-[325vh]"> {/* Standard section padding */}
             {/* NEW Light Border Overlay */}
             <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
               {/* This relative container holds the light line elements */}
@@ -136,13 +138,135 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2 z-55 bg-white"></div>
 
-            {/* NEW Centered Content Area */}
-            <div className="relative z-[70] w-1/2 mx-auto pt-16 text-black"> {/* Centered, 50% width, above background, top padding */}
-            <p className="text-xs text-gray-600">MEER DAN 12 MILJOEN GEANALYSEERDE PRODUCTEN EN KEYWORDS</p> {/* Added number */}
+            {/* Content Area - Title Above, Columns Below */}
+            <div className="relative z-[70] container mx-auto pt-16 text-black">
+              {/* Title and Subtitle Area - Aligned to start at the second column */}
+              <div className="ml-[25%] w-1/2 mb-8"> {/* Add margin-left, set width, add bottom margin */}
+                {/* REVISED TEXT - More Natural */}
+                <p className="text-xs text-gray-600">Gebaseerd op data van 12 miljoen+ Bol.com producten & zoekwoorden.</p>
+                <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">Vind de juiste zoekwoorden, scoor hoger en verlaag je advertentiekosten.</h2>
+              </div>
 
-              <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-6">Verbeter rankings en verlaag CPC</h2>
-              <p className="mb-4 text-base">Vind keywords op basis van klantengedrag en verlaag CPC met inzichten in data van 12 miljoen keywords en producten.</p>
-              <p className="text-base">Placeholder text elaborating on the second aspect or benefit, following the established style.</p>
+              {/* Flex Row for Content Columns (below title) */}
+              {/* Container for Text Blocks (now stacked vertically in the first quarter) */}
+              <div className="flex flex-col w-1/4"> {/* Removed gap-8 as mt-* classes handle spacing */}
+                {/* Left Column (New Content - 1/4 width) */}
+                <div className="mt-50">
+                  {/* Replaced span with Shadcn Badge and positioned above 01 */}
+                  <div className="flex items-center justify-start">
+                      <div className="relative inline-flex">
+                        <div className="absolute inset-0 brutalist-border-v1"></div>
+                        <div className="relative z-10 bg-black px-4 py- text-white font-mono uppercase text-sm tracking-widest flex items-center gap-2">
+                          DATABASE
+                        </div>
+                      </div>
+                    </div>
+                  <span className="block text-sm text-gray-500 my-2">01</span>
+                  {/* REVISED TEXT - Natural Flow */}
+                  <p className="text-lg font-semibold mb-2">Perfecte keywords: miljarden data punten</p>
+                  <p className="text-sm">Uitgebreid research met onze keyword database. Ontdek relevante keywords op basis van zoekgedrag van klanten. Analyseer vraag & aanbod, volume trends, ACoS, reviews en meer voor ruim 6 miljoen keywords.</p>
+                </div>
+
+                {/* Right Column (New Content - 1/4 width) */}
+                <div className="mt-150">
+                  <span className="text-sm text-gray-500">02</span>
+                  {/* REVISED TEXT - More Natural */}
+                  <p className="text-lg font-semibold my-4">Krijg compleet inzicht</p>
+                  <p className="text-sm">Kijk verder dan alleen het zoekvolume van het afgelopen periode. Bekijk trends, seizoensgebondenheid, verdeling NL/BE en meer.</p>
+                </div>
+                {/* Step 03 */}
+                <div className="mt-150"> {/* Add similar top margin for spacing */}
+                  <span className="text-sm text-gray-500">03</span>
+                  {/* REVISED TEXT - Focus on competitor analysis */}
+                  <p className="text-lg font-semibold my-4">Analyseer top concurrenten</p>
+                  <p className="text-sm">Identificeer de best presterende concurrenten voor elk keyword. Krijg inzicht in hun Share of Shelf (SoS), review scores en prijsstrategieën. Analyseer hun succes om je eigen strategie te optimaliseren.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* NEW Absolutely Positioned Image Container for Step 03 (Concurrenten/SOS/Trends) - Moved Right, Images Swapped */}
+            <div className="absolute top-[calc(50vh+300px)] left-[50%] w-[500px] lg:w-[600px] xl:w-[700px] h-auto z-[67] pointer-events-none mt-[1100px]"> {/* Increased left percentage */}
+              {/* Image 1 (Bottom Layer - NOW Trends) - Scaled */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/competitor-keyword-iHSFSqFBLe67TvS7tB70MYehqB1g4w.png"
+                alt="Trends Analyse Screenshot"
+                width={700}
+                height={500}
+                quality={80} /* Adjusted quality */
+                className="relative rounded-xl shadow-lg border border-neutral-700 transform -translate-y-8 -translate-x-24" /* Reduced scale for smaller size */
+              />
+              {/* Image 2 (Middle Layer - Top Producten) - Made smaller */}
+              <Image 
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/03-topproducten-x2FLzDJz534KbmEs01s6nT0tJ1Bw6g.png"
+                alt="Top Producten Analyse Screenshot"
+                width={300} /* Significantly reduced width */
+                height={200} /* Significantly reduced height */
+                quality={80}
+                className="absolute top-0 left-0 rounded-xl shadow-xl border border-neutral-700 transform translate-y-40 translate-x-90 z-[5]" /* Positioned between others */
+              />
+              {/* Image 3 (Top Layer - Trends Detail) - Moved down */}
+
+            </div>
+
+            {/* Absolutely Positioned Image Container - Adjusted positioning */}
+            <div className="absolute top-50 right-0 w-[600px] lg:w-[700px] xl:w-[800px] h-auto z-[65] transform translate-x-4 pointer-events-none"> {/* Changed translate-x-1/8 to arbitrary translate-x-4 */}
+              {/* Original Image (NOW BEHIND) */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/explorer-drone-w8vvlMEww5awlHHWHsHSI2mbNcTZKB.png"
+                alt="Screenshot of keyword analysis tool"
+                width={800} // Adjust width as needed
+                height={450} // Adjust height as needed
+                className="absolute top-0 left-0 border border-border rounded-xl object-cover w-full shadow-lg transform translate-y-70 -translate-x-20 z-55" // Style for behind image
+              />
+              {/* New Image (NOW ON TOP) */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/explorer-vaas-balk-info-8mNfgpHYIJtOR2pSRfJ9rTQpIx54nX.png"
+                alt="Screenshot of second analysis tool view"
+                width={800} // Match width or adjust as needed
+                height={450} // Match height or adjust as needed
+                className="relative border border-border rounded-xl object-cover w-full shadow-xl z-10" // Style for top image
+              />
+            </div>
+
+            {/* NEW Absolutely Positioned Image Container for Overlapping Images */}
+            {/* Positioned below text blocks and moved to the LEFT */}
+            {/* Increased top offset for more space */} 
+            <div className="absolute top-[calc(50vh+300px)] left-[35%] w-[500px] lg:w-[600px] xl:w-[700px] h-auto z-[66] pointer-events-none mt-80"> {/* Changed top calc from 200px to 300px */} 
+              {/* Image 1 (Bottom Layer - Volume) */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keyword-volume-bgtCyDzNTg4rjOypV5iVNlxy0lB4G1.png"
+                alt="Keyword Volume Screenshot"
+                width={700}
+                height={500}
+                quality={80}
+                className="relative rounded-xl shadow-lg border border-neutral-700 transform -translate-y-8 -translate-x-8"
+              />
+              {/* Image 2 (Middle Layer - Graph) - Increased horizontal offset */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keyword-graph-tW9QPejHv0llcj8YK7PLkEkdFzLR1g.png"
+                alt="Keyword Graph Screenshot"
+                width={700}
+                height={500}
+                quality={80}
+                className="absolute top-0 left-0 rounded-xl shadow-xl border border-neutral-700 transform translate-y-20 translate-x-24 z-10" /* Increased translate-y from 12 to 20 */
+              />
+              {/* Image 3 (Top Layer - Heatmap) - Increased horizontal and adjusted vertical offset */}
+              <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keyword-heatmap-C5FvxifStN7Nt4Ys5mboRRfctSqsR9.png"
+                alt="Keyword Heatmap Screenshot"
+                width={700}
+                height={500}
+                quality={85} /* Higher quality for top image */
+                className="absolute top-0 left-0 rounded-xl shadow-2xl border border-neutral-700 transform translate-y-52 translate-x-48 z-20" /* Increased translate-y from 32 to 52 */
+              />
+                            <Image
+                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/03-trends-gwvPr7qK6TTQzeWlmObq18HwdZLizr.png"
+                alt="Trends Analyse Detail Screenshot"
+                width={175}  /* Further reduced width */
+                height={125} /* Further reduced height */
+                quality={80}
+                className="absolute top-0 left-0 rounded-xl shadow-xl border border-neutral-700 transform translate-y-52 translate-x-0 z-10" /* Increased translate-y */
+              />
             </div>
 
           </section> {/* End bleed section */}
@@ -153,7 +277,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
           <section className="relative w-full py-16 md:py-24 lg:py-32"> {/* Standard section padding */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-            <div className="container px-0 mb-4"> {/* Container for alignment, added bottom margin */}
+            <div className="container px-0 mb-4 z-70 relative"> {/* Container for alignment, added bottom margin */}
               <h2 className="text-6xl font-semibold text-white">Ranking AI</h2>
             </div>
             {/* Container centers content normally ON TOP of the background */}
