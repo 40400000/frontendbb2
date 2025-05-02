@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { usePathname } from 'next/navigation'
 
@@ -23,7 +24,7 @@ import {
   PieChart,
   Search,
   Sparkles,
-  Image,
+  Image as LucideImage,
   FileClock,
   TestTubeDiagonal,
   Target,
@@ -268,7 +269,10 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
   const SidebarContent = ({ title, subtitle }: { title: string; subtitle: string }) => (
     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent px-4 py-5 z-10">
       <p className="text-xl font-bold text-white">{title}</p>
-      <p className="text-base font-medium text-white/90">{subtitle}</p>
+      <p className="text-base font-medium text-white/90 mb-2">{subtitle}</p>
+      <span className="text-sm font-semibold text-white underline underline-offset-2 hover:text-gray-200 transition-colors">
+        Details bekijken &rarr;
+      </span>
     </div>
   );
 
@@ -276,11 +280,20 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
   const menuContents: Record<Exclude<MenuId, null>, React.ReactNode> = {
     ai: (
       <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-        <div className="w-[200px] border-r">
-          <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
+        <Link href="/features/tools" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+          <div className="relative w-full h-full overflow-hidden text-white">
+            <Image
+              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png"
+              alt="Bolbaas AI Tools Achtergrond"
+              fill
+              sizes="200px"
+              quality={80}
+              style={{ objectFit: 'cover' }}
+              priority
+            />
             <SidebarContent title="Bolbaas AI Tools" subtitle="Ontdek onze tools" />
           </div>
-        </div>
+        </Link>
         <div className="flex flex-1 gap-0">
           {featureCategories.tools.items.map((item, index, arr) => {
             const category = featureCategories.tools;
@@ -339,11 +352,20 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     ),
     automation: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-              <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
+              <Link href="/features/automatisering" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+                 <div className="relative w-full h-full overflow-hidden text-white">
+                   <Image
+                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png"
+                     alt="Bolbaas Automatisering Achtergrond"
+                     fill
+                     sizes="200px"
+                     quality={80}
+                     style={{ objectFit: 'cover' }}
+                     priority
+                   />
                    <SidebarContent title="Bolbaas Automatisering" subtitle="Beheer je winkel" />
                 </div>
-              </div>
+              </Link>
                <div className="flex flex-1 gap-0">
                  {featureCategories.automation.items.map((item, index, arr) => {
                     const category = featureCategories.automation;
@@ -402,11 +424,20 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     ),
     data: (
         <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-              <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
+              <Link href="/features/data-inzichten" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+                 <div className="relative w-full h-full overflow-hidden text-white">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png"
+                      alt="Bolbaas Data Inzichten Achtergrond"
+                      fill
+                      sizes="200px"
+                      quality={80}
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
                     <SidebarContent title="Bolbaas Data Inzichten" subtitle="Diepgaande data analyse" />
                 </div>
-              </div>
+             </Link>
                <div className="flex flex-1 gap-0">
                  {featureCategories.insights.items.map((item, index, arr) => {
                     const category = featureCategories.insights;
@@ -465,11 +496,20 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     ),
     tracking: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-              <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
+              <Link href="/features/tracking" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+                 <div className="relative w-full h-full overflow-hidden text-white">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png"
+                      alt="Bolbaas Tracking Achtergrond"
+                      fill
+                      sizes="200px"
+                      quality={80}
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
                     <SidebarContent title="Bolbaas Tracking" subtitle="Monitor je prestaties" />
                 </div>
-              </div>
+              </Link>
                <div className="flex flex-1 gap-0">
                  {featureCategories.tracking.items.map((item, index, arr) => {
                     const category = featureCategories.tracking;
@@ -634,7 +674,7 @@ export function NavigationMenuDemo() {
               activeMenu === "ai" && "after:opacity-100" // Keep active underline
             )}
           >
-            AI & Tools
+            <Link href="/features/tools">AI & Tools</Link>
           </div>
 
           {/* Automatisering Trigger */}
@@ -648,7 +688,7 @@ export function NavigationMenuDemo() {
                 activeMenu === "automation" && "after:opacity-100"
              )}
             >
-             Automatisering
+             <Link href="/features/automatisering">Automatisering</Link>
            </div>
 
           {/* Data inzichten Trigger */}
@@ -662,7 +702,7 @@ export function NavigationMenuDemo() {
               activeMenu === "data" && "after:opacity-100"
             )}
           >
-             Data inzichten
+             <Link href="/features/data-inzichten">Data inzichten</Link>
            </div>
 
           {/* Tracking Trigger */}
@@ -676,7 +716,7 @@ export function NavigationMenuDemo() {
               activeMenu === "tracking" && "after:opacity-100"
             )}
           >
-            Tracking
+            <Link href="/features/tracking">Tracking</Link>
           </div>
 
           {/* Prijzen Link (only hover effect) */}

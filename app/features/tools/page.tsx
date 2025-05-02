@@ -123,7 +123,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </section>
 
               {/* Moved Bleed Background Section - Inline Styling */}
-              <section data-navbar-mode="light" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[255vh]"> {/* Further increased section height */}
+              <section data-navbar-mode="light" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[1900px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -272,7 +272,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             </div> {/* End container */}
 
             {/* NEW Text Block at the bottom */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[83%] w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[80%] w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
               <p className="text-base">
                 Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
@@ -280,7 +280,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             </div>
 
             {/* NEW Buttons container at the bottom */}
-            <div className="absolute left-[25%] top-[92%] w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
+            <div className="absolute left-[25%] top-[90%] w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
               {/* Button 1 in First Column */}
               <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
                 <div className="group relative w-full text-left cursor-pointer overflow-hidden">

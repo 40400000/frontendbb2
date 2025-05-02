@@ -141,10 +141,10 @@ export default function DataInzichtenPage() { // Renamed function
             </div>
 
             {/* Insert a full-bleed image under the centered content */}
-            <div className="relative mt-12 overflow-visible z-80">
-              <div className="absolute inset-x-0 w-screen left-1/2 -translate-x-1/2">
+            <div className="relative mt-2 mb-12 overflow-visible z-80">
+              <div className="absolute inset-x-0 w-screen left-1/2 -translate-x-1/2 max-w-screen-2xl mx-auto"> {/* Changed to max-w-screen-2xl */}
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/aanpasbaar-suq2BGiI0W1WqMY92JDIbVLOHxc0JQ.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/aanpasbaar2-hpx3vtg1UHpfX3Bik0kYRSYfuaxElx.png"
                   alt="Volledig aanpasbaar screenshot"
                   width={1400}
                   height={800}
@@ -397,7 +397,7 @@ export default function DataInzichtenPage() { // Renamed function
                       </ul>
                     </div>
                     {/* Button with hover effect */}
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-600 mt-6" > 
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
                       {/* Original Content - Slides up on hover */}
                       <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
                         Gesprek inplannen
