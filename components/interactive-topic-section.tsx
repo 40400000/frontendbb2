@@ -33,14 +33,14 @@ const topicDetails: Record<string, TopicContent> = {
     title: "Automatisering",
     description: "Automatiseer taken en focus op groei.",
     images: [
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/AUTOMATISERING-6fiAE4EiwtW5Bnvhg3hySS0e6F4szH.png"
+      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/automatisering%20overzicht-FH6UYZfKu7HL4kOfaKtZRN7Ly0FQqG.png"
     ],
   },
   Tracking: {
     title: "Tracking",
     description: "Volg uw producten en keywords nauwkeurig.",
     images: [
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png",
+      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking-QnWkZ19t2pN2FKO0Lr7pl3237LjxMZ.png",
     ],
   },
 };

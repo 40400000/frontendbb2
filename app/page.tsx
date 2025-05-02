@@ -68,8 +68,8 @@ export default function HomePage() {
               {/* Text container spanning full width, but capped by max-w */}
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  De zekerheid van data en automatisering voor bol.com partners
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
+                  De zekerheid van data en automatisering voor bol.com partners.
                 </h1>
                 {/* Sub-headline */}
                 <p className="md:text-xl lg:text-2xl">

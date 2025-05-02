@@ -27,7 +27,7 @@ export default function DataInzichtenPage() { // Renamed function
   return (
     <>
       {/* Fixed Background Photo */}
-      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={1} />
+      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={3} />
 
       {/* Scrollable Content Container */}
       <div className="relative z-0 flex flex-col min-h-screen">

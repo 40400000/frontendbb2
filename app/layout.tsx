@@ -39,7 +39,6 @@ export default function RootLayout({
           <header id="main-header" className="sticky top-0 z-50 w-full bg-background text-white">
             <div className="container flex h-17 items-center justify-between mx-auto px-4">
               <div className="flex items-center space-x-4">
-                <span className="font-bold text-lg">Bolbaas</span>
                 <NavigationMenuDemo />
               </div>
               <div className="flex items-center space-x-2">

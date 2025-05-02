@@ -74,7 +74,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl w-[35%]">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Verhoog winst en optimaliseer rankings
+                  Research tools op een nieuwe niveau.
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-white w-[71.4%]">
@@ -161,7 +161,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
-                    <div className="mt-53.5 z-80 relativ pt-10">
+                    <div className="mt-30 z-80 relative pt-10">
                       <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
                       <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
@@ -181,7 +181,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
 
-                    <div className="mt-80 z-80 relativ pt-10">
+                    <div className="mt-70 z-80 relativ pt-10">
                       <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
                       <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
@@ -256,7 +256,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
-              <div className="absolute top-[57%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
+              <div className="absolute top-[65%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keywordinsight_1-ADedysDniKyY4UqEhPjceWuLmH0Wu1.png"
                   alt="Bestellingen screenshot"

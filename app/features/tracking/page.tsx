@@ -30,7 +30,7 @@ export default function TrackingPage() { // Renamed function
   return (
     <>
       {/* Fixed Background Photo */}
-      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={1} />
+      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={4} />
 
 
 
@@ -74,7 +74,7 @@ export default function TrackingPage() { // Renamed function
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl w-[35%]">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Weet precies wat <br /> er gebeurt in je store
+                  Weet alles over rankings, keywords en producten.
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-white w-[71.4%]">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image"; // Import Next Image
+import { Badge } from "@/components/ui/badge"; // Import Badge
 // Import necessary icons from lucide-react
 import {
   LineChart,
@@ -10,7 +11,10 @@ import {
   ShoppingCart,
   Package, // Added Package icon
   Download, // Added Download icon
-  Upload,   // Added Upload icon
+  Upload,
+  Database,
+  Sparkle,
+  Sparkles,   // Added Upload icon
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 // import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
@@ -19,24 +23,21 @@ import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import th
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
 // Remove client-side hooks import
-import { AutomatiseringClientFeatures } from '@/components/automatisering-client-features'; // Import the new client component
-
-
-
-export default function AutomatiseringPage() {
-  // Removed featureCategories array (was commented out)
+import { ToolsClientFeatures } from "@/components/tools-client-features"; // Import the new client component
+import { AutomatiseringClientFeatures } from "@/components/automatisering-client-features";
+export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
+  // Removed featureCategories array
 
   // Define a top offset for the two rightmost lines. Adjust as needed.
   const innerLinesTopOffset = "top-0"; // Example: 384px - Offset remains
 
   // Removed State and Refs for Intersection Observer
   // Removed Effect for Intersection Observer
-  // Removed parallax factors
 
   return (
     <>
       {/* Fixed Background Photo */}
-      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={1} />
+      <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={2} />
 
       {/* Scrollable Content Container */}
       <div className="relative z-0 flex flex-col min-h-screen">
@@ -65,7 +66,7 @@ export default function AutomatiseringPage() {
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] min-h-[85vh] w-full pt-8 md:pt-16 lg:pt-24 pb-6 md:pb-8 lg:pb-10">
+        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-6 md:pb-8 lg:pb-10">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
@@ -73,11 +74,11 @@ export default function AutomatiseringPage() {
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl w-[35%]">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Automatiseer je bol.com store en aftersales
+                  Automatiseer je store, focus op groei.
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-white w-[71.4%]">
-                  Alles wat je nodig hebt, in één AI-gedreven platform.
+                  Data op basis van meer dan 12 miljoen geanalyseerde producten en keywords.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
@@ -110,249 +111,325 @@ export default function AutomatiseringPage() {
             </div> { /* End grid wrapper */}
           </div>
 
-          </section>
-
-
           {/* Absolutely Positioned Image Container */}
-  <section className="relative w-full py-4"> {/* Standard section padding */}
-            {/* NEW Light Border Overlay */}
-            <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
-              {/* This relative container holds the light line elements */}
-              <div className="relative h-full max-w-full mx-auto">
-                {/* Light Line between cols 1 & 2 (visible only on sm+) */}
-                <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
-                <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+
+        </section>
+
+        {/* Removed commented out sections */}
+
+        {/* Gradient Visual Section - Reduced bottom padding */}
+        <section className="relative z-10 w-full pb-10 md:pb-16 lg:pb-20">
+
+        </section>
+
+              {/* Moved Bleed Background Section - Inline Styling */}
+              <section id="factuur-automatisering" data-navbar-mode="light" className="relative w-full scroll-mt-24 py-16 md:py-24 lg:py-32 min-h-[2300px]"> {/* Further increased section height */}
+            {/* Added wrapper div for centering */}
+            <div className="flex flex-col items-center justify-center h-full">
+              {/* Full-width background element */}
+              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
+                {/* This relative container holds the light line elements */}
+                <div className="relative h-full max-w-full mx-auto">
+                  {/* Light Line between cols 1 & 2 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                  {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
+                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                  {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                </div>
+              </div>
+            </div> {/* End centering wrapper */}
+
+            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
+
+            
+            
+            
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-black"></div>
+            <div className="container w-full relative z-90 mb-4"> {/* Container for alignment, added bottom margin */}
+              <h2 className="text-6xl font-semibold text-black z-90">Store Automatisering</h2>
+            </div>
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-60"> {/* REMOVED container padding */}
+              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
+              {/* Add vertical gap between rows */}
+              <div className="grid grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
+
+                {/* Row 1, Column 1: Left Text (35%) */}
+                <div className="text-black ro w-span-2 z-80 relative"> {/* Span container across two rows */}
+                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
+                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
+                  <div className="w-full">
+                    {/* Moved Feature Set 1 into first column */}
+                    <div className="mt-30 z-80 relativ pt-10">
+                      <p className="text-sm text-gray-500 mb-1">BTW FACTUREN</p>
+                      <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol.com</h3>
+                      <ul className="space-y-2 text-sm text-black pr-3">
+                          <li>Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol.com en slaat deze op in jouw database.</li>
+                        </ul>
+                    </div>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                      {/* Original Content - Slides up on hover */}
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </span>
+                      {/* Hover Overlay - Slides in from bottom on hover */}
+                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </div>
+                    </div>
+
+                    <div className="mt-120 z-80 relativ pt-10">
+                      <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
+                      <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
+                      <ul className="space-y-2 text-sm text-black pr-3">
+                        <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
+                      </ul>
+                    </div>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                      {/* Original Content - Slides up on hover */}
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </span>
+                      {/* Hover Overlay - Slides in from bottom on hover */}
+                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </div>
+                    </div>
+                    {/* Moved Feature Set 2 into first column */}
+                    
+                  </div>
+                </div>
+                {/* Row 1 placeholders for columns 2-4 */}
+                <div></div>
+                <div></div>
+                <div></div>
+
+                {/* Row 2, Column 1: Empty */}
+                <div></div>
+
+                {/* Row 2, Column 2: Empty Spacer */}
+                <div></div>
+
+                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
+        
+
+                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
+                {/* <div className="text-gray-300"> ... </div> */}
+                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
+
+                {/* <div className="text-gray-300">
+                  <p className="text-sm text-gray-500 mb-1">03</p>
+                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
+                  <ul className="space-y-2 text-sm text-white pr-3">
+                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
+                  </ul>
+                </div>
+
+
+                <div className="text-gray-300 pr-4 md:pr-6">
+                  <p className="text-sm text-gray-500 mb-1">04</p>
+                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
+                  <ul className="space-y-2 text-sm text-white pr-3">
+                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
+                  </ul>
+                </div> */}
+
+
+              </div> {/* End grid */}
+              {/* Divider title between steps */}
+              
+              {/* End dynamic label */}
+     
+              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
+              <div className="absolute top-[0%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
+                <Image
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturenuploaden-D1ctHKHU7dEgDV1tJPokJTIgIZSpHj.png"
+                  alt="Bestellingen screenshot"
+                  width={1200} // Adjust width as needed, larger for better quality scaling down
+                  height={960} // Adjust height based on aspect ratio
+                  quality={85}
+                  className="relative rounded-lg" // Removed shadow and border
+                />
+              </div>
+              <div id="email-automatisering" className="absolute top-[70%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none scroll-mt-24"> {/* Adjusted top/right positioning */} 
+                <Image
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/automatiseringemails-RJgmyQy8b1KleXBT53jLvpxYZMlj7B.png"
+                  alt="Bestellingen screenshot"
+                  width={1200} // Adjust width as needed, larger for better quality scaling down
+                  height={960} // Adjust height based on aspect ratio
+                  quality={85}
+                  className="relative rounded-lg" // Removed shadow and border
+                />
+              </div>
+              {/* Ranking insights graph */}
+   
+
+            </div> {/* End container */}
+
+            {/* NEW Text Block at the bottom */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[80%] w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
+              <h2 className="text-4xl md:text-5xl font-semibold">Focus op ondernemen, niet op boekhouding.</h2>
+              <p className="text-base">
+                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
+              </p>
+            </div>
+
+            {/* NEW Buttons container at the bottom */}
+            <div className="absolute left-[25%] top-[90%] w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
+              {/* Button 1 in First Column */}
+              <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
+                <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                  {/* Original Content */}
+                  <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                    Abonnementen bekijken
+                  </span>
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                    Abonnementen bekijken
+                  </div>
+                </div>
+              </div>
+
+              {/* Button 2 in Second Column */}
+              <div className="border-t border-b border-gray-200"> {/* Changed border color */}
+                <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                  {/* Original Content */}
+                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                    Gesprek inplannen
+                    <MdOutlineArrowOutward className="h-5 w-5" />
+                  </span>
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                    Gesprek inplannen
+                    <MdOutlineArrowOutward className="h-5 w-5" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Full-width background element */}
-            <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2 z-55 bg-white"></div>
+          </section> {/* End bleed section */}       
 
-            {/* NEW Centered Content Area */}
-            <div className="relative z-[70] w-1/2 mx-auto pt-16 pb-16 text-black"> {/* Centered, 50% width, above background, top padding */}
-            <p className="text-xs text-gray-600">MEER DAN 12 MILJOEN GEANALYSEERDE PRODUCTEN EN KEYWORDS</p> {/* Added number */}
-
-              <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-6">Minder werk, meer omzet: <br /> bol store automatisering die werkt.
-              </h2>
-              <p className="mb-4 text-base">Werk slimmer, niet harder. Laat Bolbaas je store automatiseren en groeien.</p>
-            </div>
-
-          </section> {/* End bleed section */}
-
+          {/* Removed full-width gradient section */}
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section id="factuur-automatisering" className="relative w-full py-4"> {/* Standard section padding - ADDED relative & ID */}
-          {/* Full-width background element */}
-          <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-
-          {/* Facturen Image Group Container - Mirrored position/size of Email section */}
-          <div className="w-[50%] z-55 absolute top-64 right-0 transform translate-x-[15%]"> {/* Moved down slightly */}
-            {/* Small Image 1 (Facturen Acties) - Re-adjusted position */}
-            {/* <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturen-acties-SVNLW2UmidUza4cYzKz2zcMs7eRz1r.png"
-              alt="Facturen Acties Badge"
-              width={150} // Keeping badge size small
-              height={150} // Keeping badge size small
-              className="absolute top-8 left-[-7rem] z-10 rounded-xl shadow-lg border border-neutral-800" // Moved up and left // Added border
-            /> */}
-            {/* Small Image 2 (Facturen Green Badges) - Re-adjusted position */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturen-green%20badges-i7n7AaNQ8Qcvws0I9TGtnCNsl4DiRl.png"
-              alt="Facturen Green Badges"
-              width={250} // Keeping badge size small
-              height={250} // Keeping badge size small
-              className="absolute top-56 left-[-11rem] z-10 rounded-xl shadow-lg border border-neutral-800" // Moved further left // Added border
-            />
-            {/* Main Facturen Image - Matched size of Email main image */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturen-main-WNkgafK1YrKB8HTPYqYBAKfjNhWqCS.png"
-              alt="Facturen Dashboard Screenshot"
-              width={1800} // Matched width from Email section
-              height={1013} // Matched height from Email section
-              className="rounded-xl shadow-lg object-cover border border-neutral-800" // Added border
-            />
-          </div>
-
-          {/* Title added before the steps */}
-          <div className="relative container px-0 mb-4 mt-4 z-65"> {/* Container for alignment, added bottom margin - Increased z-index & added relative */}
-            <h2 className="text-6xl font-semibold text-white z-60">Factuur automatisering</h2>
-          </div>
-
-          {/* Div with borders and height equal to 1/4 container width via aspect ratio */}
-          <div className="relative border-t border-b border-border aspect-[12/1] z-65">
-            {/* Flex container for the numbers, positioned absolutely */}
-            <div className="absolute inset-0 flex items-start text-white">
-              {/* Number 1 */}
-              <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
-                <span className="text-sm text-gray-500">STAP 01</span> {/* Updated class */}
-                <p className="flex items-center text-lg md:text-xl font-semibold mt-1">
-                  <Package className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
-                  Bestelling geplaatst
-                </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Klant plaatst order op bol.com</p> {/* Subtitle - Updated styling */}
-              </div>
-              {/* Number 2 */}
-              <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
-                <span className="text-sm text-gray-500">STAP 02</span> {/* Updated class */}
-                <p className="flex items-center text-lg md:text-xl font-semibold mt-1">
-                  <Download className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
-                  Gegevens opgehaald
-                </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Bolbaas haalt orderinformatie op</p> {/* Subtitle - Updated styling */}
-              </div>
-              {/* Number 3 */}
-              <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
-                <span className="text-sm text-gray-500">STAP 03</span> {/* Updated class */}
-                <p className="flex items-center text-lg md:text-xl font-semibold mt-1">
-                  <FileText className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
-                  Factuur aangemaakt
-                </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Automatische factuurgeneratie</p> {/* Subtitle - Updated styling */}
-              </div>
-              {/* Number 4 */}
-              <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
-                <span className="text-sm text-gray-500">STAP 04</span> {/* Updated class */}
-                <p className="flex items-center text-lg md:text-xl font-semibold mt-1">
-                  <Upload className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
-                  Automatisch geüpload
-                </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Factuur direct naar bol.com</p> {/* Subtitle - Updated styling */}
-              </div>
+          <section id="btw-automatisering" className="relative w-full scroll-mt-24 py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+            {/* Full-width background element */}
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+            <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
+              <h2 className="text-6xl font-semibold text-white">BTW automatisering</h2>
             </div>
-          </div>
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-60"> {/* REMOVED container padding */}
+              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
+              {/* Add vertical gap between rows */}
+              <div className="grid grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
 
-          <div className="relative text-white row-span-2 w-[35%] pt-5 z-65"> {/* Make this span 2 rows - Added relative and z-65 */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatisch facturen uploaden naar bol.com</h2>
-                <p className="mb-4 text-base">Bespaar tijd en voorkom fouten door facturen automatisch naar het bol.com platform te uploaden. Bolbaas integreert naadloos met je verkoopaccount.</p>
-                <p className="text-base">Zodra een bestelling is verwerkt en de factuur is gegenereerd, zorgt Bolbaas ervoor dat deze direct en correct wordt geüpload, conform de eisen van bol.com.</p>
+                {/* Row 1, Column 1: Left Text (35%) */}
+                <div className="text-white row-span-2"> {/* Span container across two rows */}
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Bolbaas zet automatisch een BTW rapport voor je klaar. </h2>
+
+                  <p className="mb-4 text-base">Geen tijd meer besteden aan je bol.com btw boekhouding? Bolbaas zet automatisch een BTW rapport voor je klaar, op basis van al jouw orders. <span className="font-bold">Alle facturen van bol.com</span> worden automatisch opgeslagen in jouw database.</p>
+                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
+                  <div className="w-full pt-10">
+                    {/* Moved Feature Set 1 into first column */}
+                    <div className="mt-6">
+                      <p className="text-sm text-gray-400 mb-1">01</p>
+                      <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Zie precies per product wat de sales, winst en omzet zijn.</li>
+                      </ul>
+                    </div>
+                    {/* Moved Feature Set 2 into first column */}
+                    <div className="mt-4 pr-4 md:pr-6">
+                      <p className="text-sm text-gray-400 mb-1">02</p>
+                      <h3 className="font-semibold text-white my-3">Rankings</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Eigen producten worden automatisch getracked. Lees meer over rankings...</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                {/* Row 1 placeholders for columns 2-4 */}
+                <div></div>
+                <div></div>
+                <div></div>
+
+                {/* Row 2, Column 1: Empty */}
+                <div></div>
+
+                {/* Row 2, Column 2: Empty Spacer */}
+                <div></div>
+
+                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
+        
+
+                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
+                {/* <div className="text-gray-300"> ... </div> */}
+                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
+
+                {/* <div className="text-gray-300">
+                  <p className="text-sm text-gray-500 mb-1">03</p>
+                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
+                  <ul className="space-y-2 text-sm text-white pr-3">
+                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
+                  </ul>
+                </div>
+
+
+                <div className="text-gray-300 pr-4 md:pr-6">
+                  <p className="text-sm text-gray-500 mb-1">04</p>
+                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
+                  <ul className="space-y-2 text-sm text-white pr-3">
+                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
+                  </ul>
+                </div> */}
+
+
+              </div> {/* End grid */}
+
+              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
+              <div className="absolute top-[0%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
+                <Image
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/BTW-AANGIFTE-A9lWkyaqM7TBPlTmmCG5YRNzU1J8xl.png"
+                  alt="Product prestaties screenshot"
+                  width={1200} // Adjust width as needed, larger for better quality scaling down
+                  height={960} // Adjust height based on aspect ratio
+                  quality={85}
+                  className="relative rounded-lg" // Removed shadow and border
+                />
               </div>
 
+            </div> {/* End container */}
+          </section> {/* End bleed section */}
 
-        </section> {/* End bleed section */}
+          {/* Moved Bleed Background Section - Inline Styling */}
+          
+          {/* Moved Bleed Background Section - Inline Styling */}
+          <section id="baaspilot" className="relative w-full scroll-mt-24"> {/* REMOVED padding from here */}
+            {/* Full-width background element */}
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 
-        {/* Full-width Gradient Section */}
-        {/* <div className="relative z-60 w-full">
-          <Image
-            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/gradient1-mU76iAn5qblzvp7OyjkOpypAk0ccDX.png"
-            alt="Gradient background"
-            width={1920}
-            height={128}
-            className="w-full h-32 object-cover"
-            priority
-          />
-        </div> */}
+            {/* Render the client component containing the sticky sections */}
+            <AutomatiseringClientFeatures />
 
-          <div className="h-30"></div>
+          </section> {/* End bleed section containing sticky elements */}
 
-        {/* Moved Bleed Background Section - Inline Styling */}
-        <section id="email-automatisering" className="relative w-full py-16 md:py-24 lg:py-32"> {/* Standard section padding - Added relative & ID */}
-          {/* Full-width background element */}
-          <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+          {/* These sections are now outside the black background/sticky section */}
+          <InteractiveTopicSection />
+          <MiddleContentSection />
 
-          {/* Image container moved to top right of section and shifted slightly right */}
-          <div className="w-[50%] z-55 absolute top-36 right-0 transform translate-x-[15%]"> {/* Changed w-[40%] to w-[50%] */}
-            {/* Added Badge Image - Moved to right of flow image */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/email-vestruud%20badge-GxzHMYU26KOUQJ3uyk2qRCNigxgRnW.png"
-              alt="Email Sent Badge"
-              width={180}
-              height={180}
-              className="absolute bottom-32 right-16 z-10 rounded-xl border border-neutral-800" // Increased bottom offset further // Added border
-            />
-            {/* Main Dashboard Image - Increased size */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/email-dashboard-vvoPzVlvPFaRplSzltczqxJblP3VE0.png"
-              alt="Dashboard showing automated email features"
-              width={1800} // Increased width again
-              height={1013} // Increased height again (maintaining ~16:9 ratio)
-              className="rounded-xl shadow-lg object-cover border border-neutral-800" // Added border
-            />
+          {/* <PricingSection /> */}
+          {/* <TestimonialsSection /> */}
+          {/* Motivational Quote Section */}
 
-            {/* Added Email Flow Image Below */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/email-flow-tR6zVPhWZKFwd7wF05b57LG0mrt7CC.png"
-              alt="Email Automation Flow Diagram"
-              width={400} // Increased width slightly
-              height={160} // Increased height slightly (maintaining aspect ratio)
-              className="relative rounded-xl shadow-lg object-contain mt-2 ml-8 block h-auto border border-neutral-800" // Increased ml to ml-8 to shift further right // Added border
-            />
-          </div>
+          {/* <FAQSection /> */}
 
-          <div className="relative container px-0 mb-4 z-65"> {/* Container for alignment, added bottom margin, relative, z-65 */}
-            <h2 className="text-6xl font-semibold text-white">E-mail automatisering</h2>
-          </div>
-          {/* Container centers content normally ON TOP of the background */}
-          <div className="relative z-65"> {/* REMOVED container padding - Added z-65 */}
-            {/* Add vertical gap between rows */}
-            {/* CHANGE: Grid to 4 equal columns */}
-            <div className="grid grid-cols-4 gap-x-0 gap-y-6 text-white"> {/* Changed grid definition */}
-
-              {/* Row 1, Columns 1-2: Left Text (50%) */}
-              <div className="text-white col-span-2"> {/* Added col-span-2 */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatiseer e-mails, voorkom klantvragen en ontvang meer reviews</h2>
-                <p className="mb-4 text-base">Verstuur automatisch gepersonaliseerde e-mails om klanten proactief te informeren over hun bestelling en verzending. Dit vermindert het aantal klantvragen aanzienlijk.</p>
-                <p className="text-base">Stimuleer positieve klantervaringen en verzamel automatisch meer productreviews. Bolbaas stroomlijnt je aftersales, zodat jij kunt focussen op de groei van je bedrijf.</p>
-              </div>
-
-              {/* Row 1, Column 3: Empty (25%) */}
-              <div className=""></div>
-
-              {/* Row 1, Column 4: Empty (25%) */}
-              <div className=""></div>
-
-              {/* Row 2, Column 1: Feature Set 1 (Moved Here) */}
-              <div className="text-gray-300 pt-6"> {/* Positioned in col 1 of row 2 */}
-                <p className="text-sm text-gray-500 mb-1">01</p>
-                <h3 className="font-semibold text-white my-3">Automatisch e-mails</h3>
-                <ul className="space-y-2 text-sm text-white">
-                  <li>Verstuur automatisch gepersonaliseerde e-mails naar klanten.</li>
-                </ul>
-              </div>
-
-              {/* Row 2, Column 2: Feature Set 2 (Moved Here) */}
-              <div className="text-gray-300 pt-6 pr-4 md:pr-6 z-60 pl-[1px]"> {/* Positioned in col 2 of row 2 */}
-                <p className="text-sm text-gray-500 mb-1">02</p>
-                <h3 className="font-semibold text-white my-3">Ontvang meer reviews</h3>
-                <ul className="space-y-2 text-sm text-white">
-                  <li>Stimuleer positieve klantervaringen en verzamel automatisch meer productreviews.</li>
-                </ul>
-              </div>
-
-              {/* Row 2, Column 3: Empty (25%) */}
-              <div className=""></div>
-
-              {/* Row 2, Column 4: Empty (25%) */}
-              <div className=""></div>
-
-            </div> {/* End grid */}
-
-          </div> {/* End container */}
-        </section> {/* End bleed section */}
-
-        {/* Moved Bleed Background Section - Inline Styling */}
-        <section id="andere-features" className="relative w-full pt-24"> {/* REMOVED padding from here, ADDED ID */}
-          {/* Full-width background element */}
-          <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-
-          {/* Render the client component containing the sticky sections */}
-          <AutomatiseringClientFeatures />
-
-        </section> {/* End bleed section containing sticky elements */}
-
-        {/* These sections are now outside the black background/sticky section */}
-        <InteractiveTopicSection />
-        <MiddleContentSection />
-
-        {/* <PricingSection /> */}
-        {/* <TestimonialsSection /> */}
-        {/* Motivational Quote Section */}
-
-        {/* <FAQSection /> */}
-
-      </div>
-    </>
-  );
-}
+        </div>
+      </>
+    );
+  }

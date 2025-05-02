@@ -180,13 +180,13 @@ const featureCategories: {
         title: "BTW-aangifte automatisering",
         description: "Geautomatiseerde BTW-aangifte berekening. Weet precies hoeveel BTW je moet betalen.",
         icon: "Calculator",
-        href: "/features/automatisering#andere-features"
+        href: "/features/automatisering#btw-automatisering"
       },
       {
         title: "Baaspilot",
         description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
         icon: "FileClock",
-        href: "/features/automatisering#andere-features"
+        href: "/features/automatisering#baaspilot"
       },
     ]
   },
@@ -663,6 +663,13 @@ export function NavigationMenuDemo() {
       {/* Apply background transparent to NavigationMenu to inherit from parent */}
       <NavigationMenu className="z-10 relative bg-transparent">
         <NavigationMenuList>
+          {/* Bolbaas Brand Name */}
+          <li className="list-none">
+            <Link href="/">
+              <span className="font-bold text-lg mr-4">{/* Adjusted margin */}Bolbaas</span>
+            </Link>
+          </li>
+
           {/* AI Tools Trigger */}
           <div
             onMouseEnter={() => handleMouseEnter("ai")}

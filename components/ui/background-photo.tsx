@@ -7,8 +7,9 @@ import { cn } from "@/lib/utils";
 // Define the image sources based on options
 const IMAGE_SOURCES = {
   1: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/upscale_random_1-GQwNFWbdUClpOZpMGJi4vBILOEt15o.jpg",
-  // Add more options here as needed
-  // 2: "...",
+  2: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg2-m2v50ovmoR9lCzMBcODyIO46XWzvsr.png",
+  3: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg3-XXmD3VeBlZpMDS81acyGrKhm4NK9Jk.png",
+  4: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg4-9Uwcy3tZUQqh2Evs56yf9AIwxIPMmQ.png"
 };
 
 interface BackgroundPhotoProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -46,6 +47,7 @@ export function BackgroundPhoto({
         )}
         priority // Load image eagerly if it's above the fold
         style={{ objectFit: 'cover' }} // Ensure image covers the area nicely
+        quality={100}
       />
       {/* Dark Overlay - Still covers the entire container */}
       <div
