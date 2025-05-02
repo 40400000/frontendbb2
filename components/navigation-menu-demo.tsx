@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { usePathname } from 'next/navigation'
 
 import { cn } from "@/lib/utils"
@@ -135,14 +135,14 @@ const featureCategories: {
         title: "Keyword database",
         description: "Geavanceerde keyword onderzoek op basis van meer dan 12 miljoen keywords en producten",
         icon: "Search",
-        href: "/features/keyword-analysis",
+        href: "/features/tools#keyword-database",
         highlight: true,
       },
       {
         title: "Listing AI",
         description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
         icon: "Sparkles",
-        href: "/features/listing-ai"
+        href: "/features/tools#listing-ai"
       },
       {
         title: "Winst & ACoS calculator",
@@ -179,13 +179,13 @@ const featureCategories: {
         title: "BTW-aangifte automatisering",
         description: "Geautomatiseerde BTW-aangifte berekening. Weet precies hoeveel BTW je moet betalen.",
         icon: "Calculator",
-        href: "/features/automatisering#btw-berekening"
+        href: "/features/automatisering#andere-features"
       },
       {
         title: "Baaspilot",
         description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
         icon: "FileClock",
-        href: "/features/automatisering#baaspilot"
+        href: "/features/automatisering#andere-features"
       },
     ]
   },
@@ -277,7 +277,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     ai: (
       <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
         <div className="w-[200px] border-r">
-          <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+          <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
             <SidebarContent title="Bolbaas AI Tools" subtitle="Ontdek onze tools" />
           </div>
         </div>
@@ -286,7 +286,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
             const category = featureCategories.tools;
             return (
               <div key={item.title} className={cn(
-                "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                "group flex flex-col flex-1 hover:bg-gray-800 text-white",
                 index < arr.length - 1 && "border-r border-border"
               )}>
                 <Link
@@ -312,19 +312,19 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                       </span>
                     )}
                     <div className={cn(
-                      "text-base font-semibold group-hover:text-black",
+                      "text-base font-semibold text-white",
                       item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
                     )}>
                       {item.title}
                     </div>
                     <p className={cn(
-                      "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                      "text-sm leading-relaxed text-muted-foreground mt-1",
                       item.comingSoon && "group-hover:text-muted-foreground"
                     )}>
                       {item.description}
                     </p>
                     <span className={cn(
-                      "inline-block border border-white text-white group-hover:border-purple-500 group-hover:text-purple-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                      "inline-block border border-gray-600 text-gray-400 group-hover:border-purple-500 group-hover:text-purple-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
                       item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
                     )}>
                       Lees meer
@@ -340,7 +340,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     automation: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
               <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
                    <SidebarContent title="Bolbaas Automatisering" subtitle="Beheer je winkel" />
                 </div>
               </div>
@@ -349,7 +349,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                     const category = featureCategories.automation;
                     return (
                       <div key={item.title} className={cn(
-                        "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                        "group flex flex-col flex-1 hover:bg-gray-800 text-white",
                         index < arr.length - 1 && "border-r border-border"
                       )}>
                         <Link
@@ -375,19 +375,19 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                               </span>
                             )}
                             <div className={cn(
-                              "text-base font-semibold group-hover:text-black",
+                              "text-base font-semibold text-white",
                               item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
                             )}>
                               {item.title}
                             </div>
                             <p className={cn(
-                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              "text-sm leading-relaxed text-muted-foreground mt-1",
                               item.comingSoon && "group-hover:text-muted-foreground"
                             )}>
                               {item.description}
                             </p>
                             <span className={cn(
-                               "inline-block border border-white text-white group-hover:border-pink-500 group-hover:text-pink-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               "inline-block border border-gray-600 text-gray-400 group-hover:border-pink-500 group-hover:text-pink-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
                                item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
                             )}>
                               Lees meer
@@ -403,7 +403,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     data: (
         <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
               <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
                     <SidebarContent title="Bolbaas Data Inzichten" subtitle="Diepgaande data analyse" />
                 </div>
               </div>
@@ -412,7 +412,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                     const category = featureCategories.insights;
                     return (
                      <div key={item.title} className={cn(
-                       "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                       "group flex flex-col flex-1 hover:bg-gray-800 text-white",
                        index < arr.length - 1 && "border-r border-border"
                      )}>
                         <Link
@@ -438,19 +438,19 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                               </span>
                             )}
                             <div className={cn(
-                              "text-base font-semibold group-hover:text-black",
+                              "text-base font-semibold text-white",
                               item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
                             )}>
                               {item.title}
                             </div>
                             <p className={cn(
-                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              "text-sm leading-relaxed text-muted-foreground mt-1",
                               item.comingSoon && "group-hover:text-muted-foreground"
                             )}>
                               {item.description}
                             </p>
                             <span className={cn(
-                               "inline-block border border-white text-white group-hover:border-blue-500 group-hover:text-blue-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               "inline-block border border-gray-600 text-gray-400 group-hover:border-blue-500 group-hover:text-blue-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
                                item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
                             )}>
                               Lees meer
@@ -466,7 +466,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     tracking: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
               <div className="w-[200px] border-r">
-                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20">
+                 <div className="relative w-full h-full overflow-hidden bg-[url('https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png')] bg-cover bg-right-top after:absolute after:inset-0 after:bg-black/20 text-white">
                     <SidebarContent title="Bolbaas Tracking" subtitle="Monitor je prestaties" />
                 </div>
               </div>
@@ -475,7 +475,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                     const category = featureCategories.tracking;
                     return (
                       <div key={item.title} className={cn(
-                        "group flex flex-col flex-1 transition-colors duration-700 hover:bg-white",
+                        "group flex flex-col flex-1 hover:bg-gray-800 text-white",
                         index < arr.length - 1 && "border-r border-border"
                       )}>
                         <Link
@@ -501,19 +501,19 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                               </span>
                             )}
                             <div className={cn(
-                              "text-base font-semibold group-hover:text-black",
+                              "text-base font-semibold text-white",
                               item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
                             )}>
                               {item.title}
                             </div>
                             <p className={cn(
-                              "text-sm leading-relaxed text-muted-foreground group-hover:text-black mt-1",
+                              "text-sm leading-relaxed text-muted-foreground mt-1",
                               item.comingSoon && "group-hover:text-muted-foreground"
                             )}>
                               {item.description}
                             </p>
                             <span className={cn(
-                               "inline-block border border-white text-white group-hover:border-green-500 group-hover:text-green-500 text-xs font-medium px-2 py-1 rounded mt-2 transition-colors self-start",
+                               "inline-block border border-gray-600 text-gray-400 group-hover:border-green-500 group-hover:text-green-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
                                item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
                             )}>
                               Lees meer
@@ -533,7 +533,10 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
 
 export function NavigationMenuDemo() {
   const [activeMenu, setActiveMenu] = useState<MenuId>(null);
+  const [navbarMode, setNavbarMode] = useState<'dark' | 'light'>('dark');
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const navRef = useRef<HTMLDivElement>(null); // Ref for the component's root element
+  const [headerHeight, setHeaderHeight] = useState(0); // State to store header height for dropdown positioning
 
   const handleMouseEnter = (menuId: Exclude<MenuId, null>) => {
      if (timeoutRef.current) {
@@ -567,20 +570,68 @@ export function NavigationMenuDemo() {
     setActiveMenu(null);
   };
 
+  // Effect to handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerElement = document.getElementById('main-header');
+      const navElement = navRef.current;
+      if (!navElement || !headerElement) return;
+
+      // Update header height state if it hasn't been set
+      if (headerHeight === 0) {
+         setHeaderHeight(headerElement.offsetHeight);
+      }
+
+      const navBottom = navElement.getBoundingClientRect().bottom;
+      const lightSections = document.querySelectorAll('[data-navbar-mode="light"]');
+      let isOverLightSection = false;
+
+      lightSections.forEach((section) => {
+        const sectionRect = section.getBoundingClientRect();
+        // Check if the bottom of the nav is within the vertical bounds of a light section
+        if (sectionRect.top <= navBottom && sectionRect.bottom >= navBottom) {
+          isOverLightSection = true;
+        }
+      });
+
+      const newMode = isOverLightSection ? 'light' : 'dark';
+      setNavbarMode(newMode);
+
+      // Update header class directly
+      if (newMode === 'light') {
+        headerElement.classList.remove('bg-background', 'text-white');
+        headerElement.classList.add('bg-white', 'text-black');
+      } else {
+        headerElement.classList.remove('bg-white', 'text-black');
+        headerElement.classList.add('bg-background', 'text-white');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
-   <div> {/* Outer wrapper div */}
-    {/* Navigation Bar and Dropdown Wrapper */}
-    <div className="relative" onMouseLeave={handleMouseLeave}>
-      <NavigationMenu className="bg-background z-10 relative">
+   <div ref={navRef}> {/* Outer wrapper div - now ONLY has ref */}
+    {/* Navigation Bar and Dropdown Wrapper - Removed container mx-auto, handled by layout */}
+    <div className="relative" onMouseLeave={handleMouseLeave}> 
+      {/* Apply background transparent to NavigationMenu to inherit from parent */}
+      <NavigationMenu className="z-10 relative bg-transparent">
         <NavigationMenuList>
           {/* AI Tools Trigger */}
           <div
             onMouseEnter={() => handleMouseEnter("ai")}
             className={cn(
               navigationMenuTriggerStyle(),
-              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
-              activeMenu === "ai" && "after:opacity-100" // Keep active
+              "cursor-pointer relative bg-transparent", // Made background transparent
+              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800", // Conditional underline and hover bg
+              activeMenu === "ai" && "after:opacity-100" // Keep active underline
             )}
           >
             AI & Tools
@@ -590,9 +641,11 @@ export function NavigationMenuDemo() {
            <div
              onMouseEnter={() => handleMouseEnter("automation")}
              className={cn(
-               navigationMenuTriggerStyle(),
-               "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
-               activeMenu === "automation" && "after:opacity-100" // Keep active
+                navigationMenuTriggerStyle(),
+                "cursor-pointer relative bg-transparent",
+                "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+                navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
+                activeMenu === "automation" && "after:opacity-100"
              )}
             >
              Automatisering
@@ -603,8 +656,10 @@ export function NavigationMenuDemo() {
             onMouseEnter={() => handleMouseEnter("data")}
             className={cn(
               navigationMenuTriggerStyle(),
-              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
-              activeMenu === "data" && "after:opacity-100" // Keep active
+              "cursor-pointer relative bg-transparent",
+              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
+              activeMenu === "data" && "after:opacity-100"
             )}
           >
              Data inzichten
@@ -615,32 +670,42 @@ export function NavigationMenuDemo() {
             onMouseEnter={() => handleMouseEnter("tracking")}
             className={cn(
               navigationMenuTriggerStyle(),
-              "cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100",
-              activeMenu === "tracking" && "after:opacity-100" // Keep active
+              "cursor-pointer relative bg-transparent",
+              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
+              activeMenu === "tracking" && "after:opacity-100"
             )}
           >
             Tracking
           </div>
 
           {/* Prijzen Link (only hover effect) */}
-          <li
-            className="list-none relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100"
+          <li 
+            className={cn(
+              "list-none relative", 
+              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+              navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
+            )}
             onMouseEnter={handleSimpleLinkEnter}
           >
             <Link href="/prijzen" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100" : "hover:bg-gray-800")}>
                 Prijzen
               </NavigationMenuLink>
             </Link>
           </li>
 
           {/* Contact Link (only hover effect) */}
-          <li
-            className="list-none relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:opacity-0 after:transition-opacity hover:after:opacity-100"
+          <li 
+            className={cn(
+              "list-none relative", 
+              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
+              navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
+            )}
             onMouseEnter={handleSimpleLinkEnter}
           >
             <Link href="/contact" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100" : "hover:bg-gray-800")}>
                 Contact
               </NavigationMenuLink>
             </Link>
@@ -652,7 +717,8 @@ export function NavigationMenuDemo() {
        {activeMenu && (
         <div
           onMouseEnter={handleDropdownMouseEnter}
-          className="fixed top-16 left-0 right-0 bg-background shadow-lg z-50 overflow-hidden"
+          className="fixed left-0 right-0 bg-background shadow-lg z-50 overflow-hidden"
+          style={{ top: `${headerHeight}px` }} // Dynamic top position based on header height
         >
            <div className="container mx-auto">
              <MenuContent key={activeMenu} activeMenu={activeMenu} />

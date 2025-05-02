@@ -19,17 +19,14 @@ const topicDetails: Record<string, TopicContent> = {
     title: "Inzichten",
     description: "Gedetailleerde inzichten in uw Bol.com prestaties.",
     images: [
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/groeibaaswebsite/INZICHT1-Gdmx0xqQajbDJmgfd1rPhuuT0sL5t9.png",
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/groeibaaswebsite/INZICHT2-Qi1AvDWA7f3P8EUfM3MIsHevp7c9hm.png",
+      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/inzicht-wMrslhEeyKX4GYOCf8NL2fWwpTcyld.png",
     ],
   },
   Tools: {
     title: "Tools",
     description: "Krachtige tools voor data-analyse en optimalisatie.",
     images: [
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/HERO2-TaFELc5XTx6Q6Uuzhyg3K7vko9IG0I.png",
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking2-lK9UFloMsC4AMxQxBSOdiAWIu1ozuW.png",
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking3-TpOAH71NIBF2dSpRuIdvoP7bHDEwoy.png",
+      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tools-6sy0y8dPzYxBK8gpnZccwPbmGdvsL7.png",
     ],
   },
   Automatisering: {
@@ -37,15 +34,13 @@ const topicDetails: Record<string, TopicContent> = {
     description: "Automatiseer taken en focus op groei.",
     images: [
       "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/AUTOMATISERING-6fiAE4EiwtW5Bnvhg3hySS0e6F4szH.png"
-    ], // Add image URL
+    ],
   },
   Tracking: {
     title: "Tracking",
     description: "Volg uw producten en keywords nauwkeurig.",
     images: [
       "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking1-XgvFKJKg3g2IkQ3zn7EzKgAaml8iB1.png",
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking2-lK9UFloMsC4AMxQxBSOdiAWIu1ozuW.png",
-      "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking3-TpOAH71NIBF2dSpRuIdvoP7bHDEwoy.png",
     ],
   },
 };
@@ -100,7 +95,7 @@ export function InteractiveTopicSection() {
                 <p
                   key={topic}
                   onMouseEnter={() => handleMouseEnter(topic)}
-                  className={`text-3xl lg:text-4xl font-semibold cursor-pointer transition-colors duration-200 ${
+                  className={`text-5xl lg:text-6xl font-semibold cursor-pointer transition-colors duration-200 ${
                     selectedTopic === topic
                       ? 'text-foreground' // Style for selected item
                       : 'text-muted-foreground hover:text-foreground/80' // Style for non-selected items
@@ -128,73 +123,22 @@ export function InteractiveTopicSection() {
                 key={animationKey} 
                 className={`relative z-[60] transition-opacity duration-1000 ease-in-out ${opacityClass}`}
               >
-                {/* Conditionally render images or placeholder */}
+                {/* Conditionally render image or placeholder */}
                 {currentContent.images && currentContent.images.length > 0 ? (
-                  // Container for images
+                  // Container for the single image
                   <div className="relative mt-8 min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
-                    {/* Specific layout for Tracking with 3 images - REMOVE z-[60] */}
-                    {selectedTopic === 'Tracking' && currentContent.images.length === 3 && (
-                      <>
-                        {/* Image 1 (Large, Right) */}
-                        <div className="absolute -top-16 right-0 w-full max-w-3xl border border-neutral-800 rounded-lg overflow-hidden shadow-xl transform translate-x-1/4">
-                          <Image src={currentContent.images[0]} alt="Tracking screenshot 1" width={900} height={700} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                        {/* Image 2 (Smaller, Left Top) */}
-                        <div className="absolute -top-8 -left-8 w-[50%] max-w-sm border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
-                          <Image src={currentContent.images[1]} alt="Tracking screenshot 2" width={600} height={450} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                        {/* Image 3 (Smaller, Left Bottom) */}
-                        <div className="absolute top-48 -left-8 w-[50%] max-w-sm border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
-                          <Image src={currentContent.images[2]} alt="Tracking screenshot 3" width={600} height={450} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                      </>
-                    )}
-
-                    {/* Layout for Inzichten with 2 images - REMOVE z-[60] */}
-                    {selectedTopic === 'Inzichten' && currentContent.images.length === 2 && (
-                      <>
-                        {currentContent.images.map((imgSrc, index) => (
-                          <div
-                            key={index}
-                            className={`absolute w-full max-w-3xl border border-neutral-800 rounded-lg overflow-hidden shadow-xl ${
-                              index === 0 
-                                ? '-top-24 left-0' 
-                                : 'top-4 right-0 transform translate-x-1/2'
-                            }`}
-                          >
-                            <Image src={imgSrc} alt={`${currentContent.title} screenshot ${index + 1}`} width={800} height={600} quality={85} className="object-cover w-full h-auto" />
-                          </div>
-                        ))}
-                      </>
-                    )}
-                    
-                    {/* Layout for Automatisering with 1 image - REMOVE z-[60] */}
-                    {selectedTopic === 'Automatisering' && currentContent.images.length === 1 && (
-                      <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-full max-w-3xl border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
-                        <Image src={currentContent.images[0]} alt="Automatisering screenshot" width={900} height={700} quality={85} className="object-cover w-full h-auto" />
-                      </div>
-                    )}
-                    
-                    {/* Layout for Tools with 3 images (similar to Tracking) - REMOVE z-[60] */}
-                    {selectedTopic === 'Tools' && currentContent.images.length === 3 && (
-                      <>
-                        {/* Image 1 (Large, Right) */}
-                        <div className="absolute -top-16 right-0 w-full max-w-3xl border border-neutral-800 rounded-lg overflow-hidden shadow-xl transform translate-x-1/4">
-                          <Image src={currentContent.images[0]} alt="Tools screenshot 1" width={900} height={700} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                        {/* Image 2 (Smaller, Left Top) */}
-                        <div className="absolute -top-8 -left-8 w-[50%] max-w-sm border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
-                          <Image src={currentContent.images[1]} alt="Tools screenshot 2" width={600} height={450} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                        {/* Image 3 (Smaller, Left Bottom) */}
-                        <div className="absolute top-48 -left-8 w-[50%] max-w-sm border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
-                          <Image src={currentContent.images[2]} alt="Tools screenshot 3" width={600} height={450} quality={85} className="object-cover w-full h-auto" />
-                        </div>
-                      </>
-                    )}
-                    
-                    {/* Fallback/Generic layout for other topics with images if needed - can be added here */}
-
+                    {/* Single image layout - centered */}
+                    <div className="absolute -top-32 left-[65%] transform -translate-x-1/2 w-full max-w-4xl rounded-lg overflow-hidden shadow-xl">
+                      <Image
+                        src={currentContent.images[0]} // Always use the first (and only) image
+                        alt={`${currentContent.title} screenshot`}
+                        width={900}
+                        height={700}
+                        quality={85}
+                        className="object-cover w-full h-auto"
+                        priority={true} // Prioritize the visible image
+                      />
+                    </div>
                   </div>
                 ) : (
                   // Placeholder when no images are available

@@ -186,6 +186,7 @@ function getCurrentPageTitle(currentPath: string): string | null {
   }
 
   // 3. Check specific paths not in features if needed
+  if (currentPath === '/pricing') return 'Pricing';
   if (currentPath === '/prijzen') return 'Prijzen';
   if (currentPath === '/contact') return 'Contact';
 
@@ -197,14 +198,21 @@ export function Breadcrumbs() {
   const currentPageTitle = getCurrentPageTitle(pathname);
   const isFeaturePage = pathname.startsWith('/features/');
 
-  if (!isFeaturePage || !currentPageTitle) {
-    return null; // Don't render breadcrumbs if not on a feature page or no title found
+  // Only render when we have a title (features or other specific pages)
+  if (!currentPageTitle) {
+    return null;
   }
 
   return (
     <div className="border-t border-b container mx-auto overflow-hidden">
       <div className="container mx-auto py-6 px-0 text-md text-foreground">
-        Features   <span className="text-muted-foreground px-2">/</span>   {currentPageTitle}
+        {isFeaturePage ? (
+          <>
+            Features <span className="text-muted-foreground px-2">/</span> {currentPageTitle}
+          </>
+        ) : (
+          currentPageTitle
+        )}
       </div>
     </div>
   );

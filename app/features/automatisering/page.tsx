@@ -333,7 +333,7 @@ export default function AutomatiseringPage() {
         </section> {/* End bleed section */}
 
         {/* Moved Bleed Background Section - Inline Styling */}
-        <section className="relative w-full pt-24"> {/* REMOVED padding from here */}
+        <section id="andere-features" className="relative w-full pt-24"> {/* REMOVED padding from here, ADDED ID */}
           {/* Full-width background element */}
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 

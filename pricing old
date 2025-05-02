@@ -1,223 +1,4 @@
-import { Icons } from "@/components/icons"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { CheckIcon, Rocket, Crown, Building2, Zap, Sparkles, Target, XIcon, ExternalLink, Globe, ChartNoAxesCombined, Wrench, ArrowRight, CheckCircle, Settings, SearchCode, Activity, HelpCircle, MessageSquare, BarChart, Database, FileText, Mail, Bot } from "lucide-react"
-import * as React from "react"
-
-const pricingPlans = [
-  {
-    name: "Start",
-    tagline: "Zet je eerste stappen",
-    price: 20,
-    priceSuffix: "/ maand",
-    description: "Voor ambitieuze beginners die hun bol.com avontuur willen lanceren.",
-    iconFeatures: [
-      { text: "Automatisering van facturen, emails en btw aangifte", icon: Settings },
-      { text: "Ontdek kansrijke zoekwoorden", icon: SearchCode },
-      { text: "Volg rankings van 10 producten", icon: Activity },
-      { text: "Persoonlijke e-mail helpdesk", icon: HelpCircle },
-    ],
-    cta: "1 maand gratis",
-    ctaVariant: "outline" as const,
-    planIcon: Rocket,
-    iconBgColor: "bg-blue-100",
-    iconTextColor: "text-blue-500",
-  },
-  {
-    name: "Plus",
-    tagline: "Boost je verkoop",
-    price: 90,
-    priceSuffix: "/ maand",
-    description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
-    iconFeatures: [
-      { text: "Geavanceerd inzichtendashboard", icon: BarChart },
-      { text: "Krachtige zoekwoordanalyse", icon: Database },
-      { text: "Volg 25 producten in detail", icon: Activity },
-      { text: "Facturen op autopilot", icon: FileText },
-      { text: "Zorgeloze BTW-afhandeling", icon: Bot },
-      { text: "Directe chat ondersteuning", icon: MessageSquare },
-    ],
-    cta: "1 maand gratis",
-    ctaVariant: "default" as const,
-    planIcon: Crown,
-    iconBgColor: "bg-purple-100",
-    iconTextColor: "text-purple-500",
-  },
-  {
-    name: "Pro",
-    tagline: "Domineer de markt",
-    price: 450,
-    priceSuffix: "/ maand",
-    description: "Voor bol.com ondernemers en agencies die willen excelleren.",
-    iconFeatures: [
-      { text: "Premium analytics dashboard", icon: BarChart },
-      { text: "Onbeperkte zoekwoordmogelijkheden", icon: Database },
-      { text: "Ongelimiteerd productmonitoring", icon: Activity },
-      { text: "Complete automatisering suite", icon: Settings },
-      { text: "VIP ondersteuning 24/7", icon: HelpCircle },
-      { text: "Persoonlijke strategie consultant", icon: MessageSquare },
-    ],
-    cta: "Schaal je business",
-    ctaVariant: "outline" as const,
-    planIcon: Building2,
-    iconBgColor: "bg-indigo-100",
-    iconTextColor: "text-indigo-500",
-  },
-]
-
-interface FeatureComparisonItem {
-  name: string;
-  description: string;
-  hobby: string;
-  pro: string;
-  enterprise: string;
-}
-
-// Define the single store feature separately
-const storeFeature: FeatureComparisonItem = {
-  name: "Aantal stores",
-  description: "Maximum aantal gekoppelde bol stores per account.",
-  hobby: "2 stores",
-  pro: "Onbeperkt stores",
-  enterprise: "Onbeperkt"
-};
-
-// Define the seats feature separately
-const seatFeature: FeatureComparisonItem = {
-  name: "Aantal seats",
-  description: "Het aantal gebruikers dat toegang heeft tot het account.",
-  hobby: "1 seat",
-  pro: "5 seats",
-  enterprise: "Onbeperkt"
-};
-
-// Define the orders feature separately
-const orderFeature: FeatureComparisonItem = {
-  name: "Aantal orders",
-  description: "Het aantal orders dat verwerkt kan worden.", // Placeholder description
-  hobby: "Onbeperkt",
-  pro: "Onbeperkt",
-  enterprise: "Onbeperkt"
-};
-
-// Define the new projects feature
-const projectFeature: FeatureComparisonItem = {
-  name: "Aantal projecten",
-  description: "Het aantal projecten dat je kunt beheren.", // Placeholder description, you might want to refine this
-  hobby: "-",
-  pro: "5",
-  enterprise: "Onbeperkt"
-};
-
-// New feature comparison data (excluding the store feature)
-const featuresData: FeatureComparisonItem[] = [
-];
-
-// Define data tools features
-const dataToolsFeatures: FeatureComparisonItem[] = [
-  {
-    name: "Keyword database",
-    description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools voor perfecte organisch en geadverteerde rankings.",
-    hobby: "✕",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "Listing AI",
-    description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
-    hobby: "✕",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "Winst & ACoS calculator",
-    description: "Bereken winstgevendheid van producten en campagnes",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  }
-];
-
-// Define insight features
-const insightFeatures: FeatureComparisonItem[] = [
-  {
-    name: "Verkoop inzichten",
-    description: "Uitgebreid overzicht van je verkoopprestaties",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "Product inzichten",
-    description: "Gedetailleerde analyse van je productprestaties",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "Bestellingen inzichten",
-    description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "Levering tracker",
-    description: "Volg je leveringen en prestaties.", // Placeholder description
-    hobby: "✕",
-    pro: "✓",
-    enterprise: "✓"
-  }
-];
-
-// Define ranking features
-const rankingFeatures: FeatureComparisonItem[] = [
-  {
-    name: "Product tracking",
-    description: "Volg de prestaties van je producten.", // Placeholder description
-    hobby: "10",
-    pro: "200",
-    enterprise: "Onbeperkt"
-  },
-  {
-    name: "Precision product tracking",
-    description: "Gedetailleerde tracking voor geavanceerde analyse.", // Placeholder description
-    hobby: "-",
-    pro: "30",
-    enterprise: "400"
-  }
-];
-
-// Define automation features
-const automationFeatures: FeatureComparisonItem[] = [
-  {
-    name: "Factuur automatisering",
-    description: "Geautomatiseerde factuur generatie en beheer",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "E-mail automatisering",
-    description: "Verzamel meer reviews met geautomatiseerde e-mails",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  },
-  {
-    name: "BTW-aangifte automatisering",
-    description: "Vereenvoudig belastingaangifte met geautomatiseerde BTW-aangifte berekening",
-    hobby: "✓",
-    pro: "✓",
-    enterprise: "✓"
-  }
-];
-
-const allFeaturesData = [...featuresData, ...dataToolsFeatures, ...insightFeatures, ...automationFeatures];
-
-export default function PricingPage() {
-  return (
-    <div className="container mx-auto transform origin-center py-12">
+<div className="container mx-auto transform origin-center py-12">
       <div className="border rounded-lg shadow-none mx-auto max-w-5xl relative overflow-hidden">
         
         {/* === NEW: Founding Member Alert Banner === */}
@@ -609,7 +390,7 @@ export default function PricingPage() {
         {/* Disclaimer Text */}
         <div className="py-6 px-4 text-center">
           <p className="text-xs text-muted-foreground">
-            Getoonde prijzen zijn exclusief 21% btw en kunnen onderhevig zijn aan wijzigingen. Maandelijks gefactureerd.
+            Getoonde prijzen zijn in euro's, vrijgesteld van btw op grond van KOR, dit kan veranderen en kunnen onderhevig zijn aan wijzigingen. Maandelijks gefactureerd. 
           </p>
         </div>
 
@@ -648,3 +429,224 @@ export default function PricingPage() {
     </div>
   )
 } 
+
+
+
+import { Icons } from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { CheckIcon, Rocket, Crown, Building2, Zap, Sparkles, Target, XIcon, ExternalLink, Globe, ChartNoAxesCombined, Wrench, ArrowRight, CheckCircle, Settings, SearchCode, Activity, HelpCircle, MessageSquare, BarChart, Database, FileText, Mail, Bot } from "lucide-react"
+import * as React from "react"
+
+const pricingPlans = [
+  {
+    name: "Start",
+    tagline: "Zet je eerste stappen",
+    price: 20,
+    priceSuffix: "/ maand",
+    description: "Voor ambitieuze beginners die hun bol.com avontuur willen lanceren.",
+    iconFeatures: [
+      { text: "Automatisering van facturen, emails en btw aangifte", icon: Settings },
+      { text: "Ontdek kansrijke zoekwoorden", icon: SearchCode },
+      { text: "Volg rankings van 10 producten", icon: Activity },
+      { text: "Persoonlijke e-mail helpdesk", icon: HelpCircle },
+    ],
+    cta: "1 maand gratis",
+    ctaVariant: "outline" as const,
+    planIcon: Rocket,
+    iconBgColor: "bg-blue-100",
+    iconTextColor: "text-blue-500",
+  },
+  {
+    name: "Plus",
+    tagline: "Boost je verkoop",
+    price: 90,
+    priceSuffix: "/ maand",
+    description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
+    iconFeatures: [
+      { text: "Geavanceerd inzichtendashboard", icon: BarChart },
+      { text: "Krachtige zoekwoordanalyse", icon: Database },
+      { text: "Volg 25 producten in detail", icon: Activity },
+      { text: "Facturen op autopilot", icon: FileText },
+      { text: "Zorgeloze BTW-afhandeling", icon: Bot },
+      { text: "Directe chat ondersteuning", icon: MessageSquare },
+    ],
+    cta: "1 maand gratis",
+    ctaVariant: "default" as const,
+    planIcon: Crown,
+    iconBgColor: "bg-purple-100",
+    iconTextColor: "text-purple-500",
+  },
+  {
+    name: "Pro",
+    tagline: "Domineer de markt",
+    price: 450,
+    priceSuffix: "/ maand",
+    description: "Voor bol.com ondernemers en agencies die willen excelleren.",
+    iconFeatures: [
+      { text: "Premium analytics dashboard", icon: BarChart },
+      { text: "Onbeperkte zoekwoordmogelijkheden", icon: Database },
+      { text: "Ongelimiteerd productmonitoring", icon: Activity },
+      { text: "Complete automatisering suite", icon: Settings },
+      { text: "VIP ondersteuning 24/7", icon: HelpCircle },
+      { text: "Persoonlijke strategie consultant", icon: MessageSquare },
+    ],
+    cta: "Schaal je business",
+    ctaVariant: "outline" as const,
+    planIcon: Building2,
+    iconBgColor: "bg-indigo-100",
+    iconTextColor: "text-indigo-500",
+  },
+]
+
+interface FeatureComparisonItem {
+  name: string;
+  description: string;
+  hobby: string;
+  pro: string;
+  enterprise: string;
+}
+
+// Define the single store feature separately
+const storeFeature: FeatureComparisonItem = {
+  name: "Aantal stores",
+  description: "Maximum aantal gekoppelde bol stores per account.",
+  hobby: "2 stores",
+  pro: "Onbeperkt stores",
+  enterprise: "Onbeperkt"
+};
+
+// Define the seats feature separately
+const seatFeature: FeatureComparisonItem = {
+  name: "Aantal seats",
+  description: "Het aantal gebruikers dat toegang heeft tot het account.",
+  hobby: "1 seat",
+  pro: "5 seats",
+  enterprise: "Onbeperkt"
+};
+
+// Define the orders feature separately
+const orderFeature: FeatureComparisonItem = {
+  name: "Aantal orders",
+  description: "Het aantal orders dat verwerkt kan worden.", // Placeholder description
+  hobby: "Onbeperkt",
+  pro: "Onbeperkt",
+  enterprise: "Onbeperkt"
+};
+
+// Define the new projects feature
+const projectFeature: FeatureComparisonItem = {
+  name: "Aantal projecten",
+  description: "Het aantal projecten dat je kunt beheren.", // Placeholder description, you might want to refine this
+  hobby: "-",
+  pro: "5",
+  enterprise: "Onbeperkt"
+};
+
+// New feature comparison data (excluding the store feature)
+const featuresData: FeatureComparisonItem[] = [
+];
+
+// Define data tools features
+const dataToolsFeatures: FeatureComparisonItem[] = [
+  {
+    name: "Keyword database",
+    description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools voor perfecte organisch en geadverteerde rankings.",
+    hobby: "✕",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "Listing AI",
+    description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
+    hobby: "✕",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "Winst & ACoS calculator",
+    description: "Bereken winstgevendheid van producten en campagnes",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  }
+];
+
+// Define insight features
+const insightFeatures: FeatureComparisonItem[] = [
+  {
+    name: "Verkoop inzichten",
+    description: "Uitgebreid overzicht van je verkoopprestaties",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "Product inzichten",
+    description: "Gedetailleerde analyse van je productprestaties",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "Bestellingen inzichten",
+    description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "Levering tracker",
+    description: "Volg je leveringen en prestaties.", // Placeholder description
+    hobby: "✕",
+    pro: "✓",
+    enterprise: "✓"
+  }
+];
+
+// Define ranking features
+const rankingFeatures: FeatureComparisonItem[] = [
+  {
+    name: "Product tracking",
+    description: "Volg de prestaties van je producten.", // Placeholder description
+    hobby: "10",
+    pro: "200",
+    enterprise: "Onbeperkt"
+  },
+  {
+    name: "Precision product tracking",
+    description: "Gedetailleerde tracking voor geavanceerde analyse.", // Placeholder description
+    hobby: "-",
+    pro: "30",
+    enterprise: "400"
+  }
+];
+
+// Define automation features
+const automationFeatures: FeatureComparisonItem[] = [
+  {
+    name: "Factuur automatisering",
+    description: "Geautomatiseerde factuur generatie en beheer",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "E-mail automatisering",
+    description: "Verzamel meer reviews met geautomatiseerde e-mails",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  },
+  {
+    name: "BTW-aangifte automatisering",
+    description: "Vereenvoudig belastingaangifte met geautomatiseerde BTW-aangifte berekening",
+    hobby: "✓",
+    pro: "✓",
+    enterprise: "✓"
+  }
+];
+
+const allFeaturesData = [...featuresData, ...dataToolsFeatures, ...insightFeatures, ...automationFeatures];
+
+export default function PricingPage() {

@@ -338,7 +338,7 @@ export default function HighlightedSection({ variant }: HighlightedSectionProps)
 
         {/* New image positioned above the existing one */}
         <Image 
-          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/Scherm%C2%ADafbeelding%202025-04-03%20om%2020.13.40-lEfM7oIWuRQtyu4kUMLdrOFn3uwjNV.png"
+          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/inzicht-wMrslhEeyKX4GYOCf8NL2fWwpTcyld.png"
           alt="Store data insights graph"
           width={450}
           height={270}
@@ -346,13 +346,7 @@ export default function HighlightedSection({ variant }: HighlightedSectionProps)
         />
 
         {/* Existing image */}
-        <Image
-          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/ordertablescreen-s4L6iYI4eceEPB5529MepGCV0SM3N3.png"
-          alt="Store data insights table"
-          width={600}
-          height={360}
-          className="absolute bottom-0 right-0 object-cover z-0"
-        />
+
       </section>
     );
   } else if (variant === 'ToolsSector') {
