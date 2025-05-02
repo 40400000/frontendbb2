@@ -103,11 +103,12 @@ const pricingPlans = [
     description: "Voor bol.com ondernemers en agencies die willen excelleren.",
     iconFeatures: [
       { text: "Onbeperkte stores & gebruikers", icon: Building2 },
+      { text: "ACoS verlagen", icon: TrendingDown },
       { text: "Onbeperkt product & keyword tracking", icon: Activity },
       { text: "400 precision product trackers", icon: Target },
       { text: "Dedicated project manager", icon: Crown },
       { text: "Premium support & strategie sessies", icon: Rocket },
-      { text: "ACoS verlagen", icon: TrendingDown },
+
       { text: "AI biedingen & omzet research tools (Binnenkort)", icon: Zap },
     ],
     cta: "Gesprek inplannen",
@@ -430,7 +431,7 @@ export default function PricingPage() { // Renamed function
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
-              <div className="col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
+              <div className="col-span-1 mt-4 flex flex-col pl-0.5 border-t border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
                 <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
                   {/* Original Content - Slides up on hover */}
@@ -460,7 +461,7 @@ export default function PricingPage() { // Renamed function
           </div>
 
           {/* New Pricing Section */}
-          <section className="relative z-[50] w-full border-t border-border">
+          <section className="relative z-[50] w-full border-border">
             {/* Bleed Background */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             {/* Pricing Plans Section - Placed directly after hero content, aligned with columns */}
