@@ -181,7 +181,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
 
-                    <div className="mt-120 z-80 relativ pt-10">
+                    <div className="mt-105 z-80 relativ pt-10">
                       <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
                       <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
@@ -256,7 +256,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
-              <div id="email-automatisering" className="absolute top-[70%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none scroll-mt-24"> {/* Adjusted top/right positioning */} 
+              <div id="email-automatisering" className="absolute top-[62%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none scroll-mt-24"> {/* Adjusted top/right positioning */} 
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/automatiseringemails-RJgmyQy8b1KleXBT53jLvpxYZMlj7B.png"
                   alt="Bestellingen screenshot"
@@ -339,17 +339,17 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                     {/* Moved Feature Set 1 into first column */}
                     <div className="mt-6">
                       <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
+                      <h3 className="font-semibold text-white my-3">Automatisch berekening</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Zie precies per product wat de sales, winst en omzet zijn.</li>
+                        <li>Zie precies hoeveel je aan BTW kan aftrekken en hoeveel je moet betalen.</li>
                       </ul>
                     </div>
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-4 pr-4 md:pr-6">
                       <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-white my-3">Rankings</h3>
+                      <h3 className="font-semibold text-white my-3">Automatisch BTW boekhouding</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Eigen producten worden automatisch getracked. Lees meer over rankings...</li>
+                        <li>Alle facturen van bol.com worden automatisch opgeslagen in jouw database. Van zowel orderfacturen als facturen van bol zelf.</li>
                       </ul>
                     </div>
                   </div>
