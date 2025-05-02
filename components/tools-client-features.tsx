@@ -63,7 +63,7 @@ export function ToolsClientFeatures() {
           {/* Flex Row for Content and Image */}
           <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between">
             {/* Left side: Text content (No Heading Here) - Add ref here */}
-            <div ref={btwTextRef} className="relative w-[25%] text-white"> {/* Adjusted width */}
+            <div ref={btwTextRef} id="winst-calculator" className="relative w-[25%] text-white"> {/* Adjusted width */}
               {/* Content starts here */}
               <div className="p-0 text-md">
                 <span className="text-sm text-gray-500">01</span>
@@ -93,7 +93,7 @@ export function ToolsClientFeatures() {
         <div className="sticky top-0 z-[60] container px-0 flex flex-col md:flex-row items-start gap-8 md:justify-between py-16 md:py-24 lg:py-32"> {/* Sticky Content - Added md:justify-between, kept gap for col layout */}
 
            {/* Left side: Text content for Baaspilot - Add ref here */}
-           <div ref={baaspilotTextRef} className="relative w-[25%] text-white"> {/* Adjusted width for responsiveness */}
+           <div ref={baaspilotTextRef} id="ab-testing" className="relative w-[25%] text-white"> {/* Adjusted width for responsiveness */}
              <div className="p-0 text-md">
                <span className="text-sm text-gray-500">02</span>
                <p className="flex items-center text-lg md:text-xl font-semibold my-6">

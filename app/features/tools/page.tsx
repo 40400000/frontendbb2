@@ -123,7 +123,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </section>
 
               {/* Moved Bleed Background Section - Inline Styling */}
-              <section data-navbar-mode="light" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[1900px]"> {/* Further increased section height */}
+              <section data-navbar-mode="light" id="bolbaas-database" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2650px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -162,10 +162,10 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
                     <div className="mt-30 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
-                      <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
+                      <p className="text-sm text-gray-500 mb-1">12 MILJOEN GEANALYSEERDE KEYWORDS</p>
+                      <h3 className="font-semibold text-black my-3">Zie kansen met onze keyword database. Analyseer zichtbaarheid</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
+                        <li>Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campange strategieën.</li>
                       </ul>
                     </div>
                     <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
@@ -181,11 +181,11 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
 
-                    <div className="mt-70 z-80 relativ pt-10">
-                      <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
-                      <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
+                    <div className="mt-85 z-80 relativ pt-10">
+                      <p className="text-sm text-gray-500 mb-1">MILJARDEN DATA PUNTEN</p>
+                      <h3 className="font-semibold text-black my-3">Zie trends, mogelijkheden en kansen van keywords</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
+                        <li>Zomer of winter keywords? Tijdelijke hype of langdurige trends? Zie het hele beeld. Bekijk topconcurenten en trends om strategieën te verbeteren.</li>
                       </ul>
                     </div>
                     <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
@@ -201,7 +201,27 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
                     {/* Moved Feature Set 2 into first column */}
-                    
+                    <div className="mt-85 z-80 relativ pt-10">
+                      <p className="text-sm text-gray-500 mb-1">BIEDING GESCHIEDENIS</p>
+                      <h3 className="font-semibold text-black my-3">Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod.</h3>
+                      <ul className="space-y-2 text-sm text-black pr-3">
+                        <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biediengen, verlaag ACoS en verhoog winst. </li>
+                      </ul>
+                    </div>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                      {/* Original Content - Slides up on hover */}
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </span>
+                      {/* Hover Overlay - Slides in from bottom on hover */}
+                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                        Gesprek inplannen {/* Updated text */}
+                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                      </div>
+                    </div>
+
+
                   </div>
                 </div>
                 {/* Row 1 placeholders for columns 2-4 */}
@@ -256,7 +276,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
-              <div className="absolute top-[65%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
+              <div className="absolute top-[42%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keywordinsight_1-ADedysDniKyY4UqEhPjceWuLmH0Wu1.png"
                   alt="Bestellingen screenshot"
@@ -266,21 +286,32 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
+              {/* NEW Average Bid Image */}
+              <div className="absolute top-[85%] right-[0%] w-[65%] h-auto z-70 pointer-events-none"> {/* Adjusted top and width */}
+                <Image
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/average-bid-IoTgFcZkwj9mpwVRyYlbtEZd9EbqEx.png"
+                  alt="Average Bid screenshot" // Descriptive alt text
+                  width={1200} // Keep large for quality scaling
+                  height={960} // Keep based on aspect ratio
+                  quality={85}
+                  className="relative rounded-lg" // Consistent styling
+                />
+              </div>
               {/* Ranking insights graph */}
    
 
             </div> {/* End container */}
 
             {/* NEW Text Block at the bottom */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[80%] w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
-              <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[85%] w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
+              <h2 className="text-4xl md:text-5xl font-semibold">Verhoog zichtbaarheid, verlaag ACoS</h2>
               <p className="text-base">
-                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
+                Bolbaas analyseert dagelijkse miljoenen keywords en miljarden data punten. 
               </p>
             </div>
 
             {/* NEW Buttons container at the bottom */}
-            <div className="absolute left-[25%] top-[90%] w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
+            <div className="absolute left-[25%] top-[92%] w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
               {/* Button 1 in First Column */}
               <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
                 <div className="group relative w-full text-left cursor-pointer overflow-hidden">
@@ -317,7 +348,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
           {/* Removed full-width gradient section */}
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+          <section id="ranking-ai" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}

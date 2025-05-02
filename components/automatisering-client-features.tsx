@@ -48,7 +48,7 @@ export function AutomatiseringClientFeatures() {
             </div>
             <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between"> {/* Flex Row for Content and Image */}
               {/* Left side: Text content for Baaspilot - Add ref here */}
-              <div id="baaspilot" ref={baaspilotTextRef} className="relative w-[25%] text-white"> {/* Adjusted width for responsiveness & ADDED ID */}
+              <div id="baaspilot" ref={baaspilotTextRef} className="scroll-mt-40 relative w-[25%] text-white"> {/* Adjusted width for responsiveness & ADDED ID, scroll offset */}
                 <div className="p-0 text-md">
                   <span className="text-sm text-gray-500">01</span> {/* Updated numbering */}
                   <p className="flex items-center text-lg md:text-xl font-semibold my-6">

@@ -63,7 +63,7 @@ export function DataInzichtenClientFeatures() {
           {/* Flex Row for Content and Image */}
           <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between">
             {/* Left side: Text content (No Heading Here) - Add ref here */}
-            <div ref={btwTextRef} className="relative w-[25%] text-white"> {/* Adjusted width */}
+            <div ref={btwTextRef} id="sales-voorspellingen" className="scroll-mt-40 relative w-[25%] text-white"> {/* Adjusted width and scroll offset */}
               {/* Content starts here */}
               <div className="p-0 text-md">
                 <span className="text-sm text-gray-500">01</span>

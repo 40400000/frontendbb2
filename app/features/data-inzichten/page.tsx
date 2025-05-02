@@ -158,7 +158,7 @@ export default function DataInzichtenPage() { // Renamed function
           {/* Removed full-width gradient section */}
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+          <section id="product-prestaties" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
@@ -247,7 +247,7 @@ export default function DataInzichtenPage() { // Renamed function
           </section> {/* End bleed section */}
 
 
-          <section data-navbar-mode="light" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+          <section data-navbar-mode="light" id="custom-dashboards" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -370,7 +370,7 @@ export default function DataInzichtenPage() { // Renamed function
           </section> {/* End bleed section */}       
 
           {/* Duplicated Bestellingen Section with Black Background */}
-          <section className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
+          <section id="bestellingen" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
             {/* Full-width background element - BLACK */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             

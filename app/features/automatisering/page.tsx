@@ -123,7 +123,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </section>
 
               {/* Moved Bleed Background Section - Inline Styling */}
-              <section id="factuur-automatisering" data-navbar-mode="light" className="relative w-full scroll-mt-24 py-16 md:py-24 lg:py-32 min-h-[2300px]"> {/* Further increased section height */}
+              <section data-navbar-mode="light" id="store-automatisering" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2200px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -181,11 +181,11 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
 
-                    <div className="mt-105 z-80 relativ pt-10">
-                      <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
-                      <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
+                    <div id="email-campagnes" className="scroll-mt-40 mt-85 z-80 relativ pt-10">
+                      <p className="text-sm text-gray-500 mb-1">E-MAIL CAMPAGNES</p>
+                      <h3 className="font-semibold text-black my-3">Verhoog reviews en verkom klantvragen met e-mail campagnes</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
+                        <li>Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.</li>
                       </ul>
                     </div>
                     <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
@@ -256,7 +256,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
-              <div id="email-automatisering" className="absolute top-[62%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none scroll-mt-24"> {/* Adjusted top/right positioning */} 
+              <div className="absolute top-[70%] right-[-10%] w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/automatiseringemails-RJgmyQy8b1KleXBT53jLvpxYZMlj7B.png"
                   alt="Bestellingen screenshot"
@@ -317,7 +317,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
           {/* Removed full-width gradient section */}
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section id="btw-automatisering" className="relative w-full scroll-mt-24 py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+          <section id="btw-aangifte-automatisering" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
@@ -338,18 +338,18 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}
                     <div className="mt-6">
-                      <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Automatisch berekening</h3>
+                      <p className="text-sm text-gray-400 mb-1">BTW BEREKENING</p>
+                      <h3 className="font-semibold text-white my-3">BTW aangifte automatisch berekend</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Zie precies hoeveel je aan BTW kan aftrekken en hoeveel je moet betalen.</li>
+                        <li>Bolbaas berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.</li>
                       </ul>
                     </div>
                     {/* Moved Feature Set 2 into first column */}
-                    <div className="mt-4 pr-4 md:pr-6">
-                      <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-white my-3">Automatisch BTW boekhouding</h3>
+                    <div className="mt-10 pr-4 md:pr-6">
+                      <p className="text-sm text-gray-400 mb-1">BTW BOEKHOUDING</p>
+                      <h3 className="font-semibold text-white my-3">BTW facturen automatisch opgeslagen</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Alle facturen van bol.com worden automatisch opgeslagen in jouw database. Van zowel orderfacturen als facturen van bol zelf.</li>
+                        <li>Geen boekhouder meer nodig. Bolbaas bewaaart alle facturen van jouw orders en van bol.com.</li>
                       </ul>
                     </div>
                   </div>
@@ -410,7 +410,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
           {/* Moved Bleed Background Section - Inline Styling */}
           
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section id="baaspilot" className="relative w-full scroll-mt-24"> {/* REMOVED padding from here */}
+          <section id="automatisering" className="relative w-full"> {/* REMOVED padding from here */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 

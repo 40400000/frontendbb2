@@ -96,28 +96,28 @@ const featureCategories: {
     iconClass: "text-blue-500",
     items: [
       {
-        title: "Aanpasbare dashboards en views",
+        title: "Custom dashboards en views",
         description: "Zie alles precies zoals je het wilt zien.",
         icon: "LineChart",
-        href: "/features/ranking-insights"
+        href: "/features/data-inzichten#custom-dashboards"
       },
       {
         title: "Product prestaties ",
         description: "Uitgebreid overzicht van je verkoopprestaties",
         icon: "BarChart",
-        href: "/features/sales-dashboard"
+        href: "/features/data-inzichten#product-prestaties"
       },
       {
         title: "Bestellingen",
         description: "Gedetailleerde analyse van je productprestaties",
         icon: "LineChart",
-        href: "/features/product-insights"
+        href: "/features/data-inzichten#bestellingen"
       },
       {
-        title: "Winst en omzet analyses ",
+        title: "Sales en voorraad schattingen",
         description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
         icon: "ShoppingCart",
-        href: "/features/order-insights"
+        href: "/features/data-inzichten#sales-voorspellingen"
       },
       {
         title: "Listing Hijacker tracker",
@@ -136,26 +136,26 @@ const featureCategories: {
         title: "Keyword database",
         description: "Geavanceerde keyword onderzoek op basis van meer dan 12 miljoen keywords en producten",
         icon: "Search",
-        href: "/features/tools#keyword-database",
+        href: "/features/tools#bolbaas-database",
         highlight: true,
       },
       {
-        title: "Listing AI",
+        title: "Ranking AI",
         description: "AI-gestuurde listing optimalisatie voor maximale zichtbaarheid",
         icon: "Sparkles",
-        href: "/features/tools#listing-ai"
+        href: "/features/tools#ranking-ai"
       },
       {
         title: "Winst & ACoS calculator",
         description: "Bereken winstgevendheid van producten en campagnes",
         icon: "PieChart",
-        href: "/features/profit-calculator"
+        href: "/features/tools#winst-calculator"
       },
       {
         title: "A/B testen van listings",
         description: "Test verschillende listing varianten voor optimalisatie",
         icon: "TestTubeDiagonal",
-        href: "/features/ab-testing"
+        href: "/features/tools#ab-testing"
       },
     ]
   },
@@ -168,23 +168,23 @@ const featureCategories: {
         title: "Factuur automatisering",
         description: "Geautomatiseerde BTW-factuur uploads en boekhouding",
         icon: "FileText",
-        href: "/features/automatisering#factuur-automatisering"
+        href: "/features/automatisering#store-automatisering"
       },
       {
         title: "E-mail automatisering",
         description: "Verzamel meer reviews met geautomatiseerde e-mails",
         icon: "Mail",
-        href: "/features/automatisering#email-automatisering"
+        href: "/features/automatisering#email-campagnes"
       },
       {
         title: "BTW-aangifte automatisering",
-        description: "Geautomatiseerde BTW-aangifte berekening. Weet precies hoeveel BTW je moet betalen.",
+        description: "Geautomatiseerde BTW-aangifte berekening en boekhouding",
         icon: "Calculator",
-        href: "/features/automatisering#btw-automatisering"
+        href: "/features/automatisering#btw-aangifte-automatisering"
       },
       {
         title: "Baaspilot",
-        description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
+        description: "Wees direct op de hoogte van alle belangrijkste gebeurtenissen",
         icon: "FileClock",
         href: "/features/automatisering#baaspilot"
       },
@@ -196,35 +196,35 @@ const featureCategories: {
     iconClass: "text-green-500",
     items: [
       {
-        title: "Precision product tracking",
+        title: "Precision tracking",
         description: "Nauwkeurige tracking van je belangrijkste statistieken",
         icon: "Target",
-        href: "/features/precision-tracking",
+        href: "/features/tracking#tracking-options",
         highlight: true,
       },
       {
-        title: "Dynamic product tracking",
+        title: "Dynamic tracking",
         description: "Dynamische aanpassing van tracking parameters",
         icon: "Activity",
-        href: "/features/dynamic-tracking"
+        href: "/features/tracking#tracking-options"
       },
       {
         title: "Keyword tracking",
         description: "Volg de prestaties van specifieke zoekwoorden",
         icon: "KeyRound",
-        href: "/features/keyword-tracking"
+        href: "/features/tracking#keyword-tracking"
       },
       {
         title: "Project management",
         description: "Beheer je projecten en taken efficiënt",
         icon: "Briefcase",
-        href: "/features/project-management"
+        href: "/features/tracking#project-management"
       },
       {
         title: "Omzet research",
         description: "Bekijk de omzet van meer dan 4 miljoen producten op bol.com",
         icon: "Truck",
-        href: "/features/delivery-tracker",
+        href: "/features/tracking#omzet-database",
         comingSoon: true
       },
     ]

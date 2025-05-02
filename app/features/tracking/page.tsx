@@ -127,7 +127,7 @@ export default function TrackingPage() { // Renamed function
           
 
 
-          <section data-navbar-mode="light" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[385vh]"> {/* Further increased section height */}
+          <section data-navbar-mode="light" id="tracking-options" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[385vh]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -345,7 +345,7 @@ export default function TrackingPage() { // Renamed function
           </section> {/* End bleed section */}       
 
           {/* Duplicated Bestellingen Section with Black Background */}
-          <section className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
+          <section id="keyword-tracking" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
             {/* Full-width background element - BLACK */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             
@@ -426,7 +426,7 @@ export default function TrackingPage() { // Renamed function
           </section> {/* End duplicated bleed section */}       
 
 
-          <section className="relative w-full py-16 md:py-24 lg:py-32 min-h-[100vh]">
+          <section id="omzet-database" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[100vh]">
       {/* Full-width background element - BLACK */}
       <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 
