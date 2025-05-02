@@ -127,7 +127,7 @@ export default function TrackingPage() { // Renamed function
           
 
 
-          <section data-navbar-mode="light" id="tracking-options" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[385vh]"> {/* Further increased section height */}
+          <section data-navbar-mode="light" id="tracking-options" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[3300px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -272,7 +272,7 @@ export default function TrackingPage() { // Renamed function
                   alt="Search algorithm screenshot"
                   width={1200}
                   height={960}
-                  quality={85}
+                  quality={100}
                   className="relative rounded-xl"
                 />
               </div>
@@ -283,7 +283,7 @@ export default function TrackingPage() { // Renamed function
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
-                  quality={85}
+                  quality={100}
                   className="relative rounded-lg" // Removed shadow and border
                 />
               </div>
@@ -294,7 +294,7 @@ export default function TrackingPage() { // Renamed function
                   alt="Ranking insights graph"
                   width={1200}
                   height={960}
-                  quality={85}
+                  quality={100}
                   className="relative rounded-lg"
                 />
               </div>
@@ -417,7 +417,7 @@ export default function TrackingPage() { // Renamed function
                   alt="Bestellingen screenshot"
                   width={1200}
                   height={960}
-                  quality={85}
+                  quality={100}
                   className="relative rounded-lg"
                 />
               </div>

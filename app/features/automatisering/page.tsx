@@ -317,7 +317,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
           {/* Removed full-width gradient section */}
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section id="btw-aangifte-automatisering" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+          <section id="btw-aangifte-automatisering" className="relative w-full pt-32 pb-60 "> {/* Standard section padding + INCREASED min-h */}
             {/* Full-width background element */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}

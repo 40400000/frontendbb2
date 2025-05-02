@@ -370,7 +370,7 @@ export default function DataInzichtenPage() { // Renamed function
           </section> {/* End bleed section */}       
 
           {/* Duplicated Bestellingen Section with Black Background */}
-          <section id="bestellingen" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
+          <section id="bestellingen" className="relative w-full pt-32 pb-80"> 
             {/* Full-width background element - BLACK */}
             <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
             
