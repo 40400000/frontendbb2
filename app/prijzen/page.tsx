@@ -82,7 +82,7 @@ const pricingPlans = [
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
       { text: "Keyword database & analyse", icon: Database },
-      { text: "Winst verhogen", icon: TrendingUp },
+      { text: "Rankingss verhogen", icon: TrendingUp },
       { text: "Listing AI optimalisatie", icon: Sparkles },
       { text: "Volg 200 producten (incl. Precision & Keyword)", icon: Target },
       { text: "Listing Hijacker Alerts", icon: ShieldAlert },
@@ -102,7 +102,7 @@ const pricingPlans = [
     priceSuffix: "/ maand",
     description: "Voor bol.com ondernemers en agencies die willen excelleren.",
     iconFeatures: [
-      { text: "Onbeperkte stores & gebruikers", icon: Building2 },
+      { text: "Onbeperkte tracking & gebruikers", icon: Building2 },
       { text: "ACoS verlagen", icon: TrendingDown },
       { text: "Onbeperkt product & keyword tracking", icon: Activity },
       { text: "400 precision product trackers", icon: Target },

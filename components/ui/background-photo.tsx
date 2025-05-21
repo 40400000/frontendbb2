@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 
 // Define the image sources based on options
 const IMAGE_SOURCES = {
-  1: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/upscale_random_1-GQwNFWbdUClpOZpMGJi4vBILOEt15o.jpg",
-  2: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg2-m2v50ovmoR9lCzMBcODyIO46XWzvsr.png",
-  3: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg3-XXmD3VeBlZpMDS81acyGrKhm4NK9Jk.png",
-  4: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg4-9Uwcy3tZUQqh2Evs56yf9AIwxIPMmQ.png"
+  1: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg_shape_1-oEeFKguUPJhrWvU7xpV9fDJ9XWPFt8.png",
+  2: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg_shape_2-zLoi2iRFiDVDYU5Z8WlH7UBUeKjqFM.png",
+  3: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg_shape_3-9eH2cr532D0uqUsQ9SQblBTqD2oq8j.png",
+  4: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bg_shape_4-bdObIAqoXSNVA3HXIQZRwgelhlRaLM.png"
 };
 
 interface BackgroundPhotoProps extends React.HTMLAttributes<HTMLDivElement> {
