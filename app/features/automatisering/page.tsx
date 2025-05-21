@@ -1,30 +1,12 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image"; // Import Next Image
-import { Badge } from "@/components/ui/badge"; // Import Badge
-// Import necessary icons from lucide-react
-import {
-  LineChart,
-  Search,
-  FileText,
-  Target,
-  ShoppingCart,
-  Package, // Added Package icon
-  Download, // Added Download icon
-  Upload,
-  Database,
-  Sparkle,
-  Sparkles,   // Added Upload icon
-} from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
-// import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
-import HighlightedSection from '@/components/highlighted-section'; // Corrected import path
 import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import the background photo
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
-// Remove client-side hooks import
-import { ToolsClientFeatures } from "@/components/tools-client-features"; // Import the new client component
 import { AutomatiseringClientFeatures } from "@/components/automatisering-client-features";
+
+
+
 export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
 
@@ -66,7 +48,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-6 md:pb-8 lg:pb-10">
+        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-6 md:pb-8 lg:pb-10 min-h-[calc(100vh-7.375rem)] flex flex-col justify-center">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">

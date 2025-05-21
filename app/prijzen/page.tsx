@@ -413,16 +413,16 @@ export default function PricingPage() { // Renamed function
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-0">
+        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[calc(100vh-7.375rem)] flex flex-col justify-center">
           
           
            <div className="container px-0">
           {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
-              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl pl-0 z-[70] relative"> {/* Added pl-6 for padding */}
+              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl pl-0 z-[85] relative"> {/* Added pl-6 for padding */}
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 z-[85] relative">
                   Word founding member
                 </h1>
                 {/* Sub-headline */}

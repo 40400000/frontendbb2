@@ -108,25 +108,14 @@ export default function HomePage() {
 
           {/* Absolutely Positioned Image Container */}
           <div className="absolute top-16 right-0 w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform translate-x-1/2 pointer-events-none">
-            {/* Image 1 (Bottom Layer) */}
             <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/ORDERTABLE-nvOlBFxj1N7heHeyETUjn8K5mE0n9L.png"
-              alt="Showcase Screenshot 1"
+              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/hero_imgs-hujfpHyHKSEgnBNLz6c4tZ1Yw2Ggsx.png"
+              alt="Hero Image"
               width={800}
               height={600}
               quality={85}
               priority
-              className="relative rounded-xl shadow-2xl shadow-black/30 transform -translate-y-10 -translate-x-10"
-            />
-            {/* Image 2 (Top Layer - Overlapping) */}
-            <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/HERO2-TaFELc5XTx6Q6Uuzhyg3K7vko9IG0I.png"
-              alt="Showcase Screenshot 2"
-              width={800}
-              height={600}
-              quality={85}
-              priority
-              className="absolute top-0 left-0 rounded-xl shadow-2xl shadow-black/40 transform translate-y-10 translate-x-10 z-10"
+              className="relative rounded-xl shadow-2xl shadow-black/30"
             />
           </div>
         </section>
