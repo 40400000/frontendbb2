@@ -79,18 +79,18 @@ export function InteractiveTopicSection() {
 
   return (
     // Section is relative positioning context with vertical padding
-    <section className="relative w-full py-16 md:py-24 lg:py-32"> {/* Added relative, padding. Removed w-screen, positioning, bg, border */}
+    <section className="relative w-full"> {/* Added relative, padding. Removed w-screen, positioning, bg, border */}
       {/* Full-width background element */}
       <div className="absolute inset-0 w-screen bg-black  -z-10 left-1/2 -translate-x-1/2"></div>
 
       {/* Container centers content normally ON TOP of the background */}
-      <div className="container relative px-0"> {/* Added relative */}
+      <div className="container px-0 relative z-80"> {/* Added relative */}
         <div className="grid grid-cols-1 md:grid-cols-4 min-h-[60vh] md:items-start">
 
           {/* Left Column (Navigation) - Removed flex layout */}
           <div className="md:col-span-1"> {/* Removed flex flex-col h-full */}
             {/* Topics List Container - Re-added matching top padding for md+ */}
-            <div className="space-y-4 pt-8 pl-8 md:pt-8 lg:pt-16 md:pl-0"> {/* Re-added md:pt-8 lg:pt-16 */}
+            <div className="space-y-4 pt-8 md:pt-8 lg:pt-16 md:pl-0"> {/* Re-added md:pt-8 lg:pt-16 */}
               {topics.map((topic) => (
                 <p
                   key={topic}
@@ -115,9 +115,9 @@ export function InteractiveTopicSection() {
           </div>
 
           {/* Right Column (Content Display) */}
-          <div className="md:col-span-3 border-t md:border-t-0 md:border-l border-border">
+          <div className="md:col-span-3 border-border">
             {/* Inner wrapper for padding */}
-            <div className="p-8 lg:p-16">
+            <div className="lg:p-16">
               {/* Content wrapper for animation - ADD relative and z-[60] */}
               <div 
                 key={animationKey} 
@@ -128,7 +128,7 @@ export function InteractiveTopicSection() {
                   // Container for the single image
                   <div className="relative mt-8 min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
                     {/* Single image layout - centered */}
-                    <div className="absolute -top-32 left-[65%] transform -translate-x-1/2 w-full max-w-4xl rounded-lg overflow-hidden shadow-xl">
+                    <div className="absolute -top-32 left-[50%] sm:left-[65%] transform -translate-x-1/2 w-full max-w-full sm:max-w-4xl rounded-lg overflow-hidden shadow-xl">
                       <Image
                         src={currentContent.images[0]} // Always use the first (and only) image
                         alt={`${currentContent.title} screenshot`}

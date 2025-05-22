@@ -27,7 +27,7 @@ export function Footer() {
         {/* This relative container holds the actual line elements */}
         <div className="relative h-full max-w-full mx-auto">
           {/* Divider line for middle on mobile (2 cols) / between cols 2 & 3 on sm+ (4 cols) */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border"></div>
+          <div className="absolute hidden sm:block left-1/2 top-0 bottom-0 w-px bg-border"></div>
 
           {/* Additional divider line visible only on sm+ (4 cols) - Line between cols 3 & 4 */}
           <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-border"></div>
@@ -46,7 +46,7 @@ export function Footer() {
               AI-gedreven platform voor bol.com partners.
             </p>
           </div>
-          <div className="pl-0">
+          <div className="pl-0 ml-[1px]">
             <h4 className="font-extralight mb-2 tracking-tighter text-sm">L I N K S</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/pricing" className="text-white hover:text-gray-400">Prijzen</Link></li>
@@ -64,10 +64,12 @@ export function Footer() {
           <div className="pl-0">
           <h4 className="font-extralight mb-2 tracking-tighter text-sm">C O N T A C T</h4>
             <ul className="space-y-2 text-sm">
+            <li><a href="tel:+31613665348" className="text-white hover:text-gray-400">+31 6 13665348</a></li>
+            <li><a href="mailto:info@bolbaas.nl" className="text-white hover:text-gray-400">info@bolbaas.nl</a></li>
+             
               <li>KVK 89112393</li>
               <li>BTW NL004693041B93</li>
-              <li><a href="tel:+31613665348" className="text-white hover:text-gray-400">+31 6 13665348</a></li>
-              <li><a href="mailto:info@bolbaas.nl" className="text-white hover:text-gray-400">info@bolbaas.nl</a></li>
+
               <li>Het Schip 237, 7325NM, Apeldoorn</li>
 
 

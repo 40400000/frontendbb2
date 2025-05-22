@@ -30,7 +30,7 @@ export function BackgroundPhoto({
   const imageSrc = IMAGE_SOURCES[imageOption];
 
   // Assuming navbar height corresponds to pt-16 (4rem/64px)
-  const navbarHeightClass = "top-0"; 
+  const navbarHeightClass = "top-30 sm:top-0"; 
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden", className)} {...props}>

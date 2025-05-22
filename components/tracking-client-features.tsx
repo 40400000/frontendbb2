@@ -52,18 +52,18 @@ export function TrackingClientFeatures() {
   return (
     <>
       {/* Container for the 'Sales voorspellingen' sticky section */}
-      <div className="relative min-h-[200vh]"> {/* Outer container defining scroll height - INCREASED HEIGHT */}
+      <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container defining scroll height - ADJUSTED HEIGHT for mobile */}
         {/* Sticky Container */}
         <div className="sticky top-0 z-[60] container px-0 py-16 md:py-24 lg:py-32">
           {/* Heading placed above the flex row */}
-          <div className="relative w-[25%] text-white"> {/* Container for heading, matching left col width */}
+          <div className="relative w-full md:w-[25%] text-white"> {/* Container for heading, matching left col width */}
              <h2 className="text-3xl font-semibold mb-6">Andere features</h2>
           </div>
 
           {/* Flex Row for Content and Image */}
           <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between">
             {/* Left side: Text content (No Heading Here) - Add ref here */}
-            <div ref={btwTextRef} id="project-management" className="relative w-[25%] text-white"> {/* Adjusted width */}
+            <div ref={btwTextRef} id="project-management" className="relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Adjusted width */}
               {/* Content starts here */}
               <div className="p-0 text-md">
                 <span className="text-sm text-gray-500">01</span>
@@ -75,7 +75,7 @@ export function TrackingClientFeatures() {
             </div>
 
             {/* Right side: Image - Add conditional styling - RE-ADDED */}
-            <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBtwVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width for responsiveness */}
+            <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBtwVisible ? 'opacity-100' : 'opacity-0'} mt-8 md:mt-0`}> {/* Adjusted width for responsiveness */}
               <Image
                 src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/projects2-ShnvFvU1iguk3jByjkc6LFBKt73xv2.png"
                 alt="Sales Voorspellingen Visualisatie" // Updated alt text
@@ -89,11 +89,11 @@ export function TrackingClientFeatures() {
       </div>
 
       {/* Container for the 'Levering tracker' sticky section */}
-      <div className="relative min-h-[200vh]"> {/* Outer container - INCREASED HEIGHT */}
+      <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container - ADJUSTED HEIGHT for mobile */}
         <div className="sticky top-0 z-[60] container px-0 flex flex-col md:flex-row items-start gap-8 md:justify-between py-16 md:py-24 lg:py-32"> {/* Sticky Content - Added md:justify-between, kept gap for col layout */}
 
            {/* Left side: Text content for Baaspilot - Add ref here */}
-           <div ref={baaspilotTextRef} className="relative w-[25%] text-white"> {/* Adjusted width for responsiveness */}
+           <div ref={baaspilotTextRef} className="relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Adjusted width for responsiveness */}
              <div className="p-0 text-md">
                <span className="text-sm text-gray-500">02</span>
                <p className="flex items-center text-lg md:text-xl font-semibold my-6">
@@ -120,7 +120,7 @@ export function TrackingClientFeatures() {
 
 
           {/* Right side: Image - Add conditional styling - RE-ADDED */}
-          <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'}`}> {/* Adjusted width for responsiveness */}
+          <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'} mt-8 md:mt-0`}> {/* Adjusted width for responsiveness */}
            {/* Image for Levering tracker */} 
            <Image
              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/average-bid-IoTgFcZkwj9mpwVRyYlbtEZd9EbqEx.png" // Placeholder, assuming same image for now

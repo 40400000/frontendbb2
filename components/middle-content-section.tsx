@@ -54,7 +54,7 @@ export function MiddleContentSection() {
           </div>
 
           {/* Button 2 in Column 3 */}
-          <div className="sm:col-start-3 border-t border-b border-border">
+          <div className="sm:col-start-3 sm:border-t border-b border-border">
             {/* Button 2 structure (copied from previous location) */}
             <div className="group relative w-full text-left cursor-pointer overflow-hidden">
               {/* Original Content */}

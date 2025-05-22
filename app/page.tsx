@@ -35,7 +35,7 @@ export default function HomePage() {
       <BackgroundVideo className="fixed inset-0 -z-10" />
 
       {/* Scrollable Content Container */}
-      <div className="relative z-0 flex flex-col min-h-screen">
+      <div className="relative z-0 flex flex-col min-h-screen overflow-x-hidden sm:overflow-x-visible">
 
         {/* Overlay 1: LEFT Outer Border + FIRST Inner Divider (Full Height, Fades Top) - Uses border variable */}
         <div className="absolute inset-0 h-full z-50 pointer-events-none border-l border-border [mask-image:linear-gradient(to_bottom,transparent,black_200px)]">
@@ -52,7 +52,7 @@ export default function HomePage() {
           {/* This relative container holds the actual line elements */}
           <div className="relative h-full max-w-full mx-auto">
             {/* Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) - Uses border variable */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border"></div>
+            <div className="absolute hidden sm:block left-1/2 top-0 bottom-0 w-px bg-border"></div>
 
             {/* Additional divider line visible only on sm screens and up (4 cols) - Uses border variable */}
             {/* Line between cols 3 & 4 */}
@@ -66,18 +66,18 @@ export default function HomePage() {
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
-              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl">
+              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-auto">
                   De zekerheid van data en automatisering voor bol.com partners.
                 </h1>
                 {/* Sub-headline */}
-                <p className="md:text-xl lg:text-2xl">
+                <p className="w-[71.4%]">
                   Alles wat je nodig hebt, in één AI-gedreven platform.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
-              <div className="col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
+              <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
                 <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
                   {/* Original Content - Slides up on hover */}
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-16 right-0 w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform translate-x-1/2 pointer-events-none">
+          {/* <div className="absolute top-16 right-0 w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform translate-x-1/2 pointer-events-none">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/hero_imgs-hujfpHyHKSEgnBNLz6c4tZ1Yw2Ggsx.png"
               alt="Hero Image"
@@ -117,7 +117,7 @@ export default function HomePage() {
               priority
               className="relative rounded-xl shadow-2xl shadow-black/30"
             />
-          </div>
+          </div> */}
         </section>
 
         {/* Features Grid - Aligned with overlay, uses section bottom border & container L/R borders

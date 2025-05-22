@@ -40,15 +40,15 @@ export function AutomatiseringClientFeatures() {
   return (
     <>
         {/* Container for the 'Baaspilot' sticky section */}
-        <div className="relative min-h-[200vh]"> {/* Outer container - INCREASED HEIGHT */} 
+        <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container - ADJUSTED HEIGHT for mobile */}
           <div className="sticky top-0 z-[60] container px-0 py-16 md:py-24 lg:py-32"> {/* Sticky Container */}
             {/* Heading placed above the flex row */}
-            <div className="relative w-[25%] text-white"> {/* Container for heading, matching left col width */}
+            <div className="relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Container for heading, matching left col width */}
                <h2 className="text-3xl font-semibold mb-6">Andere features</h2>
             </div>
             <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between"> {/* Flex Row for Content and Image */}
               {/* Left side: Text content for Baaspilot - Add ref here */}
-              <div id="baaspilot" ref={baaspilotTextRef} className="scroll-mt-40 relative w-[25%] text-white"> {/* Adjusted width for responsiveness & ADDED ID, scroll offset */}
+              <div id="baaspilot" ref={baaspilotTextRef} className="scroll-mt-40 relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Adjusted width for responsiveness & ADDED ID, scroll offset */}
                 <div className="p-0 text-md">
                   <span className="text-sm text-gray-500">01</span> {/* Updated numbering */}
                   <p className="flex items-center text-lg md:text-xl font-semibold my-6">
@@ -74,14 +74,14 @@ export function AutomatiseringClientFeatures() {
 
 
              {/* Right side: Image container - Add conditional styling and min-height for stacked images */}
-             <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'} min-h-[450px]`}> {/* Adjusted width & ADDED min-h, increased min-h for stronger cascade */} 
+             <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'} min-h-[450px] mt-8 md:mt-0`}> {/* Adjusted width & ADDED min-h, increased min-h for stronger cascade, added margin top for mobile */}
                 {/* Image 1 (Now Bottom, Original Image 3) */}
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/baas-pilot-3-XhikBukvJB9xm24eCCRcpdQ0qiCh8z.png" // Swapped src
                   alt="Baaspilot Visualisatie 3" // Swapped alt
                   width={500}
                   height={281}
-                  className={`absolute top-0 left-40 z-10 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-10'}`}
+                  className={`absolute top-0 left-2 sm:left-40 z-10 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-10'}`}
                 />
                 {/* Image 2 (Middle) */}
                 <Image
@@ -89,7 +89,7 @@ export function AutomatiseringClientFeatures() {
                   alt="Baaspilot Visualisatie 2" // Kept alt
                   width={500}
                   height={281}
-                  className={`absolute top-12 left-52 z-20 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out delay-100 ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-12'}`} // Added delay
+                  className={`absolute top-12 left-14 sm:left-52 z-20 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out delay-100 ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-12'}`} // Added delay
                 />
                 {/* Image 3 (Now Top, Original Image 1) */}
                 <Image
@@ -97,7 +97,7 @@ export function AutomatiseringClientFeatures() {
                   alt="Baaspilot Visualisatie 1" // Swapped alt
                   width={500}
                   height={281}
-                  className={`absolute top-24 left-64 z-30 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out delay-200 ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-14'}`} // Added delay
+                  className={`absolute top-24 left-26 sm:left-64 z-30 rounded-xl shadow-lg object-cover border border-neutral-800 transition-transform duration-700 ease-out delay-200 ${isBaaspilotVisible ? 'translate-y-0' : 'translate-y-14'}`} // Added delay
                 />
              </div>
             </div>

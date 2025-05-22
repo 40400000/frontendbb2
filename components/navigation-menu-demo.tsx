@@ -24,7 +24,6 @@ import {
   PieChart,
   Search,
   Sparkles,
-  Image as LucideImage,
   FileClock,
   TestTubeDiagonal,
   Target,
@@ -33,7 +32,10 @@ import {
   Briefcase,
   ShieldAlert,
   Truck,
+  Menu as MenuIcon,
+  X as XIcon,
 } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 interface FeatureItem {
   title: string;
@@ -267,7 +269,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
   if (!activeMenu) return null;
 
   const SidebarContent = ({ title, subtitle }: { title: string; subtitle: string }) => (
-    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent px-4 py-5 z-10">
+    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent pl-4 py-5 z-10">
       <p className="text-xl font-bold text-white">{title}</p>
       <p className="text-base font-medium text-white/90 mb-2">{subtitle}</p>
       <span className="text-sm font-semibold text-white underline underline-offset-2 hover:text-gray-200 transition-colors">
@@ -575,10 +577,15 @@ export function NavigationMenuDemo() {
   const [activeMenu, setActiveMenu] = useState<MenuId>(null);
   const [navbarMode, setNavbarMode] = useState<'dark' | 'light'>('dark');
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
-  const navRef = useRef<HTMLDivElement>(null); // Ref for the component's root element
-  const [headerHeight, setHeaderHeight] = useState(0); // State to store header height for dropdown positioning
+  const componentRootRef = useRef<HTMLDivElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const lightLogoUrl = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head-NO6JxOe2DYaItWOrqQqPrDhwgEaN5z.png";
+  const darkLogoUrl = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png";
 
   const handleMouseEnter = (menuId: Exclude<MenuId, null>) => {
+     if (isMobileMenuOpen) return;
      if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -586,7 +593,8 @@ export function NavigationMenuDemo() {
     setActiveMenu(menuId);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeaveDesktopMenu = () => {
+    if (isMobileMenuOpen) return;
     // Delay closing the menu slightly
     timeoutRef.current = setTimeout(() => {
       setActiveMenu(null);
@@ -594,6 +602,7 @@ export function NavigationMenuDemo() {
   };
 
    const handleDropdownMouseEnter = () => {
+    if (isMobileMenuOpen) return;
     // Clear timeout if mouse enters the dropdown content area
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -602,6 +611,7 @@ export function NavigationMenuDemo() {
   };
 
   const handleSimpleLinkEnter = () => {
+    if (isMobileMenuOpen) return;
     // Immediately close any active menu when hovering over a simple link
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -610,169 +620,248 @@ export function NavigationMenuDemo() {
     setActiveMenu(null);
   };
 
-  // Effect to handle scroll detection
+  const toggleMobileMenu = () => {
+    const newMobileMenuState = !isMobileMenuOpen;
+    setIsMobileMenuOpen(newMobileMenuState);
+    if (newMobileMenuState) {
+      setActiveMenu(null);
+      if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+          timeoutRef.current = null;
+      }
+    }
+  };
+  
+  const pathname = usePathname();
   useEffect(() => {
-    const handleScroll = () => {
-      const headerElement = document.getElementById('main-header');
-      const navElement = navRef.current;
-      if (!navElement || !headerElement) return;
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [pathname]);
 
-      // Update header height state if it hasn't been set
-      if (headerHeight === 0) {
-         setHeaderHeight(headerElement.offsetHeight);
+  useEffect(() => {
+    const headerElement = document.getElementById('main-header');
+    if (!headerElement) {
+        console.warn("main-header element not found for scroll handling.");
+        return;
+    }
+
+    const updateHeaderState = () => {
+      const currentHeaderHeight = headerElement.offsetHeight;
+      if (headerHeight !== currentHeaderHeight) {
+        setHeaderHeight(currentHeaderHeight);
       }
 
-      const navBottom = navElement.getBoundingClientRect().bottom;
-      const lightSections = document.querySelectorAll('[data-navbar-mode="light"]');
+      const headerBottom = headerElement.getBoundingClientRect().bottom;
+      const lightSections = document.querySelectorAll<HTMLElement>('[data-navbar-mode="light"]');
       let isOverLightSection = false;
-
       lightSections.forEach((section) => {
         const sectionRect = section.getBoundingClientRect();
-        // Check if the bottom of the nav is within the vertical bounds of a light section
-        if (sectionRect.top <= navBottom && sectionRect.bottom >= navBottom) {
+        if (sectionRect.top <= headerBottom && sectionRect.bottom >= headerBottom) {
           isOverLightSection = true;
         }
       });
 
       const newMode = isOverLightSection ? 'light' : 'dark';
-      setNavbarMode(newMode);
-
-      // Update header class directly
-      if (newMode === 'light') {
-        headerElement.classList.remove('bg-background', 'text-white');
-        headerElement.classList.add('bg-white', 'text-black');
-      } else {
-        headerElement.classList.remove('bg-white', 'text-black');
-        headerElement.classList.add('bg-background', 'text-white');
+      if (navbarMode !== newMode) {
+        setNavbarMode(newMode);
+        if (newMode === 'light') {
+          headerElement.classList.remove('bg-background', 'text-white');
+          headerElement.classList.add('bg-white', 'text-black');
+        } else {
+          headerElement.classList.remove('bg-white', 'text-black');
+          headerElement.classList.add('bg-background', 'text-white');
+        }
       }
     };
+    
+    updateHeaderState();
+    window.addEventListener('scroll', updateHeaderState);
+    window.addEventListener('resize', updateHeaderState);
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-
-    // Cleanup listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', updateHeaderState);
+      window.removeEventListener('resize', updateHeaderState);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, [navbarMode, headerHeight]);
+
+  useEffect(() => {
+    if (headerHeight === 0) {
+        const headerElement = document.getElementById('main-header');
+        if (headerElement) {
+            setHeaderHeight(headerElement.offsetHeight);
+        }
+    }
+  }, [headerHeight]);
+
+  const commonMobileLinkClasses = "block px-3 py-2 rounded-md text-base font-medium";
+  const mobileLinkHoverClasses = navbarMode === 'light' ? "hover:bg-gray-100 text-gray-900" : "hover:bg-gray-700 text-white";
+  const mobileBorderClass = navbarMode === 'light' ? "border-gray-200" : "border-gray-700";
+  const mobileTextColor = navbarMode === 'light' ? "text-black" : "text-white";
 
   return (
-   <div ref={navRef}> {/* Outer wrapper div - now ONLY has ref */}
-    {/* Navigation Bar and Dropdown Wrapper - Removed container mx-auto, handled by layout */}
-    <div className="relative" onMouseLeave={handleMouseLeave}> 
-      {/* Apply background transparent to NavigationMenu to inherit from parent */}
-      <NavigationMenu className="z-10 relative bg-transparent">
-        <NavigationMenuList>
-          {/* Bolbaas Brand Name */}
-          <li className="list-none">
-            <Link href="/">
-              <span className="font-bold text-lg mr-4">{/* Adjusted margin */}Bolbaas</span>
-            </Link>
-          </li>
+   <div ref={componentRootRef} className="w-full h-full">
+    <div className="flex items-center justify-between w-full h-full px-4 sm:px-0">
+        <Link href="/" className="flex-shrink-0" onClick={() => isMobileMenuOpen && toggleMobileMenu()}>
+            <Image
+            src={navbarMode === 'light' ? darkLogoUrl : lightLogoUrl}
+            alt="Bolbaas Logo"
+            width={150} 
+            height={40} 
+            priority
+            />
+        </Link>
 
-          {/* AI Tools Trigger */}
-          <div
-            onMouseEnter={() => handleMouseEnter("ai")}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "cursor-pointer relative bg-transparent", // Made background transparent
-              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800", // Conditional underline and hover bg
-              activeMenu === "ai" && "after:opacity-100" // Keep active underline
-            )}
-          >
-            <Link href="/features/tools">AI & Tools</Link>
-          </div>
-
-          {/* Automatisering Trigger */}
-           <div
-             onMouseEnter={() => handleMouseEnter("automation")}
-             className={cn(
-                navigationMenuTriggerStyle(),
-                "cursor-pointer relative bg-transparent",
-                "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-                navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
-                activeMenu === "automation" && "after:opacity-100"
-             )}
+        <div className="sm:hidden">
+            <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMobileMenu}
+                className={cn(
+                    "p-2 rounded-md focus:outline-none",
+                    navbarMode === 'light' ? "text-black hover:bg-gray-100" : "text-white hover:bg-gray-700"
+                )}
+                aria-label="Open main menu"
+                aria-expanded={isMobileMenuOpen}
             >
-             <Link href="/features/automatisering">Automatisering</Link>
-           </div>
-
-          {/* Data inzichten Trigger */}
-          <div
-            onMouseEnter={() => handleMouseEnter("data")}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "cursor-pointer relative bg-transparent",
-              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
-              activeMenu === "data" && "after:opacity-100"
-            )}
-          >
-             <Link href="/features/data-inzichten">Data inzichten</Link>
-           </div>
-
-          {/* Tracking Trigger */}
-          <div
-            onMouseEnter={() => handleMouseEnter("tracking")}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "cursor-pointer relative bg-transparent",
-              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-              navbarMode === 'light' ? "after:bg-black hover:bg-gray-100" : "after:bg-white hover:bg-gray-800",
-              activeMenu === "tracking" && "after:opacity-100"
-            )}
-          >
-            <Link href="/features/tracking">Tracking</Link>
-          </div>
-
-          {/* Prijzen Link (only hover effect) */}
-          <li 
-            className={cn(
-              "list-none relative", 
-              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-              navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
-            )}
-            onMouseEnter={handleSimpleLinkEnter}
-          >
-            <Link href="/prijzen" legacyBehavior passHref>
-              <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100" : "hover:bg-gray-800")}>
-                Prijzen
-              </NavigationMenuLink>
-            </Link>
-          </li>
-
-          {/* Contact Link (only hover effect) */}
-          <li 
-            className={cn(
-              "list-none relative", 
-              "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", // Removed transition
-              navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
-            )}
-            onMouseEnter={handleSimpleLinkEnter}
-          >
-            <Link href="/contact" legacyBehavior passHref>
-              <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100" : "hover:bg-gray-800")}>
-                Contact
-              </NavigationMenuLink>
-            </Link>
-          </li>
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      {/* Dropdown Container with keyed MenuContent (fixed position, higher z-index) */}
-       {activeMenu && (
-        <div
-          onMouseEnter={handleDropdownMouseEnter}
-          className="fixed left-0 right-0 bg-background shadow-lg z-50 overflow-hidden"
-          style={{ top: `${headerHeight}px` }} // Dynamic top position based on header height
-        >
-           <div className="container mx-auto">
-             <MenuContent key={activeMenu} activeMenu={activeMenu} />
-           </div>
+            {isMobileMenuOpen ? <XIcon className="block h-6 w-6" /> : <MenuIcon className="block h-6 w-6" />}
+            </Button>
         </div>
-      )}
+
+        <div className="hidden sm:flex sm:items-center sm:ml-auto" onMouseLeave={handleMouseLeaveDesktopMenu}>
+            <NavigationMenu className="bg-transparent pl-0">
+                <NavigationMenuList>
+                    <div
+                        onMouseEnter={() => handleMouseEnter("ai")}
+                        className={cn(
+                        navigationMenuTriggerStyle(),
+                        "cursor-pointer relative bg-transparent", 
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100", 
+                        navbarMode === 'light' ? "after:bg-black hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "after:bg-white hover:bg-gray-800 text-white",
+                        activeMenu === "ai" && !isMobileMenuOpen && "after:opacity-100"
+                        )}
+                    >
+                        <Link href="/features/tools">AI & Tools</Link>
+                    </div>
+
+                    <div
+                        onMouseEnter={() => handleMouseEnter("automation")}
+                        className={cn(
+                        navigationMenuTriggerStyle(),
+                        "cursor-pointer relative bg-transparent",
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
+                        navbarMode === 'light' ? "after:bg-black hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "after:bg-white hover:bg-gray-800 text-white",
+                        activeMenu === "automation" && !isMobileMenuOpen && "after:opacity-100"
+                        )}
+                    >
+                        <Link href="/features/automatisering">Automatisering</Link>
+                    </div>
+
+                    <div
+                        onMouseEnter={() => handleMouseEnter("data")}
+                        className={cn(
+                        navigationMenuTriggerStyle(),
+                        "cursor-pointer relative bg-transparent",
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
+                        navbarMode === 'light' ? "after:bg-black hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "after:bg-white hover:bg-gray-800 text-white",
+                        activeMenu === "data" && !isMobileMenuOpen && "after:opacity-100"
+                        )}
+                    >
+                        <Link href="/features/data-inzichten">Store prestaties</Link>
+                    </div>
+
+                    <div
+                        onMouseEnter={() => handleMouseEnter("tracking")}
+                        className={cn(
+                        navigationMenuTriggerStyle(),
+                        "cursor-pointer relative bg-transparent",
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
+                        navbarMode === 'light' ? "after:bg-black hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "after:bg-white hover:bg-gray-800 text-white",
+                        activeMenu === "tracking" && !isMobileMenuOpen && "after:opacity-100"
+                        )}
+                    >
+                        <Link href="/features/tracking">Tracking</Link>
+                    </div>
+
+                    <li
+                        className={cn(
+                        "list-none relative", 
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
+                        navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
+                        )}
+                        onMouseEnter={handleSimpleLinkEnter}
+                    >
+                        <Link href="/prijzen" legacyBehavior passHref>
+                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "hover:bg-gray-800 text-white")}>
+                            Prijzen
+                        </NavigationMenuLink>
+                        </Link>
+                    </li>
+
+                    <li 
+                        className={cn(
+                        "list-none relative", 
+                        "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
+                        navbarMode === 'light' ? "after:bg-black" : "after:bg-white"
+                        )}
+                        onMouseEnter={handleSimpleLinkEnter}
+                    >
+                        <Link href="/contact" legacyBehavior passHref>
+                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "hover:bg-gray-800 text-white")}>
+                            Contact
+                        </NavigationMenuLink>
+                        </Link>
+                    </li>
+                    <li className="flex items-center space-x-2 ml-auto list-none pl-2">
+                        <Button variant="outline"
+                        className={cn(navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800", "bg-transparent")}
+                        >Inloggen</Button>
+                        <Button
+                        className={cn(navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}
+                        >Aanmelden</Button>
+                    </li>
+                </NavigationMenuList>
+            </NavigationMenu>
+        </div>
     </div>
-   </div> // Closing outer wrapper div
+
+    {activeMenu && !isMobileMenuOpen && headerHeight > 0 && (
+    <div
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleMouseLeaveDesktopMenu}
+        className="hidden sm:block fixed left-0 right-0 bg-background shadow-lg z-30 overflow-hidden"
+        style={{ top: `${headerHeight}px` }}
+    >
+        <div className="container mx-auto">
+            <MenuContent key={activeMenu} activeMenu={activeMenu} />
+        </div>
+    </div>
+    )}
+
+    {isMobileMenuOpen && headerHeight > 0 && (
+    <div
+        className={cn(
+            "sm:hidden fixed inset-x-0 z-50 transform transition-transform ease-in-out duration-300 overflow-y-auto",
+            navbarMode === 'light' ? "bg-white" : "bg-background",
+            mobileTextColor
+        )}
+        style={{ top: `${headerHeight}px`, height: `calc(100vh - ${headerHeight}px)` }}
+    >
+        <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link href="/features/tools" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>AI & Tools</Link>
+            <Link href="/features/automatisering" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Automatisering</Link>
+            <Link href="/features/data-inzichten" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Store prestaties</Link>
+            <Link href="/features/tracking" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Tracking</Link>
+            <Link href="/prijzen" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Prijzen</Link>
+            <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>
+            
+            <div className={cn("pt-4 mt-4 border-t", mobileBorderClass)}>
+                <Button variant="outline" className={cn("w-full mb-2 bg-transparent", navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800")} onClick={toggleMobileMenu}>Inloggen</Button>
+                <Button className={cn("w-full", navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")} onClick={toggleMobileMenu}>Aanmelden</Button>
+            </div>
+        </div>
+    </div>
+    )}
+   </div>
   );
 } 
