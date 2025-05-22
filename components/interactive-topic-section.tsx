@@ -105,8 +105,7 @@ export function InteractiveTopicSection() {
                 </p>
               ))}
             </div>
-            {/* Schedule Button Container - Positioned independently with padding top */}
-            <div className="pt-16 pb-8 pl-8 md:pb-8 md:pl-0"> {/* Removed mt-auto, added pt-16 */}
+            <div className="pt-16 pb-8 pl-8 md:pb-8 md:pl-0">
               <Button variant="ghost" className="justify-start p-0 h-auto text-lg hover:bg-transparent text-muted-foreground hover:text-foreground">
                 Schedule a demo
                 <MdOutlineArrowOutward className="ml-2 h-5 w-5" />

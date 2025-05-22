@@ -41,10 +41,11 @@ export function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-x-0 gap-y-8">
           <div className="pl-0">
-            <h3 className="text-lg font-semibold mb-4">Bolbaas</h3>
-            <p className="text-sm text-gray-400">
-              AI-gedreven platform voor bol.com partners.
-            </p>
+          <h4 className="font-extralight mb-2 tracking-tighter text-sm">B O L B A A S </h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/pricing" className="text-white hover:text-gray-400">AI gedreven software voor bol.com partners</Link></li>
+             
+            </ul>
           </div>
           <div className="pl-0 ml-[1px]">
             <h4 className="font-extralight mb-2 tracking-tighter text-sm">L I N K S</h4>

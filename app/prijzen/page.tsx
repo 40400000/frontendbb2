@@ -404,7 +404,7 @@ export default function PricingPage() { // Renamed function
           {/* This relative container holds the actual line elements */}
           <div className="relative h-full max-w-full mx-auto">
             {/* Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) - Uses border variable */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border"></div>
+            <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-border"></div>
 
             {/* Additional divider line visible only on sm screens and up (4 cols) - Uses border variable */}
             {/* Line between cols 3 & 4 */}
@@ -418,15 +418,15 @@ export default function PricingPage() { // Renamed function
           
            <div className="container px-0">
           {/* Grid wrapper to align content and buttons with columns */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl pl-0 z-[85] relative"> {/* Added pl-6 for padding */}
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 z-[85] relative">
+                <h1 className="font-semibold tracking-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 z-[85] relative">
                   Word founding member
                 </h1>
                 {/* Sub-headline */}
-                <p className="text-white text-4xl w-[71.4%]">
+                <p className="text-white text-4xl w-[71.4%] pb-10 sm:pb-0">
                   Een geduceerd tarief voor de eerste leden. Voor altijd.
                 </p>
               </div>
@@ -564,7 +564,10 @@ export default function PricingPage() { // Renamed function
             {/* Spans full width on mobile, aligns to columns on sm+ */}
             <div className="col-span-2 sm:col-span-4 sticky top-0 bg-background z-10 grid grid-cols-2 sm:grid-cols-4 border-b border-border">
               <div className="p-4 font-semibold col-span-1 sm:col-span-1">Features</div>
-              <div className="p-4 font-semibold text-center col-span-1 sm:col-span-1">Start</div>
+              <div className="p-4 font-semibold text-center col-span-1 sm:col-span-1">
+                <span className="sm:hidden">Plannen</span>
+                <span className="hidden sm:inline">Start</span>
+              </div>
               {/* These two are hidden on mobile (2-col grid), shown on sm+ (4-col grid) */}
               <div className="hidden sm:block p-4 font-semibold text-center col-span-1">Plus</div>
               <div className="hidden sm:block p-4 font-semibold text-center col-span-1">Pro</div>
@@ -584,9 +587,18 @@ export default function PricingPage() { // Renamed function
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">{storeFeature.description}</p>
                 </div>
-                {/* Start Plan (Col 2) */}
-                <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">
-                  {renderFeatureValue(storeFeature.hobby)}
+                {/* Start Plan (Col 2 on sm+, All plans on <sm) */}
+                <div className="p-4 col-span-1 sm:col-span-1 flex items-center sm:justify-center">
+                  {/* Mobile view: Stacked plans */}
+                  <div className="sm:hidden text-left space-y-1 w-full">
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(storeFeature.hobby)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(storeFeature.pro)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(storeFeature.enterprise)}</div>
+                  </div>
+                  {/* Desktop view: Just Start plan */}
+                  <div className="hidden sm:flex items-center justify-center">
+                    {renderFeatureValue(storeFeature.hobby)}
+                  </div>
                 </div>
                 {/* Plus Plan (Col 3 - sm+) */}
                 <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">
@@ -603,7 +615,18 @@ export default function PricingPage() { // Renamed function
                   <p className="font-medium flex items-center gap-1">{seatFeature.name}<ExternalLink className="h-3 w-3 text-muted-foreground" /></p>
                   <p className="text-sm text-muted-foreground mt-1">{seatFeature.description}</p>
                 </div>
-                <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">{renderFeatureValue(seatFeature.hobby)}</div>
+                <div className="p-4 col-span-1 sm:col-span-1 flex items-center sm:justify-center">
+                  {/* Mobile view: Stacked plans */}
+                  <div className="sm:hidden text-left space-y-1 w-full">
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(seatFeature.hobby)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(seatFeature.pro)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(seatFeature.enterprise)}</div>
+                  </div>
+                  {/* Desktop view: Just Start plan */}
+                  <div className="hidden sm:flex items-center justify-center">
+                    {renderFeatureValue(seatFeature.hobby)}
+                  </div>
+                </div>
                 <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(seatFeature.pro)}</div>
                 <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(seatFeature.enterprise)}</div>
               </div>
@@ -612,7 +635,18 @@ export default function PricingPage() { // Renamed function
                   <p className="font-medium flex items-center gap-1">{orderFeature.name}<ExternalLink className="h-3 w-3 text-muted-foreground" /></p>
                   <p className="text-sm text-muted-foreground mt-1">{orderFeature.description}</p>
                 </div>
-                <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">{renderFeatureValue(orderFeature.hobby)}</div>
+                <div className="p-4 col-span-1 sm:col-span-1 flex items-center sm:justify-center">
+                  {/* Mobile view: Stacked plans */}
+                  <div className="sm:hidden text-left space-y-1 w-full">
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(orderFeature.hobby)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(orderFeature.pro)}</div>
+                    <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(orderFeature.enterprise)}</div>
+                  </div>
+                  {/* Desktop view: Just Start plan */}
+                  <div className="hidden sm:flex items-center justify-center">
+                    {renderFeatureValue(orderFeature.hobby)}
+                  </div>
+                </div>
                 <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(orderFeature.pro)}</div>
                 <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(orderFeature.enterprise)}</div>
               </div>
@@ -637,9 +671,28 @@ export default function PricingPage() { // Renamed function
                       <p className="font-medium flex items-center gap-1">{feature.name}<ExternalLink className="h-3 w-3 text-muted-foreground" /></p>
                       <p className="text-sm text-muted-foreground mt-1">{feature.description}</p>
                     </div>
-                    <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">{renderFeatureValue(feature.hobby)}</div>
-                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(feature.pro)}</div>
-                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(feature.enterprise)}</div>
+                    {/* Mobile view: Stacked plans */}
+                    <div className={cn(
+                      "p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full",
+                      feature.comingSoon && "opacity-50"
+                    )}>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(feature.enterprise)}</div>
+                    </div>
+                    {/* Desktop view: Just Start plan */}
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.hobby)}</div>
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.pro)}</div>
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
               </div>
@@ -684,10 +737,20 @@ export default function PricingPage() { // Renamed function
                          feature.comingSoon && "text-muted-foreground/70" // Further grey out description
                       )}>{feature.description}</p>
                     </div>
+                    {/* Mobile view: Stacked plans */}
                     <div className={cn(
-                      "p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center",
-                      feature.comingSoon && "opacity-50" // Grey out plan value
-                     )}>{renderFeatureValue(feature.hobby)}</div>
+                      "p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full",
+                      feature.comingSoon && "opacity-50"
+                    )}>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(feature.enterprise)}</div>
+                    </div>
+                    {/* Desktop view: Just Start plan */}
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.hobby)}</div>
                     <div className={cn(
                       "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
                       feature.comingSoon && "opacity-50" // Grey out plan value
@@ -718,9 +781,28 @@ export default function PricingPage() { // Renamed function
                       <p className="font-medium flex items-center gap-1">{feature.name}<ExternalLink className="h-3 w-3 text-muted-foreground" /></p>
                       <p className="text-sm text-muted-foreground mt-1">{feature.description}</p>
                     </div>
-                    <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">{renderFeatureValue(feature.hobby)}</div>
-                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(feature.pro)}</div>
-                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">{renderFeatureValue(feature.enterprise)}</div>
+                    {/* Mobile view: Stacked plans */}
+                    <div className={cn(
+                      "p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full",
+                      feature.comingSoon && "opacity-50"
+                    )}>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(feature.enterprise)}</div>
+                    </div>
+                    {/* Desktop view: Just Start plan */}
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.hobby)}</div>
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.pro)}</div>
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
               </div>
@@ -765,10 +847,20 @@ export default function PricingPage() { // Renamed function
                          feature.comingSoon && "text-muted-foreground/70" // Further grey out description
                       )}>{feature.description}</p>
                     </div>
+                    {/* Mobile view: Stacked plans */}
                     <div className={cn(
-                      "p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center",
-                      feature.comingSoon && "opacity-50" // Grey out plan value
-                     )}>{renderFeatureValue(feature.hobby)}</div>
+                      "p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full",
+                      feature.comingSoon && "opacity-50"
+                    )}>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Pro:</span>{renderFeatureValue(feature.enterprise)}</div>
+                    </div>
+                    {/* Desktop view: Just Start plan */}
+                    <div className={cn(
+                      "hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center",
+                      feature.comingSoon && "opacity-50"
+                    )}>{renderFeatureValue(feature.hobby)}</div>
                     <div className={cn(
                       "hidden sm:flex p-4 text-center col-span-1 items-center justify-center",
                       feature.comingSoon && "opacity-50" // Grey out plan value
@@ -809,15 +901,24 @@ export default function PricingPage() { // Renamed function
                       </p>
                       <p className="text-sm text-muted-foreground mt-1">{feature.description}</p>
                     </div>
-                    {/* Hobby Column */}
-                    <div className="p-4 text-center col-span-1 sm:col-span-1 flex items-center justify-center">
-                      {renderFeatureValue(feature.hobby)}
+                    {/* Mobile view: Stacked plans */}
+                    <div className="p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full">
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div>
+                        <span className={cn("font-medium text-xs text-muted-foreground mr-1", feature.enterprise === "✓" ? "font-semibold text-foreground" : "")}>Pro:</span>
+                        <span className={cn(feature.enterprise === "✓" ? "font-semibold text-green-500" : "")}>{renderFeatureValue(feature.enterprise)}</span>
+                      </div>
                     </div>
-                    {/* Plus Column (uses feature.pro) - Removed font-semibold */}
+                    {/* Desktop view: Hobby Column */}
+                    <div className="hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center">
+                       {renderFeatureValue(feature.hobby)}
+                    </div>
+                    {/* Plus Column (uses feature.pro) */}
                     <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">
                       {renderFeatureValue(feature.pro)}
                     </div>
-                    {/* Pro Column (uses feature.enterprise) - Kept font-semibold */}
+                    {/* Pro Column (uses feature.enterprise) - Kept font-semibold for desktop */}
                     <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center font-semibold">
                       {renderFeatureValue(feature.enterprise)}
                     </div>
@@ -843,7 +944,7 @@ export default function PricingPage() { // Renamed function
         {/* New Section for Bottom CTA Text */}
         <section className="relative z-[60] w-full py-60"> {/* High z-index */}
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 w-full"> {/* Re-establish grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 w-full z-999 relative"> {/* Re-establish grid */}
             {/* CTA Content placed in correct columns */}
             <div className="col-span-2 sm:col-start-2 sm:col-span-2 mb-8 space-y-6 p-0"> {/* Added padding */}
               {/* Updated Headline with larger font size */}

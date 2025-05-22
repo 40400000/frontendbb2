@@ -42,7 +42,7 @@ export function BackgroundPhoto({
         width={500} 
         height={500}
         className={cn(
-          "absolute right-0 w-[50%] h-auto",
+          "absolute right-0 w-[65%] sm:w-[50%] h-auto",
           navbarHeightClass // Add top offset class
         )}
         priority // Load image eagerly if it's above the fold

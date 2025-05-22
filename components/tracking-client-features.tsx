@@ -54,7 +54,7 @@ export function TrackingClientFeatures() {
       {/* Container for the 'Sales voorspellingen' sticky section */}
       <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container defining scroll height - ADJUSTED HEIGHT for mobile */}
         {/* Sticky Container */}
-        <div className="sticky top-0 z-[60] container px-0 py-16 md:py-24 lg:py-32">
+        <div className="sticky top-0 z-[60] container px-0 py-0 md:py-24 lg:py-32">
           {/* Heading placed above the flex row */}
           <div className="relative w-full md:w-[25%] text-white"> {/* Container for heading, matching left col width */}
              <h2 className="text-3xl font-semibold mb-6">Andere features</h2>

@@ -55,11 +55,13 @@ export default async function RootLayout({
                   </div>
                 </div>
               </header>
+              
+              <main className="container mx-auto pt-0 overflow-x-hidden sm:overflow-x-visible px-4 sm:px-0">
               <Breadcrumbs />
-              <main className="container mx-auto pt-0 overflow-x-hidden sm:overflow-x-visible">
+                
                 {children}
               </main>
-              <div className="container mx-auto">
+              <div className="container mx-auto px-4 sm:px-0">
                 <Footer />
               </div>
             </>

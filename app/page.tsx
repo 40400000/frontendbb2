@@ -35,7 +35,7 @@ export default function HomePage() {
       <BackgroundVideo className="fixed inset-0 -z-10" />
 
       {/* Scrollable Content Container */}
-      <div className="relative z-0 flex flex-col min-h-screen overflow-x-hidden sm:overflow-x-visible">
+      <div className="relative z-0 flex flex-col min-h-screen">
 
         {/* Overlay 1: LEFT Outer Border + FIRST Inner Divider (Full Height, Fades Top) - Uses border variable */}
         <div className="absolute inset-0 h-full z-50 pointer-events-none border-l border-border [mask-image:linear-gradient(to_bottom,transparent,black_200px)]">
@@ -61,7 +61,7 @@ export default function HomePage() {
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10">
+        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 min-h-[100vh] sm:min-h-none">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          {/* <div className="absolute top-16 right-0 w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform translate-x-1/2 pointer-events-none">
+          <div className="absolute top-[52%] sm:top-16 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/2 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/hero_imgs-hujfpHyHKSEgnBNLz6c4tZ1Yw2Ggsx.png"
               alt="Hero Image"
@@ -115,9 +115,9 @@ export default function HomePage() {
               height={600}
               quality={85}
               priority
-              className="relative rounded-xl shadow-2xl shadow-black/30"
+              className="relative pt-10 sm:pt-0 rounded-xl shadow-2xl shadow-black/30"
             />
-          </div> */}
+          </div>
         </section>
 
         {/* Features Grid - Aligned with overlay, uses section bottom border & container L/R borders
@@ -149,7 +149,7 @@ export default function HomePage() {
         */}
 
         {/* Gradient Visual Section - Reduced bottom padding */}
-        <section className="relative z-10 w-full pb-10 md:pb-16 lg:pb-20">
+        <section className="relative z-10 w-full">
 
         </section>
 
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="relative"> {/* REMOVED container padding */}
             {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
             {/* Add vertical gap between rows */}
-            <div className="grid grid-cols-[35%_15%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
+            <div className="grid grid-cols-1 sm:grid-cols-[35%_15%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
 
               {/* Row 1, Column 1: Left Text (35%) */}
               <div className="text-white row-span-2"> {/* Make this span 2 rows */}
@@ -186,7 +186,7 @@ export default function HomePage() {
               <div className="row-span-2"></div> {/* Make this span 2 rows */}
 
               {/* Row 1, Column 3: Feature Set 1 (25%) */}
-              <div className="text-gray-300"> {/* This is now implicitly row 1, col 3 */}
+              <div className="text-gray-300 hidden sm:block"> {/* This is now implicitly row 1, col 3 */}
                 <p className="text-sm text-gray-500 mb-1">01</p> {/* Added number */}
                 <h3 className="font-semibold text-white my-3">AI gedreven research</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
@@ -196,7 +196,7 @@ export default function HomePage() {
               </div>
 
               {/* Row 1, Column 4: Feature Set 2 (25%) */}
-              <div className="text-gray-300 pr-4 md:pr-6"> {/* This is now implicitly row 1, col 4 */}
+              <div className="text-gray-300 pr-4 md:pr-6 hidden sm:block"> {/* This is now implicitly row 1, col 4 */}
                 <p className="text-sm text-gray-500 mb-1">02</p> {/* Added number */}
                 <h3 className="font-semibold text-white my-3">Track producten en keywords</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
@@ -207,7 +207,7 @@ export default function HomePage() {
 
               {/* Row 2, Column 3: New Section Title 1 */}
               {/* No need for empty divs for row 2 cols 1 & 2 because cols 1 & 2 span 2 rows */}
-              <div className="text-gray-300"> {/* This is implicitly row 2, col 3 */}
+              <div className="text-gray-300 hidden sm:block"> {/* This is implicitly row 2, col 3 */}
                 <p className="text-sm text-gray-500 mb-1">03</p> {/* Added number */}
                 <h3 className="font-semibold text-white my-3">Automatiseer de rompslomp</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
@@ -217,7 +217,7 @@ export default function HomePage() {
               </div>
 
               {/* Row 2, Column 4: New Section Title 2 */}
-              <div className="text-gray-300 pr-4 md:pr-6"> {/* This is implicitly row 2, col 4 */}
+              <div className="text-gray-300 pr-4 md:pr-6 hidden sm:block"> {/* This is implicitly row 2, col 4 */}
                 <p className="text-sm text-gray-500 mb-1">04</p> {/* Added number */}
                 <h3 className="font-semibold text-white my-3">Inzicht in prestaties</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">

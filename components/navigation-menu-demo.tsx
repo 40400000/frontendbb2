@@ -293,7 +293,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
               style={{ objectFit: 'cover' }}
               priority
             />
-            <SidebarContent title="Bolbaas AI Tools" subtitle="Ontdek onze tools" />
+            <SidebarContent title="Bolbaas AI Tools" subtitle="" />
           </div>
         </Link>
         <div className="flex flex-1 gap-0">
@@ -365,7 +365,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                      style={{ objectFit: 'cover' }}
                      priority
                    />
-                   <SidebarContent title="Bolbaas Automatisering" subtitle="Beheer je winkel" />
+                   <SidebarContent title="Bolbaas Automatisering" subtitle="" />
                 </div>
               </Link>
                <div className="flex flex-1 gap-0">
@@ -437,7 +437,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                       style={{ objectFit: 'cover' }}
                       priority
                     />
-                    <SidebarContent title="Bolbaas Data Inzichten" subtitle="Diepgaande data analyse" />
+                    <SidebarContent title="Bolbaas Data Inzichten" subtitle="" />
                 </div>
              </Link>
                <div className="flex flex-1 gap-0">
@@ -509,7 +509,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                       style={{ objectFit: 'cover' }}
                       priority
                     />
-                    <SidebarContent title="Bolbaas Tracking" subtitle="Monitor je prestaties" />
+                    <SidebarContent title="Bolbaas Tracking" subtitle="" />
                 </div>
               </Link>
                <div className="flex flex-1 gap-0">
@@ -706,8 +706,8 @@ export function NavigationMenuDemo() {
             <Image
             src={navbarMode === 'light' ? darkLogoUrl : lightLogoUrl}
             alt="Bolbaas Logo"
-            width={150} 
-            height={40} 
+            width={180} 
+            height={48} 
             priority
             />
         </Link>

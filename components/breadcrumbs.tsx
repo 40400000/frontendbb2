@@ -205,7 +205,7 @@ export function Breadcrumbs() {
 
   return (
     <div className="border-t border-b container mx-auto overflow-hidden">
-      <div className="container mx-auto py-6 px-0 text-md text-foreground">
+      <div className="container mx-auto py-6 sm:px-0 text-md text-foreground">
         {isFeaturePage ? (
           <>
             Features <span className="text-muted-foreground px-2">/</span> {currentPageTitle}
