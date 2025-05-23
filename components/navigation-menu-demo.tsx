@@ -101,25 +101,25 @@ const featureCategories: {
         title: "Custom dashboards en views",
         description: "Zie alles precies zoals je het wilt zien.",
         icon: "LineChart",
-        href: "/features/data-inzichten#custom-dashboards"
+        href: "/features/store-prestaties#custom-dashboards"
       },
       {
         title: "Product prestaties ",
         description: "Uitgebreid overzicht van je verkoopprestaties",
         icon: "BarChart",
-        href: "/features/data-inzichten#product-prestaties"
+        href: "/features/store-prestaties#product-prestaties"
       },
       {
         title: "Bestellingen",
         description: "Gedetailleerde analyse van je productprestaties",
         icon: "LineChart",
-        href: "/features/data-inzichten#bestellingen"
+        href: "/features/store-prestaties#bestellingen"
       },
       {
         title: "Sales en voorraad schattingen",
         description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
         icon: "ShoppingCart",
-        href: "/features/data-inzichten#sales-voorspellingen"
+        href: "/features/store-prestaties#sales-voorspellingen"
       },
       {
         title: "Listing Hijacker tracker",
@@ -426,7 +426,7 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
     ),
     data: (
         <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-              <Link href="/features/data-inzichten" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+              <Link href="/features/store-prestaties" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
                  <div className="relative w-full h-full overflow-hidden text-white">
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png"
@@ -767,7 +767,7 @@ export function NavigationMenuDemo() {
                         activeMenu === "data" && !isMobileMenuOpen && "after:opacity-100"
                         )}
                     >
-                        <Link href="/features/data-inzichten">Store prestaties</Link>
+                        <Link href="/features/store-prestaties">Store prestaties</Link>
                     </div>
 
                     <div
@@ -850,7 +850,7 @@ export function NavigationMenuDemo() {
         <div className="px-2 pt-2 pb-3 space-y-1">
             <Link href="/features/tools" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>AI & Tools</Link>
             <Link href="/features/automatisering" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Automatisering</Link>
-            <Link href="/features/data-inzichten" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Store prestaties</Link>
+            <Link href="/features/store-prestaties" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Store prestaties</Link>
             <Link href="/features/tracking" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Tracking</Link>
             <Link href="/prijzen" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Prijzen</Link>
             <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>

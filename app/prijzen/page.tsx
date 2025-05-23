@@ -51,6 +51,29 @@ import { MiddleContentSection } from "@/components/middle-content-section";
 import { DataInzichtenClientFeatures } from "@/components/data-inzichten-client-features"; // Import the new client component
 import { TrackingClientFeatures } from "@/components/tracking-client-features";
 import { cn } from "@/lib/utils"; // Added cn import
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Prijzen - Bolbaas",
+  description: "Ontdek de Bolbaas abonnementen: Start, Plus en Pro. Word founding member en krijg korting voor altijd.",
+  openGraph: {
+    title: "Prijzen - Bolbaas",
+    description: "Bekijk de Bolbaas abonnementen en word founding member voor exclusieve voordelen.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Prijzen Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Prijzen - Bolbaas",
+    description: "Bekijk de Bolbaas abonnementen en word founding member voor exclusieve voordelen.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
 
 const pricingPlans = [
   {
@@ -434,9 +457,9 @@ export default function PricingPage() { // Renamed function
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
-              <div className="col-span-1 mt-4 flex flex-col pl-0.5 border-t border-border"> {/* Added border-t, border-b */}
+              <div className="col-span-1 mt-4 flex flex-col pl-0.0 border-none border-border"> {/* Added border-t, border-b */}
                 {/* Placeholder for Button 1 to maintain layout */}
-                <div className="h-[69px] border-b border-border -mr-1.5"></div> {/* Adjusted height to match button sizing roughly */}
+                <div className="h-[69px] border-b border-border "></div> {/* Adjusted height to match button sizing roughly */}
                 {/* Button 2 - Group for hover effects, relative positioning */}
                 <Link href="/contact" passHref>
                   <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}

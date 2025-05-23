@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image"; // Import Next Image
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 import Link from 'next/link'; // Ensure Link is imported
@@ -8,7 +9,27 @@ import { AutomatiseringClientFeatures } from "@/components/automatisering-client
 // import { InteractiveInput } from "@/components/ui/interactive-input"; // No longer directly used here
 import { ContactForm } from "@/components/contact-form"; // Import the new ContactForm component
 
-
+export const metadata: Metadata = {
+  title: "Contact - Bolbaas",
+  description: "Neem contact op met Bolbaas. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
+  openGraph: {
+    title: "Contact - Bolbaas",
+    description: "Neem contact op met Bolbaas. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Contact Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Contacteer Bolbaas",
+    description: "Stel je vragen of plan een gesprek. Bolbaas helpt je graag verder met data en automatisering voor bol.com.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
 
 export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
@@ -67,7 +88,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                 </p>
                 {/* Button 2 - Group for hover effects, relative positioning - MOVED HERE */}
                 <Link href="/prijzen" passHref>
-                  <div className="group relative w-full sm:w-2/4 text-left cursor-pointer mt-10 -mr-1.5 overflow-hidden border-t border-b border-border mb-20 sm:mb-0"> {/* Added sm:w-1/4 */}
+                  <div className="group relative w-2/4 sm:w-full text-left cursor-pointer mt-10 -mr-1.5 overflow-hidden border-t border-b border-border mb-20 sm:mb-0"> {/* Added sm:w-1/4 */}
                     {/* Original Content - Slides up on hover */}
                     <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
                       Lidmaatschappen bekijken {/* Updated text */}

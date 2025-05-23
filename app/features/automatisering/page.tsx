@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image"; // Import Next Image
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 import Link from 'next/link'; // Added Link import
@@ -6,7 +7,27 @@ import { InteractiveTopicSection } from "@/components/interactive-topic-section"
 import { MiddleContentSection } from "@/components/middle-content-section";
 import { AutomatiseringClientFeatures } from "@/components/automatisering-client-features";
 
-
+export const metadata: Metadata = {
+  title: "Automatisering - Bolbaas",
+  description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+  openGraph: {
+    title: "Automatisering - Bolbaas",
+    description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Automatisering Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Automatisering - Bolbaas",
+    description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
 
 export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
@@ -61,7 +82,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
-                  Data op basis van meer dan 12 miljoen geanalyseerde producten en keywords.
+                  Automatissch uploaden van BTW-facturen, maak e-mail campagnes, reageer automatisch op factuuraanvragen en meer.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}

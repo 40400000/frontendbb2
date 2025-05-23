@@ -47,7 +47,7 @@ const topicDetails: Record<string, TopicContent> = {
 
 // Define mapping for topic links
 const topicLinks: Record<string, string> = {
-  Inzichten: "/features/data-inzichten",
+  Inzichten: "/features/store-prestaties",
   Tools: "/features/tools",
   Automatisering: "/features/automatisering",
   Tracking: "/features/tracking",

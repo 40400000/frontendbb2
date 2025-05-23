@@ -19,6 +19,29 @@ import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import th
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
 import { DataInzichtenClientFeatures } from "@/components/data-inzichten-client-features"; // Import the new client component
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Store prestaties - Bolbaas",
+  description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen efficiënt.",
+  openGraph: {
+    title: "Store prestaties - Bolbaas",
+    description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen efficiënt.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Data Inzichten Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Store prestaties - Bolbaas",
+    description: "Krijg volledig inzicht in je bol.com store prestaties met de data tools van Bolbaas.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
 
 export default function DataInzichtenPage() { // Renamed function
   // Define a top offset for the two rightmost lines. Adjust as needed.
@@ -68,7 +91,7 @@ export default function DataInzichtenPage() { // Renamed function
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
-                  Data op basis van meer dan 12 miljoen geanalyseerde producten en keywords.
+                  Maak keuzes op basis van data. Uitgebreide datainzichten voor alle aspecten van je store.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
@@ -176,7 +199,7 @@ export default function DataInzichtenPage() { // Renamed function
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Nee, geen simpele prompt wrapper. Bolbaas analyseert voor jouw keywords de best presterende listings. Op basis van meer dan <span className="font-bold">12 miljoen geanalyseerde producten en keywords.</span></p>
+                  <p className="mb-4 text-base">Zie alle data van je producten. Sales, winst, omzet. Bekijk rankings, reviews en een schatting van je sales en voorraad.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}
@@ -184,15 +207,15 @@ export default function DataInzichtenPage() { // Renamed function
                       <p className="text-sm text-gray-400 mb-1">01</p>
                       <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Zie precies per product wat de sales, winst en omzet zijn.</li>
+                        <li>Zie precies per product wat de sales, winst en omzet zijn. Bekijk trends en recente bestellingen.</li>
                       </ul>
                     </div>
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-4 pr-4 md:pr-6">
                       <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-white my-3">Rankings</h3>
+                      <h3 className="font-semibold text-white my-3">Rankings, sales schattingen en reviews</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Eigen producten worden automatisch getracked. Lees meer over rankings...</li>
+                        <li>Bekijk uitgebreide ranking rapporten, sales schattingen en reviews. <br></br><Link href="/features/tracking#tracking-options" className="underline hover:text-gray-300">Lees meer over rankings.</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -291,9 +314,9 @@ export default function DataInzichtenPage() { // Renamed function
                     {/* Moved Feature Set 1 into first column */}
                     <div className="mt-6 z-80 relativ pt-10">
                       <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-black my-3">Volledig inzicht in bestellingen</h3>
+                      <h3 className="font-semibold text-black my-3">Sla custom dashboards views op</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Bekijk per besteling het product, winst, omzet, contactgegevens, land, levering type en meer.</li>
+                        <li>Maak jouw dashboards precies zoals jij dat wilt, met de data die je nodig hebt. Sla deze op en kom later terug. </li>
                       </ul>
                     </div>
                     <Link href="/contact" passHref>
@@ -391,15 +414,16 @@ export default function DataInzichtenPage() { // Renamed function
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2 z-80 relative"> 
-                  <p className="mb-4 text-base">Nee, geen simpele prompt wrapper. Bolbaas analyseert voor jouw keywords de best presterende listings. Op basis van meer dan <span className="font-bold">12 miljoen geanalyseerde producten en keywords.</span></p>
+                  <p className="mb-4 text-base">Ondernemen op bol draait uiteindelijk om één ding, bestellingen. Bolbaas geeft uitgebreid inzicht in al je bestellingen, veel meer informatie dan het partnerplatform. Houd de status van zendingen bij met onze levering tracker.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Feature Set 1 */}
                     <div className="mt-6 z-80 relative">
                       <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Volledig inzicht in bestellingen</h3>
+                      <h3 className="font-semibold text-white my-3">Volledig inzicht in bestellingen en leveringen</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
                         <li>Bekijk per besteling het product, winst, omzet, contactgegevens, land, levering type en meer.</li>
+                        <li>Houd de status van zendingen bij met onze levering tracker.</li>
                       </ul>
                     </div>
                     {/* Button with hover effect */}

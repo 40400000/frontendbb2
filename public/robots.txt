@@ -1,0 +1,8 @@
+# Kijk je op de goede plek?
+User-agent: *
+Allow: /
+
+Disallow: /_next/
+Disallow: /api/
+
+Sitemap: https://bolbaas.nl/sitemap.xml 

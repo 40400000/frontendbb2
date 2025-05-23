@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image"; // Import Next Image
@@ -24,6 +25,28 @@ import { InteractiveTopicSection } from "@/components/interactive-topic-section"
 import { MiddleContentSection } from "@/components/middle-content-section";
 // Remove client-side hooks import
 import { ToolsClientFeatures } from "@/components/tools-client-features"; // Import the new client component
+
+export const metadata: Metadata = {
+  title: "Research tools - Bolbaas",
+  description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
+  openGraph: {
+    title: "Research tools - Bolbaas",
+    description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Research Tools Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Research tools - Bolbaas",
+    description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
 
 export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
@@ -384,17 +407,17 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                     {/* Moved Feature Set 1 into first column */}
                     <div className="mt-6">
                       <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
+                      <h3 className="font-semibold text-white my-3">Analyseert concurrenten</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Zie precies per product wat de sales, winst en omzet zijn.</li>
+                        <li>De Ranking AI analyseert wat de top concurrenten doen om je listing te verbeteren.</li>
                       </ul>
                     </div>
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-4 pr-4 md:pr-6">
                       <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-white my-3">Rankings</h3>
+                      <h3 className="font-semibold text-white my-3">Verbetert zichtbaarheid</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Eigen producten worden automatisch getracked. Lees meer over rankings...</li>
+                        <li>De perfecte listing zorgt voor meer zichtbaarheid en meer omzet.</li>
                       </ul>
                     </div>
                   </div>
