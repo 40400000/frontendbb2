@@ -77,7 +77,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
-              <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
+              <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[60%]">
                   Wij staan stand-by, altijd.
@@ -87,8 +87,8 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   Ook als je nog geen klant van Bolbaas bent. Samen naar het volgende niveau.
                 </p>
                 {/* Button 2 - Group for hover effects, relative positioning - MOVED HERE */}
-                <Link href="/prijzen" passHref>
-                  <div className="group relative w-2/4 sm:w-full text-left cursor-pointer mt-10 -mr-1.5 overflow-hidden border-t border-b border-border mb-20 sm:mb-0"> {/* Added sm:w-1/4 */}
+                <Link href="/prijzen" passHref className="w-full sm:w-1/2">
+                  <div className="group relative w-full text-left cursor-pointer mt-10 overflow-hidden border-t border-b border-border mb-20 sm:mb-0 -mr-1.5">
                     {/* Original Content - Slides up on hover */}
                     <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
                       Lidmaatschappen bekijken {/* Updated text */}

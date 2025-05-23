@@ -43,23 +43,26 @@ export function Footer() {
           <div className="pl-0">
           <h4 className="font-extralight mb-2 tracking-tighter text-sm">B O L B A A S </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/pricing" className="text-white hover:text-gray-400">AI gedreven software voor bol.com partners</Link></li>
-             
+              <li><Link href="/" className="text-white hover:text-gray-400">Home</Link></li>
+              <li><Link href="/prijzen" className="text-white hover:text-gray-400">Prijzen</Link></li>
+              <li><Link href="/contact" className="text-white hover:text-gray-400">Contact</Link></li>
             </ul>
           </div>
           <div className="pl-0 ml-[1px]">
-            <h4 className="font-extralight mb-2 tracking-tighter text-sm">L I N K S</h4>
+            <h4 className="font-extralight mb-2 tracking-tighter text-sm">F E A T U R E S</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/pricing" className="text-white hover:text-gray-400">Prijzen</Link></li>
-              <li><Link href="/features" className="text-white hover:text-gray-400">Features</Link></li>
-              <li><Link href="/contact" className="text-white hover:text-gray-400">Contact</Link></li>
+              <li><Link href="/features/tools" className="text-white hover:text-gray-400">Tools</Link></li>
+              <li><Link href="/features/store-prestaties" className="text-white hover:text-gray-400">Store Prestaties</Link></li>
+              <li><Link href="/features/tracking" className="text-white hover:text-gray-400">Tracking</Link></li>
+              <li><Link href="/features/automatisering" className="text-white hover:text-gray-400">Automatisering</Link></li>
             </ul>
           </div>
           <div className="pl-0">
             <h4 className="font-extralight mb-2 tracking-tighter text-sm">L E G A L</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/privacy" className="text-white hover:text-gray-400 ">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-white hover:text-gray-400">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-white hover:text-gray-400 ">Privacy statement</Link></li>
+              <li><Link href="/terms" className="text-white hover:text-gray-400">Algemene voorwaarden</Link></li>
+              <li><Link href="/cookies" className="text-white hover:text-gray-400">Verwerkingsovereenkomst</Link></li>
             </ul>
           </div>
           <div className="pl-0">

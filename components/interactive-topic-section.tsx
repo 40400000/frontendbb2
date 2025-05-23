@@ -117,20 +117,22 @@ export function InteractiveTopicSection() {
                 </Link>
               ))}
             </div>
-            <div className="pt-80 sm:pt-16 pb-8 pl-0 md:pb-8 md:pl-0">
+            <div className="pt-16 sm:pt-16 pb-8 pl-0 md:pb-8 md:pl-0">
               {/* New animated button structure */}
-              <div className="group relative w-full text-left border-t border-b border-border cursor-pointer -mr-1.5 overflow-hidden">
-                {/* Original Content - Slides up on hover */}
-                <span className="text-lg flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 text-muted-foreground">
-                  Demo inplannen
-                  <MdOutlineArrowOutward className="ml-2 h-5 w-5" />
-                </span>
-                {/* Hover Overlay - Slides in from bottom on hover */}
-                <div className="absolute inset-0 bg-white text-black text-lg flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-                  Demo inplannen
-                  <MdOutlineArrowOutward className="ml-2 h-5 w-5" />
+              <Link href="/contact">
+                <div className="group relative w-full text-left border-t border-b border-border cursor-pointer -mr-1.5 overflow-hidden">
+                  {/* Original Content - Slides up on hover */}
+                  <span className="text-lg flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 text-foreground">
+                    Demo inplannen
+                    <MdOutlineArrowOutward className="ml-2 h-5 w-5" />
+                  </span>
+                  {/* Hover Overlay - Slides in from bottom on hover */}
+                  <div className="absolute inset-0 bg-white text-black text-lg flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    Demo inplannen
+                    <MdOutlineArrowOutward className="ml-2 h-5 w-5" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -148,7 +150,7 @@ export function InteractiveTopicSection() {
                   // Container for the single image
                   <div className="relative mt-8 min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
                     {/* Single image layout - centered */}
-                    <div className="absolute -top-110 sm:-top-32 left-[50%] sm:left-[65%] transform -translate-x-1/2 w-full max-w-full sm:max-w-4xl rounded-lg overflow-hidden shadow-xl">
+                    <div className="absolute -top-8 sm:-top-32 left-[50%] sm:left-[65%] transform -translate-x-1/2 w-full max-w-full sm:max-w-4xl rounded-lg overflow-hidden shadow-xl">
                       <Image
                         src={currentContent.images[0]} // Always use the first (and only) image
                         alt={`${currentContent.title} screenshot`}
