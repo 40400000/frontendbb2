@@ -813,12 +813,16 @@ export function NavigationMenuDemo() {
                         </Link>
                     </li>
                     <li className="flex items-center space-x-2 ml-auto list-none pl-2">
-                        <Button variant="outline"
-                        className={cn(navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800", "bg-transparent")}
-                        >Inloggen</Button>
-                        <Button
-                        className={cn(navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}
-                        >Aanmelden</Button>
+                        <Link href="https://app.bolbaas.nl/inloggen" passHref>
+                          <Button variant="outline"
+                          className={cn(navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800", "bg-transparent")}
+                          >Inloggen</Button>
+                        </Link>
+                        <Link href="https://app.bolbaas.nl/registreren" passHref>
+                          <Button
+                          className={cn(navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}
+                          >Aanmelden</Button>
+                        </Link>
                     </li>
                 </NavigationMenuList>
             </NavigationMenu>
@@ -856,8 +860,12 @@ export function NavigationMenuDemo() {
             <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>
             
             <div className={cn("pt-4 mt-4 border-t", mobileBorderClass)}>
-                <Button variant="outline" className={cn("w-full mb-2 bg-transparent", navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800")} onClick={toggleMobileMenu}>Inloggen</Button>
-                <Button className={cn("w-full", navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")} onClick={toggleMobileMenu}>Aanmelden</Button>
+                <Link href="https://app.bolbaas.nl/inloggen" passHref>
+                  <Button variant="outline" className={cn("w-full mb-2 bg-transparent", navbarMode === 'light' ? "border-gray-300 text-black hover:bg-gray-100" : "border-gray-700 text-white hover:bg-gray-800")} onClick={toggleMobileMenu}>Inloggen</Button>
+                </Link>
+                <Link href="https://app.bolbaas.nl/registreren" passHref>
+                  <Button className={cn("w-full", navbarMode === 'light' ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")} onClick={toggleMobileMenu}>Aanmelden</Button>
+                </Link>
             </div>
         </div>
     </div>
