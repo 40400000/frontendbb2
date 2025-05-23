@@ -439,20 +439,20 @@ export default function PricingPage() { // Renamed function
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[calc(100vh-7.375rem)] flex flex-col justify-center">
+        <section className="relative w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[calc(100vh-7.375rem)] flex flex-col justify-center">
           
           
            <div className="container px-0">
           {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
-              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl pl-0 z-[85] relative"> {/* Added pl-6 for padding */}
+              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl pl-0 z-[100] relative"> {/* Increased z-index to 100 to be above overlays */}
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="font-semibold tracking-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 z-[85] relative">
+                <h1 className="font-semibold tracking-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 z-[999] relative">
                   Word founding member
                 </h1>
                 {/* Sub-headline */}
-                <p className="text-white text-4xl w-[71.4%] pb-10 sm:pb-0">
+                <p className="text-white text-4xl w-[71.4%] pb-10 sm:pb-0 z-[999] relative">
                   Een geduceerd tarief voor de eerste leden. Voor altijd.
                 </p>
               </div>
