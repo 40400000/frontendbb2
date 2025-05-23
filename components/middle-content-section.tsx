@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Link from 'next/link';
 
 export function MiddleContentSection() {
   // Placeholder text removed
@@ -41,33 +42,37 @@ export function MiddleContentSection() {
           {/* Button 1 in Column 2 */}
           <div className="sm:col-start-2 border-t border-b border-border">
             {/* Button 1 structure (copied from previous location) */}
-            <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-              {/* Original Content */}
-              <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                Abonnementen bekijken
-              </span>
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-                Abonnementen bekijken
+            <Link href="/prijzen" passHref>
+              <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                {/* Original Content */}
+                <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                  Abonnementen bekijken
+                </span>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                  Abonnementen bekijken
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Button 2 in Column 3 */}
           <div className="sm:col-start-3 sm:border-t border-b border-border">
             {/* Button 2 structure (copied from previous location) */}
-            <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-              {/* Original Content */}
-              <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                Gesprek inplannen
-                <MdOutlineArrowOutward className="h-5 w-5" />
-              </span>
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-                Gesprek inplannen
-                <MdOutlineArrowOutward className="h-5 w-5" />
+            <Link href="/contact" passHref>
+              <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                {/* Original Content */}
+                <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                  Gesprek inplannen
+                  <MdOutlineArrowOutward className="h-5 w-5" />
+                </span>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                  Gesprek inplannen
+                  <MdOutlineArrowOutward className="h-5 w-5" />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Column 4 (Empty on sm+) */}

@@ -56,7 +56,8 @@ const pricingPlans = [
   {
     name: "Start",
     tagline: "Zet je eerste stappen",
-    price: 20,
+    price: 29,
+    discountedPrice: 17,
     priceSuffix: "/ maand",
     description: "Voor ambitieuze beginners die hun bol.com avontuur willen lanceren.",
     iconFeatures: [
@@ -77,7 +78,8 @@ const pricingPlans = [
   {
     name: "Plus",
     tagline: "Boost je verkoop",
-    price: 90,
+    price: 95,
+    discountedPrice: 65,
     priceSuffix: "/ maand",
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
@@ -99,14 +101,15 @@ const pricingPlans = [
     name: "Pro",
     tagline: "Domineer de markt",
     price: 450,
+    discountedPrice: 295,
     priceSuffix: "/ maand",
     description: "Voor bol.com ondernemers en agencies die willen excelleren.",
     iconFeatures: [
-      { text: "Onbeperkte tracking & gebruikers", icon: Building2 },
+      { text: "Onbeperkte tracking & research", icon: Building2 },
       { text: "ACoS verlagen", icon: TrendingDown },
       { text: "Onbeperkt product & keyword tracking", icon: Activity },
       { text: "400 precision product trackers", icon: Target },
-      { text: "Dedicated project manager", icon: Crown },
+      { text: "Aangewezen project manager", icon: Crown },
       { text: "Premium support & strategie sessies", icon: Rocket },
 
       { text: "AI biedingen & omzet research tools (Binnenkort)", icon: Zap },
@@ -432,30 +435,23 @@ export default function PricingPage() { // Renamed function
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
               <div className="col-span-1 mt-4 flex flex-col pl-0.5 border-t border-border"> {/* Added border-t, border-b */}
-                {/* Button 1 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
-                    Lidmaatschappen bekijken {/* Updated text */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
-                  Lidmaatschappen bekijken {/* Updated text */}
-                  </div>
-                </div>
+                {/* Placeholder for Button 1 to maintain layout */}
+                <div className="h-[69px] border-b border-border -mr-1.5"></div> {/* Adjusted height to match button sizing roughly */}
                 {/* Button 2 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                <Link href="/contact" passHref>
+                  <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div> { /* End grid wrapper */}
           </div>
@@ -472,8 +468,6 @@ export default function PricingPage() { // Renamed function
 
                 {/* Pricing Plans - Occupy the right 3 columns on sm+, stack on mobile */}
                 {pricingPlans.map((plan, index) => {
-                  const discountedPrice = Math.round(plan.price * 0.75);
-
                   return (
                     <div
                       key={plan.name}
@@ -507,7 +501,7 @@ export default function PricingPage() { // Renamed function
 
 
                         <div className="mb-6 flex items-baseline gap-2">
-                          <span className="text-4xl font-bold text-white">{discountedPrice}</span> {/* Changed text color to white */}
+                          <span className="text-4xl font-bold text-white">{plan.discountedPrice}</span> {/* Changed text color to white */}
                           <span className="text-xl font-medium text-muted-foreground line-through">{plan.price}</span>
                           <span className="text-sm text-muted-foreground">{plan.priceSuffix}</span>
                         </div>

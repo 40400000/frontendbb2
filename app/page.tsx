@@ -68,7 +68,7 @@ export default function HomePage() {
               {/* Text container spanning full width, but capped by max-w */}
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-auto">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-[45%] lg:w-[68%]">
                   De zekerheid van data en automatisering voor bol.com partners.
                 </h1>
                 {/* Sub-headline */}
@@ -79,35 +79,39 @@ export default function HomePage() {
               {/* Button Container - Add t/b borders, keep left padding */}
               <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */} 
-                    Lidmaatschappen bekijken {/* Updated text */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */} 
-                  Lidmaatschappen bekijken {/* Updated text */}
+                <Link href="/prijzen" passHref>
+                  <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
+                      Lidmaatschappen bekijken {/* Updated text */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
+                      Lidmaatschappen bekijken {/* Updated text */}
+                    </div>
                   </div>
-                </div>
+                </Link>
                 {/* Button 2 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                    Gesprek inplannen {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                    Gesprek inplannen {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                <Link href="/contact" passHref>
+                  <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
+                      Gesprek inplannen {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
+                      Gesprek inplannen {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div> { /* End grid wrapper */}
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-[52%] sm:top-16 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/2 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
+          <div className="absolute top-[60%] sm:top-16 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/2 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/hero_imgs-hujfpHyHKSEgnBNLz6c4tZ1Yw2Ggsx.png"
               alt="Hero Image"

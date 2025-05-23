@@ -74,29 +74,33 @@ export default function DataInzichtenPage() { // Renamed function
               {/* Button Container - Add t/b borders, keep left padding */}
               <div className="col-span-2 sm:col-span-1 mt-20  flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
+                <Link href="/prijzen" passHref>
+                  <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
+                      Lidmaatschappen bekijken {/* Updated text */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
                     Lidmaatschappen bekijken {/* Updated text */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
-                  Lidmaatschappen bekijken {/* Updated text */}
+                    </div>
                   </div>
-                </div>
+                </Link>
                 {/* Button 2 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                <Link href="/contact" passHref>
+                  <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div> { /* End grid wrapper */}
           </div>
@@ -292,18 +296,20 @@ export default function DataInzichtenPage() { // Renamed function
                         <li>Bekijk per besteling het product, winst, omzet, contactgegevens, land, levering type en meer.</li>
                       </ul>
                     </div>
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                      {/* Original Content - Slides up on hover */}
-                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                        Gesprek inplannen {/* Updated text */}
-                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                      </span>
-                      {/* Hover Overlay - Slides in from bottom on hover */}
-                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                        Gesprek inplannen {/* Updated text */}
-                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                     {/* Moved Feature Set 2 into first column */}
                     {/* <div className="mt-4 pr-4 md:pr-6 z-80 relative">
                       <p className="text-sm text-gray-400 mb-1">02</p>
@@ -397,18 +403,20 @@ export default function DataInzichtenPage() { // Renamed function
                       </ul>
                     </div>
                     {/* Button with hover effect */}
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
-                      {/* Original Content - Slides up on hover */}
-                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
-                        Gesprek inplannen
-                        <MdOutlineArrowOutward className="h-5 w-5" />
-                      </span>
-                      {/* Hover Overlay - Slides in from bottom on hover */}
-                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
-                        Gesprek inplannen
-                        <MdOutlineArrowOutward className="h-5 w-5" />
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
+                          Gesprek inplannen
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
+                          Gesprek inplannen
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
                 {/* Empty placeholders for columns 2-4 */}

@@ -82,31 +82,35 @@ export default function TrackingPage() { // Renamed function
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
-              <div className="col-span-2 sm:col-span-1 mt-20 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
+              <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
+                <Link href="/prijzen" passHref>
+                  <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="block py-6 pl-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Added block, transitions, hover transforms */}
+                      Lidmaatschappen bekijken {/* Updated text */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
                     Lidmaatschappen bekijken {/* Updated text */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Added absolute overlay with transitions and hover state */}
-                  Lidmaatschappen bekijken {/* Updated text */}
+                    </div>
                   </div>
-                </div>
+                </Link>
                 {/* Button 2 - Group for hover effects, relative positioning */}
-                <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                  {/* Original Content - Slides up on hover */}
-                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                  </span>
-                  {/* Hover Overlay - Slides in from bottom on hover */}
-                  <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
-                    Neem contact op {/* Updated text */}
-                    <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                <Link href="/contact" passHref>
+                  <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                    {/* Original Content - Slides up on hover */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </span>
+                    {/* Hover Overlay - Slides in from bottom on hover */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
+                      Neem contact op {/* Updated text */}
+                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div> { /* End grid wrapper */}
           </div>
@@ -127,7 +131,7 @@ export default function TrackingPage() { // Renamed function
           
 
 
-          <section data-navbar-mode="light" id="tracking-options" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2500px] sm:min-h-[3300px]"> {/* Further increased section height */}
+          <section data-navbar-mode="light" id="tracking-options" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2500px] sm:min-h-[2900px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -172,18 +176,20 @@ export default function TrackingPage() { // Renamed function
                         <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
                       </ul>
                     </div>
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                      {/* Original Content - Slides up on hover */}
-                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                        Gesprek inplannen {/* Updated text */}
-                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                      </span>
-                      {/* Hover Overlay - Slides in from bottom on hover */}
-                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                        Gesprek inplannen {/* Updated text */}
-                        <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-[25rem] sm:mt-[42rem] z-80 relative pt-10">
                       <div className="absolute top-[35rem] sm:top-[40rem] left-0 w-full z-80 pt-10">
@@ -266,7 +272,7 @@ export default function TrackingPage() { // Renamed function
                 </ul>
               </div>
               {/* End dynamic label */}
-              <div className="absolute top-[115%] left-1/2 transform -translate-x-1/2 w-[100%] sm:w-[40%] h-auto z-70 pointer-events-none">
+              <div className="absolute top-[115%] sm:top-[105%] left-1/2 transform -translate-x-1/2 w-[100%] sm:w-[40%] h-auto z-70 pointer-events-none">
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/Scherm%C2%ADafbeelding%202025-05-01%20om%2015.33.11-rV8vQZN8VMM5xkoZQFJZP8u5WKe9Cm.png"
                   alt="Search algorithm screenshot"
@@ -277,7 +283,7 @@ export default function TrackingPage() { // Renamed function
                 />
               </div>
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[40%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
+              <div className="absolute top-[40%] sm:top-[0%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking-QnWkZ19t2pN2FKO0Lr7pl3237LjxMZ.png"
                   alt="Bestellingen screenshot"
@@ -288,7 +294,7 @@ export default function TrackingPage() { // Renamed function
                 />
               </div>
               {/* Ranking insights graph */}
-              <div className="absolute top-[170%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none">
+              <div className="absolute top-[170%] sm:top-[140%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none">
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/rank%20graph-lFkDeYkXzvRkduza4rPpHsBZKicNAG.png"
                   alt="Ranking insights graph"
@@ -302,7 +308,7 @@ export default function TrackingPage() { // Renamed function
             </div> {/* End container */}
 
             {/* NEW Text Block at the bottom */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[82%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[82%] sm:top-[86%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
               <p className="text-base">
                 Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
@@ -313,32 +319,36 @@ export default function TrackingPage() { // Renamed function
             <div className="absolute sm:left-[25%] top-[92%] w-full sm:w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
               {/* Button 1 in First Column */}
               <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
-                <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-                  {/* Original Content */}
-                  <span className="block py-6 pl-4 transition-all border-r border-gray-200 sm:border-r-0 duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                    Abonnementen bekijken
-                  </span>
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black border-r border-gray-200 sm:border-r-0 text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
-                    Abonnementen bekijken
+                <Link href="/prijzen" passHref>
+                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                    {/* Original Content */}
+                    <span className="block py-6 pl-4 transition-all border-r border-gray-200 sm:border-r-0 duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                      Abonnementen bekijken
+                    </span>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black border-r border-gray-200 sm:border-r-0 text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                      Abonnementen bekijken
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Button 2 in Second Column */}
               <div className="border-t border-b border-gray-200"> {/* Changed border color */}
-                <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-                  {/* Original Content */}
-                  <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                    Gesprek inplannen
-                    <MdOutlineArrowOutward className="h-5 w-5" />
-                  </span>
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
-                    Gesprek inplannen
-                    <MdOutlineArrowOutward className="h-5 w-5" />
+                <Link href="/contact" passHref>
+                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                    {/* Original Content */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                      Gesprek inplannen
+                      <MdOutlineArrowOutward className="h-5 w-5" />
+                    </span>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                      Gesprek inplannen
+                      <MdOutlineArrowOutward className="h-5 w-5" />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -372,30 +382,34 @@ export default function TrackingPage() { // Renamed function
                       </ul>
                     </div>
                     {/* Button with hover effect */}
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
-                      {/* Original Content - Slides up on hover */}
-                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
-                        Info over database
-                        <MdOutlineArrowOutward className="h-5 w-5" />
-                      </span>
-                      {/* Hover Overlay - Slides in from bottom on hover */}
-                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
-                        Gesprek inplannen
-                        <MdOutlineArrowOutward className="h-5 w-5" />
+                    <Link href="/features/tools#bolbaas-database" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
+                          Info over database
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
+                          Gesprek inplannen
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-b border-border mt-0" > 
-                      {/* Original Content - Slides up on hover */}
-                      <span className="font-normal flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
-                        Abonnementen bekijken
-                        <MdOutlineArrowOutward className="h-5 w-5" />
-                      </span>
-                      {/* Hover Overlay - Slides in from bottom on hover */}
-                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
-                        Abonnementen bekijken
-                        <MdOutlineArrowOutward className="h-5 w-5" />
+                    </Link>
+                    <Link href="/prijzen" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-b border-border mt-0" > 
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-normal flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
+                          Abonnementen bekijken
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
+                          Abonnementen bekijken
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
                 {/* Empty placeholders for columns 2-4 */}
