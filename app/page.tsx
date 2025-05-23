@@ -119,7 +119,7 @@ export default function HomePage() {
               height={600}
               quality={85}
               priority
-              className="relative pt-10 sm:pt-0 rounded-xl shadow-2xl shadow-black/30"
+              className="relative pt-10 sm:pt-0 rounded-xl"
             />
           </div>
         </section>

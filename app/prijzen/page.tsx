@@ -972,7 +972,7 @@ export default function PricingPage() { // Renamed function
               </p>
               {/* Added separate paragraph for the middle part */}
               <p className="text-base text-foreground">
-                Bolbaas doet dit anders. Krijg de controle terug met diepgaande analyses, krachtige tools en slimme automatisering, ontworpen om jouw groei op bol.com te maximaliseren. Eerlijk waar.
+                Bolbaas doet dit anders. Krijg de controle terug met diepgaande analyses, krachtige tools en slimme automatisering, ontworpen om jouw groei op bol.com te maximaliseren. Beloofd.
               </p>
               {/* Added separate paragraph for the final sentence */}
               <p className="text-base font-semibold text-foreground">
