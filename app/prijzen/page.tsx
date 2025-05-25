@@ -312,8 +312,8 @@ const trackingFeatures: FeatureComparisonItem[] = [ // Renamed from rankingFeatu
     enterprise: "✓"
   },
   {
-    name: "Project management", // Moved from separate feature
-    description: "Beheer je projecten en taken efficiënt",
+    name: "Aantal projecten", // Moved from separate feature
+    description: "Beheer verschillende projecten per workspace",
     hobby: "-", // Matches old projectFeature allocation
     pro: "5",   // Matches old projectFeature allocation
     enterprise: "Onbeperkt" // Matches old projectFeature allocation
@@ -579,15 +579,15 @@ export default function PricingPage() { // Renamed function
           <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
             {/* Sticky Header Row - Aligned with columns */}
             {/* Spans full width on mobile, aligns to columns on sm+ */}
-            <div className="col-span-2 sm:col-span-4 sticky top-0 bg-background z-10 grid grid-cols-2 sm:grid-cols-4 border-b border-border">
-              <div className="p-4 font-semibold col-span-1 sm:col-span-1">Features</div>
-              <div className="p-4 font-semibold text-center col-span-1 sm:col-span-1">
+            <div className="col-span-2 sm:col-span-4 sticky top-[65px] bg-black z-[100] grid grid-cols-2 sm:grid-cols-4 border-b border-border backdrop-blur-sm">
+              <div className="p-4 font-semibold col-span-1 sm:col-span-1 text-white">Features</div>
+              <div className="p-4 font-semibold text-center col-span-1 sm:col-span-1 text-white">
                 <span className="sm:hidden">Plannen</span>
                 <span className="hidden sm:inline">Start</span>
               </div>
               {/* These two are hidden on mobile (2-col grid), shown on sm+ (4-col grid) */}
-              <div className="hidden sm:block p-4 font-semibold text-center col-span-1">Plus</div>
-              <div className="hidden sm:block p-4 font-semibold text-center col-span-1">Pro</div>
+              <div className="hidden sm:block p-4 font-semibold text-center col-span-1 text-white">Plus</div>
+              <div className="hidden sm:block p-4 font-semibold text-center col-span-1 text-white">Pro</div>
             </div>
 
             {/* Feature Rows Container - Spans full width */}
