@@ -17,7 +17,7 @@ export function BackgroundVideo({
   gridOpacity = 0.08, // Slightly reduced default
   gridSize = 12, // Tighter horizontal grid size
   gridVerticalSize = 4, // Tighter vertical grid size
-  overlayOpacity = 0.7, // Default overlay opacity
+  overlayOpacity = 0.78, // Default overlay opacity
   playbackRate = 0.99, // Default normal speed
   className,
   ...props

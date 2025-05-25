@@ -35,7 +35,7 @@ export default function HomePage() {
       <BackgroundVideo className="fixed inset-0 -z-10" />
 
       {/* Scrollable Content Container */}
-      <div className="relative z-0 flex flex-col min-h-screen">
+      <div className="relative z-0 flex flex-col min-h-screen border-t">
 
         {/* Overlay 1: LEFT Outer Border + FIRST Inner Divider (Full Height, Fades Top) - Uses border variable */}
         <div className="absolute inset-0 h-full z-50 pointer-events-none border-l border-border [mask-image:linear-gradient(to_bottom,transparent,black_200px)]">

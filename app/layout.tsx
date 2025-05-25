@@ -10,6 +10,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { cookies } from 'next/headers';
 import PasswordGate from '@/components/password-gate';
 import { ALLOWED_PASSWORDS } from '@/lib/passwords';
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -121,6 +122,7 @@ export default async function RootLayout({
             </>
           )}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
