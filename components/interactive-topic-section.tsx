@@ -16,7 +16,7 @@ interface TopicContent {
 // Example content map (replace with actual data fetching or props later)
 const topicDetails: Record<string, TopicContent> = {
   Inzichten: {
-    title: "Inzichten",
+    title: "Prestaties",
     description: "Gedetailleerde inzichten in uw Bol.com prestaties.",
     images: [
       "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/inzicht-wMrslhEeyKX4GYOCf8NL2fWwpTcyld.png",
