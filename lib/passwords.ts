@@ -1,4 +1,4 @@
-export const ALLOWED_PASSWORDS = ['ecomdaan', 'bbfront', 'dreef', 'daansanders']; 
+export const ALLOWED_PASSWORDS = ['ecomdaan', 'bbfront', 'dreef', 'daansanders', 'betabol']; 
 
 
 
