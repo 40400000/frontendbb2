@@ -159,7 +159,7 @@ export default function HomePage() {
 
         {/* Motivational Quote Section - Adjusted padding, bold text, line break */}
         <section className="w-full pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
-            <div className="container text-center">
+            <div className="container text-center relative z-[70]">
               <blockquote className="max-w-4xl mx-auto">
                 <p className="text-3xl tracking-tight sm:text-5xl md:text-4xl font-bold text-gray-900 dark:text-gray-50">
                   Focus op groei en ondernemen <br /> door data en automatisering.
@@ -174,16 +174,16 @@ export default function HomePage() {
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 
           {/* Container centers content normally ON TOP of the background */}
-          <div className="relative"> {/* REMOVED container padding */}
+          <div className="relative z-[70]"> {/* REMOVED container padding */}
             {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
             {/* Add vertical gap between rows */}
             <div className="grid grid-cols-1 sm:grid-cols-[35%_15%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
 
               {/* Row 1, Column 1: Left Text (35%) */}
               <div className="text-white row-span-2"> {/* Make this span 2 rows */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Datagedreven beslissingen, AI-gedreven groei</h2>
-                <p className="mb-4 text-base">Maak slimmere keuzes met data. Bolbaas analyseert je verkopen, productprestaties en rankings op bol.com voor gerichte actie.</p>
-                <p className="text-base">Automatiseer routine taken met AI. Optimaliseer listings en rankings moeiteloos, en focus volledig op strategische groei.</p>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
+                <p className="mb-4 text-base">Ontdek welke producten en keywords écht werken met onze database van 8 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid.</p>
+                <p className="text-base">Zie je groei in realtime dashboards, laat Bolbaas je facturen en BTW regelen, en volg elke bestelling. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
               </div>
 
               {/* Row 1, Column 2: Empty (15%) */}
@@ -192,9 +192,9 @@ export default function HomePage() {
               {/* Row 1, Column 3: Feature Set 1 (25%) */}
               <div className="text-gray-300 hidden sm:block"> {/* This is now implicitly row 1, col 3 */}
                 <p className="text-sm text-gray-500 mb-1">01</p> {/* Added number */}
-                <h3 className="font-semibold text-white my-3">AI gedreven research</h3> {/* Changed mb-3 to my-3 */}
-                <ul className="space-y-2 text-sm text-white">
-                  <li>Onderneem op basis van AI gedreven data. Zoek keywords en producten.</li>
+                <h3 className="font-semibold text-white my-3">Vind wat verkoopt</h3> {/* Changed mb-3 to my-3 */}
+                <ul className="space-y-2 text-sm text-white pr-4">
+                  <li>Ontdek welke producten en keywords succesvol zijn met 12 miljoen datapunten.</li>
                 </ul>
                 {/* REMOVED New Section 1 from here */}
               </div>
@@ -202,9 +202,9 @@ export default function HomePage() {
               {/* Row 1, Column 4: Feature Set 2 (25%) */}
               <div className="text-gray-300 pr-4 md:pr-6 hidden sm:block"> {/* This is now implicitly row 1, col 4 */}
                 <p className="text-sm text-gray-500 mb-1">02</p> {/* Added number */}
-                <h3 className="font-semibold text-white my-3">Track producten en keywords</h3> {/* Changed mb-3 to my-3 */}
+                <h3 className="font-semibold text-white my-3">Blijf altijd op de hoogte</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
-                  <li>Volg producten en keywords in real-time, zodat je weet wat er gebeurt.</li>
+                  <li>Volg je rankings en prestaties automatisch, zodat je altijd voorop loopt.</li>
                 </ul>
                 {/* REMOVED New Section 2 from here */}
               </div>
@@ -213,9 +213,9 @@ export default function HomePage() {
               {/* No need for empty divs for row 2 cols 1 & 2 because cols 1 & 2 span 2 rows */}
               <div className="text-gray-300 hidden sm:block"> {/* This is implicitly row 2, col 3 */}
                 <p className="text-sm text-gray-500 mb-1">03</p> {/* Added number */}
-                <h3 className="font-semibold text-white my-3">Automatiseer de rompslomp</h3> {/* Changed mb-3 to my-3 */}
-                <ul className="space-y-2 text-sm text-white">
-                  <li>Focus op ondernemen en groei, laat Bolbaas je store beheren.</li>
+                <h3 className="font-semibold text-white my-3">Focus op groei</h3> {/* Changed mb-3 to my-3 */}
+                <ul className="space-y-2 text-sm text-white pr-5">
+                  <li>Laat facturen, BTW en e-mails automatisch lopen terwijl jij groeit.</li>
 
                 </ul>
               </div>
@@ -223,9 +223,9 @@ export default function HomePage() {
               {/* Row 2, Column 4: New Section Title 2 */}
               <div className="text-gray-300 pr-4 md:pr-6 hidden sm:block"> {/* This is implicitly row 2, col 4 */}
                 <p className="text-sm text-gray-500 mb-1">04</p> {/* Added number */}
-                <h3 className="font-semibold text-white my-3">Inzicht in prestaties</h3> {/* Changed mb-3 to my-3 */}
+                <h3 className="font-semibold text-white my-3">Zie wat werkt</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
-                  <li>Bekijk bestellingen, productprestaties, track leveringen en alles wat je nodig hebt.</li>
+                  <li>Dashboards die je direct laten zien waar je winst vandaan komt.</li>
                 </ul>
               </div>
 

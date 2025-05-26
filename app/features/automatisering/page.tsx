@@ -82,7 +82,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
-                  Automatissch uploaden van BTW-facturen, maak e-mail campagnes, reageer automatisch op factuuraanvragen en meer.
+                  Automatisch uploaden van BTW-facturen, maak e-mail campagnes, reageer automatisch op factuuraanvragen en meer.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
@@ -165,7 +165,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-black ro w-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
+                  <p className="mb-4 text-base">Geen tijd meer verspillen aan facturen uploaden of BTW-aangiftes maken. Bolbaas regelt dit automatisch, zodat jij kunt focussen op verkopen en groeien.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
@@ -193,7 +193,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                     <div id="email-campagnes" className="scroll-mt-40 mt-85 z-80 relativ pt-10">
                       <p className="text-sm text-gray-500 mb-1">E-MAIL CAMPAGNES</p>
-                      <h3 className="font-semibold text-black my-3">Verhoog reviews en verkom klantvragen met e-mail campagnes</h3>
+                      <h3 className="font-semibold text-black my-3">Verhoog reviews en voorkom klantvragen met e-mail campagnes</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
                         <li>Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.</li>
                       </ul>
@@ -287,7 +287,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[78%] sm:top-[80%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Focus op ondernemen, niet op boekhouding.</h2>
               <p className="text-base">
-                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
+                Automatisering die écht werkt. Facturen uploaden, BTW berekenen, e-mails versturen - alles gebeurt automatisch op de achtergrond. Zo heb je meer tijd voor echt ondernemen.
               </p>
             </div>
 
@@ -347,9 +347,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2"> {/* Span container across two rows */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Bolbaas zet automatisch een BTW rapport voor je klaar. </h2>
-
-                  <p className="mb-4 text-base">Geen tijd meer besteden aan je bol.com btw boekhouding? Bolbaas zet automatisch een BTW rapport voor je klaar, op basis van al jouw orders. <span className="font-bold">Alle facturen van bol.com</span> worden automatisch opgeslagen in jouw database.</p>
+                  <p className="mb-4 text-base">Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Bolbaas regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}
@@ -365,7 +363,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       <p className="text-sm text-gray-400 mb-1">BTW BOEKHOUDING</p>
                       <h3 className="font-semibold text-white my-3">BTW facturen automatisch opgeslagen</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Geen boekhouder meer nodig. Bolbaas bewaaart alle facturen van jouw orders en van bol.com.</li>
+                        <li>Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.com.</li>
                       </ul>
                     </div>
                   </div>

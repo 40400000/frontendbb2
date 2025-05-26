@@ -166,7 +166,7 @@ export default function TrackingPage() { // Renamed function
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-black row-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
+                  <p className="mb-4 text-base">Volg je producten en die van concurrenten nauwkeurig. Zie precies hoe rankings veranderen en waarom, zodat je altijd voorop loopt.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}

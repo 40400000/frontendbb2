@@ -100,7 +100,7 @@ export function DataInzichtenClientFeatures() {
                  Order tracker
                </p>
                <p className="text-sm mt-1 text-white">
-                 Weet precies wat er met je orders gebeurt. Zie status van e-mails, facutren en bezorging.
+                 Weet precies wat er met je orders gebeurt. Zie status van e-mails, facturen en bezorgingen.
                </p>
              </div>
              <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}

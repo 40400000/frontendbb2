@@ -27,15 +27,15 @@ export function MiddleContentSection() {
             <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol.com succes.</h2>
             {/* Updated Paragraph text - Smaller font size and white text */}
             <p className="text-base text-foreground">
-              De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg.
+              Weet precies welke producten en keywords het beste presteren met onze database van 8 miljoen zoektermen. Concrete inzichten die je direct kunt gebruiken om slimmere beslissingen te maken.
             </p>
             {/* Added separate paragraph for the middle part */}
             <p className="text-base text-foreground">
-              Bolbaas doet dit anders. Krijg de controle terug met diepgaande analyses, krachtige tools en slimme automatisering, ontworpen om jouw groei op bol.com te maximaliseren. Eerlijk waar.
+              Terwijl onze AI je listings automatisch optimaliseert voor maximale zichtbaarheid, regelt slimme automatisering je facturen, BTW-aangiftes en e-mailcampagnes. Zo kun je je volledig focussen op wat echt telt: je bedrijf laten groeien.
             </p>
             {/* Added separate paragraph for the final sentence */}
             <p className="text-base font-semibold text-foreground">
-              Met Bolbaas maak je keuzes op basis van echte data.
+              AI & data-gedreven ondernemen op bol.com.
             </p>
           </div>
 

@@ -99,7 +99,7 @@ const featureCategories: {
     items: [
       {
         title: "Custom dashboards en views",
-        description: "Zie alles precies zoals je het wilt zien.",
+        description: "Bouw dashboards die precies laten zien wat jij belangrijk vindt",
         icon: "LineChart",
         href: "/features/store-prestaties#custom-dashboards"
       },
@@ -117,15 +117,9 @@ const featureCategories: {
       },
       {
         title: "Sales en voorraad schattingen",
-        description: "Analyseer bestelgegevens om je bedrijf te optimaliseren",
+        description: "Weet precies hoeveel je gaat verkopen en wanneer je moet bijbestellen",
         icon: "ShoppingCart",
         href: "/features/store-prestaties#sales-voorspellingen"
-      },
-      {
-        title: "Listing Hijacker tracker",
-        description: "krijg meldingen als jou listing wordt gehijacked",
-        icon: "ShieldAlert",
-        href: "/features/listing-hijacker-tracker"
       },
     ]
   },

@@ -184,7 +184,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-black row-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
+                  <p className="mb-4 text-base">Ontdek welke keywords en producten écht werken, met 8 miljoen geanalyseerde zoektermen en miljarden datapunten.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
@@ -399,9 +399,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2"> {/* Span container across two rows */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Verbeter je organisch verkeer met de perfecte listing</h2>
-
-                  <p className="mb-4 text-base">Nee, geen simpele prompt wrapper. Bolbaas analyseert voor jouw keywords de best presterende listings. Op basis van meer dan <span className="font-bold">12 miljoen geanalyseerde producten en keywords.</span></p>
+                  <p className="mb-4 text-base">Onze AI analyseert de best presterende listings voor jouw keywords en creëert automatisch de perfecte productbeschrijving. Gebaseerd op 8 miljoen geanalyseerde producten en zoektermen.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}

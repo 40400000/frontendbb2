@@ -23,10 +23,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Store prestaties - Bolbaas",
-  description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen efficiënt.",
+  description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
   openGraph: {
     title: "Store prestaties - Bolbaas",
-    description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen efficiënt.",
+    description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
@@ -91,7 +91,7 @@ export default function DataInzichtenPage() { // Renamed function
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
-                  Maak keuzes op basis van data. Uitgebreide datainzichten voor alle aspecten van je store.
+                  Maak keuzes op basis van data. Uitgebreide data inzichten voor alle aspecten van je store.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
@@ -199,7 +199,7 @@ export default function DataInzichtenPage() { // Renamed function
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Zie alle data van je producten. Sales, winst, omzet. Bekijk rankings, reviews en een schatting van je sales en voorraad.</p>
+                  <p className="mb-4 text-base">Weet precies welke producten je geld opleveren en welke niet. Zie in één oogopslag je winst, omzet en rankings, zodat je slimme beslissingen kunt maken.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}
@@ -414,7 +414,7 @@ export default function DataInzichtenPage() { // Renamed function
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2 z-80 relative"> 
-                  <p className="mb-4 text-base">Ondernemen op bol draait uiteindelijk om één ding, bestellingen. Bolbaas geeft uitgebreid inzicht in al je bestellingen, veel meer informatie dan het partnerplatform. Houd de status van zendingen bij met onze levering tracker.</p>
+                  <p className="mb-4 text-base">Zie niet alleen wat er verkocht is, maar ook de winst per bestelling, naar wie het toegaat en wanneer het aankomt. Zo blijf je altijd op de hoogte van wat echt belangrijk is.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Feature Set 1 */}
