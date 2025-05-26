@@ -107,7 +107,7 @@ const pricingPlans = [
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
       { text: "Keyword database & analyse", icon: Database },
-      { text: "Rankingss verhogen", icon: TrendingUp },
+      { text: "Rankings verbeteren", icon: TrendingUp },
       { text: "Listing AI optimalisatie", icon: Sparkles },
       { text: "Volg 200 producten (incl. Precision & Keyword)", icon: Target },
       { text: "Listing Hijacker Alerts", icon: ShieldAlert },
