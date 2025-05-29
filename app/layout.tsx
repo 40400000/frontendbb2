@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://bolbaas.nl'), // Replace with your actual domain in production
   title: {
     default: "Bolbaas - data en automatisering voor bol.com partners",
-    template: "%s - Bolbaas",
+    template: "%s",
   },
   description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol.com partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
   robots: {
@@ -66,18 +66,6 @@ export const metadata: Metadata = {
     },
     description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol.com partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
-  },
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    // other: [], // For other specific icons like 'shortcut' or custom rel attributes
   },
 };
 

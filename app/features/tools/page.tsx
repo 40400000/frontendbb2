@@ -344,7 +344,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             </div>
 
             {/* NEW Buttons container at the bottom */}
-            <div className="absolute sm:left-[25%] top-[92%] w-full sm:w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
+            <div className="absolute sm:left-[25%] sm:top-[92%] top-[94%] w-full sm:w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
               {/* Button 1 in First Column */}
               <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
                 <Link href="/prijzen" passHref>

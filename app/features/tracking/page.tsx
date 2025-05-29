@@ -83,7 +83,7 @@ export default function TrackingPage() { // Renamed function
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
-              <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
+              <div className="col-span-2 sm:col-span-1 mt-20 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
                 <Link href="/prijzen" passHref>
                   <div className="group relative w-full text-left border-b border-border cursor-pointer -mr-1.5 overflow-hidden"> {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
