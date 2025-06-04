@@ -80,19 +80,19 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full items-center">
               
               {/* Phone Number - Column 1 on mobile, Column 2 on sm+ */}
-              <div className="sm:col-start-2 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-1 sm:py-0">
+              <div className="sm:col-start-2 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-3 sm:py-1 mb-2 sm:mb-0">
                 <Phone strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
                 <a 
                   href="tel:+31613665348" 
                   className="text-white hover:text-gray-400 transition-colors text-sm"
                 >
-                  +31 6 13665348
+                  +31 6 13665348 (8:00 - 22:00)
                 </a>
                 <ContactStatusDots type="phone" />
               </div>
               
               {/* Email - Column 1 on mobile (stacked), Column 3 on sm+ */}
-              <div className="sm:col-start-3 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-1 sm:py-0">
+              <div className="sm:col-start-3 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-3 sm:py-1">
                 <Mail strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
                 <a 
                   href="mailto:thijmendreef@icloud.com" 
@@ -116,7 +116,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[60%]">
-                  Plan een afspraak
+                  Plan een gesprek.
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">

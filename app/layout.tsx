@@ -7,7 +7,7 @@ import PromotionBanner from '@/components/promotion-banner';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import PasswordGate from '@/components/password-gate';
 import { ALLOWED_PASSWORDS } from '@/lib/passwords';
 import { Analytics } from "@vercel/analytics/next";
@@ -77,10 +77,49 @@ export default async function RootLayout({
   // Check password cookie
   const cookieStore = await cookies();
   const passwordCookie = cookieStore.get('site-password')?.value;
-  const isAuthorized = Boolean(
+  let isAuthorized = Boolean(
     passwordCookie &&
     ALLOWED_PASSWORDS.map(p => p.toLowerCase()).includes(passwordCookie.toLowerCase())
   );
+
+  // Check for crawler User-Agent
+  if (!isAuthorized) {
+    const headersList = await headers();
+    const userAgent = headersList.get('user-agent')?.toLowerCase() || '';
+    const knownCrawlers = [
+      'googlebot', 
+      'bingbot', 
+      'yahoo! slurp', 
+      'duckduckbot', 
+      'baiduspider', 
+      'yandexbot',
+      'sogou',
+      'exabot',
+      'facebot',
+      'facebookexternalhit',
+      'linkedinbot',
+      'twitterbot',
+      'pinterestbot',
+      'applebot',
+      'semrushbot',
+      'ahrefsbot',
+      'seobilitybot',
+      'yoozbot',
+      'seobilitybot',
+      'adsbot-google',
+      'google-adsbot',
+      'google-adsbot-mobile',
+      'google-adsbot-mobile-home',
+      'google-adsbot-mobile-home-page',
+      'google-adsbot-mobile-home-page-page',
+      'google-adsbot-mobile-home-page-page-page',
+      // Add more known crawler user agent substrings here if needed
+    ];
+    const isCrawler = knownCrawlers.some(crawler => userAgent.includes(crawler));
+    if (isCrawler) {
+      isAuthorized = true;
+    }
+  }
 
   return (
     <html lang="en" suppressHydrationWarning>
