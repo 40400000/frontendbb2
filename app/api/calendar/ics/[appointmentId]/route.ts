@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/src/db'; // Corrected alias path
 import { appointments as appointmentsSchema, type SelectAppointment } from '@/src/db/schema'; // Corrected alias path and import type
 import { eq } from 'drizzle-orm';
@@ -17,10 +17,10 @@ function createIcsDateTimeArray(dateStr: string, timeStr: string): ics.DateArray
 }
 
 export async function GET(
-  request: Request,
-  { params }: { params: { appointmentId: string } }
+  request: NextRequest,
+  context: { params: { appointmentId: string } }
 ) {
-  const { appointmentId } = params;
+  const { appointmentId } = context.params;
 
   if (!appointmentId) {
     return NextResponse.json({ error: 'Appointment ID is required' }, { status: 400 });
