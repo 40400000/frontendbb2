@@ -1,9 +1,15 @@
 'use client';
 
-import { useState, useId } from 'react';
+import { useState, useId, useEffect, useActionState } from 'react';
 import { MdOutlineArrowOutward, MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { useFormStatus } from 'react-dom';
 import { z } from 'zod';
+import { createAppointment, type CreateAppointmentResponse } from '../server/actions';
+import {
+  getTimeSlotsForDate,
+  isDateGenerallySelectable,
+  type TimeSlotInfo
+} from '../lib/availability-helpers';
 
 // Zod schema for email/phone validation
 const emailOrPhoneSchema = z.string()
@@ -20,23 +26,23 @@ const emailOrPhoneSchema = z.string()
   }, { message: "Voer een geldig e-mailadres of telefoonnummer in." });
 
 // Available time slots for appointments
-const timeSlots = [
-  '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-  '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30'
-];
+// const timeSlots = [
+//   '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+//   '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30'
+// ];
 
 // Child component for the submit button to use useFormStatus
 interface SubmitButtonChildProps {
-  isFormInvalid?: boolean;
+  isFormInvalidClientSide?: boolean;
 }
 
-function SubmitButtonChild({ isFormInvalid = false }: SubmitButtonChildProps) {
+function SubmitButtonChild({ isFormInvalidClientSide = false }: SubmitButtonChildProps) {
   const { pending } = useFormStatus();
 
   return (
     <button
       type="submit"
-      disabled={pending || isFormInvalid}
+      disabled={pending || isFormInvalidClientSide}
       className="w-full bg-black text-left cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
     >
       {/* Original Content - Slides up on hover */}
@@ -60,7 +66,11 @@ function SubmitButtonChild({ isFormInvalid = false }: SubmitButtonChildProps) {
   );
 }
 
+const initialFormState: CreateAppointmentResponse | null = null;
+
 export function AppointmentForm() {
+  const [formState, formAction] = useActionState(createAppointment, initialFormState);
+
   // State and handlers for Name input
   const [isNameFocused, setIsNameFocused] = useState(false);
   const [nameValue, setNameValue] = useState('');
@@ -97,7 +107,11 @@ export function AppointmentForm() {
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
     setEmailValue(newValue);
-    validateEmailField(newValue);
+    if (formState?.errors?.find(e => e.path.includes('contactInfo'))) {
+      // Clear server error for contactInfo if user starts typing
+      // This is a basic way; more sophisticated error handling might be needed
+    }
+    validateEmailField(newValue); // Keep client-side validation for immediate feedback
   };
   const isEmailLabelFloating = isEmailFocused || emailValue !== '';
 
@@ -106,7 +120,16 @@ export function AppointmentForm() {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string>('');
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [displayedTimeSlots, setDisplayedTimeSlots] = useState<TimeSlotInfo[]>([]);
   const calendarId = useId();
+
+  useEffect(() => {
+    if (selectedDate) {
+      setDisplayedTimeSlots(getTimeSlotsForDate(selectedDate));
+    } else {
+      setDisplayedTimeSlots([]);
+    }
+  }, [selectedDate]);
 
   const handleCalendarFocus = () => {
     setIsCalendarFocused(true);
@@ -139,10 +162,8 @@ export function AppointmentForm() {
     return firstDay === 0 ? 6 : firstDay - 1; // Convert Sunday (0) to be last (6)
   };
 
-  const isDateSelectable = (date: Date) => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return date >= today;
+  const isDateSelectable = (date: Date): boolean => {
+    return isDateGenerallySelectable(date);
   };
 
   const generateCalendarDays = () => {
@@ -197,25 +218,31 @@ export function AppointmentForm() {
   };
   const isNotesLabelFloating = isNotesFocused || notesValue !== '';
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    const isEmailValid = validateEmailField(emailValue);
-    if (!isEmailValid) {
-      return;
+  // Effect to reset form on successful submission
+  useEffect(() => {
+    if (formState?.success) {
+      setNameValue('');
+      setEmailValue('');
+      setSelectedDate(null);
+      setSelectedTime('');
+      setNotesValue('');
+      // Potentially clear specific server errors from display if needed
+      // Or set a general success message display state
     }
-    // Placeholder submit logic
-    console.log('Appointment form submitted:', {
-      name: nameValue,
-      email: emailValue,
-      date: selectedDate,
-      time: selectedTime,
-      notes: notesValue
-    });
-  };
+  }, [formState]);
+
+  // Determine if form is client-side invalid for submit button disabling
+  const isFormInvalidClientSide = !!emailError || !nameValue || !selectedDate || !selectedTime;
+
+  // Get specific server-side errors
+  const nameServerError = formState?.errors?.find(e => e.path.includes('name'))?.message;
+  const contactInfoServerError = formState?.errors?.find(e => e.path.includes('contactInfo'))?.message;
+  const dateServerError = formState?.errors?.find(e => e.path.includes('appointmentDate'))?.message;
+  const timeServerError = formState?.errors?.find(e => e.path.includes('appointmentTime'))?.message;
 
   return (
     <form 
-      onSubmit={handleSubmit}
+      action={formAction}
       className="ml-[1px] mr-[1px] relative"
     >
       {/* Form Fields Container */}
@@ -251,6 +278,7 @@ export function AppointmentForm() {
             placeholder=" " 
             required
           />
+          {nameServerError && <p className="text-red-500 text-xs mt-1 ml-4 pb-2">{nameServerError}</p>}
         </div>
 
         {/* E-mail Input */}
@@ -274,7 +302,7 @@ export function AppointmentForm() {
           </label>
           <input
             id={emailId}
-            type="email"
+            type="text"
             name="email"
             value={emailValue}
             onChange={handleEmailChange}
@@ -284,8 +312,18 @@ export function AppointmentForm() {
             placeholder=" " 
             required
           />
-          {emailError && <p className="text-red-500 text-xs mt-1 ml-4 pb-2">{emailError}</p>}
+          {/* Display client-side error first, then server-side if no client error */}
+          {emailError && !contactInfoServerError && <p className="text-red-500 text-xs mt-1 ml-4 pb-2">{emailError}</p>}
+          {contactInfoServerError && <p className="text-red-500 text-xs mt-1 ml-4 pb-2">{contactInfoServerError}</p>}
         </div>
+
+        {/* Hidden inputs for date and time */} 
+        {selectedDate && (
+          <input type="hidden" name="appointmentDate" value={selectedDate.toISOString().split('T')[0]} />
+        )}
+        {selectedTime && (
+          <input type="hidden" name="appointmentTime" value={selectedTime} />
+        )}
 
         {/* Calendar Date/Time Picker */}
         <div
@@ -304,6 +342,7 @@ export function AppointmentForm() {
               group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white
             `}
           >
+             Datum & Tijd <span className="text-gray-400 ml-0.5">*</span>
           </label>
           <div
             id={calendarId}
@@ -312,7 +351,7 @@ export function AppointmentForm() {
             className="w-full bg-transparent pt-8 pb-4 pl-4 pr-10 text-gray-50 focus:outline-none focus:ring-0 relative"
             tabIndex={0}
           >
-            {formatSelectedDateTime() || <span className="text-transparent">.</span>}
+            {formatSelectedDateTime() || <span className="text-gray-400">Selecteer een datum en tijd</span>}
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
               <svg
                 className="h-5 w-5 text-gray-400"
@@ -399,30 +438,38 @@ export function AppointmentForm() {
               </div>
 
               {/* Time Slots */}
-              {selectedDate && (
+              {selectedDate && displayedTimeSlots.length > 0 && (
                 <div className="mt-4 pt-4 border-t border-border">
                   <div className="text-white text-sm mb-2">Beschikbare tijden:</div>
                   <div className="grid grid-cols-4 gap-2">
-                    {timeSlots.map(time => (
+                    {displayedTimeSlots.map(slotInfo => (
                       <button
-                        key={time}
+                        key={slotInfo.time}
                         type="button"
-                        onClick={() => handleTimeSelect(time)}
+                        onClick={() => slotInfo.isSelectable && handleTimeSelect(slotInfo.time)}
+                        disabled={!slotInfo.isSelectable}
                         className={`
                           p-2 text-xs transition-colors duration-150
-                          ${selectedTime === time 
-                            ? 'bg-white !text-black' 
-                            : 'text-white hover:bg-gray-700 border border-border'
-                          }
+                          ${selectedTime === slotInfo.time && slotInfo.isSelectable ? 'bg-white !text-black' : ''}
+                          ${slotInfo.isSelectable ? 'text-white hover:bg-gray-700 border border-border cursor-pointer' : ''}
+                          ${slotInfo.isDeterministicallyBlocked ? 'text-gray-500 border border-gray-700 cursor-not-allowed opacity-70' : ''}
+                          ${!slotInfo.isSelectable && !slotInfo.isDeterministicallyBlocked ? 'text-gray-600 border border-gray-800 cursor-not-allowed opacity-50' : ''}
                         `}
                       >
-                        {time}
+                        {slotInfo.time}
                       </button>
                     ))}
                   </div>
                 </div>
               )}
+              {selectedDate && displayedTimeSlots.length === 0 && (
+                 <div className="mt-4 pt-4 border-t border-border">
+                   <p className="text-gray-400 text-sm p-2">Geen beschikbare tijden voor deze dag.</p>
+                 </div>
+              )}
             </div>
+             {dateServerError && <p className="text-red-500 text-xs p-4">{dateServerError}</p>}
+             {timeServerError && <p className="text-red-500 text-xs p-4">{timeServerError}</p>}
           </div>
         </div>
 
@@ -458,9 +505,22 @@ export function AppointmentForm() {
           />
         </div>
 
+        {/* Display general form message from server (success or general error) */}
+        {formState?.message && !formState.errors && (
+          <div className={`p-4 text-sm ${formState.success ? 'text-green-500' : 'text-red-500'}`}>
+            {formState.message}
+          </div>
+        )}
+         {formState?.message && formState.errors && formState.errors.length > 0 && (
+          <div className={`p-4 text-sm text-red-500`}> 
+            {/* General validation error message if specific errors are not caught above or for other reasons */}
+            {formState.message}
+          </div>
+        )}
+
         {/* Submit Button */}
         <div className="group relative w-full cursor-pointer overflow-hidden border-b border-border">
-          <SubmitButtonChild isFormInvalid={!!emailError} />
+          <SubmitButtonChild isFormInvalidClientSide={isFormInvalidClientSide} />
         </div>
       </div>
     </form>

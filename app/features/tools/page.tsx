@@ -184,7 +184,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-black row-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Ontdek welke keywords en producten écht werken, met 8 miljoen geanalyseerde zoektermen en miljarden datapunten.</p>
+                  <p className="mb-4 text-base">Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}

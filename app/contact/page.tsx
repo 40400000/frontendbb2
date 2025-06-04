@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image"; // Import Next Image
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 import Link from 'next/link'; // Ensure Link is imported
+import { Phone, Mail } from "lucide-react"; // Import lucide icons
+import { ContactStatusDots } from "@/components/contact-status-dots"; // Import the new status dots component
 import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import the background photo
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
@@ -69,6 +71,39 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             {/* Additional divider line visible only on sm screens and up (4 cols) - Uses border variable */}
             {/* Line between cols 3 & 4 */}
             <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-border"></div>
+          </div>
+        </div>
+
+        {/* NEW Contact Info Bar */}
+        <div className="w-full bg-black z-[70] border-b border-border border-r border-l py-3">
+          <div className="container px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-4 w-full items-center">
+              
+              {/* Phone Number - Column 1 on mobile, Column 2 on sm+ */}
+              <div className="sm:col-start-2 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-1 sm:py-0">
+                <Phone strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
+                <a 
+                  href="tel:+31613665348" 
+                  className="text-white hover:text-gray-400 transition-colors text-sm"
+                >
+                  +31 6 13665348
+                </a>
+                <ContactStatusDots type="phone" />
+              </div>
+              
+              {/* Email - Column 1 on mobile (stacked), Column 3 on sm+ */}
+              <div className="sm:col-start-3 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-1 sm:py-0">
+                <Mail strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
+                <a 
+                  href="mailto:thijmendreef@icloud.com" 
+                  className="text-white hover:text-gray-400 transition-colors text-sm"
+                >
+                  thijmendreef@icloud.com
+                </a>
+                <ContactStatusDots type="email" />
+              </div>
+
+            </div>
           </div>
         </div>
 

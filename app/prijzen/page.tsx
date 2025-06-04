@@ -97,6 +97,7 @@ const pricingPlans = [
     planIcon: Rocket,
     iconBgColor: "bg-blue-100",
     iconTextColor: "text-blue-500",
+    redirect: "https://app.bolbaas.nl/registreren"
   },
   {
     name: "Plus",
@@ -119,6 +120,7 @@ const pricingPlans = [
     planIcon: Crown,
     iconBgColor: "bg-purple-100",
     iconTextColor: "text-purple-500",
+    redirect: "https://app.bolbaas.nl/registreren"
   },
   {
     name: "Pro",
@@ -142,6 +144,7 @@ const pricingPlans = [
     planIcon: Building2,
     iconBgColor: "bg-indigo-100",
     iconTextColor: "text-indigo-500",
+    redirect: "https://bolbaas.nl/contact"
   },
 ]
 
@@ -550,17 +553,20 @@ export default function PricingPage() { // Renamed function
 
 
 
-                      <Button
-                        variant={plan.ctaVariant}
-                        size="lg"
-                        className={cn(
-                          "w-full group text-black", // Ensure text is black for buttons
-                          plan.ctaVariant === 'default' ? 'bg-white hover:bg-gray-200' : 'bg-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 text-white hover:text-black' // Adjusted default and outline styles
-                        )}
-                      >
-                        {plan.cta}
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </Button>
+                      <Link href={plan.redirect} passHref>
+                        <Button
+                          variant={plan.ctaVariant}
+                          size="lg"
+                          className={cn(
+                            "w-full group text-black hover:cursor-pointer", // Ensure text is black for buttons
+                            plan.ctaVariant === 'default' ? 'bg-white hover:bg-gray-200' : 'bg-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 text-white hover:text-black hover:cursor-pointer' // Adjusted default and outline styles
+                          )}
+                          
+                        >
+                          {plan.cta}
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Button>
+                      </Link>
                     </div>
                   );
                 })}

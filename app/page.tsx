@@ -182,7 +182,7 @@ export default function HomePage() {
               {/* Row 1, Column 1: Left Text (35%) */}
               <div className="text-white row-span-2"> {/* Make this span 2 rows */}
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
-                <p className="mb-4 text-base">Ontdek welke producten en keywords écht werken met onze database van 8 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid.</p>
+                <p className="mb-4 text-base">Ontdek welke producten en keywords écht werken met onze database van 12 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid.</p>
                 <p className="text-base">Zie je groei in realtime dashboards, laat Bolbaas je facturen en BTW regelen, en volg elke bestelling. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
               </div>
 
