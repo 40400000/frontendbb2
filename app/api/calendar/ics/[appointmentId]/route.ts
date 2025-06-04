@@ -4,10 +4,6 @@ import { appointments as appointmentsSchema, type SelectAppointment } from '@/sr
 import { eq } from 'drizzle-orm';
 import * as ics from 'ics';
 
-interface Params {
-  appointmentId: string;
-}
-
 // Helper to convert DB date and time string to ics date array
 function createIcsDateTimeArray(dateStr: string, timeStr: string): ics.DateArray {
   const date = new Date(`${dateStr}T${timeStr}:00`); // Combine date and time
@@ -22,7 +18,7 @@ function createIcsDateTimeArray(dateStr: string, timeStr: string): ics.DateArray
 
 export async function GET(
   request: Request,
-  { params }: { params: Params }
+  { params }: { params: { appointmentId: string } }
 ) {
   const { appointmentId } = params;
 
