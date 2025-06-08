@@ -17,7 +17,7 @@ interface TopicContent {
 const topicDetails: Record<string, TopicContent> = {
   Inzichten: {
     title: "Prestaties",
-    description: "Gedetailleerde inzichten in uw Bol.com prestaties.",
+    description: "Gedetailleerde inzichten in je bol prestaties.",
     images: [
       "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/inzicht-wMrslhEeyKX4GYOCf8NL2fWwpTcyld.png",
     ],

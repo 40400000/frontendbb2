@@ -463,7 +463,7 @@ export default function TrackingPage() { // Renamed function
           {/* Row 1, Column 1: Left Text */}
           <div className="text-white row-span-2 relative">
             <p className="mb-4 text-base">
-              Bekijk van meer de omzet van meer dan 4 miljoen bol.com producten. Spot kansen in de markt.
+              Bekijk van meer de omzet van meer dan 4 miljoen bol producten. Spot kansen in de markt.
             </p>
           </div>
 

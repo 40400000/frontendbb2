@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Contacteer Bolbaas",
-    description: "Stel je vragen of plan een gesprek. Bolbaas helpt je graag verder met data en automatisering voor bol.com.",
+    description: "Stel je vragen of plan een gesprek. Bolbaas helpt je graag verder met data en automatisering voor bol.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };

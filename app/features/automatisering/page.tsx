@@ -9,10 +9,10 @@ import { AutomatiseringClientFeatures } from "@/components/automatisering-client
 
 export const metadata: Metadata = {
   title: "Automatisering - Bolbaas",
-  description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+  description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
   openGraph: {
     title: "Automatisering - Bolbaas",
-    description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+    description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Automatisering - Bolbaas",
-    description: "Automatiseer je bol.com store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
+    description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };
@@ -171,9 +171,9 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                     {/* Moved Feature Set 1 into first column */}
                     <div className="sm:mt-30 z-80 relativ pt-10">
                       <p className="text-sm text-gray-500 mb-1">BTW FACTUREN</p>
-                      <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol.com</h3>
+                      <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                          <li>Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol.com en slaat deze op in jouw database.</li>
+                          <li>Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.</li>
                         </ul>
                     </div>
                     <Link href="/contact" passHref>
@@ -363,7 +363,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       <p className="text-sm text-gray-400 mb-1">BTW BOEKHOUDING</p>
                       <h3 className="font-semibold text-white my-3">BTW facturen automatisch opgeslagen</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.com.</li>
+                        <li>Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.</li>
                       </ul>
                     </div>
                   </div>

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Store prestaties - Bolbaas",
-    description: "Krijg volledig inzicht in je bol.com store prestaties met de data tools van Bolbaas.",
+    description: "Krijg volledig inzicht in je bol store prestaties met de data tools van Bolbaas.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };

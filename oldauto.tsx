@@ -73,7 +73,7 @@ export default function AutomatiseringPage() {
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-3xl w-[35%]">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Automatiseer je bol.com store en aftersales
+                  Automatiseer je bol store en aftersales
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-white w-[71.4%]">
@@ -192,7 +192,7 @@ export default function AutomatiseringPage() {
                   <Package className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
                   Bestelling geplaatst
                 </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Klant plaatst order op bol.com</p> {/* Subtitle - Updated styling */}
+                <p className="text-sm mt-1 text-white">Klant plaatst order op bol</p> {/* Subtitle - Updated styling */}
               </div>
               {/* Number 2 */}
               <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
@@ -219,15 +219,15 @@ export default function AutomatiseringPage() {
                   <Upload className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
                   Automatisch geüpload
                 </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Factuur direct naar bol.com</p> {/* Subtitle - Updated styling */}
+                <p className="text-sm mt-1 text-white">Factuur direct naar bol</p> {/* Subtitle - Updated styling */}
               </div>
             </div>
           </div>
 
           <div className="relative text-white row-span-2 w-[35%] pt-5 z-65"> {/* Make this span 2 rows - Added relative and z-65 */}
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatisch facturen uploaden naar bol.com</h2>
-                <p className="mb-4 text-base">Bespaar tijd en voorkom fouten door facturen automatisch naar het bol.com platform te uploaden. Bolbaas integreert naadloos met je verkoopaccount.</p>
-                <p className="text-base">Zodra een bestelling is verwerkt en de factuur is gegenereerd, zorgt Bolbaas ervoor dat deze direct en correct wordt geüpload, conform de eisen van bol.com.</p>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatisch facturen uploaden naar bol</h2>
+                <p className="mb-4 text-base">Bespaar tijd en voorkom fouten door facturen automatisch naar het bol platform te uploaden. Bolbaas integreert naadloos met je verkoopaccount.</p>
+                <p className="text-base">Zodra een bestelling is verwerkt en de factuur is gegenereerd, zorgt Bolbaas ervoor dat deze direct en correct wordt geüpload, conform de eisen van bol.</p>
               </div>
 
 

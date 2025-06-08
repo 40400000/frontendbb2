@@ -218,7 +218,7 @@ const featureCategories: {
       },
       {
         title: "Omzet research",
-        description: "Bekijk de omzet van meer dan 4 miljoen producten op bol.com",
+        description: "Bekijk de omzet van meer dan 4 miljoen producten op bol",
         icon: "Truck",
         href: "/features/tracking#omzet-database",
         comingSoon: true

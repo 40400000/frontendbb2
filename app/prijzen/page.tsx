@@ -82,7 +82,7 @@ const pricingPlans = [
     price: 29,
     discountedPrice: 17,
     priceSuffix: "/ maand",
-    description: "Voor ambitieuze beginners die hun bol.com avontuur willen lanceren.",
+    description: "Voor ambitieuze beginners die hun bol avontuur willen lanceren.",
     iconFeatures: [
       { text: "Automatisering facturen", icon: FileText },
       { text: "Automatisch reageren factuuraanvragen", icon: Reply },
@@ -128,7 +128,7 @@ const pricingPlans = [
     price: 450,
     discountedPrice: 295,
     priceSuffix: "/ maand",
-    description: "Voor bol.com ondernemers en agencies die willen excelleren.",
+    description: "Voor bol ondernemers en agencies die willen excelleren.",
     iconFeatures: [
       { text: "Onbeperkte tracking & research", icon: Building2 },
       { text: "ACoS verlagen", icon: TrendingDown },
@@ -323,7 +323,7 @@ const trackingFeatures: FeatureComparisonItem[] = [ // Renamed from rankingFeatu
   },
   {
     name: "Omzet research",
-    description: "Bekijk de omzet van meer dan 4 miljoen producten op bol.com", // Removed (Binnenkort) from description
+    description: "Bekijk de omzet van meer dan 4 miljoen producten op bol", // Removed (Binnenkort) from description
     hobby: "✕",
     pro: "✓", // Assuming Plus/Pro
     enterprise: "✓",
@@ -367,7 +367,7 @@ const automationFeatures: FeatureComparisonItem[] = [
 const proExclusiveFeatures: FeatureComparisonItem[] = [
   {
     name: "Hulp bij advertentiebeheer",
-    description: "Ondersteuning bij het opzetten en beheren van je bol.com advertentiecampagnes.",
+    description: "Ondersteuning bij het opzetten en beheren van je bol advertentiecampagnes.",
     hobby: "-",
     pro: "-",
     enterprise: "✓"
@@ -971,14 +971,14 @@ export default function PricingPage() { // Renamed function
             {/* CTA Content placed in correct columns */}
             <div className="col-span-2 sm:col-start-2 sm:col-span-2 mb-8 space-y-6 p-0"> {/* Added padding */}
               {/* Updated Headline with larger font size */}
-              <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol.com succes.</h2>
+              <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol succes.</h2>
               {/* Updated Paragraph text - Smaller font size and white text */}
               <p className="text-base text-foreground">
                 De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg.
               </p>
               {/* Added separate paragraph for the middle part */}
               <p className="text-base text-foreground">
-                Bolbaas doet dit anders. Krijg de controle terug met diepgaande analyses, krachtige tools en slimme automatisering, ontworpen om jouw groei op bol.com te maximaliseren. Beloofd.
+                Bolbaas doet dit anders. Krijg de controle terug met diepgaande analyses, krachtige tools en slimme automatisering, ontworpen om jouw groei op bol te maximaliseren. Beloofd.
               </p>
               {/* Added separate paragraph for the final sentence */}
               <p className="text-base font-semibold text-foreground">

@@ -69,7 +69,7 @@ export default function HomePage() {
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-[45%] lg:w-[68%]">
-                  De zekerheid van data en automatisering voor bol.com partners.
+                  De zekerheid van data en automatisering voor bol partners.
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
