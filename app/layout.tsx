@@ -68,11 +68,6 @@ export const metadata: Metadata = {
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
   },
   manifest: '/manifest.webmanifest',
-  icons: {
-    icon: '/icon.png',
-    shortcut: '/favicon.ico',
-    apple: '/apple-icon.png',
-  },
   appleWebApp: {
     title: 'Bolbaas',
     capable: true,
