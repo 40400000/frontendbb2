@@ -68,6 +68,11 @@ export const metadata: Metadata = {
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
   },
   manifest: '/manifest.webmanifest',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   appleWebApp: {
     title: 'Bolbaas',
     capable: true,
@@ -80,59 +85,63 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Temporarily disable password protection by setting isAuthorized to true.
-  // The original logic is commented out below to make it easy to re-enable.
-  const isAuthorized = true;
+  // Check password cookie
+  const cookieStore = await cookies();
+  const passwordCookie = cookieStore.get('site-password')?.value;
+  let isAuthorized = Boolean(
+    passwordCookie &&
+    ALLOWED_PASSWORDS.map(p => p.toLowerCase()).includes(passwordCookie.toLowerCase())
+  );
 
-  // // Check password cookie
-  // const cookieStore = await cookies();
-  // const passwordCookie = cookieStore.get('site-password')?.value;
-  // let isAuthorized = Boolean(
-  //   passwordCookie &&
-  //   ALLOWED_PASSWORDS.map(p => p.toLowerCase()).includes(passwordCookie.toLowerCase())
-  // );
-
-  // // Check for crawler User-Agent
-  // if (!isAuthorized) {
-  //   const headersList = await headers();
-  //   const userAgent = headersList.get('user-agent')?.toLowerCase() || '';
-  //   const knownCrawlers = [
-  //     'googlebot', 
-  //     'bingbot', 
-  //     'yahoo! slurp', 
-  //     'duckduckbot', 
-  //     'baiduspider', 
-  //     'yandexbot',
-  //     'sogou',
-  //     'exabot',
-  //     'facebot',
-  //     'facebookexternalhit',
-  //     'linkedinbot',
-  //     'twitterbot',
-  //     'pinterestbot',
-  //     'applebot',
-  //     'semrushbot',
-  //     'ahrefsbot',
-  //     'seobilitybot',
-  //     'yoozbot',
-  //     'seobilitybot',
-  //     'adsbot-google',
-  //     'google-adsbot',
-  //     'google-adsbot-mobile',
-  //     'google-adsbot-mobile-home',
-  //     'google-adsbot-mobile-home-page',
-  //     'google-adsbot-mobile-home-page-page',
-  //     'google-adsbot-mobile-home-page-page-page',
-  //     // Add more known crawler user agent substrings here if needed
-  //   ];
-  //   const isCrawler = knownCrawlers.some(crawler => userAgent.includes(crawler));
-  //   if (isCrawler) {
-  //     isAuthorized = true;
-  //   }
-  // }
+  // Check for crawler User-Agent
+  if (!isAuthorized) {
+    const headersList = await headers();
+    const userAgent = headersList.get('user-agent')?.toLowerCase() || '';
+    const knownCrawlers = [
+      'googlebot', 
+      'bingbot', 
+      'yahoo! slurp', 
+      'duckduckbot', 
+      'baiduspider', 
+      'yandexbot',
+      'sogou',
+      'exabot',
+      'facebot',
+      'facebookexternalhit',
+      'linkedinbot',
+      'twitterbot',
+      'pinterestbot',
+      'applebot',
+      'semrushbot',
+      'ahrefsbot',
+      'seobilitybot',
+      'yoozbot',
+      'seobilitybot',
+      'adsbot-google',
+      'google-adsbot',
+      'google-adsbot-mobile',
+      'google-adsbot-mobile-home',
+      'google-adsbot-mobile-home-page',
+      'google-adsbot-mobile-home-page-page',
+      'google-adsbot-mobile-home-page-page-page',
+      // Add more known crawler user agent substrings here if needed
+    ];
+    const isCrawler = knownCrawlers.some(crawler => userAgent.includes(crawler));
+    if (isCrawler) {
+      isAuthorized = true;
+    }
+  }
 
   return (
     <html lang="en" suppressHydrationWarning>
+      {!isAuthorized && (
+        <head>
+          <link rel="icon" href="/icon.png" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-icon.png" />
+          <link rel="manifest" href="/manifest.webmanifest" />
+        </head>
+      )}
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {/* If not authorized, show password gate */}
