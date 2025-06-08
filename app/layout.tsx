@@ -40,11 +40,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/icon.png',
-    shortcut: '/favicon.ico',
-    apple: '/apple-icon.png',
-  },
   openGraph: {
     title: {
       default: "Bolbaas - data en automatisering voor bol.com partners",
@@ -72,6 +67,7 @@ export const metadata: Metadata = {
     description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol.com partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
   },
+  manifest: '/manifest.webmanifest'
 };
 
 export default async function RootLayout({
