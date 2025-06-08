@@ -67,7 +67,17 @@ export const metadata: Metadata = {
     description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol.com partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
   },
-  manifest: '/manifest.webmanifest'
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+  appleWebApp: {
+    title: 'Bolbaas',
+    capable: true,
+    statusBarStyle: 'default',
+  },
 };
 
 export default async function RootLayout({
