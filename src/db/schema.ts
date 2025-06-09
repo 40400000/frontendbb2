@@ -11,8 +11,15 @@ export const appointments = pgTable('appointments', {
   updatedAt: timestamp('updated_at').defaultNow().notNull().$onUpdate(() => new Date()),
 });
 
+export const waitlist = pgTable('waitlist', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  email: text('email').notNull().unique(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
 // Define and export the select type
 export type SelectAppointment = typeof appointments.$inferSelect;
+export type SelectWaitlist = typeof waitlist.$inferSelect;
 // Optionally, define and export the insert type if needed elsewhere
 // export type InsertAppointment = typeof appointments.$inferInsert;
 
