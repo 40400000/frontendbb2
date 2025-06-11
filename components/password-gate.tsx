@@ -88,7 +88,7 @@ export default function PasswordGate() {
                 </a>
                 <ContactStatusDots type="phone" />
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Mail strokeWidth={1.4} className="h-4 w-4 mr-2 text-white" />
                 <a 
                   href="mailto:thijmendreef@icloud.com" 
@@ -97,7 +97,7 @@ export default function PasswordGate() {
                   thijmendreef@icloud.com
                 </a>
                 <ContactStatusDots type="email" />
-              </div>
+              </div> */}
             </div>
           </div>
 
