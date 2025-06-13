@@ -13,7 +13,9 @@ export const appointments = pgTable('appointments', {
 
 export const waitlist = pgTable('waitlist', {
   id: uuid('id').defaultRandom().primaryKey(),
-  email: text('email').notNull().unique(),
+  email: text('email').notNull(),
+  companyName: text('company_name'), // Optional field
+  phoneNumber: text('phone_number').notNull(), // Optional field
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 

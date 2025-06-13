@@ -95,10 +95,10 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               <div className="sm:col-start-3 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-3 sm:py-1">
                 <Mail strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
                 <a 
-                  href="mailto:thijmendreef@icloud.com" 
+                  href="mailto:info@bolbaas.nl" 
                   className="text-white hover:text-gray-400 transition-colors text-sm"
                 >
-                  thijmendreef@icloud.com
+                  info@bolbaas.nl
                 </a>
                 <ContactStatusDots type="email" />
               </div>

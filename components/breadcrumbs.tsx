@@ -189,6 +189,7 @@ function getCurrentPageTitle(currentPath: string): string | null {
   if (currentPath === '/pricing') return 'Pricing';
   if (currentPath === '/prijzen') return 'Prijzen';
   if (currentPath === '/contact') return 'Contact';
+  if (currentPath === '/wachtlijst') return 'Wachtlijst';
 
   return null; // Return null if no matching page found or it's the homepage
 }
@@ -205,7 +206,7 @@ export function Breadcrumbs() {
 
   return (
     <div className="border-t border-b container mx-auto overflow-hidden">
-      <div className="container mx-auto py-6 sm:px-0 text-md text-foreground">
+      <div className="container mx-auto py-5 sm:px-0 text-md text-foreground">
         {isFeaturePage ? (
           <>
             Features <span className="text-muted-foreground px-2">/</span> {currentPageTitle}

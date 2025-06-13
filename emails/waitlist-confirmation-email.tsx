@@ -2,12 +2,16 @@ import * as React from 'react';
 
 interface WaitlistConfirmationEmailProps {
   email: string;
+  companyName?: string;
+  phoneNumber?: string;
   logoUrl?: string;
   baseUrl?: string;
 }
 
 export const WaitlistConfirmationEmail: React.FC<WaitlistConfirmationEmailProps> = ({
   email,
+  companyName,
+  phoneNumber,
   logoUrl = 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_header-O7Epfsu5gL4zaFcx8blDKh5D3imCG0.png',
   baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://www.bolbaas.nl'
 }) => {
@@ -30,10 +34,17 @@ export const WaitlistConfirmationEmail: React.FC<WaitlistConfirmationEmailProps>
             <p style={{ color: '#D1D5DB', marginBottom: '32px', lineHeight: '1.6' }}>Beste toekomstige Bolbaas,</p>
 
             <p style={{ color: '#D1D5DB', marginBottom: '24px', lineHeight: '1.6' }}>
-              Bedankt voor je interesse in Bolbaas. We hebben je aanmelding voor de wachtlijst ({email}) ontvangen.
+              Bedankt voor je interesse. We hebben je aanmelding voor de wachtlijst ontvangen met de volgende gegevens:
             </p>
+
+            <ul style={{ color: '#D1D5DB', marginBottom: '24px', paddingLeft: '20px', listStyleType: 'disc' }}>
+              <li><strong>E-mail:</strong> {email}</li>
+              {companyName && <li><strong>Bedrijfsnaam:</strong> {companyName}</li>}
+              {phoneNumber && <li><strong>Telefoonnummer:</strong> {phoneNumber}</li>}
+            </ul>
+
             <p style={{ color: '#D1D5DB', marginBottom: '24px', lineHeight: '1.6' }}>
-              We houden je op de hoogte en sturen je een bericht zodra we live gaan.
+              We nemen zo snel mogelijk contact met je op.
             </p>
 
             {/* Closing */}

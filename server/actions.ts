@@ -28,6 +28,8 @@ const appointmentSchema = z.object({
 
 const waitlistSchema = z.object({
   email: z.string().email({ message: "Voer een geldig e-mailadres in." }),
+  companyName: z.string().optional(),
+  phoneNumber: z.string().min(1, { message: "Telefoonnummer is verplicht." }),
 });
 
 export interface CreateAppointmentResponse {
@@ -109,7 +111,8 @@ export async function createAppointment(
       const { data: emailData, error: emailErrorResponse } = await resend.emails.send({
         from: 'Bolbaas <afspraak@bolbaas.nl>',
         to: [data.contactInfo],
-        bcc: ['thijmendreef@icloud.com'],
+        bcc: ['info@bolbaas.nl'],
+        replyTo: 'info@bolbaas.nl',
         subject: 'Afspraak bevestigd ✓',
         react: AppointmentConfirmationEmail({
           name: data.name,
@@ -170,6 +173,8 @@ export async function addToWaitlist(
 ): Promise<AddToWaitlistResponse> {
   const rawData = {
     email: formData.get('email'),
+    companyName: formData.get('bedrijfsnaam'), // Match the name attribute from the form
+    phoneNumber: formData.get('phoneNumber'),
   };
 
   const validationResult = waitlistSchema.safeParse(rawData);
@@ -182,48 +187,37 @@ export async function addToWaitlist(
     };
   }
 
-  const { email } = validationResult.data;
+  const { email, companyName, phoneNumber } = validationResult.data;
 
   try {
-    // Check if email already exists
-    const existingEntry = await db.query.waitlist.findFirst({
-      where: (waitlist, { eq }) => eq(waitlist.email, email),
+    await db.insert(schema.waitlist).values({ email, companyName, phoneNumber });
+
+    // Send confirmation email
+    await resend.emails.send({
+      from: 'Bolbaas Wachtlijst <wachtlijst@bolbaas.nl>',
+      to: [email],
+      bcc: ['info@bolbaas.nl'],
+      replyTo: 'info@bolbaas.nl',
+      subject: 'Je staat op de wachtlijst 🎉',
+      react: WaitlistConfirmationEmail({ 
+        email, 
+        companyName: companyName ?? undefined,
+        phoneNumber: phoneNumber ?? undefined,
+      }) as React.ReactElement,
     });
 
-    if (existingEntry) {
-      return {
-        success: false,
-        message: "Dit e-mailadres staat al op de wachtlijst.",
-      };
-    }
-
-    await db.insert(schema.waitlist).values({ email });
-
   } catch (dbError) {
-    console.error("Database error adding to waitlist:", dbError);
+    console.error("Database error adding to waitlist or sending email:", dbError);
     return {
       success: false,
       message: "Er is een fout opgetreden. Probeer het later opnieuw.",
     };
   }
 
-  try {
-    await resend.emails.send({
-      from: 'Bolbaas <info@bolbaas.nl>',
-      to: [email],
-      subject: 'Je staat op de wachtlijst voor Bolbaas!',
-      react: WaitlistConfirmationEmail({ email }) as React.ReactElement,
-    });
-  } catch (emailError) {
-    console.error("Error sending waitlist confirmation email:", emailError);
-    // The user is on the list, but the email failed.
-    // We can still return success, but maybe with a different message
-    // For simplicity here, we'll just log it and return full success.
-  }
-
+  revalidatePath('/wachtlijst'); // Revalidate the page to clear the form
   return {
     success: true,
-    message: "Bedankt! We hebben je op de wachtlijst gezet.",
+    message: "Je bent succesvol toegevoegd aan de wachtlijst! We hebben een bevestiging gestuurd naar je e-mail.",
   };
 }
 

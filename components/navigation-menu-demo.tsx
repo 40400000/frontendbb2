@@ -817,7 +817,7 @@ export function NavigationMenuDemo() {
                           )}
                           >Inloggen</Button>
                         </Link>
-                        <Link href="https://app.bolbaas.nl/registreren" passHref>
+                        <Link href="/wachtlijst" passHref>
                           <Button
                           className={cn(
                             navbarMode === 'light' 
@@ -825,7 +825,7 @@ export function NavigationMenuDemo() {
                               : "bg-white text-black hover:bg-gray-200 hover:text-black",
                             "cursor-pointer rounded-lg"
                           )}
-                          >Aanmelden</Button>
+                          >Aanmelden bèta</Button>
                         </Link>
                     </li>
                 </NavigationMenuList>
@@ -872,13 +872,13 @@ export function NavigationMenuDemo() {
                       : "border-gray-700 text-white hover:bg-gray-800 hover:text-white"
                   )} onClick={toggleMobileMenu}>Inloggen</Button>
                 </Link>
-                <Link href="https://app.bolbaas.nl/registreren" passHref>
+                <Link href="/wachtlijst" passHref>
                   <Button className={cn(
                     "w-full cursor-pointer rounded-lg", 
                     navbarMode === 'light' 
                       ? "bg-black text-white hover:bg-gray-800 hover:text-white" 
                       : "bg-white text-black hover:bg-gray-200 hover:text-black"
-                  )} onClick={toggleMobileMenu}>Aanmelden</Button>
+                  )} onClick={toggleMobileMenu}>Aanmelden bèta</Button>
                 </Link>
             </div>
         </div>

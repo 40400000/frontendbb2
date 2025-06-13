@@ -491,7 +491,7 @@ export function AppointmentForm() {
               group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white 
             `}
           >
-            Aanvullende opmerkingen
+            Aanvullende opmerkingen <span className="text-gray-400 ml-0.5">(optioneel)</span>
           </label>
           <textarea
             id={notesId}

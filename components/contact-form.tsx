@@ -248,37 +248,36 @@ export function ContactForm() {
           tabIndex={0}
         >
           <label
-            htmlFor={foundViaId} // This label is for the conceptual field
+            htmlFor={foundViaId}
             className={`
-              absolute left-4 transition-all duration-200 ease-in-out pointer-events-none
+              absolute left-4 pointer-events-none
+              transition-all duration-200 ease-in-out
               ${isFoundViaLabelFloating ? 'top-1.5 text-xs text-white' : 'top-1/2 -translate-y-1/2 text-base text-white'}
               group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white
             `}
           >
-            Hoe heb je Bolbaas gevonden
+            Hoe heb je ons gevonden? <span className="text-gray-400 ml-0.5">(optioneel)</span>
           </label>
-          {/* Hidden select for form submission */}
-          <select 
+          <input
+            id={foundViaId}
+            type="text"
             name="foundVia" 
             value={foundViaValue} 
-            onChange={(e) => setFoundViaValue(e.target.value)} // Keep state in sync if needed, but primarily for form data
+            onChange={(e) => setFoundViaValue(e.target.value)}
             className="hidden" 
             aria-hidden="true"
-          >
-            <option value="" disabled></option>
-            {foundViaOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
-          </select>
+          />
           <div
-            id={foundViaId} // Interactive element for the custom dropdown
+            id={foundViaId}
             onClick={toggleFoundViaDropdown}
-            onFocus={handleFoundViaFocus} // Focus on the interactive part
-            onBlur={handleFoundViaBlur}   // Blur on the interactive part
+            onFocus={handleFoundViaFocus}
+            onBlur={handleFoundViaBlur}
             className="w-full bg-transparent pt-8 pb-4 pl-4 pr-10 text-gray-50 focus:outline-none focus:ring-0 cursor-pointer relative"
             aria-haspopup="listbox"
             aria-expanded={isFoundViaDropdownOpen}
-            tabIndex={0} // Make it focusable
+            tabIndex={0}
           >
-            {selectedOptionLabel || <span className="text-transparent">.</span>} {/* Display selected label or ensure height with transparent char for placeholder effect */}
+            {selectedOptionLabel || <span className="text-transparent">.</span>}
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
               <svg
                 className={`h-5 w-5 text-gray-400 transition-transform duration-200 ease-in-out ${isFoundViaDropdownOpen ? 'transform rotate-180' : ''}`}
@@ -299,14 +298,14 @@ export function ContactForm() {
             <ul
               className="absolute z-10 w-full mt-1 bg-black border border-border rounded-md max-h-60 overflow-auto focus:outline-none"
               role="listbox"
-              aria-labelledby={foundViaId} // Or the label's actual ID if different
+              aria-labelledby={foundViaId}
             >
               {foundViaOptions.map((option) => (
                 <li
                   key={option.value}
                   className={`px-4 py-3 text-sm text-gray-50 hover:bg-gray-700 cursor-pointer ${foundViaValue === option.value ? 'bg-gray-700' : ''}`}
                   onClick={() => handleFoundViaOptionClick(option.value)}
-                  onMouseDown={(e) => e.preventDefault()} // Prevents blur from closing dropdown before click registers
+                  onMouseDown={(e) => e.preventDefault()}
                   role="option"
                   aria-selected={foundViaValue === option.value}
                 >
