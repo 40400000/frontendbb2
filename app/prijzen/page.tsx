@@ -456,7 +456,7 @@ export default function PricingPage() { // Renamed function
                 </h1>
                 {/* Sub-headline */}
                 <p className="text-white text-4xl w-[71.4%] pb-10 sm:pb-0 z-[999] relative">
-                  Een geduceerd tarief voor de eerste leden. Voor altijd.
+                  Een gereduceerd tarief voor de eerste leden. Voor altijd.
                 </p>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
