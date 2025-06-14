@@ -89,7 +89,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-1 min-h-[70vh] sm:min-h-[60vh] lg:max-h-[800px]">
+        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-1 min-h-screen">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
