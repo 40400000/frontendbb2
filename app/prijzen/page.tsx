@@ -442,7 +442,7 @@ export default function PricingPage() { // Renamed function
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[calc(100vh-7.375rem)] flex flex-col justify-center">
+        <section className="relative w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[70vh] sm:min-h-[60vh] lg:max-h-[800px] flex flex-col justify-center">
           
           
            <div className="container px-0">

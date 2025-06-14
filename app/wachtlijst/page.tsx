@@ -81,7 +81,7 @@ export default function WachtlijstPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32 flex-grow">
+        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32 flex-grow min-h-[70vh] sm:min-h-[60vh] lg:max-h-[800px]">
           <div className="container px-0">
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
               <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 w-full">
