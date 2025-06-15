@@ -79,7 +79,7 @@ export default function DataInzichtenPage() { // Renamed function
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 min-h-screen">
+        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 h-[84vh]">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
@@ -141,7 +141,7 @@ export default function DataInzichtenPage() { // Renamed function
 
 
           {/* Moved Bleed Background Section - Inline Styling */}
-          <section data-navbar-mode="light" className="relative w-full py-4 min-h-[100vh] sm:min-h-[150vh]"> {/* Standard section padding */}
+          <section data-navbar-mode="light" className="relative w-full py-4 min-h-[100vh] sm:min-h-[150vh] lg:min-h-[1200px]"> {/* Standard section padding */}
             {/* NEW Light Border Overlay */}
             <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
               {/* This relative container holds the light line elements */}
@@ -159,7 +159,7 @@ export default function DataInzichtenPage() { // Renamed function
             <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2 z-55 bg-white"></div>
 
             {/* NEW Centered Content Area */}
-            <div className="relative z-[70] sm:w-1/2 mx-auto pt-16 text-black"> {/* Centered, 50% width, above background, top padding */}
+            <div className="relative z-[70] sm:w-1/2 mx-auto pt-8 text-black"> {/* Centered, 50% width, above background, top padding */}
             <p className="text-xs text-gray-600">MEER DAN 12 MILJOEN GEANALYSEERDE PRODUCTEN EN KEYWORDS</p> {/* Added number */}
 
               <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-6">Volledig aanpasbaar, precies zoals jij het wilt.</h2>
@@ -168,7 +168,7 @@ export default function DataInzichtenPage() { // Renamed function
             </div>
 
             {/* Insert a full-bleed image under the centered content */}
-            <div className="relative mt-2 mb-12 overflow-visible z-80">
+            <div className="relative -mt-8 mb-12 overflow-visible z-80">
               <div className="absolute inset-x-0 w-[120%] sm:w-screen left-1/2 -translate-x-1/2 sm:max-w-screen-2xl mx-auto"> {/* Changed to max-w-screen-2xl */}
                 <Image
                   src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/aanpasbaar2-hpx3vtg1UHpfX3Bik0kYRSYfuaxElx.png"

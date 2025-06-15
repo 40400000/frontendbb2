@@ -16,7 +16,11 @@ import HighlightedSection from '@/components/highlighted-section'; // Corrected 
 import { BackgroundVideo } from "@/components/ui/background-video"; // Import the background video
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Bolbaas - data en automatisering voor bol partners",
+  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
+};
 export default function HomePage() {
   // Updated features array with category titles, icons, color class, and description
   const featureCategories = [
@@ -61,7 +65,7 @@ export default function HomePage() {
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 min-h-screen">
+        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 h-[84vh]">
           <div className="container px-0">
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
