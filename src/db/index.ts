@@ -5,12 +5,15 @@ import * as schema from './schema';
 
 dotenv.config({ path: '.env.local' }); // Ensure environment variables are loaded
 
-if (!process.env.DATABASE_URL) {
-  throw new Error('DATABASE_URL environment variable is not set.');
+// Vercel Postgres automatically adds the POSTGRES_URL environment variable.
+const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL or POSTGRES_URL environment variable is not set.');
 }
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: connectionString,
   // ssl: {
   //   rejectUnauthorized: false, // Required for some cloud providers like Supabase if not using the pooler
   // },

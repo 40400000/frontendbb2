@@ -3,12 +3,18 @@ import * as dotenv from 'dotenv';
 
 dotenv.config({ path: '.env.local' }); // Or your preferred .env file
 
+const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL or POSTGRES_URL is not set in environment variables.');
+}
+
 export default {
   schema: './src/db/schema.ts', // Path to your schema file
   out: './drizzle/migrations',   // Directory for migrations
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!, // Use environment variable
+    url: connectionString,
     // Or provide individual parameters:
     // host: process.env.DB_HOST!,
     // port: Number(process.env.DB_PORT!),
