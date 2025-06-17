@@ -442,7 +442,7 @@ export default function PricingPage() { // Renamed function
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative w-full pt-8 md:pt-16 lg:pt-24 pb-0 min-h-[70vh] sm:min-h-[60vh] lg:max-h-[800px] flex flex-col justify-center">
+        <section className="relative w-full pt-24 md:pt-32 lg:pt-48 pb-0 min-h-[70vh] sm:min-h-[60vh] lg:max-h-[800px] flex flex-col justify-center">
           
           
            <div className="container px-0">
@@ -579,7 +579,7 @@ export default function PricingPage() { // Renamed function
         </section>
 
         {/* Feature Comparison Section */}
-        <section className="relative z-[40] w-full border-t border-border">
+        <section className="relative z-[40] mt-40 w-full border-t border-border">
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
           {/* Container matching the main layout grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
