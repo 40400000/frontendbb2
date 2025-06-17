@@ -97,7 +97,7 @@ const pricingPlans = [
     planIcon: Rocket,
     iconBgColor: "bg-blue-100",
     iconTextColor: "text-blue-500",
-    redirect: "https://app.bolbaas.nl/registreren"
+    redirect: "https://app.bolbaas.nl/wachtlijst"
   },
   {
     name: "Plus",
@@ -120,7 +120,7 @@ const pricingPlans = [
     planIcon: Crown,
     iconBgColor: "bg-purple-100",
     iconTextColor: "text-purple-500",
-    redirect: "https://app.bolbaas.nl/registreren"
+    redirect: "https://app.bolbaas.nl/wachtlijst"
   },
   {
     name: "Pro",
