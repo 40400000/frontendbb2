@@ -108,48 +108,38 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </div>
 
         {/* Hero Section - Left Aligned & Reduced Height */}
-        <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 h-[84vh]">
+        {/* <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 h-[84vh]">
           <div className="container px-0">
-            {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
-              {/* Text container spanning full width, but capped by max-w */}
               <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 w-full">
-                {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[60%]">
                   Plan een gesprek.
                 </h1>
-                {/* Sub-headline */}
                 <p className="w-[71.4%]">
                   Wij maken graag tijd vrij voor een persoonlijk gesprek. Samen kijken we naar jouw uitdagingen en mogelijkheden.
                 </p>
-                {/* Button 2 - Group for hover effects, relative positioning - MOVED HERE */}
                 <Link href="/prijzen" passHref className="w-full sm:w-1/2">
                   <div className="group relative w-full text-left cursor-pointer mt-10 overflow-hidden border-t border-b border-border mb-20 sm:mb-0 -mr-1.5">
-                    {/* Original Content - Slides up on hover */}
-                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */}
-                      Lidmaatschappen bekijken {/* Updated text */}
-                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
+                      Lidmaatschappen bekijken 
+                      <MdOutlineArrowOutward className="h-5 w-5" /> 
                     </span>
-                    {/* Hover Overlay - Slides in from bottom on hover */}
-                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */}
-                      Lidmaatschappen bekijken {/* Updated text */}
-                      <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
+                      Lidmaatschappen bekijken 
+                      <MdOutlineArrowOutward className="h-5 w-5" /> 
                     </div>
                   </div>
                 </Link>
               </div>
-              {/* Placeholder for right two columns on sm+ */}
               <div className="col-span-1 sm:col-span-2">
-                 <AppointmentForm /> {/* Use the new AppointmentForm component */}
+                 <AppointmentForm /> 
               </div>
               
-              {/* Button Container - This section is now removed as the button is moved above */}
-            </div> { /* End grid wrapper */}
+            </div> 
           </div>
 
-          {/* Absolutely Positioned Image Container */}
 
-        </section>
+        </section> */}
 
         <section className="relative z-[60] w-full pt-16 md:pt-24 lg:pt-32 pb-6 md:pb-8 lg:pb-10 h-[84vh]">
           <div className="container px-0">
