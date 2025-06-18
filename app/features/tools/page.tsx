@@ -399,7 +399,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
 
                 {/* Row 1, Column 1: Left Text (35%) */}
                 <div className="text-white row-span-2"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Onze AI analyseert de best presterende listings voor jouw keywords en creëert automatisch de perfecte productbeschrijving. Gebaseerd op 8 miljoen geanalyseerde producten en zoektermen.</p>
+                  <p className="mb-4 text-base">Onze AI analyseert de best presterende listings voor jouw keywords en creëert automatisch de perfecte productbeschrijving. Gebaseerd op 12 miljoen geanalyseerde producten en zoektermen.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full pt-10">
                     {/* Moved Feature Set 1 into first column */}

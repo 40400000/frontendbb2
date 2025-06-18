@@ -27,7 +27,7 @@ export function MiddleContentSection() {
             <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol-succes.</h2>
             {/* Updated Paragraph text - Smaller font size and white text */}
             <p className="text-base text-foreground">
-              Weet precies welke producten en keywords het beste presteren met onze database van 8 miljoen zoektermen. Concrete inzichten die je direct kunt gebruiken om slimmere beslissingen te maken.
+              Weet precies welke producten en keywords het beste presteren met onze database van 12 miljoen keywords en producten. Concrete inzichten die je direct kunt gebruiken om slimmere beslissingen te maken.
             </p>
             {/* Added separate paragraph for the middle part */}
             <p className="text-base text-foreground">
