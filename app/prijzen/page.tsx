@@ -103,7 +103,7 @@ const pricingPlans = [
     name: "Plus",
     tagline: "Boost je verkoop",
     price: 95,
-    discountedPrice: 45,
+    discountedPrice: 55,
     priceSuffix: "/ maand",
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
