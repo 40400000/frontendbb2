@@ -76,7 +76,7 @@ const toolsCategory: FeatureCategory = {
   items: [
     {
       title: "Keyword database",
-      description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools",
+      description: "Geavanceerde zoekwoordonderzoek en optimalisatie tools",
       icon: "Search",
       href: "/features/keyword-analysis",
       highlight: true,
@@ -134,7 +134,7 @@ const trackingCategory: FeatureCategory = {
     },
     {
       title: "Listing Hijacker tracker",
-      description: "krijg meldingen als jou listing wordt gehijacked",
+      description: "krijg meldingen als jouw listing wordt gehijacked",
       icon: "ShieldAlert",
       href: "/features/listing-hijacker-tracker"
     },

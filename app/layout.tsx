@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: "Bolbaas - data en automatisering voor bol partners",
     template: "%s",
   },
-  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
+  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
   robots: {
     index: true,
     follow: true,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       default: "Bolbaas - data en automatisering voor bol partners",
       template: "%s - Bolbaas",
     },
-    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
+    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
     url: new URL('https://bolbaas.nl'), // Should match metadataBase or be the canonical URL
     siteName: "Bolbaas",
     images: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       default: "Bolbaas - data en automatisering voor bol partners",
       template: "%s - Bolbaas",
     },
-    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
+    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
   },
   manifest: '/manifest.webmanifest',

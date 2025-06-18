@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
+export default function ToolsPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
 
   // Define a top offset for the two rightmost lines. Adjust as needed.
@@ -97,7 +97,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-auto">
-                  Research tools op een nieuwe niveau.
+                  Research tools op een nieuw niveau.
                 </h1>
                 {/* Sub-headline */}
                 <p className="w-[71.4%]">
@@ -192,7 +192,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       <p className="text-sm text-gray-500 mb-1">12 MILJOEN GEANALYSEERDE KEYWORDS</p>
                       <h3 className="font-semibold text-black my-3">Zie kansen met onze keyword database. Analyseer zichtbaarheid</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campange strategieën.</li>
+                        <li>Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campagne strategieën.</li>
                       </ul>
                     </div>
                     <Link href="/contact" passHref>
@@ -210,11 +210,11 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </Link>
 
-                    <div className="mt-85 z-80 relativ pt-10">
-                      <p className="text-sm text-gray-500 mb-1">MILJARDEN DATA PUNTEN</p>
+                    <div className="mt-85 z-80 relative pt-10">
+                      <p className="text-sm text-gray-500 mb-1">MILJARDEN DATAPUNTEN</p>
                       <h3 className="font-semibold text-black my-3">Zie trends, mogelijkheden en kansen van keywords</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Zomer of winter keywords? Tijdelijke hype of langdurige trends? Zie het hele beeld. Bekijk topconcurenten en trends om strategieën te verbeteren.</li>
+                        <li>Zomer of winter keywords? Tijdelijke hype of langdurige trends? Zie het hele beeld. Bekijk topconcurrenten en trends om strategieën te verbeteren.</li>
                       </ul>
                     </div>
                     <Link href="/contact" passHref>
@@ -232,11 +232,11 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </Link>
                     {/* Moved Feature Set 2 into first column */}
-                    <div className="mt-85 z-80 relativ pt-10">
+                    <div className="mt-85 z-80 relative pt-10">
                       <p className="text-sm text-gray-500 mb-1">BIEDING GESCHIEDENIS</p>
                       <h3 className="font-semibold text-black my-3">Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod.</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biediengen, verlaag ACoS en verhoog winst. </li>
+                        <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst. </li>
                       </ul>
                     </div>
                     <Link href="/contact" passHref>

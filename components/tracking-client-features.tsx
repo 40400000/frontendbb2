@@ -70,7 +70,7 @@ export function TrackingClientFeatures() {
                 <p className="flex items-center text-lg md:text-xl font-semibold my-6">
                   Project management
                 </p>
-                <p className="text-sm mt-1 text-white">Breng getrackde producten en keywords onder in verschillende projecten. Maak een project aan voor een product research. Of maak een project aan voor een klant van jouw bol agency.</p>
+                <p className="text-sm mt-1 text-white">Breng getrackte producten en keywords onder in verschillende projecten. Maak een project aan voor een product research. Of maak een project aan voor een klant van jouw bol agency.</p>
               </div>
             </div>
 
@@ -100,7 +100,7 @@ export function TrackingClientFeatures() {
                  Bieding geschiedenis
                </p>
                <p className="text-sm mt-1 text-white">
-               Bied gebasseerd op data, niet op het laatste bod. Bespaar op advertentiekosten.
+               Bied gebaseerd op data, niet op het laatste bod. Bespaar op advertentiekosten.
                
                </p>
              </div>

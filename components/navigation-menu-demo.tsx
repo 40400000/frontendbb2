@@ -111,7 +111,7 @@ const featureCategories: {
       },
       {
         title: "Bestellingen",
-        description: "Gedetailleerde analyse van je productprestaties",
+        description: "Gedetailleerde analyse van je bestellingen",
         icon: "LineChart",
         href: "/features/store-prestaties#bestellingen"
       },
@@ -130,7 +130,7 @@ const featureCategories: {
     items: [
       {
         title: "Keyword database",
-        description: "Geavanceerde keyword onderzoek op basis van meer dan 12 miljoen keywords en producten",
+        description: "Geavanceerde keywordonderzoek op basis van meer dan 12 miljoen keywords en producten",
         icon: "Search",
         href: "/features/tools#bolbaas-database",
         highlight: true,

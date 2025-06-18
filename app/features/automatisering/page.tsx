@@ -169,7 +169,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
-                    <div className="sm:mt-30 z-80 relativ pt-10">
+                    <div className="sm:mt-30 z-80 relative pt-10">
                       <p className="text-sm text-gray-500 mb-1">BTW FACTUREN</p>
                       <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
@@ -191,7 +191,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </Link>
 
-                    <div id="email-campagnes" className="scroll-mt-40 mt-85 z-80 relativ pt-10">
+                    <div id="email-campagnes" className="scroll-mt-40 mt-85 z-80 relative pt-10">
                       <p className="text-sm text-gray-500 mb-1">E-MAIL CAMPAGNES</p>
                       <h3 className="font-semibold text-black my-3">Verhoog reviews en voorkom klantvragen met e-mail campagnes</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">

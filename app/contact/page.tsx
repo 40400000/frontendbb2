@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AutomatiseringPage() { // Rename function if needed, e.g., ToolsPage
+export default function ContactPage() { // Rename function if needed, e.g., ToolsPage
   // Removed featureCategories array
 
   // Define a top offset for the two rightmost lines. Adjust as needed.

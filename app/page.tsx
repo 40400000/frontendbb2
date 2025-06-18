@@ -19,7 +19,7 @@ import { MiddleContentSection } from "@/components/middle-content-section";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bolbaas - data en automatisering voor bol partners",
-  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Vergaande data over miljoenen keywords en producten, miljarden datapunten.",
+  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
 };
 export default function HomePage() {
   // Updated features array with category titles, icons, color class, and description

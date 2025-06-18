@@ -103,7 +103,7 @@ const pricingPlans = [
     name: "Plus",
     tagline: "Boost je verkoop",
     price: 95,
-    discountedPrice: 65,
+    discountedPrice: 45,
     priceSuffix: "/ maand",
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
@@ -126,7 +126,7 @@ const pricingPlans = [
     name: "Pro",
     tagline: "Domineer de markt",
     price: 450,
-    discountedPrice: 295,
+    discountedPrice: 245,
     priceSuffix: "/ maand",
     description: "Voor bol ondernemers en agencies die willen excelleren.",
     iconFeatures: [
@@ -201,7 +201,7 @@ const featuresData: FeatureComparisonItem[] = [
 const dataToolsFeatures: FeatureComparisonItem[] = [
   {
     name: "Keyword database",
-    description: "Geavanceerde zoekwoord onderzoek en optimalisatie tools voor perfecte organisch en geadverteerde rankings.",
+    description: "Geavanceerde zoekwoordonderzoek en optimalisatie tools voor perfecte organische en geadverteerde rankings.",
     hobby: "✕",
     pro: "✓",
     enterprise: "✓"
@@ -229,7 +229,7 @@ const dataToolsFeatures: FeatureComparisonItem[] = [
   },
   {
     name: "AI gestuurde biedingen",
-    description: "Bied automatisch op keywords met AI, gebaseerd op miljoenen historische data punten",
+    description: "Bied automatisch op keywords met AI, gebaseerd op miljoenen historische datapunten",
     hobby: "-",
     pro: "-",
     enterprise: "✓",

@@ -38,7 +38,7 @@ const topicDetails: Record<string, TopicContent> = {
   },
   Tracking: {
     title: "Tracking",
-    description: "Volg uw producten en keywords nauwkeurig.",
+    description: "Volg je producten en keywords nauwkeurig.",
     images: [
       "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking-QnWkZ19t2pN2FKO0Lr7pl3237LjxMZ.png",
     ],

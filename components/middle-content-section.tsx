@@ -24,7 +24,7 @@ export function MiddleContentSection() {
           {/* Content spanning middle two columns (Columns 2 & 3) - Added margin bottom */}
           <div className="sm:col-start-2 sm:col-span-2 mb-8 space-y-6"> {/* Added mb-8 and space-y-6 */}
             {/* Updated Headline with larger font size */}
-            <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol succes.</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold">Grip op je bol-succes.</h2>
             {/* Updated Paragraph text - Smaller font size and white text */}
             <p className="text-base text-foreground">
               Weet precies welke producten en keywords het beste presteren met onze database van 8 miljoen zoektermen. Concrete inzichten die je direct kunt gebruiken om slimmere beslissingen te maken.

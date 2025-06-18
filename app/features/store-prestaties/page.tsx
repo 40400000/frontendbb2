@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DataInzichtenPage() { // Renamed function
+export default function StorePrestatiesPage() { // Renamed function
   // Define a top offset for the two rightmost lines. Adjust as needed.
   const innerLinesTopOffset = "top-0"; // Example: 384px - Offset remains
 

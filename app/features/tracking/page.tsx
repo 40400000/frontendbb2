@@ -24,6 +24,28 @@ import { MiddleContentSection } from "@/components/middle-content-section";
 import { DataInzichtenClientFeatures } from "@/components/data-inzichten-client-features"; // Import the new client component
 import { TrackingClientFeatures } from "@/components/tracking-client-features";
 
+export const metadata: Metadata = {
+  title: "Tracking - Bolbaas",
+  description: "Volg je producten en die van concurrenten. Krijg inzicht in rankings, keywords en productprestaties.",
+  openGraph: {
+    title: "Tracking - Bolbaas",
+    description: "Volg je producten en die van concurrenten. Krijg inzicht in rankings, keywords en productprestaties.",
+    images: [
+      {
+        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bolbaas Tracking Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    title: "Tracking - Bolbaas",
+    description: "Volg je producten en die van concurrenten met Bolbaas.",
+    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+  },
+};
+
 export default function TrackingPage() { // Renamed function
   // Define a top offset for the two rightmost lines. Adjust as needed.
   const innerLinesTopOffset = "top-0"; // Example: 384px - Offset remains
@@ -170,7 +192,7 @@ export default function TrackingPage() { // Renamed function
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
-                    <div className="sm:mt-6 z-80 relativ pt-10">
+                    <div className="sm:mt-6 z-80 relative pt-10">
                       <p className="text-sm text-gray-500 mb-1">PRODUCT RANKINGS</p>
                       <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
@@ -194,10 +216,10 @@ export default function TrackingPage() { // Renamed function
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-[25rem] sm:mt-[42rem] z-80 relative pt-10">
                       <div className="absolute top-[35rem] sm:top-[40rem] left-0 w-full z-80 pt-10">
-                        <p className="text-sm text-gray-500 mb-1">DATA INZICHT</p>
+                        <p className="text-sm text-gray-500 mb-1">DATA INZICHTEN</p>
                         <h3 className="font-semibold text-black my-3">Uitgebreide ranking inzichten</h3>
                         <ul className="space-y-2 text-sm text-black pr-3">
-                          <li>Zie het effect van verandering van listings, en andere factoren op je rankings.</li>
+                          <li>Zie het effect van veranderingen van listings, en andere factoren op je rankings.</li>
                         </ul>
                       </div>
                     </div>
@@ -246,31 +268,11 @@ export default function TrackingPage() { // Renamed function
               </div>
               {/* Precision Label - Replaced with Feature 02 content */}
               <div className="absolute sm:left-[25%] top-[80%] w-[50%] sm:w-[25%] z-80 text-left text-black"> {/* Adjusted classes: removed flex, items-center, text-4xl, font-bold. Added text-left */}
-                <p className="text-sm text-gray-600 mb-1">GEAVANCEERD ZOEK ALGORITME</p>
-                {/* Added flex container and Sparkles icon */}
-                <div className="flex items-center my-3">
-                  <Sparkles className="mr-2 h-5 w-5 text-purple-500 stroke-1.25" /> {/* Added icon, color, size, stroke, margin */}
-                  <h3 className="font-semibold text-black">Precision tracking</h3> {/* Removed my-3 from h3 */} 
-                </div>
-                <ul className="space-y-2 text-sm text-black pr-0">
-                  <li>Elke dag, alle rankings voor alle keywords waar het product voor rankt. Uitgebreid rapport. </li>
-                  <li>Goed om <b>nauwkeurig veranderingen</b> in rankings bij te houden.</li>
-                  <li>Dagelijks meer dan 1 miljoen geanalyseerde keywords.</li>
-                </ul>
+                <p className="text-sm text-gray-600 mb-1">GEAVANCEERD ZOEKALGORITME</p>
               </div>
               {/* Dynamic Label - Replaced with Feature 02 content */}
               <div className="absolute left-[50%] top-[80%] w-[50%] sm:w-[25%] z-80 text-left text-black"> {/* Adjusted classes: removed flex, items-center, text-4xl, font-bold. Added text-left */}
                 <p className="text-sm text-gray-600 mb-1">DYNAMISCHE DATA ANALYSE</p>
-                {/* Added flex container and Sparkles icon */}
-                <div className="flex items-center my-3">
-                  <Sparkle className="mr-2 h-5 w-5 text-green-500  stroke-1.25" /> {/* Added icon, color, size, stroke, margin */}
-                  <h3 className="font-semibold text-black">Dynamic tracking</h3> {/* Removed my-3 from h3 */} 
-                </div>
-                <ul className="space-y-2 text-sm text-black pr-0">
-                  <li>Elke dag, rankings die het meest relevant zijn op die dag. Dynamisch rapport. </li>
-                    <li>   Goed om een <b>algemeen beeld</b> te krijgen van de ranking van een product. </li>
-                    <li>   Alle producten van Bolbaas worden dagelijks geanalyseerd.</li>
-                </ul>
               </div>
               {/* End dynamic label */}
               <div className="absolute top-[115%] sm:top-[105%] left-1/2 transform -translate-x-1/2 w-[100%] sm:w-[40%] h-auto z-70 pointer-events-none">
@@ -312,7 +314,7 @@ export default function TrackingPage() { // Renamed function
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[82%] sm:top-[86%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
               <p className="text-base">
-                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
+                Bolbaas combineert verschillende databronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
               </p>
             </div>
 
@@ -463,7 +465,7 @@ export default function TrackingPage() { // Renamed function
           {/* Row 1, Column 1: Left Text */}
           <div className="text-white row-span-2 relative">
             <p className="mb-4 text-base">
-              Bekijk van meer de omzet van meer dan 4 miljoen bol producten. Spot kansen in de markt.
+              Bekijk de omzet van meer dan 4 miljoen bol producten. Spot kansen in de markt.
             </p>
           </div>
 
