@@ -312,7 +312,7 @@ export default function TrackingPage() { // Renamed function
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[82%] sm:top-[86%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
               <p className="text-base">
-                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals poisson verdelingsmodellen en AI. Meer dan simpele ranking tools.
+                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals AI-modellen. Meer dan simpele ranking tools.
               </p>
             </div>
 
