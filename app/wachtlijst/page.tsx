@@ -8,10 +8,10 @@ import { MiddleContentSection } from "@/components/middle-content-section";
 
 export const metadata: Metadata = {
   title: "Wachtlijst - Bolbaas",
-  description: "Schrijf je in voor de beta wachtlijst en krijg als eerste toegang tot nieuwe features.",
+  description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
   openGraph: {
     title: "Wachtlijst - Bolbaas",
-    description: "Schrijf je in voor de beta wachtlijst en krijg als eerste toegang tot nieuwe features.",
+    description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Bolbaas Wachtlijst",
-    description: "Schrijf je in voor de beta wachtlijst en krijg als eerste toegang tot nieuwe features.",
+    description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };
@@ -89,7 +89,7 @@ export default function WachtlijstPage() {
                   Join de bèta van Bolbaas.
                 </h1>
                 <p className="w-[71.4%]">
-                  Krijg als eerste toegang tot ons platform en krijg krachtige tools die je concurrenten niet hebben.
+                  Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.
                 </p>
               </div>
               <div className="col-span-1 sm:col-span-2">

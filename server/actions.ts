@@ -10,7 +10,7 @@ import { WaitlistConfirmationEmail } from '../emails/waitlist-confirmation-email
 // Zod schema for server-side validation
 const appointmentSchema = z.object({
   name: z.string().min(1, { message: "Naam is verplicht." }),
-  contactInfo: z.string().min(1, { message: "E-mail of telefoonnummer is verplicht." })
+  contactInfo: z.string().min(1, { message: "E-mail is verplicht." })
     .refine(value => {
       const emailCheck = z.string().email().safeParse(value);
       if (emailCheck.success) return true;

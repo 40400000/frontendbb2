@@ -188,7 +188,7 @@ export function ContactForm() {
               group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white
             `}
           >
-            E-mail of telefoonnummer <span className="text-gray-400 ml-0.5">*</span>
+            E-mail<span className="text-gray-400 ml-0.5">*</span>
           </label>
           <input
             id={emailId}
