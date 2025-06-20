@@ -399,7 +399,7 @@ const proExclusiveFeatures: FeatureComparisonItem[] = [
 const customSolutionsFeatures: FeatureComparisonItem[] = [
   {
     name: "Aangepaste oplossingen",
-    description: "We bouwen de specifieke oplossingen die jij nodig hebt.",
+    description: "",
     hobby: "-",
     pro: "-",
     enterprise: "✓"
