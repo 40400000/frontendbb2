@@ -399,7 +399,7 @@ const proExclusiveFeatures: FeatureComparisonItem[] = [
 const customSolutionsFeatures: FeatureComparisonItem[] = [
   {
     name: "Aangepaste oplossingen",
-    description: "Wij bouwen specifieke oplossingen die jij nodig hebt.",
+    description: "We bouwen de specifieke oplossingen die jij nodig hebt.",
     hobby: "-",
     pro: "-",
     enterprise: "✓"
@@ -915,7 +915,7 @@ export default function PricingPage() { // Renamed function
                     <Sparkle className="h-5 w-5 text-foreground" />
                     <h3 className="text-lg font-semibold">Aangepaste oplossingen</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1">Wij bouwen specifieke oplossingen die jij nodig hebt.</p>
+                  <p className="text-sm text-muted-foreground mt-1">We bouwen de specifieke oplossingen die jij nodig hebt.</p>
                 </div>
               </div>
               <div className="divide-y divide-border">
@@ -965,9 +965,9 @@ export default function PricingPage() { // Renamed function
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Premium Service</p>
                   <div className="flex items-center gap-2">
                     <Sparkle className="h-5 w-5 text-foreground" /> {/* Using Sparkle icon */}
-                    <h3 className="text-lg font-semibold">Exclusieve Pro voordelen</h3>
+                    <h3 className="text-lg font-semibold">Pro voordelen</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1">Extra ondersteuning en begeleiding voor Pro leden.</p>
+                  <p className="text-sm text-muted-foreground mt-1">Extra ondersteuning en begeleiding.</p>
                 </div>
               </div>
               <div className="divide-y divide-border">
