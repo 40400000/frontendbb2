@@ -395,6 +395,17 @@ const proExclusiveFeatures: FeatureComparisonItem[] = [
   },
 ];
 
+// Define custom solutions features
+const customSolutionsFeatures: FeatureComparisonItem[] = [
+  {
+    name: "Aangepaste oplossingen",
+    description: "Wij bouwen specifieke oplossingen die jij nodig hebt.",
+    hobby: "-",
+    pro: "-",
+    enterprise: "✓"
+  }
+];
+
 const allFeaturesData = [...featuresData, ...dataToolsFeatures, ...insightFeatures, ...automationFeatures];
 
 // Helper to render check, cross, or text
@@ -896,6 +907,58 @@ export default function PricingPage() { // Renamed function
                 ))}
               </div>
 
+              {/* --- Custom Solutions Section --- */}
+              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
+                <div className="p-4 col-span-1">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Maatwerk</p>
+                  <div className="flex items-center gap-2">
+                    <Sparkle className="h-5 w-5 text-foreground" />
+                    <h3 className="text-lg font-semibold">Aangepaste oplossingen</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-1">Wij bouwen specifieke oplossingen die jij nodig hebt.</p>
+                </div>
+              </div>
+              <div className="divide-y divide-border">
+                {customSolutionsFeatures.map((feature) => (
+                  <div
+                    key={feature.name}
+                    className={cn(
+                      "grid grid-cols-2 sm:grid-cols-4",
+                      "bg-gradient-to-r from-indigo-50 to-transparent dark:from-indigo-900/20 border-l-2 border-l-indigo-500 -ml-px"
+                    )}
+                  >
+                    <div className="p-4 col-span-1 sm:col-span-1">
+                      <p className="font-medium flex items-center gap-1">
+                        {feature.name}
+                        <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">{feature.description}</p>
+                    </div>
+                    {/* Mobile view: Stacked plans */}
+                    <div className="p-4 col-span-1 sm:hidden flex flex-col items-start justify-center space-y-1 text-left w-full">
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Start:</span>{renderFeatureValue(feature.hobby)}</div>
+                      <div><span className="font-medium text-xs text-muted-foreground mr-1">Plus:</span>{renderFeatureValue(feature.pro)}</div>
+                      <div>
+                        <span className={cn("font-medium text-xs text-muted-foreground mr-1", feature.enterprise === "✓" ? "font-semibold text-foreground" : "")}>Pro:</span>
+                        <span className={cn(feature.enterprise === "✓" ? "font-semibold text-green-500" : "")}>{renderFeatureValue(feature.enterprise)}</span>
+                      </div>
+                    </div>
+                    {/* Desktop view: Hobby Column */}
+                    <div className="hidden sm:flex p-4 text-center col-span-1 sm:col-span-1 items-center justify-center">
+                       {renderFeatureValue(feature.hobby)}
+                    </div>
+                    {/* Plus Column (uses feature.pro) */}
+                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center">
+                      {renderFeatureValue(feature.pro)}
+                    </div>
+                    {/* Pro Column (uses feature.enterprise) - Kept font-semibold for desktop */}
+                    <div className="hidden sm:flex p-4 text-center col-span-1 items-center justify-center font-semibold">
+                      {renderFeatureValue(feature.enterprise)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
               {/* --- Premium Service Section (Pro Exclusives) --- */}
               <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
                 <div className="p-4 col-span-1">
@@ -914,7 +977,6 @@ export default function PricingPage() { // Renamed function
                     className={cn(
                       "grid grid-cols-2 sm:grid-cols-4",
                       // Apply distinct styling for this section
-                      "bg-gradient-to-r from-indigo-50 to-transparent dark:from-indigo-900/20 border-l-2 border-l-indigo-500 -ml-px"
                     )}
                   >
                     <div className="p-4 col-span-1 sm:col-span-1">

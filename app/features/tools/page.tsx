@@ -301,7 +301,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
               <div className="absolute top-[23%] sm:top-[0%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/database_2-tpY5QwEZ6u13BvTDUraKrhQjnwtMUj.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/database_2-tpY5QwEZ6u13BvTDUraKrhQjnwtMUj-H8r9D7W4P0UsdN1qL5BLUrV796fc2w.png"
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
