@@ -188,12 +188,13 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2">
               {/* Top-Left */}
               <div className="bg-black text-white p-8 border-l border-t border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
                     alt="Abstract grid pattern"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">01</p>
@@ -207,12 +208,13 @@ export default function HomePage() {
               </div>
               {/* Top-Right */}
               <div className="bg-black text-white p-8 border-t border-r border-l border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
                     alt="Abstract geometric pattern"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">02</p>
@@ -226,12 +228,13 @@ export default function HomePage() {
               </div>
               {/* Bottom-Left */}
               <div className="bg-black text-white p-8 border-t border-l border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square4-3.png"
                     alt="Abstract wireframe pattern"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">03</p>
@@ -245,12 +248,13 @@ export default function HomePage() {
               </div>
               {/* Bottom-Right */}
               <div className="bg-black text-white p-8 border-t border-r border-l border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square3-3.png"
                     alt="Abstract circular pattern"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">04</p>
@@ -264,12 +268,13 @@ export default function HomePage() {
               </div>
               {/* New Row: Item 5 */}
               <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
                     alt="Placeholder 5"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">05</p>
@@ -283,12 +288,13 @@ export default function HomePage() {
               </div>
               {/* New Row: Item 6 */}
               <div className="bg-black text-white p-8 border-t border-r border-b border-l border-border min-h-[35rem] flex flex-col">
-                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
                     alt="Placeholder 6"
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">06</p>
