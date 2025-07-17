@@ -233,7 +233,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                     </Link>
                     {/* Moved Feature Set 2 into first column */}
                     <div className="mt-85 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">BIEDING GESCHIEDENIS</p>
+                      <p className="text-sm text-gray-500 mb-1">CPC TRACKER</p>
                       <h3 className="font-semibold text-black my-3">Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod.</h3>
                       <ul className="space-y-2 text-sm text-black pr-3">
                         <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst. </li>

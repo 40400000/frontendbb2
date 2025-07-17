@@ -181,7 +181,7 @@ export default function HomePage() {
             {/* Section Heading */}
             <div className="text-center text-white mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
-              <p className="max-w-3xl mx-auto text-gray-300">Ontdek welke producten en keywords écht werken met onze database van 12 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid. Zie je groei in realtime dashboards, laat Bolbaas je facturen en BTW regelen, en volg elke bestelling. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
+              <p className="max-w-3xl mx-auto text-foreground">Ontdek welke producten en keywords écht werken met onze <span className="font-extrabold">realtime AI database</span> van miljoen zoektermen en producten. Onze <span className="font-extrabold">Ranking AI</span> optimaliseert je listings automatisch voor maximale zichtbaarheid. Zie je groei in <span className="font-extrabold">custom dashboards</span>, laat Bolbaas <span className="font-extrabold">automatisch facturen, e-mails en BTW</span> regelen, en volg elke bestelling met de <span className="font-extrabold">levering tracker</span>. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
             </div>
             
             {/* 2x2 Grid */}
@@ -203,14 +203,16 @@ export default function HomePage() {
                   <li>Ontdek welke producten en keywords succesvol zijn met miljarden realtime datapunten.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/tools#bolbaas-database">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
                 </div>
               </div>
               {/* Top-Right */}
               <div className="bg-black text-white p-8 border-t border-r border-l border-border min-h-[35rem] flex flex-col">
                 <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-3.png"
                     alt="Abstract geometric pattern"
                     width={1200}
                     height={640}
@@ -223,14 +225,16 @@ export default function HomePage() {
                   <li>Laat facturen & BTW berekening automatisch lopen terwijl jij groeit.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/automatisering#store-automatisering">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
                 </div>
               </div>
               {/* Bottom-Left */}
               <div className="bg-black text-white p-8 border-t border-l border-border min-h-[35rem] flex flex-col">
                 <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square4-3.png"
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square4-5.png"
                     alt="Abstract wireframe pattern"
                     width={1200}
                     height={640}
@@ -243,7 +247,9 @@ export default function HomePage() {
                   <li>Stuur e-mails die klanten echt openen en direct reviews opleveren.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/automatisering#email-campagnes">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
                 </div>
               </div>
               {/* Bottom-Right */}
@@ -263,47 +269,119 @@ export default function HomePage() {
                   <li>Maak dashboards precies zoals jij ze wilt. Oneindig aanpasbaar.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/store-prestaties#custom-dashboards">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
                 </div>
               </div>
               {/* New Row: Item 5 */}
               <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
                 <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
-                    alt="Placeholder 5"
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square5.png"
+                    alt="CPC tracker"
                     width={1200}
                     height={640}
                     className="object-contain max-w-full max-h-full"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">05</p>
-                <h3 className="font-semibold text-white my-3">Nieuwe Functie 1</h3>
+                <h3 className="font-semibold text-white my-3">CPC tracker</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>Beschrijving voor nieuwe functie 1.</li>
+                  <li>Bekijk de CPC van keywords en optimaliseer campagnes. Verlaag ACoS en verhoog je ROI.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/tools#cpc-tracker">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
                 </div>
               </div>
               {/* New Row: Item 6 */}
               <div className="bg-black text-white p-8 border-t border-r border-b border-l border-border min-h-[35rem] flex flex-col">
                 <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square6-4.png"
                     alt="Placeholder 6"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
+                    quality={95}
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">06</p>
+                <h3 className="font-semibold text-white my-3">Bestellingen tracker</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Volg elke bestelling, zie de leveringsstatus en direct welke winst het je oplevert.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Link href="/features/store-prestaties#bestellingen">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
+                </div>
+              </div>
+              {/* New Row: Item 7 */}
+              <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square7.png"
+                    alt="Placeholder 7"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full"
+                    quality={100}
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">07</p>
+                <h3 className="font-semibold text-white my-3">Track producten</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Volg producten op de voet. Optimaliseer zichtbaarheid met A/B testen, en meer. </li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Link href="/features/tracking#tracking-options">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
+                </div>
+              </div>
+              {/* New Row: Item 8 */}
+              <div className="bg-black text-white p-8 border-t border-r border-b border-l border-border min-h-[35rem] flex flex-col">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square8-3.png"
+                    alt="Placeholder 8"
                     width={1200}
                     height={640}
                     className="object-contain max-w-full max-h-full"
                   />
                 </div>
-                <p className="text-sm text-gray-400 mb-1">06</p>
-                <h3 className="font-semibold text-white my-3">Nieuwe Functie 2</h3>
+                <p className="text-sm text-gray-400 mb-1">08</p>
+                <h3 className="font-semibold text-white my-3">Ranking AI</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>Beschrijving voor nieuwe functie 2.</li>
+                  <li>Perfectioneer je listings met de Bolbaas <span className="font-extrabold">Ranking AI</span>. Optimaliseer voor organische zichtbaarheid.</li>
                 </ul>
                 <div className="mt-auto pt-4">
-                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                  <Link href="/features/tools#ranking-ai">
+                    <Button variant="link" className="text-white p-0 cursor-pointer">Meer lezen -&gt;</Button>
+                  </Link>
+                </div>
+              </div>
+              {/* New Row: Item 9 */}
+              <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
+                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
+                    alt="Omzet research placeholder"
+                    width={1200}
+                    height={640}
+                    className="object-contain max-w-full max-h-full opacity-70 blur-sm grayscale brightness-50"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">09</p>
+                <h3 className="font-semibold text-white my-3">Omzet research op basis van AI en algoritmes</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Coming soon</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <span className="text-gray-500 text-sm">Binnenkort beschikbaar</span>
                 </div>
               </div>
             </div> {/* End grid */}
@@ -324,8 +402,8 @@ export default function HomePage() {
               {/* Row 1, Column 1: Left Text (35%) */}
               <div className="text-white row-span-2"> {/* Make this span 2 rows */}
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
-                <p className="mb-4 text-base">Ontdek welke producten en keywords écht werken met onze database van 12 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid.</p>
-                <p className="text-base">Zie je groei in realtime dashboards, laat Bolbaas je facturen en BTW regelen, en volg elke bestelling. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
+                <p className="mb-4 text-foreground">Ontdek welke producten en keywords écht werken met onze <span className="font-extrabold">realtime AI database</span> van miljoen zoektermen en producten. Onze <span className="font-extrabold">Ranking AI</span> optimaliseert je listings automatisch voor maximale zichtbaarheid.</p>
+                <p className="text-foreground">Zie je groei in <span className="font-extrabold">custom dashboards</span>, laat Bolbaas <span className="font-extrabold">automatisch facturen, e-mails en BTW</span> regelen, en volg elke bestelling met <span className="font-extrabold">levering tracker</span>. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
               </div>
 
               {/* Row 1, Column 2: Empty (15%) */}
