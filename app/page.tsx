@@ -115,9 +115,9 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-[64%] sm:top-16 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/2 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
+          <div className="absolute top-[64%] sm:top-36 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/5 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
             <Image
-              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/hero_imgs-hujfpHyHKSEgnBNLz6c4tZ1Yw2Ggsx.png"
+              src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/hero25.png"
               alt="Hero Image"
               width={800}
               height={600}
@@ -165,15 +165,147 @@ export default function HomePage() {
         <section className="w-full pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
             <div className="container text-center relative z-[70]">
               <blockquote className="max-w-4xl mx-auto">
-                <p className="text-3xl tracking-tight sm:text-5xl md:text-4xl font-bold text-gray-900 dark:text-gray-50">
-                  Focus op groei en ondernemen <br /> door data en automatisering.
-                </p>
+                
               </blockquote>
             </div>
           </section>
 
         {/* Moved Bleed Background Section - Inline Styling */}
+        
         <section className="relative w-full py-16 md:py-24 lg:py-32"> {/* Standard section padding */}
+          {/* Full-width background element */}
+          <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+
+          {/* Container centers content normally ON TOP of the background */}
+          <div className="container relative z-[70]"> {/* Using container for centering */}
+            {/* Section Heading */}
+            <div className="text-center text-white mb-12">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
+              <p className="max-w-3xl mx-auto text-gray-300">Ontdek welke producten en keywords écht werken met onze database van 12 miljoen zoektermen. Onze ranking AI optimaliseert je listings automatisch voor maximale zichtbaarheid. Zie je groei in realtime dashboards, laat Bolbaas je facturen en BTW regelen, en volg elke bestelling. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
+            </div>
+            
+            {/* 2x2 Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {/* Top-Left */}
+              <div className="bg-black text-white p-8 border-l border-t border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
+                    alt="Abstract grid pattern"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">01</p>
+                <h3 className="font-semibold text-white my-3">De grootste database voor bol</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Ontdek welke producten en keywords succesvol zijn met miljarden realtime datapunten.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+              {/* Top-Right */}
+              <div className="bg-black text-white p-8 border-t border-r border-l border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
+                    alt="Abstract geometric pattern"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">02</p>
+                <h3 className="font-semibold text-white my-3">Automatische facturen</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Laat facturen & BTW berekening automatisch lopen terwijl jij groeit.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+              {/* Bottom-Left */}
+              <div className="bg-black text-white p-8 border-t border-l border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square4-3.png"
+                    alt="Abstract wireframe pattern"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">03</p>
+                <h3 className="font-semibold text-white my-3">Magische e-mails</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Stuur e-mails die klanten echt openen en direct reviews opleveren.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+              {/* Bottom-Right */}
+              <div className="bg-black text-white p-8 border-t border-r border-l border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square3-3.png"
+                    alt="Abstract circular pattern"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">04</p>
+                <h3 className="font-semibold text-white my-3">Custom dashboards</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Maak dashboards precies zoals jij ze wilt. Oneindig aanpasbaar.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+              {/* New Row: Item 5 */}
+              <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
+                    alt="Placeholder 5"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">05</p>
+                <h3 className="font-semibold text-white my-3">Nieuwe Functie 1</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Beschrijving voor nieuwe functie 1.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+              {/* New Row: Item 6 */}
+              <div className="bg-black text-white p-8 border-t border-r border-b border-l border-border min-h-[35rem] flex flex-col">
+                <div className="relative w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square2-2.png"
+                    alt="Placeholder 6"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mb-1">06</p>
+                <h3 className="font-semibold text-white my-3">Nieuwe Functie 2</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>Beschrijving voor nieuwe functie 2.</li>
+                </ul>
+                <div className="mt-auto pt-4">
+                  <Button variant="link" className="text-white p-0">Meer lezen -&gt;</Button>
+                </div>
+              </div>
+            </div> {/* End grid */}
+          </div> {/* End container */}
+        </section> {/* End bleed section */}
+        
+        
+        <section className="relative w-full py-16 md:py-24 lg:py-32 hidden"> {/* Standard section padding */}
           {/* Full-width background element */}
           <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
 
@@ -198,7 +330,7 @@ export default function HomePage() {
                 <p className="text-sm text-gray-500 mb-1">01</p> {/* Added number */}
                 <h3 className="font-semibold text-white my-3">Vind wat verkoopt</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white pr-4">
-                  <li>Ontdek welke producten en keywords succesvol zijn met 12 miljoen datapunten.</li>
+                  <li>Ontdek welke producten en keywords succesvol zijn met miljarden realtime datapunten.</li>
                 </ul>
                 {/* REMOVED New Section 1 from here */}
               </div>
@@ -206,9 +338,9 @@ export default function HomePage() {
               {/* Row 1, Column 4: Feature Set 2 (25%) */}
               <div className="text-gray-300 pr-4 md:pr-6 hidden sm:block"> {/* This is now implicitly row 1, col 4 */}
                 <p className="text-sm text-gray-500 mb-1">02</p> {/* Added number */}
-                <h3 className="font-semibold text-white my-3">Blijf altijd op de hoogte</h3> {/* Changed mb-3 to my-3 */}
+                <h3 className="font-semibold text-white my-3">Automatische facturen</h3> {/* Changed mb-3 to my-3 */}
                 <ul className="space-y-2 text-sm text-white">
-                  <li>Volg je rankings en prestaties automatisch, zodat je altijd voorop loopt.</li>
+                  <li>Laat facturen BTW automatisch lopen terwijl jij groeit.</li>
                 </ul>
                 {/* REMOVED New Section 2 from here */}
               </div>

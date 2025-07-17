@@ -80,7 +80,7 @@ const pricingPlans = [
     name: "Start",
     tagline: "Zet je eerste stappen",
     price: 29,
-    discountedPrice: 17,
+    discountedPrice: 15,
     priceSuffix: "/ maand",
     description: "Voor ambitieuze beginners die hun bol avontuur willen lanceren.",
     iconFeatures: [
@@ -103,7 +103,7 @@ const pricingPlans = [
     name: "Plus",
     tagline: "Boost je verkoop",
     price: 95,
-    discountedPrice: 65,
+    discountedPrice: 39,
     priceSuffix: "/ maand",
     description: "De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.",
     iconFeatures: [
@@ -126,7 +126,7 @@ const pricingPlans = [
     name: "Pro",
     tagline: "Domineer de markt",
     price: 450,
-    discountedPrice: 245,
+    discountedPrice: 199,
     priceSuffix: "/ maand",
     description: "Voor bol ondernemers en agencies die willen excelleren.",
     iconFeatures: [
