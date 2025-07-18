@@ -40,6 +40,8 @@ import {
   Reply, // Added for Auto-reply invoice requests
   TrendingDown, // Added for ACoS reduction
   TrendingUp, // Added for Profit increase
+  ChevronDown, // Added for expandable sections
+  ChevronUp, // Added for expandable sections
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 import { IoStarOutline } from "react-icons/io5"; // Added icon import
@@ -50,6 +52,7 @@ import { InteractiveTopicSection } from "@/components/interactive-topic-section"
 import { MiddleContentSection } from "@/components/middle-content-section";
 import { DataInzichtenClientFeatures } from "@/components/data-inzichten-client-features"; // Import the new client component
 import { TrackingClientFeatures } from "@/components/tracking-client-features";
+import { ExpandableSection } from "@/components/expandable-feature-sections";
 import { cn } from "@/lib/utils"; // Added cn import
 import type { Metadata } from "next";
 
@@ -92,12 +95,12 @@ const pricingPlans = [
       { text: "Volg rankings van 10 producten", icon: Activity },
       { text: "Sales, winst & product dashboards", icon: LineChart },
     ],
-    cta: "Aanmelden bèta",
+    cta: "1 maand gratis",
     ctaVariant: "outline" as const,
     planIcon: Rocket,
     iconBgColor: "bg-blue-100",
     iconTextColor: "text-blue-500",
-    redirect: "https://bolbaas.nl/wachtlijst"
+    redirect: "https://app.bolbaas.nl/registreren"
   },
   {
     name: "Plus",
@@ -115,12 +118,12 @@ const pricingPlans = [
       { text: "Baaspilot notificaties", icon: Bot },
       { text: "Project management (5 projecten)", icon: Briefcase },
     ],
-    cta: "Aanmelden bèta",
+    cta: "1 maand gratis",
     ctaVariant: "default" as const,
     planIcon: Crown,
     iconBgColor: "bg-purple-100",
     iconTextColor: "text-purple-500",
-    redirect: "https://bolbaas.nl/wachtlijst"
+    redirect: "https://app.bolbaas.nl/registreren"
   },
   {
     name: "Pro",
@@ -686,19 +689,12 @@ export default function PricingPage() { // Renamed function
               </div>
 
               {/* --- Automatisering Section --- */}
-              {/* Section Header - Spans full width */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Automatisering</p>
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-foreground" />
-                    <h3 className="text-lg font-semibold">Bespaar tijd en moeite</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">Automatiseer repeterende taken en focus op groei.</p>
-                </div>
-              </div>
-              {/* Feature Rows for Automatisering */}
-              <div className="divide-y divide-border">
+              <ExpandableSection
+                title="Automatisering"
+                subtitle="Bespaar tijd en moeite"
+                description="Automatiseer repeterende taken en focus op groei."
+                icon={<Sparkles className="h-5 w-5 text-foreground" />}
+              >
                 {automationFeatures.map((feature) => (
                   <div key={feature.name} className="grid grid-cols-2 sm:grid-cols-4">
                     <div className="p-4 col-span-1 sm:col-span-1">
@@ -729,20 +725,15 @@ export default function PricingPage() { // Renamed function
                     )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
               {/* --- Data Tools Section --- */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Tools</p> {/* Renamed section */}
-                  <div className="flex items-center gap-2">
-                    <Wrench className="h-5 w-5 text-foreground" />
-                    <h3 className="text-lg font-semibold">Ontdek & Optimaliseer</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">Krachtige tools voor data-gedreven beslissingen.</p>
-                </div>
-              </div>
-              <div className="divide-y divide-border">
+              <ExpandableSection
+                title="Tools"
+                subtitle="Ontdek & Optimaliseer"
+                description="Krachtige tools voor data-gedreven beslissingen."
+                icon={<Wrench className="h-5 w-5 text-foreground" />}
+              >
                 {dataToolsFeatures.map((feature) => (
                   <div
                     key={feature.name}
@@ -795,20 +786,15 @@ export default function PricingPage() { // Renamed function
                      )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
               {/* --- Inzichten Section --- */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Inzichten</p>
-                  <div className="flex items-center gap-2">
-                    <ChartNoAxesCombined className="h-5 w-5 text-foreground" />
-                    <h3 className="text-lg font-semibold">Inzicht in prestaties</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">Weet wat werkt, zie wat groeit. Stuur op data, niet op gevoel.</p>
-                </div>
-              </div>
-              <div className="divide-y divide-border">
+              <ExpandableSection
+                title="Inzichten"
+                subtitle="Inzicht in prestaties"
+                description="Weet wat werkt, zie wat groeit. Stuur op data, niet op gevoel."
+                icon={<ChartNoAxesCombined className="h-5 w-5 text-foreground" />}
+              >
                 {insightFeatures.map((feature) => (
                   <div key={feature.name} className="grid grid-cols-2 sm:grid-cols-4">
                     <div className="p-4 col-span-1 sm:col-span-1">
@@ -839,21 +825,16 @@ export default function PricingPage() { // Renamed function
                     )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
-              {/* --- Tracking Section --- */} {/* Renamed from Ranking Inzichten */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Tracking</p> {/* Renamed */}
-                  <div className="flex items-center gap-2">
-                    <Target className="h-5 w-5 text-foreground" /> {/* Kept Target icon */}
-                    <h3 className="text-lg font-semibold">Monitor en optimaliseer prestaties</h3> {/* Updated title */}
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">Volg producten, keywords en projecten.</p> {/* Updated description */}
-                </div>
-              </div>
-              <div className="divide-y divide-border">
-                {trackingFeatures.map((feature) => ( // Use trackingFeatures
+              {/* --- Tracking Section --- */}
+              <ExpandableSection
+                title="Tracking"
+                subtitle="Monitor en optimaliseer prestaties"
+                description="Volg producten, keywords en projecten."
+                icon={<Target className="h-5 w-5 text-foreground" />}
+              >
+                {trackingFeatures.map((feature) => (
                   <div
                     key={feature.name}
                     className={cn(
@@ -905,20 +886,15 @@ export default function PricingPage() { // Renamed function
                      )}>{renderFeatureValue(feature.enterprise)}</div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
               {/* --- Custom Solutions Section --- */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Maatwerk</p>
-                  <div className="flex items-center gap-2">
-                    <Sparkle className="h-5 w-5 text-foreground" />
-                    <h3 className="text-lg font-semibold">Aangepaste oplossingen</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">We bouwen de specifieke oplossingen die jij nodig hebt.</p>
-                </div>
-              </div>
-              <div className="divide-y divide-border">
+              <ExpandableSection
+                title="Maatwerk"
+                subtitle="Aangepaste oplossingen"
+                description="We bouwen de specifieke oplossingen die jij nodig hebt."
+                icon={<Sparkle className="h-5 w-5 text-foreground" />}
+              >
                 {customSolutionsFeatures.map((feature) => (
                   <div
                     key={feature.name}
@@ -957,20 +933,15 @@ export default function PricingPage() { // Renamed function
                     </div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
               {/* --- Premium Service Section (Pro Exclusives) --- */}
-              <div className="col-span-2 sm:col-span-4 grid grid-cols-1 border-b border-t border-border bg-gray-50/50 dark:bg-gray-900/30">
-                <div className="p-4 col-span-1">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Premium Service</p>
-                  <div className="flex items-center gap-2">
-                    <Sparkle className="h-5 w-5 text-foreground" /> {/* Using Sparkle icon */}
-                    <h3 className="text-lg font-semibold">Pro voordelen</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">Extra ondersteuning en begeleiding.</p>
-                </div>
-              </div>
-              <div className="divide-y divide-border">
+              <ExpandableSection
+                title="Premium Service"
+                subtitle="Pro voordelen"
+                description="Extra ondersteuning en begeleiding."
+                icon={<Sparkle className="h-5 w-5 text-foreground" />}
+              >
                 {proExclusiveFeatures.map((feature) => (
                   <div
                     key={feature.name}
@@ -1009,7 +980,7 @@ export default function PricingPage() { // Renamed function
                     </div>
                   </div>
                 ))}
-              </div>
+              </ExpandableSection>
 
               {/* Disclaimer Text */}
               <div className="py-6 px-4 text-center border-t border-border">
