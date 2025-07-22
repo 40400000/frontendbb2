@@ -328,7 +328,7 @@ export default function BlogPostPage() {
 
                     <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Stap 5: Eigen eis - kwartaal btw-aangifte doen</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Als je btw-plichtig bent (omzet >€20.000), moet je elk kwartaal btw-aangifte doen bij de Belastingdienst. Dit is jouw eigen verantwoordelijkheid - bol.com doet dit niet voor je. De aangifte moet kloppen met je verkopen, anders volgen er naheffingen. Bolbaas berekent automatisch je btw-aangifte op basis van je bol.com verkopen.</p>
+                    <p className="text-lg text-foreground mb-6">Als je btw-plichtig bent (omzet &gt;€20.000), moet je elk kwartaal btw-aangifte doen bij de Belastingdienst. Dit is jouw eigen verantwoordelijkheid - bol.com doet dit niet voor je. De aangifte moet kloppen met je verkopen, anders volgen er naheffingen. Bolbaas berekent automatisch je btw-aangifte op basis van je bol.com verkopen.</p>
                     
                     <div className="bg-orange-50 dark:bg-orange-950/20 p-6 rounded-lg border border-orange-200 dark:border-orange-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">📅 Btw-aangifte termijnen en deadlines:</h4>
