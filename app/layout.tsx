@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ConditionalBlogBanner } from "@/components/conditional-blog-banner";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeHandler } from '@/components/theme-handler';
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -87,6 +88,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
+          <ThemeHandler />
           <>
             <ConditionalBlogBanner />
             
