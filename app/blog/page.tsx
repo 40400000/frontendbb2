@@ -15,7 +15,7 @@ export default function BlogPage() {
       description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
       author: "Thijmen Dreef",
       date: "24 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png",
+      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_NOBG.png",
       href: "/blog/verkopen-bol-ai-tijdperk",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },

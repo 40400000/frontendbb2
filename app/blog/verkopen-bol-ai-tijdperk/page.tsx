@@ -8,6 +8,25 @@ import { BlogThemeHandler } from "@/components/blog-theme-handler";
 export const metadata: Metadata = {
   title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent - Bolbaas",
   description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
+  openGraph: {
+    title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent",
+    description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
+    type: "article",
+    images: [
+      {
+        url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png",
+        width: 800,
+        height: 800,
+        alt: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent",
+    description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
+    images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png"],
+  },
 };
 
 export default function BlogPostPage() {
@@ -65,7 +84,7 @@ export default function BlogPostPage() {
                 <div className="sm:col-start-2 sm:col-span-2">
                     <div className="mb-8">
                         <Image
-                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png"
+                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_NOBG.png"
                             alt={post.title}
                             width={420}
                             height={420}
