@@ -376,9 +376,9 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">09</p>
-                <h3 className="font-semibold text-white my-3">Omzet research op basis van AI en algoritmes</h3>
+                <h3 className="font-semibold text-white my-3">Omzet research op basis van AI</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>Coming soon</li>
+                  <li>Omzet inzichten van meer dan 5 miljoen producten op bol.com, op basis van AI en realtime data.</li>
                 </ul>
                 <div className="mt-auto pt-4">
                   <span className="text-gray-500 text-sm">Binnenkort beschikbaar</span>

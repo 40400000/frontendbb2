@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { usePathname } from 'next/navigation'
+import { useTheme } from 'next-themes'
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
@@ -574,6 +575,9 @@ export function NavigationMenuDemo() {
   const componentRootRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isBlogPostPage = pathname.startsWith('/blog/') && pathname.length > '/blog/'.length;
+  const { theme } = useTheme();
 
   const lightLogoUrl = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head-NO6JxOe2DYaItWOrqQqPrDhwgEaN5z.png";
   const darkLogoUrl = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png";
@@ -626,7 +630,6 @@ export function NavigationMenuDemo() {
     }
   };
   
-  const pathname = usePathname();
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
@@ -634,6 +637,23 @@ export function NavigationMenuDemo() {
   }, [pathname]);
 
   useEffect(() => {
+    if (isBlogPostPage) {
+      // On blog pages, the theme is controlled by BlogThemeHandler.
+      // We just need to set the navbarMode based on the theme from next-themes.
+      setNavbarMode(theme === 'dark' ? 'dark' : 'light');
+      const headerElement = document.getElementById('main-header');
+      if (headerElement) {
+        if (theme === 'dark') {
+          headerElement.classList.remove('bg-white', 'text-black');
+          headerElement.classList.add('bg-background', 'text-white');
+        } else {
+          headerElement.classList.remove('bg-background', 'text-white');
+          headerElement.classList.add('bg-white', 'text-black');
+        }
+      }
+      return; // Skip the rest of the scroll-based logic
+    }
+
     const headerElement = document.getElementById('main-header');
     if (!headerElement) {
         console.warn("main-header element not found for scroll handling.");
@@ -677,7 +697,7 @@ export function NavigationMenuDemo() {
       window.removeEventListener('scroll', updateHeaderState);
       window.removeEventListener('resize', updateHeaderState);
     };
-  }, [navbarMode, headerHeight]);
+  }, [isBlogPostPage, navbarMode, headerHeight, theme]);
 
   useEffect(() => {
     if (headerHeight === 0) {
