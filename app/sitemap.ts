@@ -47,5 +47,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/btw-aangifte-bol-icp`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/meer-reviews-op-bol`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/starten-als-bol-partner-in-2025`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/verkopen-bol-ai-tijdperk`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 } 

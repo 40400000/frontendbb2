@@ -32,12 +32,10 @@ export function BlogThemeHandler() {
     // 5. Cleanup function to run when the component unmounts
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
-      // Restore the original theme when navigating away from the blog
-      if (originalThemeRef.current) {
-        setTheme(originalThemeRef.current);
-      }
+      // Restore the theme to dark when navigating away from the blog
+      setTheme('dark');
     };
-  }, [setTheme, currentTheme]);
+  }, [setTheme]);
 
   return null; // This component does not render anything
 } 

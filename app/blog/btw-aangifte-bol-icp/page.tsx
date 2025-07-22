@@ -34,7 +34,7 @@ export default function BlogPostPage() {
             <div className="w-full">
                 <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/80 transition-colors mb-8">
                     <ArrowLeft className="h-4 w-4" />
-                    <span>Terug naar blog</span>
+                    <span>Terug naar educatie</span>
                 </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-4">
@@ -66,7 +66,7 @@ export default function BlogPostPage() {
                     <div className="mb-8">
                         {/* TODO: Replace with a relevant image for this blog post */}
                         <Image
-                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png"
+                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/icpfactuurblog2.png"
                             alt={post.title}
                             width={420}
                             height={420}

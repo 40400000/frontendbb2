@@ -7,6 +7,7 @@ import PromotionBanner from '@/components/promotion-banner';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ConditionalBlogBanner } from "@/components/conditional-blog-banner";
 import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
@@ -87,6 +88,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <>
+            <ConditionalBlogBanner />
+            
             <header id="main-header" className="sticky top-0 z-50 w-full bg-background text-white">
               <div className="container mx-auto flex h-17 items-center px-4"> 
                 <div className="flex items-center w-full">

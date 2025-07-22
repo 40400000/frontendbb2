@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-[64%] sm:top-36 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/5 pointer-events-none overflow-x-hidden sm:overflow-x-visible">
+          <div className="absolute top-[64%] sm:top-36 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/5 pointer-events-none overflow-x-hidden sm:overflow-x-visible hidden sm:block">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/hero25.png"
               alt="Hero Image"

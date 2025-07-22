@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { BlogThemeHandler } from "@/components/blog-theme-handler";
 
 export const metadata: Metadata = {
   title: "Educatie - Bolbaas",
@@ -15,26 +16,26 @@ export default function BlogPage() {
       description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
       author: "Thijmen Dreef",
       date: "24 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_NOBG.png",
+      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png",
       href: "/blog/verkopen-bol-ai-tijdperk",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
     {
-      title: "Bol.com partner worden: alle legale eisen en administratie op een rij (6 essentiële stappen)",
-      description: "Wil je gaan verkopen op bol.com? Deze complete gids legt uit welke legale verplichtingen je hebt, welke documenten je nodig hebt en hoe je alles correct opzet.",
+      title: "Bol.com partner worden: alle wettelijke eisen en administratie op een rij (6 essentiële stappen)",
+      description: "Wil je gaan verkopen op bol.com? Deze complete gids legt uit welke wettelijke verplichtingen je hebt, welke documenten je nodig hebt en hoe je alles correct opzet.",
       author: "Thijmen Dreef",
       date: "23 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png",
-      href: "/blog/van-hobby-naar-zakelijk-bol",
+      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/partnerstartblog.png",
+      href: "/blog/starten-als-bol-partner-in-2025",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
     {
       title: "Je bol.com btw-aangifte een chaos? 'Intracommunautaire levering' uitgelegd",
-      description: "Zie je 'intracommunautaire levering' op je bol.com factuur? We leggen uit wat het betekent en hoe je de btw correct berekent, zonder stress.",
+      description: "Belgische bestelling van een zakelijke klant? Geen btw rekenen! We leggen uit wat het betekent en hoe je de btw correct berekent, zonder stress.",
       author: "Thijmen Dreef",
       date: "22 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png",
-      href: "/blog/btw-aangifte-bol",
+      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/icpfactuurblog2.png",
+      href: "/blog/btw-aangifte-bol-icp",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
     {
@@ -42,7 +43,7 @@ export default function BlogPage() {
       description: "Je hebt een topproduct, maar de reviewteller staat op nul. Volg dit stappenplan voor direct resultaat.",
       author: "Thijmen Dreef",
       date: "21 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BLOG_1.png",
+      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/reviewblog.png",
       href: "/blog/meer-reviews-op-bol",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
@@ -52,19 +53,18 @@ export default function BlogPage() {
   const otherPosts = blogPosts.slice(1);
 
   return (
-    <>
-      <div className="relative z-0 flex flex-col min-h-screen border-t">
-        {/* Overlay Grid - Consistent with homepage */}
-        <div className="absolute inset-0 h-full z-10 pointer-events-none border-l border-r border-border [mask-image:linear-gradient(to_bottom,transparent,black_200px)]">
+    <div className="relative z-0 flex flex-col min-h-screen border-t bg-white dark:bg-background border-b">
+      <BlogThemeHandler />
+        {/* Overlay Grid */}
+        <div className="absolute inset-0 h-full z-10 pointer-events-none border-l border-r border-border">
           <div className="relative h-full max-w-full mx-auto">
-            <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-border"></div>
-            <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-border"></div>
-            <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-border"></div>
+            <div className="hidden sm:block absolute left-[20%] top-0 bottom-0 w-px bg-border"></div>
+          <div className="hidden sm:block absolute left-[80%] top-0 bottom-0 w-px bg-border"></div>
           </div>
         </div>
         
-        <main className="relative z-20 container px-0">
-          <header className="w-full pt-16 md:pt-24 lg:pt-32 pb-12 md:pb-16 lg:pb-20 border-b border-border">
+        <main className="relative z-20 container px-0 pt-16 md:pt-24 lg:pt-32">
+          <header className="w-full pb-12 md:pb-16 lg:pb-20 border-b border-border">
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="col-span-1 sm:col-span-3">
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
@@ -144,7 +144,6 @@ export default function BlogPage() {
             </div>
           </section>
         </main>
-      </div>
-    </>
+    </div>
   );
 } 

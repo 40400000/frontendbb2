@@ -574,9 +574,10 @@ export function NavigationMenuDemo() {
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const componentRootRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
+  const [headerBottomPosition, setHeaderBottomPosition] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isBlogPostPage = pathname.startsWith('/blog/') && pathname.length > '/blog/'.length;
+  const isBlogPostPage = pathname.startsWith('/blog');
   const { theme } = useTheme();
 
   const lightLogoUrl = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head-NO6JxOe2DYaItWOrqQqPrDhwgEaN5z.png";
@@ -667,6 +668,10 @@ export function NavigationMenuDemo() {
       }
 
       const headerBottom = headerElement.getBoundingClientRect().bottom;
+      if (headerBottomPosition !== headerBottom) {
+        setHeaderBottomPosition(headerBottom);
+      }
+
       const lightSections = document.querySelectorAll<HTMLElement>('[data-navbar-mode="light"]');
       let isOverLightSection = false;
       lightSections.forEach((section) => {
@@ -697,7 +702,7 @@ export function NavigationMenuDemo() {
       window.removeEventListener('scroll', updateHeaderState);
       window.removeEventListener('resize', updateHeaderState);
     };
-  }, [isBlogPostPage, navbarMode, headerHeight, theme]);
+  }, [isBlogPostPage, navbarMode, headerHeight, theme, headerBottomPosition]);
 
   useEffect(() => {
     if (headerHeight === 0) {
@@ -837,7 +842,7 @@ export function NavigationMenuDemo() {
                           )}
                           >Inloggen</Button>
                         </Link>
-                        <Link href="/wachtlijst" passHref>
+                        <Link href="/prijzen" passHref>
                           <Button
                           className={cn(
                             navbarMode === 'light' 
@@ -845,7 +850,7 @@ export function NavigationMenuDemo() {
                               : "bg-white text-black hover:bg-gray-200 hover:text-black",
                             "cursor-pointer rounded-lg"
                           )}
-                          >Aanmelden bèta</Button>
+                          >Aanmelden</Button>
                         </Link>
                     </li>
                 </NavigationMenuList>
@@ -858,7 +863,7 @@ export function NavigationMenuDemo() {
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleMouseLeaveDesktopMenu}
         className="hidden sm:block fixed left-0 right-0 bg-background shadow-lg z-30 overflow-hidden"
-        style={{ top: `${headerHeight}px` }}
+        style={{ top: `${headerBottomPosition}px` }}
     >
         <div className="container mx-auto">
             <MenuContent key={activeMenu} activeMenu={activeMenu} />

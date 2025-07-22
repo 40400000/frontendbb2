@@ -53,7 +53,7 @@ export default function BlogPostPage() {
             <div className="w-full">
                 <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/80 transition-colors mb-8">
                     <ArrowLeft className="h-4 w-4" />
-                    <span>Terug naar blog</span>
+                    <span>Terug naar educatie</span>
                 </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-4">
@@ -84,35 +84,35 @@ export default function BlogPostPage() {
                 <div className="sm:col-start-2 sm:col-span-2">
                     <div className="mb-8">
                         <Image
-                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_NOBG.png"
+                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png"
                             alt={post.title}
                             width={420}
                             height={420}
                             className="rounded-lg aspect-square object-cover w-full max-w-md mx-auto"
                         />
                     </div>
-                    <p className="text-lg text-foreground mb-6">Je hebt het vast gemerkt: bol.com wordt steeds drukker. Meer dan 50.000 actieve verkopers vechten om dezelfde klanten. Waar je vroeger met een beetje SEO-kennis al in de top 10 kon komen, moet je nu veel slimmer zijn. De vraag is niet meer óf je tools nodig hebt, maar welke tools je het voordeel geven.</p>
-                    <p className="text-lg text-foreground mb-6">Hier komt AI om de hoek kijken. Nee geen ChatGPT, maar modellen die speciaal getraind zijn voor bol.com. Terwijl andere verkopers nog handmatig hun producttitels optimaliseren, analyseert onze Ranking AI in real-time wat werkt en wat niet.</p>
+                    <p className="text-lg text-foreground mb-6">Je hebt het vast gemerkt: bol.com wordt steeds drukker. Meer dan 50.000 actieve verkopers vechten om dezelfde klanten. Waar je vroeger met een beetje SEO-kennis al op pagina 1 kon komen, is de concurrentie nu veel groter. De vraag is niet meer óf je tools nodig hebt, maar welke tools je echt een groot voordeel geven.</p>
+                    <p className="text-lg text-foreground mb-6">Hier komt AI om de hoek kijken. Nee geen ChatGPT (wrapper), maar modellen die speciaal getraind zijn voor bol.com listings. Terwijl andere verkopers nog handmatig hun listings optimaliseren, analyseert onze Ranking AI in real-time wat werkt en wat niet.</p>
                     
                     <div className="bg-red-50 dark:bg-red-950/20 p-6 rounded-lg border border-red-200 dark:border-red-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">🚨 De harde realiteit van bol.com in 2025:</h4>
                         <ul className="space-y-2 text-foreground">
-                            <li>• 50.000+ actieve verkopers (was 20.000 in 2020)</li>
+                            <li>• 45.000+ actieve partners</li>
                             <li>• Gemiddeld 15+ verkopers per populair product</li>
-                            <li>• Handmatige optimalisatie kost 4+ uur per week</li>
-                            <li>• Verkeerde keywords = onzichtbaarheid</li>
+                            <li>• Handmatige listing optimalisatie kost uren per week of wordt niet gedaan</li>
+                            <li>• Verkeerde keywords = onzichtbaarheid en onderaan de lijst</li>
                             <li>• Zonder data-inzicht loop je achter op concurrenten</li>
                         </ul>
                     </div>
 
-                    <p className="text-lg text-foreground mb-6">Maar hier zit ook de kans. De meeste verkopers werken nog steeds zoals in 2020: gokken, proberen, en hopen dat het werkt. AI geeft je een unfair advantage - je weet precies wat je moet doen en waarom.</p>
+                    <p className="text-lg text-foreground mb-6">Maar juist hier liggen ook kansen. De meeste verkopers werken nog steeds zoals in 2020: gokken, proberen, en hopen dat het werkt. AI geeft je een unfair advantage, je weet precies wat je moet doen en waarom.</p>
 
-                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">ChatGPT voor listings: de gratis start (maar niet de beste)</h2>
+                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">ChatGPT voor listings: de gratis start (maar niet de beste oplossing)</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Voordat we onze Ranking AI bespreken, laten we eerlijk zijn: je kunt ook gratis beginnen met ChatGPT. Hier is een simpele methode die veel verkopers gebruiken:</p>
+                    <p className="text-lg text-foreground mb-6">Voordat we onze hypergespecialiseerde Ranking AI bespreken: je kunt ook gratis beginnen met ChatGPT. Hieronder een aantal simpele prompts die je direct zou kunnen gebruiken:</p>
                     
                     <div className="bg-blue-50 dark:bg-blue-950/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mb-6">
-                        <h4 className="font-semibold text-lg mb-3">💡 ChatGPT prompts voor bol.com optimalisatie:</h4>
+                        <h4 className="font-semibold text-lg mb-3">💡 ChatGPT prompts voor bol.com listings optimalisatie:</h4>
                         
                         <div className="space-y-6">
                             <div>
@@ -126,18 +126,65 @@ export default function BlogPostPage() {
                             <div>
                                 <h5 className="font-semibold mb-2">Concurrent analyse:</h5>
                                 <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
-                                    "Hier zijn de titels en beschrijvingen van best presterende concurrenten voor [PRODUCT]: [PLAK HIER CONCURRENT DATA]. Verbeter mijn huidige listing op basis hiervan. Zorg dat de inhoud en kenmerken van mijn product hetzelfde blijven, maar optimaliseer de titel en beschrijving voor betere vindbaarheid."
+                                    "Hier zijn de titels en beschrijvingen van best presterende concurrenten voor [PRODUCT]: [PLAK HIER CONCURRENT DATA]. Verbeter mijn huidige listing op basis hiervan. Zorg dat de inhoud en kenmerken van mijn product hetzelfde blijven, maar optimaliseer de titel en beschrijving voor betere vindbaarheid. Hier is mijn listing: [JOUW LISTING]"
                                 </div>
                                 <p className="text-sm text-foreground/80">Kopieer de titels van top-3 concurrenten en laat ChatGPT jouw listing optimaliseren op basis van wat werkt.</p>
                             </div>
 
                             <div>
-                                <h5 className="font-semibold mb-2">Keyword analyse:</h5>
+                                <h5 className="font-semibold mb-2">Productbeschrijvingen verbeteren:</h5>
                                 <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
-                                    "Analyseer deze producttitel: '[JOUW HUIDIGE TITEL]'. Welke belangrijke keywords voor bol.com ontbreken? Geef me een verbeterde versie die meer relevante zoektermen bevat zonder spammy te worden."
+                                    "Verbeter mijn huidige productbeschrijving voor bol.com: '[JOUW HUIDIGE BESCHRIJVING]'. Maak het overtuigender, voeg belangrijke voordelen toe, en zorg dat het kopers aanspreekt om te kopen. Behoud alle technische specificaties maar maak de tekst aantrekkelijker."
                                 </div>
-                                <p className="text-sm text-foreground/80">Gebruik je huidige titel om missing keywords te vinden en een betere versie te maken.</p>
+                                <p className="text-sm text-foreground/80">Plak je bestaande beschrijving en laat ChatGPT deze verbeteren voor betere conversie.</p>
                             </div>
+
+                            <details className="group">
+                                <summary className="cursor-pointer text-sm font-medium text-blue-700 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                    Bekijk 5 andere prompts om je listings te optimaliseren
+                                </summary>
+                                <div className="mt-4 space-y-6 border-t border-blue-200 dark:border-blue-700 pt-4">
+                                    <div>
+                                        <h5 className="font-semibold mb-2">Prijsstrategie optimalisatie:</h5>
+                                        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
+                                            "Analyseer mijn concurrenten voor [PRODUCT] op bol.com: [PLAK CONCURRENT PRIJZEN EN FEATURES]. Geef me een prijsstrategie die competitief is maar nog steeds winstgevend. Leg uit waarom klanten voor mijn product zouden kiezen tegen deze prijs. Hier is mijn listing: [JOUW LISTING]"
+                                        </div>
+                                        <p className="text-sm text-foreground/80">Gebruik deze prompt om je prijsstrategie data-gedreven te optimaliseren.</p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="font-semibold mb-2">Seizoensgebonden content:</h5>
+                                        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
+                                            "Het is [MAAND/SEIZOEN] en ik verkoop [PRODUCT] op bol.com. Maak een seizoensgeoptimaliseerde producttitel en beschrijving die inspelt op trends en behoeften van deze periode. Focus op urgentie en relevantie. Hier is mijn listing: [JOUW LISTING]"
+                                        </div>
+                                        <p className="text-sm text-foreground/80">Perfect voor het optimaliseren van seasonal producten zoals kerstartikelen, zomerproducten, etc.</p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="font-semibold mb-2">Long-tail keywords identificeren</h5>
+                                        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
+                                            "Identificeer 10-15 long-tail keywords (3-5 woorden) voor [PRODUCT] op bol.com. Geef voorbeelden van hoe klanten zoeken naar oplossingen voor specifieke problemen. Hier is mijn listing: [JOUW LISTING]"
+                                        </div>
+                                        <p className="text-sm text-foreground/80">Hiermee vind je winstgevende niche-zoekwoorden waar je concurrenten niet aan denken.</p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="font-semibold mb-2">Customer pain points:</h5>
+                                        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
+                                            "Wat zijn de 5 grootste problemen die klanten hebben met [PRODUCTCATEGORIE]? Herschrijf mijn huidige productbeschrijving zodat het duidelijk is hoe mijn [PRODUCT] deze problemen oplost. Maak het overtuigend en specifiek."
+                                        </div>
+                                        <p className="text-sm text-foreground/80">Focus op problemen oplossen in plaats van alleen features benoemen.</p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="font-semibold mb-2">Bundle opportunities:</h5>
+                                        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono mb-2">
+                                            "Ik verkoop [PRODUCT] op bol.com. Welke andere producten kopen klanten meestal samen met dit product? Geef me 5 bundle-ideeën en schrijf voor elk een verleidelijke bundel-beschrijving die de totale waarde benadrukt."
+                                        </div>
+                                        <p className="text-sm text-foreground/80">Ontdek cross-sell mogelijkheden en verhoog je gemiddelde orderwaarde.</p>
+                                    </div>
+                                </div>
+                            </details>
                         </div>
                     </div>
 
@@ -163,26 +210,25 @@ export default function BlogPostPage() {
                         </ul>
                     </div>
 
-                    <p className="text-lg text-foreground mb-6">ChatGPT is een goede start, maar voor echte resultaten op bol.com heb je data nodig. Data over wat werkt, wanneer het werkt, en waarom het werkt. Dat is waar gespecialiseerde AI de overhand neemt.</p>
+                    <p className="text-lg text-foreground mb-6">ChatGPT is een goede start, maar voor echte resultaten op bol.com heb je realtime data en gespecialiseerde AI-modellen nodig. Data over wat werkt, wanneer het werkt, en waarom het werkt. Precies dat is wat onze Ranking AI doet.</p>
 
                     <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Waarom Bolbaas Ranking AI beter werkt dan ChatGPT </h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Het mooie van Ranking AI? Je hoeft geen SEO-expert te worden. Het systeem doet het zware werk, jij ziet alleen de resultaten:</p>
+                    <p className="text-lg text-foreground mb-6">De Bolbaas Ranking AI is een model dat getraind is op bol.com data. Het gebruikt realtime data van keywords om te zorgen dat jij de perfecte listing krijgt. Zo kijkt onze AI bijvoorbeeld naar de best presterende concurrenten, zoektrends, gedrag van klanten en meer.</p>
 
                     <div className="bg-green-50 dark:bg-green-950/20 p-6 rounded-lg border border-green-200 dark:border-green-800 mb-8">
                         <h4 className="font-semibold text-lg mb-3">✅ Wat je direct krijgt met Ranking AI:</h4>
                         <ul className="space-y-3 text-foreground">
-                            <li>• <strong>Betere producttitels</strong> - Automatisch geoptimaliseerd zonder dat je er zelf over hoeft na te denken</li>
-                            <li>• <strong>Inzicht in concurrenten</strong> - Zie direct wat top-sellers doen en waarom zij hoger ranken</li>
-                            <li>• <strong>De juiste keywords</strong> - Geen gokken meer, gebruik keywords die écht werken</li>
+                            <li>• <strong>Magische listings</strong> - Automatisch geoptimaliseerd voor rankings, zonder dat je er zelf over hoeft na te denken</li>
+                            <li>• <strong>De juiste keywords</strong> - Geen gokken meer, gebruik keywords die écht werken. Gebaseerd op miljarden datapunten.</li>
                             <li>• <strong>Ranking vooruitgang</strong> - Monitor of je omhoog of omlaag gaat, en waarom</li>
-                            <li>• <strong>Schaalbare resultaten</strong> - Wat werkt bij één product, werkt bij al je producten</li>
+                            <li>• <strong>Schaalbare resultaten</strong> - Je kan al je producten binnen korte tijd optimaliseren</li>
                         </ul>
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Waarom handmatige optimalisatie niet meer werkt</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Vijf jaar geleden kon je met een Excel-lijst van keywords en wat A/B testing nog succesvol zijn. Nu? De markt verandert te snel. Wat vandaag werkt, kan morgen alweer achterhaald zijn.</p>
+                    <p className="text-lg text-foreground mb-6">Vijf jaar geleden kon je met een Excel-lijst van keywords en wat A/B testing nog succesvol zijn. Nu? De markt verandert te snel. Concurrentie is groter dan ooit. Je moet nu slimmer, sneller en beter zijn dan je concurrenten.</p>
                     
                     <div className="bg-yellow-50 dark:bg-yellow-950/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">⚠️ Waarom handmatige optimalisatie niet werkt:</h4>
@@ -191,7 +237,7 @@ export default function BlogPostPage() {
                                 <h5 className="font-semibold mb-2">Problemen met handwerk:</h5>
                                 <ul className="space-y-1">
                                     <li>• Kost 4+ uur per week per product</li>
-                                    <li>• Gebaseerd op gissing, niet data</li>
+                                    <li>• Gebaseerd op gevoel, niet data</li>
                                     <li>• Concurrenten bewegen sneller</li>
                                     <li>• Trends mis je gemakkelijk</li>
                                 </ul>
@@ -200,7 +246,7 @@ export default function BlogPostPage() {
                                 <h5 className="font-semibold mb-2">Gevolgen:</h5>
                                 <ul className="space-y-1">
                                     <li>• Rankings dalen ongemerkt</li>
-                                    <li>• Verkeerde keywords = geen traffic</li>
+                                    <li>• Verkeerde keywords = lage kwaliteit traffic</li>
                                     <li>• Achterstand groeit wekelijks</li>
                                     <li>• Frustratie en tijdverspilling</li>
                                 </ul>
@@ -208,30 +254,30 @@ export default function BlogPostPage() {
                         </div>
                     </div>
 
-                    <p className="text-lg text-foreground mb-6">Het probleem is dat je als ondernemer niet 24/7 de markt kunt monitoren. Maar AI wel. Onze Ranking AI slaapt niet, hoeft niet naar het toilet, en mist geen enkele verandering in het algoritme van bol.com.</p>
+                    <p className="text-lg text-foreground mb-6">Het probleem is dat je als ondernemer niet 24/7 de markt kunt monitoren. Maar AI wel. Onze Ranking AI slaapt niet, hoeft niet naar het toilet, en mist geen enkele verandering in de trends op bol.com.</p>
 
                     <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Hoe onze Ranking AI je een unfair advantage geeft</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Onze Ranking AI is geen standaard tool. Het systeem analyseert real-time data van meer dan 12 miljoen keywords, kijkt naar je best presterende concurrenten, en bepaalt precies welke SEO-wijzigingen het grootste effect hebben. Hier zie je hoe het werkt:</p>
+                    <p className="text-lg text-foreground mb-6">Onze Ranking AI is geen standaard tool. Het systeem analyseert real-time data van meer dan 12 miljoen keywords, kijkt naar je best presterende concurrenten, en bepaalt precies welke wijzigingen het grootste effect hebben op je ranking. Dit zijn de belangrijkste dingen waar onze AI op let:</p>
                     
                     <div className="bg-blue-50 dark:bg-blue-950/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">🧠 Wat onze Ranking AI voor je doet:</h4>
                         <div className="space-y-4">
                             <div className="border-l-4 border-blue-500 pl-4">
                                 <h5 className="font-semibold">12+ miljoen keywords database</h5>
-                                <p className="text-sm text-foreground/80">Real-time data analyse van alle keywords op bol.com voor perfecte optimalisatie</p>
+                                <p className="text-sm text-foreground/80">Real-time data analyse van alle relevante keywords op bol.com voor perfecte optimalisatie</p>
                             </div>
                             <div className="border-l-4 border-green-500 pl-4">
                                 <h5 className="font-semibold">Best performing competitor analysis</h5>
                                 <p className="text-sm text-foreground/80">Analyseert wat je top-presterende concurrenten doen en past jouw strategie daarop aan</p>
                             </div>
                             <div className="border-l-4 border-purple-500 pl-4">
-                                <h5 className="font-semibold">SEO impact calculation</h5>
-                                <p className="text-sm text-foreground/80">Berekent welke specifieke wijzigingen het grootste ranking effect hebben</p>
+                                <h5 className="font-semibold">Rankings impact calculation</h5>
+                                <p className="text-sm text-foreground/80">Berekent welke specifieke wijzigingen het grootste ranking effect hebben en voert deze door.</p>
                             </div>
                             <div className="border-l-4 border-orange-500 pl-4">
-                                <h5 className="font-semibold">Automatische titel optimalisatie</h5>
-                                <p className="text-sm text-foreground/80">Genereert data-gedreven producttitels die ranking én conversie verbeteren</p>
+                                <h5 className="font-semibold">Conversie data analyse</h5>
+                                <p className="text-sm text-foreground/80">Analyseert hoe je producten worden gekocht en past je content daarop aan</p>
                             </div>
                         </div>
                     </div>
@@ -239,17 +285,17 @@ export default function BlogPostPage() {
                     <div className="my-12 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-xl border border-blue-200 dark:border-blue-800">
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-50">Van pagina 30 naar pagina 1 in 4 weken</h3>
                         <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-                            Onze Ranking AI analyseert je producten, vindt de perfecte keywords, en optimaliseert je content automatisch. Gemiddeld zien verkopers 340% meer organische traffic binnen 30 dagen.
+                            Onze Ranking AI analyseert je producten en optimaliseert je listing automatisch. Gemiddeld zien verkopers tot 340% meer organische traffic binnen 30 dagen.
                         </p>
                         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg mt-4 border">
                             <h4 className="font-semibold mb-2">🚀 Wat je krijgt met Ranking AI:</h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                                 <div>• 12+ miljoen keywords database</div>
                                 <div>• Best-performing competitor analyse</div>
-                                <div>• Data-gedreven SEO wijzigingen</div>
-                                <div>• Automatische titel optimalisatie</div>
+                                <div>• Data-gedreven listing wijzigingen</div>
+                                <div>• Automatische listing optimalisatie</div>
                                 <div>• Real-time ranking monitoring</div>
-                                <div>• Concrete actie-items per product</div>
+                                <div>• Concrete voorstellen per product</div>
                             </div>
                         </div>
                         <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -265,45 +311,42 @@ export default function BlogPostPage() {
                         </p>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Case study: van onzichtbaar naar top 3</h2>
+                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Een voorbeeld: van onzichtbaar naar top-ranking</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Een praktijkvoorbeeld van hoe AI het verschil maakt. Een klant verkocht telefoonhoesjes maar stond op pagina 5 voor het keyword "iPhone hoesje". Onze AI vond het probleem en de oplossing:</p>
+                    <p className="text-lg text-foreground mb-6">Stel je een verkoper voor die 'Magnetic Tiles' verkoopt. Een populair product, maar de concurrentie zit al goed op de top. Zonder de juiste data en Ranking AI is het bijna onmogelijk om nog op te vallen. Hier is een voorbeeld van hoe AI het verschil maakt voor een verkoper die vastzat op pagina 5 voor keyword 'magnetic tiles'.</p>
                     
                     <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg border mb-6">
-                        <h4 className="font-semibold text-lg mb-3">📊 Voor AI-optimalisatie:</h4>
+                        <h4 className="font-semibold text-lg mb-3">Voor AI-optimalisatie:</h4>
                         <div className="space-y-2 text-sm">
-                            <div><strong>Producttitel:</strong> "iPhone hoesje zwart silicone beschermhoes"</div>
-                            <div><strong>Ranking:</strong> Positie #47 voor "iPhone hoesje"</div>
-                            <div><strong>Maandelijkse verkopen:</strong> 23 stuks</div>
-                            <div><strong>Organic traffic:</strong> 156 bezoekers/maand</div>
+                            <div><strong>Producttitel:</strong> "Magnetic tiles voor kinderen - 60 stuks"</div>
+                            <div><strong>Ranking:</strong> Positie #47 voor "magnetic tiles"</div>
+                            <div><strong>Maandelijkse verkopen:</strong> 12 stuks</div>
+                            <div><strong>Organic traffic:</strong> 210 impressies/maand</div>
                         </div>
                     </div>
 
                     <div className="bg-green-50 dark:bg-green-950/20 p-6 rounded-lg border border-green-200 dark:border-green-800 mb-6">
-                        <h4 className="font-semibold text-lg mb-3">🎯 AI analyseerde en vond:</h4>
+                        <h4 className="font-semibold text-lg mb-3">Ranking AI analyseerde en vond:</h4>
                         <div className="space-y-3">
-                            <div>🔍 <strong>Database scan:</strong> Uit 12+ miljoen keywords identificeerde AI "schokbestendig", "draadloos laden" als high-impact</div>
-                            <div>📈 <strong>Competitor analyse:</strong> Top-performers gebruiken "premium silicone" en "compatibel" voor hogere rankings</div>
-                            <div>⚡ <strong>SEO impact berekening:</strong> Nieuwe keyword-combinatie zou ranking met 15+ posities verbeteren</div>
-                            <div>🎨 <strong>Data-gedreven titel:</strong> Optimale keyword-dichtheid gebaseerd op best-performers</div>
+                            <div>🔍 <strong>Database scan:</strong> Uit 12+ miljoen keywords identificeerde AI 'Montessori', 'constructie speelgoed', 'bouwstenen' en 'educatief' als high-impact zoektermen.</div>
+                            <div>📈 <strong>Competitor analyse:</strong> Top-performers gebruiken 'magnetische bouwstenen' en specificeren de doelgroep (bijv. 'speelgoed 8 jaar') voor hogere rankings.</div>
                         </div>
                     </div>
 
                     <div className="bg-blue-50 dark:bg-blue-950/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mb-6">
-                        <h4 className="font-semibold text-lg mb-3">🚀 Na AI-optimalisatie (2 weken later):</h4>
+                        <h4 className="font-semibold text-lg mb-3">🚀 Na Ranking AI-optimalisatie</h4>
                         <div className="space-y-2 text-sm">
-                            <div><strong>Nieuwe titel:</strong> "iPhone 14 Hoesje Schokbestendig - Premium Silicone Case Draadloos Laden MagSafe Compatibel"</div>
-                            <div><strong>Ranking:</strong> Positie #3 voor "iPhone hoesje" + #1 voor long-tail keywords</div>
-                            <div><strong>Maandelijkse verkopen:</strong> 127 stuks (+452% groei)</div>
-                            <div><strong>Organic traffic:</strong> 1.247 bezoekers/maand (+699% groei)</div>
+                            <div><strong>Nieuwe titel (merknaam weggelaten):</strong> "Magnetic Tiles - 60 Stuks - Montessori Constructie Speelgoed  - Educatieve Magnetische Tegels voor Kinderen - Magnetische Bouwstenen"</div>
+                            <div><strong>Ranking:</strong> Positie #4 voor "magnetic tiles" + verbeteringen voor andere keywords zoals 'educatieve speelgoed'</div>
+                            <div><strong>Maandelijkse verkopen:</strong> 105 stuks (+775% groei)</div>
                         </div>
                     </div>
 
-                    <p className="text-lg text-foreground mb-6">Het mooie? Deze klant hoefde zelf geen onderzoek te doen, geen Excel-sheets bij te houden, en geen uren te spenderen aan het uitproberen van titels. De AI deed het zware werk, hij zag alleen de resultaten.</p>
+                    <p className="text-lg text-foreground mb-6">Het mooie? De verkoper hoefde zelf geen uren te besteden aan handmatig onderzoek en listings van concurrenten te bekijken. De RankingAI deed het zware werk en de resultaten volgden.</p>
 
-                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Waarom AI nu cruciaal is (en over 6 maanden te laat)</h2>
+                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Waarom je NU écht moet instappen op AI en niet later</h2>
                     <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">We zitten in een kantelpunt. De early adopters van AI-tools krijgen nu een voorsprong die moeilijk in te halen is. Over 6 maanden gebruiken ook je concurrenten AI - dan is je voordeel weg.</p>
+                    <p className="text-lg text-foreground mb-6">We zitten in een kantelpunt. De early adopters van AI-tools krijgen nu een voorsprong die moeilijk in te halen is.</p>
                     
                     <div className="bg-purple-50 dark:bg-purple-950/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">⏰ De AI-adoptie curve op bol.com:</h4>
@@ -318,7 +361,7 @@ export default function BlogPostPage() {
                             <div className="flex gap-3">
                                 <div className="flex-shrink-0 w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold">6m</div>
                                 <div>
-                                    <h5 className="font-semibold text-orange-600 dark:text-orange-400">Early majority (30% van verkopers)</h5>
+                                    <h5 className="font-semibold text-orange-600 dark:text-orange-400">Early majority (25% van verkopers)</h5>
                                     <p className="text-sm text-foreground/80">AI wordt mainstream, voordeel wordt kleiner</p>
                                 </div>
                             </div>
@@ -332,7 +375,7 @@ export default function BlogPostPage() {
                         </div>
                     </div>
 
-                    <p className="text-lg text-foreground mb-6">De vraag is niet of AI de toekomst van bol.com verkopen is - dat is het al. De vraag is of je een early adopter wordt en het voordeel pakt, of dat je straks probeert bij te benen wanneer het te laat is.</p>
+                    <p className="text-lg text-foreground mb-6">De vraag is niet of AI de toekomst van bol.com verkopen is, dat is het al. De vraag is of je een early adopter wordt en het voordeel pakt, of dat je straks probeert bij te benen wanneer het te laat is.</p>
                     
                     <div className="bg-green-50 dark:bg-green-950/20 p-6 rounded-lg border border-green-200 dark:border-green-800 mb-6">
                         <h4 className="font-semibold text-lg mb-3">🎯 Waarom nu starten het slimste is:</h4>
@@ -346,24 +389,7 @@ export default function BlogPostPage() {
 
                
 
-                    <h2 className="text-2xl sm:text-3xl font-semibold mt-10">Praktische tips om vandaag te beginnen</h2>
-                    <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
-                    <p className="text-lg text-foreground mb-6">Je hoeft niet te wachten tot je alle ins en outs van AI begrijpt. Start klein, leer terwijl je doet, en schaal op als je resultaten ziet. Hier zijn 3 concrete stappen voor vandaag:</p>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div className="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                            <h4 className="font-semibold text-lg mb-3">1️⃣ Start met je best verkopende product</h4>
-                            <p className="text-sm">Kies het product waar je al verkopen mee hebt. AI kan dan snel analyseren wat werkt en wat beter kan.</p>
-                        </div>
-                        <div className="p-6 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-800">
-                            <h4 className="font-semibold text-lg mb-3">2️⃣ Laat AI je titel optimaliseren</h4>
-                            <p className="text-sm">Upload je huidige titel, laat de AI een betere versie maken, en test het verschil in traffic.</p>
-                        </div>
-                        <div className="p-6 bg-purple-50 dark:bg-purple-950/20 rounded-lg border border-purple-200 dark:border-purple-800">
-                            <h4 className="font-semibold text-lg mb-3">3️⃣ Monitor en schaal op</h4>
-                            <p className="text-sm">Zie je resultaten? Voeg meer producten toe. AI wordt slimmer naarmate het meer data heeft.</p>
-                        </div>
-                    </div>
 
                     <div className="mt-16 pt-10 border-t border-border text-center">
                         <h3 className="text-2xl font-semibold">Klaar om je concurrenten voorbij te streven met AI?</h3>
