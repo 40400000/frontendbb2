@@ -98,7 +98,6 @@ export function Footer() {
               <li>KVK 89112393</li>
               <li>BTW NL004693041B93</li>
 
-              <li>Het Schip 237, 7325NM, Apeldoorn</li>
 
 
             </ul>

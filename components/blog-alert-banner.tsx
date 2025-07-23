@@ -38,9 +38,8 @@ export function BlogAlertBanner() {
             </div>
             {/* Mobile: show "Educatie" prefix and shortened title */}
             <div className="md:hidden flex items-center gap-3 flex-1">
-              <span className="text-foreground/80 font-medium">Educatie</span>
               <span className="text-foreground line-clamp-1 group-hover:text-foreground/80 transition-colors">
-                Verkopen op bol.com in het AI tijdperk
+                Bol partner in het AI tijdperk
               </span>
             </div>
             {/* Desktop: show full title */}
