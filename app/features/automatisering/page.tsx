@@ -260,22 +260,22 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
               <div className="absolute top-[36%] sm:top-[11%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden4.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden5.png"
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
                   quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
+                  className="relative rounded-lg"
                 />
               </div>
               <div className="absolute top-[92%] sm:top-[70%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails3.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails4.png"
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
                   quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
+                  className="relative rounded-lg"
                 />
               </div>
               {/* Ranking insights graph */}
@@ -409,7 +409,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
               <div className="absolute top-[89%] sm:top-[0%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/BTW-AANGIFTE-A9lWkyaqM7TBPlTmmCG5YRNzU1J8xl.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BTW-AANGIFTE4.png"
                   alt="Product prestaties screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio

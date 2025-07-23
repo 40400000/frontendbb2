@@ -150,117 +150,80 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
         </section>
 
               {/* Moved Bleed Background Section - Inline Styling */}
-              <section data-navbar-mode="light" id="bolbaas-database" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2400px] sm:min-h-[2650px]"> {/* Further increased section height */}
+              <section data-navbar-mode="dark" id="bolbaas-database" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2900px]  sm:min-h-[3000px]"> {/* Further increased section height */}
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
-              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
-                {/* This relative container holds the light line elements */}
+              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-border"> {/* Higher z-index & Added borders */}
+                {/* This relative container holds the dark line elements */}
                 <div className="relative h-full max-w-full mx-auto">
-                  {/* Light Line between cols 1 & 2 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
-                  <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                  {/* Dark Line between cols 1 & 2 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-border"></div> {/* Standard border color */}
+                  {/* Dark Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
+                  <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-border"></div> {/* Standard border color */}
+                  {/* Dark Additional divider line between cols 3 & 4 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-border"></div> {/* Standard border color */}
                 </div>
               </div>
             </div> {/* End centering wrapper */}
 
-            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
+            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-black"></div>
 
             
             
             
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-black"></div>
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-white"></div>
             <div className="container w-full relative z-90 mb-4"> {/* Container for alignment, added bottom margin */}
-              <h2 className="text-6xl font-semibold text-black z-90">Bolbaas Database</h2>
+              <h2 className="text-6xl font-semibold text-white z-90">Bolbaas Database</h2>
             </div>
             {/* Container centers content normally ON TOP of the background */}
-            <div className="relative z-60"> {/* REMOVED container padding */}
+                          <div className="relative z-60"> {/* REMOVED container padding */}
               {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
               {/* Add vertical gap between rows */}
               <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
 
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-black row-span-2 z-80 relative"> {/* Span container across two rows */}
+                {/* Row 1, Column 1: Left Text (25%) */}
+                <div className="text-white row-span-2 z-80 relative"> {/* Span container across two rows */}
                   <p className="mb-4 text-base">Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
                   <div className="w-full">
                     {/* Moved Feature Set 1 into first column */}
                     <div className="sm:mt-30 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">12 MILJOEN GEANALYSEERDE KEYWORDS</p>
-                      <h3 className="font-semibold text-black my-3">Zie kansen met onze keyword database. Analyseer zichtbaarheid</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
+                      <p className="text-sm text-gray-400 mb-1">12 MILJOEN GEANALYSEERDE KEYWORDS</p>
+                      <h3 className="font-semibold text-white my-3">Zie kansen met onze keyword database. Analyseer zichtbaarheid</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
                         <li>Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campagne strategieën.</li>
                       </ul>
                     </div>
                     <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
                         {/* Original Content - Slides up on hover */}
                         <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
                           Gesprek inplannen {/* Updated text */}
                           <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
                         </span>
                         {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
                           Gesprek inplannen {/* Updated text */}
                           <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
                         </div>
                       </div>
                     </Link>
-
-                    <div className="mt-85 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">MILJARDEN DATAPUNTEN</p>
-                      <h3 className="font-semibold text-black my-3">Zie trends, mogelijkheden en kansen van keywords</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Zomer of winter keywords? Tijdelijke hype of langdurige trends? Zie het hele beeld. Bekijk topconcurrenten en trends om strategieën te verbeteren.</li>
-                      </ul>
-                    </div>
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </div>
-                      </div>
-                    </Link>
-                    {/* Moved Feature Set 2 into first column */}
-                    <div className="mt-85 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">CPC TRACKER</p>
-                      <h3 className="font-semibold text-black my-3">Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod.</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst. </li>
-                      </ul>
-                    </div>
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </div>
-                      </div>
-                    </Link>
-
-
                   </div>
                 </div>
-                {/* Row 1 placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
+                {/* Row 1, Columns 2-4: First Image spanning 3 columns */}
+                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[75%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen3.png"
+                      alt="Database screenshot"
+                      width={960}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
 
                 {/* Row 2, Column 1: Empty */}
                 <div></div>
@@ -294,49 +257,248 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
 
 
               </div> {/* End grid */}
+              {/* NEW 4-column feature section */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white mt-24 py-0 border-t border-b border-border items-stretch">
+                                {/* Column 1 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Search className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-blue-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">01</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Verborgen keyword kansen</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Missen van winstgevende long-tail keywords die concurrenten niet zien</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Ontdek verborgen keywords met hoge potentie</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">12M+ Geanalyseerde Keywords</div>
+                      <div className="text-xs text-zinc-500">Grootste database voor Bol</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-purple-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">99.5% Relevante Zoektermen</div>
+                      <div className="text-xs text-zinc-500">Bol klanten dekking</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 2 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Target className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">02</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Market gaps identificeren</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Niet weten waar vraag groter is dan aanbod</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Vind niches met hoge vraag en lage concurrentie</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-500 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div>
+                        <div className="text-sm font-medium text-white mb-1">Vraag vs aanbod</div>
+                        <div className="text-xs text-zinc-500">Listing en concurrentie aantallen</div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+ 
+                      </div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-cyan-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Brandshelf (SoS) Analyse</div>
+                      <div className="text-xs text-zinc-500">Bekijk welke brands concurreren</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 3 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-green-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <LineChart className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-green-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">03</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Trends voorspellen</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Achter de feiten aanlopen bij marktveranderingen</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Spot opkomende trends voordat ze mainstream worden</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-green-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Trends voorspellen</div>
+                      <div className="text-xs text-zinc-500">Zomer & winter patronen</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">4 Jaar Historische Volume Data</div>
+                      <div className="text-xs text-zinc-500">Complete geschiedenis</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 4 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-red-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Sparkles className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-red-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">04</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Slimmere campagnes</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Verlies van zichtbaarheid en winst door inefficiënte biedstrategieën</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Win meer clicks en verlaag je ACoS</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-red-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">CPC Tracker</div>
+                      <div className="text-xs text-zinc-500">Real-time en historische biedingen</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-green-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">ACoS algoritme</div>
+                      <div className="text-xs text-zinc-500">Automatische schatting van ACoS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+                                            {/* Remaining Feature Blocks */}
+               <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-white mt-4">
+                 {/* First section: MILJARDEN DATAPUNTEN */}
+                 <div className="text-white z-80 relative">
+                   <div className="w-full">
+                     <div className="sm:mt-60 z-80 relative pt-10">
+                      <p className="text-sm text-gray-400 mb-1">MILJARDEN DATAPUNTEN</p>
+                      <h3 className="font-semibold text-white my-3">Zie trends, mogelijkheden en kansen van keywords</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Zomer of winter keywords? Tijdelijke hype of langdurige trends? Zie het hele beeld. Bekijk topconcurrenten en trends om strategieën te verbeteren.</li>
+                      </ul>
+                    </div>
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                {/* Second Image positioned to the right */}
+                <div className="flex justify-center sm:justify-start sm:items-start pointer-events-none sm:ml-[17%] sm:-mr-[40vw]">
+                  <div className="w-full sm:w-[75%] h-auto">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keywordinsight_1-ADedysDniKyY4UqEhPjceWuLmH0Wu1.png"
+                      alt="Keyword insights screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+                
+                {/* Second section: CPC TRACKER */}
+                <div className="text-white z-80 relative mt-10 sm:mt-60">
+                  <div className="w-full">
+                    <div className=" z-80 relative pt-10">
+                      <p className="text-sm text-gray-400 mb-1">CPC TRACKER</p>
+                      <h3 className="font-semibold text-white my-3">Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod.</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst. </li>
+                      </ul>
+                    </div>
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                {/* Third Image positioned to the right */}
+                <div className="flex justify-center sm:justify-start sm:items-start pointer-events-none sm:ml-[17%] sm:-mr-[40vw] sm:mt-40">
+                  <div className="w-full sm:w-[75%] h-auto">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/average-bid-IoTgFcZkwj9mpwVRyYlbtEZd9EbqEx.png"
+                      alt="Average Bid screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
               {/* Divider title between steps */}
               
               {/* End dynamic label */}
-     
-              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[23%] sm:top-[0%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Group%203%20%283%29-qsyBf8B9TMI81f2pRqFiVA6OML8t7b.png"
-                  alt="Bestellingen screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
-                />
-              </div>
-              <div className="absolute top-[58.5%] sm:top-[40%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/keywordinsight_1-ADedysDniKyY4UqEhPjceWuLmH0Wu1.png"
-                  alt="Bestellingen screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
-                />
-              </div>
-              {/* NEW Average Bid Image */}
-              <div className="absolute top-[95%] sm:top-[86%] sm:right-[-10%] w-full sm:w-[65%] h-auto z-70 pointer-events-none"> {/* Adjusted top and width */}
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/average-bid-IoTgFcZkwj9mpwVRyYlbtEZd9EbqEx.png"
-                  alt="Average Bid screenshot" // Descriptive alt text
-                  width={1200} // Keep large for quality scaling
-                  height={960} // Keep based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Consistent styling
-                />
-              </div>
+
+
               {/* Ranking insights graph */}
    
 
             </div> {/* End container */}
 
             {/* NEW Text Block at the bottom */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[85%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[85%] w-full sm:w-[50%] z-80 text-left text-white space-y-6 hidden sm:block"> {/* Added text-white and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Verhoog zichtbaarheid, verlaag ACoS</h2>
               <p className="text-base">
                 Bolbaas analyseert dagelijkse miljoenen keywords en miljarden data punten. 
@@ -344,17 +506,17 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
             </div>
 
             {/* NEW Buttons container at the bottom */}
-            <div className="absolute sm:left-[25%] sm:top-[92%] top-[94%] w-full sm:w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
+            <div className="absolute sm:left-[25%] sm:top-[92%] top-[94%] w-full sm:w-[50%] z-80 grid-cols-2 text-white hidden sm:grid"> {/* Adjusted top, added text-white */}
               {/* Button 1 in First Column */}
-              <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
+              <div className="border-t border-b border-border"> {/* Added border-r, changed border color */}
                 <Link href="/prijzen" passHref>
                   <div className="group relative w-full text-left cursor-pointer overflow-hidden">
                     {/* Original Content */}
-                    <span className="block py-6 pl-4 transition-all border-r border-gray-200 sm:border-r-0 duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                    <span className="block py-6 pl-4 transition-all border-r border-border sm:border-r-0 duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
                       Abonnementen bekijken
                     </span>
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                    <div className="absolute inset-0 bg-white text-black py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to white */}
                       Abonnementen bekijken
                     </div>
                   </div>
@@ -362,7 +524,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
               </div>
 
               {/* Button 2 in Second Column */}
-              <div className="border-t border-b border-gray-200"> {/* Changed border color */}
+              <div className="border-t border-b border-border"> {/* Changed border color */}
                 <Link href="/contact" passHref>
                   <div className="group relative w-full text-left cursor-pointer overflow-hidden">
                     {/* Original Content */}
@@ -371,7 +533,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                       <MdOutlineArrowOutward className="h-5 w-5" />
                     </span>
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
+                    <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to white */}
                       Gesprek inplannen
                       <MdOutlineArrowOutward className="h-5 w-5" />
                     </div>
@@ -380,7 +542,10 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
               </div>
             </div>
 
+            
+
           </section> {/* End bleed section */}       
+
 
           {/* Removed full-width gradient section */}
 

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: "Bolbaas - data en automatisering voor bol partners",
-      template: "%s - Bolbaas",
+      template: "%s",
     },
     description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
     url: new URL('https://bolbaas.nl'), // Should match metadataBase or be the canonical URL
