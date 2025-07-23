@@ -638,23 +638,6 @@ export function NavigationMenuDemo() {
   }, [pathname]);
 
   useEffect(() => {
-    if (isBlogPostPage) {
-      // On blog pages, the theme is controlled by BlogThemeHandler.
-      // We just need to set the navbarMode based on the theme from next-themes.
-      setNavbarMode(theme === 'dark' ? 'dark' : 'light');
-      const headerElement = document.getElementById('main-header');
-      if (headerElement) {
-        if (theme === 'dark') {
-          headerElement.classList.remove('bg-white', 'text-black');
-          headerElement.classList.add('bg-background', 'text-white');
-        } else {
-          headerElement.classList.remove('bg-background', 'text-white');
-          headerElement.classList.add('bg-white', 'text-black');
-        }
-      }
-      return; // Skip the rest of the scroll-based logic
-    }
-
     const headerElement = document.getElementById('main-header');
     if (!headerElement) {
         console.warn("main-header element not found for scroll handling.");
@@ -672,24 +655,37 @@ export function NavigationMenuDemo() {
         setHeaderBottomPosition(headerBottom);
       }
 
-      const lightSections = document.querySelectorAll<HTMLElement>('[data-navbar-mode="light"]');
-      let isOverLightSection = false;
-      lightSections.forEach((section) => {
-        const sectionRect = section.getBoundingClientRect();
-        if (sectionRect.top <= headerBottom && sectionRect.bottom >= headerBottom) {
-          isOverLightSection = true;
-        }
-      });
-
-      const newMode = isOverLightSection ? 'light' : 'dark';
-      if (navbarMode !== newMode) {
-        setNavbarMode(newMode);
-        if (newMode === 'light') {
-          headerElement.classList.remove('bg-background', 'text-white');
-          headerElement.classList.add('bg-white', 'text-black');
-        } else {
+      if (isBlogPostPage) {
+        // On blog pages, theme is driven by system preference via BlogThemeHandler
+        setNavbarMode(theme === 'dark' ? 'dark' : 'light');
+        if (theme === 'dark') {
           headerElement.classList.remove('bg-white', 'text-black');
           headerElement.classList.add('bg-background', 'text-white');
+        } else {
+          headerElement.classList.remove('bg-background', 'text-white');
+          headerElement.classList.add('bg-white', 'text-black');
+        }
+      } else {
+        // On other pages, theme changes based on scrolling over light sections
+        const lightSections = document.querySelectorAll<HTMLElement>('[data-navbar-mode="light"]');
+        let isOverLightSection = false;
+        lightSections.forEach((section) => {
+          const sectionRect = section.getBoundingClientRect();
+          if (sectionRect.top <= headerBottom && sectionRect.bottom >= headerBottom) {
+            isOverLightSection = true;
+          }
+        });
+
+        const newMode = isOverLightSection ? 'light' : 'dark';
+        if (navbarMode !== newMode) {
+          setNavbarMode(newMode);
+          if (newMode === 'light') {
+            headerElement.classList.remove('bg-background', 'text-white');
+            headerElement.classList.add('bg-white', 'text-black');
+          } else {
+            headerElement.classList.remove('bg-white', 'text-black');
+            headerElement.classList.add('bg-background', 'text-white');
+          }
         }
       }
     };
@@ -862,7 +858,7 @@ export function NavigationMenuDemo() {
     <div
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleMouseLeaveDesktopMenu}
-        className="hidden sm:block fixed left-0 right-0 bg-background shadow-lg z-30 overflow-hidden"
+        className="dark hidden sm:block fixed left-0 right-0 bg-background shadow-lg z-30 overflow-hidden"
         style={{ top: `${headerBottomPosition}px` }}
     >
         <div className="container mx-auto">
