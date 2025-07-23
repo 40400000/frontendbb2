@@ -260,7 +260,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
               <div className="absolute top-[36%] sm:top-[11%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/facturenuploaden-D1ctHKHU7dEgDV1tJPokJTIgIZSpHj.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden4.png"
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
@@ -270,7 +270,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               </div>
               <div className="absolute top-[92%] sm:top-[70%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
                 <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/automatiseringemails-RJgmyQy8b1KleXBT53jLvpxYZMlj7B.png"
+                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails3.png"
                   alt="Bestellingen screenshot"
                   width={1200} // Adjust width as needed, larger for better quality scaling down
                   height={960} // Adjust height based on aspect ratio
