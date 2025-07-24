@@ -33,7 +33,7 @@ export default function BlogPostPage() {
   const post = {
     title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent",
     author: "Thijmen Dreef", 
-    date: "24 juli 2025",
+    date: "23 juli 2025",
   };
 
   return (

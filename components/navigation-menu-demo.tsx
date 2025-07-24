@@ -317,8 +317,8 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                         BINNENKORT
                       </span>
                     ) : item.highlight && (
-                      <span className="inline-flex items-center rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 mb-1 self-start">
-                        NIEUW
+                      <span className="inline-flex items-center rounded-full bg-red-200 px-2 py-0.5 text-xs font-medium text-red-800 mb-1 self-start">
+                        Nieuwe CPC Tracker
                       </span>
                     )}
                     <div className={cn(

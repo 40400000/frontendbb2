@@ -44,7 +44,7 @@ export function AutomatiseringClientFeatures() {
           <div className="sticky top-0 z-[60] container px-0 py-16 md:py-24 lg:py-32"> {/* Sticky Container */}
             {/* Heading placed above the flex row */}
             <div className="relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Container for heading, matching left col width */}
-               <h2 className="text-3xl font-semibold mb-6">Andere features</h2>
+               <h2 className="text-3xl font-semibold mb-6">Jouw copiloot voor Bol</h2>
             </div>
             <div className="flex flex-col md:flex-row items-start gap-8 md:justify-between"> {/* Flex Row for Content and Image */}
               {/* Left side: Text content for Baaspilot - Add ref here */}

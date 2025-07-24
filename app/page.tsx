@@ -9,6 +9,7 @@ import {
   Search,
   FileText,
   Target,
+  Sparkles,
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 // import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
@@ -76,9 +77,11 @@ export default function HomePage() {
                   De zekerheid van data en automatisering voor bol partners.
                 </h1>
                 {/* Sub-headline */}
-                <p className="w-[71.4%]">
-                  Alles wat je nodig hebt, in één AI-gedreven platform.
-                </p>
+                <div className="mb-8">
+                  <p className="text-base font-medium text-white leading-relaxed">
+                    De software die zorgt voor winstgevende zichtbaarheid én automatisering voor Bol partners.
+                  </p>
+                </div>
               </div>
               {/* Button Container - Add t/b borders, keep left padding */}
               <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
@@ -128,6 +131,8 @@ export default function HomePage() {
           </div>
         </section>
 
+       
+
         {/* Features Grid - Aligned with overlay, uses section bottom border & container L/R borders
         <section className="relative z-0 w-full border-b border-border">
           <div className="container relative px-0 z-0">
@@ -156,19 +161,259 @@ export default function HomePage() {
         </section>
         */}
 
-        {/* Gradient Visual Section - Reduced bottom padding */}
-        <section className="relative z-10 w-full">
-
-        </section>
-
-        {/* Motivational Quote Section - Adjusted padding, bold text, line break */}
-        <section className="w-full pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
+<section className="w-full pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
             <div className="container text-center relative z-[70]">
               <blockquote className="max-w-4xl mx-auto">
                 
               </blockquote>
             </div>
           </section>
+
+
+         {/* New Three Column Section */}
+         <section className="relative w-full pb-16 md:pb-24 lg:pb-32">
+          {/* Full-width background element */}
+          <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+
+          {/* Container centers content normally ON TOP of the background */}
+          <div className="container relative z-[80]">
+            {/* Three column grid: 25% - 50% - 25% */}
+            <div className="grid grid-cols-4 gap-0">
+              {/* Left column - 25% (1 out of 4 columns) */}
+              <div className="bg-black text-white p-8 col-span-4 sm:col-span-1 order-1">
+                {/* Logo and primary tagline */}
+                <div className="mb-8">
+                  <Image
+                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head-NO6JxOe2DYaItWOrqQqPrDhwgEaN5z.png"
+                    alt="Bolbaas Logo"
+                    width={200}
+                    height={54}
+                    className="mb-4"
+                  />
+                  <h3 className="text-lg font-medium text-white">
+                    Jouw AI-platform voor bol.com
+                  </h3>
+                </div>
+
+                {/* Secondary tagline */}
+                <div className="mb-8">
+                  <p className="text-base font-medium text-white leading-relaxed">
+                    De software die zorgt voor winstgevende zichtbaarheid én automatisering voor Bol partners.
+                  </p>
+                </div>
+
+                {/* CTA Button */}
+                <div className="mt-auto">
+                  <Link href="/contact" passHref>
+                    <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                      {/* Original Content - Slides up on hover */}
+                      <span className="font-semibold flex justify-between items-center py-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Platform ontdekken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      {/* Hover Overlay - Slides in from bottom on hover */}
+                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Platform ontdekken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Middle column - 50% (2 out of 4 columns) */}
+              <div className="col-span-4 sm:col-span-2 bg-black text-white p-8 order-2">
+                <h3 className="text-xl font-semibold mb-8 text-white">Problemen die we oplossen</h3>
+                
+                {/* Pain points and solutions grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {/* Pain point 1 */}
+                  <Link href="/features/tools#bolbaas-database" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Verkeerde keywords</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Geld verliezen aan biedingen zonder te weten welke keywords écht werken</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ 12M+ keyword database met CPC tracker</span>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Pain point 2 */}
+                  <Link href="/features/automatisering" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(34,197,94,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Administratie stress</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Uren kwijt aan handmatig facturen uploaden en emails versturen</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ Magische e-mails en factuur automatisering</span>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Pain point 3 */}
+                  <Link href="/features/tools#ranking-ai" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(168,85,247,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Slechte listings</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Gokken naar wat klanten willen zien en geen conversies krijgen</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ AI analyseert winnende formules</span>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Pain point 4 */}
+                  <Link href="/features/store-prestaties" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(234,179,8,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Geen inzicht</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Niet weten welke producten winst maken en waar je staat</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ Complete prestatie dashboards</span>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Pain point 5 - Baaspilot */}
+                  <Link href="/features/automatisering#baaspilot" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(6,182,212,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Belangrijke events missen</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Te laat weten van listing hijacking, ranking dalingen en andere kritieke wijzigingen</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ Baaspilot AI notificaties</span>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Pain point 6 - Tracking */}
+                  <Link href="/features/tracking" passHref>
+                    <div className="space-y-4 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(239,68,68,0.15)] cursor-pointer">
+                      <h3 className="font-semibold text-white text-lg mb-3 group-hover:text-white transition-colors">Geen inzicht in klantgedrag</h3>
+                      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Niet weten waarom rankings stijgen of dalen, en wat concurrenten doen</p>
+                      <div className="flex items-center text-sm text-white font-medium">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={32} 
+                          height={32} 
+                          className="mr-2 flex-shrink-0"
+                        />
+                        <span>→ Product tracking</span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                {/* Bottom text */}
+                <div className="mt-8 pt-6 border-t border-gray-700">
+                  <p className="text-sm text-gray-400">En nog veel meer problemen die we voor je oplossen...</p>
+                </div>
+              </div>
+              
+              {/* Right column - 25% (1 out of 4 columns) */}
+              <div className="bg-black text-white p-8 hidden sm:block order-3">
+                <h3 className="text-xl font-semibold mb-6 text-white">Abonnementen</h3>
+                
+                {/* Pricing plans */}
+                <div className="space-y-6">
+                  {/* Start Plan */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-base font-medium text-white">Start</h4>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-lg font-semibold text-white">€15</span>
+                        <span className="text-sm text-gray-500 line-through">€29</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-zinc-400">Voor ambitieuze beginners</p>
+                    <p className="text-sm text-white font-medium">→ Automatisering & dashboards</p>
+                    <p className="text-xs text-green-400 font-medium">+ 1 maand gratis</p>
+                  </div>
+
+                  {/* Plus Plan */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-base font-medium text-white">Plus</h4>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-lg font-semibold text-white">€39</span>
+                        <span className="text-sm text-gray-500 line-through">€95</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-zinc-400">Perfecte toolkit voor groei</p>
+                    <p className="text-sm text-white font-medium">→ Ranking AI & keyword database</p>
+                    <p className="text-xs text-green-400 font-medium">+ 1 maand gratis</p>
+                  </div>
+
+                  {/* Pro Plan */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-base font-medium text-white">Pro</h4>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-lg font-semibold text-white">€199</span>
+                        <span className="text-sm text-gray-500 line-through">€450</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-zinc-400">Domineer de markt</p>
+                    <p className="text-sm text-white font-medium">→ Onbeperkt + premium support</p>
+                    <p className="text-xs text-blue-400 font-medium">+ Gesprek inplannen</p>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-8 pt-6 border-t border-gray-700">
+                  <Link href="/prijzen" passHref>
+                    <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                      {/* Original Content - Slides up on hover */}
+                      <span className="font-semibold flex justify-between items-center py-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Alle plannen bekijken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      {/* Hover Overlay - Slides in from bottom on hover */}
+                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Alle plannen bekijken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Motivational Quote Section - Adjusted padding, bold text, line break */}
 
         {/* Moved Bleed Background Section - Inline Styling */}
         
