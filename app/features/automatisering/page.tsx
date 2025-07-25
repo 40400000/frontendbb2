@@ -6,6 +6,8 @@ import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import th
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
 import { AutomatiseringClientFeatures } from "@/components/automatisering-client-features";
+import { ShoppingCart, Sparkles, Upload, Database, ArrowRight, FileText, LineChart, Package, AlertTriangle, Archive, Send } from "lucide-react"; // Added new icons
+import { IoStar } from "react-icons/io5";
 
 export const metadata: Metadata = {
   title: "Automatisering - Bolbaas",
@@ -131,204 +133,324 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
         </section>
 
               {/* Moved Bleed Background Section - Inline Styling */}
-              <section data-navbar-mode="light" id="store-automatisering" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[2000px] sm:min-h-[2200px]"> {/* Further increased section height */}
-            {/* Added wrapper div for centering */}
-            <div className="flex flex-col items-center justify-center h-full">
-              {/* Full-width background element */}
-              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
-                {/* This relative container holds the light line elements */}
-                <div className="relative h-full max-w-full mx-auto">
-                  {/* Light Line between cols 1 & 2 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
-                  <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+              <section data-navbar-mode="light" id="store-automatisering" className="relative w-full py-16 md:py-24 lg:py-32"> {/* Removed min-height */}
+                {/* Added wrapper div for centering */}
+                <div className="flex flex-col items-center justify-center h-full">
+                  {/* Full-width background element */}
+                  <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
+                    {/* This relative container holds the light line elements */}
+                    <div className="relative h-full max-w-full mx-auto">
+                      {/* Light Line between cols 1 & 2 (visible only on sm+) */}
+                      <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                      {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
+                      <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                      {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
+                      <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                    </div>
+                  </div>
+                </div> {/* End centering wrapper */}
+
+                <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
+                <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-black"></div>
+                <div className="container w-full relative z-90 mb-4"> {/* Container for alignment, added bottom margin */}
+                  <h2 className="text-5xl sm:text-6xl font-semibold text-black z-90">Store Automatisering</h2>
                 </div>
-              </div>
-            </div> {/* End centering wrapper */}
-
-            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
-
-            
-            
-            
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-black"></div>
-            <div className="container w-full relative z-90 mb-4"> {/* Container for alignment, added bottom margin */}
-              <h2 className="text-5xl sm:text-6xl font-semibold text-black z-90">Store Automatisering</h2>
-            </div>
-            {/* Container centers content normally ON TOP of the background */}
-            <div className="relative z-60"> {/* REMOVED container padding */}
-              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
-              {/* Add vertical gap between rows */}
-              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
-
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-black ro w-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Geen tijd meer verspillen aan facturen uploaden of BTW-aangiftes maken. Bolbaas regelt dit automatisch, zodat jij kunt focussen op verkopen en groeien.</p>
-                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full">
-                    {/* Moved Feature Set 1 into first column */}
-                    <div className="sm:mt-30 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">BTW FACTUREN</p>
-                      <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                          <li>Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.</li>
-                        </ul>
-                    </div>
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                {/* Container centers content normally ON TOP of the background */}
+                <div className="relative z-60"> {/* REMOVED container padding */}
+                  {/* Feature 1: BTW Facturen */}
+                  <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-black mt-12">
+                    {/* Column 1: Text */}
+                    <div className="text-black z-80 relative">
+                      <div className="w-full">
+                        <div className="sm:mt-10 z-80 relative">
+                          <p className="text-sm text-gray-500 mb-1">BTW FACTUREN</p>
+                          <h3 className="font-semibold text-black my-3">Automatisch BTW facturen uploaden naar bol</h3>
+                          <ul className="space-y-2 text-sm text-black pr-3">
+                            <li>Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.</li>
+                          </ul>
                         </div>
+                        <Link href="/contact" passHref>
+                          <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" >
+                            <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                              Gesprek inplannen
+                              <MdOutlineArrowOutward className="h-5 w-5" />
+                            </span>
+                            <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                              Gesprek inplannen
+                              <MdOutlineArrowOutward className="h-5 w-5" />
+                            </div>
+                          </div>
+                        </Link>
                       </div>
-                    </Link>
-
-                    <div id="email-campagnes" className="scroll-mt-40 mt-85 z-80 relative pt-10">
-                      <p className="text-sm text-gray-500 mb-1">E-MAIL CAMPAGNES</p>
-                      <h3 className="font-semibold text-black my-3">Verhoog reviews en voorkom klantvragen met e-mail campagnes</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.</li>
-                      </ul>
                     </div>
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </div>
+                    {/* Column 2: Image */}
+                    <div className="flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                      <div className="w-full sm:w-[60%] h-auto sm:ml-[30%]">
+                        <Image
+                          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden5.png"
+                          alt="Automatisch BTW facturen uploaden"
+                          width={1200}
+                          height={960}
+                          quality={85}
+                          className="relative rounded-lg"
+                        />
                       </div>
-                    </Link>
-                    {/* Moved Feature Set 2 into first column */}
+                    </div>
+                  </div>
+
+                  {/* 4-Step Process Section for BTW Facturen */}
+                  <div className="relative grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-black mt-20 py-0 border-t border-b border-gray-200 items-stretch">
+                    {/* Step 1 */}
+                    <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-300 ease-out flex flex-col h-full">
+                      <div className="flex items-center mb-4">
+                        <Package className="w-6 h-6 text-gray-400 mr-3 group-hover:text-gray-600 transition-colors" />
+                        <span className="text-xs font-mono text-gray-500 tracking-wider">STAP 01</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-black text-lg mb-2">Bestelling komt binnen</h3>
+                        <p className="text-sm text-gray-600">Een klant bestelt jouw product via bol.</p>
+                      </div>
+                    </div>
+
+                    {/* Step 2 - Bolbaas Step */}
+                    <div className="px-6 py-8 group hover:bg-blue-50/80 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-50/50 shadow-md shadow-blue-500/10">
+                      <div className="flex items-center mb-4">
+                        <Sparkles className="w-6 h-6 text-blue-500 mr-3" />
+                        <span className="text-xs font-mono text-blue-500 tracking-wider">STAP 02</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-blue-900 text-lg mb-2">Bolbaas maakt factuur</h3>
+                        <p className="text-sm text-blue-700">Voor de klant wordt automatisch een BTW factuur gemaakt</p>
+                      </div>
+                      <div className="flex items-center text-sm text-blue-900 font-medium mt-4">
+                        <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                        <span>Geregeld door Bolbaas</span>
+                      </div>
+                    </div>
+
+                    {/* Step 3 - Bolbaas Step */}
+                    <div className="px-6 py-8 group hover:bg-blue-50/80 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-50/50 shadow-md shadow-blue-500/10">
+                      <div className="flex items-center mb-4">
+                        <Upload className="w-6 h-6 text-blue-500 mr-3" />
+                        <span className="text-xs font-mono text-blue-500 tracking-wider">STAP 03</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-blue-900 text-lg mb-2">Upload naar Bol & e-mail</h3>
+                        <p className="text-sm text-blue-700">De factuur wordt geüpload naar bol.com en optioneel naar de klant gemaild.</p>
+                      </div>
+                      <div className="flex items-center text-sm text-blue-900 font-medium mt-4">
+                        <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                        <span>Geregeld door Bolbaas</span>
+                      </div>
+                    </div>
+
+                    {/* Step 4 - Bolbaas Step */}
+                    <div className="px-6 py-8 group hover:bg-blue-50/80 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-50/50 shadow-md shadow-blue-500/10">
+                      <div className="flex items-center mb-4">
+                        <Database className="w-6 h-6 text-blue-500 mr-3" />
+                        <span className="text-xs font-mono text-blue-500 tracking-wider">STAP 04</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-blue-900 text-lg mb-2">Boekhouding bijgewerkt</h3>
+                        <p className="text-sm text-blue-700">Alle facturen worden automatische opgeslagen voor je boekhouding.</p>
+                      </div>
+                      <div className="flex items-center text-sm text-blue-900 font-medium mt-4">
+                        <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                        <span>Geregeld door Bolbaas</span>
+                      </div>
+                    </div>
                     
-                  </div>
-                </div>
-                {/* Row 1 placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
-
-                {/* Row 2, Column 1: Empty */}
-                <div></div>
-
-                {/* Row 2, Column 2: Empty Spacer */}
-                <div></div>
-
-                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
-        
-
-                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
-                {/* <div className="text-gray-300"> ... </div> */}
-                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
-
-                {/* <div className="text-gray-300">
-                  <p className="text-sm text-gray-500 mb-1">03</p>
-                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
-                  </ul>
-                </div>
-
-
-                <div className="text-gray-300 pr-4 md:pr-6">
-                  <p className="text-sm text-gray-500 mb-1">04</p>
-                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
-                  </ul>
-                </div> */}
-
-
-              </div> {/* End grid */}
-              {/* Divider title between steps */}
-              
-              {/* End dynamic label */}
-     
-              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[36%] sm:top-[11%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden5.png"
-                  alt="Bestellingen screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg"
-                />
-              </div>
-              <div className="absolute top-[92%] sm:top-[70%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails4.png"
-                  alt="Bestellingen screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg"
-                />
-              </div>
-              {/* Ranking insights graph */}
-   
-
-            </div> {/* End container */}
-
-            {/* NEW Text Block at the bottom */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[78%] sm:top-[80%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
-              <h2 className="text-4xl md:text-5xl font-semibold">Focus op ondernemen, niet op boekhouding.</h2>
-              <p className="text-base">
-                Automatisering die écht werkt. Facturen uploaden, BTW berekenen, e-mails versturen - alles gebeurt automatisch op de achtergrond. Zo heb je meer tijd voor echt ondernemen.
-              </p>
-            </div>
-
-            {/* NEW Buttons container at the bottom */}
-            <div className="absolute sm:left-[25%] top-[90%] w-full sm:w-[50%] z-80 grid grid-cols-2 text-black"> {/* Adjusted top, added text-black */}
-              {/* Button 1 in First Column */}
-              <div className="border-t border-b border-gray-200"> {/* Added border-r, changed border color */}
-                <Link href="/prijzen" passHref>
-                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-                    {/* Original Content */}
-                    <span className="block py-6 pl-4 border-r border-gray-200 sm:border-r-0 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                      Lidmaatschappen bekijken
-                    </span>
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
-                      Lidmaatschappen bekijken
+                    {/* Step Arrows for desktop */}
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/4 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-3/4 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
                     </div>
                   </div>
-                </Link>
-              </div>
 
-              {/* Button 2 in Second Column */}
-              <div className="border-t border-b border-gray-200"> {/* Changed border color */}
-                <Link href="/contact" passHref>
-                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
-                    {/* Original Content */}
-                    <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                      Gesprek inplannen
-                      <MdOutlineArrowOutward className="h-5 w-5" />
-                    </span>
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed overlay background to black */}
-                      Gesprek inplannen
-                      <MdOutlineArrowOutward className="h-5 w-5" />
+
+                  {/* Feature 2: Email Campagnes */}
+                  <div className="grid grid-cols-1 sm:grid-cols-[75%_25%] gap-x-0 gap-y-6 text-black mt-24">
+                    {/* Column 1: Image */}
+                    <div className="flex justify-center sm:justify-start sm:ml-[-6vw] order-last sm:order-first pointer-events-none">
+                        <div className="w-full sm:w-[60%] h-auto sm:mr-[30%]">
+                            <Image
+                                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails4.png"
+                                alt="E-mail campagnes automatisering"
+                                width={1200}
+                                height={960}
+                                quality={85}
+                                className="relative rounded-lg"
+                            />
+                        </div>
+                    </div>
+                    {/* Column 2: Text */}
+                    <div className="text-black z-80 relative">
+                      <div className="w-full">
+                        <div id="email-campagnes" className="sm:mt-10 z-80 relative">
+                          <p className="text-sm text-gray-500 mb-1">E-MAIL CAMPAGNES</p>
+                          <h3 className="font-semibold text-black my-3">Verhoog reviews en voorkom klantvragen met e-mail campagnes</h3>
+                          <ul className="space-y-2 text-sm text-black pr-3">
+                            <li>Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.</li>
+                          </ul>
+                        </div>
+                        <Link href="/contact" passHref>
+                            <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" >
+                                <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                                    Gesprek inplannen
+                                    <MdOutlineArrowOutward className="h-5 w-5" />
+                                </span>
+                                <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                    Gesprek inplannen
+                                    <MdOutlineArrowOutward className="h-5 w-5" />
+                                </div>
+                            </div>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </Link>
-              </div>
-            </div>
 
-          </section> {/* End bleed section */}       
+                  {/* 4-Step Process Section for E-mail Campagnes */}
+                  <div className="relative grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-black mt-20 py-0 border-t border-b border-gray-200 items-stretch">
+                    {/* Step 1 */}
+                    <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-300 ease-out flex flex-col h-full">
+                      <div className="flex items-center mb-4">
+                        <Package className="w-6 h-6 text-gray-400 mr-3 group-hover:text-gray-600 transition-colors" />
+                        <span className="text-xs font-mono text-gray-500 tracking-wider">STAP 01</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-black text-lg mb-2">Bestelling komt binnen</h3>
+                        <p className="text-sm text-gray-600">Een klant bestelt jouw product via bol.</p>
+                      </div>
+                    </div>
+
+                    {/* Step 2 - Bolbaas Step */}
+                    <div className="px-6 py-8 group hover:bg-blue-50/80 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-50/50 shadow-md shadow-blue-500/10">
+                      <div className="flex items-center mb-4">
+                        <Sparkles className="w-6 h-6 text-blue-500 mr-3" />
+                        <span className="text-xs font-mono text-blue-500 tracking-wider">STAP 02</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-blue-900 text-lg mb-2">Geautomatiseerde e-mail</h3>
+                        <p className="text-sm text-blue-700">Op het juiste moment sturen we een e&#8209;mail met een reviewverzoek.</p>
+                      </div>
+                      <div className="flex items-center text-sm text-blue-900 font-medium mt-4">
+                        <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                        <span>Geregeld door Bolbaas</span>
+                      </div>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-300 ease-out flex flex-col h-full">
+                      <div className="flex items-center mb-4">
+                        <IoStar className="w-6 h-6 text-yellow-500 mr-3 group-hover:text-yellow-600 transition-colors" />
+                        <span className="text-xs font-mono text-gray-500 tracking-wider">STAP 03</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-black text-lg mb-2">Klant laat review achter</h3>
+                        <p className="text-sm text-gray-600">Tevreden klanten delen hun ervaring op bol.com, wat je zichtbaarheid vergroot.</p>
+                        <div className="mt-4 flex items-center space-x-3 rounded-lg border border-gray-200 bg-white p-3 shadow-sm">
+                          <Image
+                            src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/1440x1080a%20%281%29.jpg"
+                            alt="Nieuwe product review"
+                            width={56}
+                            height={56}
+                            className="rounded-md object-cover"
+                          />
+                          <div>
+                            <p className="font-semibold text-sm text-gray-800">Nieuwe product review</p>
+                            <div className="flex items-center mt-0.5">
+                              <IoStar className="w-4 h-4 text-yellow-400" />
+                              <IoStar className="w-4 h-4 text-yellow-400" />
+                              <IoStar className="w-4 h-4 text-yellow-400" />
+                              <IoStar className="w-4 h-4 text-yellow-400" />
+                              <IoStar className="w-4 h-4 text-yellow-400" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 4 - Bolbaas Step */}
+                    <div className="px-6 py-8 group hover:bg-blue-50/80 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-50/50 shadow-md shadow-blue-500/10">
+                      <div className="flex items-center mb-4">
+                        <LineChart className="w-6 h-6 text-blue-500 mr-3" />
+                        <span className="text-xs font-mono text-blue-500 tracking-wider">STAP 04</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-blue-900 text-lg mb-2">Analyseer klantfeedback</h3>
+                        <p className="text-sm text-blue-700">Wij verzamelen en analyseren met AI de feedback om je productprestaties te verbeteren.</p>
+                      </div>
+                      <Link href="/features/store-prestaties" className="flex items-center text-sm text-blue-900 font-medium mt-4 group/link">
+                        <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                        <span className="group-hover/link:underline">Bekijk in Store Prestaties</span>
+                        <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                      </Link>
+                    </div>
+                    
+                    {/* Step Arrows for desktop */}
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/4 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                    <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-3/4 -translate-x-1/2 text-gray-400 bg-white p-2 rounded-full border border-gray-200">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+
+                  {/* Bottom Content Block */}
+                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-black mt-32">
+                    <div />
+                    <div className="sm:col-span-2 text-center space-y-6">
+                        <h2 className="text-4xl md:text-5xl font-semibold">Focus op ondernemen, niet op boekhouding.</h2>
+                        <p className="text-base">
+                        Automatisering die écht werkt. Facturen uploaden, BTW berekenen, e-mails versturen - alles gebeurt automatisch op de achtergrond. Zo heb je meer tijd voor echt ondernemen.
+                        </p>
+                    </div>
+                    <div />
+                  </div>
+
+                  {/* Bottom Buttons */}
+                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-black mt-12">
+                      <div />
+                      <div className="sm:col-span-2 grid grid-cols-2">
+                          <div className="border-t border-b border-gray-200">
+                              <Link href="/prijzen" passHref>
+                                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                                      <span className="block py-6 pl-4 border-r border-gray-200 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                                          Lidmaatschappen bekijken
+                                      </span>
+                                      <div className="absolute inset-0 bg-black text-white py-6 pl-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                          Lidmaatschappen bekijken
+                                      </div>
+                                  </div>
+                              </Link>
+                          </div>
+                          <div className="border-t border-b border-gray-200">
+                              <Link href="/contact" passHref>
+                                  <div className="group relative w-full text-left cursor-pointer overflow-hidden">
+                                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                                          Gesprek inplannen
+                                          <MdOutlineArrowOutward className="h-5 w-5" />
+                                      </span>
+                                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                                          Gesprek inplannen
+                                          <MdOutlineArrowOutward className="h-5 w-5" />
+                                      </div>
+                                  </div>
+                              </Link>
+                          </div>
+                      </div>
+                      <div />
+                  </div>
+                </div> {/* End container */}
+              </section> {/* End bleed section */}       
 
           {/* Removed full-width gradient section */}
 
@@ -405,6 +527,77 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
 
 
               </div> {/* End grid */}
+
+              {/* 4-Step Process Section for BTW Aangifte */}
+              <div className="relative grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white py-0 border-t border-b border-gray-800 items-stretch sm:mt-40">
+                {/* Step 1 - Deadline */}
+                <div className="px-6 py-8 group hover:bg-yellow-900/20 transition-all duration-300 ease-out flex flex-col h-full border border-yellow-500/30 bg-yellow-900/10 shadow-md shadow-yellow-500/10">
+                  <div className="flex items-center mb-4">
+                    <AlertTriangle className="w-6 h-6 text-yellow-500 mr-3" />
+                    <span className="text-xs font-mono text-yellow-400 tracking-wider">STAP 01</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-yellow-200 text-lg mb-2">Deadline BTW komt eraan</h3>
+                    <p className="text-sm text-yellow-300">Je ontvangt een melding dat de BTW-deadline nadert.</p>
+                  </div>
+                </div>
+
+                {/* Step 2 - Bolbaas stelt op */}
+                <div className="px-6 py-8 group hover:bg-blue-900/30 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-900/20 shadow-md shadow-blue-500/10">
+                  <div className="flex items-center mb-4">
+                    <FileText className="w-6 h-6 text-blue-400 mr-3" />
+                    <span className="text-xs font-mono text-blue-400 tracking-wider">STAP 02</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-blue-200 text-lg mb-2">Bolbaas stelt BTW-aangifte op</h3>
+                    <p className="text-sm text-blue-300">Wij stellen een complete BTW-aangifte voor bol op.</p>
+                  </div>
+                  <div className="flex items-center text-sm text-blue-200 font-medium mt-4">
+                    <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                    <span>Geregeld door Bolbaas</span>
+                  </div>
+                </div>
+
+                {/* Step 3 - Bewaren */}
+                <div className="px-6 py-8 group hover:bg-blue-900/30 transition-all duration-300 ease-out flex flex-col h-full border border-blue-500/20 bg-blue-900/20 shadow-md shadow-blue-500/10">
+                  <div className="flex items-center mb-4">
+                    <Archive className="w-6 h-6 text-blue-400 mr-3" />
+                    <span className="text-xs font-mono text-blue-400 tracking-wider">STAP 03</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-blue-200 text-lg mb-2">Bolbaas bewaart alles 7 jaar</h3>
+                    <p className="text-sm text-blue-300">Al jouw facturen en aangiftes worden veilig bewaard voor de Belastingdienst.</p>
+                  </div>
+                  <div className="flex items-center text-sm text-blue-200 font-medium mt-4">
+                    <Image src="/icon-512x512.png" alt="Bolbaas logo" width={24} height={24} className="mr-2"/>
+                    <span>Geregeld door Bolbaas</span>
+                  </div>
+                </div>
+
+                {/* Step 4 - Indienen */}
+                <div className="px-6 py-8 group hover:bg-gray-800 transition-all duration-300 ease-out flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Send className="w-6 h-6 text-gray-400 mr-3 group-hover:text-gray-300 transition-colors" />
+                    <span className="text-xs font-mono text-gray-500 tracking-wider">STAP 04</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-lg mb-2">Binnen minuten indienen</h3>
+                    <p className="text-sm text-gray-400">Je controleert de aangifte en dient deze in bij de Belastingdienst.</p>
+                  </div>
+                </div>
+
+                {/* Step Arrows for desktop */}
+                <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/4 -translate-x-1/2 text-gray-600 bg-black p-2 rounded-full border border-gray-700">
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+                <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-gray-600 bg-black p-2 rounded-full border border-gray-700">
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+                <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-3/4 -translate-x-1/2 text-gray-600 bg-black p-2 rounded-full border border-gray-700">
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+              </div>
+
 
               {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
               <div className="absolute top-[89%] sm:top-[0%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 

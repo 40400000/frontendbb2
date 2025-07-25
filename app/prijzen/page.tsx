@@ -136,7 +136,7 @@ const pricingPlans = [
     iconFeatures: [
       { text: "Onbeperkte tracking & research", icon: Building2 },
       { text: "ACoS verlagen", icon: TrendingDown },
-      { text: "Onbeperkt product & keyword tracking", icon: Activity },
+      { text: "Onbeperkt keyword tracking", icon: Activity },
       { text: "Onbeperkt product tracken", icon: Target },
       { text: "Onbeperkte projecten & seats", icon: Briefcase },
       { text: "Premium 24/7 support & strategie sessies", icon: Rocket },

@@ -408,6 +408,8 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
 
 
 
+
+
                              {/* Remaining Feature Blocks */}
                <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-white mt-4">
                  {/* First section: MILJARDEN DATAPUNTEN */}
@@ -451,7 +453,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                 </div>
                 
                 {/* CPC TRACKER Section with 4-column layout */}
-                <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-4 border-b border-t gap-x-0 sm:mt-20 bg-black relative z-[100] py-20 border-l">
+                <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-4  gap-x-0 sm:mt-20 bg-black relative z-[100] py-20">
                   {/* Column 1: CPC TRACKER Text */}
                   <div className="text-white z-80 relative">
                     <div className="w-full">
@@ -463,7 +465,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                         </ul>
                       </div>
                       <Link href="/contact" passHref>
-                        <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-r border-border mt-6">
+                        <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-r border-l border-border mt-6">
                           <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
                             Gesprek inplannen
                             <MdOutlineArrowOutward className="h-5 w-5" />
@@ -684,6 +686,411 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
 
             </div> {/* End container */}
           </section> {/* End bleed section */}
+
+          {/* Product Tracking Section - White Background */}
+          <section id="product-tracking" className="relative w-full pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16">
+            {/* Added wrapper div for centering */}
+            <div className="flex flex-col items-center justify-center h-full">
+              {/* Full-width background element */}
+              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200">
+                {/* This relative container holds the line elements */}
+                <div className="relative h-full max-w-full mx-auto">
+                  {/* Line between cols 1 & 2 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div>
+                  {/* Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
+                  <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div>
+                  {/* Additional divider line between cols 3 & 4 (visible only on sm+) */}
+                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
+
+            <div className="container w-full relative z-90 mb-4">
+              <h2 className="text-6xl font-semibold text-black z-90">Product tracking</h2>
+            </div>
+
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-60">
+              {/* Use 2-column grid for better layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-black">
+
+                {/* Row 1, Column 1: Left Text */}
+                <div className="text-black">
+                  <p className="mb-4 text-base">Volg je producten en die van concurrenten nauwkeurig. Zie precies hoe rankings veranderen en waarom, zodat je altijd voorop loopt.</p>
+                  
+                  {/* Feature Set 1 */}
+                  <div className="sm:mt-30 z-80 relative pt-10">
+                    <p className="text-sm text-gray-600 mb-1">PRODUCT RANKINGS</p>
+                    <h3 className="font-semibold text-black my-3">Track producten van eigen stores en van concurrenten</h3>
+                    <ul className="space-y-2 text-sm text-black pr-3">
+                      <li>Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.</li>
+                    </ul>
+                  </div>
+
+                  <Link href="/contact" passHref>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6">
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Gesprek inplannen
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Gesprek inplannen
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                {/* Product tracking image positioned to the right */}
+                <div className="flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[75%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/tracking-QnWkZ19t2pN2FKO0Lr7pl3237LjxMZ.png"
+                      alt="Product tracking screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Product Tracking Pains/Gains - 4-column feature section */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-black mt-24 py-0 border-t border-b border-gray-200 items-stretch">
+                {/* Column 1 */}
+                <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Target className="w-6 h-6 text-gray-600 mr-3 group-hover:text-blue-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-gray-600 tracking-wider">01</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-black text-xl mb-3 group-hover:text-black transition-colors">Concurrentie & koopblok monitoring</h3>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">Missen van kritieke veranderingen bij concurrenten die je marktpositie bedreigen?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-black font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Zie alle concurrentie bewegingen real-time</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-gray-200 pt-6 space-y-4">
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-blue-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">Dagelijkse ranking updates</div>
+                      <div className="text-xs text-gray-600">Alle producten en keywords</div>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-purple-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">Koopblok en prijs tracking</div>
+                      <div className="text-xs text-gray-600">Bekijk waar het koopblok heen gaat en waarom</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2 - Special Tracking Methods Card */}
+                <div className="px-6 py-8 group hover:bg-blue-900/20 transition-all duration-500 ease-out flex flex-col h-full border border-blue-500/30 bg-gradient-to-br from-blue-50/50 to-blue-100/30 shadow-lg shadow-blue-500/10 relative overflow-hidden">
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,theme(colors.blue.500),theme(colors.blue.500)_2px,transparent_2px,transparent_12px)]"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-4">
+                      <Sparkles className="w-6 h-6 text-blue-600 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
+                      <span className="text-xs font-mono text-blue-600 tracking-wider">02 • TRACKING METHODES</span>
+                    </div>
+                    <div className="flex-grow">
+                      <h3 className="font-semibold text-blue-900 text-xl mb-3 group-hover:text-blue-800 transition-colors">Twee tracking opties</h3>
+                      <p className="text-sm text-blue-800 mb-6 leading-relaxed">Kies de tracking methode die past bij jouw behoeften en doelen</p>
+                    </div>
+                    
+                    <div className="flex items-center text-sm text-blue-900 font-medium h-14 mb-6">
+  
+                    </div>
+                    
+                    {/* Dual tracking options */}
+                    <div className="space-y-4">
+                      {/* Precision Tracking */}
+                      <div className="p-4 bg-white/80 rounded-lg border-l-4 border-purple-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="flex items-center mb-2">
+                          <Sparkles className="w-4 h-4 text-purple-500 mr-2" />
+                          <div className="text-sm font-medium text-blue-900">Precision Tracking</div>
+                        </div>
+                        <div className="text-xs text-blue-700 mb-2">Alle rankings, alle keywords, elke dag</div>
+                        <div className="text-xs text-blue-600">→ Voor nauwkeurige analyse</div>
+                      </div>
+                      
+                      {/* Dynamic Tracking */}
+                      <div className="p-4 bg-white/80 rounded-lg border-l-4 border-green-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="flex items-center mb-2">
+                          <Sparkle className="w-4 h-4 text-green-500 mr-2" />
+                          <div className="text-sm font-medium text-blue-900">Dynamic Tracking</div>
+                        </div>
+                        <div className="text-xs text-blue-700 mb-2">Relevante rankings, dynamisch rapport</div>
+                        <div className="text-xs text-blue-600">→ Voor algemeen overzicht en trends</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 3 */}
+                <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-green-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Search className="w-6 h-6 text-gray-600 mr-3 group-hover:text-green-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-gray-600 tracking-wider">03</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-black text-xl mb-3 group-hover:text-black transition-colors">Verbeter rankings</h3>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">Niet weten welke wijzigingen daadwerkelijk werken voor betere rankings?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-black font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Data-driven optimalisatie beslissingen</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-gray-200 pt-6 space-y-4">
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-green-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">A/B test tracking</div>
+                      <div className="text-xs text-gray-600">Voor en na vergelijkingen</div>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-blue-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">Listing performance</div>
+                      <div className="text-xs text-gray-600">Wijziging impact analyse</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 4 */}
+                <div className="px-6 py-8 group hover:bg-gray-50 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-red-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Package className="w-6 h-6 text-gray-600 mr-3 group-hover:text-red-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-gray-600 tracking-wider">04</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-black text-xl mb-3 group-hover:text-black transition-colors">Bekijk waar je wel en zichtbaar bent</h3>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">Geleidelijk marktaandeel verliezen zonder het door te hebben?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-black font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Behoud en vergroot je marktpositie</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-gray-200 pt-6 space-y-4">
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-red-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">Alle plaatsingen op Bol</div>
+                      <div className="text-xs text-gray-600">Zie precies hoe klanten je vinden</div>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-green-400 hover:bg-gray-100 transition-colors duration-300">
+                      <div className="text-sm font-medium text-black mb-1">Gemiste plaatsingen herkennen</div>
+                      <div className="text-xs text-gray-600">Zie waar je niet gevonden wordt</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product Tracking Benefits - Compact Card Layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 text-black mt-16">
+                {/* Left side - The problem without tracking */}
+                <div className="group hover:bg-red-50/50 transition-all duration-500 ease-out hover:scale-102 hover:shadow-xl hover:shadow-red-400/10 rounded-lg border border-red-200/50 bg-gradient-to-br from-red-50/30 to-gray-50/50 p-6 relative overflow-hidden">
+                  {/* Background pattern for problem side */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,theme(colors.red.300),theme(colors.red.300)_2px,transparent_2px,transparent_12px)]"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-red-200 transition-colors duration-300">
+                        <div className="w-5 h-5 bg-red-500 rounded-full"></div>
+                      </div>
+                      <div>
+                        <p className="text-xs font-mono text-red-600 tracking-wider mb-0.5">ZONDER PRODUCT TRACKING</p>
+                        <h3 className="font-semibold text-black text-xl group-hover:text-red-900 transition-colors">Achter de feiten aanlopen</h3>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="p-3 bg-white/60 rounded-md border-l-4 border-red-400 hover:bg-white/80 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Reactie op concurrenten te laat</div>
+                        <div className="text-xs text-gray-800">Concurrenten verlagen prijzen → je merkt het te laat → verkopen dalen</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/60 rounded-md border-l-4 border-orange-400 hover:bg-white/80 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Gemiste trends</div>
+                        <div className="text-xs text-gray-800">Nieuwe keywords worden populair → concurrenten pakken ze in → jij mist de boot</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/60 rounded-md border-l-4 border-yellow-400 hover:bg-white/80 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Sluipend verlies</div>
+                        <div className="text-xs text-gray-800">Rankings dalen geleidelijk → geen alarm → marktaandeel weg</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/60 rounded-md border-l-4 border-red-500 hover:bg-white/80 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Blind optimaliseren</div>
+                        <div className="text-xs text-gray-800">Listing wijzigingen → onbekend effect → gokken naar optimalisaties</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right side - The solution with tracking */}
+                <div className="group hover:bg-green-50/50 transition-all duration-500 ease-out hover:scale-102 hover:shadow-xl hover:shadow-green-400/10 rounded-lg border border-green-200/50 bg-gradient-to-br from-green-50/30 to-blue-50/30 p-6 relative overflow-hidden">
+                  {/* Background pattern for solution side */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,theme(colors.green.300),theme(colors.green.300)_2px,transparent_2px,transparent_12px)]"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-green-200 transition-colors duration-300">
+                        <Image 
+                          src="/icon-512x512.png" 
+                          alt="Bolbaas logo" 
+                          width={20} 
+                          height={20} 
+                          className="flex-shrink-0"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-xs font-mono text-green-600 tracking-wider mb-0.5">MET BOLBAAS PRODUCT TRACKING</p>
+                        <h3 className="font-semibold text-black text-xl group-hover:text-green-900 transition-colors">Altijd één stap vooruit</h3>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="p-3 bg-white/80 rounded-md border-l-4 border-green-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Snelle reactie</div>
+                        <div className="text-xs text-gray-800">Prijswijzigingen → direct alert → binnen uren reageren</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/80 rounded-md border-l-4 border-blue-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">First-mover advantage</div>
+                        <div className="text-xs text-gray-800">Trending keywords → vroeg detecteren → first-mover advantage</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/80 rounded-md border-l-4 border-purple-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Proactief optimaliseren</div>
+                        <div className="text-xs text-gray-800">Ranking veranderingen → dagelijkse monitoring → proactief optimaliseren</div>
+                      </div>
+                      
+                      <div className="p-3 bg-white/80 rounded-md border-l-4 border-cyan-500 hover:bg-white/90 transition-colors duration-300">
+                        <div className="text-sm font-semibold text-black mb-0.5">Data-driven groei</div>
+                        <div className="text-xs text-gray-800">A/B test resultaten → data-driven keuzes → meer omzet</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom text block */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_50%_25%] gap-x-0 text-black mt-16">
+                <div></div>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-2">DE KEUZE IS SIMPEL</p>
+                  <h3 className="font-semibold text-black text-xl mb-3">Wacht tot het te laat is, of start vandaag met tracking</h3>
+                </div>
+                <div></div>
+              </div>
+
+       
+
+            </div>
+          </section>
+
+          {/* Keyword Tracking Section - Black Background */}
+          <section id="keyword-tracking" className="relative w-full pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16">
+            {/* Full-width background element */}
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+            
+            <div className="container px-0 mb-4 z-80 relative">
+              <h2 className="text-6xl font-semibold text-white z-90">Keyword tracking</h2>
+            </div>
+            
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-60">
+              {/* Use 2-column grid for better layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-white">
+
+                {/* Row 1, Column 1: Left Text */}
+                <div className="text-white">
+                  <p className="mb-4 text-base">Track keywords uit de database, krijg dagelijks updates. Pas campagnes aan op basis van veranderingen in zoekterm biedingen. Houd volume trends in de gaten. Ontdek nieuwe concurrenten.</p>
+                  
+                  {/* Feature Set 1 */}
+                  <div className="sm:mt-30 z-80 relative pt-10">
+                    <p className="text-sm text-gray-400 mb-1">TRACK KEYWORDS</p>
+                    <h3 className="font-semibold text-white my-3">Volg keywords uit onze database</h3>
+                    <ul className="space-y-2 text-sm text-white pr-3">
+                      <li>Bekijk dagelijkse updates en trends, over biedingen, volume, trends en nieuwe keywords.</li>
+                    </ul>
+                  </div>
+
+                  <Link href="/features/tools#bolbaas-database" passHref>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6">
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Info over database
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Info over database
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                  <Link href="/prijzen" passHref>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-b border-border mt-0">
+                      <span className="font-normal flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Abonnementen bekijken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Abonnementen bekijken
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                {/* Keyword tracking image positioned to the right */}
+                <div className="flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[75%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/savedkeywords-KLc9pX2W931tXCNUfAiXpFc6R7Gvts.png"
+                      alt="Keyword tracking screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
 
           {/* Moved Bleed Background Section - Inline Styling */}
           

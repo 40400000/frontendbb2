@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 // Generate sample data for ranking performance with dramatic improvement
@@ -48,72 +49,111 @@ const generateRankingData = () => {
 const data = generateRankingData();
 
 export function RankingChart() {
+  const [isInView, setIsInView] = useState(false);
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // When the element is in view, set the state to true
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          // Stop observing once it's in view to save resources
+          if (chartRef.current) {
+            observer.unobserve(chartRef.current);
+          }
+        }
+      },
+      {
+        // Trigger when at least 10% of the element is visible
+        threshold: 0.1,
+      }
+    );
+
+    if (chartRef.current) {
+      observer.observe(chartRef.current);
+    }
+
+    // Cleanup observer on component unmount
+    return () => {
+      if (chartRef.current) {
+        observer.unobserve(chartRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="bg-black">
+    <div ref={chartRef} className="bg-black">
       {/* Chart tag */}
       <div className="mb-4">
-        <span className="text-xs text-gray-400 tracking-wider">PRODUCT RANKING VOOR 'DRONE CAMERA'</span>
+        <span className="text-xs text-gray-400 tracking-wider">PRODUCT RANKING VOOR 'DRONE MET CAMERA'</span>
       </div>
       <div className="h-64">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={data}
-            margin={{
-              top: 20,
-              right: 20,
-              left: 20,
-              bottom: 20,
-            }}
-          >
-            <XAxis 
-              dataKey="dayIndex"
-              axisLine={false}
-              tickLine={false}
-              tick={{ fill: '#71717a', fontSize: 12 }}
-              interval={4} // Show every 5th day
-              tickFormatter={(value) => {
-                const dataPoint = data[value];
-                return dataPoint ? `${dataPoint.day}` : '';
+        {isInView ? (
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              data={data}
+              margin={{
+                top: 20,
+                right: 20,
+                left: 20,
+                bottom: 20,
               }}
-            />
-            <YAxis 
-              domain={[1, 50]}
-              reversed={true} // Lower numbers (better rankings) at top
-              axisLine={false}
-              tickLine={false}
-              tick={{ fill: '#71717a', fontSize: 12 }}
-              tickFormatter={(value) => `#${value}`}
-            />
-            <Line 
-              type="monotone" 
-              dataKey="ranking" 
-              stroke="#3b82f6"
-              strokeWidth={2}
-              dot={false}
-              activeDot={{ r: 4, fill: '#3b82f6', strokeWidth: 0 }}
-            />
-            
-            {/* Reference line at day when Ranking AI was activated */}
-            <ReferenceLine 
-              x={18} // Around day 18 (60% of 30 days)
-              stroke="#22c55e"
-              strokeDasharray="2 8"
-              strokeWidth={3}
-              label={{ 
-                value: "🚀 Ranking AI geactiveerd", 
-                position: "insideTopLeft",
-                style: { 
-                  fill: '#22c55e', 
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  background: '#000000',
-                  padding: '4px 8px',
-                  borderRadius: '4px'
-                }
-              }}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+            >
+              <XAxis 
+                dataKey="dayIndex"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: '#71717a', fontSize: 12 }}
+                interval={4} // Show every 5th day
+                tickFormatter={(value) => {
+                  const dataPoint = data[value];
+                  return dataPoint ? `${dataPoint.day}` : '';
+                }}
+              />
+              <YAxis 
+                domain={[1, 50]}
+                reversed={true} // Lower numbers (better rankings) at top
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: '#71717a', fontSize: 12 }}
+                tickFormatter={(value) => `#${value}`}
+              />
+              <Line 
+                type="monotone" 
+                dataKey="ranking" 
+                stroke="#3b82f6"
+                strokeWidth={2}
+                dot={false}
+                activeDot={{ r: 4, fill: '#3b82f6', strokeWidth: 0 }}
+              />
+              
+              {/* Reference line at day when Ranking AI was activated */}
+              <ReferenceLine 
+                x={16} // Around day 18 (60% of 30 days)
+                stroke="#22c55e"
+                strokeDasharray="2 8"
+                strokeWidth={3}
+                label={{ 
+                  value: "🚀 Ranking AI geactiveerd", 
+                  position: "insideTopLeft",
+                  style: { 
+                    fill: '#22c55e', 
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    background: '#000000',
+                    padding: '4px 8px',
+                    borderRadius: '4px'
+                  }
+                }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        ) : (
+          // Placeholder to prevent layout shift.
+          // The chart will render and animate when this component enters the viewport.
+          <div className="w-full h-full" />
+        )}
       </div>
       
       {/* Chart legend */}

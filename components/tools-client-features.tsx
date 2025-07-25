@@ -54,7 +54,7 @@ export function ToolsClientFeatures() {
       {/* Container for the 'Winst & ACoS calculator' sticky section */}
       <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container defining scroll height - ADJUSTED HEIGHT for mobile */}
         {/* Sticky Container */}
-        <div className="sticky top-0 z-[60] container px-0 py-16 md:py-24 lg:py-32">
+        <div className="sticky top-0 z-[60] container px-0 py-16">
           {/* Heading placed above the flex row */}
           <div className="relative w-full sm:w-[30%] text-white"> {/* Container for heading, matching left col width */}
              <h2 className="text-3xl font-semibold mb-6">Andere features</h2>
@@ -122,11 +122,41 @@ export function ToolsClientFeatures() {
           <div className={`relative w-full md:w-2/3 transition-opacity duration-1000 ease-in ${isBaaspilotVisible ? 'opacity-100' : 'opacity-0'} mt-8 md:mt-0`}> {/* Adjusted width for responsiveness */}
            {/* Image for A/B Testen */} 
            <Image
-             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/ab-testenopen2-ZN9PvyKxsg2tcNw7Yd1OCct3OLYPZc.png" // Placeholder, assuming same image for now
+             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/abtest6.png" // Placeholder, assuming same image for now
              alt="A/B Testen Visualisatie" // Updated alt text
              width={1200}
              height={675}
              className="rounded-xl shadow-lg object-cover"
+           />
+          </div>
+         </div>
+       </div>
+
+      {/* Container for the 'Project Management' sticky section */}
+      <div className="relative min-h-screen md:min-h-[200vh]"> {/* Outer container defining scroll height */}
+        <div className="sticky top-0 z-[60] container px-0 flex flex-col md:flex-row items-start gap-8 md:justify-between py-16 md:py-24 lg:py-32"> {/* Sticky Content */}
+
+           {/* Left side: Text content for Project Management */}
+           <div id="project-management" className="relative w-full sm:w-[50%] md:w-[25%] text-white"> {/* Adjusted width for responsiveness */}
+             <div className="p-0 text-md">
+               <span className="text-sm text-gray-500">03</span>
+               <p className="flex items-center text-lg md:text-xl font-semibold my-6">
+                 Project management
+               </p>
+               <p className="text-sm mt-1 text-white">
+                 Breng getrackte producten en keywords onder in verschillende projecten. Maak een project aan voor een product research. Of maak een project aan voor een klant van jouw bol agency.
+               </p>
+             </div>
+           </div>
+
+          {/* Right side: Image for Project Management */}
+          <div className="relative w-full md:w-2/3 mt-8 md:mt-0"> {/* Adjusted width for responsiveness */}
+           <Image
+             src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/projects2-ShnvFvU1iguk3jByjkc6LFBKt73xv2.png"
+             alt="Project Management Visualisatie"
+             width={1200}
+             height={675}
+             className="shadow-lg object-cover rounded-xl"
            />
           </div>
          </div>

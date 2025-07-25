@@ -17,6 +17,8 @@ import HighlightedSection from '@/components/highlighted-section'; // Corrected 
 import { BackgroundVideo } from "@/components/ui/background-video"; // Import the background video
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
+import { RevenueComparisonChart } from "@/components/revenue-comparison-chart";
+import { CPCChart } from "@/components/cpc-chart";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bolbaas - data en automatisering voor bol partners",
@@ -423,10 +425,18 @@ export default function HomePage() {
 
           {/* Container centers content normally ON TOP of the background */}
           <div className="container relative z-[70]"> {/* Using container for centering */}
-            {/* Section Heading */}
-            <div className="text-center text-white mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Meer verkopen, minder zorgen</h2>
-              <p className="max-w-3xl mx-auto text-foreground">Ontdek welke producten en keywords écht werken met onze <span className="font-extrabold">realtime AI database</span> van miljoen zoektermen en producten. Onze <span className="font-extrabold">Ranking AI</span> optimaliseert je listings automatisch voor maximale zichtbaarheid. Zie je groei in <span className="font-extrabold">custom dashboards</span>, laat Bolbaas <span className="font-extrabold">automatisch facturen, e-mails en BTW</span> regelen, en volg elke bestelling met de <span className="font-extrabold">levering tracker</span>. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
+            {/* Two-column layout: text left, chart right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+              {/* Left column: Section Heading */}
+              <div className="text-white pr-6">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Meer verkopen, minder zorgen</h2>
+                <p className="text-foreground leading-relaxed">Ontdek welke producten en keywords écht werken met onze <span className="font-extrabold">realtime AI database</span> van miljoen zoektermen en producten. Onze <span className="font-extrabold">Ranking AI</span> optimaliseert je listings automatisch voor maximale zichtbaarheid. Zie je groei in <span className="font-extrabold">custom dashboards</span>, laat Bolbaas <span className="font-extrabold">automatisch facturen, e-mails en BTW</span> regelen, en volg elke bestelling met de <span className="font-extrabold">levering tracker</span>. Zo heb je meer tijd voor wat echt telt: ondernemen.</p>
+              </div>
+              
+              {/* Right column: Revenue Chart */}
+              <div className="w-full">
+                <RevenueComparisonChart />
+              </div>
             </div>
             
             {/* 2x2 Grid */}
@@ -521,14 +531,8 @@ export default function HomePage() {
               </div>
               {/* New Row: Item 5 */}
               <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
-                <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square5.png"
-                    alt="CPC tracker"
-                    width={1200}
-                    height={640}
-                    className="object-contain max-w-full max-h-full"
-                  />
+                <div className="w-full mb-6">
+                  <CPCChart />
                 </div>
                 <p className="text-sm text-gray-400 mb-1">05</p>
                 <h3 className="font-semibold text-white my-3">CPC tracker</h3>

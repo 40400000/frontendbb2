@@ -64,6 +64,18 @@
   }
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 :root {
   --radius: 0rem;
   --card: oklch(1 0 0);

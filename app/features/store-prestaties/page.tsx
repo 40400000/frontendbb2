@@ -11,6 +11,8 @@ import {
   Package, // Added Package icon
   Download, // Added Download icon
   Upload,   // Added Upload icon
+  Sparkles, // Added Sparkles icon
+  Database, // Added Database icon
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
 // import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
@@ -19,6 +21,7 @@ import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import th
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
 import { MiddleContentSection } from "@/components/middle-content-section";
 import { DataInzichtenClientFeatures } from "@/components/data-inzichten-client-features"; // Import the new client component
+import { SalesForecastChart } from "@/components/sales-forecast-chart"; // Import the sales forecast chart component
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -139,8 +142,590 @@ export default function StorePrestatiesPage() { // Renamed function
 
         </section>
 
+          {/* Product Prestaties Section with Black Background */}
+          <section id="product-prestaties" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+            {/* Full-width background element */}
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+            <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
+              <h2 className="text-6xl font-semibold text-white">Product prestaties</h2>
+            </div>
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-60"> {/* REMOVED container padding */}
+              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
+              {/* Add vertical gap between rows */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
+
+                {/* Row 1, Column 1: Left Text (25%) */}
+                <div className="text-white z-80 relative"> 
+                  <p className="mb-4 text-base">Weet precies welke producten je geld opleveren en welke niet. Zie in één oogopslag je winst, omzet en rankings, zodat je slimme beslissingen kunt maken.</p>
+                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
+                  <div className="w-full pt-10">
+                    {/* Moved Feature Set 1 into first column */}
+                    <div className="mt-6">
+                      <p className="text-sm text-gray-400 mb-1">01</p>
+                      <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Zie precies per product wat de sales, winst en omzet zijn. Bekijk trends en recente bestellingen.</li>
+                      </ul>
+                    </div>
+                    {/* Moved Feature Set 2 into first column */}
+                    <div className="mt-4 pr-4 md:pr-6">
+                      <p className="text-sm text-gray-400 mb-1">02</p>
+                      <h3 className="font-semibold text-white my-3">Rankings, sales schattingen en reviews</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Bekijk uitgebreide ranking rapporten, sales schattingen en reviews. <br></br><Link href="/features/tracking#tracking-options" className="underline hover:text-gray-300">Lees meer over rankings.</Link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image spanning columns 2-4 (75% total width) */}
+                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[85%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/Porduct%20inzicht%20%281%29-KYOfP819QJwzA7EkhJDvQVYhGmQJe6.png"
+                      alt="Product prestaties screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div> {/* End grid */}
+
+              {/* NEW 4-column feature section */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white mt-24 py-0 border-t border-b border-border items-stretch">
+                                {/* Column 1 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Search className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-blue-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">01</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Zie winst, omzet en sales per product</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Geen duidelijk overzicht van welke producten daadwerkelijk geld opleveren?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Krijg complete financiële inzichten per product</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Uitgebreide winst / margerekening</div>
+                      <div className="text-xs text-zinc-500">Bolbaas berekent realtime je winst, inclusief alle kosten en commissies</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-purple-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Sales voorspellingen</div>
+                      <div className="text-xs text-zinc-500">Inzicht in verkooptrends en voorspelling van toekomstige sales</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 2 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <Target className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">02</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Hoe klanten jouw product vinden op Bol</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Onduidelijk via welke zoektermen en categorieën klanten bij je terechtkomen?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Bekijk alle relevante zoektermen en categorieën</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-500 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div>
+                        <div className="text-sm font-medium text-white mb-1">Campagne optimalisatie</div>
+                        <div className="text-xs text-zinc-500">Ontdek op welke zoektermen je achterblijft op zichtbaarheid</div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+ 
+                      </div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-cyan-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Belangrijkste zoektermen</div>
+                      <div className="text-xs text-zinc-500">Analyseer waar je klanten op zoeken en hoe je hierop inspeelt</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 3 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-green-400/10 flex flex-col h-full">
+                  <div className="flex items-center mb-4">
+                    <LineChart className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-green-400 transition-colors duration-300" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">03</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Wat klanten denken over jouw product</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Onduidelijk waar verbeteringen nodig zijn op basis van klantfeedback?</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Analyseer reviews en klantfeedback</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-green-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Belangrijkste verbeterpunten</div>
+                      <div className="text-xs text-zinc-500">Bekijk de belangrijkste klantopmerkingen en verbeterpunten per product</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white mb-1">Reviews trends</div>
+                      <div className="text-xs text-zinc-500">Bekijk de trends in reviews en wat het betekent voor je product</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Column 4 */}
+                <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 flex flex-col h-full relative overflow-hidden">
+                  {/* Gold animated gradient overlay - always active */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent translate-x-[-100%] animate-[slide_3s_ease-in-out_infinite]"></div>
+                  <div className="flex items-center mb-4 relative z-10">
+                    <Sparkles className="w-6 h-6 text-yellow-400 mr-3 group-hover:text-yellow-300 transition-colors duration-300 animate-pulse" />
+                    <span className="text-xs font-mono text-zinc-400 tracking-wider">04</span>
+                  </div>
+                  <div className="flex-grow relative z-10">
+                    <h3 className="font-semibold text-yellow-400 text-xl mb-3 group-hover:text-yellow-300 transition-colors duration-300">Zet in op winnende producten</h3>
+                    <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Focus op producten die het beste presteren en de meeste winst opleveren</p>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-medium mb-6 relative z-10">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span className="text-yellow-300 group-hover:text-yellow-200 transition-colors duration-300">→ Identificeer je toppers en versterk ze</span>
+                  </div>
+                  
+                  {/* Technical capabilities that enable this */}
+                  <div className="border-t border-yellow-400/30 pt-6 space-y-4 relative z-10">
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-yellow-400 hover:bg-zinc-800/70 transition-colors duration-300 hover:border-yellow-300">
+                      <div className="text-sm font-medium text-white mb-1">Winst analyses</div>
+                      <div className="text-xs text-zinc-500">Zie precies welke producten het meest opleveren</div>
+                    </div>
+                    
+                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-amber-400 hover:bg-zinc-800/70 transition-colors duration-300 hover:border-amber-300">
+                      <div className="text-sm font-medium text-white mb-1">Performance rankings</div>
+                      <div className="text-xs text-zinc-500">Top scoorders die vindbaar zijn op Bol met de meeste sales</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> {/* End container */}
+
+            {/* NEW Sales Forecast Section with 4-column layout */}
+            <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-white mt-20">
+              {/* Sales Forecast Text Section */}
+              <div className="text-white z-80 relative">
+                <div className="w-full">
+                  <div className="z-80 relative pt-10">
+                    <p className="text-sm text-gray-400 mb-1">VERKOOPPROGNOSE</p>
+                    <h3 className="font-semibold text-white my-3">Plan je voorraad met slimme verkoop voorspellingen</h3>
+                    <ul className="space-y-2 text-sm text-white pr-3">
+                      <li>Onze AI voorspelt jouw verkopen voor de komende 12 weken op basis van historische data, trends en seizoenspatronen. Perfect voor voorraadplanning en inkoop optimalisatie.</li>
+                    </ul>
+                  </div>
+                  <Link href="/contact" passHref>
+                    <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-r border-l border-border mt-6">
+                      <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                        Gesprek inplannen
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </span>
+                      <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                        Gesprek inplannen
+                        <MdOutlineArrowOutward className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Sales Forecast Chart positioned to the right */}
+              <div className="flex justify-center sm:justify-start sm:items-start sm:ml-[17%] sm:-mr-[40vw]">
+                <div className="w-full sm:w-[60%] h-auto">
+                  <SalesForecastChart />
+                </div>
+              </div>
+            </div>
+
+            {/* Additional 4-column feature section for sales forecast benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white mt-12 py-0 border-t border-b border-border items-stretch">
+              {/* Column 1 */}
+              <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-purple-400/10 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <Database className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-purple-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-zinc-400 tracking-wider">01</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Voorraad optimalisatie</h3>
+                  <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Voorkom stockouts en overstock met slimme voorspellingen</p>
+                </div>
+                <div className="flex items-center text-sm text-white font-medium mb-6">
+                  <Image 
+                    src="/icon-512x512.png" 
+                    alt="Bolbaas logo" 
+                    width={36} 
+                    height={36} 
+                    className="mr-2 flex-shrink-0"
+                  />
+                  <span>→ Optimale voorraadniveaus bepalen</span>
+                </div>
+                
+                {/* Technical capabilities */}
+                <div className="border-t border-white/10 pt-6 space-y-4">
+                  <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-purple-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                    <div className="text-sm font-medium text-white mb-1">12 Weken Voorspelling</div>
+                    <div className="text-xs text-zinc-500">Gedetailleerde verkoop prognose</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 2 */}
+              <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-orange-400/10 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <Package className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-orange-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-zinc-400 tracking-wider">02</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Inkoop planning</h3>
+                  <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Weet precies wanneer en hoeveel je moet bestellen</p>
+                </div>
+                <div className="flex items-center text-sm text-white font-medium mb-6">
+                  <Image 
+                    src="/icon-512x512.png" 
+                    alt="Bolbaas logo" 
+                    width={36} 
+                    height={36} 
+                    className="mr-2 flex-shrink-0"
+                  />
+                  <span>→ Automatische bestel alarmen</span>
+                </div>
+                
+                {/* Technical capabilities */}
+                <div className="border-t border-white/10 pt-6 space-y-4">
+                  <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-orange-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                    <div className="text-sm font-medium text-white mb-1">Bestel Alarmen</div>
+                    <div className="text-xs text-zinc-500">Op tijd voorraad aanvullen</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 3 */}
+              <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/10 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <LineChart className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-cyan-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-zinc-400 tracking-wider">03</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Seizoenspatronen</h3>
+                  <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Anticipeer op seizoenspieken en dalen in je verkopen</p>
+                </div>
+                <div className="flex items-center text-sm text-white font-medium mb-6">
+                  <Image 
+                    src="/icon-512x512.png" 
+                    alt="Bolbaas logo" 
+                    width={36} 
+                    height={36} 
+                    className="mr-2 flex-shrink-0"
+                  />
+                  <span>→ Seizoenstrends herkennen</span>
+                </div>
+                
+                {/* Technical capabilities */}
+                <div className="border-t border-white/10 pt-6 space-y-4">
+                  <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-cyan-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                    <div className="text-sm font-medium text-white mb-1">Seizoensanalyse</div>
+                    <div className="text-xs text-zinc-500">Historische patronen</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 4 */}
+              <div className="px-6 py-8 group hover:bg-zinc-800/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-emerald-400/10 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <ShoppingCart className="w-6 h-6 text-zinc-400 mr-3 group-hover:text-emerald-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-zinc-400 tracking-wider">04</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Cashflow optimalisatie</h3>
+                  <p className="text-sm text-zinc-400 mb-4 leading-relaxed">Voorkom te veel geld vast te zetten in voorraad</p>
+                </div>
+                <div className="flex items-center text-sm text-white font-medium mb-6">
+                  <Image 
+                    src="/icon-512x512.png" 
+                    alt="Bolbaas logo" 
+                    width={36} 
+                    height={36} 
+                    className="mr-2 flex-shrink-0"
+                  />
+                  <span>→ Slimmere cashflow management</span>
+                </div>
+                
+                {/* Technical capabilities */}
+                <div className="border-t border-white/10 pt-6 space-y-4">
+                  <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-emerald-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                    <div className="text-sm font-medium text-white mb-1">ROI Optimalisatie</div>
+                    <div className="text-xs text-zinc-500">Minder geld vast in voorraad</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section> {/* End product prestaties section */}
+
+          {/* Bestellingen Section with White Background */}
+          <section data-navbar-mode="light" id="bestellingen" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> 
+            {/* NEW Light Border Overlay */}
+            <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
+              {/* This relative container holds the light line elements */}
+              <div className="relative h-full max-w-full mx-auto">
+                {/* Light Line between cols 1 & 2 (visible only on sm+) */}
+                <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
+                <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+                {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
+                <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
+              </div>
+            </div>
+
+            {/* Full-width background element - WHITE */}
+            <div className="absolute inset-0 w-screen left-1/2 -translate-x-1/2 z-55 bg-white"></div>
+            
+            <div className="container px-0 mb-4 relative z-[70]"> 
+              <h2 className="text-6xl font-semibold text-black">Bestellingen</h2>
+            </div>
+            
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-[70] overflow-visible"> 
+              {/* Grid layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-black overflow-visible"> 
+
+                {/* Row 1, Column 1: Left Text (25%) */}
+                <div className="text-black relative"> 
+                  <p className="mb-4 text-base">Zie niet alleen wat er verkocht is, maar ook de winst per bestelling, naar wie het toegaat en wanneer het aankomt. Zo blijf je altijd op de hoogte van wat echt belangrijk is.</p>
+                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
+                  <div className="w-full pt-10">
+                    {/* Feature Set 1 */}
+                    <div className="mt-6 relative">
+                      <p className="text-sm text-gray-600 mb-1">01</p>
+                      <h3 className="font-semibold text-black my-3">Volledig inzicht in bestellingen en leveringen</h3>
+                      <ul className="space-y-2 text-sm text-black pr-3">
+                        <li>Bekijk per besteling het product, winst, omzet, contactgegevens, land, levering type en meer.</li>
+                        <li>Houd de status van zendingen bij met onze levering tracker.</li>
+                      </ul>
+                    </div>
+                    {/* Button with hover effect */}
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > 
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
+                          Gesprek inplannen
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
+                          Gesprek inplannen
+                          <MdOutlineArrowOutward className="h-5 w-5" />
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Image spanning columns 2-4 (75% total width) */}
+                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[85%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Ordertable6.png"
+                      alt="Bestellingen screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div> {/* End grid */}
+
+              {/* NEW 2-column feature section for bestellingen */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-0 text-black mt-24 py-0 border-t border-b border-gray-200 items-stretch">
+                {/* Column 1 - Levering tracking */}
+                <div className="px-6 py-8 group hover:bg-gray-100/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col h-full relative overflow-hidden">
+                  {/* White stripe in middle 20% */}
+                  <div className="absolute top-0 bottom-0 left-[40%] w-[20%] bg-white z-0 group-hover:bg-gray-50"></div>
+                  <div className="flex items-center mb-4 relative z-10">
+                    <Download className="w-6 h-6 text-gray-600 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
+                    <span className="text-sm font-mono text-gray-600 tracking-wider">01</span>
+                  </div>
+                  <div className="flex-grow relative z-10">
+                    <h3 className="font-semibold text-black text-2xl mb-3 group-hover:text-black transition-colors">Bestellingen inzicht</h3>
+                    <p className="text-base text-gray-600 mb-4 leading-relaxed">Onzekerheid over bestellingen en populaire producten?</p>
+                  </div>
+                  <div className="flex items-center text-base text-black font-medium mb-6 relative z-10">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Real-time data voor alle bestellingen</span>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 pt-6 space-y-4 relative z-10">
+                    <div className="flex items-center justify-between p-4 bg-gray-100/50 rounded-lg border-l-4 border-blue-500 hover:bg-gray-100/70 transition-colors duration-300">
+                      <div>
+                        <div className="text-base font-medium text-black mb-1">Weet gelijk hoeveel je verdient</div>
+                        <div className="text-sm text-gray-600">Bolbaas berekent realtime je winst per bestelling, inclusief alle kosten en commissies</div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                      </div>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-100/50 rounded-lg border-l-4 border-cyan-400 hover:bg-gray-100/70 transition-colors duration-300">
+                      <div className="text-base font-medium text-black mb-1">Uitgebreide status timeline</div>
+                      <div className="text-sm text-gray-600">Zie precies alle relevante status updates voor een bestelling</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2 - Data export */}
+                <div className="px-6 py-8 group hover:bg-gray-100/60 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-green-400/10 flex flex-col h-full relative overflow-hidden">
+                  {/* White stripe in middle 20% */}
+                  <div className="absolute top-0 bottom-0 left-[40%] w-[20%] bg-white z-0 group-hover:bg-gray-50"></div>
+                  <div className="flex items-center mb-4 relative z-10">
+                    <Upload className="w-6 h-6 text-gray-600 mr-3 group-hover:text-green-400 transition-colors duration-300" />
+                    <span className="text-sm font-mono text-gray-600 tracking-wider">02</span>
+                  </div>
+                  <div className="flex-grow relative z-10">
+                    <h3 className="font-semibold text-black text-2xl mb-3 group-hover:text-black transition-colors">Leveringtracker</h3>
+                    <p className="text-base text-gray-600 mb-4 leading-relaxed">Veel klantvragen over leveringen die niet of te laat zijn aangekomen?</p>
+                  </div>
+                  <div className="flex items-center text-base text-black font-medium mb-6 relative z-10">
+                    <Image 
+                      src="/icon-512x512.png" 
+                      alt="Bolbaas logo" 
+                      width={36} 
+                      height={36} 
+                      className="mr-2 flex-shrink-0"
+                    />
+                    <span>→ Zie precies waar je leveringen zijn</span>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 pt-6 space-y-4 relative z-10">
+                    <div className="p-4 bg-gray-100/50 rounded-lg border-l-4 border-green-400 hover:bg-gray-100/70 transition-colors duration-300">
+                      <div className="text-base font-medium text-black mb-1">Voorkom klantvragen</div>
+                      <div className="text-sm text-gray-600">Houd klanten op de hoogte van de status van hun bestelling</div>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-100/50 rounded-lg border-l-4 border-blue-400 hover:bg-gray-100/70 transition-colors duration-300">
+                      <div className="text-base font-medium text-black mb-1">Voorkom misgelopen leveringen</div>
+                      <div className="text-sm text-gray-600">Weet zeker dat je leveringen aankomen </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> {/* End container */}
+          </section> {/* End bestellingen section */}
+
+          <section id="custom-dashboards" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
+            {/* Full-width background element */}
+            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
+            <div className="container px-0 mb-4 relative z-[70]"> {/* Container for alignment, added bottom margin */}
+              <h2 className="text-6xl font-semibold text-white">Custom dashboards</h2>
+            </div>
+            {/* Container centers content normally ON TOP of the background */}
+            <div className="relative z-[70]"> {/* REMOVED container padding */}
+              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
+              {/* Add vertical gap between rows */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
+
+                {/* Row 1, Column 1: Left Text (25%) */}
+                <div className="text-white relative"> 
+                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
+                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
+                  <div className="w-full">
+                    {/* Moved Feature Set 1 into first column */}
+                    <div className="mt-6 relative pt-10">
+                      <p className="text-sm text-gray-400 mb-1">01</p>
+                      <h3 className="font-semibold text-white my-3">Sla custom dashboards views op</h3>
+                      <ul className="space-y-2 text-sm text-white pr-3">
+                        <li>Maak jouw dashboards precies zoals jij dat wilt, met de data die je nodig hebt. Sla deze op en kom later terug. </li>
+                      </ul>
+                    </div>
+                    <Link href="/contact" passHref>
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                        {/* Original Content - Slides up on hover */}
+                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </span>
+                        {/* Hover Overlay - Slides in from bottom on hover */}
+                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
+                          Gesprek inplannen {/* Updated text */}
+                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Image spanning columns 2-4 (75% total width) */}
+                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                  <div className="w-full sm:w-[85%] h-auto sm:ml-[15%]">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/dashboard-saUuGHsWymEMI0v8HjTmL1ih11pXWJ.png"
+                      alt="Dashboard screenshot"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div> {/* End grid */}
+
+            </div> {/* End container */}
+          </section> {/* End bleed section */}       
+
 
           {/* Moved Bleed Background Section - Inline Styling */}
+
+          {/* These sections are now outside the black background/sticky section */}
           <section data-navbar-mode="light" className="relative w-full py-4 min-h-[100vh] sm:min-h-[150vh] lg:min-h-[1200px]"> {/* Standard section padding */}
             {/* NEW Light Border Overlay */}
             <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
@@ -181,309 +766,11 @@ export default function StorePrestatiesPage() { // Renamed function
             </div>
 
           </section> {/* End bleed section */}
-
-          {/* Removed full-width gradient section */}
-
-          {/* Moved Bleed Background Section - Inline Styling */}
-          <section id="product-prestaties" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
-            {/* Full-width background element */}
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-            <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
-              <h2 className="text-6xl font-semibold text-white">Product prestaties</h2>
-            </div>
-            {/* Container centers content normally ON TOP of the background */}
-            <div className="relative z-60"> {/* REMOVED container padding */}
-              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
-              {/* Add vertical gap between rows */}
-              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
-
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-white row-span-2"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Weet precies welke producten je geld opleveren en welke niet. Zie in één oogopslag je winst, omzet en rankings, zodat je slimme beslissingen kunt maken.</p>
-                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full pt-10">
-                    {/* Moved Feature Set 1 into first column */}
-                    <div className="mt-6">
-                      <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Sales, winst en omzet</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Zie precies per product wat de sales, winst en omzet zijn. Bekijk trends en recente bestellingen.</li>
-                      </ul>
-                    </div>
-                    {/* Moved Feature Set 2 into first column */}
-                    <div className="mt-4 pr-4 md:pr-6">
-                      <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-white my-3">Rankings, sales schattingen en reviews</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Bekijk uitgebreide ranking rapporten, sales schattingen en reviews. <br></br><Link href="/features/tracking#tracking-options" className="underline hover:text-gray-300">Lees meer over rankings.</Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                {/* Row 1 placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
-
-                {/* Row 2, Column 1: Empty */}
-                <div></div>
-
-                {/* Row 2, Column 2: Empty Spacer */}
-                <div></div>
-
-                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
-        
-
-                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
-                {/* <div className="text-gray-300"> ... </div> */}
-                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
-
-                {/* <div className="text-gray-300">
-                  <p className="text-sm text-gray-500 mb-1">03</p>
-                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
-                  </ul>
-                </div>
-
-
-                <div className="text-gray-300 pr-4 md:pr-6">
-                  <p className="text-sm text-gray-500 mb-1">04</p>
-                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
-                  </ul>
-                </div> */}
-
-
-              </div> {/* End grid */}
-
-              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[84%] sm:top-[0%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/Porduct%20inzicht%20%281%29-KYOfP819QJwzA7EkhJDvQVYhGmQJe6.png"
-                  alt="Product prestaties screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
-                />
-              </div>
-
-            </div> {/* End container */}
-          </section> {/* End bleed section */}
-
-
-          <section data-navbar-mode="light" id="custom-dashboards" className="relative w-full py-16 md:py-24 lg:py-32 min-h-[120vh]"> {/* Standard section padding + INCREASED min-h */}
-            {/* Added wrapper div for centering */}
-            <div className="flex flex-col items-center justify-center h-full">
-              {/* Full-width background element */}
-              <div className="absolute inset-0 z-60 pointer-events-none border-l border-r border-gray-200"> {/* Higher z-index & Added borders */}
-                {/* This relative container holds the light line elements */}
-                <div className="relative h-full max-w-full mx-auto">
-                  {/* Light Line between cols 1 & 2 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-1/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Divider line that appears in the middle on mobile (2 cols) and between cols 2 & 3 on sm+ (4 cols) */}
-                  <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                  {/* Light Additional divider line between cols 3 & 4 (visible only on sm+) */}
-                  <div className="hidden sm:block absolute left-3/4 top-0 bottom-0 w-px bg-gray-200"></div> {/* Lighter color */}
-                </div>
-              </div>
-            </div> {/* End centering wrapper */}
-
-            <div className="absolute inset-0 w-screen left-1/2 z-55 -translate-x-1/2 bg-white"></div>
-
-            
-            
-            
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 text-black"></div>
-            <div className="container px-0 mb-4 z-80 relative"> {/* Container for alignment, added bottom margin */}
-              <h2 className="text-6xl font-semibold text-black z-80">Custom dashboards</h2>
-            </div>
-            {/* Container centers content normally ON TOP of the background */}
-            <div className="relative z-60"> {/* REMOVED container padding */}
-              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
-              {/* Add vertical gap between rows */}
-              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
-
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-black row-span-2 z-80 relative"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
-                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full">
-                    {/* Moved Feature Set 1 into first column */}
-                    <div className="mt-6 z-80 relativ pt-10">
-                      <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-black my-3">Sla custom dashboards views op</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Maak jouw dashboards precies zoals jij dat wilt, met de data die je nodig hebt. Sla deze op en kom later terug. </li>
-                      </ul>
-                    </div>
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-gray-200 mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-black text-white font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> {/* Changed font-bold to font-semibold */} 
-                          Gesprek inplannen {/* Updated text */}
-                          <MdOutlineArrowOutward className="h-5 w-5" /> {/* Added icon */}
-                        </div>
-                      </div>
-                    </Link>
-                    {/* Moved Feature Set 2 into first column */}
-                    {/* <div className="mt-4 pr-4 md:pr-6 z-80 relative">
-                      <p className="text-sm text-gray-400 mb-1">02</p>
-                      <h3 className="font-semibold text-black my-3">Levering tracker</h3>
-                      <ul className="space-y-2 text-sm text-black pr-3">
-                        <li>Voorkom klantvragen, zie precies waar je leveringen zijn.</li>
-                      </ul>
-                    </div> */}
-
-                    
-                  </div>
-                </div>
-                {/* Row 1 placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
-
-                {/* Row 2, Column 1: Empty */}
-                <div></div>
-
-                {/* Row 2, Column 2: Empty Spacer */}
-                <div></div>
-
-                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
-        
-
-                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
-                {/* <div className="text-gray-300"> ... </div> */}
-                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
-
-                {/* <div className="text-gray-300">
-                  <p className="text-sm text-gray-500 mb-1">03</p>
-                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
-                  </ul>
-                </div>
-
-
-                <div className="text-gray-300 pr-4 md:pr-6">
-                  <p className="text-sm text-gray-500 mb-1">04</p>
-                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
-                  </ul>
-                </div> */}
-
-
-              </div> {/* End grid */}
-
-              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[84%] sm:top-[0%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/dashboard-saUuGHsWymEMI0v8HjTmL1ih11pXWJ.png"
-                  alt="Bestellingen screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
-                />
-              </div>
-
-            </div> {/* End container */}
-          </section> {/* End bleed section */}       
-
-          {/* Duplicated Bestellingen Section with Black Background */}
-          <section id="bestellingen" className="relative w-full pt-24 sm:pt-32 pb-80"> 
-            {/* Full-width background element - BLACK */}
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-            
-            <div className="container px-0 mb-4 z-80 relative"> 
-              <h2 className="text-6xl font-semibold text-white z-80">Bestellingen</h2>
-            </div>
-            
-            {/* Container centers content normally ON TOP of the background */}
-            <div className="relative z-60"> 
-              {/* Grid layout */}
-              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> 
-
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-white row-span-2 z-80 relative"> 
-                  <p className="mb-4 text-base">Zie niet alleen wat er verkocht is, maar ook de winst per bestelling, naar wie het toegaat en wanneer het aankomt. Zo blijf je altijd op de hoogte van wat echt belangrijk is.</p>
-                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full pt-10">
-                    {/* Feature Set 1 */}
-                    <div className="mt-6 z-80 relative">
-                      <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Volledig inzicht in bestellingen en leveringen</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Bekijk per besteling het product, winst, omzet, contactgegevens, land, levering type en meer.</li>
-                        <li>Houd de status van zendingen bij met onze levering tracker.</li>
-                      </ul>
-                    </div>
-                    {/* Button with hover effect */}
-                    <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
-                        {/* Original Content - Slides up on hover */}
-                        <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
-                          Gesprek inplannen
-                          <MdOutlineArrowOutward className="h-5 w-5" />
-                        </span>
-                        {/* Hover Overlay - Slides in from bottom on hover */}
-                        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"> 
-                          Gesprek inplannen
-                          <MdOutlineArrowOutward className="h-5 w-5" />
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                {/* Empty placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
-
-                {/* Row 2, Column 1: Empty */}
-                <div></div>
-
-                {/* Row 2, Column 2: Empty Spacer */}
-                <div></div>
-              </div> {/* End grid */}
-
-              {/* Absolutely Positioned Image Container */}
-              <div className="absolute top-[84%] sm:top-[0%] sm:right-[-10%] w-full sm:w-[75%] h-auto z-70 pointer-events-none"> 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bestellingen-overview-L6WGFn4Rh7pJItxXCTcNu9f5iBaGeI.png"
-                  alt="Bestellingen screenshot"
-                  width={1200}
-                  height={960}
-                  quality={85}
-                  className="relative rounded-lg"
-                />
-              </div>
-
-            </div> {/* End container */}
-          </section> {/* End duplicated bleed section */}       
-
-
-          {/* Moved Bleed Background Section - Inline Styling */}
-          <section className="relative w-full"> {/* REMOVED padding from here */}
-            {/* Full-width background element */}
-            <div className="absolute inset-0 w-screen -z-10 left-1/2 -translate-x-1/2 bg-black"></div>
-
-            {/* Render the client component containing the sticky sections */}
-            <DataInzichtenClientFeatures />
-
-          </section> {/* End bleed section containing sticky elements */}
-
-          {/* These sections are now outside the black background/sticky section */}
-          <InteractiveTopicSection />
-          <MiddleContentSection />
+          
+          {/* Middle Content Section */}
+          <section className="relative w-full pt-16 md:pt-24 lg:pt-32 bg-black">
+            <MiddleContentSection />
+          </section>
 
           {/* <PricingSection /> */}
           {/* <TestimonialsSection /> */}

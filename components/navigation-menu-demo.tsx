@@ -45,6 +45,7 @@ interface FeatureItem {
   href: string;
   highlight?: boolean;
   comingSoon?: boolean;
+  imageUrl?: string;
 }
 
 const components: { title: string; href: string; description: string }[] = [
@@ -143,16 +144,35 @@ const featureCategories: {
         href: "/features/tools#ranking-ai"
       },
       {
+        title: "Product tracking",
+        description: "Track je producten en concurrenten nauwkeurig",
+        icon: "Target",
+        href: "/features/tools#product-tracking"
+      },
+    ]
+  },
+  toolsExtras: {
+    title: "Andere Tools",
+    colorClass: "hover:bg-purple-50 group-hover:border-purple-200",
+    iconClass: "text-purple-500",
+    items: [
+      {
         title: "Winst & ACoS calculator",
-        description: "Bereken winstgevendheid van producten en campagnes",
+        description: "",
         icon: "PieChart",
         href: "/features/tools#winst-calculator"
       },
       {
         title: "A/B testen van listings",
-        description: "Test verschillende listing varianten voor optimalisatie",
+        description: "",
         icon: "TestTubeDiagonal",
         href: "/features/tools#ab-testing"
+      },
+      {
+        title: "Project management",
+        description: "",
+        icon: "Briefcase",
+        href: "/features/tools#project-management"
       },
     ]
   },
@@ -187,43 +207,38 @@ const featureCategories: {
       },
     ]
   },
-  tracking: {
-    title: "Tracking",
-    colorClass: "hover:bg-green-50 group-hover:border-green-200",
-    iconClass: "text-green-500",
+  educatie: {
+    title: "Educatie",
+    colorClass: "hover:bg-indigo-50 group-hover:border-indigo-200",
+    iconClass: "text-indigo-500",
     items: [
       {
-        title: "Precision tracking",
-        description: "Nauwkeurige tracking van je belangrijkste statistieken",
-        icon: "Target",
-        href: "/features/tracking#tracking-options",
-        highlight: true,
+        title: "Alle artikelen",
+        description: "Bekijk alle artikelen op onze blog voor tips en tricks",
+        icon: "FileText",
+        href: "/blog"
       },
       {
-        title: "Dynamic tracking",
-        description: "Dynamische aanpassing van tracking parameters",
-        icon: "Activity",
-        href: "/features/tracking#tracking-options"
+        title: "Starten als Bol partner",
+        description: "Een complete gids om je op weg te helpen als nieuwe verkoper.",
+        icon: "FileText",
+        href: "/blog/starten-als-bol-partner-in-2025",
+        imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/partnerstartblog.png",
       },
       {
-        title: "Keyword tracking",
-        description: "Volg de prestaties van specifieke zoekwoorden",
-        icon: "KeyRound",
-        href: "/features/tracking#keyword-tracking"
+        title: "Verkopen in het AI tijdperk",
+        description: "Ontdek hoe je AI in je voordeel kunt gebruiken op Bol.com.",
+        icon: "FileText",
+        href: "/blog/verkopen-bol-ai-tijdperk",
+        imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png",
       },
-      {
-        title: "Project management",
-        description: "Beheer je projecten en taken efficiënt",
-        icon: "Briefcase",
-        href: "/features/tracking#project-management"
-      },
-      {
-        title: "Omzet research",
-        description: "Bekijk de omzet van meer dan 4 miljoen producten op bol",
-        icon: "Truck",
-        href: "/features/tracking#omzet-database",
-        comingSoon: true
-      },
+       {
+        title: "Meer reviews op Bol.com",
+        description: "Effectieve methoden om je review-score te verhogen.",
+        icon: "FileText",
+        href: "/blog/meer-reviews-op-bol",
+        imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/reviewblog.png",
+      }
     ]
   }
 }
@@ -257,7 +272,7 @@ function renderIcon(iconName: string, className: string) {
 }
 
 // Define menu identifiers
-type MenuId = "ai" | "automation" | "data" | "tracking" | null;
+type MenuId = "ai" | "automation" | "data" | "educatie" | null;
 
 // Content rendering component/helper
 function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
@@ -292,12 +307,12 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
           </div>
         </Link>
         <div className="flex flex-1 gap-0">
+          {/* Main tools - 3 columns */}
           {featureCategories.tools.items.map((item, index, arr) => {
             const category = featureCategories.tools;
             return (
               <div key={item.title} className={cn(
-                "group flex flex-col flex-1 hover:bg-gray-800 text-white",
-                index < arr.length - 1 && "border-r border-border"
+                "group flex flex-col flex-1 hover:bg-gray-800 text-white border-r border-border"
               )}>
                 <Link
                   href={item.href}
@@ -344,6 +359,34 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
               </div>
             );
           })}
+          
+          {/* Extra tools - single column with stacked cards */}
+          <div className="group flex flex-col flex-1 hover:bg-gray-800 text-white">
+            <div className="flex flex-col gap-0 h-full">
+              {featureCategories.toolsExtras.items.map((item, index) => {
+                const category = featureCategories.toolsExtras;
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center gap-3 p-3 hover:bg-gray-700 transition-colors border-b border-border last:border-b-0 flex-1"
+                    )}>
+                    <div className={cn(
+                      "flex h-6 w-6 shrink-0 items-center justify-center rounded border bg-background transition-colors"
+                    )}>
+                      <div className={category.iconClass}>
+                        {renderIcon(item.icon, "h-3 w-3")}
+                      </div>
+                    </div>
+                    <div className="text-sm font-medium text-white">
+                      {item.title}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -491,70 +534,79 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                </div>
             </div>
     ),
-    tracking: (
+    educatie: (
        <div className="flex w-full min-h-[350px] bg-background transition-opacity duration-300 ease-in">
-              <Link href="/features/tracking" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
+              <Link href="/blog" className="w-[200px] border-r block hover:opacity-90 transition-opacity">
                  <div className="relative w-full h-full overflow-hidden text-white">
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png"
-                      alt="Bolbaas Tracking Achtergrond"
+                      alt="Bolbaas Educatie Achtergrond"
                       fill
                       sizes="200px"
                       quality={80}
                       style={{ objectFit: 'cover' }}
                       priority
                     />
-                    <SidebarContent title="Bolbaas Tracking" subtitle="" />
+                    <SidebarContent title="Bolbaas Educatie" subtitle="Leer van de experts" />
                 </div>
               </Link>
-               <div className="flex flex-1 gap-0">
-                 {featureCategories.tracking.items.map((item, index, arr) => {
-                    const category = featureCategories.tracking;
+               <div className="grid grid-cols-4 flex-1">
+                 {featureCategories.educatie.items.map((item, index, arr) => {
+                    const category = featureCategories.educatie;
                     return (
                       <div key={item.title} className={cn(
-                        "group flex flex-col flex-1 hover:bg-gray-800 text-white",
+                        "group flex flex-col hover:bg-gray-800 text-white",
                         index < arr.length - 1 && "border-r border-border"
                       )}>
                         <Link
                           href={item.href}
                           className={cn(
-                            "flex flex-col items-start gap-2.5 p-2 relative h-full border border-transparent"
+                            "flex flex-col items-start h-full border border-transparent"
                           )}>
-                           <div className={cn(
-                            "flex h-8 w-8 shrink-0 items-center justify-center rounded border bg-background transition-colors"
-                           )}>
-                            <div className={category.iconClass}>
-                              {renderIcon(item.icon, "h-4 w-4")}
+                            <div className="relative w-full aspect-square overflow-hidden bg-gray-900">
+                                {item.imageUrl ? (
+                                <Image
+                                    src={item.imageUrl}
+                                    alt={item.title}
+                                    fill
+                                    sizes="250px"
+                                    style={{ objectFit: 'cover' }}
+                                    className="group-hover:scale-105 transition-transform duration-300"
+                                />
+                                ) : (
+                                <div className="flex items-center justify-center h-full">
+                                    <div className={cn(
+                                        "flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border bg-gray-800 transition-colors",
+                                        category.iconClass
+                                        )}>
+                                        {renderIcon(item.icon, "h-6 w-6")}
+                                    </div>
+                                </div>
+                                )}
                             </div>
-                          </div>
-                           <div className="flex flex-col mt-auto">
-                            {item.comingSoon ? (
-                              <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800 mb-1 self-start">
-                                BINNENKORT
-                              </span>
-                            ) : item.highlight && (
-                              <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800 mb-1 self-start">
-                                NIEUW
-                              </span>
-                            )}
-                            <div className={cn(
-                              "text-base font-semibold text-white",
-                              item.comingSoon && "text-muted-foreground group-hover:text-muted-foreground"
-                            )}>
-                              {item.title}
+                           <div className="flex flex-col p-3 flex-1">
+                            <div className="flex flex-col mt-auto">
+                                {item.highlight && (
+                                <span className="inline-flex items-center rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-800 mb-1 self-start">
+                                    NIEUW
+                                </span>
+                                )}
+                                <div className={cn(
+                                "text-base font-semibold text-white",
+                                )}>
+                                {item.title}
+                                </div>
+                                <p className={cn(
+                                "text-sm leading-relaxed text-muted-foreground mt-1",
+                                )}>
+                                {item.description}
+                                </p>
+                                <span className={cn(
+                                "inline-block border border-gray-600 text-gray-400 group-hover:border-indigo-500 group-hover:text-indigo-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
+                                )}>
+                                Lees meer
+                                </span>
                             </div>
-                            <p className={cn(
-                              "text-sm leading-relaxed text-muted-foreground mt-1",
-                              item.comingSoon && "group-hover:text-muted-foreground"
-                            )}>
-                              {item.description}
-                            </p>
-                            <span className={cn(
-                               "inline-block border border-gray-600 text-gray-400 group-hover:border-green-500 group-hover:text-green-400 text-xs font-medium px-2 py-1 rounded mt-2 self-start",
-                               item.comingSoon && "border-gray-300 text-gray-400 group-hover:border-gray-400 group-hover:text-gray-500 cursor-not-allowed"
-                            )}>
-                              Lees meer
-                            </span>
                           </div>
                         </Link>
                       </div>
@@ -786,16 +838,16 @@ export function NavigationMenuDemo() {
                     </div>
 
                     <div
-                        onMouseEnter={() => handleMouseEnter("tracking")}
+                        onMouseEnter={() => handleMouseEnter("educatie")}
                         className={cn(
                         navigationMenuTriggerStyle(),
                         "cursor-pointer relative bg-transparent",
                         "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:opacity-0 hover:after:opacity-100",
                         navbarMode === 'light' ? "after:bg-black hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "after:bg-white hover:bg-gray-800 text-white",
-                        activeMenu === "tracking" && !isMobileMenuOpen && "after:opacity-100"
+                        activeMenu === "educatie" && !isMobileMenuOpen && "after:opacity-100"
                         )}
                     >
-                        <Link href="/features/tracking">Tracking</Link>
+                        <Link href="/blog">Educatie</Link>
                     </div>
 
                     <li
@@ -880,7 +932,7 @@ export function NavigationMenuDemo() {
             <Link href="/features/tools" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>AI & Tools</Link>
             <Link href="/features/automatisering" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Automatisering</Link>
             <Link href="/features/store-prestaties" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Store prestaties</Link>
-            <Link href="/features/tracking" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Tracking</Link>
+            <Link href="/blog" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Educatie</Link>
             <Link href="/prijzen" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Prijzen</Link>
             <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>
             
