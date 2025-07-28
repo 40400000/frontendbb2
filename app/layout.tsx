@@ -86,6 +86,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preload" href="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bbachtergrond-CjA5NIpokk9K9l5fXxMujRWd3dgi4N.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/poster.png" as="image" type="image/png" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
       <script
         type="application/ld+json"

@@ -9,26 +9,39 @@ interface BackgroundVideoProps extends React.HTMLAttributes<HTMLDivElement> {
   gridVerticalSize?: number; // Vertical size in pixels
   overlayOpacity?: number; // Opacity for the dark overlay (0 to 1)
   playbackRate?: number; // Video playback speed (1.0 = normal, 0.5 = half speed, 2.0 = double speed)
+  mobileVideoSrc?: string; // Optional mobile-specific video source
 }
 
 // const VIDEO_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/glass-animation-5-clg7ICtDE6L3PjRXFrgTXvsINGplAC.mp4";
 const VIDEO_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bbachtergrond-CjA5NIpokk9K9l5fXxMujRWd3dgi4N.mp4";
+const POSTER_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/poster.png"; // Add a poster image URL
+
 export function BackgroundVideo({
   gridOpacity = 0.08, // Slightly reduced default
   gridSize = 12, // Tighter horizontal grid size
   gridVerticalSize = 4, // Tighter vertical grid size
   overlayOpacity = 0.78, // Default overlay opacity
   playbackRate = 0.99, // Default normal speed
+  mobileVideoSrc,
   className,
   ...props
 }: BackgroundVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoSrc, setVideoSrc] = React.useState(VIDEO_SRC);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = playbackRate;
     }
   }, [playbackRate]);
+
+  useEffect(() => {
+    // Check for mobile user agent
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile && mobileVideoSrc) {
+      setVideoSrc(mobileVideoSrc);
+    }
+  }, [mobileVideoSrc]);
 
   const gridStyle = {
     backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px)`,
@@ -48,7 +61,9 @@ export function BackgroundVideo({
         muted
         playsInline // Important for mobile playback
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src={VIDEO_SRC}
+        src={videoSrc}
+        poster={POSTER_SRC} // Add poster attribute
+        preload="auto" // Add preload attribute
       >
         Your browser does not support the video tag.
       </video>
