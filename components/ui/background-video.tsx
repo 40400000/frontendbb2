@@ -1,51 +1,44 @@
 "use client"
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface BackgroundVideoProps extends React.HTMLAttributes<HTMLDivElement> {
-  gridOpacity?: number; // Opacity from 0 to 1
-  gridSize?: number; // Horizontal size in pixels
-  gridVerticalSize?: number; // Vertical size in pixels
-  overlayOpacity?: number; // Opacity for the dark overlay (0 to 1)
-  playbackRate?: number; // Video playback speed (1.0 = normal, 0.5 = half speed, 2.0 = double speed)
-  mobileVideoSrc?: string; // Optional mobile-specific video source
+  gridOpacity?: number;
+  gridSize?: number;
+  gridVerticalSize?: number;
+  overlayOpacity?: number;
+  playbackRate?: number;
 }
 
-// const VIDEO_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/glass-animation-5-clg7ICtDE6L3PjRXFrgTXvsINGplAC.mp4";
 const VIDEO_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bbachtergrond-CjA5NIpokk9K9l5fXxMujRWd3dgi4N.mp4";
-const POSTER_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/poster.png"; // Add a poster image URL
+const POSTER_SRC = "/poster.png";
 
 export function BackgroundVideo({
-  gridOpacity = 0.08, // Slightly reduced default
-  gridSize = 12, // Tighter horizontal grid size
-  gridVerticalSize = 4, // Tighter vertical grid size
-  overlayOpacity = 0.78, // Default overlay opacity
-  playbackRate = 0.99, // Default normal speed
-  mobileVideoSrc,
+  gridOpacity = 0.08,
+  gridSize = 12,
+  gridVerticalSize = 4,
+  overlayOpacity = 0.78,
+  playbackRate = 0.99,
   className,
   ...props
 }: BackgroundVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoSrc, setVideoSrc] = React.useState(VIDEO_SRC);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    setIsMobile(checkMobile());
+
     if (videoRef.current) {
       videoRef.current.playbackRate = playbackRate;
     }
   }, [playbackRate]);
 
-  useEffect(() => {
-    // Check for mobile user agent
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile && mobileVideoSrc) {
-      setVideoSrc(mobileVideoSrc);
-    }
-  }, [mobileVideoSrc]);
-
   const gridStyle = {
     backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px)`,
-    backgroundSize: `${gridSize}px ${gridVerticalSize}px`, // Use both sizes
+    backgroundSize: `${gridSize}px ${gridVerticalSize}px`,
   };
 
   const overlayStyle = {
@@ -54,20 +47,30 @@ export function BackgroundVideo({
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden pt-20", className)} {...props}>
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline // Important for mobile playback
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src={videoSrc}
-        poster={POSTER_SRC} // Add poster attribute
-        preload="auto" // Add preload attribute
-      >
-        Your browser does not support the video tag.
-      </video>
-      {/* Dark Overlay - positioned above video, below grid */}
+      {isMobile ? (
+        <Image
+          src={POSTER_SRC}
+          alt="Background image"
+          layout="fill"
+          objectFit="cover"
+          quality={85}
+          priority
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src={VIDEO_SRC}
+          poster={POSTER_SRC}
+        >
+          Your browser does not support the video tag.
+        </video>
+      )}
+      {/* Dark Overlay */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={overlayStyle}
@@ -81,8 +84,7 @@ export function BackgroundVideo({
       <div
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.8) 100%)",
+          background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.8) 100%)",
         }}
       />
     </div>
