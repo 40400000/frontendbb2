@@ -81,7 +81,8 @@ export default function HomePage() {
                 {/* Sub-headline */}
                 <div className="mb-8">
                   <p className="text-base font-medium text-white leading-relaxed">
-                    De software die zorgt voor winstgevende zichtbaarheid én automatisering voor Bol partners.
+
+                    Alles wat je nodig hebt, in één AI-gedreven platform.
                   </p>
                 </div>
               </div>
@@ -120,7 +121,7 @@ export default function HomePage() {
           </div>
 
           {/* Absolutely Positioned Image Container */}
-          <div className="absolute top-[64%] sm:top-36 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/5 pointer-events-none overflow-x-hidden sm:overflow-x-visible hidden sm:block">
+          <div className="absolute top-[64%] sm:top-36 right-0 w-full sm:w-[700px] lg:w-[800px] xl:w-[900px] h-auto z-999 transform sm:translate-x-1/5 pointer-events-none overflow-x-hidden sm:overflow-x-visible hidden">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/hero25.png"
               alt="Hero Image"

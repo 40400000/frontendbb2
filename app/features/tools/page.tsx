@@ -688,7 +688,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
           </section> {/* End bleed section */}
 
           {/* Product Tracking Section - White Background */}
-          <section id="product-tracking" className="relative w-full pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16">
+          <section data-navbar-mode="light" id="product-tracking" className="relative w-full pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16">
             {/* Added wrapper div for centering */}
             <div className="flex flex-col items-center justify-center h-full">
               {/* Full-width background element */}
@@ -777,7 +777,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                       alt="Bolbaas logo" 
                       width={36} 
                       height={36} 
-                      className="mr-2 flex-shrink-0"
+                      className="mr-2 flex-shrink-0 invert"
                     />
                     <span>→ Zie alle concurrentie bewegingen real-time</span>
                   </div>
@@ -858,7 +858,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                       alt="Bolbaas logo" 
                       width={36} 
                       height={36} 
-                      className="mr-2 flex-shrink-0"
+                      className="mr-2 flex-shrink-0 invert"
                     />
                     <span>→ Data-driven optimalisatie beslissingen</span>
                   </div>
@@ -884,7 +884,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                     <span className="text-xs font-mono text-gray-600 tracking-wider">04</span>
                   </div>
                   <div className="flex-grow">
-                    <h3 className="font-semibold text-black text-xl mb-3 group-hover:text-black transition-colors">Bekijk waar je wel en zichtbaar bent</h3>
+                    <h3 className="font-semibold text-black text-xl mb-3 group-hover:text-black transition-colors">Bekijk waar je wel en niet zichtbaar bent</h3>
                     <p className="text-sm text-gray-600 mb-4 leading-relaxed">Geleidelijk marktaandeel verliezen zonder het door te hebben?</p>
                   </div>
                   <div className="flex items-center text-sm text-black font-medium mb-6">
@@ -893,7 +893,7 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                       alt="Bolbaas logo" 
                       width={36} 
                       height={36} 
-                      className="mr-2 flex-shrink-0"
+                      className="mr-2 flex-shrink-0 invert"
                     />
                     <span>→ Behoud en vergroot je marktpositie</span>
                   </div>

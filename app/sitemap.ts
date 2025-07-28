@@ -56,25 +56,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/blog/btw-aangifte-bol-icp`,
       lastModified: today,
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/meer-reviews-op-bol`,
       lastModified: today,
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/starten-als-bol-partner-in-2025`,
       lastModified: today,
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/verkopen-bol-ai-tijdperk`,
       lastModified: today,
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.7,
     },
   ]

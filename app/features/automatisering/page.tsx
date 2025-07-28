@@ -184,10 +184,10 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                       </div>
                     </div>
                     {/* Column 2: Image */}
-                    <div className="flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
-                      <div className="w-full sm:w-[60%] h-auto sm:ml-[30%]">
+                    <div className="flex justify-center sm:ml-[8vw] pointer-events-none">
+                      <div className="w-full sm:w-[60%] h-auto">
                         <Image
-                          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden5.png"
+                          src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden%20%281%29.png"
                           alt="Automatisch BTW facturen uploaden"
                           width={1200}
                           height={960}
@@ -276,10 +276,10 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                   {/* Feature 2: Email Campagnes */}
                   <div className="grid grid-cols-1 sm:grid-cols-[75%_25%] gap-x-0 gap-y-6 text-black mt-24">
                     {/* Column 1: Image */}
-                    <div className="flex justify-center sm:justify-start sm:ml-[-6vw] order-last sm:order-first pointer-events-none">
-                        <div className="w-full sm:w-[60%] h-auto sm:mr-[30%]">
+                    <div className="flex justify-center sm:justify-start sm:ml-[4vw] order-last sm:order-first pointer-events-none">
+                        <div className="w-full sm:w-[60%] h-auto sm:mr-[-10%]">
                             <Image
-                                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails4.png"
+                                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails-2.png"
                                 alt="E-mail campagnes automatisering"
                                 width={1200}
                                 height={960}
@@ -463,73 +463,49 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
             </div>
             {/* Container centers content normally ON TOP of the background */}
             <div className="relative z-60"> {/* REMOVED container padding */}
-              {/* Use custom grid columns to achieve 35% 15% 25% 25% split, remove gap */}
-              {/* Add vertical gap between rows */}
-              <div className="grid grid-cols-1 sm:grid-cols-[25%_25%_25%_25%] gap-x-0 gap-y-6 text-white"> {/* Updated grid definition, added gap-y-6 */}
-
-                {/* Row 1, Column 1: Left Text (35%) */}
-                <div className="text-white row-span-2"> {/* Span container across two rows */}
-                  <p className="mb-4 text-base">Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Bolbaas regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.</p>
-                  {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full pt-10">
-                    {/* Moved Feature Set 1 into first column */}
-                    <div className="sm:mt-6">
-                      <p className="text-sm text-gray-400 mb-1">BTW BEREKENING</p>
-                      <h3 className="font-semibold text-white my-3">BTW aangifte automatisch berekend</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Bolbaas berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.</li>
-                      </ul>
-                    </div>
-                    {/* Moved Feature Set 2 into first column */}
-                    <div className="mt-10 pr-4 md:pr-6">
-                      <p className="text-sm text-gray-400 mb-1">BTW BOEKHOUDING</p>
-                      <h3 className="font-semibold text-white my-3">BTW facturen automatisch opgeslagen</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.</li>
-                      </ul>
+              {/* Feature grid with text and image */}
+              <div className="grid grid-cols-1 sm:grid-cols-[25%_75%] gap-x-0 gap-y-6 text-white mt-12">
+                {/* Column 1: Text */}
+                <div className="text-white z-80 relative">
+                  <div className="w-full">
+                    <div className="sm:mt-10 z-80 relative">
+                      <p className="mb-4 text-base">Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Bolbaas regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.</p>
+                      {/* Feature Set 1 */}
+                      <div className="mt-10">
+                        <p className="text-sm text-gray-400 mb-1">BTW BEREKENING</p>
+                        <h3 className="font-semibold text-white my-3">BTW aangifte automatisch berekend</h3>
+                        <ul className="space-y-2 text-sm text-white pr-3">
+                          <li>Bolbaas berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.</li>
+                        </ul>
+                      </div>
+                      {/* Feature Set 2 */}
+                      <div className="mt-10 pr-4 md:pr-6">
+                        <p className="text-sm text-gray-400 mb-1">BTW BOEKHOUDING</p>
+                        <h3 className="font-semibold text-white my-3">BTW facturen automatisch opgeslagen</h3>
+                        <ul className="space-y-2 text-sm text-white pr-3">
+                          <li>Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-                {/* Row 1 placeholders for columns 2-4 */}
-                <div></div>
-                <div></div>
-                <div></div>
-
-                {/* Row 2, Column 1: Empty */}
-                <div></div>
-
-                {/* Row 2, Column 2: Empty Spacer */}
-                <div></div>
-
-                {/* Row 2, Column 3: Feature Set 1 (25% width via grid) */}
-        
-
-                {/* Commented out original feature sets - REMOVE THESE LATER IF LAYOUT IS CORRECT */}
-                {/* <div className="text-gray-300"> ... </div> */}
-                {/* <div className="text-gray-300 pr-4 md:pr-6"> ... </div> */}
-
-                {/* <div className="text-gray-300">
-                  <p className="text-sm text-gray-500 mb-1">03</p>
-                  <h3 className="font-semibold text-white my-3">Bekijk conversie, clicks en koopblokken</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bekijk het aantal clicks en de conversie van een product. Optimaliseer je listing voor hogere omzet. </li>
-                  </ul>
+                {/* Column 2: Image */}
+                <div className="flex justify-center sm:ml-[10vw] pointer-events-none sm:mt-15">
+                  <div className="w-full sm:w-[95%] h-auto">
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen6.png"
+                      alt="BTW automatisering dashboard"
+                      width={1200}
+                      height={960}
+                      quality={85}
+                      className="relative rounded-lg"
+                    />
+                  </div>
                 </div>
-
-
-                <div className="text-gray-300 pr-4 md:pr-6">
-                  <p className="text-sm text-gray-500 mb-1">04</p>
-                  <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
-                  <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
-                  </ul>
-                </div> */}
-
-
-              </div> {/* End grid */}
+              </div>
 
               {/* 4-Step Process Section for BTW Aangifte */}
-              <div className="relative grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white py-0 border-t border-b border-gray-800 items-stretch sm:mt-40">
+              <div className="relative grid grid-cols-1 sm:grid-cols-4 gap-x-0 text-white py-0 border-t border-b border-gray-800 items-stretch mt-10 sm:mt-40">
                 {/* Step 1 - Deadline */}
                 <div className="px-6 py-8 group hover:bg-yellow-900/20 transition-all duration-300 ease-out flex flex-col h-full border border-yellow-500/30 bg-yellow-900/10 shadow-md shadow-yellow-500/10">
                   <div className="flex items-center mb-4">
@@ -599,17 +575,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
               </div>
 
 
-              {/* NEW Absolutely Positioned Image Container for Product Prestaties */}
-              <div className="absolute top-[89%] sm:top-[0%] sm:right-[-10%] w-[100%] sm:w-[75%] h-auto z-70 pointer-events-none"> {/* Adjusted top/right positioning */} 
-                <Image
-                  src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/BTW-AANGIFTE4.png"
-                  alt="Product prestaties screenshot"
-                  width={1200} // Adjust width as needed, larger for better quality scaling down
-                  height={960} // Adjust height based on aspect ratio
-                  quality={85}
-                  className="relative rounded-lg" // Removed shadow and border
-                />
-              </div>
+
 
             </div> {/* End container */}
           </section> {/* End bleed section */}
