@@ -54,7 +54,8 @@ export function BackgroundVideo({
           layout="fill"
           objectFit="cover"
           quality={65}
-          priority
+          priority={true}
+
         />
       ) : (
         <video
