@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'vhtnlfbnq3ecybmn.public.blob.vercel-storage.com',
-        // port: '', // Optional: Add port if needed
-        // pathname: '/image/upload/**', // Optional: Add specific path pattern if needed
+        port: '',
+        pathname: '/**',
       },
     ],
   },
