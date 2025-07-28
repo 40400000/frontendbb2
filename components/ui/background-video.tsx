@@ -13,7 +13,7 @@ interface BackgroundVideoProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const VIDEO_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/bbachtergrond-CjA5NIpokk9K9l5fXxMujRWd3dgi4N.mp4";
-const POSTER_SRC = "/poster.png";
+const POSTER_SRC = "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/poster.png";
 
 export function BackgroundVideo({
   gridOpacity = 0.08,
@@ -53,7 +53,6 @@ export function BackgroundVideo({
           alt="Background image"
           layout="fill"
           objectFit="cover"
-          quality={85}
           priority
         />
       ) : (
