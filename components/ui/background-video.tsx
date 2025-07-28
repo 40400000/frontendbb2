@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -24,17 +24,15 @@ export function BackgroundVideo({
   className,
   ...props
 }: BackgroundVideoProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    setIsMobile(checkMobile());
-
-    if (videoRef.current) {
-      videoRef.current.playbackRate = playbackRate;
+    // This check only runs on the client
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      setShowVideo(true);
     }
-  }, [playbackRate]);
+  }, []);
 
   const gridStyle = {
     backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, ${gridOpacity}) 1px, transparent 1px)`,
@@ -47,19 +45,8 @@ export function BackgroundVideo({
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden pt-20", className)} {...props}>
-      {isMobile ? (
-        <Image
-          src={POSTER_SRC}
-          alt="Background image"
-          layout="fill"
-          objectFit="cover"
-          quality={45}
-          priority={true}
-
-        />
-      ) : (
+      {showVideo ? (
         <video
-          ref={videoRef}
           autoPlay
           loop
           muted
@@ -70,6 +57,15 @@ export function BackgroundVideo({
         >
           Your browser does not support the video tag.
         </video>
+      ) : (
+        <Image
+          src={POSTER_SRC}
+          alt="Background image"
+          layout="fill"
+          objectFit="cover"
+          quality={45}
+          priority={true}
+        />
       )}
       {/* Dark Overlay */}
       <div
