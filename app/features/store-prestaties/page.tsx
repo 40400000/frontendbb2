@@ -15,7 +15,7 @@ import {
   Database, // Added Database icon
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md"; // Added icon import
-// import OrderProgressTracker from '@/components/order-progress-tracker'; // Keep old import commented for reference or remove
+import { IoStar } from "react-icons/io5";
 import HighlightedSection from '@/components/highlighted-section'; // Corrected import path
 import { BackgroundPhoto } from "@/components/ui/background-photo"; // Import the background photo
 import { InteractiveTopicSection } from "@/components/interactive-topic-section";
@@ -292,15 +292,29 @@ export default function StorePrestatiesPage() { // Renamed function
                   </div>
                   
                   {/* Technical capabilities that enable this */}
-                  <div className="border-t border-white/10 pt-6 space-y-4">
-                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-green-400 hover:bg-zinc-800/70 transition-colors duration-300">
+                  <div className="border-t border-white/10 pt-6 flex flex-col gap-4">
+                    <div className="flex flex-1 items-center space-x-3 rounded-lg border-l-4 border-blue-400 bg-zinc-800/50 p-4 transition-colors duration-300 hover:bg-zinc-800/70">
+                      <Image
+                        src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/1440x1080a%20%281%29.jpg"
+                        alt="Nieuwe product review"
+                        width={40}
+                        height={40}
+                        className="flex-shrink-0 rounded-md object-cover"
+                      />
+                      <div>
+                        <p className="font-semibold text-sm text-white">Nieuwe product review</p>
+                        <div className="mt-0.5 flex items-center">
+                          <IoStar className="h-4 w-4 text-yellow-400" />
+                          <IoStar className="h-4 w-4 text-yellow-400" />
+                          <IoStar className="h-4 w-4 text-yellow-400" />
+                          <IoStar className="h-4 w-4 text-yellow-400" />
+                          <IoStar className="h-4 w-4 text-yellow-400" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-1 flex-col justify-center p-4 bg-zinc-800/50 rounded-lg border-l-4 border-green-400 hover:bg-zinc-800/70 transition-colors duration-300">
                       <div className="text-sm font-medium text-white mb-1">Belangrijkste verbeterpunten</div>
                       <div className="text-xs text-zinc-500">Bekijk de belangrijkste klantopmerkingen en verbeterpunten per product</div>
-                    </div>
-                    
-                    <div className="p-4 bg-zinc-800/50 rounded-lg border-l-4 border-blue-400 hover:bg-zinc-800/70 transition-colors duration-300">
-                      <div className="text-sm font-medium text-white mb-1">Reviews trends</div>
-                      <div className="text-xs text-zinc-500">Bekijk de trends in reviews en wat het betekent voor je product</div>
                     </div>
                   </div>
                 </div>
@@ -678,17 +692,26 @@ export default function StorePrestatiesPage() { // Renamed function
                 <div className="text-white relative"> 
                   <p className="mb-4 text-base">Maak dashboards die precies bij jou passen. Volledig custom en aanpasbaar.</p>
                   {/* Wrapper to constrain width of feature blocks below to 25% of grid container */}
-                  <div className="w-full">
-                    {/* Moved Feature Set 1 into first column */}
-                    <div className="mt-6 relative pt-10">
-                      <p className="text-sm text-gray-400 mb-1">01</p>
-                      <h3 className="font-semibold text-white my-3">Sla custom dashboards views op</h3>
-                      <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Maak jouw dashboards precies zoals jij dat wilt, met de data die je nodig hebt. Sla deze op en kom later terug. </li>
-                      </ul>
+                  <div className="w-full pt-10">
+                    <div className="space-y-8">
+                        <div>
+                            <p className="text-sm text-gray-400 mb-2 font-mono tracking-wider">STAP 1</p>
+                            <h3 className="font-semibold text-white text-lg mb-2">Creëer je eigen dashboard</h3>
+                            <p className="text-sm text-white/80 pr-3">Selecteer de data, kolommen en filters die jij belangrijk vindt. Stel je dashboard samen met de inzichten die voor jou relevant zijn.</p>
+                        </div>
+                        <div>
+                            <p className="text-sm text-gray-400 mb-2 font-mono tracking-wider">STAP 2</p>
+                            <h3 className="font-semibold text-white text-lg mb-2">Sla je dashboard op</h3>
+                            <p className="text-sm text-white/80 pr-3">Geef je custom dashboard een naam en sla het op. Je kunt zoveel dashboards opslaan als je nodig hebt.</p>
+                        </div>
+                        <div>
+                            <p className="text-sm text-gray-400 mb-2 font-mono tracking-wider">STAP 3</p>
+                            <h3 className="font-semibold text-white text-lg mb-2">Gebruik je dashboard</h3>
+                            <p className="text-sm text-white/80 pr-3">Je opgeslagen dashboards zijn altijd en overal beschikbaar. Open ze met één klik en heb direct toegang tot je gepersonaliseerde data.</p>
+                        </div>
                     </div>
                     <Link href="/contact" passHref>
-                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}
+                      <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-10" > {/* Adjusted margin top */}
                         {/* Original Content - Slides up on hover */}
                         <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> {/* Changed font-bold to font-semibold */} 
                           Gesprek inplannen {/* Updated text */}
