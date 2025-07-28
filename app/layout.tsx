@@ -87,6 +87,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context" : "https://schema.org",
+          "@type" : "WebSite",
+          "name" : "Bolbaas",
+          "url" : "https://bolbaas.nl/"
+        }) }}
+      />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <ThemeHandler />
           <>
