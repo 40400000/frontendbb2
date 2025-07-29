@@ -229,7 +229,7 @@ export default function HighlightedSection({ variant }: HighlightedSectionProps)
     const category = automationCategory;
 
     return (
-      <section className="w-full md:w-1/2 py-6 md:py-8 lg:py-10 border-t border-r border-b bg-white">
+      <section className="w-full md:w-1/2 py-6 md:py-8 lg:py-10 border-t border-r border-b bg-white hidden">
         <div className="container px-4 md:px-6">
           <div className="mb-8 text-left px-1.5">
             <h3 className="text-sm text-muted-foreground font-normal mb-1">{category.title}</h3>
