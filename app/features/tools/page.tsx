@@ -215,10 +215,10 @@ export default function ToolsPage() { // Rename function if needed, e.g., ToolsP
                   </div>
                 </div>
                 {/* Row 1, Columns 2-4: First Image spanning 3 columns */}
-                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none">
+                <div className="col-span-2 sm:col-span-3 flex justify-center sm:justify-end sm:-mr-[6vw] pointer-events-none mt-8 sm:mt-20">
                   <div className="w-full sm:w-[75%] h-auto sm:ml-[15%]">
                     <Image
-                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen3.png"
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen6.png"
                       alt="Database screenshot"
                       width={960}
                       height={960}

@@ -493,7 +493,7 @@ export default function AutomatiseringPage() { // Rename function if needed, e.g
                 <div className="flex justify-center sm:ml-[10vw] pointer-events-none sm:mt-15">
                   <div className="w-full sm:w-[95%] h-auto">
                     <Image
-                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen6.png"
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/btw-dashboard-2.png"
                       alt="BTW automatisering dashboard"
                       width={1200}
                       height={960}
