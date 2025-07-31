@@ -10,6 +10,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ConditionalBlogBanner } from "@/components/conditional-blog-banner";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeHandler } from '@/components/theme-handler';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -120,6 +121,24 @@ export default function RootLayout({
           </>
         </ThemeProvider>
         <Analytics />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17372857270"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17372857270', {
+                cookie_domain: 'bolbaas.nl',
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
