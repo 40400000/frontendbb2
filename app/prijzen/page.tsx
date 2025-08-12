@@ -55,6 +55,7 @@ import { TrackingClientFeatures } from "@/components/tracking-client-features";
 import { ExpandableSection } from "@/components/expandable-feature-sections";
 import { cn } from "@/lib/utils"; // Added cn import
 import type { Metadata } from "next";
+import { AdsConversionListener } from "@/components/ads-conversion-listener";
 
 export const metadata: Metadata = {
   title: "Prijzen - Bolbaas",
@@ -425,6 +426,7 @@ export default function PricingPage() { // Renamed function
 
   return (
     <>
+      <AdsConversionListener />
       {/* Fixed Background Photo */}
       <BackgroundPhoto className="fixed inset-0 -z-10" imageOption={1} />
 
@@ -574,6 +576,11 @@ export default function PricingPage() { // Renamed function
                             "w-full group text-black hover:cursor-pointer", // Ensure text is black for buttons
                             plan.ctaVariant === 'default' ? 'bg-white hover:bg-gray-200' : 'bg-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 text-white hover:text-black hover:cursor-pointer' // Adjusted default and outline styles
                           )}
+                          {...(plan.cta === '1 maand gratis' ? {
+                            'data-ads-conversion': 'free-trial',
+                            'data-plan': plan.name,
+                            'data-href': plan.redirect,
+                          } : {})}
                           
                         >
                           {plan.cta}

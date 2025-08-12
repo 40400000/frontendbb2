@@ -20,6 +20,8 @@ import { MiddleContentSection } from "@/components/middle-content-section";
 import { RevenueComparisonChart } from "@/components/revenue-comparison-chart";
 import { CPCChart } from "@/components/cpc-chart";
 import { Metadata } from "next";
+import { HeroGraph } from "@/components/hero-graph";
+
 export const metadata: Metadata = {
   title: "Bolbaas - data en automatisering voor bol partners",
   description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
@@ -74,9 +76,9 @@ export default function HomePage() {
             {/* Grid wrapper to align content and buttons with columns */}
             <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
               {/* Text container spanning full width, but capped by max-w */}
-              <div className="col-span-2 sm:col-span-4 flex flex-col items-start space-y-3 md:space-y-4 max-w-none sm:max-w-3xl w-full">
+              <div className="col-span-2 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4">
                 {/* Headline - Reduced font size and corrected tag to h1 */}
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[65%] sm:w-[45%] lg:w-[68%]">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 pr-20">
                   De zekerheid van data en automatisering voor bol partners.
                 </h1>
                 {/* Sub-headline */}
@@ -87,6 +89,9 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+               <div className="hidden sm:block sm:col-span-2">
+            <HeroGraph />
+          </div>
               {/* Button Container - Add t/b borders, keep left padding */}
               <div className="col-span-2 sm:col-span-1 mt-4 flex flex-col pl-0.5 border-t border-b border-border"> {/* Added border-t, border-b */}
                 {/* Button 1 - Group for hover effects, relative positioning */}
@@ -374,7 +379,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* New Row: Item 9 */}
-              <div className="bg-black text-white p-8 border-t border-l border-b border-border min-h-[35rem] flex flex-col">
+              <div className="bg-black text-white p-8 border-l border-b border-border min-h-[35rem] flex flex-col">
                 <div className="w-full h-80 mb-6 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/square1.png"
