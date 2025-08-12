@@ -84,7 +84,7 @@ export function HeroGraph() {
 
 
   return (
-    <div ref={chartRef} className="w-full h-full">
+    <div ref={chartRef} className="w-full h-full hidden">
       
       {/* Graph title */}
       <div className="mb-4 flex justify-end">
