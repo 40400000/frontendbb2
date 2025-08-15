@@ -21,6 +21,7 @@ import { RevenueComparisonChart } from "@/components/revenue-comparison-chart";
 import { CPCChart } from "@/components/cpc-chart";
 import { Metadata } from "next";
 import { HeroGraph } from "@/components/hero-graph";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Bolbaas - data en automatisering voor bol partners",
@@ -41,6 +42,20 @@ export default function HomePage() {
 
   return (
     <>
+      <Script
+        id="ld-website"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Bolbaas",
+            alternateName: ["bolbaas", "bolbaas.nl"],
+            url: "https://bolbaas.nl/",
+          }),
+        }}
+      />
       {/* Fixed Background Video */}
       <BackgroundVideo className="fixed inset-0 -z-10" />
 

@@ -91,8 +91,7 @@ const pricingPlans = [
       { text: "Automatisering facturen", icon: FileText },
       { text: "Onbeperkt e-mail campagnes", icon: Mail },
       { text: "Custom sales & winst dashboards", icon: LineChart },
-
-      { text: "Automatisch factuuraanvragen", icon: Reply },
+      { text: "Bolbaas pilot", icon: Bot },
       { text: "Verzamel meer reviews", icon: IoStarOutline },
       { text: "Automatisering BTW aangifte", icon: FileClock },
       { text: "Volg rankings van 10 producten", icon: Activity },
@@ -360,7 +359,7 @@ const automationFeatures: FeatureComparisonItem[] = [
   {
     name: "Baaspilot",
     description: "Wees direct op de hoogte van alle belangrijke gebeurtenissen",
-    hobby: "✕", // Assuming not in Start plan
+    hobby: "✓", // Now included in Start plan
     pro: "✓",
     enterprise: "✓"
   }
