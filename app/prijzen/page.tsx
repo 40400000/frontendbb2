@@ -91,7 +91,7 @@ const pricingPlans = [
       { text: "Automatisering facturen", icon: FileText },
       { text: "Onbeperkt e-mail campagnes", icon: Mail },
       { text: "Custom sales & winst dashboards", icon: LineChart },
-      { text: "Bolbaas pilot", icon: Bot },
+      { text: "Baaspilot", icon: Bot },
       { text: "Verzamel meer reviews", icon: IoStarOutline },
       { text: "Automatisering BTW aangifte", icon: FileClock },
       { text: "Volg rankings van 10 producten", icon: Activity },
