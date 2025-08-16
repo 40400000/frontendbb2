@@ -21,7 +21,11 @@ export function Footer() {
     }
 
     // Force light footer on legal pages
-    if (pathname.startsWith('/algemene-voorwaarden') || pathname.startsWith('/verwerkersovereenkomst')) {
+    if (
+      pathname.startsWith('/algemene-voorwaarden') ||
+      pathname.startsWith('/verwerkersovereenkomst') ||
+      pathname.startsWith('/privacy')
+    ) {
       setFooterMode('light');
       return;
     }
@@ -90,6 +94,7 @@ export function Footer() {
           <div className="pl-0">
             <h4 className="font-extralight mb-2 tracking-tighter text-sm">L E G A L</h4>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/privacy" className={cn(footerTextClass, linkHoverClass)}>Privacy statement</Link></li>
               <li><Link href="/algemene-voorwaarden" className={cn(footerTextClass, linkHoverClass)}>Algemene voorwaarden</Link></li>
               <li><Link href="/verwerkersovereenkomst" className={cn(footerTextClass, linkHoverClass)}>Verwerkersovereenkomst</Link></li>
             </ul>
