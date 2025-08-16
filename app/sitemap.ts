@@ -12,6 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/algemene-voorwaarden`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/verwerkersovereenkomst`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: today,
       changeFrequency: 'daily',

@@ -17,12 +17,18 @@ export function Footer() {
       // On blog pages, the theme is controlled by BlogThemeHandler.
       // We just need to set the footerMode based on the theme from next-themes.
       setFooterMode(theme === 'dark' ? 'dark' : 'light');
-      return; // Skip the rest of the scroll-based logic
+      return;
     }
 
-    // For non-blog pages, always use dark mode
+    // Force light footer on legal pages
+    if (pathname.startsWith('/algemene-voorwaarden') || pathname.startsWith('/verwerkersovereenkomst')) {
+      setFooterMode('light');
+      return;
+    }
+
+    // Default to dark mode elsewhere
     setFooterMode('dark');
-  }, [isBlogPostPage, theme]);
+  }, [isBlogPostPage, theme, pathname]);
 
   const footerBackgroundClass = footerMode === 'light' ? 'bg-white' : 'bg-black';
   const footerTextClass = footerMode === 'light' ? 'text-black' : 'text-white';
@@ -84,9 +90,8 @@ export function Footer() {
           <div className="pl-0">
             <h4 className="font-extralight mb-2 tracking-tighter text-sm">L E G A L</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/privacy" className={cn(footerTextClass, linkHoverClass)}>Privacy statement</Link></li>
-              <li><Link href="/terms" className={cn(footerTextClass, linkHoverClass)}>Algemene voorwaarden</Link></li>
-              <li><Link href="/cookies" className={cn(footerTextClass, linkHoverClass)}>Verwerkingsovereenkomst</Link></li>
+              <li><Link href="/algemene-voorwaarden" className={cn(footerTextClass, linkHoverClass)}>Algemene voorwaarden</Link></li>
+              <li><Link href="/verwerkersovereenkomst" className={cn(footerTextClass, linkHoverClass)}>Verwerkersovereenkomst</Link></li>
             </ul>
           </div>
           <div className="pl-0">
