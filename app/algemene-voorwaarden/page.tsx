@@ -74,7 +74,7 @@ export default function AlgemeneVoorwaardenPage() {
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">4. Proefperiode en fair-use</h2>
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <p>
-                  De eerste maand nadat je een account hebt aangemaakt, kun je Bolbaas kosteloos proberen (m.u.v. optionele betaalde diensten). In deze periode kun je beoordelen of Bolbaas past bij jouw wensen en onderneming. Bevalt het niet, dan kun je tussentijds stoppen. De proefperiode wordt omgezet in een abonnement op het moment dat je je betalingsgegevens toe hebt gevoegd.
+                  De eerste maand nadat je een account hebt aangemaakt, kun je Bolbaas kosteloos proberen (m.u.v. optionele betaalde diensten). In deze periode kun je beoordelen of Bolbaas past bij jouw wensen en onderneming. Bevalt het niet, dan kun je tussentijds stoppen. De proefperiode wordt omgezet in een abonnement op het moment dat je je betalingsgegevens hebt toegevoegd.
                 </p>
                 <h3 className="mt-8 text-xl font-semibold">4.1 Fair-use policy</h3>
                 <p>
@@ -89,10 +89,9 @@ export default function AlgemeneVoorwaardenPage() {
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">6. Stoppen met Bolbaas en verwijderen van data</h2>
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <p>
-Bij het verwijderen van je account verwijderen we automatisch na 24 al je data, tenzij je ons verzoekt dit direct te doen. Je kan je account verwijderen door contact met ons op te nemen via info@bolbaas.nl. We verwijderen je data binnen 24 uur.             </p>
+Bij het verwijderen van je account verwijderen we automatisch na 24 uur al je data. Je kan je account verwijderen door contact met ons op te nemen via info@bolbaas.nl. We zullen binnen 24 uur op verwijderingsverzoeken reageren, ook in het weekend.          </p>
                 <p>
-                  Voor vragen over dataportabiliteit of inzage kun je ook via dit e-mailadres contact opnemen.
-                </p>
+Via dit e-mailadres kan je ook verzoeken voor dataportabiliteit of inzage indienen. Deze verzoeken behandelen we binnen 5 werkdagen.                </p>
 
                 
                 
@@ -158,7 +157,7 @@ Bij het verwijderen van je account verwijderen we automatisch na 24 al je data, 
                   Er gelden enkele regels voor het gebruik van Bolbaas.
                 </p>
                 <p>
-                  Je mag geen accounts geautomatiseerd aanmaken; je moet voldoen aan de minimale wettelijke leeftijd; één account is bedoeld voor één bedrijf (meerdere profielen binnen één account zijn toegestaan als je meerdere handelsnamen hebt).
+                  Je mag geen workspaces geautomatiseerd aanmaken; je moet voldoen aan de minimale wettelijke leeftijd; één workspace is bedoeld voor één bedrijf (per workspace mag je, afhankelijk van je abonnement, meerdere persoonsgebonden profielen hebben.).
                 </p>
                 <ul>
                   <li>Wees zorgvuldig en handel in overeenstemming met wet- en regelgeving, openbare orde en goede zeden.</li>
@@ -183,7 +182,7 @@ Bij het verwijderen van je account verwijderen we automatisch na 24 al je data, 
                   Je bent zelf verantwoordelijk voor de juistheid van onder jouw naam verzonden e-mails en documenten en voor eventuele claims die daaruit voortvloeien.
                 </p>
                 <p>
-                  Je bent verantwoordelijk voor het gebruik van je account. Kies een sterk wachtwoord en deel dit niet. Wil je iemand toegang geven (zoals je boekhouder of partner), maak dan een extra gebruiker aan met passende rechten.
+                  Je bent verantwoordelijk voor het gebruik van je account. Kies een sterk wachtwoord en deel dit niet. Wil je iemand toegang geven (zoals je boekhouder of partner), maak dan een extra gebruikersprofiel aan en koppel deze aan je workspace. 
                 </p>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">13. Schending van de voorwaarden</h2>
@@ -207,7 +206,7 @@ Bij het verwijderen van je account verwijderen we automatisch na 24 al je data, 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">16. Relatie tot andere bedrijven</h2>
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <p>
-                  Bolbaas is een onafhankelijk bedrijf en staat los van bol.com B.V.
+                  Bolbaas is een onafhankelijk bedrijf en staat los van bol.com B.V. en dochterondernemingen van deze rechtspersoon. Wij zijn geen dochteronderneming van bol.com B.V. en hebben geen relatie met bol.com B.V..
                 </p>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">17. Wijzigingen in deze voorwaarden</h2>

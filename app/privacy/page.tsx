@@ -62,6 +62,71 @@ export default function PrivacyPage() {
                   <li><strong>Bewaren & verwijderen</strong>: we bewaren niet langer dan nodig. Op verzoek verwijderen we je data binnen 24 uur; bij accountverwijdering wissen we je data ook binnen 24 uur (back‑ups verlopen via rotatie).</li>
                 </ul>
 
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Welke gegevens we verwerken (met jouw toestemming)</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <p>
+                  Koppel je je bol store via API en geef je toestemming, dan halen we via de bol API alleen de gegevens op die nodig zijn om voor jou store(s) de functies te laten werken (dashboards, alerts, automatiseringen).
+                </p>
+                <ul>
+                  <li><strong>Bestellingen, verzendingen en retouren</strong>: orderregels, fulfillment‑status en basic logistieke gegevens.</li>
+                  <li><strong>Reviews en klantreacties</strong>: beoordelingsteksten, scores en metadata om je service te verbeteren.</li>
+                  <li><strong>Winkel- en productprestaties</strong>: omzet- en prestatiestatistieken, conversie‑signalen en listing‑statussen.</li>
+                  <li><strong>Voorraad en contentstatus</strong>: voorraadniveaus, leverbaarheid en publicatiestatus van artikelen.</li>
+                </ul>
+                <p className="mt-4">
+                  Deze gegevens gebruiken we uitsluitend voor jou als klant binnen je eigen omgeving. We verkopen data niet en gebruiken deze niet voor eigen doeleinden.
+                </p>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Workspaces, bol stores en gebruikers</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <p>
+                  We werken met <strong>workspaces</strong>. Bol stores worden gekoppeld aan een workspace. Binnen een workspace kun je meerdere gebruikers toevoegen met passende rollen en rechten.
+                </p>
+                <ul>
+                  <li><strong>Toegang en scheiding</strong>: winkeldata is alleen zichtbaar binnen de betreffende workspace.</li>
+                  <li><strong>Beheer</strong>: eigenaren/beheerders bepalen wie toegang heeft tot een workspace.</li>
+                  <li><strong>Intrekken van toegang</strong>: verbreek je de koppeling met bol of trek je tokens in, dan stoppen we direct met synchroniseren. Op verzoek verwijderen we historische sync‑data binnen 24 uur.</li>
+                </ul>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Beveiliging</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <ul>
+                  <li><strong>Transport</strong>: alle verkeer is versleuteld met TLS.</li>
+                  <li><strong>Opslag</strong>: encryptie at rest en streng sleutelbeheer (bijv. KMS).</li>
+                  <li><strong>Toegang</strong>: least‑privilege‑toegang, MFA/2FA verplicht voor admins.</li>
+                  <li><strong>Controle</strong>: uitgebreide audit logging en continue monitoring.</li>
+                  <li><strong>Rollen</strong>: toegangsbeheer op workspace‑niveau met rollen en rechten.</li>
+                </ul>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Toestemming & intrekken</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <ul>
+                  <li><strong>Toestemming</strong>: je koppelt je bol store via OAuth/bol API. We gebruiken tokens om data te synchroniseren voor door jou ingeschakelde functies.</li>
+                  <li><strong>Intrekken</strong>: trek je tokens in of verbreek je de koppeling, dan stopt synchronisatie direct.</li>
+                  <li><strong>Verwijdering</strong>: verwijderen van historische sync‑data gebeurt alleen op verzoek via <Link href="mailto:info@bolbaas.nl">info@bolbaas.nl</Link> en is binnen 24 uur geregeld.</li>
+                </ul>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Automatisering/AI</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <ul>
+                  <li><strong>Geen modeltraining</strong>: we trainen geen modellen op klantdata.</li>
+                  <li><strong>Geen geautomatiseerde besluitvorming</strong>: geen beslissingen met rechtsgevolgen uitsluitend op basis van geautomatiseerde verwerking.</li>
+                </ul>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Support‑toegang</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <ul>
+                  <li><strong>Tijdelijk</strong>: alleen op verzoek van de klant voor supportdoeleinden.</li>
+                  <li><strong>Gelogd</strong>: alle toegang wordt gelogd met tijdstip en gebruiker.</li>
+                  <li><strong>Minimale scope</strong>: zo beperkt als mogelijk en met automatische expiratie.</li>
+                </ul>
+
+                <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Meerdere stores per workspace</h2>
+                <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
+                <p>
+                  Store‑data blijft logisch gescheiden per workspace, ook als een gebruiker lid is van meerdere workspaces.
+                </p>
+
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Jouw rechten</h2>
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <ul>

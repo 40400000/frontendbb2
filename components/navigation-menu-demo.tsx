@@ -697,6 +697,17 @@ export function NavigationMenuDemo() {
     }
 
     const updateHeaderState = () => {
+      // Force light navbar on legal pages
+      if (
+        pathname.startsWith('/verwerkersovereenkomst') ||
+        pathname.startsWith('/privacy') ||
+        pathname.startsWith('/algemene-voorwaarden')
+      ) {
+        if (navbarMode !== 'light') setNavbarMode('light');
+        headerElement.classList.remove('bg-background', 'text-white');
+        headerElement.classList.add('bg-white', 'text-black');
+        return;
+      }
       const currentHeaderHeight = headerElement.offsetHeight;
       if (headerHeight !== currentHeaderHeight) {
         setHeaderHeight(currentHeaderHeight);
@@ -750,7 +761,7 @@ export function NavigationMenuDemo() {
       window.removeEventListener('scroll', updateHeaderState);
       window.removeEventListener('resize', updateHeaderState);
     };
-  }, [isBlogPostPage, navbarMode, headerHeight, theme, headerBottomPosition]);
+  }, [isBlogPostPage, navbarMode, headerHeight, theme, headerBottomPosition, pathname]);
 
   useEffect(() => {
     if (headerHeight === 0) {

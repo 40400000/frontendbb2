@@ -118,7 +118,7 @@ export default function VerwerkersovereenkomstPage() {
                 <p>
                   Na beëindiging van de dienstverlening of op eerste verzoek van verwerkingsverantwoordelijke verwijdert of retourneert verwerker alle persoonsgegevens binnen 24 uur, tenzij opslag verplicht is op grond van Unierecht of lidstatelijk recht. Eventuele back-ups worden in de reguliere rotatie automatisch overschreven en daarmee onomkeerbaar verwijderd binnen de gebruikelijke retentietermijn. Op verzoek verstrekt verwerker een verwijderbevestiging.
                 
-                Wij verstaan onder beëindiging van de dienstverlening de verwijdering van het account van de gebruiker. Verwijdering gebeurt op verzoek van de eigenaar van het account, en wordt binnen 24 uur gehonoreerd.
+                Wij verstaan onder beëindiging van de dienstverlening de verwijdering van het account van de gebruiker. Verwijdering gebeurt op verzoek van de eigenaar van het account, en wordt binnen 24 uur gehonoreerd. 
                 </p>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">11. Geheimhouding en non-disclosure</h2>
