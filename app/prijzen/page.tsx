@@ -571,6 +571,11 @@ export default function PricingPage() { // Renamed function
                           href={plan.redirect}
                           variant={plan.ctaVariant}
                           size="lg"
+                          eventName="select_plan"
+                          eventParams={{
+                            plan_name: plan.name,
+                            plan_price: plan.discountedPrice,
+                          }}
                           className={cn(
                             "w-full group text-black hover:cursor-pointer",
                             plan.ctaVariant === 'default'

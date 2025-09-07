@@ -17,6 +17,8 @@ interface AdsConversionButtonProps {
   variant?: React.ComponentProps<typeof Button>["variant"];
   size?: React.ComponentProps<typeof Button>["size"];
   className?: string;
+  eventName?: string;
+  eventParams?: Record<string, unknown>;
 }
 
 function navigateTo(href: string) {
@@ -25,7 +27,7 @@ function navigateTo(href: string) {
 }
 
 export function AdsConversionButton(props: AdsConversionButtonProps) {
-  const { href, children, sendTo, variant, size, className } = props;
+  const { href, children, sendTo, variant, size, className, eventName, eventParams } = props;
   const clickedRef = useRef(false);
 
   const onClick = useCallback(
@@ -36,6 +38,19 @@ export function AdsConversionButton(props: AdsConversionButtonProps) {
       clickedRef.current = true;
 
       const destination = href;
+      const gtag = window.gtag;
+      const hasGtag = typeof gtag === "function";
+
+      // Fire GA4 event if configured
+      if (eventName && hasGtag) {
+        try {
+          console.info(`[AdsConversionButton] Firing GA4 event: ${eventName}`, { eventParams });
+          gtag("event", eventName, eventParams);
+        } catch (e) {
+          console.error("[AdsConversionButton] Error firing GA4 event", e);
+        }
+      }
+      
       const fallback = setTimeout(() => {
         console.warn("[AdsConversionButton] Navigating via fallback timeout", { destination });
         navigateTo(destination);
@@ -43,14 +58,14 @@ export function AdsConversionButton(props: AdsConversionButtonProps) {
 
       // Fire Google Ads conversion if configured
       const sendToKey = sendTo || process.env.NEXT_PUBLIC_GADS_SEND_TO;
-      const hasGtag = typeof window !== "undefined" && typeof window.gtag === "function";
+      
       console.info("[AdsConversionButton] Click detected", {
         destination,
         hasGtag,
         sendToKey: sendToKey || null,
       });
 
-      if (sendToKey && typeof window !== "undefined" && typeof window.gtag === "function") {
+      if (sendToKey && hasGtag) {
         try {
           const payload = {
             send_to: String(sendToKey),
@@ -61,11 +76,10 @@ export function AdsConversionButton(props: AdsConversionButtonProps) {
             },
           } as const;
           console.info("[AdsConversionButton] Firing gtag conversion", { payload });
-          const gtag = window.gtag; // narrowed by typeof guard
           gtag("event", "conversion", payload as unknown as Record<string, unknown>);
           return; // Let callback handle navigation
-        } catch {
-          console.error("[AdsConversionButton] Error firing gtag conversion; navigating directly");
+        } catch (e) {
+          console.error("[AdsConversionButton] Error firing gtag conversion; navigating directly", e);
           // fallback to direct navigation below
         }
       }
@@ -76,7 +90,7 @@ export function AdsConversionButton(props: AdsConversionButtonProps) {
       clearTimeout(fallback);
       navigateTo(destination);
     },
-    [href, sendTo]
+    [href, sendTo, eventName, eventParams]
   );
 
   return (
