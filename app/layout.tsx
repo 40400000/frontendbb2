@@ -130,6 +130,7 @@ export default function RootLayout({
               gtag('config', 'AW-17372857270', {
                 cookie_domain: 'bolbaas.nl',
               });
+              gtag('config', 'G-PM71V62V1Z');
             `,
           }}
         />
