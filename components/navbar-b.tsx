@@ -181,7 +181,7 @@ const pathname = usePathname();
         }`}
       >
         <div className={`flex items-center ${
-          isScrolled ? 'justify-between px-2 h-12' : 'justify-start gap-4 px-24 h-18'
+          isScrolled ? 'justify-between px-2 h-12' : 'justify-start gap-4 px-4 sm:px-24 h-18'
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -562,7 +562,7 @@ const pathname = usePathname();
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`md:hidden py-4 px-4 ${
+          <div className={`md:hidden px-2 pt-2 pb-3 ${
             isDarkMode 
               ? 'border-t border-white/10' 
               : 'border-t border-black/5'

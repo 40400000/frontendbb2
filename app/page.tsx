@@ -113,7 +113,7 @@ export default function HomePage() {
           </div>
 
           {/* Video Placeholder - Where circles meet */}
-          <div className="container max-w-4xl mx-auto mt-32 mb-16">
+          <div className="container max-w-4xl mx-auto mt-20 mb-16">
             <div className="relative bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -130,12 +130,18 @@ export default function HomePage() {
       </section>
 
       {/* Quote Section */}
-      <section className="bg-white py-20 md:py-20">
+      <section className="bg-white py-14 md:py-22">
         <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Photo placeholder */}
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            {/* Photo */}
             <div className="flex-shrink-0">
-              <div className="w-24 h-24 md:w-28 md:h-28 bg-gray-200 rounded-xl" />
+              <Image
+                src="/lvg.jpeg"
+                alt="Lucas van gasteren"
+                width={128}
+                height={128}
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
+              />
             </div>
 
             {/* Quote content */}
@@ -160,7 +166,7 @@ export default function HomePage() {
       </section>
 
       {/* Apple-like Feature Grid (minimal, monochrome) */}
-      <section className="bg-white py-10 md:py-14 text-[#111111]">
+      <section className="bg-white pb-10 md:pb-14 text-[#111111]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-12 gap-2 md:gap-3">
             {/* Keyword Database - prominent */}

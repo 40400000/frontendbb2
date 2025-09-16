@@ -302,10 +302,16 @@ export default function AutomatiseringPage() {
       {/* Quote Section */}
       <section className="bg-white py-20 md:py-20">
         <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Photo placeholder */}
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            {/* Photo */}
             <div className="flex-shrink-0">
-              <div className="w-24 h-24 md:w-28 md:h-28 bg-gray-200 rounded-xl" />
+              <Image
+                src="/lvg.jpeg"
+                alt="Lucas van Gasteren"
+                width={128}
+                height={128}
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
+              />
             </div>
 
             {/* Quote content */}
