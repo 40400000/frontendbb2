@@ -114,9 +114,9 @@ const pathname = usePathname();
     href: string;
     color: 'blue' | 'orange' | 'purple';
   }[] = [
-    { id: 'tools', label: 'AI & Tools', subtitle: 'Next level product research tools', href: '/design-b/features/tools', color: 'blue' },
-    { id: 'automatisering', label: 'Automatisering', subtitle: 'Automatisch e-mails en facturen', href: '/design-b/features/automatisering', color: 'orange' },
-    { id: 'store-prestaties', label: 'Store prestaties', subtitle: 'Overzicht en inzichten over je store', href: '/design-b/features/store-prestaties', color: 'purple' },
+    { id: 'tools', label: 'AI & Tools', subtitle: 'Next level product research tools', href: '/features/tools', color: 'blue' },
+    { id: 'automatisering', label: 'Automatisering', subtitle: 'Automatisch e-mails en facturen', href: '/features/automatisering', color: 'orange' },
+    { id: 'store-prestaties', label: 'Store prestaties', subtitle: 'Overzicht en inzichten over je store', href: '/features/store-prestaties', color: 'purple' },
   ];
 
   // Right side subsections per category (from original navigation-menu-demo.tsx)
@@ -134,29 +134,29 @@ const pathname = usePathname();
       { title: 'Sales en voorraad schattingen', description: 'Voorspel verkoop en wanneer bijbestellen', href: '/features/store-prestaties#sales-voorspellingen' },
     ],
     tools: [
-      { title: 'Keyword database', description: 'Keywordonderzoek met 12+ miljoen keywords', href: '/design-b/features/tools#bolbaas-database', badge: 'NIEUW' },
-      { title: 'Ranking AI', description: 'AI-gestuurde listing optimalisatie', href: '/design-b/features/tools#ranking-ai' },
-      { title: 'Product tracking', description: 'Track producten en concurrenten nauwkeurig', href: '/design-b/features/tools#product-tracking' },
-      { title: 'Keyword tracking', description: 'Track keywords uit de database', href: '/design-b/features/tools#keyword-tracking' },
-      { title: 'Winst & ACoS calculator', description: 'Bereken winst en advertising kosten', href: '/design-b/features/tools#winst-calculator' },
-      { title: 'A/B testen van listings', description: 'Test verschillende versies van productpagina', href: '/design-b/features/tools#ab-testing' },
-      { title: 'Project management', description: 'Organiseer je Bol.com projecten efficiënt', href: '/design-b/features/tools#project-management' },
+      { title: 'Keyword database', description: 'Keywordonderzoek met 12+ miljoen keywords', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
+      { title: 'Ranking AI', description: 'AI-gestuurde listing optimalisatie', href: '/features/tools#ranking-ai' },
+      { title: 'Product tracking', description: 'Track producten en concurrenten nauwkeurig', href: '/features/tools#product-tracking' },
+      { title: 'Keyword tracking', description: 'Track keywords uit de database', href: '/features/tools#keyword-tracking' },
+      { title: 'Winst & ACoS calculator', description: 'Bereken winst en advertising kosten', href: '/features/tools#winst-calculator' },
+      { title: 'A/B testen van listings', description: 'Test verschillende versies van productpagina', href: '/features/tools#ab-testing' },
+      { title: 'Project management', description: 'Organiseer je Bol.com projecten efficiënt', href: '/features/tools#project-management' },
     ],
   };
 
   // Waarom ons dropdown data (no icons)
   const whyCategories: { id: string; label: string; subtitle?: string; href?: string }[] = [
     { id: 'vergelijkingen', label: 'Bolbaas vs andere tools', subtitle: 'Zie hoe we ons verhouden' },
-    { id: 'partner', label: 'Partner worden', subtitle: 'Word affiliate partner bij groei van Bolbaas', href: '/design-b/partner-worden' },
-    { id: 'educatie', label: 'Educatie', subtitle: 'Handleidingen en blogs', href: '/design-b/blog' },
+    { id: 'partner', label: 'Partner worden', subtitle: 'Word affiliate partner bij groei van Bolbaas', href: '/partner-worden' },
+    { id: 'educatie', label: 'Educatie', subtitle: 'Handleidingen en blogs', href: '/blog' },
   ];
 
   const whySubsections: Record<string, { title: string; href: string }[]> = {
     vergelijkingen: [
-      { title: 'Bolbaas vs. Bolmate', href: '/design-b/waarom-ons/bolbaas-vs-bolmate' },
-      { title: 'Bolbaas vs. Bollify', href: '/design-b/waarom-ons/bolbaas-vs-bollify' },
-      { title: 'Bolbaas vs. Boloo', href: '/design-b/waarom-ons/bolbaas-vs-boloo' },
-      { title: 'Bolbaas vs. Rylee', href: '/design-b/waarom-ons/bolbaas-vs-rylee' },
+      { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
+      { title: 'Bolbaas vs. Bollify', href: '/waarom-ons/bolbaas-vs-bollify' },
+      { title: 'Bolbaas vs. Boloo', href: '/waarom-ons/bolbaas-vs-boloo' },
+      { title: 'Bolbaas vs. Rylee', href: '/waarom-ons/bolbaas-vs-rylee' },
     ],
   };
 
@@ -184,7 +184,7 @@ const pathname = usePathname();
           isScrolled ? 'justify-between px-2 h-12' : 'justify-start gap-4 px-24 h-18'
         }`}>
           {/* Logo */}
-          <Link href="/design-b" className="flex items-center">
+          <Link href="/" className="flex items-center">
             {isScrolled ? (
               <Image
                 src="/iconnavbar-mode2.png"
@@ -193,21 +193,38 @@ const pathname = usePathname();
                 height={40}
                 className={`filter ${isDarkMode ? '' : 'invert'}`}
               />
-            ) : isDarkMode ? (
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
-                alt="Bolbaas"
-                width={220}
-                height={74}
-                className="filter invert"
-              />
             ) : (
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
-                alt="Bolbaas"
-                width={220}
-                height={74}
-              />
+              <>
+                {/* Desktop: Show big logo */}
+                <div className="hidden md:block">
+                  {isDarkMode ? (
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
+                      alt="Bolbaas"
+                      width={220}
+                      height={74}
+                      className="filter invert"
+                    />
+                  ) : (
+                    <Image
+                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
+                      alt="Bolbaas"
+                      width={220}
+                      height={74}
+                    />
+                  )}
+                </div>
+                {/* Mobile: Show icon only */}
+                <div className="md:hidden">
+                  <Image
+                    src="/iconnavbar-mode2.png"
+                    alt="Bolbaas"
+                    width={40}
+                    height={40}
+                    className={`filter ${isDarkMode ? '' : 'invert'}`}
+                  />
+                </div>
+              </>
             )}
           </Link>
 
@@ -497,12 +514,12 @@ const pathname = usePathname();
               )}
             </div>
 
-            <Link href="/design-b/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
+            <Link href="/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>
               Prijzen
             </Link>
-            <Link href="/design-b/contact" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
+            <Link href="/contact" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>
               Contact
