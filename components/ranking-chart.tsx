@@ -83,7 +83,7 @@ export function RankingChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="bg-black">
+    <div ref={chartRef} className="">
       {/* Chart tag */}
       <div className="mb-4">
         <span className="text-xs text-gray-400 tracking-wider">PRODUCT RANKING VOOR 'DRONE MET CAMERA'</span>

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { KiteIcon } from "@/components/ui/kite-icon";
 import { MdOutlineArrowOutward } from "react-icons/md";
@@ -5,133 +7,102 @@ import { FaGoogle } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import Image from "next/image";
-import { EmailSignupForm } from "@/components/email-signup-form";
 
 export default function HomePage() {
-
   return (
     <>
       {/* Hero Section */}
-      <section className="relative z-20 w-full min-h-[180vh] flex items-start justify-center pt-20 md:pt-28 pb-24 md:pb-32 bg-white text-[#111111] overflow-hidden">
-        {/* Animated Background with White Circle Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          {/* Full Animation Background */}
-            <div className="absolute inset-0 w-full h-full opacity-90">
-            <AnimatedHeroBackground
-              color1="232,64,13"
-              color2="255,238,216"
-              color3="208,178,255"
-            />
-          </div>
-          
-          {/* U-Shaped White Overlay with stronger white in top ~35% */}
-          <div 
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            style={{
-              background: `
-                linear-gradient(to bottom,
-                  rgba(255, 255, 255, 0.9) 0%,
-                  rgba(255, 255, 255, 0.9) 20%,
-                  rgba(255, 255, 255, 0.85) 35%,
-                  rgba(255, 255, 255, 0.55) 50%,
-                  rgba(255, 255, 255, 0.3) 70%,
-                  rgba(255, 255, 255, 0.12) 85%,
-                  transparent 100%
-                ),
-                linear-gradient(to right,
-                  rgba(255, 255, 255, 0.02) 0%,
-                  rgba(255, 255, 255, 0.08) 15%,
-                  rgba(255, 255, 255, 0.2) 25%,
-                  rgba(255, 255, 255, 0.35) 35%,
-                  rgba(255, 255, 255, 0.55) 45%,
-                  rgba(255, 255, 255, 0.75) 50%,
-                  rgba(255, 255, 255, 0.55) 55%,
-                  rgba(255, 255, 255, 0.35) 65%,
-                  rgba(255, 255, 255, 0.2) 75%,
-                  rgba(255, 255, 255, 0.08) 85%,
-                  rgba(255, 255, 255, 0.02) 100%
-                )`
-            }}
-          />
-          
-          {/* U-Shaped Grainy Overlay */}
-          <div 
-            className="absolute inset-0 w-full h-full opacity-8 mix-blend-overlay pointer-events-none"
-            style={{
-              background: `
-                linear-gradient(to bottom,
-                  rgba(255, 255, 255, 0.2) 0%,
-                  rgba(255, 255, 255, 0.15) 30%,
-                  rgba(255, 255, 255, 0.1) 60%,
-                  rgba(255, 255, 255, 0.05) 85%,
-                  transparent 100%
-                ),
-                linear-gradient(to right,
-                  rgba(255, 255, 255, 0.02) 0%,
-                  rgba(255, 255, 255, 0.08) 30%,
-                  rgba(255, 255, 255, 0.15) 45%,
-                  rgba(255, 255, 255, 0.2) 50%,
-                  rgba(255, 255, 255, 0.15) 55%,
-                  rgba(255, 255, 255, 0.08) 70%,
-                  rgba(255, 255, 255, 0.02) 100%
-                )`,
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-              backgroundSize: '30px 30px'
-            }}
-          />
-        </div>
+      <section className="relative z-20 w-full min-h-[180vh] flex items-start justify-center pt-32 md:pt-40 pb-24 md:pb-32 bg-white text-[#111111] overflow-hidden">
+        {/* Simple Background */}
+        <div className="absolute inset-0 w-full h-full bg-white" />
         
         <div className="w-full relative z-10 flex flex-col">
           {/* Hero Content */}
           <div className="container max-w-2xl md:max-w-3xl text-center mx-auto pt-4">
-            <div className="flex justify-center mb-6">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 bg-white rounded-xl px-1.5 py-1.5 shadow-md hover:shadow-lg transition-shadow group"
-              >
-                <span className="inline-flex items-center bg-[#111111] text-white rounded-xl px-2 py-0.5 text-xs font-semibold">
-                  NEW
-                </span>
-                <span className="text-sm font-medium text-[#111111]">Bolbaas database: 12 miljoen+ keywords</span>
-                <MdOutlineArrowOutward className="h-3.5 w-3.5 text-[#111111] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-            </div>
+            <div className="text-[#111111] text-[14px] leading-[16px] mb-4 flex items-center justify-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+              BOLBAAS
+              <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
 
-            <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[56px] leading-[56px] font-normal tracking-tight mb-6 text-balance">
-              De <em className="italic">AI</em> software oplossing voor bol partners.
+              <span className="mx-1">VS</span>
+              <Image src="/BOLMATELOGO.png" alt="Bolmate" width={32} height={32} />
+              BOLMATE
+            </div>
+            
+            <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[40px] leading-[44px] font-normal tracking-tight mb-6 text-balance">
+              Opzoek naar het <i>beste</i> alternatief voor Bolmate?
             </h1>
 
-            <p className="mx-auto max-w-xl text-base md:text-lg leading-[24px] opacity-70 mb-8">
-              Automatiseer je bol‑store, krijg data‑inzichten en groei sneller.
-            </p>
+            <div className="mx-auto max-w-md flex items-center rounded-2xl border border-[#111111]/8 p-1.5 bg-white transition-all">
+              <Input
+                type="email"
+                placeholder="Vul je email in"
+                className="flex-grow h-10 border-none bg-transparent px-4 placeholder:text-[#111111]/60"
+              />
+              <Button className="h-10 rounded-2xl bg-[#111111] px-4 text-white hover:bg-black/80 text-sm font-medium">
+                Gratis proberen
+              </Button>
+            </div>
 
-            <EmailSignupForm 
-              buttonText="Gratis proberen"
-              placeholder="Vul je email in"
-              showTestimonial={true}
-            />
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm opacity-70">
+              <FaGoogle className="h-4 w-4 text-[#111111]" />
+              <div className="flex items-center gap-0.5">
+                <IoStar className="h-4 w-4 text-[#111111]" />
+                <IoStar className="h-4 w-4 text-[#111111]" />
+                <IoStar className="h-4 w-4 text-[#111111]" />
+                <IoStar className="h-4 w-4 text-[#111111]" />
+                <IoStar className="h-4 w-4 text-[#111111]" />
+              </div>
+              <span className="text-[#111111]/30">|</span>
+              <span>300+ tevreden partners</span>
+            </div>
           </div>
 
-          {/* Video Placeholder - Where circles meet */}
-          <div className="container max-w-4xl mx-auto mt-32 mb-16">
-            <div className="relative bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 font-medium">Video Placeholder</p>
-                <p className="text-gray-500 text-sm">Product Demo Video</p>
+          {/* Feature Cards Grid */}
+          <div className="container max-w-6xl mx-auto mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              {/* Card 1 - Pink Background */}
+              <div className="bg-pink-100 rounded-2xl p-6 text-left">
+                <div className="text-4xl font-bold text-[#111111] mb-2">12M+</div>
+                <div className="text-lg font-medium text-[#111111] mb-2">keywords</div>
+                <div className="text-sm text-[#111111]/70">in onze uitgebreide database.</div>
+              </div>
+
+              {/* Card 2 - Light Gray Background */}
+              <div className="bg-gray-100 rounded-2xl p-6 text-left">
+                <div className="text-4xl font-bold text-[#111111] mb-2">300+</div>
+                <div className="text-lg font-medium text-[#111111] mb-2">partners</div>
+                <div className="text-sm text-[#111111]/70">vertrouwen onze automatisering.</div>
+              </div>
+
+              {/* Card 3 - Yellow Background */}
+              <div className="bg-yellow-100 rounded-2xl p-6 text-left">
+                <div className="text-4xl font-bold text-[#111111] mb-2">3x</div>
+                <div className="text-lg font-medium text-[#111111] mb-2">snellere groei</div>
+                <div className="text-sm text-[#111111]/70">met AI-gedreven inzichten & automatisering.</div>
+              </div>
+
+              {/* Card 4 - Light Gray Background */}
+              <div className="bg-gray-100 rounded-2xl p-6 text-left">
+                <div className="text-4xl font-bold text-[#111111] mb-2">10+</div>
+                <div className="text-lg font-medium text-[#111111] mb-2">uren bespaard</div>
+                <div className="text-sm text-[#111111]/70">per week met geautomatiseerde workflows.</div>
+              </div>
+
+              {/* Card 5 - Light Purple Background */}
+              <div className="bg-purple-100 rounded-2xl p-6 text-left">
+                <div className="text-4xl font-bold text-[#111111] mb-2">5-sterren</div>
+                <div className="text-lg font-medium text-[#111111] mb-2">ondersteuning</div>
+                <div className="text-sm text-[#111111]/70">die je elke stap begeleidt.</div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* Quote Section */}
-      <section className="bg-white py-20 md:py-20">
-        <div className="container mx-auto max-w-4xl px-4">
+      <section className="bg-white py-20 md:py-32">
+        <div className="container mx-auto max-w-3xl px-4">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Photo placeholder */}
             <div className="flex-shrink-0">
@@ -146,7 +117,7 @@ export default function HomePage() {
                   fontStyle: 'normal',
                 }}
               >
-                “De emails en facturen automatiseren is een piece of cake.”
+                “Bolbaas biedt alle software die je nodig hebt als bol partner.  De emails en facturen automatiseren is een piece of cake.”
               </blockquote>
 
               <div
@@ -166,8 +137,7 @@ export default function HomePage() {
             {/* Keyword Database - prominent */}
             <Link
               href="/features/tools#bolbaas-database"
-              className="col-span-12 md:col-span-4 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
+              className="col-span-12 md:col-span-4 rounded-2xl border border-black/10 p-3 md:p-4 hover:bg-black/[0.02] transition-colors"
               aria-label="Keyword database met meer dan 12 miljoen termen"
             >
               <div className="flex items-center gap-2">
@@ -181,7 +151,7 @@ export default function HomePage() {
             {/* Highlight: Review Emails */}
             <Link
               href="/features/automatisering#email-campagnes"
-              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#FBEAE6' }}
               aria-label="Automatische review e-mails"
             >
@@ -196,12 +166,12 @@ export default function HomePage() {
             {/* Ranking AI */}
             <Link
               href="/features/tools#ranking-ai"
-              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
+              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
+              style={{ backgroundColor: '#F3EEFF' }}
               aria-label="Ranking AI voor listing optimalisatie"
             >
               <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
+                <KiteIcon variant="purple" size={10} />
                 <div className="text-[28px] leading-none font-normal">Ranking AI</div>
               </div>
               <div className="mt-1 text-sm text-black/70">listing optimalisatie</div>
@@ -209,7 +179,7 @@ export default function HomePage() {
             </Link>
 
             {/* Quote style tile */}
-            <div className="col-span-12 md:col-span-5 rounded-2xl border border-black/10 p-3 md:p-4 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out">
+            <div className="col-span-12 md:col-span-5 rounded-2xl border border-black/10 p-3 md:p-4">
               <p className="text-[18px] leading-[24px]">
                 "Bolbaas biedt alle software die je nodig hebt als bol partner."
               </p>
@@ -219,12 +189,12 @@ export default function HomePage() {
             {/* BTW Facturen */}
             <Link
               href="/features/automatisering#store-automatisering"
-              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}
+              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
+              style={{ backgroundColor: '#EAF3FF' }}
               aria-label="Automatische BTW factuur uploads"
             >
               <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
+                <KiteIcon variant="blue" size={10} />
                 <div className="text-[28px] leading-none font-normal">BTW facturen</div>
               </div>
               <div className="mt-1 text-sm text-black/70">automatisch uploaden</div>
@@ -234,12 +204,11 @@ export default function HomePage() {
             {/* Product Tracking */}
             <Link
               href="/features/tools#product-tracking"
-              className="col-span-12 md:col-span-4 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
+              className="col-span-12 md:col-span-4 rounded-2xl border border-black/10 p-3 md:p-4 hover:bg-black/[0.02] transition-colors"
               aria-label="Product tracking"
             >
               <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
+                <KiteIcon variant="orange" size={10} />
                 <div className="text-[28px] leading-none font-normal">Product tracking</div>
               </div>
               <div className="mt-1 text-sm text-black/70">prijs, ranking, voorraad</div>
@@ -249,12 +218,12 @@ export default function HomePage() {
             {/* Custom Dashboards */}
             <Link
               href="/features/store-prestaties#custom-dashboards"
-              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}
+              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
+              style={{ backgroundColor: '#F8FAFF' }}
               aria-label="Custom dashboards en views"
             >
               <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
+                <KiteIcon variant="blue" size={10} />
                 <div className="text-[28px] leading-none font-normal">Custom dashboards</div>
               </div>
               <div className="mt-1 text-sm text-black/70">sales data op maat</div>
@@ -264,7 +233,7 @@ export default function HomePage() {
             {/* Sales Voorspellingen */}
             <Link
               href="/features/store-prestaties#sales-voorspellingen"
-              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#F3EEFF' }}
               aria-label="Sales en voorraad voorspellingen"
             >
@@ -272,14 +241,14 @@ export default function HomePage() {
                 <KiteIcon variant="purple" size={10} />
                 <div className="text-[28px] leading-none font-normal">Voorspellingen</div>
               </div>
-              <div className="mt-1 text-sm text-black/70">stock & sales en omzet</div>
+              <div className="mt-1 text-sm text-black/70">stock & sales</div>
               <div className="mt-3 text-[13px] font-medium">Forecasting →</div>
             </Link>
 
             {/* Winst Calculator */}
             <Link
               href="/features/tools#winst-calculator"
-              className="col-span-12 md:col-span-4 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-4 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#EAF3FF' }}
               aria-label="Winst en ACoS calculator"
             >
@@ -294,7 +263,7 @@ export default function HomePage() {
             {/* A/B Testing */}
             <Link
               href="/features/tools#ab-testing"
-              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-3 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#EAF3FF' }}
               aria-label="A/B testen van listings"
             >
@@ -309,7 +278,7 @@ export default function HomePage() {
             {/* Baaspilot */}
             <Link
               href="/features/automatisering#baaspilot"
-              className="col-span-12 md:col-span-4 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-2 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#FBEAE6' }}
               aria-label="Baaspilot notificaties"
             >
@@ -317,14 +286,14 @@ export default function HomePage() {
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[28px] leading-none font-normal">Baaspilot</div>
               </div>
-              <div className="mt-1 text-sm text-black/70">altijd op de hoogte</div>
+              <div className="mt-1 text-sm text-black/70">event alerts</div>
               <div className="mt-3 text-[13px] font-medium">Notificaties →</div>
             </Link>
 
             {/* Bestellingen */}
             <Link
               href="/features/store-prestaties#bestellingen"
-              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
+              className="col-span-12 md:col-span-5 rounded-2xl border border-transparent p-3 md:p-4 hover:opacity-95 transition-colors"
               style={{ backgroundColor: '#F3EEFF' }}
               aria-label="Bestellingen analysis"
             >

@@ -78,7 +78,7 @@ export function CPCChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="bg-black py-4 border-border">
+    <div ref={chartRef} className="py-4 border-border">
       {/* Chart tag */}
       <div className="mb-4">
         <span className="text-xs text-gray-400 tracking-wider">BIEDINGEN VOOR 'DRONE'</span>

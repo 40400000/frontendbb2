@@ -90,12 +90,12 @@ export function SalesForecastChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="bg-black py-4 border-border">
+    <div ref={chartRef} className="py-4 border-border">
       {/* Chart tag */}
       <div className="mb-4">
         <span className="text-xs text-gray-400 tracking-wider">VERKOOPPROGNOSE 'DRAADLOZE HOOFDTELEFOON'</span>
       </div>
-      <div className="h-64">
+      <div className="h-64 border-gray-200 border">
         {isInView ? (
           <ResponsiveContainer width="100%" height="100%">
             <LineChart

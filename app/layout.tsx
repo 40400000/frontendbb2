@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from "next/font/local";
+import { Geist_Mono, Inter } from "next/font/google";
 import { NavigationMenuDemo } from "@/components/navigation-menu-demo";
 import { Button } from "@/components/ui/button";
 import PromotionBanner from '@/components/promotion-banner';
@@ -11,14 +11,24 @@ import { ConditionalBlogBanner } from "@/components/conditional-blog-banner";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeHandler } from '@/components/theme-handler';
 import Script from "next/script";
+import { NavbarB } from "@/components/navbar-b";
+import { FooterDark } from "@/components/footer-dark";
 
-const geistSans = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
+const labilGrotesk = localFont({
+  src: "../../public/LabilGroteskVariable.otf",
+  style: "normal",
+  variable: "--font-geist-sans",
+  display: "swap",
+  weight: "100 900",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -90,29 +100,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+      <body className={`${labilGrotesk.className} ${geistMono.variable} ${inter.variable} font-sans antialiased overflow-x-hidden bg-[#F6F5F3] text-[#111111]  dark:text-white`}>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <ThemeHandler />
-          <>
-            <ConditionalBlogBanner />
-            
-            <header id="main-header" className="sticky top-0 z-50 w-full bg-background text-white">
-              <div className="container mx-auto flex h-17 items-center px-4"> 
-                <div className="flex items-center w-full">
-                  <NavigationMenuDemo />
-                </div>
-              </div>
-            </header>
-            
-            <main className="container mx-auto pt-0 overflow-x-hidden sm:overflow-x-visible px-4 sm:px-0">
-            <Breadcrumbs />
-              
-              {children}
-            </main>
-            <div className="container mx-auto px-4 sm:px-0">
-              <Footer />
-            </div>
-          </>
+          <NavbarB />
+          <main>
+            {children}
+          </main>
+          <FooterDark />
         </ThemeProvider>
         <Analytics />
         <Script
