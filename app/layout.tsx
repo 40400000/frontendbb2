@@ -15,7 +15,7 @@ import { NavbarB } from "@/components/navbar-b";
 import { FooterDark } from "@/components/footer-dark";
 
 const labilGrotesk = localFont({
-  src: "../../public/LabilGroteskVariable.otf",
+  src: "../public/LabilGroteskVariable.otf",
   style: "normal",
   variable: "--font-geist-sans",
   display: "swap",
