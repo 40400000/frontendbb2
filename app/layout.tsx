@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 import localFont from "next/font/local";
 import { Geist_Mono, Inter } from "next/font/google";
 import { NavigationMenuDemo } from "@/components/navigation-menu-demo";
