@@ -23,36 +23,36 @@ export function FooterDark() {
   };
 
   const productLinks: FooterLink[] = [
-    { title: 'AI & Tools', href: '/design-b/features/tools' },
-    { title: 'Automatisering', href: '/design-b/features/automatisering' },
-    { title: 'Store prestaties', href: '/design-b/features/store-prestaties' },
-    { title: 'Product tracking', href: '/design-b/features/tools#product-tracking' },
-    { title: 'Keyword database', href: '/design-b/features/tools#bolbaas-database' },
-    { title: 'Ranking AI', href: '/design-b/features/tools#ranking-ai' },
+    { title: 'AI Research tools', href: '/features/tools' },
+    { title: 'Automatisering', href: '/features/automatisering' },
+    { title: 'Store prestaties', href: '/features/store-prestaties' },
+    { title: 'Product tracking', href: '/features/tracking' },
+    { title: 'Keyword database', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
+    { title: 'Ranking AI', href: '/features/tools#ranking-ai' },
   ];
 
   const whyUsLinks: FooterLink[] = [
-    { title: 'Prijzen', href: '/design-b/prijzen' },
-    { title: 'Klanten', href: '/design-b/contact' },
-    { title: 'Oplossingen', href: '/design-b/features/tools' },
-    { title: 'Vergelijking', href: '/design-b/blog' },
-    { title: 'Over ons', href: '/design-b/contact' },
-    { title: 'Manifest', href: '/design-b/blog' },
+    { title: 'Prijzen', href: '/prijzen' },
+    { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
+    { title: 'Partner worden', href: '/partner-worden' },
+    { title: 'Educatie & Blog', href: '/blog' },
+    { title: 'Contact', href: '/contact' },
+    { title: 'Wachtlijst', href: '/wachtlijst' },
   ];
 
   const resourcesLinks: FooterLink[] = [
-    { title: 'Blog', href: '/design-b/blog' },
+    { title: 'Starten als Bol partner in 2025', href: '/blog/starten-als-bol-partner-in-2025' },
+    { title: 'BTW-aangifte Bol ICP', href: '/blog/btw-aangifte-bol-icp' },
+    { title: 'Meer reviews op Bol', href: '/blog/meer-reviews-op-bol' },
+    { title: 'Verkopen Bol AI tijdperk', href: '/blog/verkopen-bol-ai-tijdperk' },
+    { title: 'Alle blogs', href: '/blog' },
     { title: 'YouTube', href: '#' },
-    { title: 'Handleidingen', href: '/design-b/blog' },
-    { title: 'Bol.com tips', href: '/design-b/blog' },
-    { title: 'Nieuws', href: '/design-b/blog' },
-    { title: 'Brand richtlijnen', href: '#' },
   ];
 
   const contactLinks: FooterLink[] = [
-    { title: 'Word een Partner', href: '/design-b/contact' },
-    { title: 'Help Center', href: '/design-b/contact' },
-    { title: 'Carrières', href: '/design-b/contact', badge: 'WE HUREN' },
+    { title: 'Contact opnemen', href: '/contact' },
+    { title: 'Affiliate partner', href: '/affiliate-partner' },
+    { title: 'Help Center', href: '/contact' },
   ];
 
   const footerSections: { id: string; title: string; links: FooterLink[] }[] = [
@@ -63,12 +63,12 @@ export function FooterDark() {
     },
     {
       id: 'why-us',
-      title: 'Waarom wij',
+      title: 'Waarom ons',
       links: whyUsLinks
     },
     {
       id: 'resources',
-      title: 'Bronnen',
+      title: 'Educatie',
       links: resourcesLinks
     },
     {
@@ -84,7 +84,7 @@ export function FooterDark() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Logo and Contact */}
           <div className="lg:col-span-1">
-            <Link href="/design-b" className="flex items-center mb-6">
+            <Link href="/" className="flex items-center mb-6">
               <Image
                 src="/iconnavbar-mode2.png"
                 alt="Bolbaas"
@@ -122,7 +122,7 @@ export function FooterDark() {
             {/* Demo Button */}
             <div className="mt-6">
               <Link 
-                href="/design-b/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-[#111111] px-4 py-2 rounded-lg font-medium hover:bg-white/90 transition-colors"
               >
                 <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
@@ -191,20 +191,20 @@ export function FooterDark() {
             </p>
             
             <div className="flex flex-wrap gap-6 text-sm text-white/60">
-              <Link href="/design-b/privacy" className="hover:text-white/80 transition-colors">
+              <Link href="/privacy" className="hover:text-white/80 transition-colors">
                 Privacy Beleid
               </Link>
-              <Link href="/design-b/algemene-voorwaarden" className="hover:text-white/80 transition-colors">
+              <Link href="/algemene-voorwaarden" className="hover:text-white/80 transition-colors">
                 Algemene Voorwaarden
               </Link>
-              <Link href="/design-b/verwerkersovereenkomst" className="hover:text-white/80 transition-colors">
+              <Link href="/verwerkersovereenkomst" className="hover:text-white/80 transition-colors">
                 Verwerkersovereenkomst
+              </Link>
+              <Link href="/verwerkingsovereenkomst" className="hover:text-white/80 transition-colors">
+                Verwerkingsovereenkomst
               </Link>
               <Link href="#" className="hover:text-white/80 transition-colors">
                 Cookie Beleid
-              </Link>
-              <Link href="#" className="hover:text-white/80 transition-colors">
-                Veiligheid
               </Link>
             </div>
           </div>
