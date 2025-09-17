@@ -358,16 +358,18 @@ export default function AutomatiseringPage() {
 
           {/* Main Content Grid */}
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
-            {/* Left Image */}
+            {/* Left Video */}
             <div className="relative order-last lg:order-first">
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/automatiseringemails-2.png"
-                alt="E-mail campagnes automatisering"
-                width={1200}
-                height={960}
-                quality={90}
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
-              />
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             {/* Right Content */}

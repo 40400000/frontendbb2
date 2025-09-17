@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { RevenueChart } from "@/components/revenue-chart";
+import { Animatedbadge } from "@/components/animatedbadge";
 
 export const metadata: Metadata = {
   title: "Research tools - Bolbaas",
@@ -99,9 +100,18 @@ export default function ToolsPage() {
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-left mb-8 md:mb-12">
+            {/* Badge above heading */}
+            <div className="flex justify-start mb-6">
+              <div 
+                className="pl-2 pr-3 py-1 rounded-xl text-xs font-semibold text-gray-700 flex items-center gap-2 bg-white border border-gray-200"
+              >
+                <Animatedbadge label="NIEUW" />
+                <span>12M+ keywords</span>
+              </div>
+            </div>
             
             <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
-              Bolbaas Database
+              Research Database
             </h2>
             <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
@@ -650,7 +660,7 @@ export default function ToolsPage() {
                   Perfecte keywords vinden
                 </h3>
                 <p className="text-[14px] leading-[18px] font-normal text-[#111111]/70">
-                  Gebruik de Bolbaas database om de meest effectieve keywords voor je product te identificeren
+                  Gebruik de Research Database om de meest effectieve keywords voor je product te identificeren
                 </p>
               </div>
 

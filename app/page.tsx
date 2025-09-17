@@ -6,6 +6,8 @@ import { IoStar } from "react-icons/io5";
 import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import Image from "next/image";
 import { EmailSignupForm } from "@/components/email-signup-form";
+import { ScrollVideoEffect } from "@/components/scroll-video-effect";
+import { Animatedbadge } from "@/components/animatedbadge";
 
 export default function HomePage() {
 
@@ -92,7 +94,7 @@ export default function HomePage() {
                 <span className="inline-flex items-center bg-[#111111] text-white rounded-xl px-1.5 md:px-2 py-0.5 text-[11px] md:text-xs font-semibold">
                   NIEUW
                 </span>
-                <span className="text-xs md:text-sm font-medium text-[#111111]">Bolbaas database: 12 miljoen+ keywords</span>
+                <span className="text-xs md:text-sm font-medium text-[#111111]">Research database: 12 miljoen+ keywords</span>
                 <MdOutlineArrowOutward className="h-3 w-3 md:h-3.5 md:w-3.5 text-[#111111] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
@@ -112,20 +114,8 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Video Placeholder - Where circles meet */}
-          <div className="container max-w-4xl mx-auto mt-16 md:mt-20 mb-12 md:mb-16">
-            <div className="relative bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 font-medium">Video Placeholder</p>
-                <p className="text-gray-500 text-sm">Product Demo Video</p>
-              </div>
-            </div>
-          </div>
+          {/* Hero Video */}
+          <ScrollVideoEffect />
         </div>
       </section>
 
@@ -349,6 +339,16 @@ export default function HomePage() {
       {/* Dark Section */}
       <section className="bg-[#111111] text-white py-16 md:py-32" data-dark-section="true">
         <div className="max-w-100 mx-auto text-center">
+          {/* Badge above heading */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div 
+              className="pl-2 pr-3 py-1 rounded-xl text-xs font-semibold text-white flex items-center gap-2"
+              style={{ backgroundColor: '#272625' }}
+            >
+              <Animatedbadge label="NIEUW" />
+              <span>Research database</span>
+            </div>
+          </div>
           <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Product research <br/> op een <i>nieuw</i> niveau.</h2>
           <p className="mx-auto text-white/80 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
           Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
@@ -370,7 +370,7 @@ export default function HomePage() {
 
             <div className="mt-6 md:mt-8 flex justify-center">
               <button className="bg-white text-[#111111] font-medium text-[13px] md:text-[14px] leading-[13px] md:leading-[14px] py-2.5 md:py-3 px-5 md:px-6 rounded-xl flex items-center gap-2 hover:gap-3 transition-all">
-                Onze onze database
+                Onze database
                 <MdOutlineArrowOutward className="h-4 w-4" />
               </button>
             </div>
