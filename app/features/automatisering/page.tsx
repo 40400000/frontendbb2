@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { KiteIcon } from "@/components/ui/kite-icon";
 import { EmailSignupForm } from "@/components/email-signup-form";
+import { FaCircleCheck } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { RankingChart } from "@/components/ranking-chart";
 import {
@@ -21,6 +22,7 @@ import {
 } from 'lucide-react';
 import { IoStar } from "react-icons/io5";
 import { BaaspilotAutomatisering } from "@/components/baaspilot-automatisering";
+import { Automatiseringanimation } from "@/components/automatisering-animation";
 
 export const metadata: Metadata = {
   title: "Automatisering - Bolbaas",
@@ -68,30 +70,42 @@ export default function AutomatiseringPage() {
 
                 </h1>
 
-                {/* Subtitle */}
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-                  Automatisch uploaden van BTW-facturen, maak e-mail campagnes, reageer automatisch op factuuraanvragen en meer.
-                </p>
+                {/* Features List */}
+                <div className="space-y-3 max-w-2xl">
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                      E-mail automatisering
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                      Factuur automatisering
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                      BTW automatisering
+                    </span>
+                  </div>
+                </div>
               </div>
 
               {/* Email Signup Form */}
               <EmailSignupForm 
                 placeholder="Vul je bedrijfsemail in"
-                buttonText="Demo aanvragen"
+                buttonText="Demo proberen"
                 showTestimonial={true}
+                align="left"
               />
             </div>
 
             {/* Right Side - Image */}
             <div className="relative">
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden%20%281%29.png"
-                alt="Automatisch BTW facturen uploaden"
-                width={1200}
-                height={1200}
-                quality={90}
-                className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
-              />
+              <Automatiseringanimation />
+
             </div>
           </div>
         </div>
@@ -147,15 +161,8 @@ export default function AutomatiseringPage() {
                     </svg>
                   </a>
                 </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
-                </Button>
+
+
               </div>
             </div>
 
@@ -398,15 +405,7 @@ export default function AutomatiseringPage() {
                     </svg>
                   </a>
                 </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
-                </Button>
+
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ export function EmailSignupForm({
     <div>
       <form 
         onSubmit={handleSubmit} 
-        className={`${alignmentClass} flex items-center rounded-2xl border border-[#111111]/8 p-1.5 bg-white transition-all focus-within:border-[#111111]/20 ${className}`}
+        className={`${alignmentClass} flex flex-col md:flex-row items-stretch md:items-center rounded-2xl border border-[#111111]/8 p-1.5 bg-white transition-all focus-within:border-[#111111]/20 ${className}`}
       >
         <Input
           type="email"
@@ -51,27 +51,29 @@ export function EmailSignupForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-grow h-10 border-none bg-transparent px-4 placeholder:text-[#111111]/60 focus:outline-none text-[#111111]"
+          className="flex-grow h-10 border-none bg-transparent px-4 placeholder:text-[#111111]/60 focus:outline-none text-[#111111] mb-2 md:mb-0"
         />
         <Button 
           type="submit"
-          className="h-10 rounded-2xl bg-[#111111] px-4 text-white hover:bg-black/80 text-sm font-medium cursor-pointer"
+          className="h-10 rounded-2xl bg-[#111111] px-4 text-white hover:bg-black/80 text-sm font-medium cursor-pointer w-full md:w-auto"
         >
           {buttonText}
         </Button>
       </form>
       
         {showTestimonial && (
-          <div className={`mt-4 flex items-center ${testimonialAlignmentClass} gap-2 text-sm opacity-70`}>
-          <FaGoogle className="h-4 w-4 text-[#111111]" />
-          <div className="flex items-center gap-0.5">
-            <IoStar className="h-4 w-4 text-[#111111]" />
-            <IoStar className="h-4 w-4 text-[#111111]" />
-            <IoStar className="h-4 w-4 text-[#111111]" />
-            <IoStar className="h-4 w-4 text-[#111111]" />
-            <IoStar className="h-4 w-4 text-[#111111]" />
+          <div className={`mt-4 flex flex-col md:flex-row items-center ${testimonialAlignmentClass} gap-2 md:gap-2 text-sm opacity-70`}>
+          <div className="flex items-center gap-2">
+            <FaGoogle className="h-4 w-4 text-[#111111]" />
+            <div className="flex items-center gap-0.5">
+              <IoStar className="h-4 w-4 text-[#111111]" />
+              <IoStar className="h-4 w-4 text-[#111111]" />
+              <IoStar className="h-4 w-4 text-[#111111]" />
+              <IoStar className="h-4 w-4 text-[#111111]" />
+              <IoStar className="h-4 w-4 text-[#111111]" />
+            </div>
           </div>
-          <span className="text-[#111111]/30">|</span>
+          <span className="text-[#111111]/30 hidden md:inline">|</span>
           <span className="text-[#111111]">300+ tevreden partners</span>
         </div>
       )}

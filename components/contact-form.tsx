@@ -37,25 +37,10 @@ function SubmitButtonChild({ isFormInvalid = false }: SubmitButtonChildProps) {
     <button
       type="submit"
       disabled={pending || isFormInvalid}
-      className="w-full bg-black text-left cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+      className="w-full bg-[#111111] text-white font-medium text-sm md:text-base py-3 md:py-4 px-6 rounded-xl hover:bg-[#111111]/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
     >
-      {/* Original Content - Slides up on hover */}
-      <span className={`font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 text-white ${pending ? 'opacity-0 -translate-y-full' : ''}`}>
-        {pending ? 'Bezig met verzenden...' : 'Verzenden'}
-        <MdOutlineArrowOutward className="h-5 w-5" />
-      </span>
-      {/* Hover Overlay - Slides in from bottom on hover */}
-      <div className={`absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 pointer-events-none ${pending ? '!translate-y-0 !opacity-100' : ''}`}>
-        {pending ? 'Bezig met verzenden...' : 'Verzenden'}
-        <MdOutlineArrowOutward className="h-5 w-5" />
-      </div>
-      {/* Loading state overlay - always on top when pending */}
-      {pending && (
-        <div className="absolute inset-0 bg-white text-black font-semibold flex justify-between items-center py-6 pl-4 pr-4 pointer-events-none">
-          Bezig met verzenden...
-          <MdOutlineArrowOutward className="h-5 w-5 animate-pulse" />
-        </div>
-      )}
+      {pending ? 'Bezig met verzenden...' : 'Verzenden'}
+      <MdOutlineArrowOutward className={`h-4 w-4 ${pending ? 'animate-pulse' : ''}`} />
     </button>
   );
 }
@@ -167,28 +152,17 @@ export function ContactForm() {
           e.preventDefault(); // Prevent form submission if validation fails
         }
       }}
-      className="ml-[1px] mr-[1px] relative"
+      className="space-y-6 relative"
     >
       {/* Form Fields Container */}
-      <div className={state.type === 'success' ? 'filter blur-sm pointer-events-none' : ''}>
+      <div className={state.type === 'success' ? 'filter blur-sm pointer-events-none' : 'space-y-6'}>
         {/* E-mail Input */}
-        <div 
-          className={`
-            group relative bg-black
-            border-t border-border 
-            transition-all duration-200 ease-in-out
-            ${isEmailFocused ? 'border-l-2 border-l-white' : 'border-l-transparent'}
-          `}
-        >
+        <div className="space-y-2">
           <label
             htmlFor={emailId}
-            className={`
-              absolute left-4 transition-all duration-200 ease-in-out pointer-events-none
-              ${isEmailLabelFloating ? 'top-1.5 text-xs text-white' : 'top-1/2 -translate-y-1/2 text-base text-white'}
-              group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white
-            `}
+            className="block text-sm font-medium text-[#111111]"
           >
-            E-mail<span className="text-gray-400 ml-0.5">*</span>
+            E-mail of telefoonnummer <span className="text-red-500">*</span>
           </label>
           <input
             id={emailId}
@@ -198,32 +172,20 @@ export function ContactForm() {
             onChange={handleEmailChange}
             onFocus={handleEmailFocus}
             onBlur={handleEmailBlur}
-            className="w-full bg-transparent pt-8 pb-4 pl-4 pr-4 text-gray-50 focus:outline-none focus:ring-0 placeholder-transparent"
-            placeholder=" " 
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            placeholder="je@email.com"
             required
           />
-          {emailError && <p className="text-red-500 text-xs mt-1 ml-4 pb-2">{emailError}</p>}
+          {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
         </div>
 
         {/* Vraag Input */}
-        <div 
-          className={`
-            group relative bg-black
-            border-t border-b border-border 
-            transition-all duration-200 ease-in-out
-            ${isVraagFocused ? 'border-l-2 border-l-white' : 'border-l-transparent'}
-          `}
-        >
+        <div className="space-y-2">
           <label
             htmlFor={vraagId}
-            className={`
-              absolute left-4 pointer-events-none
-              transition-all duration-200 ease-in-out
-              ${isVraagLabelFloating ? 'top-1.5 text-xs text-white' : 'top-4 text-base text-white'}
-              group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white 
-            `}
+            className="block text-sm font-medium text-[#111111]"
           >
-            Vraag <span className="text-gray-400 ml-0.5">*</span>
+            Vraag <span className="text-red-500">*</span>
           </label>
           <textarea
             id={vraagId}
@@ -232,53 +194,42 @@ export function ContactForm() {
             onChange={handleVraagChange}
             onFocus={handleVraagFocus}
             onBlur={handleVraagBlur}
-            className="w-full bg-transparent pt-8 pb-24 pl-4 pr-4 text-gray-50 focus:outline-none focus:ring-0 placeholder-transparent resize-none"
-            placeholder=" " 
+            rows={4}
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+            placeholder="Vertel ons over je vraag of uitdaging..."
+            required
           />
         </div>
 
         {/* FoundVia Custom Dropdown */}
-        <div
-          className={`
-            group relative bg-black
-            border-b border-border
-            transition-all duration-200 ease-in-out
-            ${isFoundViaFocused || isFoundViaDropdownOpen ? 'border-l-2 border-l-white' : 'border-l-transparent'}
-          `}
-          tabIndex={0}
-        >
+        <div className="space-y-2">
           <label
             htmlFor={foundViaId}
-            className={`
-              absolute left-4 pointer-events-none
-              transition-all duration-200 ease-in-out
-              ${isFoundViaLabelFloating ? 'top-1.5 text-xs text-white' : 'top-1/2 -translate-y-1/2 text-base text-white'}
-              group-focus-within:top-1.5 group-focus-within:text-xs group-focus-within:text-white
-            `}
+            className="block text-sm font-medium text-[#111111]"
           >
-            Hoe heb je ons gevonden? <span className="text-gray-400 ml-0.5">(optioneel)</span>
+            Hoe heb je ons gevonden? <span className="text-gray-400">(optioneel)</span>
           </label>
-          <input
-            id={foundViaId}
-            type="text"
-            name="foundVia" 
-            value={foundViaValue} 
-            onChange={(e) => setFoundViaValue(e.target.value)}
-            className="hidden" 
-            aria-hidden="true"
-          />
-          <div
-            id={foundViaId}
-            onClick={toggleFoundViaDropdown}
-            onFocus={handleFoundViaFocus}
-            onBlur={handleFoundViaBlur}
-            className="w-full bg-transparent pt-8 pb-4 pl-4 pr-10 text-gray-50 focus:outline-none focus:ring-0 cursor-pointer relative"
-            aria-haspopup="listbox"
-            aria-expanded={isFoundViaDropdownOpen}
-            tabIndex={0}
-          >
-            {selectedOptionLabel || <span className="text-transparent">.</span>}
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+          <div className="relative">
+            <input
+              type="text"
+              name="foundVia" 
+              value={foundViaValue} 
+              onChange={(e) => setFoundViaValue(e.target.value)}
+              className="hidden" 
+              aria-hidden="true"
+            />
+            <div
+              onClick={toggleFoundViaDropdown}
+              onFocus={handleFoundViaFocus}
+              onBlur={handleFoundViaBlur}
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer flex items-center justify-between"
+              aria-haspopup="listbox"
+              aria-expanded={isFoundViaDropdownOpen}
+              tabIndex={0}
+            >
+              <span className={selectedOptionLabel ? 'text-[#111111]' : 'text-gray-400'}>
+                {selectedOptionLabel || 'Selecteer een optie'}
+              </span>
               <svg
                 className={`h-5 w-5 text-gray-400 transition-transform duration-200 ease-in-out ${isFoundViaDropdownOpen ? 'transform rotate-180' : ''}`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -293,39 +244,43 @@ export function ContactForm() {
                 />
               </svg>
             </div>
+            {isFoundViaDropdownOpen && (
+              <ul
+                className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-auto focus:outline-none"
+                role="listbox"
+              >
+                {foundViaOptions.map((option) => (
+                  <li
+                    key={option.value}
+                    className={`px-4 py-3 text-sm text-[#111111] hover:bg-gray-50 cursor-pointer ${foundViaValue === option.value ? 'bg-blue-50 text-blue-600' : ''}`}
+                    onClick={() => handleFoundViaOptionClick(option.value)}
+                    onMouseDown={(e) => e.preventDefault()}
+                    role="option"
+                    aria-selected={foundViaValue === option.value}
+                  >
+                    {option.label}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          {isFoundViaDropdownOpen && (
-            <ul
-              className="absolute z-10 w-full mt-1 bg-black border border-border rounded-md max-h-60 overflow-auto focus:outline-none"
-              role="listbox"
-              aria-labelledby={foundViaId}
-            >
-              {foundViaOptions.map((option) => (
-                <li
-                  key={option.value}
-                  className={`px-4 py-3 text-sm text-gray-50 hover:bg-gray-700 cursor-pointer ${foundViaValue === option.value ? 'bg-gray-700' : ''}`}
-                  onClick={() => handleFoundViaOptionClick(option.value)}
-                  onMouseDown={(e) => e.preventDefault()}
-                  role="option"
-                  aria-selected={foundViaValue === option.value}
-                >
-                  {option.label}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
 
         {/* Submit Button */}
-        <div className="group relative w-full cursor-pointer overflow-hidden border-b border-border">
+        <div className="pt-2">
           <SubmitButtonChild isFormInvalid={!!emailError} />
         </div>
       </div>
 
       {/* Success Overlay */}
       {state.type === 'success' && (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/90 p-8 text-center">
-          <p className="text-xl font-semibold text-white mb-4">{state.message}</p>
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm p-8 text-center rounded-xl">
+          <div className="bg-green-100 p-4 rounded-full mb-4">
+            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p className="text-xl font-medium text-[#111111] mb-6">{state.message}</p>
           <button
             type="button"
             onClick={() => {
@@ -334,18 +289,20 @@ export function ContactForm() {
               formData.append('resetForm', 'true');
               formAction(formData); // Dispatch the action with the reset flag
             }}
-            className="group relative cursor-pointer overflow-hidden border border-white px-6 py-3 text-white font-semibold hover:bg-white hover:text-black transition-colors duration-300"
+            className="bg-[#111111] text-white font-medium px-6 py-3 rounded-xl hover:bg-[#111111]/90 transition-colors"
           >
             Verstuur nog een bericht
           </button>
         </div>
       )}
 
-      {/* Error Message Display (existing, if any, or can be styled similarly if needed) */}
+      {/* Error Message Display */}
       {state.type === 'error' && (
-        <p className="mt-2 text-sm text-red-600 dark:text-red-500">
-          <span className="font-medium">Sorry! Er is iets misgegaan bij het verzenden van je bericht. Probeer het opnieuw.</span> 
-        </p>
+        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl">
+          <p className="text-sm text-red-600">
+            <span className="font-medium">Sorry! Er is iets misgegaan bij het verzenden van je bericht. Probeer het opnieuw.</span> 
+          </p>
+        </div>
       )}
     </form>
   );

@@ -102,23 +102,18 @@ export function Animatedbadge({ label = "POPULAR", className = "" }: AnimatedBad
       </div>
       <div className="am-grain-button" />
       <style>{`
-        .am-new-label-wrapper { display: inline-flex; gap: 0.25rem; align-items: center; }
+        .am-new-label-wrapper { position: relative; display: inline-flex; gap: 0.25rem; align-items: center; }
         .am-new-label.is-dark { transition: background 1s ease; }
         .am-new-label.is-dark.is-bigger { font-size: 0.625rem; }
         .am-grain-button {
-          -webkit-mask-image:
-            linear-gradient(to top, rgba(0,0,0,0) 3%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 87%, rgba(0,0,0,0) 97%),
-            linear-gradient(to left, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 99%),
-            radial-gradient(ellipse at center, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 87%);
-          -webkit-mask-size: 100% 100%;
-          -webkit-mask-composite: intersect;
-          mask-image:
-            linear-gradient(to top, rgba(0,0,0,0) 3%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 87%, rgba(0,0,0,0) 97%),
-            linear-gradient(to left, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 99%),
-            radial-gradient(ellipse at center, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 87%);
-          mask-size: 100% 100%;
-          mask-composite: intersect;
+          position: absolute;
+          inset: -4px;
+          border-radius: 8px;
+          z-index: 10;
           pointer-events: none;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          background-size: 20px 20px;
+          opacity: 0.25;
         }
       `}</style>
     </div>

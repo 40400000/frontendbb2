@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { BlogThemeHandler } from "@/components/blog-theme-handler";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Educatie - Bolbaas",
@@ -53,97 +52,139 @@ export default function BlogPage() {
   const otherPosts = blogPosts.slice(1);
 
   return (
-    <div className="relative z-0 flex flex-col min-h-screen border-t bg-white dark:bg-background border-b">
-      <BlogThemeHandler />
-        {/* Overlay Grid */}
-        <div className="absolute inset-0 h-full z-10 pointer-events-none border-l border-r border-border">
-          <div className="relative h-full max-w-full mx-auto">
-            <div className="hidden sm:block absolute left-[20%] top-0 bottom-0 w-px bg-border"></div>
-          <div className="hidden sm:block absolute left-[80%] top-0 bottom-0 w-px bg-border"></div>
+    <>
+      {/* Hero Section */}
+      <section className="relative z-20 w-full flex items-start justify-center pt-16 md:pt-28 pb-8 md:pb-12 bg-white text-[#111111] overflow-hidden px-4 md:px-6">
+        {/* Simple background */}
+        <div className="absolute inset-0 w-full h-full bg-white" />
+        
+        <div className="w-full relative z-10 flex flex-col">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
+              Bolbaas <em className="italic">Educatie</em>
+            </h1>
+            
+            <p className="mx-auto max-w-2xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-8 md:mb-10">
+              Artikelen en inzichten over gebruik van AI voor bol.com partners, automatisering, en alles wat je nodig hebt om te groeien op bol.com.
+            </p>
           </div>
         </div>
-        
-        <main className="relative z-20 container px-0 pt-16 md:pt-24 lg:pt-32">
-          <header className="w-full pb-12 md:pb-16 lg:pb-20 border-b border-border">
-            <div className="grid grid-cols-1 sm:grid-cols-4">
-              <div className="col-span-1 sm:col-span-3">
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Bolbaas Educatie
-                </h1>
-                <p className="mt-4 text-lg text-foreground max-w-2xl">
-                  Artikelen en inzichten over gebruik van AI voor bol.com partners, automatisering, en alles wat je nodig hebt om te groeien op bol.com.
-                </p>
-              </div>
-            </div>
-          </header>
+      </section>
 
-          {/* Featured Post Section */}
-          <section className="w-full py-12 md:py-16 lg:py-20 border-b border-border">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-x-8 lg:gap-x-16">
-              <div className="md:col-span-3 flex flex-col justify-center">
-                <p className="text-sm text-foreground">{featuredPost.date}</p>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 mb-4 leading-tight">
-                  <Link href={featuredPost.href} className="hover:underline">
-                    {featuredPost.title}
-                  </Link>
-                </h2>
-                <p className="text-foreground mb-6 text-sm sm:text-base line-clamp-3 max-w-prose">
-                  {featuredPost.description}
-                </p>
-                <Link href={featuredPost.href} passHref>
-                  <Button variant="link" className="p-0 mb-4">Lees meer -&gt;</Button>
+      {/* Featured Post Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - Content */}
+            <div className="flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-medium px-3 py-1 rounded-xl mb-4 w-fit">
+                Nieuwste artikel
+              </div>
+              <p className="text-sm text-[#111111]/60 mb-2">{featuredPost.date}</p>
+              <h2 className="text-[24px] md:text-[32px] leading-[28px] md:leading-[36px] font-medium mb-4 text-balance text-[#111111]">
+                <Link href={featuredPost.href} className="hover:opacity-80 transition-opacity text-[#111111]">
+                  {featuredPost.title}
                 </Link>
-                <div className="flex items-center gap-4">
-                  <Image src={featuredPost.authorImageUrl} alt={featuredPost.author} width={64} height={64} className="rounded-full w-16 h-16 object-cover" />
-                  <p className="text-lg font-medium">{featuredPost.author}</p>
+              </h2>
+              <p className="text-[#111111]/70 mb-6 text-sm md:text-base leading-relaxed">
+                {featuredPost.description}
+              </p>
+              <Link 
+                href={featuredPost.href} 
+                className="inline-flex items-center gap-2 bg-[#111111] text-white font-medium text-sm md:text-base py-3 md:py-4 px-6 rounded-xl hover:bg-[#111111]/90 transition-colors w-fit mb-6"
+              >
+                Lees artikel
+                <MdOutlineArrowOutward className="h-4 w-4" />
+              </Link>
+              <div className="flex items-center gap-4">
+                <Image 
+                  src={featuredPost.authorImageUrl} 
+                  alt={featuredPost.author} 
+                  width={48} 
+                  height={48} 
+                  className="rounded-xl w-12 h-12 object-cover" 
+                />
+                <div>
+                  <p className="font-medium text-[#111111]">{featuredPost.author}</p>
+                  <p className="text-sm text-[#111111]/60">Auteur</p>
                 </div>
               </div>
-              <div className="mt-8 md:mt-0 md:col-span-2">
-                <Link href={featuredPost.href}>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="flex items-center">
+              <Link href={featuredPost.href} className="block w-full">
+                <Image
+                  src={featuredPost.imageUrl}
+                  alt={featuredPost.title}
+                  width={600}
+                  height={400}
+                  className="object-contain rounded-2xl aspect-[3/2] transition-transform hover:scale-105 w-full bg-gray-50"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* More Articles Section */}
+      <section className="bg-gray-50 py-16 md:py-24">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-medium mb-4 text-[#111111]">
+              Meer artikelen
+            </h2>
+            <p className="text-sm md:text-base text-[#111111]/70">
+              Ontdek meer inzichten en tips voor je bol.com succes
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {otherPosts.map((post) => (
+              <div key={post.href} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <Link href={post.href} className="block">
                   <Image
-                    src={featuredPost.imageUrl}
-                    alt={featuredPost.title}
-                    width={600}
-                    height={600}
-                    className="object-cover rounded-lg aspect-square transition-transform group-hover:scale-105 w-full"
+                    src={post.imageUrl}
+                    alt={post.title}
+                    width={400}
+                    height={240}
+                    className="object-contain w-full aspect-[5/3] transition-transform hover:scale-105 bg-gray-50"
                   />
                 </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Grid of Other Posts */}
-          <section className="w-full py-12 md:py-16 lg:py-20">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-              {otherPosts.map((post) => (
-                <div key={post.href} className="group flex flex-col">
-                  <Link href={post.href} className="block mb-4 overflow-hidden rounded-lg">
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.title}
-                      width={300}
-                      height={300}
-                      className="object-cover w-full aspect-square transition-transform group-hover:scale-105"
-                    />
-                  </Link>
-                  <p className="text-sm text-foreground">{post.date}</p>
-                  <h3 className="text-xl font-semibold mt-2 mb-2">
-                    <Link href={post.href} className="hover:underline">
+                <div className="p-6">
+                  <p className="text-sm text-[#111111]/60 mb-2">{post.date}</p>
+                  <h3 className="text-lg md:text-xl font-medium mb-3 leading-tight text-[#111111]">
+                    <Link href={post.href} className="hover:opacity-80 transition-opacity text-[#111111]">
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-foreground text-sm flex-grow">
+                  <p className="text-[#111111]/70 text-sm mb-4 line-clamp-3">
                     {post.description}
                   </p>
-                  <div className="mt-auto pt-4 flex items-center gap-3">
-                     <Image src={post.authorImageUrl} alt={post.author} width={48} height={48} className="rounded-full w-12 h-12 object-cover" />
-                     <p className="text-sm font-medium">{post.author}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <Image 
+                        src={post.authorImageUrl} 
+                        alt={post.author} 
+                        width={32} 
+                        height={32} 
+                        className="rounded-lg w-8 h-8 object-cover" 
+                      />
+                      <p className="text-sm font-medium text-[#111111]">{post.author}</p>
+                    </div>
+                    <Link 
+                      href={post.href}
+                      className="text-blue-600 hover:text-blue-700 transition-colors"
+                    >
+                      <MdOutlineArrowOutward className="h-4 w-4" />
+                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-        </main>
-    </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
-} 
+}

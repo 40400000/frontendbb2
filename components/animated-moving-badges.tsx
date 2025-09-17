@@ -191,10 +191,10 @@ export default function AnimatedMovingBadges() {
         }
       `}</style>
       
-      <BadgeRow badges={row1} direction="left" speed={60} />
-      <BadgeRow badges={row2} direction="right" speed={55} />
-      <BadgeRow badges={row3} direction="left" speed={65} />
-      <BadgeRow badges={row4} direction="right" speed={70} />
+      <BadgeRow badges={row1} direction="left" speed={20} />
+      <BadgeRow badges={row2} direction="right" speed={15} />
+      <BadgeRow badges={row3} direction="left" speed={25} />
+      <BadgeRow badges={row4} direction="right" speed={27} />
     </div>
   );
 }

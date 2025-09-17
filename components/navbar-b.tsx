@@ -114,7 +114,7 @@ const pathname = usePathname();
     href: string;
     color: 'blue' | 'orange' | 'purple';
   }[] = [
-    { id: 'tools', label: 'AI & Tools', subtitle: 'Next level product research tools', href: '/features/tools', color: 'blue' },
+    { id: 'tools', label: 'AI Research tools', subtitle: 'Next level product research tools', href: '/features/tools', color: 'blue' },
     { id: 'automatisering', label: 'Automatisering', subtitle: 'Automatisch e-mails en facturen', href: '/features/automatisering', color: 'orange' },
     { id: 'store-prestaties', label: 'Store prestaties', subtitle: 'Overzicht en inzichten over je store', href: '/features/store-prestaties', color: 'purple' },
   ];
@@ -124,20 +124,21 @@ const pathname = usePathname();
     automatisering: [
       { title: 'Factuur automatisering', description: 'BTW-factuur uploads en boekhouding', href: '/features/automatisering#store-automatisering' },
       { title: 'E-mail automatisering', description: 'Verzamel meer reviews automatisch', href: '/features/automatisering#email-campagnes' },
-      { title: 'BTW-aangifte automatisering', description: 'Automatische berekening en boekhouding', href: '/features/automatisering#btw-aangifte-automatisering' },
+      { title: 'BTW-aangifte automatisering', description: 'Automatische berekening en boekhouding', href: '/features/automatisering#btw-automatisering' },
       { title: 'Baaspilot', description: 'Direct op de hoogte van gebeurtenissen', href: '/features/automatisering#baaspilot' },
     ],
     'store-prestaties': [
       { title: 'Custom dashboards en views', description: 'Bouw dashboards voor jouw belangrijke cijfers', href: '/features/store-prestaties#custom-dashboards' },
       { title: 'Product prestaties', description: 'Uitgebreid overzicht van verkoopprestaties', href: '/features/store-prestaties#product-prestaties' },
-      { title: 'Bestellingen', description: 'Gedetailleerde analyse van je bestellingen', href: '/features/store-prestaties#bestellingen' },
-      { title: 'Sales en voorraad schattingen', description: 'Voorspel verkoop en wanneer bijbestellen', href: '/features/store-prestaties#sales-voorspellingen' },
+      { title: 'Bestellingen', description: 'Gedetailleerde analyse van je bestellingen', href: '/features/store-prestaties#bestellingen-beheren' },
+      { title: 'Sales en voorraad schattingen', description: 'Voorspel verkoop en wanneer bijbestellen', href: '/features/store-prestaties#sales-forecasting' },
+      { title: 'Levering tracker', description: 'Track leveringen en verwachte aankomsttijden', href: '/features/store-prestaties#levering-tracker' },
     ],
     tools: [
       { title: 'Keyword database', description: 'Keywordonderzoek met 12+ miljoen keywords', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
       { title: 'Ranking AI', description: 'AI-gestuurde listing optimalisatie', href: '/features/tools#ranking-ai' },
-      { title: 'Product tracking', description: 'Track producten en concurrenten nauwkeurig', href: '/features/tools#product-tracking' },
-      { title: 'Keyword tracking', description: 'Track keywords uit de database', href: '/features/tools#keyword-tracking' },
+      { title: 'Product & keyword tracking', description: 'Track producten en concurrenten nauwkeurig', href: '/features/tools#product-tracking' },
+      { title: 'CPC tracker', description: 'Monitor advertising kosten en prestaties', href: '/features/tools#cpc-tracker' },
       { title: 'Winst & ACoS calculator', description: 'Bereken winst en advertising kosten', href: '/features/tools#winst-calculator' },
       { title: 'A/B testen van listings', description: 'Test verschillende versies van productpagina', href: '/features/tools#ab-testing' },
       { title: 'Project management', description: 'Organiseer je Bol.com projecten efficiënt', href: '/features/tools#project-management' },
@@ -181,7 +182,7 @@ const pathname = usePathname();
         }`}
       >
         <div className={`flex items-center ${
-          isScrolled ? 'justify-between px-2 h-12' : 'justify-start gap-4 px-4 sm:px-24 h-18'
+          isScrolled ? 'justify-between px-2 pr-4 h-12' : 'justify-start gap-4 px-4 sm:px-24 h-18'
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -250,7 +251,7 @@ const pathname = usePathname();
                 }, 100);
               }}
             >
-              <button className={`flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-xl ${
+              <button className={`flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-xl relative ${
                 activeDropdown === 'functies' 
                   ? isDarkMode 
                     ? 'bg-[#242323] border border-[#2D2C2B] shadow-sm text-white' 
@@ -261,6 +262,11 @@ const pathname = usePathname();
               }`}>
                 Functies
                 <ChevronDown className="h-3 w-3" />
+                {pathname.startsWith('/features') && (
+                  <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                    isDarkMode ? 'bg-white' : 'bg-[#111111]'
+                  }`} />
+                )}
               </button>
               {activeDropdown === 'functies' && (
                 <div
@@ -288,8 +294,9 @@ const pathname = usePathname();
                         {functionCategories.map((cat) => {
                           const isActive = activeCategory === cat.id;
                           return (
-                            <button
+                            <Link
                               key={cat.id}
+                              href={cat.href}
                               onMouseEnter={() => setActiveCategory(cat.id)}
                               onFocus={() => setActiveCategory(cat.id)}
                               className={`group flex items-start gap-0 px-2.5 py-2.5 text-left transition-colors cursor-pointer ${
@@ -316,7 +323,7 @@ const pathname = usePathname();
                               <span className={`ml-auto scale-95 ${
                                 isDarkMode ? 'text-white/50' : 'text-[#111111]/50'
                               }`}>→</span>
-                            </button>
+                            </Link>
                           );
                         })}
                       </div>
@@ -387,7 +394,7 @@ const pathname = usePathname();
                 }, 100);
               }}
             >
-              <button className={`flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-xl ${
+              <button className={`flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-xl relative ${
                 activeDropdown === 'waarom-ons' 
                   ? isDarkMode 
                     ? 'bg-[#242323] border border-[#2D2C2B] shadow-sm text-white' 
@@ -398,10 +405,17 @@ const pathname = usePathname();
               }`}>
                 Waarom ons
                 <ChevronDown className="h-3 w-3" />
+                {(pathname.startsWith('/waarom-ons') || pathname.startsWith('/blog') || pathname.startsWith('/partner-worden')) && (
+                  <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                    isDarkMode ? 'bg-white' : 'bg-[#111111]'
+                  }`} />
+                )}
               </button>
               {activeDropdown === 'waarom-ons' && (
                 <div
-                  className={`absolute top-full left-0 mt-2 w-[560px] border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] z-50 overflow-hidden p-2 animate-in fade-in-0 zoom-in-95 duration-200 transition-all ${
+                  className={`absolute top-full left-0 mt-2 ${
+                    activeWhyCategory === 'vergelijkingen' ? 'w-[460px]' : 'w-[280px]'
+                  } border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] z-50 overflow-hidden p-2 animate-in fade-in-0 zoom-in-95 duration-200 transition-all ${
                     isDarkMode 
                       ? 'bg-[#242323] border-[#2D2C2B]' 
                       : 'bg-white/100 backdrop-blur-md border-black/5'
@@ -413,7 +427,11 @@ const pathname = usePathname();
                   }}
                 >
                   <div
-                    className="grid grid-cols-[240px_1px_1fr] transition-all duration-300 ease-out"
+                    className={`${
+                      activeWhyCategory === 'vergelijkingen' 
+                        ? 'grid grid-cols-[240px_1px_180px]' 
+                        : 'flex'
+                    } transition-all duration-300 ease-out`}
                     style={{
                       minHeight: activeWhyCategory === 'vergelijkingen' 
                         ? ((whySubsections[activeWhyCategory] ?? []).length > 4 ? '320px' : 
@@ -422,7 +440,9 @@ const pathname = usePathname();
                     }}
                   >
                     {/* Left: categories (no icons) */}
-                    <div className="relative">
+                    <div className={`relative ${
+                      activeWhyCategory === 'vergelijkingen' ? '' : 'w-full'
+                    }`}>
                       <div className="flex flex-col gap-1.5 py-2 px-2">
                         {whyCategories.map((cat) => {
                           const isActive = activeWhyCategory === cat.id;
@@ -485,50 +505,88 @@ const pathname = usePathname();
                       </div>
                     </div>
                     {/* Separator and Right section (only for comparisons) */}
-                    <div className={`my-2 ${
-                      isDarkMode ? 'bg-[#3D3C3B]' : 'bg-[#EAE9E7]'
-                    } ${activeWhyCategory === 'vergelijkingen' ? 'block' : 'hidden'}`}></div>
-                    <div className={`relative ${activeWhyCategory === 'vergelijkingen' ? 'block' : 'hidden'}`}>
-                      <div className="flex flex-col gap-1.5 px-2 transition-all duration-300 ease-out">
-                        {(whySubsections[activeWhyCategory] ?? []).map((item) => (
-                          <Link
-                            key={`${activeWhyCategory}-${item.title}`}
-                            href={item.href}
-                            className="group rounded-xl px-2.5 py-2.5 transition-all duration-200 cursor-pointer scale-95 origin-left hover:bg-transparent animate-in fade-in-0 duration-300"
-                          >
-                            <div className="flex-1">
-                              <div className={`flex items-center gap-2 text-[15px] leading-[15px] font-medium transition-colors whitespace-nowrap ${
-                                isDarkMode 
-                                  ? 'text-white group-hover:text-red-400' 
-                                  : 'text-[#111111] group-hover:text-red-500'
-                              }`}>
-                                {item.title}
+                    {activeWhyCategory === 'vergelijkingen' && (
+                      <>
+                        <div className={`my-2 ${
+                          isDarkMode ? 'bg-[#3D3C3B]' : 'bg-[#EAE9E7]'
+                        }`}></div>
+                        <div className="relative">
+                      <div className="flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-out">
+                        {(whySubsections[activeWhyCategory] ?? []).map((item) => {
+                          const isBolmate = item.title === 'Bolbaas vs. Bolmate';
+                          const isDisabled = !isBolmate;
+                          
+                          return isDisabled ? (
+                            <div
+                              key={`${activeWhyCategory}-${item.title}`}
+                              className="rounded-xl px-3 py-2.5 cursor-not-allowed animate-in fade-in-0 duration-300"
+                            >
+                              <div className="flex-1">
+                                <div className={`flex items-center gap-2 text-[14px] leading-[18px] font-medium ${
+                                  isDarkMode 
+                                    ? 'text-white/30' 
+                                    : 'text-[#111111]/30'
+                                }`}>
+                                  {item.title}
+                                </div>
                               </div>
                             </div>
-                          </Link>
-                        ))}
+                          ) : (
+                            <Link
+                              key={`${activeWhyCategory}-${item.title}`}
+                              href={item.href}
+                              className={`group rounded-xl px-3 py-2.5 transition-all duration-200 cursor-pointer hover:bg-transparent animate-in fade-in-0 duration-300 ${
+                                isDarkMode 
+                                  ? 'hover:bg-white/[0.05]' 
+                                  : 'hover:bg-black/[0.03]'
+                              }`}
+                            >
+                              <div className="flex-1">
+                                <div className={`flex items-center gap-2 text-[14px] leading-[18px] font-medium transition-colors ${
+                                  isDarkMode 
+                                    ? 'text-white group-hover:text-red-400' 
+                                    : 'text-[#111111] group-hover:text-red-500'
+                                }`}>
+                                  {item.title}
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        })}
                       </div>
-                    </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
+            <Link href="/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 relative ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>
               Prijzen
+              {pathname === '/prijzen' && (
+                <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                  isDarkMode ? 'bg-white' : 'bg-[#111111]'
+                }`} />
+              )}
             </Link>
-            <Link href="/contact" className={`flex items-center gap-1 transition-colors px-4 py-2 ${
+            <Link href="/contact" className={`flex items-center gap-1 transition-colors px-4 py-2 relative ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>
               Contact
+              {pathname === '/contact' && (
+                <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                  isDarkMode ? 'bg-white' : 'bg-[#111111]'
+                }`} />
+              )}
             </Link>
           </nav>
 
           {/* Action Buttons */}
-          <div className={`flex items-center gap-3 ${
-            isScrolled ? '' : 'ml-auto'
+          <div className={`hidden md:flex items-center gap-3 ${
+            isScrolled ? 'ml-auto' : 'ml-auto'
           }`}>
             <Button 
               variant="outline" 
@@ -541,6 +599,19 @@ const pathname = usePathname();
               Naar app
             </Button>
             <Button className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
+              isDarkMode
+                ? 'bg-white text-[#111111] hover:bg-white/90'
+                : 'bg-[#111111] text-white hover:bg-black/80'
+            }`}>
+              Probeer gratis
+            </Button>
+          </div>
+
+          {/* Mobile Action Button - Only "Probeer gratis" */}
+          <div className={`md:hidden flex items-center ${
+            isScrolled ? 'ml-auto' : 'ml-auto'
+          }`}>
+            <Button className={`rounded-xl px-3 py-0 text-xs font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
               isDarkMode
                 ? 'bg-white text-[#111111] hover:bg-white/90'
                 : 'bg-[#111111] text-white hover:bg-black/80'

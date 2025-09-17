@@ -141,6 +141,11 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: rgb(255 255 255);
   --foreground: oklch(0.145 0 0);
+  
+  /* Mobile scaling factors (desktop = 1.0) */
+  --mobile-scale: 0.85; /* 15% smaller */
+  --mobile-scale-text: 0.85; /* 15% smaller for text */
+  --mobile-scale-spacing: 0.8; /* 20% smaller for spacing */
 }
 
 .dark {
@@ -183,5 +188,28 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Mobile scaling utilities */
+  .mobile-scale {
+    font-size: calc(1em * var(--mobile-scale-text));
+  }
+  
+  .mobile-scale-spacing {
+    padding: calc(var(--spacing, 1rem) * var(--mobile-scale-spacing));
+    margin: calc(var(--margin, 0) * var(--mobile-scale-spacing));
+  }
+  
+  /* Apply mobile scaling automatically on small screens */
+  @media (max-width: 768px) {
+    .auto-mobile-scale {
+      font-size: calc(1em * var(--mobile-scale-text));
+    }
+    
+    .auto-mobile-scale-spacing {
+      --spacing-mobile: calc(var(--spacing, 1) * var(--mobile-scale-spacing));
+    }
   }
 }

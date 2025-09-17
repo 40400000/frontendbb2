@@ -507,6 +507,22 @@ export default function PrijzenPage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Precision product tracking</div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">30 producten</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">400 producten</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
                     <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Research database</div>
                     <div className="text-center md:text-center text-left">
                       <span className="text-[12px] leading-[14px] text-gray-500">-</span>
@@ -535,22 +551,6 @@ export default function PrijzenPage() {
                     <div className="text-center md:text-center text-left">
                       <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
                       <span className="md:hidden text-sm text-gray-600">Pro</span>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Precision product tracking</div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">30 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">400 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
                     </div>
                   </div>
 
@@ -645,7 +645,39 @@ export default function PrijzenPage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Aantal e-mails en facturen</div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
                     <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">BTW</div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Baaspilot</div>
                     <div className="text-center md:text-center text-left">
                       <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
                       <span className="md:hidden text-sm text-gray-600">Start</span>
@@ -720,6 +752,22 @@ export default function PrijzenPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
                     <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Sales en voorraad schattingen</div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    </div>
+                    <div className="text-center md:text-center text-left">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
+                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Levering tracker</div>
                     <div className="text-center md:text-center text-left">
                       <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
                       <span className="md:hidden text-sm text-gray-600">Start</span>
