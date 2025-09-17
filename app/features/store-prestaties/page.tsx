@@ -47,8 +47,8 @@ export default function StorePrestatiesPage() {
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
             {/* Left Content */}
             <div className="text-left">
               {/* Top Text with Kite Icon */}
@@ -60,14 +60,14 @@ export default function StorePrestatiesPage() {
               </div>
 
               {/* Main Title */}
-              <div className="space-y-5 mb-8">
-                <h1 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight">
+              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                <h1 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
                 Weet precies wat er <i>gebeurt</i> in je store.
 
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
                   Maak keuzes op basis van data. Uitgebreide data inzichten voor alle aspecten van je store.
                 </p>
               </div>
@@ -96,34 +96,34 @@ export default function StorePrestatiesPage() {
       </section>
 
       {/* Product Prestaties Section */}
-      <section id="product-prestaties" className="relative overflow-hidden bg-[#111111] py-24 lg:py-32" data-dark-section="true">
+      <section id="product-prestaties" className="relative overflow-hidden bg-[#111111] py-16 md:py-24 lg:py-32" data-dark-section="true">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-white tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-white tracking-tight mb-4 md:mb-5">
               Product prestaties
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-2xl">
               Krijg diepgaande inzichten in hoe je producten presteren. Van reviews tot rankings - zie alles in één dashboard.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-white tracking-wide uppercase">
                     PRODUCT ANALYSE
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
                   Zie precies hoe elk product presteert.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
                   Van reviews tot rankings, van verkopen tot winst. Alle data die je nodig hebt om betere beslissingen te maken.
                 </p>
               </div>
@@ -358,34 +358,34 @@ export default function StorePrestatiesPage() {
       </section>
 
       {/* Custom Dashboards Section */}
-      <section id="custom-dashboards" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="custom-dashboards" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Custom dashboards
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Maak je eigen dashboards met precies de data die jij belangrijk vindt. Stel zelf in welke metrics je wilt zien.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     CUSTOM DASHBOARDS
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Jouw data, jouw dashboard.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Kies zelf welke metrics je belangrijk vindt en maak je eigen dashboard. Van verkopen tot reviews, alles op één plek.
                 </p>
               </div>
@@ -433,19 +433,19 @@ export default function StorePrestatiesPage() {
           </div>
 
           {/* 3-Column Dashboard Features */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Feature 1 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] hover:border-[#F5F4F2] transition-all duration-300 space-y-6">
+            <div className="bg-[#FBFAF9] p-6 md:p-8 rounded-xl border border-[#F5F4F2] hover:border-[#F5F4F2] transition-all duration-300 space-y-4 md:space-y-6">
               <div className="flex items-center gap-3">
-                <Database className="w-5 h-5 text-gray-600" />
+                <Database className="w-4 md:w-5 h-4 md:h-5 text-gray-600" />
                 <span className="text-[10px] leading-[12px] font-normal text-gray-600 tracking-wide uppercase">01</span>
               </div>
               
-              <div className="space-y-3">
-                <h3 className="text-[16px] leading-[20px] font-normal text-[#111111]">
+              <div className="space-y-2 md:space-y-3">
+                <h3 className="text-sm md:text-[16px] leading-[18px] md:leading-[20px] font-normal text-[#111111]">
                   Drag & drop interface
                 </h3>
-                <p className="text-[14px] leading-[18px] font-normal text-[#111111]/70">
+                <p className="text-xs md:text-[14px] leading-[16px] md:leading-[18px] font-normal text-[#111111]/70">
                   Sleep widgets waar je ze wilt hebben. Maak je dashboard precies zoals jij het wilt.
                 </p>
               </div>
@@ -489,20 +489,20 @@ export default function StorePrestatiesPage() {
       </section>
 
       {/* Bestellingen Beheren Section */}
-      <section id="bestellingen-beheren" className="relative overflow-hidden bg-[#111111] py-24 lg:py-32" data-dark-section="true">
+      <section id="bestellingen-beheren" className="relative overflow-hidden bg-[#111111] py-16 md:py-24 lg:py-32" data-dark-section="true">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-white tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-white tracking-tight mb-4 md:mb-5">
               Bestellingen beheren
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-2xl">
               Beheer al je bestellingen vanuit één overzicht. Van nieuwe orders tot retouren - alles overzichtelijk op één plek.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Image */}
             <div className="relative order-last lg:order-first">
               <Image
@@ -516,19 +516,19 @@ export default function StorePrestatiesPage() {
             </div>
 
             {/* Right Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-white tracking-wide uppercase">
                     BESTELLINGEN
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
                   Alles overzichtelijk in één dashboard.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
                   Van nieuwe bestellingen tot retouren en klachten. Beheer alles vanuit één overzichtelijk dashboard.
                 </p>
               </div>
@@ -637,34 +637,34 @@ export default function StorePrestatiesPage() {
       </section>
 
       {/* Sales Forecasting Section */}
-      <section id="sales-forecasting" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="sales-forecasting" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Sales forecasting
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Voorspel je toekomstige verkopen op basis van historische data en seizoenstrends. Plan je voorraad en marketing strategieën.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     SALES FORECASTING
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Voorspel je toekomstige verkopen.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Bolbaas analyseert je historische verkopen en voorspelt toekomstige trends. Zo kun je beter plannen en voorbereiden.
                 </p>
               </div>
@@ -705,19 +705,19 @@ export default function StorePrestatiesPage() {
           </div>
 
           {/* Forecasting Benefits */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Benefit 1 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] hover:border-[#F5F4F2] transition-all duration-300 space-y-6">
+            <div className="bg-[#FBFAF9] p-6 md:p-8 rounded-xl border border-[#F5F4F2] hover:border-[#F5F4F2] transition-all duration-300 space-y-4 md:space-y-6">
               <div className="flex items-center gap-3">
-                <Package className="w-5 h-5 text-gray-600" />
+                <Package className="w-4 md:w-5 h-4 md:h-5 text-gray-600" />
                 <span className="text-[10px] leading-[12px] font-normal text-gray-600 tracking-wide uppercase">01</span>
               </div>
               
-              <div className="space-y-3">
-                <h3 className="text-[16px] leading-[20px] font-normal text-[#111111]">
+              <div className="space-y-2 md:space-y-3">
+                <h3 className="text-sm md:text-[16px] leading-[18px] md:leading-[20px] font-normal text-[#111111]">
                   Voorraad planning
                 </h3>
-                <p className="text-[14px] leading-[18px] font-normal text-[#111111]/70">
+                <p className="text-xs md:text-[14px] leading-[16px] md:leading-[18px] font-normal text-[#111111]/70">
                   Weet precies hoeveel voorraad je nodig hebt voor de komende periode.
                 </p>
               </div>

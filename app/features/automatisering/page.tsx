@@ -51,8 +51,8 @@ export default function AutomatiseringPage() {
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
             {/* Left Content */}
             <div className="text-left">
               {/* Top Text with Kite Icon */}
@@ -64,29 +64,29 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Main Title */}
-              <div className="space-y-5 mb-8">
-                <h1 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight">
+              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                <h1 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
                 Automatiseer je store, focus op <i>groei</i>.
 
                 </h1>
 
                 {/* Features List */}
-                <div className="space-y-3 max-w-2xl">
+                <div className="space-y-2 md:space-y-3 max-w-2xl">
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                       E-mail automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                       Factuur automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                       BTW automatisering
                     </span>
                   </div>
@@ -112,43 +112,43 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* Store Automatisering Section */}
-      <section id="store-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="store-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Store Automatisering
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Automatisering die écht werkt. Facturen uploaden, BTW berekenen, e-mails versturen - alles gebeurt automatisch op de achtergrond. Zo heb je meer tijd voor echt ondernemen.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     BTW FACTUREN
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                  Automatisch BTW facturen uploaden naar bol.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -181,19 +181,19 @@ export default function AutomatiseringPage() {
 
           {/* 4-Step BTW Process Grid */}
           <div className="relative">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {/* Step 1 */}
-              <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-4">
+              <div className="bg-white p-4 md:p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-3 md:space-y-4">
                 <div className="flex items-center gap-3">
-                  <Package className="w-5 h-5 text-gray-600" />
+                  <Package className="w-4 md:w-5 h-4 md:h-5 text-gray-600" />
                   <span className="text-[10px] leading-[12px] font-normal text-gray-600 tracking-wide uppercase">STAP 01</span>
                 </div>
                 
-                <div className="space-y-3">
-                  <h3 className="text-[16px] leading-[20px] font-normal text-[#111111]">
+                <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-sm md:text-[16px] leading-[18px] md:leading-[20px] font-normal text-[#111111]">
                     Bestelling komt binnen
                   </h3>
-                  <p className="text-[14px] leading-[18px] font-normal text-[#111111]/70">
+                  <p className="text-xs md:text-[14px] leading-[16px] md:leading-[18px] font-normal text-[#111111]/70">
                     Een klant bestelt jouw product via bol.
                   </p>
                 </div>
@@ -307,9 +307,9 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* Quote Section */}
-      <section className="bg-white py-20 md:py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 md:gap-8">
             {/* Photo */}
             <div className="flex-shrink-0">
               <Image
@@ -317,14 +317,14 @@ export default function AutomatiseringPage() {
                 alt="Lucas van Gasteren"
                 width={128}
                 height={128}
-                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
+                className="w-24 h-24 md:w-28 md:h-28 md:w-32 md:h-32 rounded-xl object-cover"
               />
             </div>
 
             {/* Quote content */}
             <div className="flex-1 text-center md:text-left">
               <blockquote
-                className="text-[36px] leading-[40px] text-[#111111] mb-3"
+                className="text-[24px] md:text-[36px] leading-[28px] md:leading-[40px] text-[#111111] mb-2 md:mb-3"
                 style={{
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -334,7 +334,7 @@ export default function AutomatiseringPage() {
               </blockquote>
 
               <div
-                className="text-[#111111]/60 text-[16px] leading-[18px] font-normal"
+                className="text-[#111111]/60 text-sm md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
               >
                 Lucas van Gasteren, bol partner
               </div>
@@ -344,20 +344,20 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* E-mail Campagnes Section */}
-      <section id="email-campagnes" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="email-campagnes" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               E-mail campagnes
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Verhoog reviews en voorkom klantvragen met e-mail campagnes. Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Image */}
             <div className="relative order-last lg:order-first">
               <Image
@@ -371,28 +371,28 @@ export default function AutomatiseringPage() {
             </div>
 
             {/* Right Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     E-MAIL CAMPAGNES
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Verhoog reviews en voorkom klantvragen.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -545,59 +545,59 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* BTW Automatisering Section */}
-      <section id="btw-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="btw-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               BTW automatisering
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Bolbaas regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block 1 */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     BTW BEREKENING
                   </span>
                 </div>
-                <h3 className="text-[24px] leading-[28px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight max-w-lg">
                   BTW aangifte automatisch berekend.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Bolbaas berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.
                 </p>
               </div>
 
               {/* Feature Block 2 */}
-              <div className="space-y-4 mt-8">
+              <div className="space-y-3 md:space-y-4 mt-6 md:mt-8">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     BTW BOEKHOUDING
                   </span>
                 </div>
-                <h3 className="text-[24px] leading-[28px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight max-w-lg">
                   BTW facturen automatisch opgeslagen.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -613,7 +613,7 @@ export default function AutomatiseringPage() {
                 <Button 
                   variant="outline"
                   asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
+                  className="text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-4 md:px-6 py-2.5 md:py-3 h-auto bg-white rounded-xl"
                 >
                   <Link href="/contact">
                     Gesprek inplannen

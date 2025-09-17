@@ -17,6 +17,8 @@ const pathname = usePathname();
   const [activeWhyCategory, setActiveWhyCategory] = useState<string>('vergelijkingen');
   const [isHoveringDropdown, setIsHoveringDropdown] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
 
       const handleScroll = () => {
       const scrolled = window.scrollY > 50;
@@ -609,7 +611,7 @@ const pathname = usePathname();
 
           {/* Mobile Action Button - Only "Probeer gratis" */}
           <div className={`md:hidden flex items-center ${
-            isScrolled ? 'ml-auto' : 'ml-auto'
+            isScrolled ? 'ml-auto mr-3' : 'ml-auto'
           }`}>
             <Button className={`rounded-xl px-3 py-0 text-xs font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
               isDarkMode
@@ -622,57 +624,251 @@ const pathname = usePathname();
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden ${isDarkMode ? 'text-white' : 'text-[#111111]'}`}
+            className={`md:hidden p-1 ${isDarkMode ? 'text-white' : 'text-[#111111]'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <div className="w-6 h-6 flex flex-col justify-center items-center relative">
+              <span className={`block h-[1.5px] w-5 bg-current rounded-xl transform transition-all duration-300 ease-in-out absolute ${
+                isMenuOpen ? 'rotate-45' : 'top-[7px]'
+              }`} />
+              <span className={`block h-[1.5px] w-5 bg-current rounded-xl transform transition-all duration-300 ease-in-out absolute ${
+                isMenuOpen ? '-rotate-45' : 'bottom-[7px]'
+              }`} />
+            </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`md:hidden px-2 pt-2 pb-3 ${
+          <div className={`md:hidden ${
             isDarkMode 
-              ? 'border-t border-white/10' 
-              : 'border-t border-black/5'
+              ? 'bg-[#111111]' 
+              : 'bg-white'
           }`}>
-            <div className="flex flex-col gap-4">
-              <Link href="/features" className={
+            <div className="flex flex-col">
+              {/* Functies Section */}
+              <div className={`border-b ${
+                isDarkMode ? 'border-white/10' : 'border-black/5'
+              }`}>
+                <button
+                  onClick={() => setExpandedMobileSection(expandedMobileSection === 'functies' ? null : 'functies')}
+                  className={`w-full flex items-center justify-between px-4 py-4 text-left ${
+                    isDarkMode 
+                      ? 'text-white hover:text-white/80' 
+                      : 'text-[#111111] hover:text-[#111111]/80'
+                  }`}
+                >
+                  <span className="font-medium">Functies</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    expandedMobileSection === 'functies' ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                {expandedMobileSection === 'functies' && (
+                  <div className={`px-4 pb-4 ${
+                    isDarkMode ? 'bg-[#0a0a0a]' : 'bg-gray-50'
+                  }`}>
+                    {functionCategories.map((category) => (
+                      <div key={category.id} className="mb-3 last:mb-0">
+                        <div className="flex items-center justify-between">
+                          <Link
+                            href={category.href}
+                            className={`flex-1 block py-2 font-medium ${
+                              isDarkMode 
+                                ? 'text-white hover:text-red-400' 
+                                : 'text-[#111111] hover:text-red-500'
+                            }`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {category.label}
+                          </Link>
+                          <button
+                            onClick={() => setExpandedMobileSubmenu(
+                              expandedMobileSubmenu === category.id ? null : category.id
+                            )}
+                            className={`p-2 ${
+                              isDarkMode 
+                                ? 'text-white/60 hover:text-white' 
+                                : 'text-[#111111]/60 hover:text-[#111111]'
+                            }`}
+                          >
+                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                              expandedMobileSubmenu === category.id ? 'rotate-180' : ''
+                            }`} />
+                          </button>
+                        </div>
+                        {expandedMobileSubmenu === category.id && (
+                          <div className="ml-4 mt-2 space-y-2">
+                            {functionSubsections[category.id]?.map((item) => (
+                              <Link
+                                key={item.title}
+                                href={item.href}
+                                className={`block text-sm py-1 ${
+                                  isDarkMode 
+                                    ? 'text-white/70 hover:text-white' 
+                                    : 'text-[#111111]/70 hover:text-[#111111]'
+                                }`}
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {item.title}
+                                {item.badge && (
+                                  <span className="ml-2 inline-flex items-center rounded-xl bg-red-100 px-1.5 py-0.5 text-[10px] font-medium text-red-800">
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Waarom ons Section */}
+              <div className={`border-b ${
+                isDarkMode ? 'border-white/10' : 'border-black/5'
+              }`}>
+                <button
+                  onClick={() => setExpandedMobileSection(expandedMobileSection === 'waarom-ons' ? null : 'waarom-ons')}
+                  className={`w-full flex items-center justify-between px-4 py-4 text-left ${
+                    isDarkMode 
+                      ? 'text-white hover:text-white/80' 
+                      : 'text-[#111111] hover:text-[#111111]/80'
+                  }`}
+                >
+                  <span className="font-medium">Waarom ons</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    expandedMobileSection === 'waarom-ons' ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                {expandedMobileSection === 'waarom-ons' && (
+                  <div className={`px-4 pb-4 ${
+                    isDarkMode ? 'bg-[#0a0a0a]' : 'bg-gray-50'
+                  }`}>
+                    {whyCategories.map((category) => (
+                      <div key={category.id} className="mb-3 last:mb-0">
+                        {category.href ? (
+                          <Link
+                            href={category.href}
+                            className={`block py-2 font-medium ${
+                              isDarkMode 
+                                ? 'text-white hover:text-red-400' 
+                                : 'text-[#111111] hover:text-red-500'
+                            }`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {category.label}
+                          </Link>
+                        ) : (
+                          <>
+                            <div className="flex items-center justify-between">
+                              <div className={`flex-1 py-2 font-medium ${
+                                isDarkMode ? 'text-white' : 'text-[#111111]'
+                              }`}>
+                                {category.label}
+                              </div>
+                              {category.id === 'vergelijkingen' && (
+                                <button
+                                  onClick={() => setExpandedMobileSubmenu(
+                                    expandedMobileSubmenu === category.id ? null : category.id
+                                  )}
+                                  className={`p-2 ${
+                                    isDarkMode 
+                                      ? 'text-white/60 hover:text-white' 
+                                      : 'text-[#111111]/60 hover:text-[#111111]'
+                                  }`}
+                                >
+                                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                                    expandedMobileSubmenu === category.id ? 'rotate-180' : ''
+                                  }`} />
+                                </button>
+                              )}
+                            </div>
+                            {category.id === 'vergelijkingen' && expandedMobileSubmenu === category.id && (
+                              <div className="ml-4 mt-2 space-y-2">
+                                {whySubsections[category.id]?.map((item) => {
+                                  const isBolmate = item.title === 'Bolbaas vs. Bolmate';
+                                  const isDisabled = !isBolmate;
+                                  
+                                  return isDisabled ? (
+                                    <div
+                                      key={item.title}
+                                      className={`block text-sm py-1 ${
                 isDarkMode 
-                  ? "text-white/70 hover:text-white" 
-                  : "text-[#111111]/70 hover:text-[#111111]"
-              }>Functies</Link>
-              <Link href="/blog" className={
+                                          ? 'text-white/30' 
+                                          : 'text-[#111111]/30'
+                                      }`}
+                                    >
+                                      {item.title}
+                                    </div>
+                                  ) : (
+                                    <Link
+                                      key={item.title}
+                                      href={item.href}
+                                      className={`block text-sm py-1 ${
                 isDarkMode 
-                  ? "text-white/70 hover:text-white" 
-                  : "text-[#111111]/70 hover:text-[#111111]"
-              }>Educatie</Link>
-              <Link href="/prijzen" className={
+                                          ? 'text-white/70 hover:text-white' 
+                                          : 'text-[#111111]/70 hover:text-[#111111]'
+                                      }`}
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {item.title}
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Direct Links */}
+              <Link 
+                href="/prijzen" 
+                className={`block px-4 py-4 font-medium border-b ${
                 isDarkMode 
-                  ? "text-white/70 hover:text-white" 
-                  : "text-[#111111]/70 hover:text-[#111111]"
-              }>Prijzen</Link>
-              <Link href="/contact" className={
+                    ? 'text-white hover:text-white/80 border-white/10' 
+                    : 'text-[#111111] hover:text-[#111111]/80 border-black/5'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Prijzen
+              </Link>
+              <Link 
+                href="/contact" 
+                className={`block px-4 py-4 font-medium border-b ${
                 isDarkMode 
-                  ? "text-white/70 hover:text-white" 
-                  : "text-[#111111]/70 hover:text-[#111111]"
-              }>Contact</Link>
-              <div className="flex flex-col gap-2 mt-4">
-                <Button variant="outline" className={`rounded-lg ${
+                    ? 'text-white hover:text-white/80 border-white/10' 
+                    : 'text-[#111111] hover:text-[#111111]/80 border-black/5'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col gap-3 p-4">
+                <Button 
+                  variant="outline" 
+                  className={`rounded-xl ${
                   isDarkMode
                     ? 'border border-white/30 text-white bg-transparent hover:bg-white/5'
                     : 'border border-[#111111]/30 text-[#111111] bg-transparent hover:bg-[#111111]/5'
-                }`}>
+                  }`}
+                >
                   Naar app
                 </Button>
-                <Button className={`rounded-lg ${
+                <Button className={`rounded-xl ${
                   isDarkMode
                     ? 'bg-white text-[#111111] hover:bg-white/90'
                     : 'bg-[#111111] text-white hover:bg-black/80'
                 }`}>
-                  Registreren
+                  Probeer gratis
                 </Button>
               </div>
             </div>

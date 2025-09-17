@@ -46,8 +46,8 @@ export default function ToolsPage() {
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
             {/* Left Content */}
             <div className="text-left">
               {/* Top Text with Kite Icon */}
@@ -59,16 +59,15 @@ export default function ToolsPage() {
               </div>
 
               {/* Main Title */}
-              <div className="space-y-5 mb-8">
-                <h1 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight">
+              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                <h1 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
                 Research tools op een <i>nieuw</i> niveau.
 
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-                  Meet Duo, your personal AI sales assistant that helps
-                  you find, connect and win more customers.
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+                  AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.
                 </p>
               </div>
 
@@ -96,15 +95,15 @@ export default function ToolsPage() {
       </section>
 
       {/* Database Section */}
-      <section id="bolbaas-database" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="bolbaas-database" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
+          <div className="text-left mb-8 md:mb-12">
             
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Bolbaas Database
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
             </p>
           </div>
@@ -113,21 +112,21 @@ export default function ToolsPage() {
 
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     12 MILJOEN GEANALYSEERDE KEYWORDS
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                  Analyseer de markt met database.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campagne strategieën.
                 </p>
               </div>
@@ -136,10 +135,10 @@ export default function ToolsPage() {
               
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -155,7 +154,7 @@ export default function ToolsPage() {
                 {/* <Button 
                   variant="outline"
                   asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
+                  className="text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-4 md:px-6 py-2.5 md:py-3 h-auto bg-white rounded-xl"
                 >
                   <Link href="/prijzen">
                     Prijzen
@@ -175,14 +174,14 @@ export default function ToolsPage() {
 
 
           {/* Database Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12 md:mt-16">
             {/* Card 1 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[510px]">
-              <div className="relative z-10 mb-40">
-                <h3 className="text-[24px] leading-[26px] font-normal text-[#111111] mb-3">
+            <div className="bg-[#FBFAF9] p-6 md:p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[400px] md:min-h-[510px]">
+              <div className="relative z-10 mb-32 md:mb-40">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[26px] font-normal text-[#111111] mb-2 md:mb-3">
                   Live markt data
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/60">
                   Real-time updates over markttrends, prijzen en concurrentie zodat je altijd de juiste beslissingen neemt.
                 </p>
               </div>
@@ -290,34 +289,34 @@ export default function ToolsPage() {
       </section>
 
       {/* Product Tracking Section */}
-      <section id="product-tracking" className="relative overflow-hidden bg-[#111111] py-24 lg:py-32" data-dark-section="true">
+      <section id="product-tracking" className="relative overflow-hidden bg-[#111111] py-16 md:py-24 lg:py-32" data-dark-section="true">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-white tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-white tracking-tight mb-4 md:mb-5">
               Product & keyword tracking
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-2xl">
               Volg je producten en die van concurrenten nauwkeurig. Zie precies hoe rankings veranderen en waarom, zodat je altijd voorop loopt.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-white tracking-wide uppercase">
                     PRODUCT RANKINGS
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
                   Track producten van jezelf en concurrenten.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
                   Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.
                 </p>
               </div>
@@ -567,37 +566,37 @@ export default function ToolsPage() {
       </section>
 
       {/* Ranking AI Section */}
-      <section id="ranking-ai" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="ranking-ai" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Ranking AI
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Onze AI analyseert de best presterende listings, klantgedrag en zoektrends voor jouw keywords en creëert automatisch de perfecte listing. Gebaseerd op 12 miljoen geanalyseerde keywords.
             </p>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl mt-4">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl mt-3 md:mt-4">
               De perfecte listing zorgt voor meer zichtbaarheid en meer omzet.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
                     RANKING AI
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Automatisch de perfecte listing.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
                   AI analyseert de best presterende listings en creëert automatisch de perfecte listing voor jouw product.
                 </p>
               </div>
@@ -756,34 +755,34 @@ export default function ToolsPage() {
 
 
       {/* CPC Tracker Section */}
-      <section id="cpc-tracker" className="relative overflow-hidden bg-[#111111] py-24 lg:py-32" data-dark-section="true">
+      <section id="cpc-tracker" className="relative overflow-hidden bg-[#111111] py-16 md:py-24 lg:py-32" data-dark-section="true">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-12">
-            <h2 className="text-[45px] leading-[45px] font-normal text-white tracking-tight mb-5">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-white tracking-tight mb-4 md:mb-5">
               CPC Tracker
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-2xl">
               Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod. Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen.
             </p>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
             {/* Left Content */}
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {/* Feature Block */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-white tracking-wide uppercase">
                     CPC TRACKER
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
                   Win keywords met lagere biedingen.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
                   Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst.
                 </p>
               </div>
@@ -942,31 +941,31 @@ export default function ToolsPage() {
       </section>
 
       {/* Automation Features Section */}
-      <section id="andere-features" className="relative overflow-hidden bg-[#F6F5F3] py-24 lg:py-32">
+      <section id="andere-features" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-16">
-            <h2 className="text-[45px] leading-[45px] font-normal text-[#111111] tracking-tight mb-5">
+          <div className="text-left mb-12 md:mb-16">
+            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
               Andere features
             </h2>
-            <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
               Automatiseer je Bol strategie met slimme tools die je tijd besparen en je winst verhogen.
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Feature 1 - A/B Testing */}
-            <div id="ab-testing" className="space-y-6">
-              <div className="space-y-4">
+            <div id="ab-testing" className="space-y-4 md:space-y-6">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">01</span>
                 </div>
-                <h3 className="text-[24px] leading-[28px] font-normal text-[#111111]">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111]">
                   A/B testen
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                   Test nieuwe listings, Bolbaas houdt automatisch de prestaties bij. Zo weet je altijd wat de beste listing is.
                 </p>
               </div>
@@ -984,16 +983,16 @@ export default function ToolsPage() {
             </div>
 
             {/* Feature 2 - Winst & ACoS Calculator */}
-            <div id="winst-calculator" className="space-y-6">
-              <div className="space-y-4">
+            <div id="winst-calculator" className="space-y-4 md:space-y-6">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">02</span>
                 </div>
-                <h3 className="text-[24px] leading-[28px] font-normal text-[#111111]">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111]">
                   Winst & ACoS calculator
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                   Weet precies hoeveel winst een product oplevert en ACoS per keyword. Verhoog je winst.
                 </p>
               </div>
@@ -1011,16 +1010,16 @@ export default function ToolsPage() {
             </div>
 
             {/* Feature 3 - Project Management */}
-            <div id="project-management" className="space-y-6">
-              <div className="space-y-4">
+            <div id="project-management" className="space-y-4 md:space-y-6">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">03</span>
                 </div>
-                <h3 className="text-[24px] leading-[28px] font-normal text-[#111111]">
+                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111]">
                   Project management
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/70">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
                   Breng getrackte producten en keywords onder in verschillende projecten. Maak een project aan voor een product research of voor een klant van jouw bol agency.
                 </p>
               </div>

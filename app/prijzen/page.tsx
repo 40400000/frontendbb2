@@ -396,19 +396,19 @@ export default function PrijzenPage() {
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Start</h3>
                   <button className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors">
-                    Select plan
+                    Gratis proberen
                   </button>
                 </div>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Plus</h3>
                   <button className="w-auto px-8 bg-black text-white font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:bg-gray-800 transition-colors">
-                    Select plan
+                    Gratis proberen
                   </button>
                 </div>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Pro</h3>
                   <button className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors">
-                    Select plan
+                    Contact opnemen
                   </button>
                 </div>
               </div>
@@ -423,59 +423,104 @@ export default function PrijzenPage() {
                 {/* Feature Rows */}
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
                       Aantal stores
                       <div className="text-[12px] leading-[14px] text-gray-500 mt-1">Maximum aantal gekoppelde bol stores per account.</div>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">2 stores</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">2 stores</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt stores</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
                       Aantal seats
                       <div className="text-[12px] leading-[14px] text-gray-500 mt-1">Het aantal gebruikers dat toegang heeft tot het account.</div>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">2 seats</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">2 seats</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
                       Aantal orders
                       <div className="text-[12px] leading-[14px] text-gray-500 mt-1">Het aantal orders dat verwerkt kan worden.</div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                   </div>
                 </div>
@@ -491,114 +536,219 @@ export default function PrijzenPage() {
                 {/* Feature Rows */}
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Product tracking</div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Product tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">10</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">100</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">10 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">100 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Precision product tracking</div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Precision product tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">30</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">400</span>
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                    </div>
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">30 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">400 producten</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Research database</div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Research database</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Ranking AI</div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Ranking AI</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Keyword tracking</div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Keyword tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[12px] leading-[14px] text-gray-500">-</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] leading-[14px] text-gray-500">-</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Winst & ACoS calculator</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Winst & ACoS calculator</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">A/B testen van listings</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">A/B testen van listings</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
                 </div>
@@ -613,82 +763,157 @@ export default function PrijzenPage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">E-mail</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">E-mail</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Facturen</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Facturen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Aantal e-mails en facturen</div>
-                    <div className="text-center md:text-center text-left">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Aantal e-mails en facturen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Plus</span>
                     </div>
-                    <div className="text-center md:text-center text-left">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
-                      <span className="md:hidden text-sm text-gray-600 ml-2">Pro</span>
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">BTW</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">BTW</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Baaspilot</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Baaspilot</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
                 </div>
@@ -703,82 +928,157 @@ export default function PrijzenPage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Custom dashboards and views</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom dashboards and views</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Bestellingen</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Producten</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
-                    </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Sales en voorraad schattingen</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Bestellingen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Levering tracker</div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Start</span>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Producten</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Plus</span>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
-                    <div className="text-center md:text-center text-left">
-                      <FaCircleCheck className="w-4 h-4 text-black mx-auto md:mx-auto md:inline inline mr-2" />
-                      <span className="md:hidden text-sm text-gray-600">Pro</span>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-[#F6F5F3]">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Sales en voorraad schattingen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Levering tracker</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Start</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Plus</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Pro</div>
+                        <FaCircleCheck className="w-3 h-3 text-black mx-auto" />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <FaCircleCheck className="w-4 h-4 text-black mx-auto" />
                     </div>
                   </div>
                 </div>

@@ -368,56 +368,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tools Hero Section */}
-      <section className="relative overflow-hidden bg-[#FDFDFC]">
-        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
-            {/* Left Content */}
-            <div className="text-left">
-              {/* Top Text with Kite Icon */}
-              <div className="flex items-center gap-2 mb-2">
-                <KiteIcon variant="blue" size={11} />
-                <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                  AI & Tools
-                </span>
-              </div>
 
-              {/* Main Title */}
-              <div className="space-y-5 mb-8">
-                <h1 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
-                Research tools op een <i>nieuw</i> niveau.
-
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
-                </p>
-              </div>
-
-              {/* Email Signup Form */}
-              <EmailSignupForm 
-                placeholder="Vul je bedrijfsemail in"
-                buttonText="Doe gratis research"
-                showTestimonial={false}
-                align="left"
-              />
-            </div>
-
-            {/* Right Side - Image */}
-            <div className="relative">
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen6.png"
-                alt="Database screenshot"
-                width={1200}
-                height={1200}
-                quality={90}
-                className="rounded-xl w-full h-auto scale-105 md:scale-110 drop-shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Apple-like Feature Grid (minimal, monochrome) */}
       <section className="bg-white pb-6 md:pb-8 lg:pb-14 text-[#111111]">
@@ -639,27 +590,67 @@ export default function HomePage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
                       Aantal orders
                       <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Het aantal orders dat verwerkt kan worden.</div>
                     </div>
-                    <div className="text-center">
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">200</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">200</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
                       Aantal stores
                       <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Maximum aantal gekoppelde bol stores per account.</div>
                     </div>
-                    <div className="text-center">
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">1</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">1</span>
                     </div>
                   </div>
@@ -675,71 +666,211 @@ export default function HomePage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Product tracking</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Product tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Research database</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Research database</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Ranking AI</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Ranking AI</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Precision product tracking</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Precision product tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Keyword tracking</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Keyword tracking</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Winst & ACoS calculator</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Winst & ACoS calculator</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <GeenACoSBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <GeenACoSBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">A/B testen van listings</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">A/B testen van listings</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
@@ -755,51 +886,151 @@ export default function HomePage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">E-mail</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">E-mail</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Facturen</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Facturen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Aantal e-mails en facturen</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Aantal e-mails en facturen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Beperkt</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">BTW</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">BTW</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Baaspilot</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Baaspilot</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
@@ -815,51 +1046,151 @@ export default function HomePage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Custom dashboards and views</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom dashboards and views</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Bestellingen</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Bestellingen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Producten</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Producten</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <BeperktereInzichtenBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <BeperktereInzichtenBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Sales en voorraad schattingen</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Sales en voorraad schattingen</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-2">Levering tracker</div>
-                    <div className="text-center">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Levering tracker</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
+                          <span>Bolmate</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
                       <YesBadge />
                     </div>
-                    <div className="text-center">
+                    <div className="hidden md:block text-center">
                       <NoBadge />
                     </div>
                   </div>
