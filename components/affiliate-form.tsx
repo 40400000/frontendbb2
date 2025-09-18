@@ -138,7 +138,7 @@ export function AffiliateForm() {
               name="firstName"
               value={formData.firstName}
               onChange={(e) => handleInputChange('firstName', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
               placeholder="Je voornaam"
               required
             />
@@ -155,7 +155,7 @@ export function AffiliateForm() {
               name="lastName"
               value={formData.lastName}
               onChange={(e) => handleInputChange('lastName', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
               placeholder="Je achternaam"
               required
             />
@@ -174,7 +174,7 @@ export function AffiliateForm() {
             name="email"
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
             placeholder="je@email.com"
             required
           />
@@ -191,7 +191,7 @@ export function AffiliateForm() {
             name="type"
             value={formData.type}
             onChange={(e) => handleInputChange('type', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
             required
           >
             <option value="">Selecteer je rol</option>
@@ -213,7 +213,7 @@ export function AffiliateForm() {
             name="experience"
             value={formData.experience}
             onChange={(e) => handleInputChange('experience', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
             required
           >
             <option value="">Selecteer je ervaring</option>
@@ -235,7 +235,7 @@ export function AffiliateForm() {
             name="audience"
             value={formData.audience}
             onChange={(e) => handleInputChange('audience', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-[#111111]"
             required
           >
             <option value="">Selecteer grootte</option>
@@ -258,7 +258,7 @@ export function AffiliateForm() {
             value={formData.message}
             onChange={(e) => handleInputChange('message', e.target.value)}
             rows={4}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none text-[#111111]"
             placeholder="Vertel ons over je ervaring, je publiek en waarom je affiliate partner wilt worden..."
           />
           {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
