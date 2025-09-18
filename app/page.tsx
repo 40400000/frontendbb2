@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative z-20 w-full min-h-[100vh] md:min-h-[180vh] flex items-start justify-center pt-16 md:pt-28 pb-20 md:pb-32 bg-white text-[#111111] overflow-hidden px-4 md:px-6">
+      <section className="relative z-20 w-full md:min-h-[180vh] flex items-start justify-center pt-16 md:pt-28 pb-10 md:pb-32 bg-white text-[#111111] overflow-hidden px-4 md:px-6">
         {/* Animated Background with White Circle Overlay */}
         <div className="absolute inset-0 w-full h-full">
           {/* Full Animation Background */}
@@ -398,7 +398,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side - Animation */}
-            <div className="relative">
+            <div className="relative flex items-start justify-center">
               <Automatiseringanimation />
             </div>
           </div>
@@ -453,14 +453,14 @@ export default function HomePage() {
           {/* Main Content Grid */}
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             {/* Left Video */}
-            <div className="relative order-last lg:order-first">
+            <div className="relative order-last lg:order-first -mx-2 md:mx-0">
               <video
                 src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
+                className="rounded-xl w-full h-auto drop-shadow-lg"
               >
                 Your browser does not support the video tag.
               </video>
@@ -545,14 +545,14 @@ export default function HomePage() {
             </div>
 
             {/* Right Video */}
-            <div className="relative">
+            <div className="relative -mx-2 md:mx-0">
               <video
                 src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
+                className="rounded-xl w-full h-auto drop-shadow-lg"
               >
                 Your browser does not support the video tag.
               </video>

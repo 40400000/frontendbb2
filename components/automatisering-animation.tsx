@@ -40,7 +40,7 @@ export function Automatiseringanimation() {
   }, [animationKey]);
 
   return (
-    <div className="w-full aspect-square max-h-[500px] from-gray-50 to-gray-100 border-gray-200 rounded-xl relative overflow-hidden p-4">
+    <div className="w-full h-[600px] md:h-[500px] md:aspect-square md:max-h-[500px] from-gray-50 to-gray-100 border-gray-200 rounded-xl relative overflow-visible p-4">
       {/* Chat message layout */}
       <motion.div
         className="flex items-start space-x-3 max-w-sm mx-auto"

@@ -133,11 +133,6 @@ export default function AffiliatePartnerPage() {
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
                 Help je klanten met de beste Bol tools. <strong>Krijg tot €200 per referral + 30% maandelijkse commissie.</strong>
               </p>
-              <ul className="space-y-2 text-sm text-[#111111]/80">
-                <li>• Exclusieve coach materialen</li>
-                <li>• Directe klant support</li>
-                <li>• Maandelijkse payouts</li>
-              </ul>
             </div>
 
             {/* Bol Communities */}
@@ -149,11 +144,6 @@ export default function AffiliatePartnerPage() {
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
                 Deel Bolbaas met je community. <strong>Verdien tot €200 per member + 30% maandelijkse commissie.</strong>
               </p>
-              <ul className="space-y-2 text-sm text-[#111111]/80">
-                <li>• Community exclusives</li>
-                <li>• Bulk referral tracking</li>
-                <li>• Custom landing pages</li>
-              </ul>
             </div>
 
             {/* Bol Influencers */}
@@ -165,11 +155,6 @@ export default function AffiliatePartnerPage() {
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
                 Monetiseer je Bol content. <strong>Verdien tot €200 per follower + 30% maandelijkse commissie.</strong>
               </p>
-              <ul className="space-y-2 text-sm text-[#111111]/80">
-                <li>• Content creation tools</li>
-                <li>• Performance analytics</li>
-                <li>• Influencer dashboard</li>
-              </ul>
             </div>
           </div>
         </div>

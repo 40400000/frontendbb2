@@ -58,7 +58,7 @@ export function ScrollVideoEffect() {
   return (
     <div 
       ref={videoContainerRef}
-      className="container max-w-4xl mx-auto mt-24 md:mt-32 mb-12 md:mb-16"
+      className="container max-w-4xl mx-auto mt-12 md:mt-32 mb-2 md:mb-16"
     >
       <div 
         className="relative rounded-xl overflow-hidden shadow-2xl transition-transform duration-150 ease-out"
