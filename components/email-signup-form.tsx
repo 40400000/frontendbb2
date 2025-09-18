@@ -74,7 +74,7 @@ export function EmailSignupForm({
             </div>
           </div>
           <span className="text-[#111111]/30 hidden md:inline">|</span>
-          <span className="text-[#111111]">300+ tevreden partners</span>
+          <span className="text-[#111111]">Tevreden partners</span>
         </div>
       )}
     </div>

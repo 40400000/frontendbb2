@@ -61,7 +61,7 @@ export function ScrollVideoEffect() {
       className="container max-w-4xl mx-auto mt-24 md:mt-32 mb-12 md:mb-16"
     >
       <div 
-        className="relative rounded-2xl overflow-hidden shadow-2xl transition-transform duration-150 ease-out"
+        className="relative rounded-xl overflow-hidden shadow-2xl transition-transform duration-150 ease-out"
         style={{ 
           transform: isMobile 
             ? 'scale(1) translateX(0px)' 

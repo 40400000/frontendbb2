@@ -3,11 +3,13 @@ import { KiteIcon } from "@/components/ui/kite-icon";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaGoogle } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
+import { FaCircleCheck } from "react-icons/fa6";
 import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import Image from "next/image";
 import { EmailSignupForm } from "@/components/email-signup-form";
 import { ScrollVideoEffect } from "@/components/scroll-video-effect";
 import { Animatedbadge } from "@/components/animatedbadge";
+import { Automatiseringanimation } from "@/components/automatisering-animation";
 
 export default function HomePage() {
 
@@ -336,6 +338,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Additional Hero Section */}
+      <section className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+            {/* Left Content */}
+            <div className="text-left">
+              {/* Top Text with Kite Icon */}
+              <div className="flex items-center gap-2 mb-2">
+                <KiteIcon variant="blue" size={11} />
+                <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                  Bolbaas
+                </span>
+              </div>
+
+              {/* Main Title */}
+              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
+                Automatiseer je store, focus op <i>groei</i>.
+                </h2>
+
+                {/* Features List */}
+                <div className="space-y-2 md:space-y-3 max-w-2xl">
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                      E-mail automatisering
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                      Factuur automatisering
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                      BTW automatisering
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis proberen</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Side - Animation */}
+            <div className="relative">
+              <Automatiseringanimation />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Dark Section */}
       <section className="bg-[#111111] text-white py-16 md:py-32" data-dark-section="true">
         <div className="max-w-100 mx-auto text-center">
@@ -375,6 +444,123 @@ export default function HomePage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* E-mail Campagnes Section */}
+      <section id="email-campagnes" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
+        <div className="container mx-auto px-4">
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+            {/* Left Video */}
+            <div className="relative order-last lg:order-first">
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Right Content */}
+            <div className="space-y-4 md:space-y-5">
+              {/* Feature Block */}
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <KiteIcon variant="blue" size={11} />
+                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                    E-MAIL CAMPAGNES
+                  </span>
+                </div>
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                  Verhoog reviews en voorkom klantvragen.
+                </h3>
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                  Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
+                </p>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BTW Facturen Automatisering Section */}
+      <section id="store-automatisering" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
+            {/* Left Content */}
+            <div className="space-y-4 md:space-y-5">
+              {/* Feature Block */}
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <KiteIcon variant="blue" size={11} />
+                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                    BTW FACTUREN
+                  </span>
+                </div>
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                 Automatisch BTW facturen uploaden naar bol.
+                </h3>
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                  Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Video */}
+            <div className="relative">
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          {/* 4-Step BTW Process Grid */}
+
         </div>
       </section>
     </>

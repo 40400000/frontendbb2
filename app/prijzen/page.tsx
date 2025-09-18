@@ -390,26 +390,39 @@ export default function PrijzenPage() {
           
           <div className="max-w-7xl mx-auto">
             <div className="rounded-2xl overflow-visible">
-              {/* Header Row - Sticky */}
-              <div className="sticky top-[60px] md:top-[72px] z-[45] grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 p-6 md:p-8 bg-[#F6F5F3] border-b border-gray-200">
+              {/* Header Row */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 p-6 md:p-8 bg-[#F6F5F3] border-b border-gray-200">
                 <div className="hidden md:block"></div>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Start</h3>
-                  <button className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors">
+                  <a 
+                    href="https://app.bolbaas.nl/registreren"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors inline-block"
+                  >
                     Gratis proberen
-                  </button>
+                  </a>
                 </div>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Plus</h3>
-                  <button className="w-auto px-8 bg-black text-white font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:bg-gray-800 transition-colors">
+                  <a 
+                    href="https://app.bolbaas.nl/registreren"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-auto px-8 bg-black text-white font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:bg-gray-800 transition-colors inline-block"
+                  >
                     Gratis proberen
-                  </button>
+                  </a>
                 </div>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Pro</h3>
-                  <button className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors">
+                  <a 
+                    href="/contact"
+                    className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors inline-block"
+                  >
                     Contact opnemen
-                  </button>
+                  </a>
                 </div>
               </div>
 

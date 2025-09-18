@@ -88,7 +88,7 @@ export default function ToolsPage() {
                 width={1200}
                 height={1200}
                 quality={90}
-                className="rounded-xl w-full h-auto scale-110 drop-shadow-lg"
+                className="rounded-xl w-full h-auto md:scale-110 drop-shadow-lg"
               />
             </div>
           </div>
@@ -130,13 +130,14 @@ export default function ToolsPage() {
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                    12 MILJOEN GEANALYSEERDE KEYWORDS
+                    <span className="hidden sm:inline">12 MILJOEN GEANALYSEERDE KEYWORDS</span>
+                    <span className="sm:hidden">12M+ KEYWORDS</span>
                   </span>
                 </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[24px] md:text-[45px] leading-[28px] md:leading-[45px] font-normal text-[#111111] tracking-tight md:max-w-lg">
                  Analyseer de markt met database.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 md:max-w-md">
                   Weet precies welke keywords belangrijk zijn, waar vraag en aanbod verschillen, en hoe biedingen effect hebben op campagne strategieën.
                 </p>
               </div>
@@ -145,10 +146,10 @@ export default function ToolsPage() {
               
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -174,10 +175,10 @@ export default function ToolsPage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative">
-            <div className="mb-16">
-            <AnimatedMovingBadges />
-          </div>
+            <div className="relative w-full overflow-hidden">
+              <div className="mb-16">
+                <AnimatedMovingBadges />
+              </div>
             </div>
           </div>
 
@@ -195,7 +196,7 @@ export default function ToolsPage() {
                   Real-time updates over markttrends, prijzen en concurrentie zodat je altijd de juiste beslissingen neemt.
                 </p>
               </div>
-              <div className="absolute -right-4 -bottom-4 w-[500px] h-[340px] md:w-[560px] md:h-[380px]">
+              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
                 <Image 
                   src="/db-1.png" 
@@ -218,7 +219,7 @@ export default function ToolsPage() {
                   Diepgaande inzichten in marktgedrag, concurrentie en verkoopkansen voor betere besluitvorming.
                 </p>
               </div>
-              <div className="absolute -right-4 -bottom-4 w-[500px] h-[340px] md:w-[560px] md:h-[380px]">
+              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
                 <Image 
                   src="/db-2.png" 
@@ -241,7 +242,7 @@ export default function ToolsPage() {
                   Monitor biedingspatronen, optimaliseer je advertentiekosten en verhoog je winstmarges automatisch.
                 </p>
               </div>
-              <div className="absolute -right-4 -bottom-4 w-[500px] h-[340px] md:w-[560px] md:h-[380px]">
+              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
                 <Image 
                   src="/db-3.png" 
@@ -264,7 +265,7 @@ export default function ToolsPage() {
                   Voorspel verkoopcijfers met AI en identificeer de meest winstgevende producten automatisch.
                 </p>
               </div>
-              <div className="absolute -right-4 -bottom-4 w-[500px] h-[340px] md:w-[560px] md:h-[380px]">
+              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
                 <div className="w-full h-full bg-white rounded-xl drop-shadow-lg p-4 flex flex-col">
                   {/* Product Section */}
@@ -323,19 +324,19 @@ export default function ToolsPage() {
                     PRODUCT RANKINGS
                   </span>
                 </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight md:max-w-lg">
                   Track producten van jezelf en concurrenten.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 md:max-w-md">
                   Weet precies wat concurrenten doen, en hoe rankings veranderen. Kopieer advertentie strategieën.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
-                  className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -348,15 +349,6 @@ export default function ToolsPage() {
                     </svg>
                   </a>
                 </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-                >
-                  <Link href="/prijzen">
-                    Prijzen
-                  </Link>
-                </Button>
               </div>
             </div>
 
@@ -368,7 +360,7 @@ export default function ToolsPage() {
                 width={1200}
                 height={960}
                 quality={90}
-                className="rounded-xl w-full h-auto scale-110 drop-shadow-lg"
+                className="rounded-xl w-full h-auto md:scale-110 drop-shadow-lg"
               />
             </div>
           </div>
@@ -518,7 +510,7 @@ export default function ToolsPage() {
                 width={1200}
                 height={960}
                 quality={90}
-                className="rounded-xl w-full h-auto scale-110 drop-shadow-lg"
+                className="rounded-xl w-full h-auto md:scale-110 drop-shadow-lg"
               />
             </div>
 
@@ -532,19 +524,19 @@ export default function ToolsPage() {
                     TRACK KEYWORDS
                   </span>
                 </div>
-                <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight md:max-w-lg">
                   Volg keywords uit onze database.
                 </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 md:max-w-md">
                   Bekijk dagelijkse updates en trends, over biedingen, volume, trends en nieuwe keywords.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
-                  className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -556,15 +548,6 @@ export default function ToolsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-                >
-                  <Link href="/prijzen">
-                    Prijzen
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -603,19 +586,19 @@ export default function ToolsPage() {
                     RANKING AI
                   </span>
                 </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight md:max-w-lg">
                   Automatisch de perfecte listing.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 md:max-w-md">
                   AI analyseert de best presterende listings en creëert automatisch de perfecte listing voor jouw product.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
-                  className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -627,15 +610,6 @@ export default function ToolsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/prijzen">
-                    Prijzen
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -789,19 +763,19 @@ export default function ToolsPage() {
                     CPC TRACKER
                   </span>
                 </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight max-w-lg">
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-white tracking-tight md:max-w-lg">
                   Win keywords met lagere biedingen.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 md:max-w-md">
                   Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
-                  className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
+                  className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
                     href="https://app.bolbaas.nl/registreren"
@@ -813,16 +787,6 @@ export default function ToolsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-                >
-                  <Link href="/contact">
-                    <span>Gesprek inplannen</span>
-                    <MdOutlineArrowOutward className="w-4 h-4 ml-2" />
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -1039,7 +1003,7 @@ export default function ToolsPage() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex justify-center gap-3 mt-16">
+          <div className="flex justify-center mt-16">
             <Button 
               asChild
               className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
@@ -1054,15 +1018,6 @@ export default function ToolsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </a>
-            </Button>
-            <Button 
-              variant="outline"
-              asChild
-              className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-            >
-              <Link href="/prijzen">
-                Prijzen
-              </Link>
             </Button>
           </div>
         </div>

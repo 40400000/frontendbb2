@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -11,9 +10,73 @@ import { FaCircleCheck } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
 import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import { EmailSignupForm } from "@/components/email-signup-form";
-import { useState } from "react";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 import AnimatedMovingBadges from "@/components/animated-moving-badges";
+import { ComparisonAccordionItem } from "@/components/comparison-accordion-item";
+
+export const metadata: Metadata = {
+  title: "Bolbaas vs Bolmate: Het Beste Alternatief voor Bol Partners | Bolbaas",
+  description: "Vergelijk Bolbaas met Bolmate. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  keywords: [
+    "Bolmate alternatief",
+    "Bolbaas vs Bolmate",
+    "bol partner software",
+    "bol automatisering",
+    "product research tool",
+    "keyword tracking",
+    "e-mail automatisering",
+    "factuur automatisering",
+    "bol store management"
+  ],
+  authors: [{ name: "Bolbaas" }],
+  creator: "Bolbaas",
+  publisher: "Bolbaas",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://bolbaas.nl"),
+  alternates: {
+    canonical: "/waarom-ons/bolbaas-vs-bolmate",
+  },
+  openGraph: {
+    title: "Bolbaas vs Bolmate: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Bolmate. Ontdek waarom 300+ partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
+    url: "/waarom-ons/bolbaas-vs-bolmate",
+    siteName: "Bolbaas",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
+        width: 1200,
+        height: 630,
+        alt: "Bolbaas vs Bolmate - Het beste alternatief voor bol partners",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bolbaas vs Bolmate: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Bolmate. 300+ partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
+    images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with actual verification code
+  },
+};
 
 // Badge Components
 function YesBadge() {
@@ -48,61 +111,6 @@ function BeperktereInzichtenBadge() {
   );
 }
 
-function ComparisonAccordionItem({ 
-  title, 
-  bolbaasContent, 
-  bolmateContent 
-}: { 
-  title: string; 
-  bolbaasContent: string; 
-  bolmateContent: string; 
-}) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b border-[#EAEAE8]">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full text-left py-4 md:py-6 cursor-pointer hover:opacity-80 transition-opacity duration-200"
-      >
-        <h3 className="text-base md:text-lg lg:text-xl font-normal text-[#111111] pr-4">
-          {title}
-        </h3>
-        <div className="text-2xl font-light text-[#111111] transition-transform duration-200">
-          {isOpen ? '−' : '+'}
-        </div>
-      </button>
-      
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-[600px] opacity-100 pb-3 md:pb-4' : 'max-h-0 opacity-0'
-      }`}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-          {/* Bolbaas Card */}
-          <div className="bg-white/50 rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm border border-gray-100">
-            <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-              <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={20} height={20} className="md:w-6 md:h-6 invert" />
-              <h4 className="text-sm md:text-base font-medium text-[#111111]">Bolbaas</h4>
-            </div>
-            <p className="text-[#111111]/70 text-xs md:text-sm leading-relaxed">
-              {bolbaasContent}
-            </p>
-          </div>
-
-          {/* Bolmate Card */}
-          <div className="bg-white/50 rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm border border-gray-100">
-            <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-              <Image src="/BOLMATELOGO.png" alt="Bolmate" width={20} height={20} className="md:w-6 md:h-6" />
-              <h4 className="text-sm md:text-base font-medium text-[#111111]">Bolmate</h4>
-            </div>
-            <p className="text-[#111111]/70 text-xs md:text-sm leading-relaxed">
-              {bolmateContent}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function HomePage() {
   return (
@@ -140,7 +148,7 @@ export default function HomePage() {
                 <IoStar className="h-4 w-4 text-[#111111]" />
               </div>
               <span className="text-[#111111]/30">|</span>
-              <span>300+ tevreden partners</span>
+              <span>Tevreden partners</span>
             </div>
           </div>
 
@@ -368,7 +376,117 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* E-mail Campagnes Section */}
+      <section id="email-campagnes" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
+        <div className="container mx-auto px-4">
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+            {/* Left Video */}
+            <div className="relative order-last lg:order-first">
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
+            {/* Right Content */}
+            <div className="space-y-4 md:space-y-5">
+              {/* Feature Block */}
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <KiteIcon variant="blue" size={11} />
+                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                    E-MAIL CAMPAGNES
+                  </span>
+                </div>
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                  Verhoog reviews en voorkom klantvragen.
+                </h3>
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                  Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
+                </p>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BTW Facturen Automatisering Section */}
+      <section id="store-automatisering" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
+        <div className="container mx-auto px-4">
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-4 md:space-y-5">
+              {/* Feature Block */}
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <KiteIcon variant="blue" size={11} />
+                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                    BTW FACTUREN
+                  </span>
+                </div>
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                 Automatisch BTW facturen uploaden naar bol.
+                </h3>
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                  Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Video */}
+            <div className="relative">
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Apple-like Feature Grid (minimal, monochrome) */}
       <section className="bg-white pb-6 md:pb-8 lg:pb-14 text-[#111111]">
@@ -802,7 +920,7 @@ export default function HomePage() {
                           <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
-                        <YesBadge />
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -811,7 +929,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <YesBadge />
+                      <NoBadge />
                     </div>
                   </div>
 

@@ -145,7 +145,7 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
@@ -166,16 +166,18 @@ export default function AutomatiseringPage() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right Video */}
             <div className="relative">
-              <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/facturenuploaden%20%281%29.png"
-                alt="Automatisch BTW facturen uploaden"
-                width={1200}
-                height={1200}
-                quality={90}
+              <video
+                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
-              />
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
@@ -391,7 +393,7 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
@@ -596,7 +598,7 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
@@ -611,15 +613,6 @@ export default function AutomatiseringPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-4 md:px-6 py-2.5 md:py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
                 </Button>
               </div>
             </div>

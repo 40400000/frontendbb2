@@ -74,7 +74,7 @@ export function BaaspilotAutomatisering() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
+            <div className="flex justify-start">
               <Button 
                 asChild
                 className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
@@ -89,15 +89,6 @@ export function BaaspilotAutomatisering() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 </a>
-              </Button>
-              <Button 
-                variant="outline"
-                asChild
-                className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-              >
-                <Link href="/contact">
-                  Gesprek inplannen
-                </Link>
               </Button>
             </div>
           </div>

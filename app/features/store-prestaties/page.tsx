@@ -129,7 +129,7 @@ export default function StorePrestatiesPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
@@ -144,15 +144,6 @@ export default function StorePrestatiesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -171,23 +162,25 @@ export default function StorePrestatiesPage() {
           </div>
 
           {/* 4-Column Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-b border-white/10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {/* Feature 1 */}
-            <div className="p-6 group hover:bg-white/5 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/10 flex flex-col h-full">
-              <div className="flex items-center mb-4">
-                <Search className="w-6 h-6 text-white/60 mr-3 group-hover:text-blue-400 transition-colors duration-300" />
-                <span className="text-xs font-mono text-white/60 tracking-wider">01</span>
-              </div>
-              <div className="flex-grow">
-                <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Zie winst, omzet en sales per product</h3>
-                <div className="flex items-start gap-3 mb-4">
-                  <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <p className="text-sm text-white/60 leading-relaxed">Geen duidelijk overzicht van welke producten daadwerkelijk geld opleveren?</p>
+            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group flex flex-col justify-between min-h-[280px]">
+              <div>
+                <div className="flex items-center mb-4">
+                  <Search className="w-6 h-6 text-white/60 mr-3 group-hover:text-blue-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-white/60 tracking-wider">01</span>
+                </div>
+                <div className="mb-6">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors min-h-[3.5rem] flex items-start">Zie winst, omzet en sales per product</h3>
+                  <div className="flex items-start gap-3">
+                    <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <p className="text-sm text-white/60 leading-relaxed">Geen duidelijk overzicht van welke producten daadwerkelijk geld opleveren?</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center text-sm text-white font-medium mb-6">
+              <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
                   alt="Bolbaas logo" 
@@ -197,37 +190,26 @@ export default function StorePrestatiesPage() {
                 />
                 <span>→ Krijg complete financiële inzichten per product</span>
               </div>
-              
-              {/* Technical capabilities */}
-              <div className="border-t border-white/10 pt-6 space-y-4">
-                <div className="p-4 bg-white/5 rounded-lg border-l-4 border-blue-400 hover:bg-white/10 transition-colors duration-300">
-                  <div className="text-sm font-medium text-white mb-1">Uitgebreide winst / margerekening</div>
-                  <div className="text-xs text-white/60">Bolbaas berekent realtime je winst, inclusief alle kosten en commissies</div>
-                </div>
-                
-                <div className="p-4 bg-white/5 rounded-lg border-l-4 border-purple-400 hover:bg-white/10 transition-colors duration-300">
-                  <div className="text-sm font-medium text-white mb-1">Sales voorspellingen</div>
-                  <div className="text-xs text-white/60">Inzicht in verkooptrends en voorspelling van toekomstige sales</div>
-                </div>
-              </div>
             </div>
 
             {/* Feature 2 */}
-            <div className="p-6 group hover:bg-white/5 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col h-full">
-              <div className="flex items-center mb-4">
-                <Target className="w-6 h-6 text-white/60 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
-                <span className="text-xs font-mono text-white/60 tracking-wider">02</span>
-              </div>
-              <div className="flex-grow">
-                <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Hoe klanten jouw product vinden op Bol</h3>
-                <div className="flex items-start gap-3 mb-4">
-                  <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <p className="text-sm text-white/60 leading-relaxed">Onduidelijk via welke zoektermen en categorieën klanten bij je terechtkomen?</p>
+            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group flex flex-col justify-between min-h-[280px]">
+              <div>
+                <div className="flex items-center mb-4">
+                  <Target className="w-6 h-6 text-white/60 mr-3 group-hover:text-blue-500 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-white/60 tracking-wider">02</span>
+                </div>
+                <div className="mb-6">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors min-h-[3.5rem] flex items-start">Hoe klanten jouw product vinden op Bol</h3>
+                  <div className="flex items-start gap-3">
+                    <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <p className="text-sm text-white/60 leading-relaxed">Onduidelijk via welke zoektermen en categorieën klanten bij je terechtkomen?</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center text-sm text-white font-medium mb-6">
+              <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
                   alt="Bolbaas logo" 
@@ -237,42 +219,26 @@ export default function StorePrestatiesPage() {
                 />
                 <span>→ Bekijk alle relevante zoektermen en categorieën</span>
               </div>
-              
-              {/* Technical capabilities */}
-              <div className="border-t border-white/10 pt-6 space-y-4">
-                <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border-l-4 border-blue-500 hover:bg-white/10 transition-colors duration-300">
-                  <div>
-                    <div className="text-sm font-medium text-white mb-1">Campagne optimalisatie</div>
-                    <div className="text-xs text-white/60">Ontdek op welke zoektermen je achterblijft op zichtbaarheid</div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                  </div>
-                </div>
-                
-                <div className="p-4 bg-white/5 rounded-lg border-l-4 border-cyan-400 hover:bg-white/10 transition-colors duration-300">
-                  <div className="text-sm font-medium text-white mb-1">Belangrijkste zoektermen</div>
-                  <div className="text-xs text-white/60">Analyseer waar je klanten op zoeken en hoe je hierop inspeelt</div>
-                </div>
-              </div>
             </div>
 
             {/* Feature 3 */}
-            <div className="p-6 group hover:bg-white/5 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-green-400/10 flex flex-col h-full">
-              <div className="flex items-center mb-4">
-                <LineChart className="w-6 h-6 text-white/60 mr-3 group-hover:text-green-400 transition-colors duration-300" />
-                <span className="text-xs font-mono text-white/60 tracking-wider">03</span>
-              </div>
-              <div className="flex-grow">
-                <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors">Wat klanten denken over jouw product</h3>
-                <div className="flex items-start gap-3 mb-4">
-                  <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <p className="text-sm text-white/60 leading-relaxed">Onduidelijk waar verbeteringen nodig zijn op basis van klantfeedback?</p>
+            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group flex flex-col justify-between min-h-[280px]">
+              <div>
+                <div className="flex items-center mb-4">
+                  <LineChart className="w-6 h-6 text-white/60 mr-3 group-hover:text-green-400 transition-colors duration-300" />
+                  <span className="text-xs font-mono text-white/60 tracking-wider">03</span>
+                </div>
+                <div className="mb-6">
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors min-h-[3.5rem] flex items-start">Wat klanten denken over jouw product</h3>
+                  <div className="flex items-start gap-3">
+                    <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <p className="text-sm text-white/60 leading-relaxed">Onduidelijk waar verbeteringen nodig zijn op basis van klantfeedback?</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center text-sm text-white font-medium mb-6">
+              <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
                   alt="Bolbaas logo" 
@@ -282,54 +248,29 @@ export default function StorePrestatiesPage() {
                 />
                 <span>→ Analyseer reviews en klantfeedback</span>
               </div>
-              
-              {/* Technical capabilities */}
-              <div className="border-t border-white/10 pt-6 flex flex-col gap-4">
-                <div className="flex flex-1 items-center space-x-3 rounded-lg border-l-4 border-blue-400 bg-white/5 p-4 transition-colors duration-300 hover:bg-white/10">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/1440x1080a%20%281%29.jpg"
-                    alt="Nieuwe product review"
-                    width={40}
-                    height={40}
-                    className="flex-shrink-0 rounded-md object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold text-sm text-white">Nieuwe product review</p>
-                    <div className="mt-0.5 flex items-center">
-                      <IoStar className="h-4 w-4 text-yellow-400" />
-                      <IoStar className="h-4 w-4 text-yellow-400" />
-                      <IoStar className="h-4 w-4 text-yellow-400" />
-                      <IoStar className="h-4 w-4 text-yellow-400" />
-                      <IoStar className="h-4 w-4 text-yellow-400" />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-1 flex-col justify-center p-4 bg-white/5 rounded-lg border-l-4 border-green-400 hover:bg-white/10 transition-colors duration-300">
-                  <div className="text-sm font-medium text-white mb-1">Belangrijkste verbeterpunten</div>
-                  <div className="text-xs text-white/60">Bekijk de belangrijkste klantopmerkingen en verbeterpunten per product</div>
-                </div>
-              </div>
             </div>
 
-            {/* Feature 4 */}
-            <div className="p-6 group hover:bg-white/5 transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 flex flex-col h-full relative overflow-hidden">
+            {/* Feature 4 - Special Golden Card */}
+            <div className="bg-gradient-to-br from-yellow-400/10 via-white/5 to-white/5 p-6 rounded-xl border border-yellow-400/20 hover:bg-gradient-to-br hover:from-yellow-400/15 hover:via-white/10 hover:to-white/10 hover:border-yellow-400/30 transition-all duration-300 group flex flex-col justify-between min-h-[280px] relative overflow-hidden">
               {/* Subtle gold animated gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent animate-pulse"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/3 to-transparent translate-x-[-100%] animate-[slide_5s_ease-in-out_infinite]"></div>
-              <div className="flex items-center mb-4 relative z-10">
-                <Sparkles className="w-6 h-6 text-yellow-400/80 mr-3 group-hover:text-yellow-300 transition-colors duration-300 animate-pulse" />
-                <span className="text-xs font-mono text-white/60 tracking-wider">04</span>
-              </div>
-              <div className="flex-grow relative z-10">
-                <h3 className="font-semibold text-yellow-400/90 text-xl mb-3 group-hover:text-yellow-300 transition-colors duration-300">Zet in op winnende producten</h3>
-                <div className="flex items-start gap-3 mb-4">
-                  <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <p className="text-sm text-white/60 leading-relaxed">Focus op producten die het beste presteren en de meeste winst opleveren</p>
+              <div className="relative z-10">
+                <div className="flex items-center mb-4">
+                  <Sparkles className="w-6 h-6 text-yellow-400/80 mr-3 group-hover:text-yellow-300 transition-colors duration-300 animate-pulse" />
+                  <span className="text-xs font-mono text-white/60 tracking-wider">04</span>
+                </div>
+                <div className="mb-6">
+                  <h3 className="font-semibold text-yellow-400/90 text-xl mb-3 group-hover:text-yellow-300 transition-colors duration-300 min-h-[3.5rem] flex items-start">Zet in op winnende producten</h3>
+                  <div className="flex items-start gap-3">
+                    <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <p className="text-sm text-white/60 leading-relaxed">Focus op producten die het beste presteren en de meeste winst opleveren</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center text-sm text-white font-medium mb-6 relative z-10">
+              <div className="flex items-center text-sm text-white font-medium mt-auto relative z-10">
                 <Image 
                   src="/icon-512x512.png" 
                   alt="Bolbaas logo" 
@@ -338,19 +279,6 @@ export default function StorePrestatiesPage() {
                   className="mr-2 flex-shrink-0"
                 />
                 <span className="text-yellow-300/90 group-hover:text-yellow-200 transition-colors duration-300">→ Identificeer je toppers en versterk ze</span>
-              </div>
-              
-              {/* Technical capabilities */}
-              <div className="border-t border-yellow-400/30 pt-6 space-y-4 relative z-10">
-                <div className="p-4 bg-white/5 rounded-lg border-l-4 border-yellow-400 hover:bg-white/10 transition-colors duration-300 hover:border-yellow-300">
-                  <div className="text-sm font-medium text-white mb-1">Winst analyses</div>
-                  <div className="text-xs text-white/60">Zie precies welke producten het meest opleveren</div>
-                </div>
-                
-                <div className="p-4 bg-white/5 rounded-lg border-l-4 border-amber-400 hover:bg-white/10 transition-colors duration-300 hover:border-amber-300">
-                  <div className="text-sm font-medium text-white mb-1">Performance rankings</div>
-                  <div className="text-xs text-white/60">Top scoorders die vindbaar zijn op Bol met de meeste sales</div>
-                </div>
               </div>
             </div>
           </div>
@@ -391,7 +319,7 @@ export default function StorePrestatiesPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
@@ -406,15 +334,6 @@ export default function StorePrestatiesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -534,7 +453,7 @@ export default function StorePrestatiesPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
@@ -549,15 +468,6 @@ export default function StorePrestatiesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-white text-[14px] leading-[20px] font-normal border-white/30 hover:bg-white/10 px-6 py-3 h-auto bg-transparent rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
                 </Button>
               </div>
             </div>
@@ -670,7 +580,7 @@ export default function StorePrestatiesPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
+              <div className="flex justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
@@ -685,15 +595,6 @@ export default function StorePrestatiesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  asChild
-                  className="text-[#111111] text-[14px] leading-[20px] font-normal border-gray-300 hover:bg-gray-50 px-6 py-3 h-auto bg-white rounded-xl"
-                >
-                  <Link href="/contact">
-                    Gesprek inplannen
-                  </Link>
                 </Button>
               </div>
             </div>

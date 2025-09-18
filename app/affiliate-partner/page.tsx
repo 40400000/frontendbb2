@@ -5,6 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import Image from "next/image";
 import { EmailSignupForm } from "@/components/email-signup-form";
+import { AffiliateForm } from "@/components/affiliate-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -59,7 +60,7 @@ export default function AffiliatePartnerPage() {
             </h1>
 
             <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-6 md:mb-8">
-              €50-200 per referral + 30% maandelijkse commissie. Perfect voor Bol coaches, communities en influencers.
+              Tot €200 per referral + 30% maandelijkse commissie. Perfect voor Bol coaches, communities en influencers.
             </p>
 
             <EmailSignupForm 
@@ -83,7 +84,7 @@ export default function AffiliatePartnerPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-2">€50-200</div>
+                  <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-2">Tot €200</div>
                   <div className="text-sm md:text-base text-[#111111]/70">Per succesvolle referral</div>
                 </div>
                 <div className="text-center">
@@ -130,7 +131,7 @@ export default function AffiliatePartnerPage() {
                 <h3 className="text-xl md:text-2xl font-medium text-[#111111]">Bol coaches</h3>
               </div>
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
-                Help je klanten met de beste Bol tools. <strong>Krijg €50-200 per referral + 30% maandelijkse commissie.</strong>
+                Help je klanten met de beste Bol tools. <strong>Krijg tot €200 per referral + 30% maandelijkse commissie.</strong>
               </p>
               <ul className="space-y-2 text-sm text-[#111111]/80">
                 <li>• Exclusieve coach materialen</li>
@@ -146,7 +147,7 @@ export default function AffiliatePartnerPage() {
                 <h3 className="text-xl md:text-2xl font-medium text-[#111111]">Bol communities</h3>
               </div>
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
-                Deel Bolbaas met je community. <strong>Verdien €50-200 per member + 30% maandelijkse commissie.</strong>
+                Deel Bolbaas met je community. <strong>Verdien tot €200 per member + 30% maandelijkse commissie.</strong>
               </p>
               <ul className="space-y-2 text-sm text-[#111111]/80">
                 <li>• Community exclusives</li>
@@ -162,7 +163,7 @@ export default function AffiliatePartnerPage() {
                 <h3 className="text-xl md:text-2xl font-medium text-[#111111]">Bol influencers</h3>
               </div>
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
-                Monetiseer je Bol content. <strong>Verdien €50-200 per follower + 30% maandelijkse commissie.</strong>
+                Monetiseer je Bol content. <strong>Verdien tot €200 per follower + 30% maandelijkse commissie.</strong>
               </p>
               <ul className="space-y-2 text-sm text-[#111111]/80">
                 <li>• Content creation tools</li>
@@ -183,7 +184,7 @@ export default function AffiliatePartnerPage() {
               style={{ backgroundColor: '#EAF3FF' }}>
               <div className="flex items-center gap-2">
                 <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">€50-200</div>
+                <div className="text-[24px] md:text-[28px] leading-none font-normal">Tot €200</div>
               </div>
               <div className="mt-1 text-xs md:text-sm text-black/70">Per succesvolle referral</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Commissie →</div>
@@ -244,13 +245,6 @@ export default function AffiliatePartnerPage() {
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Landing →</div>
             </div>
 
-            {/* Quote */}
-            <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-black/10 p-2.5 md:p-4 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out">
-              <p className="text-[16px] md:text-[18px] leading-[22px] md:leading-[24px]">
-                "Als Bol coach verdien ik €500+ per maand met Bolbaas referrals."
-              </p>
-              <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/60">Sarah van der Berg — Bol coach</p>
-            </div>
 
             {/* Payment Terms */}
             <div className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
@@ -345,119 +339,7 @@ export default function AffiliatePartnerPage() {
             </p>
           </div>
 
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-[#111111] mb-2">
-                  Voornaam
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Je voornaam"
-                />
-              </div>
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-[#111111] mb-2">
-                  Achternaam
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Je achternaam"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[#111111] mb-2">
-                Email adres
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="je@email.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="type" className="block text-sm font-medium text-[#111111] mb-2">
-                Ik ben een
-              </label>
-              <select
-                id="type"
-                name="type"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-              >
-                <option value="">Selecteer je rol</option>
-                <option value="coach">Bol coach</option>
-                <option value="community">Community manager</option>
-                <option value="influencer">Bol influencer</option>
-                <option value="other">Anders</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="experience" className="block text-sm font-medium text-[#111111] mb-2">
-                Ervaring met Bol
-              </label>
-              <select
-                id="experience"
-                name="experience"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-              >
-                <option value="">Selecteer je ervaring</option>
-                <option value="beginner">Beginner (0-1 jaar)</option>
-                <option value="intermediate">Gemiddeld (1-3 jaar)</option>
-                <option value="advanced">Gevorderd (3+ jaar)</option>
-                <option value="expert">Expert (5+ jaar)</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="audience" className="block text-sm font-medium text-[#111111] mb-2">
-                Grootte van je publiek/community
-              </label>
-              <select
-                id="audience"
-                name="audience"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-              >
-                <option value="">Selecteer grootte</option>
-                <option value="small">0-1.000</option>
-                <option value="medium">1.000-10.000</option>
-                <option value="large">10.000-50.000</option>
-                <option value="xlarge">50.000+</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-[#111111] mb-2">
-                Vertel ons over jezelf
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                placeholder="Vertel ons over je ervaring, je publiek en waarom je affiliate partner wilt worden..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#111111] text-white font-medium text-sm md:text-base py-3 md:py-4 px-6 rounded-xl hover:bg-[#111111]/90 transition-colors flex items-center justify-center gap-2"
-            >
-              Verstuur aanvraag
-              <MdOutlineArrowOutward className="h-4 w-4" />
-            </button>
-          </form>
+          <AffiliateForm />
         </div>
       </section>
 
@@ -466,7 +348,7 @@ export default function AffiliatePartnerPage() {
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Klaar om geld te verdienen?</h2>
           <p className="mx-auto text-white/80 font-normal text-sm md:text-base leading-[18px] md:leading-[21px] mb-8 md:mb-10 max-w-2xl">
-            Word affiliate partner en verdien €50-200 per referral + 30% maandelijkse commissie. Geen kosten, geen risico's.
+            Word affiliate partner en verdien tot €200 per referral + 30% maandelijkse commissie. Geen kosten, geen risico's.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
