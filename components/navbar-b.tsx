@@ -516,7 +516,8 @@ const pathname = usePathname();
                       <div className="flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-out">
                         {(whySubsections[activeWhyCategory] ?? []).map((item) => {
                           const isBolmate = item.title === 'Bolbaas vs. Bolmate';
-                          const isDisabled = !isBolmate;
+                          const isBollify = item.title === 'Bolbaas vs. Bollify';
+                          const isDisabled = !isBolmate && !isBollify;
                           
                           return isDisabled ? (
                             <div
@@ -789,7 +790,8 @@ const pathname = usePathname();
                               <div className="ml-4 mt-2 space-y-2">
                                 {whySubsections[category.id]?.map((item) => {
                                   const isBolmate = item.title === 'Bolbaas vs. Bolmate';
-                                  const isDisabled = !isBolmate;
+                                  const isBollify = item.title === 'Bolbaas vs. Bollify';
+                                  const isDisabled = !isBolmate && !isBollify;
                                   
                                   return isDisabled ? (
                                     <div

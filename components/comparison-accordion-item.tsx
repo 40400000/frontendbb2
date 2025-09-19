@@ -7,12 +7,18 @@ interface ComparisonAccordionItemProps {
   title: string;
   bolbaasContent: string;
   bolmateContent: string;
+  competitorName?: string;
+  competitorLogo?: string;
+  competitorAlt?: string;
 }
 
 export function ComparisonAccordionItem({ 
   title, 
   bolbaasContent, 
-  bolmateContent 
+  bolmateContent,
+  competitorName = "Bolmate",
+  competitorLogo = "/BOLMATELOGO.png",
+  competitorAlt = "Bolmate"
 }: ComparisonAccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,11 +51,11 @@ export function ComparisonAccordionItem({
             </p>
           </div>
 
-          {/* Bolmate Card */}
+          {/* Competitor Card */}
           <div className="bg-white/50 rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm border border-gray-100">
             <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-              <Image src="/BOLMATELOGO.png" alt="Bolmate" width={20} height={20} className="md:w-6 md:h-6" />
-              <h4 className="text-sm md:text-base font-medium text-[#111111]">Bolmate</h4>
+              <Image src={competitorLogo} alt={competitorAlt} width={20} height={20} className="md:w-6 md:h-6" />
+              <h4 className="text-sm md:text-base font-medium text-[#111111]">{competitorName}</h4>
             </div>
             <p className="text-[#111111]/70 text-xs md:text-sm leading-relaxed">
               {bolmateContent}
