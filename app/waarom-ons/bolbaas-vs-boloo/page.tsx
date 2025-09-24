@@ -15,11 +15,11 @@ import AnimatedMovingBadges from "@/components/animated-moving-badges";
 import { ComparisonAccordionItem } from "@/components/comparison-accordion-item";
 
 export const metadata: Metadata = {
-  title: "Bolbaas vs Bollify - het beste alternatief",
-  description: "Vergelijk Bolbaas met Bollify. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  title: "Bolbaas vs Boloo - het beste alternatief",
+  description: "Vergelijk Bolbaas met Boloo. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
   keywords: [
-    "Bollify alternatief",
-    "Bolbaas vs Bollify",
+    "Boloo alternatief",
+    "Bolbaas vs Boloo",
     "bol partner software",
     "bol automatisering",
     "product research tool",
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://bolbaas.nl"),
   alternates: {
-    canonical: "/waarom-ons/bolbaas-vs-bollify",
+    canonical: "/waarom-ons/bolbaas-vs-boloo",
   },
   openGraph: {
-    title: "Bolbaas vs Bollify: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bollify. Ontdek waarom 300+ partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
-    url: "/waarom-ons/bolbaas-vs-bollify",
+    title: "Bolbaas vs Boloo: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Boloo. Ontdek waarom 300+ partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
+    url: "/waarom-ons/bolbaas-vs-boloo",
     siteName: "Bolbaas",
     locale: "nl_NL",
     type: "website",
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
         url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
         width: 1200,
         height: 630,
-        alt: "Bolbaas vs Bollify - Het beste alternatief voor bol partners",
+        alt: "Bolbaas vs Boloo - Het beste alternatief voor bol partners",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bolbaas vs Bollify: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bollify. 300+ partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
+    title: "Bolbaas vs Boloo: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Boloo. 300+ partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
     images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
   },
   robots: {
@@ -128,12 +128,12 @@ export default function HomePage() {
               <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
 
               <span className="mx-1">VS</span>
-              <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={32} height={32} />
-              BOLLIFY
+              <Image src="/bolo.png" alt="Boloo" width={32} height={32} />
+              BOLOO
             </div>
             
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[40px] leading-[36px] md:leading-[44px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-              Opzoek naar het <i>beste</i> alternatief voor Bollify?
+              Opzoek naar het <i>beste</i> alternatief voor Boloo?
             </h1>
 
             <EmailSignupForm />
@@ -347,59 +347,30 @@ export default function HomePage() {
       <section className="bg-[#FBFAF9] py-12 md:py-14 lg:py-24">
         <div className="container mx-auto max-w-2xl px-4 md:px-6">
           <h2 className="text-center text-[28px] md:text-4xl lg:text-5xl leading-[32px] md:leading-[44px] lg:leading-[52px] font-normal text-[#111111] mb-8 md:mb-12 lg:mb-16">
-            5 gebieden waar Bolbaas <br/>
-            <em>domineert</em> over Bollify
+            3 gebieden waar Bolbaas <br/>
+            <em>domineert</em> over Boloo
           </h2>
 
           <div className="space-y-0">
             {/* Item 1 */}
             <ComparisonAccordionItem 
-              title="Bollify heeft alleen een zoekterm database - wij hebben complete software"
-              bolbaasContent="Bolbaas biedt complete product research software: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bollify heeft alleen een zoekterm database. Geen inzichten, geen automatisering, geen Baaspilot, geen Ranking AI. Voor een compleet pakket moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
-              competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
+              title="Complete automatisering vs handmatige processen"
+              bolbaasContent="Bij Bolbaas automatiseer je alle repetitieve taken: e-mail campagnes, factuur uploads, BTW-aangifte berekeningen, en notificaties via Baaspilot. Alles draait automatisch op de achtergrond zodat je je kunt focussen op groei en strategie."
+              bolmateContent="Boloo vereist veel handmatige processen en mist essentiële automatisering features. Je moet zelf e-mails versturen, facturen handmatig uploaden, en BTW-berekeningen doen. Dit kost veel tijd en verhoogt de kans op fouten."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
-              title="Precision rankings tracking vs veel ontbrekende data"
-              bolbaasContent="Bolbaas heeft precision tracking voor een 100% nauwkeurig beeld van alle rankings per dag. "
-              bolmateContent="De rankings tracker van Bollify mist veel data. Hierdoor krijg je onvolledige informatie en mis je belangrijke inzichten."
-              competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
+              title="12M+ keyword database vs beperkte data"
+              bolbaasContent="Bolbaas heeft de grootste keyword database voor bol.com met 12+ miljoen geanalyseerde zoektermen, inclusief CPC data, search volume trends, en concurrentie-analyse. Plus Ranking AI voor automatische listing optimalisatie en A/B testing voor verschillende productpagina versies."
+              bolmateContent="Boloo heeft beperkte keyword data en mist geavanceerde research tools. Geen uitgebreide database, geen CPC tracking, geen Ranking AI, en geen A/B testing mogelijkheden. Voor échte product research moet je externe tools gebruiken."
             />
 
             {/* Item 3 */}
             <ComparisonAccordionItem 
-              title="Complete inzichten en automatisering vs alleen basis data"
-              bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, e-mail automatisering, factuur automatisering, BTW automatisering en Baaspilot notificaties."
-              bolmateContent="Bollify mist essentiële store prestatie tools: geen levering tracker, geen custom dashboards, beperkte product inzichten, geen automatisering, en geen voorraad of sales voorspellingen. Je krijgt alleen basis rapportage zonder de diepgaande analytics die je nodig hebt om je store te optimaliseren."
-              competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
-            />
-
-            {/* Item 4 */}
-            <ComparisonAccordionItem 
-              title="Software focus vs agency model"
-              bolbaasContent="Bolbaas focust zich uitsluitend op onze software. Wij ontwikkelen de beste tools en automatisering zodat jij zelf je store kunt beheren en laten groeien. Jij houdt de controle over je bedrijf."
-              bolmateContent="Bollify focust zich op hun 'do it for you' agency model. Ze willen je store voor je beheren in plaats van jou de tools te geven om het zelf te doen. Dit betekent minder controle en hogere kosten op lange termijn."
-              competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
-            />
-
-            {/* Item 5 */}
-            <ComparisonAccordionItem 
-              title="Grootste zoekwoorden database met meer inzichten"
-              bolbaasContent="Bolbaas heeft de grootste zoekwoorden database met 12+ miljoen keywords. Elke zoekterm bevat uitgebreide inzichten: CPC data, zoekvolume trends, concurrentie-analyse, seizoensgebonden patronen, en winstmogelijkheden."
-              bolmateContent="Bollify heeft een kleinere database met beperkte inzichten per zoekwoord. Ze missen een aantal diepgaande analytics die je nodig hebt voor succesvolle product research."
-              competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
+              title="Uitgebreide analytics vs basis rapportage"
+              bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards die je zelf kunt bouwen, uitgebreide product prestatie-analyse, sales en voorraad voorspellingen, levering tracking, en project management. Alles wat je nodig hebt om data-gedreven beslissingen te maken."
+              bolmateContent="Boloo biedt alleen basis rapportage zonder diepgaande analytics. Geen custom dashboards, beperkte product inzichten, geen voorspellingen, en geen project management tools. Je mist cruciale data om je store te optimaliseren."
             />
           </div>
         </div>
@@ -720,14 +691,89 @@ export default function HomePage() {
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
-                    <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={24} height={24} className="md:w-8 md:h-8" />
+                    <Image src="/bolo.png" alt="Boloo" width={24} height={24} className="md:w-8 md:h-8" />
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      BOLLIFY
+                      BOLOO
                     </span>
                   </div>
                 </div>
               </div>
 
+              {/* Account Limits Section */}
+              <div>
+                <div className="flex items-center gap-2 px-3 md:px-4 lg:px-8 py-3 md:py-4 bg-[#F6F5F3]">
+                  <KiteIcon variant="purple" size={12} />
+                  <h4 className="text-[14px] md:text-[16px] leading-[18px] md:leading-[20px] font-medium text-gray-900">Account limieten</h4>
+                </div>
+                
+                <div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
+                      Aantal orders
+                      <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Het aantal orders dat verwerkt kan worden.</div>
+                    </div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Beperkt</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
+                      Aantal stores
+                      <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Maximum aantal gekoppelde bol stores per account.</div>
+                    </div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
+                          <span>Bolbaas</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">1</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               {/* AI & Tools Section */}
               <div>
@@ -751,10 +797,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -763,7 +809,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
+                      <NoBadge />
                     </div>
                   </div>
 
@@ -781,10 +827,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -793,7 +839,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
+                      <NoBadge />
                     </div>
                   </div>
 
@@ -811,8 +857,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -841,8 +887,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -871,10 +917,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <YesBadge />
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -883,7 +929,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <YesBadge />
+                      <NoBadge />
                     </div>
                   </div>
 
@@ -901,10 +947,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <GeenACoSBadge />
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -913,7 +959,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <GeenACoSBadge />
+                      <NoBadge />
                     </div>
                   </div>
 
@@ -931,8 +977,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -971,8 +1017,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1001,8 +1047,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1031,10 +1077,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Handmatig</span>
                       </div>
                     </div>
                     
@@ -1043,7 +1089,7 @@ export default function HomePage() {
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Beperkt</span>
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Handmatig</span>
                     </div>
                   </div>
 
@@ -1061,8 +1107,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1091,8 +1137,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1118,7 +1164,7 @@ export default function HomePage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom sales dashboards</div>
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom dashboards and views</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-2 gap-3">
@@ -1131,10 +1177,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Alleen tabellen</span>
+                        <NoBadge />
                       </div>
                     </div>
                     
@@ -1143,7 +1189,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Alleen tabellen</span>
+                      <NoBadge />
                     </div>
                   </div>
 
@@ -1161,10 +1207,10 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
-                        <NoBadge />
+                        <BeperktereInzichtenBadge />
                       </div>
                     </div>
                     
@@ -1173,7 +1219,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <NoBadge />
+                      <BeperktereInzichtenBadge />
                     </div>
                   </div>
 
@@ -1191,8 +1237,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <BeperktereInzichtenBadge />
                       </div>
@@ -1221,8 +1267,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1251,8 +1297,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
-                          <span>Bollify</span>
+                          <Image src="/bolo.png" alt="Boloo" width={16} height={16} />
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1274,7 +1320,7 @@ export default function HomePage() {
           {/* Disclaimer */}
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
-              Bolbaas vergeleken met Bollify abonnement
+              Bolbaas Plus vergeleken met Boloo standaard abonnement
             </p>
           </div>
         </div>

@@ -100,7 +100,7 @@ const featureCategories: {
     iconClass: "text-blue-500",
     items: [
       {
-        title: "Custom dashboards en views",
+        title: "Custom sales dashboards",
         description: "Bouw dashboards die precies laten zien wat jij belangrijk vindt",
         icon: "LineChart",
         href: "/features/store-prestaties#custom-dashboards"

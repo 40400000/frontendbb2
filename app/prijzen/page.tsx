@@ -941,7 +941,7 @@ export default function PrijzenPage() {
                 
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center py-4 px-4 md:px-8 bg-gray-50">
-                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom dashboards and views</div>
+                    <div className="text-[15px] leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Custom sales dashboards</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-3 gap-2">

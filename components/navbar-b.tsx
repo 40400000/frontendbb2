@@ -130,7 +130,7 @@ const pathname = usePathname();
       { title: 'Baaspilot', description: 'Direct op de hoogte van gebeurtenissen', href: '/features/automatisering#baaspilot' },
     ],
     'store-prestaties': [
-      { title: 'Custom dashboards en views', description: 'Bouw dashboards voor jouw belangrijke cijfers', href: '/features/store-prestaties#custom-dashboards' },
+      { title: 'Custom sales dashboard', description: 'Bouw dashboards voor jouw belangrijke cijfers', href: '/features/store-prestaties#custom-dashboards' },
       { title: 'Product prestaties', description: 'Uitgebreid overzicht van verkoopprestaties', href: '/features/store-prestaties#product-prestaties' },
       { title: 'Bestellingen', description: 'Gedetailleerde analyse van je bestellingen', href: '/features/store-prestaties#bestellingen-beheren' },
       { title: 'Sales en voorraad schattingen', description: 'Voorspel verkoop en wanneer bijbestellen', href: '/features/store-prestaties#sales-forecasting' },
@@ -517,7 +517,8 @@ const pathname = usePathname();
                         {(whySubsections[activeWhyCategory] ?? []).map((item) => {
                           const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                           const isBollify = item.title === 'Bolbaas vs. Bollify';
-                          const isDisabled = !isBolmate && !isBollify;
+                          const isBoloo = item.title === 'Bolbaas vs. Boloo';
+                          const isDisabled = !isBolmate && !isBollify && !isBoloo;
                           
                           return isDisabled ? (
                             <div
@@ -593,20 +594,28 @@ const pathname = usePathname();
           }`}>
             <Button 
               variant="outline" 
-              className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
+              asChild
+              className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 cursor-pointer ${
                 isDarkMode 
                   ? 'border border-white/30 text-white bg-transparent hover:bg-white/5'
                   : 'border border-[#111111]/30 text-[#111111] bg-transparent hover:bg-[#111111]/5'
               }`}
             >
-              Naar app
+              <Link href="https://app.bolbaas.nl" target="_blank" rel="noopener noreferrer">
+                Naar app
+              </Link>
             </Button>
-            <Button className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
-              isDarkMode
-                ? 'bg-white text-[#111111] hover:bg-white/90'
-                : 'bg-[#111111] text-white hover:bg-black/80'
-            }`}>
-              Probeer gratis
+            <Button 
+              asChild
+              className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 cursor-pointer ${
+                isDarkMode
+                  ? 'bg-white text-[#111111] hover:bg-white/90'
+                  : 'bg-[#111111] text-white hover:bg-black/80'
+              }`}
+            >
+              <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+                Probeer gratis
+              </Link>
             </Button>
           </div>
 
@@ -614,12 +623,17 @@ const pathname = usePathname();
           <div className={`md:hidden flex items-center ${
             isScrolled ? 'ml-auto mr-3' : 'ml-auto'
           }`}>
-            <Button className={`rounded-xl px-3 py-0 text-xs font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 ${
-              isDarkMode
-                ? 'bg-white text-[#111111] hover:bg-white/90'
-                : 'bg-[#111111] text-white hover:bg-black/80'
-            }`}>
-              Probeer gratis
+            <Button 
+              asChild
+              className={`rounded-xl px-3 py-0 text-xs font-medium transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5 cursor-pointer ${
+                isDarkMode
+                  ? 'bg-white text-[#111111] hover:bg-white/90'
+                  : 'bg-[#111111] text-white hover:bg-black/80'
+              }`}
+            >
+              <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+                Probeer gratis
+              </Link>
             </Button>
           </div>
 
@@ -791,7 +805,8 @@ const pathname = usePathname();
                                 {whySubsections[category.id]?.map((item) => {
                                   const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                                   const isBollify = item.title === 'Bolbaas vs. Bollify';
-                                  const isDisabled = !isBolmate && !isBollify;
+                                  const isBoloo = item.title === 'Bolbaas vs. Boloo';
+                                  const isDisabled = !isBolmate && !isBollify && !isBoloo;
                                   
                                   return isDisabled ? (
                                     <div
@@ -857,20 +872,28 @@ const pathname = usePathname();
               <div className="flex flex-col gap-3 p-4">
                 <Button 
                   variant="outline" 
-                  className={`rounded-xl ${
+                  asChild
+                  className={`rounded-xl cursor-pointer ${
                   isDarkMode
                     ? 'border border-white/30 text-white bg-transparent hover:bg-white/5'
                     : 'border border-[#111111]/30 text-[#111111] bg-transparent hover:bg-[#111111]/5'
                   }`}
                 >
-                  Naar app
+                  <Link href="https://app.bolbaas.nl" target="_blank" rel="noopener noreferrer">
+                    Naar app
+                  </Link>
                 </Button>
-                <Button className={`rounded-xl ${
-                  isDarkMode
-                    ? 'bg-white text-[#111111] hover:bg-white/90'
-                    : 'bg-[#111111] text-white hover:bg-black/80'
-                }`}>
-                  Probeer gratis
+                <Button 
+                  asChild
+                  className={`rounded-xl cursor-pointer ${
+                    isDarkMode
+                      ? 'bg-white text-[#111111] hover:bg-white/90'
+                      : 'bg-[#111111] text-white hover:bg-black/80'
+                  }`}
+                >
+                  <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+                    Probeer gratis
+                  </Link>
                 </Button>
               </div>
             </div>

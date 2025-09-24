@@ -249,7 +249,7 @@ export default function HomePage() {
               href="/features/store-prestaties#custom-dashboards"
               className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
               style={{ backgroundColor: '#F3EEFF' }}
-              aria-label="Custom dashboards en views"
+              aria-label="Custom sales dashboards"
             >
               <div className="flex items-center gap-2">
                 <KiteIcon variant="purple" size={10} />

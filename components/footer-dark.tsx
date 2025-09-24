@@ -207,6 +207,24 @@ export function FooterDark() {
                 Cookie Beleid
               </Link>
             </div>
+
+            {/* Right side images */}
+            <div className="flex items-center gap-4">
+              <Image
+                src="/Flag_of_Europe.svg.png"
+                alt="European Union Flag"
+                width={48}
+                height={48}
+                className=""
+              />
+              <Image
+                src="/1035147.png"
+                alt="GDPR Compliant"
+                width={48}
+                height={48}
+                className="rounded-full invert"
+              />
+            </div>
           </div>
         </div>
       </div>
