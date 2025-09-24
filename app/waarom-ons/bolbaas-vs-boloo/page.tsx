@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Bolbaas vs Boloo: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Boloo. Ontdek waarom 300+ partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
+    description: "Vergelijk Bolbaas met Boloo. Ontdek waarom tevreden partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
     url: "/waarom-ons/bolbaas-vs-boloo",
     siteName: "Bolbaas",
     locale: "nl_NL",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bolbaas vs Boloo: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Boloo. 300+ partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
+    description: "Vergelijk Bolbaas met Boloo. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
     images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
   },
   robots: {
@@ -167,7 +167,7 @@ export default function HomePage() {
 
               {/* Card 2 - Light Gray Background */}
               <div className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
-                <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">300+</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">Tevreden</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">partners</div>
                 <div className="text-xs md:text-sm text-[#111111]/70">vertrouwen onze automatisering.</div>
               </div>

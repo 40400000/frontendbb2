@@ -518,7 +518,7 @@ const pathname = usePathname();
                           const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                           const isBollify = item.title === 'Bolbaas vs. Bollify';
                           const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                          const isDisabled = !isBolmate && !isBollify && !isBoloo;
+                          const isDisabled = !isBolmate && !isBollify;
                           
                           return isDisabled ? (
                             <div
@@ -806,7 +806,7 @@ const pathname = usePathname();
                                   const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                                   const isBollify = item.title === 'Bolbaas vs. Bollify';
                                   const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                                  const isDisabled = !isBolmate && !isBollify && !isBoloo;
+                                  const isDisabled = !isBolmate && !isBollify;
                                   
                                   return isDisabled ? (
                                     <div
