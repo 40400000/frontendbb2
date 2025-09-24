@@ -95,8 +95,7 @@ export function FooterDark() {
             </Link>
             
             <div className="space-y-2 text-sm text-white/60">
-              <p>Het Schip 237</p>
-              <p>7325NM, Apeldoorn</p>
+              
             </div>
 
             {/* Social Links */}

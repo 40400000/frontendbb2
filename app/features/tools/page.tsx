@@ -257,7 +257,20 @@ export default function ToolsPage() {
 
             {/* Card 4 */}
             <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[510px]">
-              <div className="relative z-10 mb-40">
+              {/* Blur overlay */}
+              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-20 flex items-center justify-center">
+                <div className="text-center">
+
+                  <h3 className="text-[24px] leading-[26px] font-semibold text-[#111111] mb-2">
+                    Binnenkort
+                  </h3>
+                  <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
+                    Deze functie wordt binnenkort beschikbaar
+                  </p>
+                </div>
+              </div>
+              
+              <div className="relative z-10 mb-40 blur-sm">
                 <h3 className="text-[24px] leading-[26px] font-normal text-[#111111] mb-3">
                   AI omzet schatting
                 </h3>
@@ -265,7 +278,7 @@ export default function ToolsPage() {
                   Voorspel verkoopcijfers met AI en identificeer de meest winstgevende producten automatisch.
                 </p>
               </div>
-              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
+              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px] blur-sm">
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
                 <div className="w-full h-full bg-white rounded-xl drop-shadow-lg p-4 flex flex-col">
                   {/* Product Section */}

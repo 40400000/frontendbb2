@@ -76,7 +76,7 @@ export default function PrijzenPage() {
               <div className="mb-8">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-[24px] leading-[24px] font-normal text-white/40 line-through">39</span>
-                  <span className="text-[40px] leading-[40px] font-medium text-white">15</span>
+                  <span className="text-[40px] leading-[40px] font-medium text-white">12</span>
                   <span className="text-[14px] leading-[14px] font-normal text-white/60">/maand</span>
                 </div>
                 <p className="text-[12px] leading-[14px] font-normal text-white/50">
@@ -184,7 +184,7 @@ export default function PrijzenPage() {
               <div className="mb-8">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-[24px] leading-[24px] font-normal text-white/40 line-through">75</span>
-                  <span className="text-[40px] leading-[40px] font-medium text-white">39</span>
+                  <span className="text-[40px] leading-[40px] font-medium text-white">35</span>
                   <span className="text-[14px] leading-[14px] font-normal text-white/60">/maand</span>
                 </div>
                 <p className="text-[12px] leading-[14px] font-normal text-white/50">

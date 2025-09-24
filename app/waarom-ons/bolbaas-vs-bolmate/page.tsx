@@ -354,8 +354,8 @@ export default function HomePage() {
           <div className="space-y-0">
             {/* Item 1 */}
             <ComparisonAccordionItem 
-              title="Onbeperkt orders, e-mails en facturen"
-              bolbaasContent="Bij Bolbaas kan je - zelfs met het start abonnement - onbeperkt orders, e-mails en facturen versturen. De prijs van je abonnement blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei."
+              title="Goedkoper én onbeperkt orders, e-mails en facturen"
+              bolbaasContent="Bij Bolbaas betaal je slechts €12 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
               bolmateContent="Bolmate rekent per order en de kosten kunnen oplopen tot €69 per maand als je store groeit. Naarmate je meer orders verwerkt, stijgen je kosten exponentieel - precies wanneer je als ondernemer wilt besparen op vaste kosten."
             />
 

@@ -104,9 +104,6 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
             <li><a href="tel:+31613665348" className={cn(footerTextClass, linkHoverClass)}>+31 6 13665348</a></li>
             <li><a href="mailto:info@bolbaas.nl" className={cn(footerTextClass, linkHoverClass)}>info@bolbaas.nl</a></li>
-             
-              <li>KVK 89112393</li>
-              <li>BTW NL004693041B93</li>
 
 
 
