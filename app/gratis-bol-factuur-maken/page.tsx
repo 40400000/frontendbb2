@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { Plus, Trash2, ChevronDown, ChevronUp, Upload, X, Eye, X as CloseIcon } from 'lucide-react'
+import { Plus, Trash2, ChevronDown, ChevronUp, Upload, X, Eye, X as CloseIcon, Download } from 'lucide-react'
 import { KiteIcon } from '@/components/ui/kite-icon'
 import { uploadLogo } from '@/app/actions/upload-logo'
 //kijk hier
@@ -84,6 +84,8 @@ export default function GratisBolFactuurMakenPage() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [warningMessage, setWarningMessage] = useState('')
   const [warningType, setWarningType] = useState<'error' | 'warning'>('error')
+  const [isDownloading, setIsDownloading] = useState(false)
+  const [cachedBlobUrl, setCachedBlobUrl] = useState<string | null>(null)
   
   // Collapsible sections state
   const [isBusinessInfoOpen, setIsBusinessInfoOpen] = useState(true)
@@ -140,6 +142,164 @@ export default function GratisBolFactuurMakenPage() {
     setTimeout(() => {
       setWarningMessage('')
     }, 5000)
+  }
+
+  const generateInvoiceData = () => {
+    const sampleData = getSampleData()
+    
+    return {
+      apiKey: process.env.NEXT_PUBLIC_INVOICE_API_KEY || '',
+      invoiceData: {
+        isKorEnabled,
+        btw_verleggen: false,
+        customRule,
+        invoiceNumber: sampleData.invoiceNumber,
+        logoUrl: logoUrl || undefined,
+        businessInfo: {
+          bedrijfsnaam: sampleData.businessInfo.bedrijfsnaam,
+          adres: sampleData.businessInfo.adres,
+          postcode: sampleData.businessInfo.postcode,
+          stad: sampleData.businessInfo.stad,
+          land: sampleData.businessInfo.land,
+          kvkNummer: sampleData.businessInfo.kvkNummer,
+          btwNummer: sampleData.businessInfo.btwNummer,
+        },
+        billingInfo: {
+          name: sampleData.billingInfo.naam,
+          address: sampleData.billingInfo.adres,
+          houseNumber: '', // Extract from address if needed
+          zipCode: sampleData.billingInfo.postcode,
+          city: sampleData.billingInfo.stad,
+          country: sampleData.billingInfo.land,
+          company: sampleData.billingInfo.naam,
+          vatNumber: sampleData.billingInfo.btwNummer,
+          kvkNumber: sampleData.billingInfo.kvkNummer,
+          orderReference: sampleData.orderId,
+        },
+        orderItems: sampleData.orderItems.map(item => ({
+          product_ean: '', // You might want to add EAN field to the form
+          quantity: item.quantity,
+          quantity_cancelled: 0,
+          unit_price: item.price,
+          product_name: item.product,
+          btw_rate: isKorEnabled ? 0 : 21,
+        })),
+        orderDate: sampleData.orderDate,
+        orderId: sampleData.orderId,
+        productBtwRates: {}, // You might want to add this functionality
+      }
+    }
+  }
+
+  const handleDownload = async () => {
+    // If we have a cached blob URL, use it directly
+    if (cachedBlobUrl) {
+      console.log('📦 Using cached blob URL:', cachedBlobUrl)
+      const link = document.createElement('a')
+      link.href = cachedBlobUrl
+      link.download = `factuur-${getSampleData().invoiceNumber}.pdf`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      return
+    }
+
+    setIsDownloading(true)
+    
+    try {
+      const invoiceData = generateInvoiceData()
+      console.log('📋 Generated invoice data:', {
+        hasApiKey: !!invoiceData.apiKey,
+        apiKeyLength: invoiceData.apiKey?.length || 0,
+        businessInfo: invoiceData.invoiceData.businessInfo,
+        billingInfo: invoiceData.invoiceData.billingInfo,
+        orderItemsCount: invoiceData.invoiceData.orderItems.length,
+        logoUrl: invoiceData.invoiceData.logoUrl
+      })
+
+      const apiUrl = 'https://app.bolbaas.nl/api/generate-invoice'
+      console.log('🌐 Making request to:', apiUrl)
+      
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(invoiceData),
+      }
+      
+      console.log('📤 Request options:', {
+        method: requestOptions.method,
+        headers: requestOptions.headers,
+        bodySize: JSON.stringify(invoiceData).length
+      })
+
+      const response = await fetch(apiUrl, requestOptions)
+      
+      console.log('📥 Response received:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok,
+        headers: Object.fromEntries(response.headers.entries())
+      })
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error('❌ API Error Response:', {
+          status: response.status,
+          statusText: response.statusText,
+          body: errorText
+        })
+        throw new Error(`API Error: ${response.status} ${response.statusText} - ${errorText}`)
+      }
+
+      const result = await response.json()
+      console.log('✅ API Response:', result)
+      
+      if (result.success && result.url) {
+        console.log('🎉 Invoice generated successfully, URL:', result.url)
+        // Cache the blob URL for future downloads
+        setCachedBlobUrl(result.url)
+        
+        // Download the file
+        const link = document.createElement('a')
+        link.href = result.url
+        link.download = `factuur-${getSampleData().invoiceNumber}.pdf`
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+        console.log('📥 Download initiated')
+      } else {
+        console.error('❌ API returned unsuccessful response:', result)
+        showWarning(`Failed to generate invoice: ${result.message || 'Unknown error'}`)
+      }
+    } catch (error) {
+      const errorObj = error as Error
+      console.error('💥 Download error details:', {
+        name: errorObj.name,
+        message: errorObj.message,
+        stack: errorObj.stack,
+        cause: (errorObj as any).cause
+      })
+      
+      // More specific error messages
+      if (errorObj.name === 'TypeError' && errorObj.message.includes('Failed to fetch')) {
+        console.error('🌐 Network error - possible causes:')
+        console.error('- CORS issues')
+        console.error('- Network connectivity')
+        console.error('- API server down')
+        console.error('- SSL/TLS certificate issues')
+        showWarning('Network error: Unable to connect to the invoice generation service. Please check your internet connection and try again.')
+      } else if (errorObj.message.includes('API Error')) {
+        showWarning(`API Error: ${errorObj.message}`)
+      } else {
+        console.error('❌ Unexpected error:', error)
+        showWarning(`Failed to download invoice: ${errorObj.message}`)
+      }
+    } finally {
+      console.log('🏁 Download process finished')
+      setIsDownloading(false)
+    }
   }
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -252,7 +412,7 @@ export default function GratisBolFactuurMakenPage() {
               <div className="lg:w-1/2 space-y-6">
                 {/* Logo Upload */}
                 <Card className="bg-white border border-gray-200 py-2">
-                  <CardHeader className="py-2 px-4">
+                  <CardHeader className="py-2 px-4 pb-0">
                     <div className="flex items-center gap-2">
                       <KiteIcon variant="blue" size={10} />
                       <CardTitle className="text-[18px] leading-[22px] font-medium text-[#111111]">Logo uploaden</CardTitle>
@@ -703,25 +863,37 @@ export default function GratisBolFactuurMakenPage() {
 
               {/* Preview Section */}
               <div className="lg:w-1/2 lg:sticky lg:top-4 lg:self-start lg:max-h-[90vh] lg:overflow-y-auto">
-                <Card className="bg-white border border-gray-200 py-2">
-                  <CardHeader>
+                <Card className="bg-white border border-gray-200 py-2 gap-0">
+                  <CardHeader className="py-2 px-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <KiteIcon variant="orange" size={10} />
                         <CardTitle className="text-[18px] leading-[22px] font-medium text-[#111111]">Live Preview</CardTitle>
                       </div>
-                      <Button
-                        onClick={() => setIsPreviewOpen(true)}
-                        variant="outline"
-                        size="sm"
-                        className="rounded-xl"
-                      >
-                        <Eye className="h-4 w-4 mr-2" />
-                        Vergroot
-                      </Button>
+                      <div className="flex items-center gap-2">
+                        <Button
+                          onClick={handleDownload}
+                          disabled={isDownloading}
+                          variant="outline"
+                          size="sm"
+                          className="rounded-xl"
+                        >
+                          <Download className="h-4 w-4 mr-2" />
+                          {isDownloading ? 'Genereren...' : 'Download'}
+                        </Button>
+                        <Button
+                          onClick={() => setIsPreviewOpen(true)}
+                          variant="outline"
+                          size="sm"
+                          className="rounded-xl"
+                        >
+                          <Eye className="h-4 w-4 mr-2" />
+                          Vergroot
+                        </Button>
+                      </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4">
+                  <CardContent className="pb-4 px-2">
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                       <div className="transform scale-[0.6] origin-top-left w-[167%]">
                         <InvoiceTemplate
@@ -752,14 +924,26 @@ export default function GratisBolFactuurMakenPage() {
           <div className="bg-white rounded-xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden">
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <h2 className="text-xl font-semibold text-[#111111]">Factuur Preview</h2>
-              <Button
-                onClick={() => setIsPreviewOpen(false)}
-                variant="outline"
-                size="sm"
-                className="rounded-xl"
-              >
-                <CloseIcon className="h-4 w-4" />
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  onClick={handleDownload}
+                  disabled={isDownloading}
+                  variant="outline"
+                  size="sm"
+                  className="rounded-xl"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  {isDownloading ? 'Genereren...' : 'Download'}
+                </Button>
+                <Button
+                  onClick={() => setIsPreviewOpen(false)}
+                  variant="outline"
+                  size="sm"
+                  className="rounded-xl"
+                >
+                  <CloseIcon className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-80px)]">
               <InvoiceTemplate
