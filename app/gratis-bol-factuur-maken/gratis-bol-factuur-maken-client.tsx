@@ -410,7 +410,7 @@ export function GratisBolFactuurMakenClient() {
                 Gratis Bol <em className="italic">factuur</em> maken
               </h1>
               <p className="text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 max-w-2xl mx-auto">
-                Maak professionele facturen voor je Bol bestellingen. Vul de gegevens in en zie direct een live preview van je factuur.
+                Maak BTW facturen voor je Bol bestellingen. Vul de gegevens in en zie direct een live preview van je factuur.
               </p>
             </div>
 
