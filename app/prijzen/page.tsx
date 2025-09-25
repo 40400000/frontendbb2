@@ -84,7 +84,10 @@ export default function PrijzenPage() {
                 </p>
               </div>
 
-              <InteractivePricingButton href="https://app.bolbaas.nl/registreren">
+              <InteractivePricingButton 
+                href="https://app.bolbaas.nl/registreren"
+                sendTo="AW-17372857270/1maandcta"
+              >
                 1 maand gratis
               </InteractivePricingButton>
 
@@ -192,7 +195,10 @@ export default function PrijzenPage() {
                 </p>
               </div>
 
-              <InteractivePricingButton href="https://app.bolbaas.nl/registreren">
+              <InteractivePricingButton 
+                href="https://app.bolbaas.nl/registreren"
+                sendTo="AW-17372857270/1maandcta"
+              >
                 1 maand gratis
               </InteractivePricingButton>
 
