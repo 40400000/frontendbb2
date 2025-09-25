@@ -199,12 +199,8 @@ export function FooterDark() {
               <Link href="/verwerkersovereenkomst" className="hover:text-white/80 transition-colors">
                 Verwerkersovereenkomst
               </Link>
-              <Link href="/verwerkingsovereenkomst" className="hover:text-white/80 transition-colors">
-                Verwerkingsovereenkomst
-              </Link>
-              <Link href="#" className="hover:text-white/80 transition-colors">
-                Cookie Beleid
-              </Link>
+
+
             </div>
 
             {/* Right side images */}
