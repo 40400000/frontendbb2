@@ -45,7 +45,18 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
     if (email) {
       const encodedEmail = encodeURIComponent(email);
       const url = `https://app.bolbaas.nl/registreren?email=${encodedEmail}`;
-      router.push(url);
+      
+      const gtag = window.gtag;
+      if (typeof gtag === "function") {
+        gtag("event", "conversion", {
+          send_to: "AW-17372857270/1maandcta",
+          event_callback: () => {
+            router.push(url);
+          },
+        });
+      } else {
+        router.push(url);
+      }
     }
   };
 

@@ -99,6 +99,7 @@ export default function AutomatiseringPage() {
                 buttonText="Demo proberen"
                 showTestimonial={true}
                 align="left"
+                sendTo="AW-17372857270/1maandcta"
               />
             </div>
 

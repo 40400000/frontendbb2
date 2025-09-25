@@ -14,6 +14,12 @@ import { KiteIcon } from '@/components/ui/kite-icon'
 import { uploadLogo } from '@/app/actions/upload-logo'
 import { InvoiceDialog } from '@/components/invoice-dialog'
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface BusinessInfo {
   bedrijfsnaam: string
   adres: string
@@ -247,6 +253,12 @@ export function GratisBolFactuurMakenClient() {
       
       if (result.success && result.url) {
         console.log('🎉 Invoice generated successfully, URL:', result.url)
+
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17372857270/invoice_download',
+          });
+        }
         
         // Download the file using fetch to ensure it's downloaded, not opened
         const response = await fetch(result.url)

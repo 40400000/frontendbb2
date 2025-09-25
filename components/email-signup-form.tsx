@@ -2,10 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useState, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 interface EmailSignupFormProps {
   buttonText?: string;
@@ -14,6 +20,7 @@ interface EmailSignupFormProps {
   className?: string;
   showTestimonial?: boolean;
   align?: "left" | "center";
+  sendTo?: string;
 }
 
 export function EmailSignupForm({ 
@@ -22,19 +29,56 @@ export function EmailSignupForm({
   redirectUrl = "https://app.bolbaas.nl/registreren",
   className = "",
   showTestimonial = false,
-  align = "center"
+  align = "center",
+  sendTo
 }: EmailSignupFormProps) {
   const [email, setEmail] = useState("");
   const router = useRouter();
+  const clickedRef = useRef(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      const encodedEmail = encodeURIComponent(email);
-      const url = `${redirectUrl}?email=${encodedEmail}`;
-      router.push(url);
+    if (!email) return;
+    
+    const encodedEmail = encodeURIComponent(email);
+    const destination = `${redirectUrl}?email=${encodedEmail}`;
+
+    if (!sendTo) {
+      router.push(destination);
+      return;
     }
-  };
+
+    if (clickedRef.current) return;
+    clickedRef.current = true;
+    
+    const gtag = window.gtag;
+    const hasGtag = typeof gtag === "function";
+
+    const navigateTo = () => router.push(destination);
+
+    const fallback = setTimeout(() => {
+      navigateTo();
+    }, 700);
+
+    if (hasGtag) {
+      try {
+        const payload = {
+          send_to: sendTo,
+          event_callback: () => {
+            clearTimeout(fallback);
+            navigateTo();
+          },
+        } as const;
+        gtag("event", "conversion", payload as unknown as Record<string, unknown>);
+        return;
+      } catch (err) {
+        console.error("Error firing gtag conversion; navigating directly", err);
+      }
+    }
+
+    clearTimeout(fallback);
+    navigateTo();
+  }, [email, redirectUrl, router, sendTo]);
 
   const alignmentClass = align === "left" ? "max-w-md" : "mx-auto max-w-md";
   const testimonialAlignmentClass = align === "left" ? "justify-start" : "justify-center";

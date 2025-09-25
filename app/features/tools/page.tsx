@@ -77,6 +77,7 @@ export default function ToolsPage() {
                 placeholder="Vul je bedrijfsemail in"
                 buttonText="Doe gratis research"
                 showTestimonial={true}
+                sendTo="AW-17372857270/1maandcta"
               />
             </div>
 

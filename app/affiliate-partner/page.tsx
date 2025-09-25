@@ -67,6 +67,7 @@ export default function AffiliatePartnerPage() {
               buttonText="Partner worden"
               placeholder="Vul je email in"
               showTestimonial={false}
+              sendTo="AW-17372857270/1maandcta"
             />
           </div>
 
@@ -186,6 +187,7 @@ export default function AffiliatePartnerPage() {
               buttonText="Partner worden"
               placeholder="Vul je email in"
               showTestimonial={false}
+              sendTo="AW-17372857270/1maandcta"
             />
             <Link 
               href="/contact"

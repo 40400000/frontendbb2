@@ -6,6 +6,12 @@ import { useFormStatus } from 'react-dom';
 import { z } from 'zod';
 import { sendContactEmail } from '@/app/actions/send-contact-email';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 // Zod schema for email/phone validation
 const emailOrPhoneSchema = z.string()
   .min(1, { message: "Dit veld is verplicht." })
@@ -130,6 +136,12 @@ export function ContactForm() {
 
   useEffect(() => {
     if (state.type === 'success') {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-17372857270/generate_lead',
+        });
+      }
+      
       setEmailValue('');
       setVraagValue('');
       setFoundViaValue('');

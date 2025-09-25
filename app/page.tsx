@@ -113,6 +113,7 @@ export default function HomePage() {
               buttonText="Gratis proberen"
               placeholder="Vul je email in"
               showTestimonial={true}
+              sendTo="AW-17372857270/1maandcta"
             />
           </div>
 

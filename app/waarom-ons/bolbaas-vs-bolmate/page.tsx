@@ -136,7 +136,7 @@ export default function HomePage() {
               Opzoek naar het <i>beste</i> alternatief voor Bolmate?
             </h1>
 
-            <EmailSignupForm />
+            <EmailSignupForm sendTo="AW-17372857270/1maandcta" />
 
             <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm opacity-70">
               <FaGoogle className="h-4 w-4 text-[#111111]" />
@@ -248,6 +248,7 @@ export default function HomePage() {
                 buttonText="Demo proberen"
                 showTestimonial={false}
                 align="left"
+                sendTo="AW-17372857270/1maandcta"
               />
             </div>
 
@@ -330,6 +331,7 @@ export default function HomePage() {
                 buttonText="Doe gratis research"
                 showTestimonial={false}
                 align="left"
+                sendTo="AW-17372857270/1maandcta"
               />
             </div>
 

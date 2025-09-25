@@ -6,6 +6,12 @@ import { useFormStatus } from 'react-dom';
 import { z } from 'zod';
 import { sendAffiliateEmail } from '@/app/actions/send-affiliate-email';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 // Zod schema for form validation
 const affiliateFormSchema = z.object({
   firstName: z.string().min(1, { message: "Voornaam is verplicht." }),
@@ -102,6 +108,12 @@ export function AffiliateForm() {
   // Reset form on successful submission
   useEffect(() => {
     if (state.type === 'success') {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-17372857270/affiliate_signup',
+        });
+      }
+
       setFormData({
         firstName: '',
         lastName: '',
