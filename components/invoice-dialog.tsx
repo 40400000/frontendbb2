@@ -12,6 +12,7 @@ import { KiteIcon } from "@/components/ui/kite-icon";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 interface InvoiceDialogProps {
   isOpen: boolean;
@@ -23,6 +24,7 @@ interface InvoiceDialogProps {
 export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: InvoiceDialogProps) {
   const [animationPhase, setAnimationPhase] = useState<'creating' | 'ready'>('creating');
   const [email, setEmail] = useState("");
+  const router = useRouter();
 
   // Start animation automatically when dialog opens
   useEffect(() => {
@@ -41,8 +43,9 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      // Email submitted, but animation continues automatically
-      console.log('Email submitted:', email);
+      const encodedEmail = encodeURIComponent(email);
+      const url = `https://app.bolbaas.nl/registreren?email=${encodedEmail}`;
+      router.push(url);
     }
   };
 
@@ -226,9 +229,9 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 }}
-                          className="text-lg font-semibold text-green-600 mb-4"
+                          className="text-lg font-semibold text-[#111111] mb-4"
                         >
-                          Factuur is klaar!
+                          Klaar voor download
                         </motion.h4>
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
@@ -238,10 +241,10 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
                           <Button
                             onClick={handleDownload}
                             disabled={isDownloading}
-                            className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg text-sm cursor-pointer hover:cursor-pointer"
+                            className="bg-[#111111] hover:bg-black/80 text-white px-5 py-2 rounded-xl text-sm cursor-pointer hover:cursor-pointer"
                           >
                             <Download className="h-4 w-4 mr-2" />
-                            {isDownloading ? 'Downloaden...' : 'Factuur opslaan'}
+                            {isDownloading ? 'Downloaden...' : 'Download factuur'}
                           </Button>
                         </motion.div>
                       </motion.div>
