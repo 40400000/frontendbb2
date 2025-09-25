@@ -628,12 +628,12 @@ const pathname = usePathname();
                             : 'text-[#111111] group-hover:text-red-500'
                         }`}>
                           <KiteIcon variant="blue" size={9} />
-                          Gratis Bol factuur maken
+                          Gratis BTW factuur maken voor Bol
                         </div>
                         <div className={`text-[13px] leading-[16px] mt-1 ${
                           isDarkMode ? 'text-white/60' : 'text-[rgba(17,17,17,0.6)]'
                         }`}>
-                          Maak professionele facturen voor je Bol.com verkopen
+                          Maak professionele facturen voor je Bol bestellingen
                         </div>
                       </div>
                     </Link>
