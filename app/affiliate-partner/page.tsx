@@ -35,7 +35,7 @@ export default function AffiliatePartnerPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative z-20 w-full min-h-[100vh] md:min-h-[180vh] flex items-start justify-center pt-16 md:pt-28 pb-20 md:pb-32 bg-white text-[#111111] overflow-hidden px-4 md:px-6">
+      <section className="relative z-20 w-full flex items-start justify-center pt-16 md:pt-28 pb-20 md:pb-32 bg-white text-[#111111] overflow-hidden px-4 md:px-6">
         {/* Simple background */}
         <div className="absolute inset-0 w-full h-full bg-white" />
         
@@ -97,15 +97,7 @@ export default function AffiliatePartnerPage() {
                 </div>
               </div>
 
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 bg-white rounded-xl px-4 py-2 shadow-sm">
-                  <span className="text-2xl">💰</span>
-                  <div className="text-left">
-                    <div className="text-lg font-bold text-[#111111]">€12.000+</div>
-                    <div className="text-xs text-[#111111]/70">Totaal verdiend door partners</div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -160,157 +152,10 @@ export default function AffiliatePartnerPage() {
         </div>
       </section>
 
-      {/* Feature Grid */}
-      <section className="bg-white pb-8 md:pb-14 text-[#111111]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-2 md:gap-3">
-            {/* Commission Structure */}
-            <div className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Tot €200</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">Per succesvolle referral</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Commissie →</div>
-            </div>
 
-            {/* Recurring Revenue */}
-            <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-medium">30% recurring</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">Maandelijkse commissie</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Passive income →</div>
-            </div>
-
-            {/* Tracking Dashboard */}
-            <div className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Real-time</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">tracking dashboard</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Analytics →</div>
-            </div>
-
-            {/* Marketing Materials */}
-            <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Marketing kit</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">banners, content, links</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Materials →</div>
-            </div>
-
-            {/* Support */}
-            <div className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">24/7 support</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">dedicated team</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Help →</div>
-            </div>
-
-            {/* Custom Landing Pages */}
-            <div className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Custom pages</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">personalized landing</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Landing →</div>
-            </div>
-
-
-            {/* Payment Terms */}
-            <div className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Monthly payouts</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">via bank transfer</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Payments →</div>
-            </div>
-
-            {/* Performance Bonus */}
-            <div className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Performance bonus</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">extra rewards</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Bonus →</div>
-            </div>
-
-            {/* API Access */}
-            <div className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">API access</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">integration tools</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Developers →</div>
-            </div>
-
-            {/* Training Program */}
-            <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}>
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Training program</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">onboarding & support</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Education →</div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* Testimonial Section */}
-      <section className="bg-white py-12 md:py-22">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-            {/* Photo */}
-            <div className="flex-shrink-0">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <span className="text-2xl md:text-3xl font-medium text-blue-600">SB</span>
-              </div>
-            </div>
 
-            {/* Quote content */}
-            <div className="flex-1 text-center md:text-left">
-              <blockquote
-                className="text-[30px] md:text-[36px] leading-[34px] md:leading-[40px] text-[#111111] mb-2 md:mb-3"
-                style={{                  
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                }}
-              >
-                "Met Bolbaas verdien ik €1.200+ per maand door mijn community te helpen groeien."
-              </blockquote>
-
-              <div
-                className="text-[#111111]/60 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
-              >
-                Sarah van der Berg, Bol coach & affiliate partner
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Form Section */}
       <section className="bg-white py-16 md:py-24">
