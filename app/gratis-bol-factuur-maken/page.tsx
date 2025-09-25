@@ -82,6 +82,8 @@ export default function GratisBolFactuurMakenPage() {
   const [isUploadingLogo, setIsUploadingLogo] = useState(false)
   const [isDragOver, setIsDragOver] = useState(false)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
+  const [warningMessage, setWarningMessage] = useState('')
+  const [warningType, setWarningType] = useState<'error' | 'warning'>('error')
   
   // Collapsible sections state
   const [isBusinessInfoOpen, setIsBusinessInfoOpen] = useState(true)
@@ -128,6 +130,16 @@ export default function GratisBolFactuurMakenPage() {
 
   const removeLogo = () => {
     setLogoUrl('')
+    setWarningMessage('')
+  }
+
+  const showWarning = (message: string, type: 'error' | 'warning' = 'error') => {
+    setWarningMessage(message)
+    setWarningType(type)
+    // Auto-hide warning after 5 seconds
+    setTimeout(() => {
+      setWarningMessage('')
+    }, 5000)
   }
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -153,7 +165,7 @@ export default function GratisBolFactuurMakenPage() {
       if (file.type.startsWith('image/')) {
         await uploadFile(file)
       } else {
-        alert('Please upload an image file (JPEG, PNG, GIF, WebP, or SVG)')
+        showWarning('Please upload an image file (JPEG, PNG, GIF, WebP, or SVG)')
       }
     }
   }
@@ -168,12 +180,13 @@ export default function GratisBolFactuurMakenPage() {
       
       if (result.success && result.url) {
         setLogoUrl(result.url)
+        setWarningMessage('') // Clear any previous warnings on success
       } else {
-        alert(result.error || 'Upload failed')
+        showWarning(result.error || 'Upload failed')
       }
     } catch (error) {
       console.error('Upload error:', error)
-      alert('Failed to upload logo. Please try again.')
+      showWarning('Failed to upload logo. Please try again.')
     } finally {
       setIsUploadingLogo(false)
     }
@@ -313,6 +326,28 @@ export default function GratisBolFactuurMakenPage() {
                     )}
                   </CardContent>
                 </Card>
+
+                {/* Warning Message */}
+                {warningMessage && (
+                  <div className={`p-4 rounded-xl border ${
+                    warningType === 'error' 
+                      ? 'bg-red-50 border-red-200 text-red-800' 
+                      : 'bg-yellow-50 border-yellow-200 text-yellow-800'
+                  }`}>
+                    <div className="flex items-center gap-2">
+                      <div className={`w-2 h-2 rounded-full ${
+                        warningType === 'error' ? 'bg-red-500' : 'bg-yellow-500'
+                      }`} />
+                      <span className="text-sm font-medium">{warningMessage}</span>
+                      <button
+                        onClick={() => setWarningMessage('')}
+                        className="ml-auto text-gray-400 hover:text-gray-600"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
+                )}
 
                 {/* Business Information */}
                 <Card className="bg-white border border-gray-200 py-2">
