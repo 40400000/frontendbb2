@@ -51,7 +51,6 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
 
   const handleDownload = () => {
     onDownload();
-    onClose();
   };
 
   if (!isOpen) return null;

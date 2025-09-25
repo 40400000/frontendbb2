@@ -175,7 +175,7 @@ const pathname = usePathname();
       <div 
         className={`transition-all duration-500 ease-out ${
           isScrolled
-            ? `container mx-auto max-w-3xl rounded-xl shadow-lg ${
+            ? `container mx-auto max-w-5xl rounded-xl shadow-lg ${
                 isDarkMode 
                   ? 'bg-[#242323] border border-[#2D2C2B]' 
                   : 'bg-white/80 backdrop-blur-md border border-black/5'
