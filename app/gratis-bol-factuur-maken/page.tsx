@@ -862,7 +862,7 @@ export default function GratisBolFactuurMakenPage() {
           </div>
 
               {/* Preview Section */}
-              <div className="lg:w-1/2 lg:sticky lg:top-4 lg:self-start lg:max-h-[90vh] lg:overflow-y-auto">
+              <div className="lg:w-1/2 lg:sticky lg:top-20 lg:self-start lg:max-h-[90vh] lg:overflow-y-auto">
                 <Card className="bg-white border border-gray-200 py-2 gap-0">
                   <CardHeader className="py-2 px-4">
                     <div className="flex items-center justify-between">
