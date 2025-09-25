@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,16 +24,25 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: In
   const [animationPhase, setAnimationPhase] = useState<'creating' | 'ready'>('creating');
   const [email, setEmail] = useState("");
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      // Start the animation sequence
+  // Start animation automatically when dialog opens
+  useEffect(() => {
+    if (isOpen) {
       setAnimationPhase('creating');
       
       // After 3 seconds, show the ready state
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setAnimationPhase('ready');
       }, 3000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      // Email submitted, but animation continues automatically
+      console.log('Email submitted:', email);
     }
   };
 
