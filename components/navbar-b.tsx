@@ -566,6 +566,82 @@ const pathname = usePathname();
               )}
             </div>
 
+            {/* Gratis tools Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => {
+                setActiveDropdown('gratis-tools');
+                setIsHoveringDropdown(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveringDropdown(false);
+                setTimeout(() => {
+                  if (!isHoveringDropdown) {
+                    setActiveDropdown(null);
+                  }
+                }, 100);
+              }}
+            >
+              <button className={`flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-xl relative ${
+                activeDropdown === 'gratis-tools' 
+                  ? isDarkMode 
+                    ? 'bg-[#242323] border border-[#2D2C2B] shadow-sm text-white' 
+                    : 'bg-white/100 backdrop-blur-md shadow-sm text-black'
+                  : isDarkMode 
+                    ? 'hover:text-white/80' 
+                    : 'hover:text-black/80'
+              }`}>
+                Gratis tools
+                <ChevronDown className="h-3 w-3" />
+                {pathname.startsWith('/gratis-bol-factuur-maken') && (
+                  <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                    isDarkMode ? 'bg-white' : 'bg-[#111111]'
+                  }`} />
+                )}
+              </button>
+              {activeDropdown === 'gratis-tools' && (
+                <div
+                  className={`absolute top-full left-0 mt-2 w-[280px] border rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] z-50 overflow-hidden p-2 animate-in fade-in-0 zoom-in-95 duration-200 transition-all ${
+                    isDarkMode 
+                      ? 'bg-[#242323] border-[#2D2C2B]' 
+                      : 'bg-white/100 backdrop-blur-md border-black/5'
+                  }`}
+                  onMouseEnter={() => setIsHoveringDropdown(true)}
+                  onMouseLeave={() => {
+                    setIsHoveringDropdown(false);
+                    setActiveDropdown(null);
+                  }}
+                >
+                  <div className="flex flex-col gap-1.5 py-2">
+                    <Link
+                      href="/gratis-bol-factuur-maken"
+                      className={`group rounded-xl px-3 py-2.5 transition-all duration-200 cursor-pointer hover:bg-transparent animate-in fade-in-0 duration-300 ${
+                        isDarkMode 
+                          ? 'hover:bg-white/[0.05]' 
+                          : 'hover:bg-black/[0.03]'
+                      }`}
+                    >
+                      <div className="flex-1">
+                        <div className={`flex items-center gap-2 text-[14px] leading-[18px] font-medium transition-colors ${
+                          isDarkMode 
+                            ? 'text-white group-hover:text-red-400' 
+                            : 'text-[#111111] group-hover:text-red-500'
+                        }`}>
+                          <KiteIcon variant="blue" size={9} />
+                          Gratis Bol factuur maken
+                        </div>
+                        <div className={`text-[13px] leading-[16px] mt-1 ${
+                          isDarkMode ? 'text-white/60' : 'text-[rgba(17,17,17,0.6)]'
+                        }`}>
+                          Maak professionele facturen voor je Bol.com verkopen
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link href="/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 relative ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>

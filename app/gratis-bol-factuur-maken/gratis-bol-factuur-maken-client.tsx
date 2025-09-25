@@ -253,9 +253,21 @@ export function GratisBolFactuurMakenClient() {
         const blob = await response.blob()
         const downloadUrl = window.URL.createObjectURL(blob)
         
+        // Construct full factuurnummer like in the preview
+        const sampleData = getSampleData()
+        const currentDate = new Date()
+        const dutchMonths: { [key: number]: string } = {
+          0: 'JAN', 1: 'FEB', 2: 'MRT', 3: 'APR', 4: 'MEI', 5: 'JUN',
+          6: 'JUL', 7: 'AUG', 8: 'SEP', 9: 'OKT', 10: 'NOV', 11: 'DEC'
+        }
+        const fullFactuurnummer = (sampleData.invoicePrefix || 'FACT-{jaar}-{maand}-')
+          .replace('{jaar}', currentDate.getFullYear().toString())
+          .replace('{maand}', dutchMonths[currentDate.getMonth()]) + 
+          (sampleData.invoiceNumber || '0000001')
+        
         const link = document.createElement('a')
         link.href = downloadUrl
-        link.download = `factuur-${getSampleData().invoiceNumber}.pdf`
+        link.download = `${fullFactuurnummer}.pdf`
         link.style.display = 'none'
         document.body.appendChild(link)
         link.click()
