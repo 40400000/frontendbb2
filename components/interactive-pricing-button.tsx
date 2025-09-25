@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 interface InteractivePricingButtonProps {
@@ -9,7 +10,7 @@ interface InteractivePricingButtonProps {
 
 export function InteractivePricingButton({ href, children }: InteractivePricingButtonProps) {
   return (
-    <a 
+    <Link 
       href={href} 
       className="w-full bg-white text-[#1A1919] font-medium text-[15px] leading-[15px] py-4 px-6 rounded-xl hover:bg-white/90 transition-all duration-200 hover:scale-105 mb-8 block text-center relative group overflow-hidden"
       onMouseMove={(e) => {
@@ -37,6 +38,6 @@ export function InteractivePricingButton({ href, children }: InteractivePricingB
       <span className="cursor-emoji absolute top-2 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm pointer-events-none">
         🚀
       </span>
-    </a>
+    </Link>
   );
 }
