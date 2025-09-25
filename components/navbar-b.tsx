@@ -628,7 +628,7 @@ const pathname = usePathname();
                             : 'text-[#111111] group-hover:text-red-500'
                         }`}>
                           <KiteIcon variant="blue" size={9} />
-                          Gratis BTW factuur maken voor Bol
+                          BTW factuur maken
                         </div>
                         <div className={`text-[13px] leading-[16px] mt-1 ${
                           isDarkMode ? 'text-white/60' : 'text-[rgba(17,17,17,0.6)]'
