@@ -12,7 +12,7 @@ import { Separator } from '@/components/ui/separator'
 import { Plus, Trash2, ChevronDown, ChevronUp, Upload, X, Eye, X as CloseIcon } from 'lucide-react'
 import { KiteIcon } from '@/components/ui/kite-icon'
 import { uploadLogo } from '@/app/actions/upload-logo'
-
+//kijk hier
 interface BusinessInfo {
   bedrijfsnaam: string
   adres: string
