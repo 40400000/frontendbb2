@@ -924,13 +924,12 @@ export function GratisBolFactuurMakenClient() {
                       <div className="flex items-center gap-2">
                         <Button
                           onClick={handleDownloadButtonClick}
-                          disabled={isDownloading}
                           variant="outline"
                           size="sm"
                           className="rounded-xl cursor-pointer hover:cursor-pointer"
                         >
                           <Download className="h-4 w-4 mr-2" />
-                          {isDownloading ? 'Genereren...' : 'Download'}
+                          Download
                         </Button>
                         <Button
                           onClick={() => setIsPreviewOpen(true)}
@@ -978,13 +977,12 @@ export function GratisBolFactuurMakenClient() {
               <div className="flex items-center gap-2">
                 <Button
                   onClick={handleDownloadButtonClick}
-                  disabled={isDownloading}
                   variant="outline"
                   size="sm"
                   className="rounded-xl cursor-pointer hover:cursor-pointer"
                 >
                   <Download className="h-4 w-4 mr-2" />
-                  {isDownloading ? 'Genereren...' : 'Download'}
+                  Download
                 </Button>
                 <Button
                   onClick={() => setIsPreviewOpen(false)}
