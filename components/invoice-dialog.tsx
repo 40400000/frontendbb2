@@ -19,26 +19,24 @@ interface InvoiceDialogProps {
   onClose: () => void;
   onDownload: () => void;
   isDownloading: boolean;
+  isReady?: boolean;
 }
 
-export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading }: InvoiceDialogProps) {
+export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading, isReady = false }: InvoiceDialogProps) {
   const [animationPhase, setAnimationPhase] = useState<'creating' | 'ready'>('creating');
   const [email, setEmail] = useState("");
   const router = useRouter();
 
-  // Start animation automatically when dialog opens
+  // Update animation phase based on actual processing state
   useEffect(() => {
     if (isOpen) {
-      setAnimationPhase('creating');
-      
-      // After 3 seconds, show the ready state
-      const timer = setTimeout(() => {
+      if (isReady) {
         setAnimationPhase('ready');
-      }, 3000);
-      
-      return () => clearTimeout(timer);
+      } else {
+        setAnimationPhase('creating');
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, isReady]);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();

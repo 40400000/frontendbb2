@@ -146,12 +146,12 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
-                  <a 
+                  <Link 
                     href="https://app.bolbaas.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -160,10 +160,17 @@ export default function AutomatiseringPage() {
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
-                  </a>
+                  </Link>
                 </Button>
 
-
+                <Button 
+                  asChild
+                  className="bg-transparent border border-[#111111]/30 text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/5 hover:border-[#111111]/50 transition-colors px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
+                >
+                  <Link href="/gratis-bol-factuur-maken">
+                    <span>Gratis factuur maken</span>
+                  </Link>
+                </Button>
               </div>
             </div>
 
@@ -399,7 +406,7 @@ export default function AutomatiseringPage() {
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
-                  <a 
+                  <Link 
                     href="https://app.bolbaas.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -408,9 +415,8 @@ export default function AutomatiseringPage() {
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
-                  </a>
+                  </Link>
                 </Button>
-
               </div>
             </div>
           </div>
@@ -599,12 +605,12 @@ export default function AutomatiseringPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 justify-start">
                 <Button 
                   asChild
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
-                  <a 
+                  <Link 
                     href="https://app.bolbaas.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -613,7 +619,16 @@ export default function AutomatiseringPage() {
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
-                  </a>
+                  </Link>
+                </Button>
+
+                <Button 
+                  asChild
+                  className="bg-transparent border border-[#111111]/30 text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/5 hover:border-[#111111]/50 transition-colors px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
+                >
+                  <Link href="/gratis-bol-factuur-maken">
+                    <span>Gratis factuur maken</span>
+                  </Link>
                 </Button>
               </div>
             </div>

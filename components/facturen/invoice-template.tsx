@@ -61,8 +61,8 @@ export default function InvoiceTemplate({ isKorEnabled = false, customRule, invo
         <div className="p-8 h-full overflow-y-auto flex flex-col">
           {/* Header */}
           <div className="flex justify-between mb-12">
-            <div className="w-32 h-32 font-sans">
-              {logoUrl && <Image src={logoUrl} alt="Logo" width={128} height={128} />}
+            <div className="w-32 h-32 font-sans flex items-start justify-start">
+              {logoUrl && <Image src={logoUrl} alt="Logo" width={128} height={128} className="object-contain" />}
             </div>
             <div className="text-right">
               <h1 className="text-xl font-semibold mb-2 text-black dark:text-black">{businessInfo?.bedrijfsnaam || 'Bedrijfsnaam'}</h1>

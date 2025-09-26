@@ -93,6 +93,8 @@ export function GratisBolFactuurMakenClient() {
   const [warningMessage, setWarningMessage] = useState('')
   const [warningType, setWarningType] = useState<'error' | 'warning'>('error')
   const [isDownloading, setIsDownloading] = useState(false)
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
+  const [downloadFilename, setDownloadFilename] = useState('')
   
   // Collapsible sections state
   const [isBusinessInfoOpen, setIsBusinessInfoOpen] = useState(true)
@@ -198,8 +200,10 @@ export function GratisBolFactuurMakenClient() {
     }
   }
 
-  const handleDownload = async () => {
+  const processInvoice = async () => {
     setIsDownloading(true)
+    setDownloadUrl(null)
+    setDownloadFilename('')
     
     try {
       const invoiceData = generateInvoiceData()
@@ -260,7 +264,7 @@ export function GratisBolFactuurMakenClient() {
           });
         }
         
-        // Download the file using fetch to ensure it's downloaded, not opened
+        // Fetch the file and create blob URL
         const response = await fetch(result.url)
         const blob = await response.blob()
         const downloadUrl = window.URL.createObjectURL(blob)
@@ -277,17 +281,11 @@ export function GratisBolFactuurMakenClient() {
           .replace('{maand}', dutchMonths[currentDate.getMonth()]) + 
           (sampleData.invoiceNumber || '0000001')
         
-        const link = document.createElement('a')
-        link.href = downloadUrl
-        link.download = `${fullFactuurnummer}.pdf`
-        link.style.display = 'none'
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
+        // Store the download info for later use
+        setDownloadUrl(downloadUrl)
+        setDownloadFilename(`${fullFactuurnummer}.pdf`)
         
-        // Clean up the blob URL
-        window.URL.revokeObjectURL(downloadUrl)
-        console.log('📥 Download initiated')
+        console.log('📥 Download prepared and ready')
       } else {
         console.error('❌ API returned unsuccessful response:', result)
         showWarning(`Failed to generate invoice: ${result.message || 'Unknown error'}`)
@@ -316,8 +314,42 @@ export function GratisBolFactuurMakenClient() {
         showWarning(`Failed to download invoice: ${errorObj.message}`)
       }
     } finally {
-      console.log('🏁 Download process finished')
+      console.log('🏁 Invoice processing finished')
       setIsDownloading(false)
+    }
+  }
+
+  const handleDownload = () => {
+    if (downloadUrl && downloadFilename) {
+      const link = document.createElement('a')
+      link.href = downloadUrl
+      link.download = downloadFilename
+      link.style.display = 'none'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      
+      // Clean up the blob URL after download
+      window.URL.revokeObjectURL(downloadUrl)
+      setDownloadUrl(null)
+      setDownloadFilename('')
+      setIsDialogOpen(false)
+      console.log('📥 Download initiated')
+    }
+  }
+
+  const handleDownloadButtonClick = async () => {
+    setIsDialogOpen(true)
+    await processInvoice()
+  }
+
+  const handleDialogClose = () => {
+    setIsDialogOpen(false)
+    // Clean up any existing download URL when dialog closes
+    if (downloadUrl) {
+      window.URL.revokeObjectURL(downloadUrl)
+      setDownloadUrl(null)
+      setDownloadFilename('')
     }
   }
 
@@ -891,7 +923,7 @@ export function GratisBolFactuurMakenClient() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Button
-                          onClick={() => setIsDialogOpen(true)}
+                          onClick={handleDownloadButtonClick}
                           disabled={isDownloading}
                           variant="outline"
                           size="sm"
@@ -945,7 +977,7 @@ export function GratisBolFactuurMakenClient() {
               <h2 className="text-xl font-semibold text-[#111111]">Factuur Preview</h2>
               <div className="flex items-center gap-2">
                 <Button
-                  onClick={() => setIsDialogOpen(true)}
+                  onClick={handleDownloadButtonClick}
                   disabled={isDownloading}
                   variant="outline"
                   size="sm"
@@ -985,9 +1017,10 @@ export function GratisBolFactuurMakenClient() {
       {/* Invoice Dialog */}
       <InvoiceDialog
         isOpen={isDialogOpen}
-        onClose={() => setIsDialogOpen(false)}
+        onClose={handleDialogClose}
         onDownload={handleDownload}
         isDownloading={isDownloading}
+        isReady={!isDownloading && !!downloadUrl}
       />
     </>
   )
