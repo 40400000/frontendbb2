@@ -323,7 +323,7 @@ export default function HomePage() {
 
                 {/* Subtitle */}
                 <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
+                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. Een van de grootste databases voor bol.
                 </p>
               </div>
 
@@ -352,7 +352,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-2xl px-4 md:px-6">
           <h2 className="text-center text-[28px] md:text-4xl lg:text-5xl leading-[32px] md:leading-[44px] lg:leading-[52px] font-normal text-[#111111] mb-8 md:mb-12 lg:mb-16">
             3 gebieden waar Bolbaas <br/>
-            <em>domineert</em> over Bolmate
+            <em>meer functies biedt</em> dan Bolmate
           </h2>
 
           <div className="space-y-0">
@@ -360,21 +360,21 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Goedkoper én onbeperkt orders, e-mails en facturen"
               bolbaasContent="Bij Bolbaas betaal je slechts €12 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
-              bolmateContent="Bolmate rekent op basis van de aantal orders en de kosten kunnen oplopen tot €69 per maand (voor onbeperkt orders) als je store groeit . Naarmate je meer orders verwerkt, stijgen je kosten exponentieel - precies wanneer je als ondernemer wilt besparen op vaste kosten."
+              bolmateContent="Bolmate rekent op basis van het aantal orders en de kosten kunnen oplopen tot €69 per maand voor onbeperkt orders (op basis van hun prijspagina, september 2025). Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
               title="Complete product research suite vs alleen zoekvolume"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bolmate heeft minder vergaande research tools. Geen keyword database, product rank tracking, etc. Hierdoor moet je misschien externe tools gebruiken, wat extra kosten en complexiteit betekent."
+              bolmateContent="Bolmate biedt zoekvolume-inzichten en basis research functionaliteiten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn mogelijk externe tools nodig."
             />
 
             {/* Item 3 */}
             <ComparisonAccordionItem 
               title="Uitgebreide store prestatie-analyse vs basis informatie"
               bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, en levering tracking. Krijg het volledige overzicht van je store prestaties om betere beslissingen te maken."
-              bolmateContent="Bolmate mist essentiële store prestatie tools: geen levering tracker, geen custom dashboards, beperkte product inzichten, en geen voorraad of sales voorspellingen. Je krijgt alleen basis rapportage zonder de diepgaande analytics die je nodig hebt om je store te optimaliseren."
+              bolmateContent="Bolmate bevat op dit moment geen levering tracker, custom dashboards of voorraadvoorspellingen. Het platform biedt basis rapportage en product inzichten voor je store prestaties."
             />
           </div>
         </div>
@@ -1307,7 +1307,7 @@ export default function HomePage() {
               Bolbaas Plus vergeleken met Bolmate 200 orders abonnement
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
-              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op de limieten van het €15 abonnement van Bolmate.
+              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op de limieten van het €15 abonnement van Bolmate (op basis van hun prijspagina, september 2025).
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
               Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
