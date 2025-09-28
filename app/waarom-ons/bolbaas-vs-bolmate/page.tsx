@@ -1,14 +1,10 @@
 import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import Image from "next/image";
 import { KiteIcon } from "@/components/ui/kite-icon";
-import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaGoogle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
-import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import { EmailSignupForm } from "@/components/email-signup-form";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 import AnimatedMovingBadges from "@/components/animated-moving-badges";
@@ -128,7 +124,6 @@ export default function HomePage() {
               <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
 
               <span className="mx-1">VS</span>
-              <Image src="/BOLMATELOGO.png" alt="Bolmate" width={32} height={32} />
               BOLMATE
             </div>
             
@@ -155,7 +150,7 @@ export default function HomePage() {
           {/* Feature Cards Grid */}
           <div className="container max-w-6xl mx-auto mt-12 md:mt-16">
             <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/60 mb-3 md:mb-4">
-              Waarom mensen voor Bolbaas kiezen
+              Waarom mensen voor Bolbaas kiezen¹
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4">
               {/* Card 1 - Pink Background */}
@@ -192,6 +187,13 @@ export default function HomePage() {
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">ondersteuning</div>
                 <div className="text-xs md:text-sm text-[#111111]/70">die je elke stap begeleidt.</div>
               </div>
+            </div>
+            
+            {/* Disclaimer */}
+            <div className="mt-6 md:mt-8 text-center">
+              <p className="text-[11px] md:text-xs text-[#111111]/50">
+                ¹ Dit zijn algemene feiten die niet vergeleken worden met Bolmate
+              </p>
             </div>
           </div>
 
@@ -693,7 +695,6 @@ export default function HomePage() {
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
-                    <Image src="/BOLMATELOGO.png" alt="Bolmate" width={24} height={24} className="md:w-8 md:h-8" />
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
                       BOLMATE
                     </span>
@@ -711,7 +712,7 @@ export default function HomePage() {
                 <div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
                     <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
-                      Aantal orders
+                      Aantal orders²
                       <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Het aantal orders dat verwerkt kan worden.</div>
                     </div>
                     
@@ -726,7 +727,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">200</span>
@@ -744,7 +744,7 @@ export default function HomePage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
                     <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
-                      Aantal stores
+                      Aantal stores²
                       <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Maximum aantal gekoppelde bol stores per account.</div>
                     </div>
                     
@@ -759,7 +759,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">1</span>
@@ -799,7 +798,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -829,7 +827,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -859,7 +856,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -889,7 +885,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -919,7 +914,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -949,10 +943,9 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
-                        <GeenACoSBadge />
+                        <YesBadge />
                       </div>
                     </div>
                     
@@ -961,7 +954,7 @@ export default function HomePage() {
                       <YesBadge />
                     </div>
                     <div className="hidden md:block text-center">
-                      <GeenACoSBadge />
+                      <YesBadge />
                     </div>
                   </div>
 
@@ -979,7 +972,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -1019,7 +1011,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <YesBadge />
@@ -1049,7 +1040,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <YesBadge />
@@ -1066,7 +1056,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Aantal e-mails en facturen</div>
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Aantal e-mails en facturen²</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-2 gap-3">
@@ -1079,7 +1069,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
@@ -1109,7 +1098,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <YesBadge />
@@ -1139,7 +1127,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -1179,7 +1166,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -1209,7 +1195,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <YesBadge />
@@ -1239,7 +1224,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <BeperktereInzichtenBadge />
@@ -1269,7 +1253,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -1299,7 +1282,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/BOLMATELOGO.png" alt="Bolmate" width={16} height={16} />
                           <span>Bolmate</span>
                         </div>
                         <NoBadge />
@@ -1323,6 +1305,12 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
               Bolbaas Plus vergeleken met Bolmate 200 orders abonnement
+            </p>
+            <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
+              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op de limieten van het €15 abonnement van Bolmate.
+            </p>
+            <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
+              Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
             </p>
           </div>
         </div>
