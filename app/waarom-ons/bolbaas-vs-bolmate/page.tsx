@@ -360,21 +360,21 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Goedkoper én onbeperkt orders, e-mails en facturen"
               bolbaasContent="Bij Bolbaas betaal je slechts €12 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
-              bolmateContent="Bolmate rekent op basis van het aantal orders en de kosten kunnen oplopen tot €69 per maand voor onbeperkt orders (op basis van hun prijspagina, september 2025). Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
+              bolmateContent="Bolmate berekent de abonnementprijs op basis van het aantal orders dat wordt verwerkt. Deze kosten kunnen oplopen tot €69 per maand voor onbeperkt orders. Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
-              title="Complete product research suite vs alleen zoekvolume"
+              title="Complete product research suite"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bolmate biedt zoekvolume-inzichten en basis research functionaliteiten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn mogelijk externe tools nodig."
+              bolmateContent="Deze tool biedt prima zoekvolume-inzichten en basis research functionaliteiten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn wellicht externe tools nodig."
             />
 
             {/* Item 3 */}
             <ComparisonAccordionItem 
-              title="Uitgebreide store prestatie-analyse vs basis informatie"
+              title="Uitgebreide store prestatie-analyse"
               bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, en levering tracking. Krijg het volledige overzicht van je store prestaties om betere beslissingen te maken."
-              bolmateContent="Bolmate bevat op dit moment geen levering tracker, custom dashboards of voorraadvoorspellingen. Het platform biedt basis rapportage en product inzichten voor je store prestaties."
+              bolmateContent="Deze tool bevat geen levering tracker, custom dashboards of voorraadvoorspellingen, etc.. Het biedt meestal basis rapportage en product inzichten voor je store prestaties."
             />
           </div>
         </div>

@@ -11,6 +11,37 @@ import { ScrollVideoEffect } from "@/components/scroll-video-effect";
 import { Animatedbadge } from "@/components/animatedbadge";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 
+export const metadata = {
+  title: "Bolbaas - AI software voor bol.com partners | Automatisering & Keyword Research",
+  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
+  keywords: [
+    "bol.com partner software",
+    "bol automatisering", 
+    "keyword research bol",
+    "product tracking bol",
+    "email automatisering bol",
+    "factuur automatisering",
+    "BTW facturen bol",
+    "bol store management",
+    "AI tools bol partners",
+    "bol data analyse",
+    "ranking optimalisatie bol",
+    "bol omzet verhogen"
+  ],
+  openGraph: {
+    title: "Bolbaas - AI software voor bol.com partners",
+    description: "Automatiseer je bol.com store met AI: emails, facturen, keyword research en product tracking. 12M+ keywords database. Probeer 1 maand gratis.",
+    images: [
+      {
+        url: "https://bolbaas.nl/icon-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Bolbaas - AI software voor bol.com partners"
+      }
+    ]
+  }
+};
+
 export default function HomePage() {
 
   return (
@@ -102,11 +133,11 @@ export default function HomePage() {
             </div>
 
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-              De <em className="italic">AI</em> software oplossing voor bol partners.
+              De <em className="italic">AI</em> software oplossing voor Bol partners.
             </h1>
 
             <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-6 md:mb-8">
-              Automatiseer je bol‑store, krijg data‑inzichten en groei sneller.
+              Automatiseer je Bol store, krijg data‑inzichten en groei sneller met AI.
             </p>
 
             <EmailSignupForm 
@@ -133,6 +164,8 @@ export default function HomePage() {
                 alt="Lucas van gasteren"
                 width={128}
                 height={128}
+                priority
+                sizes="(max-width: 768px) 112px, 128px"
                 className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
               />
             </div>
@@ -429,11 +462,13 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-4">
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/databasen6.png"
-                alt="Database screenshot"
+                src="/db-1.png"
+                alt="Bolbaas keyword database screenshot showing 12 million+ keywords with CPC data for bol.com product research"
                 width={1200}
                 height={675}
-                quality={95}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                loading="lazy"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -456,12 +491,14 @@ export default function HomePage() {
             {/* Left Video */}
             <div className="relative order-last lg:order-first -mx-2 md:mx-0">
               <video
-                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
+                src="/email_movie.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="rounded-xl w-full h-auto drop-shadow-lg"
+                aria-label="Email automation demo showing automatic email campaigns for bol.com partners"
               >
                 Your browser does not support the video tag.
               </video>
@@ -548,12 +585,14 @@ export default function HomePage() {
             {/* Right Video */}
             <div className="relative -mx-2 md:mx-0">
               <video
-                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
+                src="/facturen_movie.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="rounded-xl w-full h-auto drop-shadow-lg"
+                aria-label="BTW factuur automation demo showing automatic invoice uploads to bol.com"
               >
                 Your browser does not support the video tag.
               </video>

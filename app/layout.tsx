@@ -21,6 +21,7 @@ const labilGrotesk = localFont({
   variable: "--font-geist-sans",
   display: "swap",
   weight: "100 900",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
@@ -31,6 +32,8 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     default: "Bolbaas - data en automatisering voor bol partners",
     template: "%s",
   },
-  description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
+  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
   robots: {
     index: true,
     follow: true,
@@ -61,10 +64,10 @@ export const metadata: Metadata = {
     siteName: "Bolbaas",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
-        width: 1200, // Provide actual width if known
-        height: 630, // Provide actual height if known
-        alt: 'Bolbaas Open Graph Image',
+        url: 'https://bolbaas.nl/icon-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'Bolbaas - AI software voor bol partners',
       },
     ],
     type: 'website',
@@ -76,7 +79,7 @@ export const metadata: Metadata = {
       template: "%s - Bolbaas",
     },
     description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'], // Must be an absolute URL
+    images: ['https://bolbaas.nl/icon-512x512.png'], // Must be an absolute URL
   },
   manifest: '/manifest.webmanifest',
   icons: {
@@ -100,7 +103,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="nl" suppressHydrationWarning>
+      <head>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+      </head>
       <body className={`${labilGrotesk.className} ${geistMono.variable} ${inter.variable} font-sans antialiased overflow-x-hidden bg-[#F6F5F3] text-[#111111]  dark:text-white`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <ThemeHandler />
@@ -141,12 +148,56 @@ export default function RootLayout({
           id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Bolbaas",
-              url: "https://bolbaas.nl/",
-            }),
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Bolbaas",
+                url: "https://bolbaas.nl/",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://bolbaas.nl/features/tools#bolbaas-database?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Bolbaas",
+                url: "https://bolbaas.nl/",
+                logo: "https://bolbaas.nl/icon-512x512.png",
+                sameAs: [],
+                description: "AI-gedreven software voor bol.com partners: automatisering, keyword research, product tracking en store management tools.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "NL"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                name: "Bolbaas",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web Browser",
+                offers: {
+                  "@type": "Offer",
+                  price: "12.00",
+                  priceCurrency: "EUR",
+                  priceValidUntil: "2025-12-31",
+                  availability: "https://schema.org/InStock"
+                },
+                description: "Complete automatiseringsoplossing voor bol.com partners met AI-tools, keyword database en store management.",
+                featureList: [
+                  "Email automatisering",
+                  "BTW factuur automatisering", 
+                  "12M+ keyword database",
+                  "Product tracking",
+                  "Ranking AI",
+                  "Custom dashboards",
+                  "Sales voorspellingen"
+                ]
+              }
+            ]),
           }}
         />
       </body>

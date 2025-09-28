@@ -77,7 +77,7 @@ export function ScrollVideoEffect() {
           playsInline
           preload="metadata"
         >
-          <source src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/HEROMOVIE.mp4" type="video/mp4" />
+          <source src="/hero_movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
