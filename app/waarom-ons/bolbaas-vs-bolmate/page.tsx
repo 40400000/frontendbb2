@@ -360,14 +360,14 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Goedkoper én onbeperkt orders, e-mails en facturen"
               bolbaasContent="Bij Bolbaas betaal je slechts €12 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
-              bolmateContent="Bolmate rekent per order en de kosten kunnen oplopen tot €69 per maand als je store groeit. Naarmate je meer orders verwerkt, stijgen je kosten exponentieel - precies wanneer je als ondernemer wilt besparen op vaste kosten."
+              bolmateContent="Bolmate rekent op basis van de aantal orders en de kosten kunnen oplopen tot €69 per maand als je store groeit. Naarmate je meer orders verwerkt, stijgen je kosten exponentieel - precies wanneer je als ondernemer wilt besparen op vaste kosten."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
               title="Complete product research suite vs alleen zoekvolume"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bolmate beperkt zich tot alleen zoekvolume bekijken. Ze missen essentiële tools zoals concurrentie-analyse, ranking optimalisatie, A/B testing, en winstberekeningen. Voor échte product research moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
+              bolmateContent="Bolmate beperkt zich tot alleen zoekvolume bekijken. Ze missen essentiële tools zoals een keyword database, ranking optimalisatie, A/B testing, etc.. Voor échte product research moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
             />
 
             {/* Item 3 */}
