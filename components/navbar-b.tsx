@@ -717,6 +717,10 @@ const pathname = usePathname();
           <button
             className={`md:hidden p-1 ${isDarkMode ? 'text-white' : 'text-[#111111]'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Sluit menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            type="button"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center relative">
               <span className={`block h-[1.5px] w-5 bg-current rounded-xl transform transition-all duration-300 ease-in-out absolute ${
@@ -731,11 +735,16 @@ const pathname = usePathname();
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`md:hidden ${
-            isDarkMode 
-              ? 'bg-[#111111]' 
-              : 'bg-white'
-          }`}>
+          <div 
+            id="mobile-menu"
+            className={`md:hidden ${
+              isDarkMode 
+                ? 'bg-[#111111]' 
+                : 'bg-white'
+            }`}
+            role="navigation"
+            aria-label="Mobiele navigatie"
+          >
             <div className="flex flex-col">
               {/* Functies Section */}
               <div className={`border-b ${

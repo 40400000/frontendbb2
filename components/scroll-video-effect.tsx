@@ -7,11 +7,23 @@ export function ScrollVideoEffect() {
   const [scale, setScale] = useState(1);
   const [translateX, setTranslateX] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [videoSrc, setVideoSrc] = useState('/hero_movie.mp4');
 
   useEffect(() => {
-    // Check if device is mobile
+    // Check if device is mobile and set appropriate video source
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const isMobileDevice = window.innerWidth < 768;
+      const isSlowConnection = 'connection' in navigator && (navigator as any).connection?.effectiveType === '2g';
+      
+      setIsMobile(isMobileDevice);
+      
+      // Use lower quality on mobile or slow connections
+      if (isMobileDevice || isSlowConnection) {
+        // You can create a compressed version: hero_movie_mobile.mp4
+        setVideoSrc('/hero_movie.mp4'); // For now, same file
+      } else {
+        setVideoSrc('/hero_movie.mp4');
+      }
     };
     
     checkMobile();
@@ -70,14 +82,15 @@ export function ScrollVideoEffect() {
         }}
       >
         <video
+          key={videoSrc} // Force re-render when source changes
           className="w-full h-auto aspect-video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
+          src={videoSrc}
         >
-          <source src="/hero_movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

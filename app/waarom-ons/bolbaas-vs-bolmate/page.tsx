@@ -142,14 +142,14 @@ export default function HomePage() {
                 <IoStar className="h-4 w-4 text-[#111111]" />
                 <IoStar className="h-4 w-4 text-[#111111]" />
               </div>
-              <span className="text-[#111111]/30">|</span>
+              <span className="text-[#111111]/50">|</span>
               <span>Tevreden partners</span>
             </div>
           </div>
 
           {/* Feature Cards Grid */}
           <div className="container max-w-6xl mx-auto mt-12 md:mt-16">
-            <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/60 mb-3 md:mb-4">
+            <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/75 mb-3 md:mb-4">
               Waarom mensen voor Bolbaas kiezen¹
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4">
@@ -157,41 +157,41 @@ export default function HomePage() {
               <div className="bg-pink-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">12M+</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">keywords</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">in onze uitgebreide database.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">in onze uitgebreide database.</div>
               </div>
 
               {/* Card 2 - Light Gray Background */}
               <div className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">Tevreden</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">partners</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">vertrouwen onze automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">vertrouwen onze automatisering.</div>
               </div>
 
               {/* Card 3 - Yellow Background */}
               <div className="bg-yellow-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">3x</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">snellere groei</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">met AI-gedreven inzichten & automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">met AI-gedreven inzichten & automatisering.</div>
               </div>
 
               {/* Card 4 - Light Gray Background */}
               <div className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">10+</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">uren bespaard</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">per week met store automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">per week met store automatisering.</div>
               </div>
 
               {/* Card 5 - Light Purple Background */}
               <div className="bg-purple-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">5-sterren</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">ondersteuning</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">die je elke stap begeleidt.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">die je elke stap begeleidt.</div>
               </div>
             </div>
             
             {/* Disclaimer */}
             <div className="mt-6 md:mt-8 text-center">
-              <p className="text-[11px] md:text-xs text-[#111111]/50">
+              <p className="text-[11px] md:text-xs text-[#111111]/70">
                 ¹ Dit zijn algemene feiten die niet vergeleken worden met Bolmate
               </p>
             </div>
@@ -225,19 +225,19 @@ export default function HomePage() {
                 <div className="space-y-2 md:space-y-3 max-w-2xl">
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       E-mail automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       Factuur automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       BTW automatisering
                     </span>
                   </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
               </blockquote>
 
               <div
-                className="text-white/60 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
+                className="text-white/80 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
               >
                 Lucas van gasteren, bol partner
               </div>
@@ -322,7 +322,7 @@ export default function HomePage() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
+                <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-2xl">
                   Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. Een van de grootste databases voor bol.
                 </p>
               </div>
@@ -360,7 +360,7 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Goedkoper én onbeperkt orders, e-mails en facturen"
               bolbaasContent="Bij Bolbaas betaal je slechts €12 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
-              bolmateContent="Bolmate berekent de abonnementprijs op basis van het aantal orders dat wordt verwerkt. Deze kosten kunnen oplopen tot €69 per maand voor onbeperkt orders. Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
+              bolmateContent="Bolmate berekent de abonnementsprijs op basis van het aantal orders dat wordt verwerkt. Deze kosten kunnen oplopen tot €69 per maand voor onbeperkt orders. Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
             />
 
             {/* Item 2 */}
@@ -412,7 +412,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Verhoog reviews en voorkom klantvragen.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
                 </p>
               </div>
@@ -454,7 +454,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                  Automatisch BTW facturen uploaden naar bol.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
                 </p>
               </div>

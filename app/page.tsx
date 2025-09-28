@@ -136,7 +136,7 @@ export default function HomePage() {
               De <em className="italic">AI</em> software oplossing voor Bol partners.
             </h1>
 
-            <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-6 md:mb-8">
+            <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-80 mb-6 md:mb-8">
               Automatiseer je Bol store, krijg data‑inzichten en groei sneller met AI.
             </p>
 
@@ -182,7 +182,7 @@ export default function HomePage() {
               </blockquote>
 
               <div
-                className="text-[#111111]/60 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
+                className="text-[#111111]/75 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
               >
                 Lucas van gasteren, bol partner
               </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
                 <KiteIcon variant="blue" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Database: 12M keywords</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">+ CPC data</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">+ CPC data</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Database →</div>
             </Link>
 
@@ -221,7 +221,7 @@ export default function HomePage() {
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-medium">Review e‑mails</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch versturen</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">automatisch versturen</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">E‑mail automatisering →</div>
             </Link>
 
@@ -236,7 +236,7 @@ export default function HomePage() {
                 <KiteIcon variant="blue" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Ranking AI</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">listing optimalisatie</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">listing optimalisatie</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">AI tools →</div>
             </Link>
 
@@ -245,7 +245,7 @@ export default function HomePage() {
               <p className="text-[16px] md:text-[18px] leading-[22px] md:leading-[24px]">
                 "Bolbaas biedt alle software die je nodig hebt als bol partner."
               </p>
-              <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/60">Lucas van gasteren — bol partner</p>
+              <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/75">Lucas van gasteren — bol partner</p>
             </div>
 
             {/* BTW Facturen */}
@@ -259,7 +259,7 @@ export default function HomePage() {
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">BTW facturen</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch uploaden</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">automatisch uploaden</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Automatisering →</div>
             </Link>
 
@@ -274,7 +274,7 @@ export default function HomePage() {
                 <KiteIcon variant="blue" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Product tracking</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">prijs, ranking, voorraad</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">prijs, ranking, voorraad</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Tracking →</div>
             </Link>
 
@@ -289,7 +289,7 @@ export default function HomePage() {
                 <KiteIcon variant="purple" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Custom dashboards</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">sales data op maat</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">sales data op maat</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Dashboards →</div>
             </Link>
 
@@ -304,7 +304,7 @@ export default function HomePage() {
                 <KiteIcon variant="purple" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Voorspellingen</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">stock & sales en omzet</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">stock & sales en omzet</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Forecasting →</div>
             </Link>
 
@@ -319,7 +319,7 @@ export default function HomePage() {
                 <KiteIcon variant="blue" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Winst calculator</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">+ ACoS berekening</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">+ ACoS berekening</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Calculator →</div>
             </Link>
 
@@ -334,7 +334,7 @@ export default function HomePage() {
                 <KiteIcon variant="blue" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">A/B testing</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">listing varianten</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">listing varianten</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Testing →</div>
             </Link>
 
@@ -349,7 +349,7 @@ export default function HomePage() {
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Baaspilot</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">altijd op de hoogte</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">altijd op de hoogte</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Notificaties →</div>
             </Link>
 
@@ -364,7 +364,7 @@ export default function HomePage() {
                 <KiteIcon variant="purple" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">Bestellingen en product analyse</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">gedetailleerd overzicht</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">gedetailleerd overzicht</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Bestellingen →</div>
             </Link>
 
@@ -396,19 +396,19 @@ export default function HomePage() {
                 <div className="space-y-2 md:space-y-3 max-w-2xl">
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       E-mail automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       Factuur automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       BTW automatisering
                     </span>
                   </div>
@@ -453,7 +453,7 @@ export default function HomePage() {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Product research <br/> op een <i>nieuw</i> niveau.</h2>
-          <p className="mx-auto text-white/80 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
+          <p className="mx-auto text-white/85 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
           Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
         </div>
 
@@ -491,7 +491,6 @@ export default function HomePage() {
             {/* Left Video */}
             <div className="relative order-last lg:order-first -mx-2 md:mx-0">
               <video
-                src="/email_movie.mp4"
                 autoPlay
                 loop
                 muted
@@ -500,6 +499,7 @@ export default function HomePage() {
                 className="rounded-xl w-full h-auto drop-shadow-lg"
                 aria-label="Email automation demo showing automatic email campaigns for bol.com partners"
               >
+                <source src="/email_movie.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -517,7 +517,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Verhoog reviews en voorkom klantvragen.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
                 </p>
               </div>
@@ -561,7 +561,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                  Automatisch BTW facturen uploaden naar bol.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
                 </p>
               </div>
@@ -585,7 +585,6 @@ export default function HomePage() {
             {/* Right Video */}
             <div className="relative -mx-2 md:mx-0">
               <video
-                src="/facturen_movie.mp4"
                 autoPlay
                 loop
                 muted
@@ -594,6 +593,7 @@ export default function HomePage() {
                 className="rounded-xl w-full h-auto drop-shadow-lg"
                 aria-label="BTW factuur automation demo showing automatic invoice uploads to bol.com"
               >
+                <source src="/facturen_movie.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
