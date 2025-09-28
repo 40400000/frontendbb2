@@ -367,7 +367,7 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Complete product research suite vs alleen zoekvolume"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bolmate beperkt zich tot alleen zoekvolume bekijken. Ze missen essentiële tools zoals een keyword database, ranking optimalisatie, A/B testing, etc.. Voor échte product research moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
+              bolmateContent="Bolmate heeft minder vergaande research tools. Geen keyword database, product rank tracking, etc. Hierdoor moet je misschien externe tools gebruiken, wat extra kosten en complexiteit betekent."
             />
 
             {/* Item 3 */}
