@@ -75,7 +75,7 @@ export function ScrollVideoEffect() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
         >
           <source src="/hero_movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
