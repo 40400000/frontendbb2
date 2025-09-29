@@ -377,6 +377,13 @@ export default function HomePage() {
               bolmateContent="Deze tool bevat geen levering tracker, custom dashboards of voorraadvoorspellingen, etc.. Het biedt meestal basis rapportage en product inzichten voor je store prestaties."
             />
           </div>
+          
+          {/* Disclaimer */}
+          <div className="mt-6 md:mt-8 text-center">
+            <p className="text-[11px] md:text-xs text-[#111111]/70">
+              Deze vergelijkingen zijn naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
+            </p>
+          </div>
         </div>
       </section>
 

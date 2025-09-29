@@ -128,7 +128,6 @@ export default function HomePage() {
               <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
 
               <span className="mx-1">VS</span>
-              <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={32} height={32} />
               BOLLIFY
             </div>
             
@@ -154,44 +153,51 @@ export default function HomePage() {
 
           {/* Feature Cards Grid */}
           <div className="container max-w-6xl mx-auto mt-12 md:mt-16">
-            <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/60 mb-3 md:mb-4">
-              Waarom mensen voor Bolbaas kiezen
+            <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/75 mb-3 md:mb-4">
+              Waarom mensen voor Bolbaas kiezen¹
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4">
               {/* Card 1 - Pink Background */}
               <div className="bg-pink-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">12M+</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">keywords</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">in onze uitgebreide database.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">in onze uitgebreide database.</div>
               </div>
 
               {/* Card 2 - Light Gray Background */}
               <div className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">Tevreden</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">partners</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">vertrouwen onze automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">vertrouwen onze automatisering.</div>
               </div>
 
               {/* Card 3 - Yellow Background */}
               <div className="bg-yellow-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">3x</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">snellere groei</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">met AI-gedreven inzichten & automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">met AI-gedreven inzichten & automatisering.</div>
               </div>
 
               {/* Card 4 - Light Gray Background */}
               <div className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">10+</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">uren bespaard</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">per week met store automatisering.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">per week met store automatisering.</div>
               </div>
 
               {/* Card 5 - Light Purple Background */}
               <div className="bg-purple-100 rounded-xl md:rounded-2xl p-4 md:p-6 text-left">
                 <div className="text-3xl md:text-4xl font-bold text-[#111111] mb-1 md:mb-2">5-sterren</div>
                 <div className="text-base md:text-lg font-medium text-[#111111] mb-1 md:mb-2">ondersteuning</div>
-                <div className="text-xs md:text-sm text-[#111111]/70">die je elke stap begeleidt.</div>
+                <div className="text-xs md:text-sm text-[#111111]/80">die je elke stap begeleidt.</div>
               </div>
+            </div>
+            
+            {/* Disclaimer */}
+            <div className="mt-6 md:mt-8 text-center">
+              <p className="text-[11px] md:text-xs text-[#111111]/70">
+                ¹ Dit zijn algemene feiten die niet vergeleken worden met Bollify
+              </p>
             </div>
           </div>
 
@@ -223,19 +229,19 @@ export default function HomePage() {
                 <div className="space-y-2 md:space-y-3 max-w-2xl">
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       E-mail automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       Factuur automatisering
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       BTW automatisering
                     </span>
                   </div>
@@ -320,8 +326,8 @@ export default function HomePage() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
+                <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-2xl">
+                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. Een van de grootste databases voor bol.
                 </p>
               </div>
 
@@ -404,6 +410,13 @@ export default function HomePage() {
               competitorAlt="Bollify"
             />
           </div>
+          
+          {/* Disclaimer */}
+          <div className="mt-6 md:mt-8 text-center">
+            <p className="text-[11px] md:text-xs text-[#111111]/70">
+              Deze vergelijkingen zijn naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -439,7 +452,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                   Verhoog reviews en voorkom klantvragen.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
                 </p>
               </div>
@@ -481,7 +494,7 @@ export default function HomePage() {
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
                  Automatisch BTW facturen uploaden naar bol.
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
                   Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
                 </p>
               </div>
@@ -722,7 +735,6 @@ export default function HomePage() {
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
-                    <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={24} height={24} className="md:w-8 md:h-8" />
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
                       BOLLIFY
                     </span>
@@ -753,7 +765,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
@@ -783,7 +794,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Beperkter</span>
@@ -813,7 +823,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -843,7 +852,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -873,7 +881,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <YesBadge />
@@ -903,7 +910,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <GeenACoSBadge />
@@ -933,7 +939,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -973,7 +978,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1003,7 +1007,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1033,7 +1036,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
@@ -1063,7 +1065,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1093,7 +1094,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1133,7 +1133,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <span className="bg-white text-[#111111] border border-gray-300 px-2 py-0.5 rounded-xl text-xs font-medium">Alleen tabellen</span>
@@ -1163,7 +1162,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1193,7 +1191,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <BeperktereInzichtenBadge />
@@ -1223,7 +1220,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1253,7 +1249,6 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png" alt="Bollify" width={16} height={16} />
                           <span>Bollify</span>
                         </div>
                         <NoBadge />
@@ -1277,6 +1272,9 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
               Bolbaas vergeleken met Bollify abonnement
+            </p>
+            <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
+              Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
             </p>
           </div>
         </div>
