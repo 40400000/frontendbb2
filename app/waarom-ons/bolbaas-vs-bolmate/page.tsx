@@ -415,6 +415,188 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="bg-white py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
+            {/* Left Content */}
+            <div className="space-y-8 md:space-y-10">
+              <div>
+                <h2 className="text-[40px] md:text-[56px] leading-[44px] md:leading-[60px] font-normal text-[#111111] tracking-tight mb-8">
+                  Onbeperkt orders
+                </h2>
+                <p className="text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] font-normal text-[#111111]/70 mb-12">
+                  Geen limiet op het aantal orders dat je kunt verwerken. Schaal je business zonder extra kosten. Slechts 11 euro per maand, maandelijks opzegbaar.
+                </p>
+              </div>
+
+              {/* Compact Feature List */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <FaCircleCheck className="text-blue-600 text-base flex-shrink-0" />
+                  <span className="text-[15px] md:text-[16px] text-[#111111]/80">
+                    Automatische facturen & e-mails
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <FaCircleCheck className="text-blue-600 text-base flex-shrink-0" />
+                  <span className="text-[15px] md:text-[16px] text-[#111111]/80">
+                    Product research tools
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <FaCircleCheck className="text-blue-600 text-base flex-shrink-0" />
+                  <span className="text-[15px] md:text-[16px] text-[#111111]/80">
+                    Custom dashboards & inzichten
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <FaCircleCheck className="text-blue-600 text-base flex-shrink-0" />
+                  <span className="text-[15px] md:text-[16px] text-[#111111]/80">
+                    A/B testing & optimalisatie
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Start Plan Card */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 lg:sticky lg:top-24">
+              <div className="mb-8">
+                <p className="text-[12px] leading-[14px] font-normal text-gray-500 tracking-wide uppercase mb-2">
+                  ZET JE EERSTE STAPPEN
+                </p>
+                <h3 className="text-[32px] leading-[32px] font-medium text-black mb-4">
+                  Start
+                </h3>
+                <p className="text-[14px] leading-[18px] font-normal text-gray-600">
+                  Voor ambitieuze beginners die hun bol avontuur willen lanceren.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-[24px] leading-[24px] font-normal text-gray-400 line-through">29</span>
+                  <span className="text-[40px] leading-[40px] font-medium text-black">11</span>
+                  <span className="text-[14px] leading-[14px] font-normal text-gray-500">/maand</span>
+                </div>
+                <p className="text-[12px] leading-[14px] font-normal text-gray-500">
+                  Maandelijks opzegbaar
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-600 text-white font-medium text-[15px] leading-[15px] py-4 px-6 rounded-xl hover:bg-blue-700 transition-all duration-200 hover:scale-105 mb-2 block text-center"
+                >
+                  1 maand gratis
+                </a>
+                <p className="text-[12px] leading-[14px] font-normal text-gray-500 text-center">
+                  Geen betaalgegevens nodig
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {/* Automatisering */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="orange" size={10} />
+                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                      Automatisering
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-5">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Volledig automatische facturen
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Onbeperkt facturen
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Onbeperkt review e-mails
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Onbeperkt aantal bestellingen
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI & Tools */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="blue" size={10} />
+                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                      AI & Tools
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-5">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Product tracking (10 producten)
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Winst & ACoS calculator
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        A/B testen van listings
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Store Prestaties */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="purple" size={10} />
+                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                      Store prestaties
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-5">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Custom dashboards & views
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
+                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                        Bestellingen, Producten, Sales inzichten
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tools Hero Section */}
       <section className="relative overflow-hidden bg-[#F6F5F3]">
         <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
