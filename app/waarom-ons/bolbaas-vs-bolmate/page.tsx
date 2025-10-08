@@ -387,7 +387,7 @@ export default function HomePage() {
                     alt="Review dashboard met inzichten"
                     width={800}
                     height={600}
-                    className="absolute bottom-0 right-0 w-[200%] h-auto rounded-2xl transform translate-x-12 translate-y-32"
+                    className="absolute bottom-0 right-0 w-[200%] h-auto rounded-2xl transform translate-x-12 translate-y-12 md:translate-y-32"
                   />
                 </div>
               </div>
