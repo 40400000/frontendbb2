@@ -244,7 +244,7 @@ export default function HomePage() {
             <div className="space-y-5 md:space-y-6">
               {/* Description */}
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+                Elke factuur wordt binnen seconden aangemaakt, geüpload naar bol en klaar voor je boekhouding. Geen handmatig werk meer.
               </p>
 
               {/* Three Key Points */}
@@ -253,10 +253,10 @@ export default function HomePage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Proactief versturen naar bol
+                    Geen factuuraanvragen meer
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Direct na bestelling wordt de factuur aangemaakt en verstuurd naar het klantaccount op bol. Voorkom klantvragen en bespaar tijd.
+                    Klanten vinden hun factuur direct in hun bol account. Stop met handmatig facturen opsturen en bespaar uren per week.
                   </p>
                 </div>
               </div>
@@ -266,10 +266,10 @@ export default function HomePage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Jouw eigen huisstijl
+                    In jouw branding
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Facturen worden automatisch voorzien van jouw logo en bedrijfsgegevens voor een professionele uitstraling.
+                    Upload je logo één keer en elk document draagt jouw bedrijfsidentiteit. Professioneel en consistent.
                   </p>
                 </div>
               </div>
@@ -279,10 +279,10 @@ export default function HomePage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Veilig bewaard
+                    Altijd compliant
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Alle facturen worden veilig opgeslagen zodat je voldoet aan de wettelijke 7 jaar bewaarplicht.
+                    7 jaar archivering gegarandeerd. Bij een controle heb je alles binnen seconden paraat.
                   </p>
                 </div>
               </div>
@@ -396,10 +396,10 @@ export default function HomePage() {
             {/* Right Side - Review inzichten (Full Height) */}
             <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 flex flex-col min-h-[600px] md:min-h-[700px]" style={{ background: 'linear-gradient(to bottom, white 30%, #EAF3FF)' }}>
               <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
-                Kies uit winnende templates
+                Converterende e-mail templates
               </h3>
               <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70">
-                Gebaseerd op onze database van 12 miljoen keywords en miljoenen verzonden e-mails hebben we de perfecte templates ontwikkeld. Onze data toont welke onderwerpen, timing en formuleringen de hoogste conversie opleveren voor bol.com verkopers.
+                Gebaseerd op onze database van 12 miljoen keywords en miljoenen verzonden e-mails hebben we de perfecte templates ontwikkeld. Onze data toont welke onderwerpen, timing en formuleringen de hoogste conversie opleveren. Ook voldoen deze aan alle regels van bol.
               </p>
               {/* Email templates image */}
               <div className="flex-1 flex items-end">
@@ -451,10 +451,10 @@ export default function HomePage() {
             <div className="space-y-8 md:space-y-10">
               <div>
                 <h2 className="text-[40px] md:text-[56px] leading-[44px] md:leading-[60px] font-normal text-[#111111] tracking-tight mb-8">
-                  Onbeperkt orders
+                  Groei zonder grenzen
                 </h2>
                 <p className="text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] font-normal text-[#111111]/70 mb-12">
-                  Geen limiet op het aantal orders dat je kunt verwerken. Schaal je business zonder extra kosten. Slechts 11 euro per maand, maandelijks opzegbaar.
+                  Van 10 tot 10.000 orders per maand – de prijs blijft hetzelfde. Geen verborgen kosten of prijsverhogingen bij groei. €11 per maand, stop wanneer je wilt. Geen technische kennis nodig.
                 </p>
               </div>
 
@@ -692,7 +692,7 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Complete product research suite"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Deze tool biedt prima zoekvolume-inzichten en basis research functionaliteiten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn wellicht externe tools nodig."
+              bolmateContent="Deze tool biedt prima zoekvolume-inzichten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn wellicht externe tools nodig."
             />
 
             {/* Item 3 */}

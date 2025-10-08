@@ -161,7 +161,7 @@ export default function AutomatiseringPage() {
             <div className="space-y-5 md:space-y-6">
               {/* Description */}
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+                Elke factuur wordt binnen seconden aangemaakt, geüpload naar bol en klaar voor je boekhouding. Geen handmatig werk meer.
               </p>
 
               {/* Three Key Points */}
@@ -170,10 +170,10 @@ export default function AutomatiseringPage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Direct versturen naar bol
+                    Geen factuuraanvragen meer
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Direct na bestelling wordt de factuur aangemaakt en verstuurd naar het klantaccount op bol. Voorkom klantvragen en bespaar tijd.
+                    Klanten vinden hun factuur direct in hun bol account. Stop met handmatig facturen opsturen en bespaar uren per week.
                   </p>
                 </div>
               </div>
@@ -183,10 +183,10 @@ export default function AutomatiseringPage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Jouw eigen huisstijl
+                    In jouw branding
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Facturen worden automatisch voorzien van jouw logo en bedrijfsgegevens voor een professionele uitstraling.
+                    Upload je logo één keer en elk document draagt jouw bedrijfsidentiteit. Professioneel en consistent.
                   </p>
                 </div>
               </div>
@@ -196,10 +196,10 @@ export default function AutomatiseringPage() {
                 <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
                 <div className="space-y-1.5">
                   <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
-                    Veilig bewaard
+                    Altijd compliant
                   </h4>
                   <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
-                    Alle facturen worden veilig opgeslagen zodat je voldoet aan de wettelijke 7 jaar bewaarplicht.
+                    7 jaar archivering gegarandeerd. Bij een controle heb je alles binnen seconden paraat.
                   </p>
                 </div>
               </div>
