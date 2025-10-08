@@ -46,7 +46,6 @@ export function FooterDark() {
     { title: 'Meer reviews op Bol', href: '/blog/meer-reviews-op-bol' },
     { title: 'Verkopen Bol AI tijdperk', href: '/blog/verkopen-bol-ai-tijdperk' },
     { title: 'Alle blogs', href: '/blog' },
-    { title: 'YouTube', href: '#' },
   ];
 
   const contactLinks: FooterLink[] = [

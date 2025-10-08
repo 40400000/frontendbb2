@@ -671,6 +671,19 @@ export function NavigationMenuDemo() {
     setActiveMenu(null);
   };
 
+  const handlePrijzenClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/waarom-ons/bolbaas-vs-bolmate') {
+      e.preventDefault();
+      const prijzenSection = document.getElementById('prijzen');
+      if (prijzenSection) {
+        prijzenSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (isMobileMenuOpen) {
+        toggleMobileMenu();
+      }
+    }
+  };
+
   const toggleMobileMenu = () => {
     const newMobileMenuState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newMobileMenuState);
@@ -869,10 +882,8 @@ export function NavigationMenuDemo() {
                         )}
                         onMouseEnter={handleSimpleLinkEnter}
                     >
-                        <Link href="/prijzen" legacyBehavior passHref>
-                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "hover:bg-gray-800 text-white")}>
+                        <Link href="/prijzen" onClick={handlePrijzenClick} className={cn(navigationMenuTriggerStyle(), "bg-transparent", navbarMode === 'light' ? "hover:bg-gray-100 hover:text-gray-900 text-gray-900" : "hover:bg-gray-800 text-white")}>
                             Prijzen
-                        </NavigationMenuLink>
                         </Link>
                     </li>
 
@@ -944,7 +955,7 @@ export function NavigationMenuDemo() {
             <Link href="/features/automatisering" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Automatisering</Link>
             <Link href="/features/store-prestaties" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Store prestaties</Link>
             <Link href="/blog" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Educatie</Link>
-            <Link href="/prijzen" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Prijzen</Link>
+            <Link href="/prijzen" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={handlePrijzenClick}>Prijzen</Link>
             <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>
             
             <div className={cn("pt-4 mt-4 border-t", mobileBorderClass)}>

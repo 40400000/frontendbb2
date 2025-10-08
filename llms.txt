@@ -6,50 +6,142 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 ## **Overall Positioning & Strategy**
 
-*   **Core Identity:** Bolbaas is "de zekerheid van data en automatisering voor bol partners." It positions itself as the new, superior standard in the market, powered by a sophisticated AI core and the most comprehensive dataset available. The brand promises clarity and control in a complex marketplace.
+*   **Core Identity:** Bolbaas is AI software for bol.com partners focused on automation and keyword research. The platform positions itself as the superior standard in the market, powered by the most comprehensive dataset available (12M+ keywords, billions of data points). The brand promises clarity, control, and growth acceleration.
 
-*   **Primary Goal:** To empower bol.com sellers to transcend daily operational hurdles and focus on strategic growth and entrepreneurship. This is achieved by automating time-consuming administrative tasks and converting raw data into deep, actionable insights that drive intelligent business decisions. The motto is "Focus op groei en ondernemen door data en automatisering."
+*   **SEO Keywords & Focus Areas:**
+    *   bol.com partner software, bol automatisering, keyword research bol
+    *   product tracking bol, email automatisering bol, factuur automatisering
+    *   BTW facturen bol, bol store management, AI tools bol partners
+    *   bol data analyse, ranking optimalisatie bol, bol omzet verhogen
+
+*   **Primary Value Propositions:**
+    1.  **Time Savings Through Automation:** Automatic BTW invoices and email campaigns eliminate manual administrative work
+    2.  **Data-Driven Growth:** 12M+ keyword database helps discover profitable products and optimize listings
+    3.  **Complete Visibility:** Track products, rankings, competitors, and store performance in one platform
+    4.  **Review Generation:** Automated review requests increase social proof and improve rankings
+
+*   **Primary Goal:** To empower bol.com sellers to transcend daily operational hurdles and focus on strategic growth and entrepreneurship. This is achieved by automating time-consuming administrative tasks (facturen, BTW, emails) and converting raw data into deep, actionable insights that drive intelligent business decisions.
 
 *   **Competitive Stance:** Bolbaas is explicitly defined as **"de beste tool voor Bol partners"** and **"de betere oplossing"** compared to its competitors: **Bolmate, Bollify, Rylee, and Boloo**. This is not just a claim but a core part of its identity.
 
-*   **Key Differentiator:** The platform's superiority is rooted in its response to the failures of existing tools. The core message is: *"De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg. Bolbaas doet dit anders."* Bolbaas provides:
-    1.  **Truly Complete Data:** Based on over 12 million analyzed products and billions of data points, offering unparalleled depth.
-    2.  **Flexible & Powerful Automation:** Automation that is not rigid but adaptable to the user's needs.
-    3.  **Actionable Insights:** It helps sellers make choices based on real data ("Met Bolbaas maak je keuzes op basis van echte data"), not guesswork.
+*   **Key Differentiators:** The platform's superiority is rooted in its response to the failures of existing tools. The core message is: *"De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg. Bolbaas doet dit anders."* Bolbaas provides:
+    1.  **Truly Complete Data:** Based on over 12 million analyzed keywords and billions of data points, offering unparalleled depth - "de grootste database voor bol, by far"
+    2.  **Flexible & Powerful Automation:** Automation that is not rigid but adaptable to the user's needs - unlimited invoices, emails, and orders on all plans
+    3.  **Actionable Insights:** It helps sellers make choices based on real data ("Met Bolbaas maak je keuzes op basis van echte data"), not guesswork - custom dashboards, sales forecasting, AI review analysis
+
+*   **Payment & Security:** Stripe for payments (no credit card storage), encryption for all data, HTTPS connections, API key-based bol.com integration (revocable by user), 7-year invoice storage for legal compliance
 
 ---
 
 ## 1. Homepage (`app/page.tsx`)
 
-*   **Core Message:** "De zekerheid van data en automatisering voor bol partners." This headline establishes the platform's dual promise of providing reliable data and effortless automation within a single, unified, AI-driven environment.
+*   **Hero Section:**
+    *   **Headline:** "Groei je Bol business sneller met slimme automatisering & research tools"
+    *   **Subheadline:** "Automatiseer BTW facturen & e-mails en ontdek winstgevende producten."
+    *   **Top Badge:** "NIEUW - Research database: 12 miljoen+ keywords" (links to database feature)
+    *   **Main CTA:** Email signup form with "Gratis proberen" button and testimonial badge
+    *   **Hero Visual:** Scroll-based video effect showcasing the platform in action
 
-*   **Value Proposition:** The central theme is "Meer verkopen, minder zorgen." Bolbaas achieves this by linking its massive proprietary database directly to smart automation features, freeing up entrepreneurs from mundane tasks to focus on what truly matters: growing their business.
+*   **Key Sections (In Order):**
 
-*   **Key Pillars (Expanded):**
-    *   **Inzichten (Insights):** "Zie wat werkt." This is about providing clarity. It enables users to instantly see where their profit comes from through highly customizable dashboards and performance reports.
-    *   **Data Tools:** "Vind wat verkoopt." This highlights the proactive nature of the tools. Users can leverage the database of 12 million keywords to discover untapped niches and successful products before competitors do.
-    *   **Automatisering (Automation):** "Focus op groei." This speaks directly to the benefit of automation. By handling invoices, VAT, and customer emails automatically, the platform gives back valuable time to the user.
-    *   **Tracking:** "Blijf altijd op de hoogte." This emphasizes the strategic advantage of its tracking tools. By automatically monitoring rankings and performance, sellers can stay ahead of the market and react quickly to changes.
+    1.  **BTW Facturen Automatisering:**
+        *   Headline: "Automatische bol facturen"
+        *   Shows video demo of invoice automation
+        *   Three key benefits with checkmarks:
+            *   Proactief versturen naar bol (prevents customer questions)
+            *   Jouw eigen huisstijl (automatic logo and company details)
+            *   Veilig bewaard (7-year legal storage requirement)
+        *   CTA: "1 maand gratis" → app.bolbaas.nl
 
-*   **CTAs:** The page consistently guides users towards two primary actions: "Lidmaatschappen bekijken" (for those ready to see options) and "Gesprek inplannen" (for those wanting a personal consultation).
+    2.  **Email Campagnes:**
+        *   Headline: "Verstuur bol.com review e-mails"
+        *   Subheadline: Automatic review requests one week after delivery with direct product links
+        *   Feature cards showcasing:
+            *   Reviewverzoeken (get more reviews automatically)
+            *   AI reviewanalyse (AI analyzes reviews for product improvements)
+            *   Uitgebreide review inzichten (analyze positive/negative points)
+            *   Kies uit winnende templates (templates based on 12M+ keywords and millions of sent emails)
+
+    3.  **Research Database (Dark Section):**
+        *   Badge: "NIEUW - Research database"
+        *   Headline: "Product research op een *nieuw* niveau."
+        *   Subheadline: "Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far."
+        *   Large visual showcasing database interface
+        *   CTA: "Onze database"
+
+    4.  **Apple-like Feature Grid:**
+        *   Minimal, monochrome card design with color-coded backgrounds (blue for tools, orange for automation, purple for insights)
+        *   Features displayed:
+            *   Database: 12M keywords + CPC data
+            *   Review e-mails (automatisch versturen)
+            *   Ranking AI (listing optimalisatie)
+            *   Customer testimonial card: "Bolbaas biedt alle software die je nodig hebt als bol partner." - Lucas van Gasteren
+            *   BTW facturen (automatisch versturen)
+            *   Product tracking (prijs, ranking, voorraad)
+            *   Custom dashboards (sales data op maat)
+            *   Voorspellingen (stock & sales en omzet)
+            *   Winst calculator (+ ACoS berekening)
+            *   A/B testing (listing varianten)
+            *   Baaspilot (altijd op de hoogte)
+            *   Bestellingen en product analyse (gedetailleerd overzicht)
+
+    5.  **FAQ Section (12 Questions):**
+        *   **Waarom heb ik automatisering nodig als bol-verkoper?** - Explains that 65% of buyers read reviews, happy customers don't leave reviews naturally, 80% of reviews come from email follow-ups, and manual invoicing wastes time
+        *   **Werkt Bolbaas ook met Fulfilment by Bol (Lvb / Vvb)?** - Yes, supports both fulfillment methods
+        *   **Is mijn data veilig bij Bolbaas?** - Encryption, HTTPS, Stripe payments, no stored credit cards, revocable API keys
+        *   **Hoe verbind ik mijn bol.com account?** - Via API keys created in bol seller environment, no password sharing needed
+        *   **Waarom stuurt bol zelf geen facturen?** - Bol is marketplace, seller is responsible for invoices and VAT
+        *   **Kan ik mijn eigen huisstijl gebruiken?** - Yes, automatic logo and company details on invoices
+        *   **Ziet mijn klant mijn e-mailadres?** - No, emails show "Van [Store] via bol.com", replies go to dashboard
+        *   **Heb ik technische kennis nodig?** - No, designed for easy use, setup in minutes, Dutch support available
+        *   **Kan ik Bolbaas eerst proberen?** - Yes, 1 month free trial, no credit card needed, cancel anytime
+        *   **Ondersteunt Bolbaas de kleineondernemersregeling (KOR)?** - Yes, one-click to set all VAT to 0% with automatic KOR mention
+        *   **Werkt Bolbaas voor teams?** - Yes, multi-user access with individual logins, track who did what
+        *   **Wat heb je van mij nodig om te starten?** - Only active bol.com seller account, 5-minute setup
+
+*   **Overall Messaging:** The page emphasizes automation to save time, data-driven insights for growth, and the comprehensive 12M+ keyword database as a key differentiator. Heavy focus on social proof, ease of use, and risk-free trial.
+
+*   **Payment Provider Update:** Stripe (not Mollie) is mentioned as the payment provider in the security FAQ.
 
 ---
 
 ## 2. Pricing Page (`app/prijzen/page.tsx`)
 
-*   **Core Message:** "Word founding member." This creates a sense of urgency and exclusivity, offering early adopters a significant, lifelong discount ("gereduceerd tarief... voor altijd").
+*   **Core Message:** "Word founding member." This creates a sense of urgency and exclusivity, offering early adopters a significant, lifelong discount on all plans with dramatic price reductions shown through strikethroughs.
 
-*   **Subscription Tiers (Expanded with Key Features):**
-    1.  **Start (€17/mo):** Tagline: "Zet je eerste stappen." Pitched for ambitious beginners.
-        *   **Core Features:** Automatisering facturen, Automatisch reageren factuuraanvragen, Custom e-mail campagnes, Verzamel meer reviews, Automatisering BTW aangifte, Volg rankings van 10 producten, Sales, winst & product dashboards.
-    2.  **Plus (€65/mo):** Tagline: "Boost je verkoop." Described as the perfect toolkit for serious growth.
-        *   **Core Features:** Everything in Start, plus: Keyword database & analyse, Rankings verbeteren, Listing AI optimalisatie, Volg 200 producten (incl. Precision & Keyword), Listing Hijacker Alerts, Baaspilot notificaties, Project management (5 projecten).
-    3.  **Pro (€245/mo):** Tagline: "Domineer de markt." Positioned for top-tier sellers and agencies aiming for market excellence.
-        *   **Core Features:** Everything in Plus, plus: Onbeperkte tracking & research, ACoS verlagen, 400 precision product trackers, Aangewezen project manager, Premium support & strategie sessies, and upcoming AI Biedingen & Omzet Research tools.
+*   **Trial Offer:** All plans start with "1 maand gratis" (1 month free trial), making it easy for sellers to try the platform risk-free. All plans are "maandelijks opzegbaar" (monthly cancellable).
 
-*   **Detailed Feature Comparison:** The page includes a comprehensive feature matrix that breaks down every single tool and limit across the three plans. It's organized by category (Automatisering, Tools, Inzichten, Tracking, etc.) to allow for easy comparison, reinforcing the value offered at each level.
+*   **Subscription Tiers (Current Pricing - Founding Member Discounts):**
+    1.  **Start (€11/mo, was €29):** Tagline: "ZET JE EERSTE STAPPEN" - For ambitious beginners launching their bol adventure.
+        *   **Account Limits:** 2 stores, onbeperkt orders
+        *   **Automatisering:** Volledig automatische facturen, Onbeperkt facturen, Onbeperkt review e-mails, Onbeperkt bestellingen, BTW automatisering, Baaspilot notificaties
+        *   **AI & Tools:** Product tracking (10 producten), Winst & ACoS calculator, A/B testen van listings
+        *   **Store Prestaties:** Custom dashboards & views, Bestellingen/Producten/Sales inzichten, Sales en voorraad schattingen, Levering tracker
+        
+    2.  **Plus (€35/mo, was €75):** Tagline: "BOOST JE VERKOOP" - The perfect toolkit for sellers ready for serious growth. **Marked as "POPULAIR"**
+        *   **Account Limits:** Onbeperkt stores, 2 seats, onbeperkt orders
+        *   **Automatisering:** All Start features
+        *   **AI & Tools:** Research database & Ranking AI, Product tracking (100 producten), Precision tracking (30 producten), Keyword tracking, A/B testing, Winst & ACoS calculator
+        *   **Store Prestaties:** All Start features
+        
+    3.  **Pro (€99/mo, was €199):** Tagline: "DOMINEER DE MARKT" - For bol entrepreneurs and agencies who want to excel. **Contact-based sales approach.**
+        *   **Account Limits:** Onbeperkt stores, Onbeperkt seats, onbeperkt orders
+        *   **Automatisering:** All Plus features
+        *   **AI & Tools:** Research database & Ranking AI, Onbeperkt product tracking, Precision tracking (400 producten), Keyword tracking, A/B testing, Winst & ACoS calculator
+        *   **Store Prestaties:** All Plus features
 
-*   **CTAs:** The CTAs are tailored to the plan's target audience: "Aanmelden bèta" for the self-service Start and Plus plans, and "Gesprek inplannen" for the high-touch Pro plan.
+*   **Key Feature Highlights Across Plans:**
+    *   **All plans include:** Unlimited invoices and emails, BTW automation, Baaspilot notifications, custom dashboards, sales forecasting, and delivery tracking
+    *   **Plus & Pro only:** Research database (12M+ keywords), Ranking AI, Keyword tracking
+    *   **Scaling tracking limits:** Start (10), Plus (100 + 30 precision), Pro (unlimited + 400 precision)
+    *   **Multi-user access:** Plus (2 seats), Pro (unlimited seats)
+    *   **Multi-store support:** Start (2 stores), Plus & Pro (unlimited stores)
+
+*   **Detailed Feature Comparison:** The page includes a comprehensive, mobile-responsive feature matrix organized by category (Account limieten, AI & Tools, Automatisering, Store prestaties). Features clearly show checkmarks or specific limits, making plan differences immediately clear.
+
+*   **CTAs:** 
+    *   Start & Plus: "1 maand gratis" button → https://app.bolbaas.nl/registreren
+    *   Pro: "Contact opnemen" button → /contact page (high-touch sales)
 
 ---
 
@@ -131,4 +223,52 @@ This document provides a detailed summary of the content, messaging, and strateg
     *   **Two Distinct Tracking Tiers:**
         *   **Precision Tracking:** Described as a "geavanceerd zoek algoritme," this is a highly accurate, resource-intensive tracking method for a seller's most critical products, providing the most reliable data.
         *   **Dynamic Tracking:** A standard, more efficient tracking method perfect for monitoring a broader range of products or less critical items without using up premium resources.
-    *   **Insight into Ranking Factors:** The platform doesn't just show ranking changes; it helps users understand *why* they happened. It correlates changes in listings, reviews, and other factors with ranking performance, enabling true optimization. 
+    *   **Insight into Ranking Factors:** The platform doesn't just show ranking changes; it helps users understand *why* they happened. It correlates changes in listings, reviews, and other factors with ranking performance, enabling true optimization.
+
+---
+
+## **Brand Voice & Tone Guidelines**
+
+*   **Language Style:**
+    *   Clear, direct Dutch - no jargon unless necessary for bol.com sellers
+    *   Professional but approachable - like a knowledgeable colleague, not a corporate entity
+    *   Confident without arrogance - state facts about superiority backed by data (12M keywords, etc.)
+    *   Action-oriented - focus on what users can achieve, not just features
+
+*   **Capitalization Rules:**
+    *   Normal sentence capitalization - NOT ALL CAPS in body text
+    *   First letter of sentence capitalized only
+    *   Examples: "Talk like this, normal capitalization" NOT "Talk Like This" or "TALK LIKE THIS"
+    *   Exception: Section labels and badges can use uppercase (e.g., "NIEUW", "POPULAIR", "PRIJZEN")
+
+*   **Messaging Principles:**
+    *   **Data-backed claims:** "12 miljoen+ keywords", "80% of reviews come from email follow-ups", "65% of buyers read reviews"
+    *   **Specificity over vagueness:** "5-minute setup" not "quick setup", "1 maand gratis" not "free trial"
+    *   **Problem-solution framing:** Acknowledge seller pain points (time waste, lack of reviews, missing data) then show how Bolbaas solves them
+    *   **Competitor awareness:** Positioned as "de betere oplossing" - better than Bolmate, Bollify, Boloo, Rylee
+
+*   **Visual Identity:**
+    *   Color-coded features: Blue (AI & Tools), Orange (Automatisering), Purple (Store Prestaties)
+    *   Kite icon used as bullet/section marker
+    *   Clean, minimal design with ample white space
+    *   Strikethrough pricing to show founding member discounts
+
+*   **Call-to-Action Patterns:**
+    *   "1 maand gratis" (primary CTA - emphasizes risk-free trial)
+    *   "Gratis proberen" (alternative CTA)
+    *   "Contact opnemen" (for Pro plan and inquiries)
+    *   "Gesprek inplannen" (for consultative sales)
+    
+*   **Trust Signals:**
+    *   Customer testimonials integrated into content
+    *   Specific data points (12M keywords, 7-year storage, etc.)
+    *   Security details (Stripe, encryption, API keys)
+    *   Compliance mentions (BTW, KOR, legal storage requirements)
+    *   "Maandelijks opzegbaar" (monthly cancellation) to reduce commitment anxiety
+
+*   **Key Phrases & Slogans:**
+    *   "De grootste database voor bol, by far"
+    *   "Product research op een nieuw niveau"
+    *   "Focus op groei en ondernemen door data en automatisering"
+    *   "De zekerheid van data en automatisering voor bol partners"
+    *   "Groei je Bol business sneller" 

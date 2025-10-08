@@ -598,6 +598,16 @@ export default function HomePage() {
             {/* FAQ 1 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Waarom heb ik automatisering nodig als bol-verkoper?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Reviews zijn cruciaal voor groei op bol.com - meer dan 65% van kopers leest reviews voordat ze kopen. Het probleem? Tevreden klanten laten zelden uit zichzelf een review achter, terwijl ontevreden klanten dat wél doen. Door actief reviewverzoeken te versturen houd je dit in balans. Studies tonen aan dat 80% van alle reviews voortkomt uit e-mail follow-ups. Daarnaast kost handmatig facturen maken veel tijd - tijd die je beter kunt besteden aan je groei.
+              </p>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
                 Werkt Bolbaas ook met Fulfilment by Bol (Lvb / Vvb)?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
@@ -605,27 +615,37 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* FAQ 2 */}
+            {/* FAQ 3 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Is mijn data veilig bij Bolbaas?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Ja, security staat bij ons voorop. Alle gevoelige data wordt versleuteld opgeslagen in zowel productie als back-ups. We gebruiken alleen beveiligde HTTPS-verbindingen en jouw wachtwoord wordt met dubbele encryptie opgeslagen. Betalingen lopen via Stripe - wij slaan geen creditcardgegevens op. Je API-sleutels kun je altijd zelf intrekken in je bol verkoper-omgeving.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
                 Hoe verbind ik mijn bol.com account?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Via de officiële bol.com retailer API koppel je veilig je verkoopaccount aan Bolbaas. Het proces is eenvoudig en je behoudt volledige controle over je gegevens.
+                Via API-sleutels die je zelf aanmaakt in je bol verkoper-omgeving. Dit zijn digitale sleutels die je met een paar klikken maakt en aan ons doorgeeft. Het voordeel? Je hoeft nooit je wachtwoord te delen en je kunt de toegang altijd zelf intrekken. Zo blijf je volledig in controle over je eigen data.
               </p>
             </div>
 
-            {/* FAQ 3 */}
+            {/* FAQ 5 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Waarom stuurt bol.com zelf geen facturen?
+                Waarom stuurt bol zelf geen facturen?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
                 Bol.com is een platform dat kopers en verkopers met elkaar verbindt, maar is geen partij in de transactie. Als verkoper ben je zelf verantwoordelijk voor het aanmaken en versturen van facturen. Ook moet je de BTW afdragen aan de belastingdienst, ongeacht of een klant een factuur vraagt.
               </p>
             </div>
 
-            {/* FAQ 4 */}
+            {/* FAQ 6 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
                 Kan ik mijn eigen huisstijl gebruiken?
@@ -635,23 +655,63 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* FAQ 5 */}
+            {/* FAQ 7 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Wat ziet mijn klant als afzender?
+                Ziet mijn klant mijn e-mailadres?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Klanten ontvangen e-mails met als afzender: "Van Jouw store via bol.com". Alle mails worden verstuurd via onze servers met een veilig bol.com e-mailadres, dus je hoeft je geen zorgen te maken over SMTP-instellingen of serverbelasting.
+                Nee, net zoals bij het bol-berichtensysteem blijven e-mailadressen privé. Klanten zien als afzender "Van [Jouw store] via bol.com". Als een klant antwoordt, ontvang je dit in je Bolbaas dashboard en kun je direct reageren - alles op één plek beheerd.
               </p>
             </div>
 
-            {/* FAQ 6 */}
+            {/* FAQ 8 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Ondersteunt Bolbaas de kleineondernemersregeling?
+                Heb ik technische kennis nodig?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Zeker! Bij gebruik van de kleineondernemersregeling (KOR) kun je met één klik alle BTW-percentages naar 0% zetten. De juiste KOR-vermelding wordt automatisch op al je facturen toegepast.
+                Nee, Bolbaas is ontworpen voor eenvoudig gebruik. Alles wordt helder uitgelegd in het Nederlands en de setup is binnen enkele minuten klaar. Mocht je toch vragen hebben, dan helpen we je graag via de chat of e-mail.
+              </p>
+            </div>
+
+            {/* FAQ 9 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Kan ik Bolbaas eerst proberen?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Zeker! Elk account start met 1 maand gratis proberen - geen creditcard nodig. Ervaar zelf hoe Bolbaas je tijd bespaart en je omzet verhoogt. Niet tevreden? Je kunt op elk moment opzeggen.
+              </p>
+            </div>
+
+            {/* FAQ 10 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Ondersteunt Bolbaas de kleineondernemersregeling (KOR)?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Zeker! Bij gebruik van de KOR kun je met één klik alle BTW-percentages naar 0% zetten. De juiste KOR-vermelding wordt automatisch op al je facturen toegepast.
+              </p>
+            </div>
+
+            {/* FAQ 11 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Werkt Bolbaas voor teams?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Ja! Je kunt meerdere teamleden toegang geven, elk met hun eigen inloggegevens. Zo hoef je nooit wachtwoorden te delen en zie je precies wie welke acties heeft uitgevoerd - ideaal voor samenwerking.
+              </p>
+            </div>
+
+            {/* FAQ 12 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Wat heb je van mij nodig om te starten?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Alleen een actief bol.com verkopersaccount. Na registratie maak je in een paar klikken API-sleutels aan in je bol-omgeving, voert deze in bij Bolbaas en je bent klaar. Meestal ben je binnen 5 minuten operationeel.
               </p>
             </div>
           </div>

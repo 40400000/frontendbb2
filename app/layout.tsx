@@ -14,6 +14,7 @@ import { ThemeHandler } from '@/components/theme-handler';
 import Script from "next/script";
 import { NavbarB } from "@/components/navbar-b";
 import { FooterDark } from "@/components/footer-dark";
+import { HelpdeskWidget } from "@/components/helpdesk-widget";
 
 const labilGrotesk = localFont({
   src: "../public/LabilGroteskVariable.otf",
@@ -116,6 +117,7 @@ export default function RootLayout({
             {children}
           </main>
           <FooterDark />
+          <HelpdeskWidget />
         </ThemeProvider>
         <Analytics />
         <Script

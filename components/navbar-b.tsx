@@ -20,6 +20,19 @@ const pathname = usePathname();
   const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
   const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
 
+  const handlePrijzenClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/waarom-ons/bolbaas-vs-bolmate' || pathname === '/waarom-ons/bolbaas-vs-bolbuddy') {
+      e.preventDefault();
+      const prijzenSection = document.getElementById('prijzen');
+      if (prijzenSection) {
+        prijzenSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    }
+  };
+
       const handleScroll = () => {
       const scrolled = window.scrollY > 50;
       setIsScrolled(scrolled);
@@ -157,6 +170,7 @@ const pathname = usePathname();
   const whySubsections: Record<string, { title: string; href: string }[]> = {
     vergelijkingen: [
       { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
+      { title: 'Bolbaas vs. Bolbuddy', href: '/waarom-ons/bolbaas-vs-bolbuddy' },
       { title: 'Bolbaas vs. Bollify', href: '/waarom-ons/bolbaas-vs-bollify' },
       { title: 'Bolbaas vs. Boloo', href: '/waarom-ons/bolbaas-vs-boloo' },
       { title: 'Bolbaas vs. Rylee', href: '/waarom-ons/bolbaas-vs-rylee' },
@@ -516,9 +530,10 @@ const pathname = usePathname();
                       <div className="flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-out">
                         {(whySubsections[activeWhyCategory] ?? []).map((item) => {
                           const isBolmate = item.title === 'Bolbaas vs. Bolmate';
+                          const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
                           const isBollify = item.title === 'Bolbaas vs. Bollify';
                           const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                          const isDisabled = !isBolmate && !isBollify;
+                          const isDisabled = !isBolmate && !isBolbuddy && !isBollify;
                           
                           return isDisabled ? (
                             <div
@@ -642,7 +657,7 @@ const pathname = usePathname();
               )}
             </div>
 
-            <Link href="/prijzen" className={`flex items-center gap-1 transition-colors px-4 py-2 relative ${
+            <Link href="/prijzen" onClick={handlePrijzenClick} className={`flex items-center gap-1 transition-colors px-4 py-2 relative ${
               isDarkMode ? 'hover:text-white/80' : 'hover:text-black/80'
             }`}>
               Prijzen
@@ -889,9 +904,10 @@ const pathname = usePathname();
                               <div className="ml-4 mt-2 space-y-2">
                                 {whySubsections[category.id]?.map((item) => {
                                   const isBolmate = item.title === 'Bolbaas vs. Bolmate';
+                                  const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
                                   const isBollify = item.title === 'Bolbaas vs. Bollify';
                                   const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                                  const isDisabled = !isBolmate && !isBollify;
+                                  const isDisabled = !isBolmate && !isBolbuddy && !isBollify;
                                   
                                   return isDisabled ? (
                                     <div
@@ -937,7 +953,7 @@ const pathname = usePathname();
                     ? 'text-white hover:text-white/80 border-white/10' 
                     : 'text-[#111111] hover:text-[#111111]/80 border-black/5'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handlePrijzenClick}
               >
                 Prijzen
               </Link>

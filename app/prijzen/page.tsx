@@ -1,6 +1,8 @@
 
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaCircleCheck } from "react-icons/fa6";
 import { KiteIcon } from "@/components/ui/kite-icon";
@@ -98,30 +100,30 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Volledig automatische facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#email-campagnes" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt review e-mails
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt aantal bestellingen
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -134,24 +136,24 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/tools#product-tracking" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Product tracking (10 producten)
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#winst-calculator" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Winst & ACoS calculator
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#ab-testing" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         A/B testen van listings
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -164,25 +166,25 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/store-prestaties#custom-dashboards" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Custom dashboards & views
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/store-prestaties#product-prestaties" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Bestellingen, Producten, Sales inzichten
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
         </div>
 
             </div>
 
-            {/* Plus Plan */}
+                {/* Plus Plan */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 relative">
               <div className="mb-8">
                 <p className="text-[12px] leading-[14px] font-normal text-gray-500 tracking-wide uppercase mb-2">
@@ -227,30 +229,30 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Volledig automatische facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#email-campagnes" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt review e-mails
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt aantal bestellingen
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -263,24 +265,24 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Research database & Ranking AI
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#product-tracking" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Product tracking (100) + Precision (30)
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#ab-testing" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Keyword tracking + A/B testing
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -293,18 +295,18 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/store-prestaties#custom-dashboards" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Custom dashboards & views
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/store-prestaties#product-prestaties" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Bestellingen, Producten, Sales inzichten
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -353,30 +355,30 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Volledig automatische facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#store-automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt facturen
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering#email-campagnes" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt review e-mails
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/automatisering" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt aantal bestellingen
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -389,24 +391,24 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Research database & Ranking AI
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#product-tracking" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Onbeperkt tracking + Precision (400)
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/tools#ab-testing" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Keyword + Winst & ACoS + A/B testing
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -419,18 +421,18 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    <Link href="/features/store-prestaties#custom-dashboards" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Custom dashboards & views
                       </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                    </Link>
+                    <Link href="/features/store-prestaties#product-prestaties" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
                         Bestellingen, Producten, Sales inzichten
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
