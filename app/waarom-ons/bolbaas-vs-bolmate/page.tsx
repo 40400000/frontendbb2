@@ -9,6 +9,7 @@ import { EmailSignupForm } from "@/components/email-signup-form";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 import AnimatedMovingBadges from "@/components/animated-moving-badges";
 import { ComparisonAccordionItem } from "@/components/comparison-accordion-item";
+import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 
 export const metadata: Metadata = {
   title: "Bolbaas vs Bolmate - het beste alternatief",
@@ -416,8 +417,35 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section className="relative bg-white py-12 md:py-16 overflow-hidden">
+        {/* Subtle Animated Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 w-full h-full opacity-60">
+            <AnimatedHeroBackground
+              color1="232,64,13"
+              color2="255,238,216"
+              color3="208,178,255"
+            />
+          </div>
+          
+          {/* Smooth Gradient Overlay - fades from white at top */}
+          <div 
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            style={{
+              background: `
+                linear-gradient(to bottom,
+                  rgba(255, 255, 255, 1) 0%,
+                  rgba(255, 255, 255, 0.95) 15%,
+                  rgba(255, 255, 255, 0.85) 40%,
+                  rgba(255, 255, 255, 0.8) 60%,
+                  rgba(255, 255, 255, 0.85) 80%,
+                  rgba(255, 255, 255, 0.95) 100%
+                )`
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
             {/* Left Content */}
             <div className="space-y-8 md:space-y-10">
@@ -683,189 +711,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-
-      {/* Apple-like Feature Grid (minimal, monochrome) */}
-      <section className="bg-white pb-6 md:pb-8 lg:pb-14 text-[#111111]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-12 gap-2 md:gap-3">
-            {/* Keyword Database - prominent */}
-            <Link
-              href="/features/tools#bolbaas-database"
-              className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
-              aria-label="Keyword database met meer dan 12 miljoen termen"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Database: 12M keywords</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">+ CPC data</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Database →</div>
-            </Link>
-
-            {/* Highlight: Review Emails */}
-            <Link
-              href="/features/automatisering#email-campagnes"
-              className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}
-              aria-label="Automatische review e-mails"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-medium">Review e‑mails</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch versturen</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">E‑mail automatisering →</div>
-            </Link>
-
-            {/* Ranking AI */}
-            <Link
-              href="/features/tools#ranking-ai"
-              className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
-              aria-label="Ranking AI voor listing optimalisatie"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Ranking AI</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">listing optimalisatie</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">AI tools →</div>
-            </Link>
-
-            {/* Quote style tile */}
-            <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-black/10 p-2.5 md:p-4 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out">
-              <p className="text-[16px] md:text-[18px] leading-[22px] md:leading-[24px]">
-                "Bolbaas biedt alle software die je nodig hebt als bol partner."
-              </p>
-              <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/60">Lucas van gasteren — bol partner</p>
-            </div>
-
-            {/* BTW Facturen */}
-            <Link
-              href="/features/automatisering#store-automatisering"
-              className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}
-              aria-label="Automatische BTW factuur uploads"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">BTW facturen</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch versturen</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Automatisering →</div>
-            </Link>
-
-            {/* Product Tracking */}
-            <Link
-              href="/features/tools#product-tracking"
-              className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
-              aria-label="Product tracking"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Product tracking</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">prijs, ranking, voorraad</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Tracking →</div>
-            </Link>
-
-            {/* Custom Dashboards */}
-            <Link
-              href="/features/store-prestaties#custom-dashboards"
-              className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}
-              aria-label="Custom sales dashboards"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Custom dashboards</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">sales data op maat</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Dashboards →</div>
-            </Link>
-
-            {/* Sales Voorspellingen */}
-            <Link
-              href="/features/store-prestaties#sales-voorspellingen"
-              className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}
-              aria-label="Sales en voorraad voorspellingen"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Voorspellingen</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">stock & sales en omzet</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Forecasting →</div>
-            </Link>
-
-            {/* Winst Calculator */}
-            <Link
-              href="/features/tools#winst-calculator"
-              className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
-              aria-label="Winst en ACoS calculator"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Winst calculator</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">+ ACoS berekening</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Calculator →</div>
-            </Link>
-
-            {/* A/B Testing */}
-            <Link
-              href="/features/tools#ab-testing"
-              className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#EAF3FF' }}
-              aria-label="A/B testen van listings"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="blue" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">A/B testing</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">listing varianten</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Testing →</div>
-            </Link>
-
-            {/* Baaspilot */}
-            <Link
-              href="/features/automatisering#baaspilot"
-              className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#FBEAE6' }}
-              aria-label="Baaspilot notificaties"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="orange" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Baaspilot</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">altijd op de hoogte</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Notificaties →</div>
-            </Link>
-
-            {/* Bestellingen */}
-            <Link
-              href="/features/store-prestaties#bestellingen"
-              className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
-              style={{ backgroundColor: '#F3EEFF' }}
-              aria-label="Bestellingen analysis"
-            >
-              <div className="flex items-center gap-2">
-                <KiteIcon variant="purple" size={10} />
-                <div className="text-[24px] md:text-[28px] leading-none font-normal">Bestellingen en product analyse</div>
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">gedetailleerd overzicht</div>
-              <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Bestellingen →</div>
-            </Link>
-
-          </div>
-        </div>
-      </section>
-
       {/* Comparison Table Section */}
       <section className="bg-[#F6F5F3] py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
