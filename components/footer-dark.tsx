@@ -26,7 +26,7 @@ export function FooterDark() {
     { title: 'AI Research tools', href: '/features/tools' },
     { title: 'Automatisering', href: '/features/automatisering' },
     { title: 'Store prestaties', href: '/features/store-prestaties' },
-    { title: 'Product tracking', href: '/features/tracking' },
+    { title: 'Product tracking', href: '/features/tools#product-tracking' },
     { title: 'Keyword database', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
     { title: 'Ranking AI', href: '/features/tools#ranking-ai' },
   ];

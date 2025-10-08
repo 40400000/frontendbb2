@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { VideoModal } from './video-modal';
+import { MdZoomIn } from 'react-icons/md';
 
 export function ScrollVideoEffect() {
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -8,6 +10,7 @@ export function ScrollVideoEffect() {
   const [translateX, setTranslateX] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [videoSrc, setVideoSrc] = useState('/hero_movie.mp4');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Check if device is mobile and set appropriate video source
@@ -68,32 +71,51 @@ export function ScrollVideoEffect() {
   }, [isMobile]);
 
   return (
-    <div 
-      ref={videoContainerRef}
-      className="container max-w-4xl mx-auto mt-12 md:mt-32 mb-2 md:mb-16"
-    >
+    <>
       <div 
-        className="relative rounded-xl overflow-hidden shadow-2xl transition-transform duration-150 ease-out"
-        style={{ 
-          transform: isMobile 
-            ? 'scale(1) translateX(0px)' 
-            : `scale(${scale}) translateX(${translateX}px)`,
-          transformOrigin: 'center center'
-        }}
+        ref={videoContainerRef}
+        className="container max-w-4xl mx-auto mt-12 md:mt-32 mb-2 md:mb-16"
       >
-        <video
-          key={videoSrc} // Force re-render when source changes
-          className="w-full h-auto aspect-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          src={videoSrc}
+        <div 
+          onClick={() => setIsModalOpen(true)}
+          className="relative rounded-xl overflow-hidden shadow-2xl transition-transform duration-150 ease-out cursor-pointer group"
+          style={{ 
+            transform: isMobile 
+              ? 'scale(1) translateX(0px)' 
+              : `scale(${scale}) translateX(${translateX}px)`,
+            transformOrigin: 'center center'
+          }}
         >
-          Your browser does not support the video tag.
-        </video>
+          <video
+            key={videoSrc} // Force re-render when source changes
+            className="w-full h-auto aspect-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            src={videoSrc}
+          >
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Hover Overlay with Zoom Icon */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-200 flex items-center justify-center">
+            <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:scale-110">
+              <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 md:p-4 shadow-lg">
+                <MdZoomIn className="w-6 h-6 md:w-8 md:h-8 text-black" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <VideoModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        videoSrc={videoSrc}
+        ariaLabel="Bolbaas demo video"
+      />
+    </>
   );
 }

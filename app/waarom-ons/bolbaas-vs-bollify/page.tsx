@@ -136,19 +136,6 @@ export default function HomePage() {
             </h1>
 
             <EmailSignupForm sendTo="AW-17372857270/1maandcta" />
-
-            <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm opacity-70">
-              <FaGoogle className="h-4 w-4 text-[#111111]" />
-              <div className="flex items-center gap-0.5">
-                <IoStar className="h-4 w-4 text-[#111111]" />
-                <IoStar className="h-4 w-4 text-[#111111]" />
-                <IoStar className="h-4 w-4 text-[#111111]" />
-                <IoStar className="h-4 w-4 text-[#111111]" />
-                <IoStar className="h-4 w-4 text-[#111111]" />
-              </div>
-              <span className="text-[#111111]/30">|</span>
-              <span>Tevreden partners</span>
-            </div>
           </div>
 
           {/* Feature Cards Grid */}
@@ -271,9 +258,9 @@ export default function HomePage() {
       {/* Quote Section */}
       <section className="bg-[#111111] text-white py-16 md:py-20 lg:py-28" data-dark-section="true">
         <div className="container mx-auto max-w-3xl px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 lg:gap-8">
-            {/* Photo */}
-            <div className="flex-shrink-0">
+          <div className="flex flex-col items-center gap-4 md:gap-6 lg:gap-8">
+            {/* Photo - Commented out */}
+            {/* <div className="flex-shrink-0">
               <Image
                 src="/lvg.jpeg"
                 alt="Lucas van Gasteren"
@@ -281,10 +268,10 @@ export default function HomePage() {
                 height={128}
                 className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Quote content */}
-            <div className="flex-1 text-center md:text-left">
+            <div className="flex-1 text-left">
               <blockquote
                 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] text-white mb-2 md:mb-3"
                 style={{                  fontWeight: 400,
@@ -366,8 +353,6 @@ export default function HomePage() {
               bolbaasContent="Bolbaas biedt complete product research software: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
               bolmateContent="Bollify heeft alleen een zoekterm database. Geen inzichten, geen automatisering, geen Baaspilot, geen Ranking AI. Voor een compleet pakket moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
               competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
             />
 
             {/* Item 2 */}
@@ -376,8 +361,6 @@ export default function HomePage() {
               bolbaasContent="Bolbaas heeft precision tracking voor een 100% nauwkeurig beeld van alle rankings per dag. "
               bolmateContent="De rankings tracker van Bollify mist veel data. Hierdoor krijg je onvolledige informatie en mis je belangrijke inzichten."
               competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
             />
 
             {/* Item 3 */}
@@ -386,8 +369,6 @@ export default function HomePage() {
               bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, e-mail automatisering, factuur automatisering, BTW automatisering en Baaspilot notificaties."
               bolmateContent="Bollify mist essentiële store prestatie tools: geen levering tracker, geen custom dashboards, beperkte product inzichten, geen automatisering, en geen voorraad of sales voorspellingen. Je krijgt alleen basis rapportage zonder de diepgaande analytics die je nodig hebt om je store te optimaliseren."
               competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
             />
 
             {/* Item 4 */}
@@ -396,8 +377,6 @@ export default function HomePage() {
               bolbaasContent="Bolbaas focust zich uitsluitend op onze software. Wij ontwikkelen de beste tools en automatisering zodat jij zelf je store kunt beheren en laten groeien. Jij houdt de controle over je bedrijf."
               bolmateContent="Bollify focust zich op hun 'do it for you' agency model. Ze willen je store voor je beheren in plaats van jou de tools te geven om het zelf te doen. Dit betekent minder controle en hogere kosten op lange termijn."
               competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
             />
 
             {/* Item 5 */}
@@ -406,8 +385,6 @@ export default function HomePage() {
               bolbaasContent="Bolbaas heeft de grootste zoekwoorden database met 12+ miljoen keywords. Elke zoekterm bevat uitgebreide inzichten: CPC data, zoekvolume trends, concurrentie-analyse, seizoensgebonden patronen, en winstmogelijkheden."
               bolmateContent="Bollify heeft een kleinere database met beperkte inzichten per zoekwoord. Ze missen een aantal diepgaande analytics die je nodig hebt voor succesvolle product research."
               competitorName="Bollify"
-              competitorLogo="/64d1e3bc4f13129cb45b40e5-198x149-1x-removebg-preview.png"
-              competitorAlt="Bollify"
             />
           </div>
           
@@ -482,8 +459,8 @@ export default function HomePage() {
           {/* Main Content Grid */}
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-4 md:space-y-5">
-              {/* Feature Block */}
+            <div className="space-y-6 md:space-y-8">
+              {/* Header */}
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
                   <KiteIcon variant="blue" size={11} />
@@ -492,20 +469,79 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                 Automatisch BTW facturen uploaden naar bol.
+                  Automatische bol facturen
                 </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                  Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
-                </p>
               </div>
 
-              {/* Action Buttons */}
+              {/* Video */}
+              <div className="relative">
+                <video
+                  src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Right - Description, Button and Three Key Points */}
+            <div className="space-y-5 md:space-y-6">
+              {/* Description */}
+              <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
+                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+              </p>
+
+              {/* Three Key Points */}
+              {/* Point 1 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Direct versturen naar bol
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Direct na bestelling wordt de factuur aangemaakt en verstuurd naar het klantaccount op bol. Voorkom klantvragen en bespaar tijd.
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 2 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Jouw eigen huisstijl
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Facturen worden automatisch voorzien van jouw logo en bedrijfsgegevens voor een professionele uitstraling.
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 3 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Veilig bewaard
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Alle facturen worden veilig opgeslagen zodat je voldoet aan de wettelijke 7 jaar bewaarplicht.
+                  </p>
+                </div>
+              </div>
+
+              {/* Action Button */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
                   href="https://app.bolbaas.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                  className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
                 >
                   <span>1 maand gratis</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -513,20 +549,6 @@ export default function HomePage() {
                   </svg>
                 </a>
               </div>
-            </div>
-
-            {/* Right Video */}
-            <div className="relative">
-              <video
-                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/facturen.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="rounded-xl w-full h-auto scale-95 drop-shadow-lg"
-              >
-                Your browser does not support the video tag.
-              </video>
             </div>
           </div>
         </div>
@@ -600,7 +622,7 @@ export default function HomePage() {
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">BTW facturen</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch uploaden</div>
+              <div className="mt-1 text-xs md:text-sm text-black/70">automatisch versturen</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Automatisering →</div>
             </Link>
 
@@ -1271,10 +1293,7 @@ export default function HomePage() {
           {/* Disclaimer */}
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
-              Bolbaas vergeleken met Bollify abonnement
-            </p>
-            <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
-              Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
+              Bolbaas Plus vergeleken met Bollify standaard abonnement
             </p>
           </div>
         </div>

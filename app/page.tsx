@@ -10,6 +10,7 @@ import { EmailSignupForm } from "@/components/email-signup-form";
 import { ScrollVideoEffect } from "@/components/scroll-video-effect";
 import { Animatedbadge } from "@/components/animatedbadge";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
+import { ClickableVideo } from "@/components/clickable-video";
 
 export const metadata = {
   title: "Bolbaas - AI software voor bol.com partners | Automatisering & Keyword Research",
@@ -133,11 +134,11 @@ export default function HomePage() {
             </div>
 
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-              De <em className="italic">AI</em> software oplossing voor Bol partners.
+            Groei je Bol business sneller met slimme automatisering & research tools
             </h1>
 
             <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-80 mb-6 md:mb-8">
-              Automatiseer je Bol store, krijg data‑inzichten en groei sneller met AI.
+            Automatiseer BTW facturen & e-mails <br /> en ontdek winstgevende producten.
             </p>
 
             <EmailSignupForm 
@@ -153,46 +154,260 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="bg-white py-12 md:py-22">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-            {/* Photo */}
-            <div className="flex-shrink-0">
-              <Image
-                src="/lvg.jpeg"
-                alt="Lucas van gasteren"
-                width={128}
-                height={128}
-                priority
-                sizes="(max-width: 768px) 112px, 128px"
-                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
-              />
+      {/* BTW Facturen Automatisering Section */}
+      <section id="store-automatisering" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
+            {/* Left Content */}
+            <div className="space-y-6 md:space-y-8">
+              {/* Header */}
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <KiteIcon variant="blue" size={11} />
+                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                    BTW FACTUREN
+                  </span>
+                </div>
+                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
+                  Automatische bol facturen
+                </h3>
+              </div>
+
+              {/* Video */}
+              <div className="relative -mx-2 md:mx-0">
+                <ClickableVideo
+                  videoSrc="/facturen_movie.mp4"
+                  className="rounded-xl w-full h-auto drop-shadow-lg"
+                  ariaLabel="BTW factuur automation demo showing automatic invoice sending to bol.com"
+                />
+              </div>
             </div>
 
-            {/* Quote content */}
-            <div className="flex-1 text-center md:text-left">
-              <blockquote
-                className="text-[30px] md:text-[36px] leading-[34px] md:leading-[40px] text-[#111111] mb-2 md:mb-3"
-                style={{                  fontWeight: 400,
-                  fontStyle: 'normal',
-                }}
-              >
-                “De emails en facturen automatiseren is een piece of cake.”
-              </blockquote>
+            {/* Right - Description, Button and Three Key Points */}
+            <div className="space-y-5 md:space-y-6">
+              {/* Description */}
+              <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
+                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+              </p>
 
-              <div
-                className="text-[#111111]/75 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
-              >
-                Lucas van gasteren, bol partner
+              {/* Three Key Points */}
+              {/* Point 1 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Proactief versturen naar bol
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Direct na bestelling wordt de factuur aangemaakt en verstuurd naar het klantaccount op bol. Voorkom klantvragen en bespaar tijd.
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 2 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Jouw eigen huisstijl
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Facturen worden automatisch voorzien van jouw logo en bedrijfsgegevens voor een professionele uitstraling.
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 3 */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <FaCircleCheck className="text-[#165DFC] text-lg md:text-xl flex-shrink-0 mt-1" />
+                <div className="space-y-1.5">
+                  <h4 className="text-[17px] md:text-[19px] font-extrabold text-[#111111]">
+                    Veilig bewaard
+                  </h4>
+                  <p className="text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal text-[#111111]/60">
+                    Alle facturen worden veilig opgeslagen zodat je voldoet aan de wettelijke 7 jaar bewaarplicht.
+                  </p>
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://app.bolbaas.nl/registreren"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>1 maand gratis</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* 4-Step BTW Process Grid */}
+
+        </div>
+      </section>
+
+      <section id="email-campagnes" className="relative overflow-hidden bg-white pb-10 md:pb-14 lg:pb-18">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
+          <div className="max-w-4xl mb-8 md:mb-12">
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex items-center gap-2 mb-2">
+                <KiteIcon variant="orange" size={11} />
+                <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
+                  Automatische e-mails
+                </span>
+              </div>
+              <h2 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
+                Vestuur bol.com review e-mails
+              </h2>
+              <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
+                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je bol.com productpagina. 
+                Verbeter je ranking, verhoog je conversie en blijf binnen alle bol.com richtlijnen!
+              </p>
+            </div>
+
+          </div>
+
+          {/* Feature Cards Layout */}
+          <div className="grid lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
+            {/* Left Side - Complex Layout */}
+            <div className="grid gap-4 md:gap-6">
+              {/* Top Row - Two Cards Side by Side */}
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                {/* Reviewverzoeken */}
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
+                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
+                    Reviewverzoeken
+                  </h3>
+                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    Krijg meer reviews door automatische verzoeken.
+                  </p>
+                  <Image
+                    src="/productenreviews.png"
+                    alt="Product reviews dashboard"
+                    width={407}
+                    height={260}
+                    className="absolute w-[160%] h-auto -bottom-6 -right-12 border border-gray-200 shadow-sm rounded-2xl"
+                  />
+                </div>
+
+                {/* Review QR-codes */}
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
+                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
+                    AI reviewanalyse
+                  </h3>
+                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
+                    AI analyseert je reviews en geeft inzicht in mogelijke product verbeteringen.
+                  </p>
+                  <Image
+                    src="/aianalyse.png"
+                    alt="AI review analyse dashboard"
+                    width={400}
+                    height={300}
+                    className="absolute w-[160%] h-auto bottom-8 -right-12 border border-gray-200 shadow-sm rounded-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* Bottom - Review Inzichten Card */}
+              <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 min-h-[350px] md:min-h-[320px] flex flex-col overflow-hidden" style={{ backgroundColor: '#EAF3FF' }}>
+                <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
+                  Uitgebreide review inzichten
+                </h3>
+                <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70 flex-1">
+                  Analyseer je reviews en krijg inzicht in positieve en negatieve punten.
+                </p>
+                {/* Reviews dashboard image */}
+                <div className="flex-1 relative">
+                  <Image
+                    src="/reviewsdashboard.png"
+                    alt="Review dashboard met inzichten"
+                    width={800}
+                    height={600}
+                    className="absolute bottom-0 right-0 w-[200%] h-auto rounded-2xl transform translate-x-12 translate-y-32"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Review inzichten (Full Height) */}
+            <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 flex flex-col min-h-[600px] md:min-h-[700px]" style={{ background: 'linear-gradient(to bottom, white 30%, #EAF3FF)' }}>
+              <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
+                Kies uit winnende templates
+              </h3>
+              <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70">
+                Gebaseerd op onze database van 12 miljoen keywords en miljoenen verzonden e-mails hebben we de perfecte templates ontwikkeld. Onze data toont welke onderwerpen, timing en formuleringen de hoogste conversie opleveren voor bol.com verkopers.
+              </p>
+              {/* Email templates image */}
+              <div className="flex-1 flex items-end">
+                <Image
+                  src="/email_templates3.png"
+                  alt="Email templates voor reviewverzoeken"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Dark Section */}
+      <section className="bg-[#111111] text-white py-16 md:py-32" data-dark-section="true">
+        <div className="max-w-100 mx-auto text-center">
+          {/* Badge above heading */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div 
+              className="pl-2 pr-3 py-1 rounded-xl text-xs font-semibold text-white flex items-center gap-2"
+              style={{ backgroundColor: '#272625' }}
+            >
+              <Animatedbadge label="NIEUW" />
+              <span>Research database</span>
+            </div>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Product research <br/> op een <i>nieuw</i> niveau.</h2>
+          <p className="mx-auto text-white/85 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
+          Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
+        </div>
+
+        {/* Full width image section */}
+        <div className="w-full mt-8 md:mt-10">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/db-1.png"
+                alt="Bolbaas keyword database screenshot showing 12 million+ keywords with CPC data for bol.com product research"
+                width={1200}
+                height={675}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="mt-6 md:mt-8 flex justify-center">
+              <button className="bg-white text-[#111111] font-medium text-[13px] md:text-[14px] leading-[13px] md:leading-[14px] py-2.5 md:py-3 px-5 md:px-6 rounded-xl flex items-center gap-2 hover:gap-3 transition-all">
+                Onze database
+                <MdOutlineArrowOutward className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Apple-like Feature Grid (minimal, monochrome) */}
-      <section className="bg-white pb-8 md:pb-14 text-[#111111]">
+      <section className="bg-white pt-10 md:pt-16 pb-12 md:pb-20 text-[#111111]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-12 gap-2 md:gap-3">
             {/* Keyword Database - prominent */}
@@ -253,13 +468,13 @@ export default function HomePage() {
               href="/features/automatisering#store-automatisering"
               className="col-span-12 md:col-span-3 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
               style={{ backgroundColor: '#FBEAE6' }}
-              aria-label="Automatische BTW factuur uploads"
+              aria-label="Automatische BTW factuur versturen"
             >
               <div className="flex items-center gap-2">
                 <KiteIcon variant="orange" size={10} />
                 <div className="text-[24px] md:text-[28px] leading-none font-normal">BTW facturen</div>
               </div>
-              <div className="mt-1 text-xs md:text-sm text-black/80">automatisch uploaden</div>
+              <div className="mt-1 text-xs md:text-sm text-black/80">automatisch versturen</div>
               <div className="mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium">Automatisering →</div>
             </Link>
 
@@ -372,237 +587,79 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional Hero Section */}
-      <section className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
-            {/* Left Content */}
-            <div className="text-left">
-              {/* Top Text with Kite Icon */}
-              <div className="flex items-center gap-2 mb-2">
-                <KiteIcon variant="blue" size={11} />
-                <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                  Bolbaas
-                </span>
-              </div>
-
-              {/* Main Title */}
-              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
-                <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
-                Automatiseer je store, focus op <i>groei</i>.
-                </h2>
-
-                {/* Features List */}
-                <div className="space-y-2 md:space-y-3 max-w-2xl">
-                  <div className="flex items-center gap-3">
-                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      E-mail automatisering
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      Factuur automatisering
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      BTW automatisering
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a 
-                  href="https://app.bolbaas.nl/registreren"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
-                >
-                  <span>1 maand gratis proberen</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
-              </div>
+      {/* FAQ Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-10 md:mb-14 text-center">
+            Veelgestelde vragen
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
+            {/* FAQ 1 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Werkt Bolbaas ook met Fulfilment by Bol (Lvb / Vvb)?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Absoluut! Bolbaas ondersteunt zowel eigen verzending als Lvb / Vvb bestellingen. Voor alle bestellingen wordt automatisch een BTW-factuur aangemaakt en een reviewverzoek verstuurd.
+              </p>
             </div>
 
-            {/* Right Side - Animation */}
-            <div className="relative flex items-start justify-center">
-              <Automatiseringanimation />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dark Section */}
-      <section className="bg-[#111111] text-white py-16 md:py-32" data-dark-section="true">
-        <div className="max-w-100 mx-auto text-center">
-          {/* Badge above heading */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div 
-              className="pl-2 pr-3 py-1 rounded-xl text-xs font-semibold text-white flex items-center gap-2"
-              style={{ backgroundColor: '#272625' }}
-            >
-              <Animatedbadge label="NIEUW" />
-              <span>Research database</span>
-            </div>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Product research <br/> op een <i>nieuw</i> niveau.</h2>
-          <p className="mx-auto text-white/85 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
-          Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
-        </div>
-
-        {/* Full width image section */}
-        <div className="w-full mt-8 md:mt-10">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="w-full rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/db-1.png"
-                alt="Bolbaas keyword database screenshot showing 12 million+ keywords with CPC data for bol.com product research"
-                width={1200}
-                height={675}
-                quality={85}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                loading="lazy"
-                className="w-full h-auto object-cover"
-              />
+            {/* FAQ 2 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Hoe verbind ik mijn bol.com account?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Via de officiële bol.com retailer API koppel je veilig je verkoopaccount aan Bolbaas. Het proces is eenvoudig en je behoudt volledige controle over je gegevens.
+              </p>
             </div>
 
-            <div className="mt-6 md:mt-8 flex justify-center">
-              <button className="bg-white text-[#111111] font-medium text-[13px] md:text-[14px] leading-[13px] md:leading-[14px] py-2.5 md:py-3 px-5 md:px-6 rounded-xl flex items-center gap-2 hover:gap-3 transition-all">
-                Onze database
-                <MdOutlineArrowOutward className="h-4 w-4" />
-              </button>
+            {/* FAQ 3 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Waarom stuurt bol.com zelf geen facturen?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Bol.com is een platform dat kopers en verkopers met elkaar verbindt, maar is geen partij in de transactie. Als verkoper ben je zelf verantwoordelijk voor het aanmaken en versturen van facturen. Ook moet je de BTW afdragen aan de belastingdienst, ongeacht of een klant een factuur vraagt.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Kan ik mijn eigen huisstijl gebruiken?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Ja! Facturen worden automatisch gegenereerd met jouw bedrijfslogo en bedrijfsgegevens. Voor reviewverzoeken kun je zelfs personaliseren met het specifieke product dat je klant heeft gekocht, voor een persoonlijke touch.
+              </p>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Wat ziet mijn klant als afzender?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Klanten ontvangen e-mails met als afzender: "Van Jouw store via bol.com". Alle mails worden verstuurd via onze servers met een veilig bol.com e-mailadres, dus je hoeft je geen zorgen te maken over SMTP-instellingen of serverbelasting.
+              </p>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="space-y-3">
+              <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
+                Ondersteunt Bolbaas de kleineondernemersregeling?
+              </h3>
+              <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
+                Zeker! Bij gebruik van de kleineondernemersregeling (KOR) kun je met één klik alle BTW-percentages naar 0% zetten. De juiste KOR-vermelding wordt automatisch op al je facturen toegepast.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* E-mail Campagnes Section */}
-      <section id="email-campagnes" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
-        <div className="container mx-auto px-4">
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-            {/* Left Video */}
-            <div className="relative order-last lg:order-first -mx-2 md:mx-0">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="rounded-xl w-full h-auto drop-shadow-lg"
-                aria-label="Email automation demo showing automatic email campaigns for bol.com partners"
-              >
-                <source src="/email_movie.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
 
-            {/* Right Content */}
-            <div className="space-y-4 md:space-y-5">
-              {/* Feature Block */}
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <KiteIcon variant="blue" size={11} />
-                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                    E-MAIL CAMPAGNES
-                  </span>
-                </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                  Verhoog reviews en voorkom klantvragen.
-                </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                  Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
-                </p>
-              </div>
-
-              {/* Action Button */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a 
-                  href="https://app.bolbaas.nl/registreren"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
-                >
-                  <span>1 maand gratis</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BTW Facturen Automatisering Section */}
-      <section id="store-automatisering" className="relative overflow-hidden bg-white py-10 md:py-14 lg:py-18">
-        <div className="container mx-auto px-4">
-          {/* Section Header */}
-
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
-            {/* Left Content */}
-            <div className="space-y-4 md:space-y-5">
-              {/* Feature Block */}
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <KiteIcon variant="blue" size={11} />
-                  <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                    BTW FACTUREN
-                  </span>
-                </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                 Automatisch BTW facturen uploaden naar bol.
-                </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                  Geen tijd meer besteden aan het beantwoorden van klantvragen omtrent facturen. Bolbaas uploadt automatisch BTW facturen naar bol en slaat deze op in jouw database.
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a 
-                  href="https://app.bolbaas.nl/registreren"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
-                >
-                  <span>1 maand gratis</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Right Video */}
-            <div className="relative -mx-2 md:mx-0">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="rounded-xl w-full h-auto drop-shadow-lg"
-                aria-label="BTW factuur automation demo showing automatic invoice uploads to bol.com"
-              >
-                <source src="/facturen_movie.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          {/* 4-Step BTW Process Grid */}
-
-        </div>
-      </section>
     </>
   );
 }
