@@ -266,15 +266,15 @@ Word founding member         </h1>
                   </div>
                   <div className="space-y-1 pl-5">
                     <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
+                      <FaCircleCheck className="w-3 h-3 text-purple-500 group-hover:text-purple-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-medium text-purple-600 group-hover:text-purple-700 transition-colors">
                         Research database & Ranking AI
                       </span>
                     </Link>
                     <Link href="/features/tools#product-tracking" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
                       <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
                        <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
-                        Product tracking (100) + Precision (30)
+                        Product tracking (100) + <span className="font-medium text-purple-600">Precision</span> (30)
                       </span>
                     </Link>
                     <Link href="/features/tools#ab-testing" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
@@ -392,15 +392,15 @@ Word founding member         </h1>
                   </div>
                   <div className="space-y-1 pl-5">
                     <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                       <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
+                      <FaCircleCheck className="w-3 h-3 text-purple-500 group-hover:text-purple-600 transition-colors" />
+                       <span className="font-inter text-[15px] leading-[18px] font-medium text-purple-600 group-hover:text-purple-700 transition-colors">
                         Research database & Ranking AI
                       </span>
                     </Link>
                     <Link href="/features/tools#product-tracking" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
                       <FaCircleCheck className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors" />
                        <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600 group-hover:text-gray-800 transition-colors">
-                        Onbeperkt tracking + Precision (400)
+                        Onbeperkt tracking + <span className="font-medium text-purple-600">Precision</span> (400)
                       </span>
                     </Link>
                     <Link href="/features/tools#ab-testing" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">

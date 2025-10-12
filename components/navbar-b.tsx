@@ -21,7 +21,7 @@ const pathname = usePathname();
   const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
 
   const handlePrijzenClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === '/waarom-ons/bolbaas-vs-bolmate' || pathname === '/waarom-ons/bolbaas-vs-bolbuddy') {
+    if (pathname === '/waarom-ons/bolbaas-vs-bolmate' || pathname === '/waarom-ons/bolbaas-vs-bolbuddy' || pathname === '/waarom-ons/bolbaas-vs-buddli') {
       e.preventDefault();
       const prijzenSection = document.getElementById('prijzen');
       if (prijzenSection) {
@@ -171,6 +171,7 @@ const pathname = usePathname();
     vergelijkingen: [
       { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
       { title: 'Bolbaas vs. Bolbuddy', href: '/waarom-ons/bolbaas-vs-bolbuddy' },
+      { title: 'Bolbaas vs. Buddli', href: '/waarom-ons/bolbaas-vs-buddli' },
       { title: 'Bolbaas vs. Bollify', href: '/waarom-ons/bolbaas-vs-bollify' },
       { title: 'Bolbaas vs. Boloo', href: '/waarom-ons/bolbaas-vs-boloo' },
       { title: 'Bolbaas vs. Rylee', href: '/waarom-ons/bolbaas-vs-rylee' },
@@ -531,9 +532,10 @@ const pathname = usePathname();
                         {(whySubsections[activeWhyCategory] ?? []).map((item) => {
                           const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                           const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
+                          const isBuddli = item.title === 'Bolbaas vs. Buddli';
                           const isBollify = item.title === 'Bolbaas vs. Bollify';
                           const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                          const isDisabled = !isBolmate && !isBolbuddy && !isBollify;
+                          const isDisabled = !isBolmate && !isBolbuddy && !isBuddli && !isBollify && !isBoloo;
                           
                           return isDisabled ? (
                             <div
@@ -905,9 +907,10 @@ const pathname = usePathname();
                                 {whySubsections[category.id]?.map((item) => {
                                   const isBolmate = item.title === 'Bolbaas vs. Bolmate';
                                   const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
+                                  const isBuddli = item.title === 'Bolbaas vs. Buddli';
                                   const isBollify = item.title === 'Bolbaas vs. Bollify';
                                   const isBoloo = item.title === 'Bolbaas vs. Boloo';
-                                  const isDisabled = !isBolmate && !isBolbuddy && !isBollify;
+                                  const isDisabled = !isBolmate && !isBolbuddy && !isBuddli && !isBollify && !isBoloo;
                                   
                                   return isDisabled ? (
                                     <div

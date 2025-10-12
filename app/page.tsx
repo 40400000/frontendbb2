@@ -11,6 +11,8 @@ import { ScrollVideoEffect } from "@/components/scroll-video-effect";
 import { Animatedbadge } from "@/components/animatedbadge";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 import { ClickableVideo } from "@/components/clickable-video";
+import { ReviewAutomationGrid } from "@/components/review-automation-grid";
+import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata = {
   title: "Bolbaas - AI software voor bol.com partners | Automatisering & Keyword Research",
@@ -278,87 +280,7 @@ export default function HomePage() {
           </div>
 
           {/* Feature Cards Layout */}
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
-            {/* Left Side - Complex Layout */}
-            <div className="grid gap-4 md:gap-6">
-              {/* Top Row - Two Cards Side by Side */}
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
-                {/* Reviewverzoeken */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
-                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
-                    Reviewverzoeken
-                  </h3>
-                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                    Krijg meer reviews door automatische verzoeken.
-                  </p>
-                  <Image
-                    src="/productenreviews.png"
-                    alt="Product reviews dashboard"
-                    width={407}
-                    height={260}
-                    className="absolute w-[160%] h-auto -bottom-6 -right-12 border border-gray-200 shadow-sm rounded-2xl"
-                  />
-                </div>
-
-                {/* Review QR-codes */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
-                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
-                    AI reviewanalyse
-                  </h3>
-                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                    AI analyseert je reviews en geeft inzicht in mogelijke product verbeteringen.
-                  </p>
-                  <Image
-                    src="/aianalyse.png"
-                    alt="AI review analyse dashboard"
-                    width={400}
-                    height={300}
-                    className="absolute w-[160%] h-auto bottom-8 -right-12 border border-gray-200 shadow-sm rounded-2xl"
-                  />
-                </div>
-              </div>
-
-              {/* Bottom - Review Inzichten Card */}
-              <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 min-h-[350px] md:min-h-[320px] flex flex-col overflow-hidden" style={{ backgroundColor: '#EAF3FF' }}>
-                <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
-                  Uitgebreide review inzichten
-                </h3>
-                <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70 flex-1">
-                  Analyseer je reviews en krijg inzicht in positieve en negatieve punten.
-                </p>
-                {/* Reviews dashboard image */}
-                <div className="flex-1 relative">
-                  <Image
-                    src="/reviewsdashboard.png"
-                    alt="Review dashboard met inzichten"
-                    width={800}
-                    height={600}
-                    className="absolute bottom-0 right-0 w-[200%] h-auto rounded-2xl transform translate-x-12 translate-y-32"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Review inzichten (Full Height) */}
-            <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 flex flex-col min-h-[600px] md:min-h-[700px]" style={{ background: 'linear-gradient(to bottom, white 30%, #EAF3FF)' }}>
-              <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
-                Kies uit winnende templates
-              </h3>
-              <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70">
-                Gebaseerd op onze database van 12 miljoen keywords en miljoenen verzonden e-mails hebben we de perfecte templates ontwikkeld. Onze data toont welke onderwerpen, timing en formuleringen de hoogste conversie opleveren voor bol.com verkopers.
-              </p>
-              {/* Email templates image */}
-              <div className="flex-1 flex items-end">
-                <Image
-                  src="/email_templates3.png"
-                  alt="Email templates voor reviewverzoeken"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+          <ReviewAutomationGrid />
         </div>
       </section>
 
@@ -380,29 +302,17 @@ export default function HomePage() {
           Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
         </div>
 
-        {/* Full width image section */}
-        <div className="w-full mt-8 md:mt-10">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="w-full rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/db-1.png"
-                alt="Bolbaas keyword database screenshot showing 12 million+ keywords with CPC data for bol.com product research"
-                width={1200}
-                height={675}
-                quality={85}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                loading="lazy"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+        {/* Database Grid */}
+        <div className="max-w-7xl mx-auto px-4">
+          <DatabaseGrid />
+        </div>
 
-            <div className="mt-6 md:mt-8 flex justify-center">
-              <button className="bg-white text-[#111111] font-medium text-[13px] md:text-[14px] leading-[13px] md:leading-[14px] py-2.5 md:py-3 px-5 md:px-6 rounded-xl flex items-center gap-2 hover:gap-3 transition-all">
-                Onze database
-                <MdOutlineArrowOutward className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
+        {/* Button */}
+        <div className="mt-6 md:mt-8 flex justify-center">
+          <button className="bg-white text-[#111111] font-medium text-[13px] md:text-[14px] leading-[13px] md:leading-[14px] py-2.5 md:py-3 px-5 md:px-6 rounded-xl flex items-center gap-2 hover:gap-3 transition-all">
+            Onze database
+            <MdOutlineArrowOutward className="h-4 w-4" />
+          </button>
         </div>
       </section>
 

@@ -19,6 +19,7 @@ import {
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { RevenueChart } from "@/components/revenue-chart";
 import { Animatedbadge } from "@/components/animatedbadge";
+import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
   title: "Research tools - Bolbaas",
@@ -97,7 +98,7 @@ export default function ToolsPage() {
       </section>
 
       {/* Database Section */}
-      <section id="bolbaas-database" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
+      <section id="bolbaas-database" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-left mb-8 md:mb-12">
@@ -186,129 +187,7 @@ export default function ToolsPage() {
 
 
           {/* Database Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12 md:mt-16">
-            {/* Card 1 */}
-            <div className="bg-[#FBFAF9] p-6 md:p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[400px] md:min-h-[510px]">
-              <div className="relative z-10 mb-32 md:mb-40">
-                <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[26px] font-normal text-[#111111] mb-2 md:mb-3">
-                  Live markt data
-                </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/60">
-                  Real-time updates over markttrends, prijzen en concurrentie zodat je altijd de juiste beslissingen neemt.
-                </p>
-              </div>
-              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
-                <Image 
-                  src="/db-1.png" 
-                  alt="Database visualization" 
-                  width={520} 
-                  height={380} 
-                  quality={100}
-                  className="object-cover w-full h-full object-left rounded-xl drop-shadow-lg"
-                />
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[510px]">
-              <div className="relative z-10 mb-40">
-                <h3 className="text-[24px] leading-[26px] font-normal text-[#111111] mb-3">
-                  Advanced bol analytics
-                </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
-                  Diepgaande inzichten in marktgedrag, concurrentie en verkoopkansen voor betere besluitvorming.
-                </p>
-              </div>
-              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
-                <Image 
-                  src="/db-2.png" 
-                  alt="Database visualization" 
-                  width={520} 
-                  height={380} 
-                  quality={100}
-                  className="object-cover w-full h-full object-left rounded-xl drop-shadow-lg"
-                />
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[510px]">
-              <div className="relative z-10 mb-40">
-                <h3 className="text-[24px] leading-[26px] font-normal text-[#111111] mb-3">
-                  Slimme CPC tracking
-                </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
-                  Monitor biedingspatronen, optimaliseer je advertentiekosten en verhoog je winstmarges automatisch.
-                </p>
-              </div>
-              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px]">
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
-                <Image 
-                  src="/db-3.png" 
-                  alt="Database visualization" 
-                  width={520} 
-                  height={380} 
-                  quality={100}
-                  className="object-cover w-full h-full object-left rounded-xl drop-shadow-lg"
-                />
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-[#FBFAF9] p-8 rounded-xl border border-[#F5F4F2] relative overflow-hidden min-h-[510px]">
-              {/* Blur overlay */}
-              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-20 flex items-center justify-center">
-                <div className="text-center">
-
-                  <h3 className="text-[24px] leading-[26px] font-semibold text-[#111111] mb-2">
-                    Binnenkort
-                  </h3>
-                  <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
-                    Deze functie wordt binnenkort beschikbaar
-                  </p>
-                </div>
-              </div>
-              
-              <div className="relative z-10 mb-40 blur-sm">
-                <h3 className="text-[24px] leading-[26px] font-normal text-[#111111] mb-3">
-                  AI omzet schatting
-                </h3>
-                <p className="text-[16px] leading-[21px] font-normal text-[#111111]/60">
-                  Voorspel verkoopcijfers met AI en identificeer de meest winstgevende producten automatisch.
-                </p>
-              </div>
-              <div className="absolute -right-4 -bottom-4 w-[280px] h-[190px] md:w-[560px] md:h-[380px] blur-sm">
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FBFAF9] to-transparent z-10 pointer-events-none"></div>
-                <div className="w-full h-full bg-white rounded-xl drop-shadow-lg p-4 flex flex-col">
-                  {/* Product Section */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <Image 
-                      src="/db-4.jpg" 
-                      alt="Product" 
-                      width={48} 
-                      height={48} 
-                      quality={100}
-                      className="rounded-lg object-cover"
-                    />
-                    <div>
-                      <h4 className="text-[14px] leading-[16px] font-medium text-[#111111]">
-                        GLADJANUS SnikkelSnoeier V2
-                      </h4>
-                      <p className="text-[12px] leading-[14px] text-[#111111]/60">
-                        Body trimmer set
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Bar Chart Section */}
-                  <RevenueChart />
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <DatabaseGrid />
 
         </div>
       </section>

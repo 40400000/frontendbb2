@@ -23,6 +23,7 @@ import {
 import { IoStar } from "react-icons/io5";
 import { BaaspilotAutomatisering } from "@/components/baaspilot-automatisering";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
+import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 
 export const metadata: Metadata = {
   title: "Automatisering - Bolbaas",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
 
 export default function AutomatiseringPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-gray-50/30 to-white">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
@@ -113,7 +114,7 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* Store Automatisering Section */}
-      <section id="store-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
+      <section id="store-automatisering" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-left mb-8 md:mb-12">
@@ -362,7 +363,7 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* Quote Section */}
-      <section className="bg-white py-12 md:py-20">
+      <section className="bg-black py-12 md:py-20">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="flex flex-col items-center gap-4 md:gap-6 md:gap-8">
             {/* Photo - Commented out */}
@@ -379,7 +380,7 @@ export default function AutomatiseringPage() {
             {/* Quote content */}
             <div className="flex-1 text-left">
               <blockquote
-                className="text-[24px] md:text-[36px] leading-[28px] md:leading-[40px] text-[#111111] mb-2 md:mb-3"
+                className="text-[24px] md:text-[36px] leading-[28px] md:leading-[40px] text-white mb-2 md:mb-3"
                 style={{
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -389,7 +390,7 @@ export default function AutomatiseringPage() {
               </blockquote>
 
               <div
-                className="text-[#111111]/60 text-sm md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
+                className="text-white/60 text-sm md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
               >
                 Lucas van Gasteren, bol partner
               </div>
@@ -399,78 +400,41 @@ export default function AutomatiseringPage() {
       </section>
 
       {/* E-mail Campagnes Section */}
-      <section id="email-campagnes" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
+      <section id="email-campagnes" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-[32px] md:text-[45px] leading-[36px] md:leading-[45px] font-normal text-[#111111] tracking-tight mb-4 md:mb-5">
-              E-mail campagnes
-            </h2>
-            <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-              Verhoog reviews en voorkom klantvragen met e-mail campagnes. Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
-            </p>
-          </div>
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-12 md:mb-16">
-            {/* Left Video */}
-            <div className="relative order-last lg:order-first">
-              <video
-                src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/emailsauto.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="rounded-xl w-full h-auto scale-90 drop-shadow-lg"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-
-            {/* Right Content */}
-            <div className="space-y-4 md:space-y-5">
-              {/* Feature Block */}
+          {/* Email Campaign Feature Cards Section */}
+          <div className="mb-12 md:mb-16">
+            {/* Header Section */}
+            <div className="max-w-4xl mb-8 md:mb-12">
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <KiteIcon variant="blue" size={11} />
+                  <KiteIcon variant="orange" size={11} />
                   <span className="text-[10px] leading-[12px] font-normal text-[#111111] tracking-wide uppercase">
-                    E-MAIL CAMPAGNES
+                    Automatische e-mails
                   </span>
                 </div>
-                <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                  Verhoog reviews en voorkom klantvragen.
-                </h3>
-                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
-                  Automatische e-mail campagnes. Maak e-mails precies zoals je het wilt, of gebruik een van onze templates.
+                <h2 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
+                  Vestuur bol review e-mails
+                </h2>
+                <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
+                  Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je bol.com productpagina. 
+                  Verbeter je ranking, verhoog je conversie en blijf binnen alle bol.com richtlijnen!
                 </p>
               </div>
-
-              {/* Action Buttons */}
-              <div className="flex justify-start">
-                <Button 
-                  asChild
-                  className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
-                >
-                  <Link 
-                    href="https://app.bolbaas.nl/registreren"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>1 maand gratis</span>
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </Link>
-                </Button>
-              </div>
             </div>
+
+            {/* Feature Cards Layout */}
+            <ReviewAutomationGrid />
           </div>
 
+
           {/* 4-Step Email Process Section */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Step 1 */}
-              <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-4">
+              {/* <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-4">
                 <div className="flex items-center gap-3">
                   <Package className="w-5 h-5 text-gray-600" />
                   <span className="text-[10px] leading-[12px] font-normal text-gray-600 tracking-wide uppercase">STAP 01</span>
@@ -484,10 +448,10 @@ export default function AutomatiseringPage() {
                     Een klant bestelt jouw product via bol.
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Step 2 - Bolbaas Step */}
-              <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
+              {/* <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-blue-500" />
                   <span className="text-[10px] leading-[12px] font-normal text-blue-500 tracking-wide uppercase">STAP 02</span>
@@ -512,10 +476,10 @@ export default function AutomatiseringPage() {
                   />
                   <span>Geregeld door Bolbaas</span>
                 </div>
-              </div>
+              </div> */}
 
               {/* Step 3 */}
-              <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-4">
+              {/* <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 space-y-4">
                 <div className="flex items-center gap-3">
                   <IoStar className="w-5 h-5 text-yellow-500" />
                   <span className="text-[10px] leading-[12px] font-normal text-gray-600 tracking-wide uppercase">STAP 03</span>
@@ -549,10 +513,10 @@ export default function AutomatiseringPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Step 4 - Bolbaas Step */}
-              <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
+              {/* <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <LineChart className="w-5 h-5 text-blue-500" />
                   <span className="text-[10px] leading-[12px] font-normal text-blue-500 tracking-wide uppercase">STAP 04</span>
@@ -578,10 +542,10 @@ export default function AutomatiseringPage() {
                   <span>Bekijk in Store Prestaties</span>
                 </div>
               </div>
-            </div>
+            </div> */}
             
             {/* Arrows between steps */}
-            <div className="hidden lg:block absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
+            {/* <div className="hidden lg:block absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
               <div className="bg-white p-2 rounded-full border border-gray-200 shadow-sm">
                 <ArrowRight className="w-4 h-4 text-gray-400" />
               </div>
@@ -596,12 +560,12 @@ export default function AutomatiseringPage() {
                 <ArrowRight className="w-4 h-4 text-gray-400" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* BTW Automatisering Section */}
-      <section id="btw-automatisering" className="relative overflow-hidden bg-[#F6F5F3] py-16 md:py-24 lg:py-32">
+      <section id="btw-automatisering" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-left mb-8 md:mb-12">

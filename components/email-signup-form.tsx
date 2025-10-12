@@ -125,19 +125,12 @@ export function EmailSignupForm({
         </button>
       </div>
       
-      <div className={`mt-4 flex flex-col md:flex-row items-center ${testimonialAlignmentClass} gap-3 md:gap-4 text-sm opacity-70`}>
-        <div className="flex items-center gap-2 whitespace-nowrap">
-          <IoCheckmarkCircle className="h-4 w-4 text-[#111111]" />
-          <span className="text-[#111111]">Stopt vanzelf</span>
-        </div>
-        <div className="flex items-center gap-2 whitespace-nowrap">
-          <IoCheckmarkCircle className="h-4 w-4 text-[#111111]" />
-          <span className="text-[#111111]">Geen technische kennis nodig</span>
-        </div>
-        <div className="flex items-center gap-2 whitespace-nowrap">
-          <IoCheckmarkCircle className="h-4 w-4 text-[#111111]" />
-          <span className="text-[#111111]">Geen betaalmethode</span>
-        </div>
+      <div className={`mt-4 flex flex-col md:flex-row items-center ${testimonialAlignmentClass} gap-2 md:gap-3 text-sm opacity-70`}>
+        <span className="text-[#111111] whitespace-nowrap">Stopt vanzelf</span>
+        <span className="hidden md:inline text-[#111111]">•</span>
+        <span className="text-[#111111] whitespace-nowrap">Geen technische kennis nodig</span>
+        <span className="hidden md:inline text-[#111111]">•</span>
+        <span className="text-[#111111] whitespace-nowrap">Geen betaalmethode</span>
       </div>
     </div>
   );

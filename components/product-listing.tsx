@@ -9,10 +9,10 @@ interface ProductListingProps {
 }
 
 export function ProductListing({
-  imageUrl = "/RD-Trading-Gele-Badeend-Knuffel-XXL-–-50-cm-Background-Removed.webp",
-  productName = "Bolbaas Badeendje",
+  imageUrl = "https://fotolooman.nl/media/catalog/product/cache/06e4c451197453e67f718945f1975457/1/_/1_2894_1.jpg",
+  productName = "DroneX FlyingStar",
   ean = "EAN: 8720892533402",
-  material = "Legt eieren | Eet weinig",
+  material = "Vliegt weg | 2 batterijen",
   rating = 5,
   reviewCount = 569
 }: ProductListingProps) {

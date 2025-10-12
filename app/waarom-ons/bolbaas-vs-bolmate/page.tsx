@@ -11,6 +11,8 @@ import AnimatedMovingBadges from "@/components/animated-moving-badges";
 import { ComparisonAccordionItem } from "@/components/comparison-accordion-item";
 import { AnimatedHeroBackground } from "@/components/animated-hero-background";
 import { InteractivePricingButton } from "@/components/interactive-pricing-button";
+import { ReviewAutomationGrid } from "@/components/review-automation-grid";
+import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
   title: "Bolbaas vs Bolmate - het beste alternatief",
@@ -163,19 +165,25 @@ export default function HomePage() {
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
                     <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      E-mail automatisering
+                      Goedkoper per maand
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
                     <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      Factuur automatisering
+                      Onbeperkt orders
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
                     <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      Product research met 12M+ keywords
+                      Product research
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
+                      E-mail en factuur automatisering
                     </span>
                   </div>
                 </div>
@@ -188,6 +196,11 @@ export default function HomePage() {
                 <Automatiseringanimation />
               </div>
             </div>
+            
+            {/* Disclaimer */}
+            <p className="text-[11px] md:text-xs text-[#111111]/60 text-center mt-8 md:mt-12">
+              Gebaseerd op onze analyse. Interpretaties kunnen verschillen.
+            </p>
           </div>
         </div>
       </section>
@@ -357,87 +370,7 @@ export default function HomePage() {
           </div>
 
           {/* Feature Cards Layout */}
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
-            {/* Left Side - Complex Layout */}
-            <div className="grid gap-4 md:gap-6">
-              {/* Top Row - Two Cards Side by Side */}
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
-                {/* Reviewverzoeken */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
-                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
-                    Reviewverzoeken
-                  </h3>
-                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                    Krijg meer reviews door automatische verzoeken.
-                  </p>
-                  <Image
-                    src="/productenreviews.png"
-                    alt="Product reviews dashboard"
-                    width={407}
-                    height={260}
-                    className="absolute w-[160%] h-auto -bottom-6 -right-12 border border-gray-200 shadow-sm rounded-2xl"
-                  />
-                </div>
-
-                {/* Review QR-codes */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 min-h-[280px] md:min-h-[320px] flex flex-col overflow-hidden relative">
-                  <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-normal text-[#111111] tracking-tight">
-                    AI reviewanalyse
-                  </h3>
-                  <p className="text-sm md:text-[15px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                    AI analyseert je reviews en geeft inzicht in mogelijke product verbeteringen.
-                  </p>
-                  <Image
-                    src="/aianalyse.png"
-                    alt="AI review analyse dashboard"
-                    width={400}
-                    height={300}
-                    className="absolute w-[160%] h-auto bottom-8 -right-12 border border-gray-200 shadow-sm rounded-2xl"
-                  />
-                </div>
-              </div>
-
-              {/* Bottom - Review Inzichten Card */}
-              <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 min-h-[350px] md:min-h-[320px] flex flex-col overflow-hidden" style={{ backgroundColor: '#EAF3FF' }}>
-                <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
-                  Uitgebreide review inzichten
-                </h3>
-                <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70 flex-1">
-                  Analyseer je reviews en krijg inzicht in positieve en negatieve punten.
-                </p>
-                {/* Reviews dashboard image */}
-                <div className="flex-1 relative">
-                  <Image
-                    src="/reviewsdashboard.png"
-                    alt="Review dashboard met inzichten"
-                    width={800}
-                    height={600}
-                    className="absolute bottom-0 right-0 w-[200%] h-auto rounded-2xl transform translate-x-12 translate-y-12 md:translate-y-32"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Review inzichten (Full Height) */}
-            <div className="border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6 flex flex-col min-h-[600px] md:min-h-[700px]" style={{ background: 'linear-gradient(to bottom, white 30%, #EAF3FF)' }}>
-              <h3 className="text-[24px] md:text-[28px] leading-[28px] md:leading-[32px] font-normal text-[#111111] tracking-tight">
-                Converterende e-mail templates
-              </h3>
-              <p className="text-base md:text-[16px] leading-[20px] md:leading-[22px] font-normal text-[#111111]/70">
-                Gebaseerd op onze database van 12 miljoen keywords en miljoenen verzonden e-mails hebben we de perfecte templates ontwikkeld. Onze data toont welke onderwerpen, timing en formuleringen de hoogste conversie opleveren. Ook voldoen deze aan alle regels van bol.
-              </p>
-              {/* Email templates image */}
-              <div className="flex-1 flex items-end">
-                <Image
-                  src="/email_templates3.png"
-                  alt="Email templates voor reviewverzoeken"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+          <ReviewAutomationGrid />
         </div>
       </section>
 
@@ -643,7 +576,7 @@ export default function HomePage() {
       </section>
 
       {/* Tools Hero Section */}
-      <section className="relative overflow-hidden bg-[#F6F5F3]">
+      <section className="relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
             {/* Left Content */}
@@ -686,6 +619,9 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Database Grid */}
+          <DatabaseGrid />
         </div>
       </section>
 

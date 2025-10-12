@@ -15,11 +15,11 @@ import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
-  title: "Bolbaas vs Bolbuddy - het beste alternatief",
-  description: "Vergelijk Bolbaas met Bolbuddy. Ontdek waarom onze partners kiezen voor meer functies, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  title: "Bolbaas vs Buddli - het beste alternatief",
+  description: "Vergelijk Bolbaas met Buddli. Ontdek waarom onze partners kiezen voor meer functies, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
   keywords: [
-    "Bolbuddy alternatief",
-    "Bolbaas vs Bolbuddy",
+    "Buddli alternatief",
+    "Bolbaas vs Buddli",
     "Buddli alternatief",
     "bol partner software",
     "bol automatisering",
@@ -39,12 +39,12 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://bolbaas.nl"),
   alternates: {
-    canonical: "/waarom-ons/bolbaas-vs-bolbuddy",
+    canonical: "/waarom-ons/bolbaas-vs-buddli",
   },
   openGraph: {
-    title: "Bolbaas vs Bolbuddy: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bolbuddy. Ontdek waarom tevreden partners kiezen voor meer functies, 12M+ keywords database, AI tools en complete automatisering.",
-    url: "/waarom-ons/bolbaas-vs-bolbuddy",
+    title: "Bolbaas vs Buddli: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Buddli. Ontdek waarom tevreden partners kiezen voor meer functies, 12M+ keywords database, AI tools en complete automatisering.",
+    url: "/waarom-ons/bolbaas-vs-buddli",
     siteName: "Bolbaas",
     locale: "nl_NL",
     type: "website",
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
         url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
         width: 1200,
         height: 630,
-        alt: "Bolbaas vs Bolbuddy - Het beste alternatief voor bol partners",
+        alt: "Bolbaas vs Buddli - Het beste alternatief voor bol partners",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bolbaas vs Bolbuddy: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bolbuddy. Tevreden partners, 12M+ keywords, meer functies en AI automatisering.",
+    title: "Bolbaas vs Buddli: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Bolbaas met Buddli. Tevreden partners, 12M+ keywords, meer functies en AI automatisering.",
     images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
   },
   robots: {
@@ -154,11 +154,11 @@ export default function HomePage() {
                   BOLBAAS
                   <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
                   <span className="mx-1">VS</span>
-                  BOLBUDDY
+                  BUDDLI
                 </div>
                 
                 <h1 className="max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[40px] leading-[36px] md:leading-[44px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-                  Opzoek naar het <i>beste</i> alternatief voor Bolbuddy?
+                  Opzoek naar het <i>beste</i> alternatief voor Buddli?
                 </h1>
 
                 {/* Features List */}
@@ -625,7 +625,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-2xl px-4 md:px-6">
           <h2 className="text-center text-[28px] md:text-4xl lg:text-5xl leading-[32px] md:leading-[44px] lg:leading-[52px] font-normal text-[#111111] mb-8 md:mb-12 lg:mb-16">
             6 gebieden waar Bolbaas <br/>
-            <em>meer functies biedt</em> dan Bolbuddy
+            <em>meer functies biedt</em> dan Buddli
           </h2>
 
           <div className="space-y-0">
@@ -633,42 +633,42 @@ export default function HomePage() {
             <ComparisonAccordionItem 
               title="Goedkoper maandelijks én meer flexibiliteit"
               bolbaasContent="Bij Bolbaas betaal je slechts €11 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs. Daarnaast heb je toegang tot alle advanced features zoals product research, keyword tracking en custom dashboards."
-              bolmateContent="Bolbuddy rekent €14 per maand (maandelijks abonnement) of €11/maand bij jaarlijkse betaling. Het jaarlijkse abonnement is even goedkoop, maar dan zit je voor een heel jaar vast. Bij Bolbaas betaal je €11 maandelijks opzegbaar, dus meer flexibiliteit voor dezelfde prijs. Bovendien krijg je bij Bolbuddy alleen basis automatisering - voor product research en advanced analytics heb je aanvullende tools nodig."
+              bolmateContent="Buddli rekent €14 per maand (maandelijks abonnement) of €11/maand bij jaarlijkse betaling. Het jaarlijkse abonnement is even goedkoop, maar dan zit je voor een heel jaar vast. Bij Bolbaas betaal je €11 maandelijks opzegbaar, dus meer flexibiliteit voor dezelfde prijs. Bovendien krijg je bij Buddli alleen basis automatisering - voor product research en advanced analytics heb je aanvullende tools nodig."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
               title="Complete product research suite"
               bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Bolbuddy focust volledig op factuur- en e-mail automatisering. Voor product research, keyword tracking, ranking optimalisatie of concurrentie analyse biedt het geen functionaliteit. Je hebt externe tools nodig om dit aan te vullen, wat extra kosten met zich meebrengt."
+              bolmateContent="Buddli focust volledig op factuur- en e-mail automatisering. Voor product research, keyword tracking, ranking optimalisatie of concurrentie analyse biedt het geen functionaliteit. Je hebt externe tools nodig om dit aan te vullen, wat extra kosten met zich meebrengt."
             />
 
             {/* Item 3 */}
             <ComparisonAccordionItem 
               title="Uitgebreide store prestatie-analyse"
               bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, en levering tracking. Krijg het volledige overzicht van je store prestaties om betere beslissingen te maken."
-              bolmateContent="Bolbuddy biedt basis inzicht in je product reviews en verzonden e-mails, maar mist uitgebreide analytics zoals custom dashboards, levering tracking, voorraadvoorspellingen of gedetailleerde product prestatie-analyse. Voor deze inzichten ben je aangewezen op externe tools of de beperkte bol.com dashboards."
+              bolmateContent="Buddli biedt basis inzicht in je product reviews en verzonden e-mails, maar mist uitgebreide analytics zoals custom dashboards, levering tracking, voorraadvoorspellingen of gedetailleerde product prestatie-analyse. Voor deze inzichten ben je aangewezen op externe tools of de beperkte bol.com dashboards."
             />
 
             {/* Item 4 */}
             <ComparisonAccordionItem 
               title="Baaspilot - Directe notificaties en automatisering"
               bolbaasContent="Met Baaspilot krijg je direct notificaties over belangrijke gebeurtenissen in je bol store. Denk aan nieuwe bestellingen, retourzendingen, lage voorraad, of afwijkende prestaties. Zo mis je nooit iets belangrijks en kun je snel reageren op kansen of problemen."
-              bolmateContent="Bolbuddy biedt geen real-time notificatiesysteem. Je moet zelf regelmatig je bol.com dashboard checken of wachten tot de dagelijkse/wekelijkse e-mails van bol om op de hoogte te blijven van wat er gebeurt in je store. Dit betekent dat je mogelijk te laat reageert op belangrijke gebeurtenissen."
+              bolmateContent="Buddli biedt geen real-time notificatiesysteem. Je moet zelf regelmatig je bol.com dashboard checken of wachten tot de dagelijkse/wekelijkse e-mails van bol om op de hoogte te blijven van wat er gebeurt in je store. Dit betekent dat je mogelijk te laat reageert op belangrijke gebeurtenissen."
             />
 
             {/* Item 5 */}
             <ComparisonAccordionItem 
               title="Sales forecasting en slimme voorraad planning"
               bolbaasContent="Bolbaas voorspelt je toekomstige verkopen op basis van historische data en seizoenspatronen. Zo weet je precies wanneer je moet bijbestellen en voorkom je out-of-stock situaties of overstock. De AI-algoritmes analyseren je verkooptrends en geven slimme aanbevelingen over wanneer en hoeveel voorraad je nodig hebt."
-              bolmateContent="Bolbuddy biedt geen sales forecasting of voorraad planning tools. Je moet zelf je verkoopcijfers bijhouden en handmatig inschatten wanneer je nieuwe voorraad moet bestellen. Dit verhoogt het risico op gemiste verkopen door out-of-stock of onnodige kosten door te veel voorraad."
+              bolmateContent="Buddli biedt geen sales forecasting of voorraad planning tools. Je moet zelf je verkoopcijfers bijhouden en handmatig inschatten wanneer je nieuwe voorraad moet bestellen. Dit verhoogt het risico op gemiste verkopen door out-of-stock of onnodige kosten door te veel voorraad."
             />
 
             {/* Item 6 */}
             <ComparisonAccordionItem 
               title="AI review analyse voor product verbetering"
               bolbaasContent="De AI review analyse leest automatisch al je productreviews en identificeert patronen, veelvoorkomende klachten en verbeterpunten. Zo weet je precies wat klanten waarderen en wat je moet aanpassen aan je producten of service. Ideaal voor continue productverbetering en het voorkomen van negatieve reviews."
-              bolmateContent="Bolbuddy toont je review statistieken, maar analyseert de inhoud niet met AI. Je moet zelf alle reviews handmatig lezen en interpreteren om patronen te ontdekken. Dit kost veel tijd en je mist mogelijk waardevolle inzichten die in grote volumes reviews verscholen zitten."
+              bolmateContent="Buddli toont je review statistieken, maar analyseert de inhoud niet met AI. Je moet zelf alle reviews handmatig lezen en interpreteren om patronen te ontdekken. Dit kost veel tijd en je mist mogelijk waardevolle inzichten die in grote volumes reviews verscholen zitten."
             />
           </div>
           
@@ -703,7 +703,7 @@ export default function HomePage() {
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      BOLBUDDY
+                      BUDDLI
                     </span>
                   </div>
                 </div>
@@ -731,7 +731,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -760,7 +760,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -789,7 +789,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -818,7 +818,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -847,7 +847,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -876,7 +876,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -905,7 +905,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -944,7 +944,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -973,7 +973,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1002,7 +1002,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
                       </div>
@@ -1031,7 +1031,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1060,7 +1060,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1099,7 +1099,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1128,7 +1128,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <BeperktereInzichtenBadge />
                       </div>
@@ -1157,7 +1157,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <BeperktereInzichtenBadge />
                       </div>
@@ -1186,7 +1186,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1215,7 +1215,7 @@ export default function HomePage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolbuddy</span>
+                          <span>Buddli</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1237,10 +1237,10 @@ export default function HomePage() {
           {/* Disclaimer */}
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
-              Bolbaas Start vergeleken met Bolbuddy (nu Buddli) maandelijks abonnement
+              Bolbaas Start vergeleken met Buddli (voorheen Bolbuddy) maandelijks abonnement
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
-              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op het €14/maand abonnement van Bolbuddy (op basis van hun prijspagina, oktober 2025).
+              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op het €14/maand abonnement van Buddli (op basis van hun prijspagina, oktober 2025).
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
               Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
@@ -1252,3 +1252,4 @@ export default function HomePage() {
     </>
   );
 }
+

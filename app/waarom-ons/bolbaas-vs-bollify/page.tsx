@@ -13,6 +13,7 @@ import { EmailSignupForm } from "@/components/email-signup-form";
 import { Automatiseringanimation } from "@/components/automatisering-animation";
 import AnimatedMovingBadges from "@/components/animated-moving-badges";
 import { ComparisonAccordionItem } from "@/components/comparison-accordion-item";
+import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
   title: "Bolbaas vs Bollify - het beste alternatief",
@@ -187,6 +188,11 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+          
+          {/* Hero Disclaimer */}
+          <p className="text-[11px] md:text-xs text-[#111111]/60 text-center mt-8 md:mt-12">
+            Gebaseerd op onze analyse. Interpretaties kunnen verschillen.
+          </p>
 
         </div>
       </section>
@@ -292,7 +298,7 @@ export default function HomePage() {
       </section>
 
       {/* Tools Hero Section */}
-      <section className="relative overflow-hidden bg-[#F6F5F3]">
+      <section className="relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
             {/* Left Content */}
@@ -335,6 +341,9 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Database Grid */}
+          <DatabaseGrid />
         </div>
       </section>
 
