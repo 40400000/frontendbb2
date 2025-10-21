@@ -10,7 +10,7 @@ export function Automatiseringanimation() {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showReview, setShowReview] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
-
+ // ee
   const startAnimation = () => {
     setShowNotifications(false);
     setShowReview(false);
