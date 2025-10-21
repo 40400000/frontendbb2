@@ -216,18 +216,19 @@ const pathname = usePathname();
                 <div className="hidden md:block">
                   {isDarkMode ? (
                     <Image
-                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
+                      src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/logo_wit_1.png"
+                      alt="Baasy"
+                      width={220}
+                      height={74}
+                      className="filter"
+                    />
+                  ) : (
+                    <Image
+                      src="https://glrob7hsjras0ozc.public.blob.vercel-storage.com/logo_wit_1.png"
                       alt="Baasy"
                       width={220}
                       height={74}
                       className="filter invert"
-                    />
-                  ) : (
-                    <Image
-                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
-                      alt="Baasy"
-                      width={220}
-                      height={74}
                     />
                   )}
                 </div>
