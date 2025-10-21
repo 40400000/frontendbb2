@@ -87,7 +87,7 @@ Word founding member         </h1>
                 href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
-                1 maand gratis
+                14 dagen gratis
               </InteractivePricingButton>
 
               <div className="space-y-4 mb-8">
@@ -216,7 +216,7 @@ Word founding member         </h1>
                 href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
-                1 maand gratis
+                14 dagen gratis
               </InteractivePricingButton>
 
               <div className="space-y-4 mb-8">

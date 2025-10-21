@@ -158,7 +158,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-4 text-sm text-[#111111]/60">
-                    ✓ Koppel in 2 minuten • ✓ 1 maand gratis testen • ✓ Opzeggen wanneer je wilt
+                    ✓ Koppel in 2 minuten • ✓ 14 dagen gratis testen • ✓ Opzeggen wanneer je wilt
                   </p>
                 </div>
 
@@ -264,7 +264,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-6 text-sm text-[#111111]/60">
-                    Geen setup kosten • 1 maand gratis • Opzeggen wanneer je wilt
+                    Geen setup kosten • 14 dagen gratis • Opzeggen wanneer je wilt
                   </p>
                 </div>
 

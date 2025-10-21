@@ -16,7 +16,7 @@ import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata = {
   title: "Baasy - AI software voor bol.com partners | Automatisering & Keyword Research",
-  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
+  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 14 dagen gratis.",
   keywords: [
     "bol.com partner software",
     "bol automatisering", 
@@ -33,7 +33,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Baasy - AI software voor bol.com partners",
-    description: "Automatiseer je bol.com store met AI: emails, facturen, keyword research en product tracking. 12M+ keywords database. Probeer 1 maand gratis.",
+    description: "Automatiseer je bol.com store met AI: emails, facturen, keyword research en product tracking. 12M+ keywords database. Probeer 14 dagen gratis.",
     images: [
       {
         url: "https://baasy.nl/icon-512x512.png",
@@ -243,7 +243,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>1 maand gratis</span>
+                  <span>14 dagen gratis</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -591,7 +591,7 @@ export default function HomePage() {
                 Kan ik Baasy eerst proberen?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Zeker! Elk account start met 1 maand gratis proberen - geen creditcard nodig. Ervaar zelf hoe Baasy je tijd bespaart en je omzet verhoogt. Niet tevreden? Je kunt op elk moment opzeggen.
+                Zeker! Elk account start met 14 dagen gratis proberen - geen creditcard nodig. Ervaar zelf hoe Baasy je tijd bespaart en je omzet verhoogt. Niet tevreden? Je kunt op elk moment opzeggen.
               </p>
             </div>
 

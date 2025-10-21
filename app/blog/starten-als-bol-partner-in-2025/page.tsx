@@ -280,7 +280,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-4 text-sm text-[#111111]/60">
-                    ✓ Installatie in 5 minuten • ✓ 1 maand gratis • ✓ Voldoet aan alle wettelijke eisen
+                    ✓ Installatie in 5 minuten • ✓ 14 dagen gratis • ✓ Voldoet aan alle wettelijke eisen
                   </p>
                 </div>
 
@@ -384,7 +384,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-4 text-sm text-[#111111]/60">
-                    ✓ Van 6 uur naar 5 minuten • ✓ 100% accuraat • ✓ 1 maand gratis testen
+                    ✓ Van 6 uur naar 5 minuten • ✓ 100% accuraat • ✓ 14 dagen gratis testen
                   </p>
                 </div>
 
@@ -468,7 +468,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-6 text-sm text-[#111111]/60">
-                    Facturen binnen minuten • Btw-aangifte altijd klaar • 1 maand gratis testen
+                    Facturen binnen minuten • Btw-aangifte altijd klaar • 14 dagen gratis testen
                   </p>
                 </div>
 

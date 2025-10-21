@@ -84,7 +84,7 @@ export function BaaspilotAutomatisering() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>1 maand gratis</span>
+                  <span>14 dagen gratis</span>
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>

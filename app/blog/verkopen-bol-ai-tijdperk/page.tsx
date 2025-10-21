@@ -254,7 +254,7 @@ export default function BlogPostPage() {
                     </Link> 
                   </div>
                   <p className="mt-4 text-sm text-[#111111]/60">
-                    ✓ Setup in 5 minuten • ✓ Werkt met alle productcategorieën • ✓ 1 maand gratis testen
+                    ✓ Setup in 5 minuten • ✓ Werkt met alle productcategorieën • ✓ 14 dagen gratis testen
                   </p>
                 </div>
 
@@ -346,7 +346,7 @@ export default function BlogPostPage() {
                     </Link>
                   </div>
                   <p className="mt-6 text-sm text-[#111111]/60">
-                    Ranking verbetering binnen 48 uur • 340% meer traffic gemiddeld • 1 maand gratis testen
+                    Ranking verbetering binnen 48 uur • 340% meer traffic gemiddeld • 14 dagen gratis testen
                   </p>
                 </div>
 

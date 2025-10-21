@@ -51,7 +51,7 @@ This document provides a detailed summary of the content, messaging, and strateg
             *   Proactief versturen naar bol (prevents customer questions)
             *   Jouw eigen huisstijl (automatic logo and company details)
             *   Veilig bewaard (7-year legal storage requirement)
-        *   CTA: "1 maand gratis" → app.baasy.nl
+        *   CTA: "14 dagen gratis" → app.baasy.nl
 
     2.  **Email Campagnes:**
         *   Headline: "Verstuur bol.com review e-mails"
@@ -109,7 +109,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 *   **Core Message:** "Word founding member." This creates a sense of urgency and exclusivity, offering early adopters a significant, lifelong discount on all plans with dramatic price reductions shown through strikethroughs.
 
-*   **Trial Offer:** All plans start with "1 maand gratis" (1 month free trial), making it easy for sellers to try the platform risk-free. All plans are "maandelijks opzegbaar" (monthly cancellable).
+*   **Trial Offer:** All plans start with "14 dagen gratis" (1 month free trial), making it easy for sellers to try the platform risk-free. All plans are "maandelijks opzegbaar" (monthly cancellable).
 
 *   **Subscription Tiers (Current Pricing - Founding Member Discounts):**
     1.  **Start (€9/mo, was €19):** Tagline: "ZET JE EERSTE STAPPEN" - For ambitious beginners launching their bol adventure.
@@ -140,7 +140,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Detailed Feature Comparison:** The page includes a comprehensive, mobile-responsive feature matrix organized by category (Account limieten, AI & Tools, Automatisering, Store prestaties). Features clearly show checkmarks or specific limits, making plan differences immediately clear.
 
 *   **CTAs:** 
-    *   Start & Plus: "1 maand gratis" button → https://app.baasy.nl/registreren
+    *   Start & Plus: "14 dagen gratis" button → https://app.baasy.nl/registreren
     *   Pro: "Contact opnemen" button → /contact page (high-touch sales)
 
 ---
@@ -243,7 +243,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 *   **Messaging Principles:**
     *   **Data-backed claims:** "12 miljoen+ keywords", "80% of reviews come from email follow-ups", "65% of buyers read reviews"
-    *   **Specificity over vagueness:** "5-minute setup" not "quick setup", "1 maand gratis" not "free trial"
+    *   **Specificity over vagueness:** "5-minute setup" not "quick setup", "14 dagen gratis" not "free trial"
     *   **Problem-solution framing:** Acknowledge seller pain points (time waste, lack of reviews, missing data) then show how Baasy solves them
     *   **Competitor awareness:** Positioned as "de betere oplossing" - better than Bolmate, Bollify, Boloo, Rylee
 
@@ -254,7 +254,7 @@ This document provides a detailed summary of the content, messaging, and strateg
     *   Strikethrough pricing to show founding member discounts
 
 *   **Call-to-Action Patterns:**
-    *   "1 maand gratis" (primary CTA - emphasizes risk-free trial)
+    *   "14 dagen gratis" (primary CTA - emphasizes risk-free trial)
     *   "Gratis proberen" (alternative CTA)
     *   "Contact opnemen" (for Pro plan and inquiries)
     *   "Gesprek inplannen" (for consultative sales)

@@ -16,7 +16,7 @@ import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
   title: "Baasy vs Bolmate - het beste alternatief",
-  description: "Vergelijk Baasy met Bolmate. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  description: "Vergelijk Baasy met Bolmate. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 14 dagen gratis.",
   keywords: [
     "Bolmate alternatief",
     "Baasy vs Bolmate",
@@ -333,7 +333,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-blue-700 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>1 maand gratis</span>
+                  <span>14 dagen gratis</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -476,7 +476,7 @@ export default function HomePage() {
                 href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
-                1 maand gratis
+                14 dagen gratis
               </InteractivePricingButton>
 
               <div className="space-y-4">

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     default: "Baasy - data en automatisering voor bol partners",
     template: "%s",
   },
-  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
+  description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 14 dagen gratis.",
   robots: {
     index: true,
     follow: true,

@@ -17,7 +17,7 @@ import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
   title: "Baasy vs Bollify - het beste alternatief",
-  description: "Vergelijk Baasy met Bollify. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  description: "Vergelijk Baasy met Bollify. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 14 dagen gratis.",
   keywords: [
     "Bollify alternatief",
     "Baasy vs Bollify",
@@ -451,7 +451,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>1 maand gratis</span>
+                  <span>14 dagen gratis</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
@@ -552,7 +552,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>1 maand gratis</span>
+                  <span>14 dagen gratis</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
