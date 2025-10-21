@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogThemeHandler } from "@/components/blog-theme-handler";
 
 export const metadata: Metadata = {
-  title: "Verwerkersovereenkomst - Bolbaas",
+  title: "Verwerkersovereenkomst - Baasy",
   description:
-    "Verwerkersovereenkomst (DPA) tussen verwerkingsverantwoordelijke en Bolbaas (verwerker). Heldere afspraken over privacy, beveiliging en dataverwerking.",
+    "Verwerkersovereenkomst (DPA) tussen verwerkingsverantwoordelijke en Baasy (verwerker). Heldere afspraken over privacy, beveiliging en dataverwerking.",
 };
 
 export default function VerwerkersovereenkomstPage() {
@@ -45,16 +45,16 @@ export default function VerwerkersovereenkomstPage() {
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="sm:col-start-2 sm:col-span-2 prose prose-neutral dark:prose-invert max-w-none">
                 <p className="italic text-foreground/80">
-                  Dit is de verwerkersovereenkomst (Data Processing Agreement) tussen jou als verwerkingsverantwoordelijke en Bolbaas als verwerker. Zij vult onze algemene voorwaarden aan en gaat voor waar nodig.
+                  Dit is de verwerkersovereenkomst (Data Processing Agreement) tussen jou als verwerkingsverantwoordelijke en Baasy als verwerker. Zij vult onze algemene voorwaarden aan en gaat voor waar nodig.
                 </p>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">1. Partijen</h2>
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <p>
-                  1. Verwerkingsverantwoordelijke: de natuurlijke of rechtspersoon die persoonsgegevens via Bolbaas laat verwerken in het kader van de geleverde diensten.
+                  1. Verwerkingsverantwoordelijke: de natuurlijke of rechtspersoon die persoonsgegevens via Baasy laat verwerken in het kader van de geleverde diensten.
                 </p>
                 <p>
-                  2. Verwerker: Bolbaas, KvK 89112393, BTW NL004693041B93, bereikbaar via info@bolbaas.nl en +31 6 13665348.
+                  2. Verwerker: Baasy, KvK 89112393, BTW NL004693041B93, bereikbaar via info@baasy.nl en +31 6 13665348.
                 </p>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">2. Onderwerp, aard, doel en duur</h2>
@@ -132,7 +132,7 @@ export default function VerwerkersovereenkomstPage() {
                 <p>Op deze verwerkersovereenkomst is Nederlands recht van toepassing.</p>
 
                 <div className="mt-12 p-4 border rounded-lg text-sm text-foreground/80">
-                  Privacybelofte: we verkopen je data nooit, we gebruiken je data niet voor marketing of advertentieprofilering en we verwerken uitsluitend wat noodzakelijk is om de dienst te leveren. Vragen? Neem contact op via info@bolbaas.nl.
+                  Privacybelofte: we verkopen je data nooit, we gebruiken je data niet voor marketing of advertentieprofilering en we verwerken uitsluitend wat noodzakelijk is om de dienst te leveren. Vragen? Neem contact op via info@baasy.nl.
                 </div>
               </div>
             </div>

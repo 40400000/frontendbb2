@@ -29,7 +29,7 @@ interface EmailSignupFormProps {
 export function EmailSignupForm({ 
   buttonText = "Gratis proberen",
   placeholder = "Vul je email in",
-  redirectUrl = "https://app.bolbaas.nl/registreren",
+  redirectUrl = "https://app.baasy.nl/registreren",
   className = "",
   showTestimonial = false,
   align = "center",

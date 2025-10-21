@@ -100,7 +100,7 @@ export function ToolsClientFeatures() {
                  A/B testen
                </p>
                <p className="text-sm mt-1 text-white">
-                 Test nieuwe listings, Bolbaas houdt automatisch de prestaties bij. Zo weet je altijd wat de beste listing is.
+                 Test nieuwe listings, Baasy houdt automatisch de prestaties bij. Zo weet je altijd wat de beste listing is.
                </p>
              </div>
              <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > {/* Added group, relative, overflow-hidden. Removed py-6, pl-4 from here */}

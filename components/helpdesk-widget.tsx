@@ -101,12 +101,12 @@ export function HelpdeskWidget() {
 
               {/* Email */}
               <a
-                href="mailto:info@bolbaas.nl"
+                href="mailto:info@baasy.nl"
                 className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-xl transition-colors"
               >
                 <Mail className="h-5 w-5 text-gray-600" />
                 <div className="flex-1">
-                  <div className="text-sm font-medium text-gray-900">info@bolbaas.nl</div>
+                  <div className="text-sm font-medium text-gray-900">info@baasy.nl</div>
                 </div>
               </a>
             </div>

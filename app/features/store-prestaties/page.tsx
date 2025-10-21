@@ -21,23 +21,23 @@ import {
 import { IoStar } from "react-icons/io5";
 
 export const metadata: Metadata = {
-  title: "Store prestaties - Bolbaas",
-  description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
+  title: "Store prestaties - Baasy",
+  description: "Krijg diepgaande data inzichten in je bol prestaties met Baasy. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
   openGraph: {
-    title: "Store prestaties - Bolbaas",
-    description: "Krijg diepgaande data inzichten in je bol prestaties met Bolbaas. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
+    title: "Store prestaties - Baasy",
+    description: "Krijg diepgaande data inzichten in je bol prestaties met Baasy. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Data Inzichten Open Graph Image',
+        alt: 'Baasy Data Inzichten Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Store prestaties - Bolbaas",
-    description: "Krijg volledig inzicht in je bol store prestaties met de data tools van Bolbaas.",
+    title: "Store prestaties - Baasy",
+    description: "Krijg volledig inzicht in je bol store prestaties met de data tools van Baasy.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };
@@ -136,7 +136,7 @@ export default function StorePrestatiesPage() {
                   className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -184,7 +184,7 @@ export default function StorePrestatiesPage() {
               <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={36} 
                   height={36} 
                   className="mr-2 flex-shrink-0"
@@ -213,7 +213,7 @@ export default function StorePrestatiesPage() {
               <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={36} 
                   height={36} 
                   className="mr-2 flex-shrink-0"
@@ -242,7 +242,7 @@ export default function StorePrestatiesPage() {
               <div className="flex items-center text-sm text-white font-medium mt-auto">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={36} 
                   height={36} 
                   className="mr-2 flex-shrink-0"
@@ -274,7 +274,7 @@ export default function StorePrestatiesPage() {
               <div className="flex items-center text-sm text-white font-medium mt-auto relative z-10">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={36} 
                   height={36} 
                   className="mr-2 flex-shrink-0"
@@ -326,7 +326,7 @@ export default function StorePrestatiesPage() {
                   className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -460,7 +460,7 @@ export default function StorePrestatiesPage() {
                   className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -576,7 +576,7 @@ export default function StorePrestatiesPage() {
                   Voorspel je toekomstige verkopen.
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
-                  Bolbaas analyseert je historische verkopen en voorspelt toekomstige trends. Zo kun je beter plannen en voorbereiden.
+                  Baasy analyseert je historische verkopen en voorspelt toekomstige trends. Zo kun je beter plannen en voorbereiden.
                 </p>
               </div>
 
@@ -587,7 +587,7 @@ export default function StorePrestatiesPage() {
                   className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

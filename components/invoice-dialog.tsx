@@ -42,7 +42,7 @@ export function InvoiceDialog({ isOpen, onClose, onDownload, isDownloading, isRe
     e.preventDefault();
     if (email) {
       const encodedEmail = encodeURIComponent(email);
-      const url = `https://app.bolbaas.nl/registreren?email=${encodedEmail}`;
+      const url = `https://app.baasy.nl/registreren?email=${encodedEmail}`;
       
       const gtag = window.gtag;
       if (typeof gtag === "function") {

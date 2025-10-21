@@ -70,7 +70,7 @@ export function DataInzichtenClientFeatures() {
                 <p className="flex items-center text-lg md:text-xl font-semibold my-6">
                   Sales voorspellingen en voorraadbeheer
                 </p>
-                <p className="text-sm mt-1 text-white">Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kunt verwachten per product. Bolbaas berekent ook hoeveel voorraad je nodig hebt.</p>
+                <p className="text-sm mt-1 text-white">Baasy berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kunt verwachten per product. Baasy berekent ook hoeveel voorraad je nodig hebt.</p>
               </div>
             </div>
 

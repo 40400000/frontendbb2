@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bol.com partner worden: alle wettelijke eisen en administratie op een rij (6 essentiële stappen) - Bolbaas",
+  title: "Bol.com partner worden: alle wettelijke eisen en administratie op een rij (6 essentiële stappen) - Baasy",
   description: "Wil je gaan verkopen op bol.com? Deze complete gids legt uit welke wettelijke verplichtingen je hebt, welke documenten je nodig hebt en hoe je alles correct opzet.",
 };
 
@@ -258,10 +258,10 @@ export default function BlogPostPage() {
                 <div className="my-12 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
                   <h3 className="text-2xl font-bold text-[#111111]">Stop met handmatige facturen</h3>
                   <p className="mt-3 text-lg text-[#111111]/80">
-                    Elke bol.com bestelling heeft een factuur nodig. Handmatig maken = uren werk + risico op fouten. Bolbaas zorgt ervoor dat elke klant binnen minuten een perfecte btw-factuur ontvangt.
+                    Elke bol.com bestelling heeft een factuur nodig. Handmatig maken = uren werk + risico op fouten. Baasy zorgt ervoor dat elke klant binnen minuten een perfecte btw-factuur ontvangt.
                   </p>
                   <div className="bg-white p-4 rounded-lg mt-4 border">
-                    <h4 className="font-semibold mb-2 text-[#111111]">✅ Bolbaas regelt automatisch:</h4>
+                    <h4 className="font-semibold mb-2 text-[#111111]">✅ Baasy regelt automatisch:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#111111]">
                       <div>• Factuur direct na bestelling</div>
                       <div>• Juiste btw-tarieven per product</div>
@@ -311,7 +311,7 @@ export default function BlogPostPage() {
                 </div>
 
                 <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">Stap 5: Wettelijke eis - kwartaal btw-aangifte doen</h2>
-                <p className="text-lg text-[#111111] mb-6">Als je btw-plichtig bent, moet je elk kwartaal btw-aangifte doen bij de Belastingdienst. Dit is jouw eigen verantwoordelijkheid - bol.com doet dit niet voor je. De aangifte moet kloppen met je verkopen en inkopen, anders volgen er naheffingen. Bolbaas berekent automatisch je btw-aangifte op basis van je bol.com verkopen.</p>
+                <p className="text-lg text-[#111111] mb-6">Als je btw-plichtig bent, moet je elk kwartaal btw-aangifte doen bij de Belastingdienst. Dit is jouw eigen verantwoordelijkheid - bol.com doet dit niet voor je. De aangifte moet kloppen met je verkopen en inkopen, anders volgen er naheffingen. Baasy berekent automatisch je btw-aangifte op basis van je bol.com verkopen.</p>
                     
                 <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 mb-6">
                   <h4 className="font-semibold text-lg mb-3 text-[#111111]">📅 Btw-aangifte termijnen en deadlines voor bol partners</h4>
@@ -360,12 +360,12 @@ export default function BlogPostPage() {
                 </div>
 
                 <div className="my-12 p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200">
-                  <h3 className="text-2xl font-bold text-[#111111]">Bolbaas doet dit allemaal voor je</h3>
+                  <h3 className="text-2xl font-bold text-[#111111]">Baasy doet dit allemaal voor je</h3>
                   <p className="mt-3 text-lg text-[#111111]/80">
-                    Handmatig btw-aangiftes uitrekenen kost uren per kwartaal. Bolbaas berekent automatisch al je uitgaande en inkomende btw, houdt rekening met verschillende tarieven, en genereert je complete aangifte. Klaar in 5 minuten.
+                    Handmatig btw-aangiftes uitrekenen kost uren per kwartaal. Baasy berekent automatisch al je uitgaande en inkomende btw, houdt rekening met verschillende tarieven, en genereert je complete aangifte. Klaar in 5 minuten.
                   </p>
                   <div className="bg-white p-4 rounded-lg mt-4 border">
-                    <h4 className="font-semibold mb-2 text-[#111111]">🎯 Wat Bolbaas automatisch doet:</h4>
+                    <h4 className="font-semibold mb-2 text-[#111111]">🎯 Wat Baasy automatisch doet:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#111111]">
                       <div>• Alle bol.com verkopen analyseren</div>
                       <div>• Juiste btw-tarieven per product</div>
@@ -389,7 +389,7 @@ export default function BlogPostPage() {
                 </div>
 
                 <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">Stap 6: Wettelijke eis - administratie 7 jaar bewaren</h2>
-                <p className="text-lg text-[#111111] mb-6">De Belastingdienst kan tot 7 jaar terug je administratie controleren. Als je documenten niet kunt overleggen, volgen er naheffingen en boetes. Je moet dus alle facturen, btw-berekeningen en onderliggende gegevens 7 jaar bewaren. Bolbaas archiveert automatisch al je bol.com administratie voor 7+ jaar, zodat je altijd compliant bent.</p>
+                <p className="text-lg text-[#111111] mb-6">De Belastingdienst kan tot 7 jaar terug je administratie controleren. Als je documenten niet kunt overleggen, volgen er naheffingen en boetes. Je moet dus alle facturen, btw-berekeningen en onderliggende gegevens 7 jaar bewaren. Baasy archiveert automatisch al je bol.com administratie voor 7+ jaar, zodat je altijd compliant bent.</p>
                     
                 <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200 mb-6">
                   <h4 className="font-semibold text-lg mb-3 text-[#111111]">📋 Wat je in ieder geval7 jaar moet bewaren (wettelijke bewaarplicht):</h4>
@@ -402,7 +402,7 @@ export default function BlogPostPage() {
                 </div>
 
                 <div className="bg-green-50 p-6 rounded-lg border border-green-200 mb-6">
-                  <h4 className="font-semibold text-lg mb-3 text-[#111111]">✅ Hoe Bolbaas je administratie automatisch regelt:</h4>
+                  <h4 className="font-semibold text-lg mb-3 text-[#111111]">✅ Hoe Baasy je administratie automatisch regelt:</h4>
                   <div className="space-y-3 text-[#111111]">
                     <div>💾 <strong>Automatische archivering:</strong> Alle facturen en documenten direct opgeslagen</div>
                     <div>🔍 <strong>Doorzoekbaar archief:</strong> Vind binnen seconden elke factuur of transactie</div>
@@ -416,12 +416,12 @@ export default function BlogPostPage() {
                 <div className="mt-16">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Bolbaas btw-aangifte dashboard voor bol.com partners"
+                    alt="Baasy btw-aangifte dashboard voor bol.com partners"
                     width={1200}
                     height={800}
                     className="rounded-lg"
                   />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Bolbaas dashboard houdt automatisch alle btw-eisen in de gaten</p>
+                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard houdt automatisch alle btw-eisen in de gaten</p>
                 </div>
 
                 <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mb-6 mt-12">
@@ -457,7 +457,7 @@ export default function BlogPostPage() {
                 <div className="mt-16 pt-10 border-t border-gray-200 text-center">
                   <h3 className="text-2xl font-semibold text-[#111111]">Klaar om je bol.com verplichtingen te automatiseren?</h3>
                   <p className="mt-4 text-lg text-[#111111] max-w-2xl mx-auto">
-                    Voldoen aan bol.com eisen (facturen versturen) én je eigen administratie bijhouden (btw-aangifte) hoeft niet stressvol te zijn. Bolbaas automatiseert beide: klanten krijgen direct hun facturen, en jouw btw-aangifte staat altijd klaar.
+                    Voldoen aan bol.com eisen (facturen versturen) én je eigen administratie bijhouden (btw-aangifte) hoeft niet stressvol te zijn. Baasy automatiseert beide: klanten krijgen direct hun facturen, en jouw btw-aangifte staat altijd klaar.
                   </p>
                   <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                     <Link href="/prijzen" passHref>

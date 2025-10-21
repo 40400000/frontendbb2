@@ -19,7 +19,7 @@ export async function sendAffiliateEmail(
   const experience = formData.get('experience') as string;
   const audience = formData.get('audience') as string;
   const message = formData.get('message') as string;
-  const infoEmail = 'info@bolbaas.nl';
+  const infoEmail = 'info@baasy.nl';
   
   console.log('  FirstName:', firstName);
   console.log('  LastName:', lastName);
@@ -85,7 +85,7 @@ export async function sendAffiliateEmail(
   try {
     console.log('[Server Action] Attempting to send affiliate email via Resend...');
     const { data, error } = await resend.emails.send({
-      from: 'Bolbaas affiliate form <affiliate@bolbaas.nl>',
+      from: 'Baasy affiliate form <affiliate@baasy.nl>',
       to: infoEmail,
       subject: 'Nieuwe affiliate partner aanvraag',
       replyTo: email,
@@ -106,7 +106,7 @@ export async function sendAffiliateEmail(
         <p>${message ? message.replace(/\n/g, '<br>') : 'Geen bericht opgegeven'}</p>
         
         <hr>
-        <p><em>Deze aanvraag is verzonden via het affiliate partner formulier op bolbaas.nl</em></p>
+        <p><em>Deze aanvraag is verzonden via het affiliate partner formulier op baasy.nl</em></p>
       `,
     });
 

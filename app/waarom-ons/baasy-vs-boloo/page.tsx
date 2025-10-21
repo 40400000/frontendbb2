@@ -15,11 +15,11 @@ import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
-  title: "Bolbaas vs Bolmate - het beste alternatief",
-  description: "Vergelijk Bolbaas met Bolmate. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  title: "Baasy vs Boloo - het beste alternatief",
+  description: "Vergelijk Baasy met Boloo. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
   keywords: [
-    "Bolmate alternatief",
-    "Bolbaas vs Bolmate",
+    "Boloo alternatief",
+    "Baasy vs Boloo",
     "bol partner software",
     "bol automatisering",
     "product research tool",
@@ -28,23 +28,23 @@ export const metadata: Metadata = {
     "factuur automatisering",
     "bol store management"
   ],
-  authors: [{ name: "Bolbaas" }],
-  creator: "Bolbaas",
-  publisher: "Bolbaas",
+  authors: [{ name: "Baasy" }],
+  creator: "Baasy",
+  publisher: "Baasy",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://bolbaas.nl"),
+  metadataBase: new URL("https://baasy.nl"),
   alternates: {
-    canonical: "/waarom-ons/bolbaas-vs-bolmate",
+    canonical: "/waarom-ons/baasy-vs-boloo",
   },
   openGraph: {
-    title: "Bolbaas vs Bolmate: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bolmate. Ontdek waarom tevreden partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
-    url: "/waarom-ons/bolbaas-vs-bolmate",
-    siteName: "Bolbaas",
+    title: "Baasy vs Boloo: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Baasy met Boloo. Ontdek waarom tevreden partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
+    url: "/waarom-ons/baasy-vs-boloo",
+    siteName: "Baasy",
     locale: "nl_NL",
     type: "website",
     images: [
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
         url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
         width: 1200,
         height: 630,
-        alt: "Bolbaas vs Bolmate - Het beste alternatief voor bol partners",
+        alt: "Baasy vs Boloo - Het beste alternatief voor bol partners",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bolbaas vs Bolmate: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bolmate. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
+    title: "Baasy vs Boloo: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Baasy met Boloo. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
     images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
   },
   robots: {
@@ -150,14 +150,14 @@ export default function HomePage() {
               {/* Left Content */}
               <div className="text-left">
                 <div className="text-[#111111] text-[14px] leading-[16px] mb-4 flex items-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  BOLBAAS
-                  <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
+                  BAASY
+                  <Image src="/iconnavbar-mode2.png" alt="Baasy" width={32} height={32} className="invert" />
                   <span className="mx-1">VS</span>
-                  BOLMATE
+                  BOLOO
                 </div>
                 
                 <h1 className="max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[40px] leading-[36px] md:leading-[44px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-                  Opzoek naar het <i>beste</i> alternatief voor Bolmate?
+                  Opzoek naar het <i>beste</i> alternatief voor Boloo?
                 </h1>
 
                 {/* Features List */}
@@ -171,19 +171,19 @@ export default function HomePage() {
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
                     <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
+                      Stabiel platform
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
+                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
                       Onbeperkt orders
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
                     <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      Product research
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <FaCircleCheck className="text-[#111111] text-sm flex-shrink-0" />
-                    <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80">
-                      E-mail en factuur automatisering
+                      Product research met 12 miljoen keywords
                     </span>
                   </div>
                 </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
             
             {/* Disclaimer */}
             <p className="text-[11px] md:text-xs text-[#111111]/60 text-center mt-8 md:mt-12">
-              Gebaseerd op onze analyse. Interpretaties kunnen verschillen.
+              Gebaseerd op onze analyse. Interpretaties kunnen verschillen. Goedkoper bij basisabonnement.
             </p>
           </div>
         </div>
@@ -228,13 +228,13 @@ export default function HomePage() {
                   fontStyle: 'normal',
                 }}
               >
-                "Bolbaas biedt alle software die je nodig hebt als bol partner.  De emails en facturen automatiseren is een piece of cake."
+                "Wij zijn overgestapt naar Baasy, omdat wij opzoek waren naar een platform dat stabiel was en zonder bugs."
               </blockquote>
 
               <div
                 className="text-white/80 text-[14px] md:text-[16px] leading-[16px] md:leading-[18px] font-normal"
               >
-                Lucas van gasteren, bol partner
+                Lucas van Gasteren, bol partner
               </div>
             </div>
           </div>
@@ -328,7 +328,7 @@ export default function HomePage() {
               {/* Action Button */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://app.bolbaas.nl/registreren"
+                  href="https://app.baasy.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-blue-700 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
@@ -362,8 +362,8 @@ export default function HomePage() {
                 Vestuur perfecte review e-mails
               </h2>
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je bol.com productpagina. 
-                Verbeter je ranking, verhoog je conversie en blijf binnen alle bol.com richtlijnen!
+                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina op bol. 
+                Verbeter je ranking, verhoog je conversie en blijf binnen alle richtlijnen die bol heeft opgesteld voor partners!
               </p>
             </div>
 
@@ -403,8 +403,8 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-[1fr_340px_340px] gap-8 md:gap-10 lg:gap-12 items-start">
             {/* Left Content */}
             <div className="space-y-8 md:space-y-10">
               <div>
@@ -412,7 +412,7 @@ export default function HomePage() {
                   Groei zonder grenzen
                 </h2>
                 <p className="text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] font-normal text-[#111111]/70 mb-12">
-                  Van 10 tot 10.000 orders per maand – de prijs blijft hetzelfde. Geen verborgen kosten of prijsverhogingen bij groei. €11 per maand, stop wanneer je wilt. Geen technische kennis nodig.
+                  Van 10 tot 10.000 orders per maand – de prijs blijft hetzelfde. Geen verborgen kosten of prijsverhogingen bij groei. Vanaf €9 per maand, stop wanneer je wilt. Geen technische kennis nodig.
                 </p>
               </div>
 
@@ -449,67 +449,67 @@ export default function HomePage() {
             </div>
 
             {/* Right Content - Start Plan Card */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 lg:sticky lg:top-24">
-              <div className="mb-8">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6">
+              <div className="mb-6">
                 <p className="text-[12px] leading-[14px] font-normal text-gray-500 tracking-wide uppercase mb-2">
                   ZET JE EERSTE STAPPEN
                 </p>
-                <h3 className="text-[32px] leading-[32px] font-medium text-black mb-4">
+                <h3 className="text-[28px] leading-[28px] font-medium text-black mb-3">
                   Start
                 </h3>
-                <p className="text-[14px] leading-[18px] font-normal text-gray-600">
+                <p className="text-[13px] leading-[17px] font-normal text-gray-600">
                   Voor ambitieuze beginners die hun bol avontuur willen lanceren.
                 </p>
               </div>
 
-              <div className="mb-8">
+              <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-[40px] leading-[40px] font-medium text-black">11</span>
-                  <span className="text-[14px] leading-[14px] font-normal text-gray-500">/maand</span>
+                  <span className="text-[36px] leading-[36px] font-medium text-black">9</span>
+                  <span className="text-[13px] leading-[13px] font-normal text-gray-500">/maand</span>
                 </div>
-                <p className="text-[12px] leading-[14px] font-normal text-gray-500">
+                <p className="text-[11px] leading-[13px] font-normal text-gray-500">
                   Maandelijks opzegbaar
                 </p>
               </div>
 
               <InteractivePricingButton 
-                href="https://app.bolbaas.nl/registreren"
+                href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
                 1 maand gratis
               </InteractivePricingButton>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* Automatisering */}
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5">
-                    <KiteIcon variant="orange" size={10} />
-                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                    <KiteIcon variant="orange" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
                       Automatisering
                     </span>
                   </div>
-                  <div className="space-y-1 pl-5">
+                  <div className="space-y-1 pl-4">
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Volledig automatische facturen
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Onbeperkt facturen
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Onbeperkt review e-mails
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Onbeperkt aantal bestellingen
                       </span>
                     </div>
@@ -519,27 +519,27 @@ export default function HomePage() {
                 {/* AI & Tools */}
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5">
-                    <KiteIcon variant="blue" size={10} />
-                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                    <KiteIcon variant="blue" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
                       AI & Tools
                     </span>
                   </div>
-                  <div className="space-y-1 pl-5">
+                  <div className="space-y-1 pl-4">
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Product tracking (10 producten)
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Winst & ACoS calculator
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         A/B testen van listings
                       </span>
                     </div>
@@ -549,21 +549,145 @@ export default function HomePage() {
                 {/* Store Prestaties */}
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5">
-                    <KiteIcon variant="purple" size={10} />
-                    <span className="text-[15px] leading-[21px] font-normal text-black">
+                    <KiteIcon variant="purple" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
                       Store prestaties
                     </span>
                   </div>
-                  <div className="space-y-1 pl-5">
+                  <div className="space-y-1 pl-4">
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Custom dashboards & views
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCircleCheck className="w-3 h-3 text-gray-400" />
-                      <span className="font-inter text-[15px] leading-[18px] font-light text-gray-600">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Bestellingen, Producten, Sales inzichten
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Plus Plan Card */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6">
+              <div className="mb-6">
+                <p className="text-[12px] leading-[14px] font-normal text-gray-500 tracking-wide uppercase mb-2">
+                  BOOST JE VERKOOP
+                </p>
+                <h3 className="text-[28px] leading-[28px] font-medium text-black mb-3">
+                  Plus
+                </h3>
+                <p className="text-[13px] leading-[17px] font-normal text-gray-600">
+                  De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-[36px] leading-[36px] font-medium text-black">29</span>
+                  <span className="text-[13px] leading-[13px] font-normal text-gray-500">/maand</span>
+                </div>
+                <p className="text-[11px] leading-[13px] font-normal text-gray-500">
+                  Maandelijks opzegbaar
+                </p>
+              </div>
+
+              <InteractivePricingButton 
+                href="https://app.baasy.nl/registreren"
+                sendTo="AW-17372857270/1maandcta"
+              >
+                1 maand gratis
+              </InteractivePricingButton>
+
+              <div className="space-y-3">
+                {/* Automatisering */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="orange" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
+                      Automatisering
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-4">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Volledig automatische facturen
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Onbeperkt facturen
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Onbeperkt review e-mails
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Onbeperkt aantal bestellingen
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI & Tools */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="blue" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
+                      AI & Tools
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-4">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-purple-500" />
+                      <span className="font-inter text-[13px] leading-[17px] font-medium text-purple-600">
+                        Research database & Ranking AI
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Product tracking (100) + <span className="font-medium text-purple-600">Precision</span> (30)
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Keyword tracking + A/B testing
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Store Prestaties */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <KiteIcon variant="purple" size={9} />
+                    <span className="text-[14px] leading-[20px] font-normal text-black">
+                      Store prestaties
+                    </span>
+                  </div>
+                  <div className="space-y-1 pl-4">
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
+                        Custom dashboards & views
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaCircleCheck className="w-2.5 h-2.5 text-gray-400" />
+                      <span className="font-inter text-[13px] leading-[17px] font-light text-gray-600">
                         Bestellingen, Producten, Sales inzichten
                       </span>
                     </div>
@@ -629,30 +753,37 @@ export default function HomePage() {
       <section className="bg-[#FBFAF9] py-12 md:py-14 lg:py-24">
         <div className="container mx-auto max-w-2xl px-4 md:px-6">
           <h2 className="text-center text-[28px] md:text-4xl lg:text-5xl leading-[32px] md:leading-[44px] lg:leading-[52px] font-normal text-[#111111] mb-8 md:mb-12 lg:mb-16">
-            3 gebieden waar Bolbaas <br/>
-            <em>meer functies biedt</em> dan Bolmate
+            4 gebieden waar Baasy <br/>
+            <em>meer functies biedt</em> dan Boloo
           </h2>
 
           <div className="space-y-0">
             {/* Item 1 */}
             <ComparisonAccordionItem 
-              title="Goedkoper én onbeperkt orders, e-mails en facturen"
-              bolbaasContent="Bij Bolbaas betaal je slechts €11 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Geen verrassingen, geen extra kosten bij groei - gewoon een vaste, lage prijs."
-              bolmateContent="Bolmate berekent de abonnementsprijs op basis van het aantal orders dat wordt verwerkt. Deze kosten kunnen oplopen tot €69 per maand voor onbeperkt orders. Naarmate je meer orders verwerkt, stijgen je kosten - dit kan impact hebben op je winstmarge bij groei."
+              title="Goedkoper én geen extra orderkosten bij groei"
+              baasyContent="Bij Baasy betaal je €9 per maand voor onbeperkt orders, e-mails en facturen. De prijs blijft altijd hetzelfde, ongeacht hoeveel orders je verwerkt. Voor advanced research tools betaal je €29/maand (Plus) - nog steeds goedkoper dan Boloo's Business plan, maar met meer features."
+              bolmateContent="Boloo rekent €24,92/maand voor Starter (zonder automatisering) of €33,25/maand voor Business. Maar let op: je betaalt voor elke order EXTRA per maand bovenop je abonnement. Dit kan oplopen tot €59,95. Totaal dus €93,20/maand bij groei. Voor unlimited orders zonder meerkosten betaal je €83,25/maand (Enterprise)."
             />
 
             {/* Item 2 */}
             <ComparisonAccordionItem 
-              title="Complete product research suite"
-              bolbaasContent="Bolbaas biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
-              bolmateContent="Deze tool biedt prima zoekvolume-inzichten. Voor uitgebreidere research zoals keyword databases, product rank tracking en uitgebreide A/B testing zijn wellicht externe tools nodig."
+              title="Stabiel platform zonder bugs"
+              baasyContent="Baasy is gebouwd op een stabiele, goed geteste infrastructuur. Onze partners ervaren een betrouwbaar platform waar ze dagelijks op kunnen vertrouwen. Updates worden zorgvuldig getest voordat ze live gaan, zodat je store management altijd soepel verloopt."
+              bolmateContent="Volgens Google reviews kampt Boloo met verschillende bugs en technische problemen in hun applicatie. Gebruikers melden regelmatig issues met de software die hun dagelijkse werkzaamheden kunnen verstoren."
             />
 
             {/* Item 3 */}
             <ComparisonAccordionItem 
+              title="Complete product research suite"
+              baasyContent="Baasy biedt een complete product research suite: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
+              bolmateContent="Boloo biedt product tracking en een winstcalculator in alle plannen. Echter, keyword verkenner en product ranking checker zijn alleen beschikbaar in Business en Enterprise plannen. Daarnaast ontbreken Ranking AI en keyword tracking volledig. Voor uitgebreide research zijn mogelijk aanvullende tools nodig."
+            />
+
+            {/* Item 4 */}
+            <ComparisonAccordionItem 
               title="Uitgebreide store prestatie-analyse"
-              bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, en levering tracking. Krijg het volledige overzicht van je store prestaties om betere beslissingen te maken."
-              bolmateContent="Deze tool bevat geen levering tracker, custom dashboards of voorraadvoorspellingen, etc.. Het biedt meestal basis rapportage en product inzichten voor je store prestaties."
+              baasyContent="Baasy biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, en levering tracking. Krijg het volledige overzicht van je store prestaties om betere beslissingen te maken."
+              bolmateContent="Boloo's Starter plan mist essentiële analytics zoals sales dashboard, analytics per product. Deze features zijn alleen beschikbaar in Business en Enterprise plannen. Voor volledige store inzichten betaal je dus minimaal €33,25/maand. Zonder dat je al de features van Baasy hebt."
             />
           </div>
           
@@ -678,16 +809,16 @@ export default function HomePage() {
                 <div className="hidden md:block"></div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
-                    <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={24} height={24} className="md:w-8 md:h-8 invert" />
+                    <Image src="/iconnavbar-mode2.png" alt="Baasy" width={24} height={24} className="md:w-8 md:h-8 invert" />
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      BOLBAAS
+                      BAASY
                     </span>
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      BOLMATE
+                      BOLOO
                     </span>
                   </div>
                 </div>
@@ -711,16 +842,16 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
-                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">200</span>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt*</span>
                       </div>
                     </div>
                     
@@ -729,7 +860,7 @@ export default function HomePage() {
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">200</span>
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt*</span>
                     </div>
                   </div>
 
@@ -743,16 +874,16 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
-                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">1</span>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">1 (+€9,95 p/m)²</span>
                       </div>
                     </div>
                     
@@ -761,7 +892,7 @@ export default function HomePage() {
                       <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">1</span>
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">1 (+€9,95 p/m)²</span>
                     </div>
                   </div>
                 </div>
@@ -782,14 +913,75 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Alleen dynamic</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <YesBadge />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Alleen dynamic</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-center py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">
+                      Aantal traceerbare producten
+                      <div className="text-[11px] md:text-[12px] leading-[13px] md:leading-[14px] text-gray-500 mt-1">Maximum aantal producten dat je kunt volgen.</div>
+                    </div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <span>Boloo</span>
+                        </div>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">500-2000²</span>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">Onbeperkt</span>
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-gray-700">500-2000²</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Research keyword database</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -805,49 +997,20 @@ export default function HomePage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Research database</div>
-                    
-                    {/* Mobile: Plans side by side */}
-                    <div className="md:hidden grid grid-cols-2 gap-3">
-                      <div className="text-center">
-                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
-                        </div>
-                        <YesBadge />
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
-                        </div>
-                        <NoBadge />
-                      </div>
-                    </div>
-                    
-                    {/* Desktop: Original layout */}
-                    <div className="hidden md:block text-center">
-                      <YesBadge />
-                    </div>
-                    <div className="hidden md:block text-center">
-                      <NoBadge />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
                     <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Ranking AI</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -863,20 +1026,20 @@ export default function HomePage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Precision product tracking</div>
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Keyword tracking</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -891,21 +1054,21 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Keyword tracking</div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-[#F6F5F3]">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Product ranking checker</div>
                     
                     {/* Mobile: Plans side by side */}
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -927,14 +1090,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -956,14 +1119,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -977,6 +1140,7 @@ export default function HomePage() {
                       <NoBadge />
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -995,14 +1159,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1024,14 +1188,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1053,16 +1217,16 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
-                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Beperkt</span>
+                        <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt*</span>
                       </div>
                     </div>
                     
@@ -1071,7 +1235,7 @@ export default function HomePage() {
                       <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt</span>
                     </div>
                     <div className="hidden md:block text-center">
-                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Beperkt</span>
+                      <span className="text-[14px] leading-[16px] font-medium text-gray-700">Onbeperkt*</span>
                     </div>
                   </div>
 
@@ -1082,43 +1246,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
-                        </div>
-                        <YesBadge />
-                      </div>
-                    </div>
-                    
-                    {/* Desktop: Original layout */}
-                    <div className="hidden md:block text-center">
-                      <YesBadge />
-                    </div>
-                    <div className="hidden md:block text-center">
-                      <YesBadge />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
-                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Baaspilot</div>
-                    
-                    {/* Mobile: Plans side by side */}
-                    <div className="md:hidden grid grid-cols-2 gap-3">
-                      <div className="text-center">
-                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
-                        </div>
-                        <YesBadge />
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1132,6 +1267,36 @@ export default function HomePage() {
                       <NoBadge />
                     </div>
                   </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-8 items-start py-3 md:py-4 px-3 md:px-4 lg:px-8 bg-gray-50">
+                    <div className="text-[13px] md:text-[15px] leading-[16px] md:leading-[18px] font-light text-gray-700 md:mb-0 mb-3">Baaspilot</div>
+                    
+                    {/* Mobile: Plans side by side */}
+                    <div className="md:hidden grid grid-cols-2 gap-3">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
+                        </div>
+                        <YesBadge />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
+                          <span>Boloo</span>
+                        </div>
+                        <NoBadge />
+                      </div>
+                    </div>
+                    
+                    {/* Desktop: Original layout */}
+                    <div className="hidden md:block text-center">
+                      <YesBadge />
+                    </div>
+                    <div className="hidden md:block text-center">
+                      <NoBadge />
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -1150,14 +1315,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1179,14 +1344,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1208,14 +1373,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <BeperktereInzichtenBadge />
                       </div>
@@ -1237,14 +1402,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1266,14 +1431,14 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <span>Bolmate</span>
+                          <span>Boloo</span>
                         </div>
                         <NoBadge />
                       </div>
@@ -1295,13 +1460,16 @@ export default function HomePage() {
           {/* Disclaimer */}
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
-              Bolbaas Plus vergeleken met Bolmate 200 orders abonnement
+              Baasy Plus vergeleken met Boloo Business abonnement (€33,25/maand)
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
-              ² Aantal orders, e-mails en facturen zijn op basis van het abonnement. Huidige getallen zijn gebaseerd op de limieten van het €15 abonnement van Bolmate (op basis van hun prijspagina, september 2025).
+              * Boloo heeft volume pricing: extra kosten vanaf 2001-3000 orders (€49,95/maand extra). Starter plan heeft beperkte features.
             </p>
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
-              Deze vergelijking is naar ons beste vermogen objectief samengesteld, maar interpretaties kunnen per gebruiker verschillen.
+              ² Boloo Starter: 500 producten, Business: 2000 producten, Enterprise (€83,25/m): unlimited. Extra stores: +€9,95 p/m vanaf Business plan.
+            </p>
+            <p className="text-center text-[11px] md:text-xs text-gray-500 italic mt-2">
+              Deze vergelijking is naar ons beste vermogen objectief samengesteld op basis van Boloo's prijspagina (oktober 2025), maar interpretaties kunnen per gebruiker verschillen.
             </p>
           </div>
         </div>

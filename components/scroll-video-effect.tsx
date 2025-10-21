@@ -114,7 +114,7 @@ export function ScrollVideoEffect() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         videoSrc={videoSrc}
-        ariaLabel="Bolbaas demo video"
+        ariaLabel="Baasy demo video"
       />
     </>
   );

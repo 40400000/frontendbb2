@@ -1,12 +1,12 @@
-# Bolbaas Website Content Summary for LLM Training (Expanded)
+# Baasy Website Content Summary for LLM Training (Expanded)
 
-This document provides a detailed summary of the content, messaging, and strategic positioning of the Bolbaas.nl frontend. It is designed to be a comprehensive resource for training, capturing the brand's voice, key value propositions, feature specifics, and competitive stance.
+This document provides a detailed summary of the content, messaging, and strategic positioning of the Baasy.nl frontend. It is designed to be a comprehensive resource for training, capturing the brand's voice, key value propositions, feature specifics, and competitive stance.
 
 ---
 
 ## **Overall Positioning & Strategy**
 
-*   **Core Identity:** Bolbaas is AI software for bol.com partners focused on automation and keyword research. The platform positions itself as the superior standard in the market, powered by the most comprehensive dataset available (12M+ keywords, billions of data points). The brand promises clarity, control, and growth acceleration.
+*   **Core Identity:** Baasy is AI software for bol.com partners focused on automation and keyword research. The platform positions itself as the superior standard in the market, powered by the most comprehensive dataset available (12M+ keywords, billions of data points). The brand promises clarity, control, and growth acceleration.
 
 *   **SEO Keywords & Focus Areas:**
     *   bol.com partner software, bol automatisering, keyword research bol
@@ -22,12 +22,12 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 *   **Primary Goal:** To empower bol.com sellers to transcend daily operational hurdles and focus on strategic growth and entrepreneurship. This is achieved by automating time-consuming administrative tasks (facturen, BTW, emails) and converting raw data into deep, actionable insights that drive intelligent business decisions.
 
-*   **Competitive Stance:** Bolbaas is explicitly defined as **"de beste tool voor Bol partners"** and **"de betere oplossing"** compared to its competitors: **Bolmate, Bollify, Rylee, and Boloo**. This is not just a claim but a core part of its identity.
+*   **Competitive Stance:** Baasy is explicitly defined as **"de beste tool voor Bol partners"** and **"de betere oplossing"** compared to its competitors: **Bolmate, Bollify, Rylee, and Boloo**. This is not just a claim but a core part of its identity.
 
-*   **Key Differentiators:** The platform's superiority is rooted in its response to the failures of existing tools. The core message is: *"De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg. Bolbaas doet dit anders."* Bolbaas provides:
+*   **Key Differentiators:** The platform's superiority is rooted in its response to the failures of existing tools. The core message is: *"De huidige golf van bol-platforms belooft veel, maar komen deze beloftes niet waar. Data ontbreekt, en de automatisering is niet flexibel genoeg. Baasy doet dit anders."* Baasy provides:
     1.  **Truly Complete Data:** Based on over 12 million analyzed keywords and billions of data points, offering unparalleled depth - "de grootste database voor bol, by far"
     2.  **Flexible & Powerful Automation:** Automation that is not rigid but adaptable to the user's needs - unlimited invoices, emails, and orders on all plans
-    3.  **Actionable Insights:** It helps sellers make choices based on real data ("Met Bolbaas maak je keuzes op basis van echte data"), not guesswork - custom dashboards, sales forecasting, AI review analysis
+    3.  **Actionable Insights:** It helps sellers make choices based on real data ("Met Baasy maak je keuzes op basis van echte data"), not guesswork - custom dashboards, sales forecasting, AI review analysis
 
 *   **Payment & Security:** Stripe for payments (no credit card storage), encryption for all data, HTTPS connections, API key-based bol.com integration (revocable by user), 7-year invoice storage for legal compliance
 
@@ -51,7 +51,7 @@ This document provides a detailed summary of the content, messaging, and strateg
             *   Proactief versturen naar bol (prevents customer questions)
             *   Jouw eigen huisstijl (automatic logo and company details)
             *   Veilig bewaard (7-year legal storage requirement)
-        *   CTA: "1 maand gratis" → app.bolbaas.nl
+        *   CTA: "1 maand gratis" → app.baasy.nl
 
     2.  **Email Campagnes:**
         *   Headline: "Verstuur bol.com review e-mails"
@@ -75,7 +75,7 @@ This document provides a detailed summary of the content, messaging, and strateg
             *   Database: 12M keywords + CPC data
             *   Review e-mails (automatisch versturen)
             *   Ranking AI (listing optimalisatie)
-            *   Customer testimonial card: "Bolbaas biedt alle software die je nodig hebt als bol partner." - Lucas van Gasteren
+            *   Customer testimonial card: "Baasy biedt alle software die je nodig hebt als bol partner." - Lucas van Gasteren
             *   BTW facturen (automatisch versturen)
             *   Product tracking (prijs, ranking, voorraad)
             *   Custom dashboards (sales data op maat)
@@ -87,16 +87,16 @@ This document provides a detailed summary of the content, messaging, and strateg
 
     5.  **FAQ Section (12 Questions):**
         *   **Waarom heb ik automatisering nodig als bol-verkoper?** - Explains that 65% of buyers read reviews, happy customers don't leave reviews naturally, 80% of reviews come from email follow-ups, and manual invoicing wastes time
-        *   **Werkt Bolbaas ook met Fulfilment by Bol (Lvb / Vvb)?** - Yes, supports both fulfillment methods
-        *   **Is mijn data veilig bij Bolbaas?** - Encryption, HTTPS, Stripe payments, no stored credit cards, revocable API keys
+        *   **Werkt Baasy ook met Fulfilment by Bol (Lvb / Vvb)?** - Yes, supports both fulfillment methods
+        *   **Is mijn data veilig bij Baasy?** - Encryption, HTTPS, Stripe payments, no stored credit cards, revocable API keys
         *   **Hoe verbind ik mijn bol.com account?** - Via API keys created in bol seller environment, no password sharing needed
         *   **Waarom stuurt bol zelf geen facturen?** - Bol is marketplace, seller is responsible for invoices and VAT
         *   **Kan ik mijn eigen huisstijl gebruiken?** - Yes, automatic logo and company details on invoices
         *   **Ziet mijn klant mijn e-mailadres?** - No, emails show "Van [Store] via bol.com", replies go to dashboard
         *   **Heb ik technische kennis nodig?** - No, designed for easy use, setup in minutes, Dutch support available
-        *   **Kan ik Bolbaas eerst proberen?** - Yes, 1 month free trial, no credit card needed, cancel anytime
-        *   **Ondersteunt Bolbaas de kleineondernemersregeling (KOR)?** - Yes, one-click to set all VAT to 0% with automatic KOR mention
-        *   **Werkt Bolbaas voor teams?** - Yes, multi-user access with individual logins, track who did what
+        *   **Kan ik Baasy eerst proberen?** - Yes, 1 month free trial, no credit card needed, cancel anytime
+        *   **Ondersteunt Baasy de kleineondernemersregeling (KOR)?** - Yes, one-click to set all VAT to 0% with automatic KOR mention
+        *   **Werkt Baasy voor teams?** - Yes, multi-user access with individual logins, track who did what
         *   **Wat heb je van mij nodig om te starten?** - Only active bol.com seller account, 5-minute setup
 
 *   **Overall Messaging:** The page emphasizes automation to save time, data-driven insights for growth, and the comprehensive 12M+ keyword database as a key differentiator. Heavy focus on social proof, ease of use, and risk-free trial.
@@ -112,13 +112,13 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Trial Offer:** All plans start with "1 maand gratis" (1 month free trial), making it easy for sellers to try the platform risk-free. All plans are "maandelijks opzegbaar" (monthly cancellable).
 
 *   **Subscription Tiers (Current Pricing - Founding Member Discounts):**
-    1.  **Start (€11/mo, was €29):** Tagline: "ZET JE EERSTE STAPPEN" - For ambitious beginners launching their bol adventure.
+    1.  **Start (€9/mo, was €19):** Tagline: "ZET JE EERSTE STAPPEN" - For ambitious beginners launching their bol adventure.
         *   **Account Limits:** 2 stores, onbeperkt orders
         *   **Automatisering:** Volledig automatische facturen, Onbeperkt facturen, Onbeperkt review e-mails, Onbeperkt bestellingen, BTW automatisering, Baaspilot notificaties
         *   **AI & Tools:** Product tracking (10 producten), Winst & ACoS calculator, A/B testen van listings
         *   **Store Prestaties:** Custom dashboards & views, Bestellingen/Producten/Sales inzichten, Sales en voorraad schattingen, Levering tracker
         
-    2.  **Plus (€35/mo, was €75):** Tagline: "BOOST JE VERKOOP" - The perfect toolkit for sellers ready for serious growth. **Marked as "POPULAIR"**
+    2.  **Plus (€29/mo, was €59):** Tagline: "BOOST JE VERKOOP" - The perfect toolkit for sellers ready for serious growth. **Marked as "POPULAIR"**
         *   **Account Limits:** Onbeperkt stores, 2 seats, onbeperkt orders
         *   **Automatisering:** All Start features
         *   **AI & Tools:** Research database & Ranking AI, Product tracking (100 producten), Precision tracking (30 producten), Keyword tracking, A/B testing, Winst & ACoS calculator
@@ -140,7 +140,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Detailed Feature Comparison:** The page includes a comprehensive, mobile-responsive feature matrix organized by category (Account limieten, AI & Tools, Automatisering, Store prestaties). Features clearly show checkmarks or specific limits, making plan differences immediately clear.
 
 *   **CTAs:** 
-    *   Start & Plus: "1 maand gratis" button → https://app.bolbaas.nl/registreren
+    *   Start & Plus: "1 maand gratis" button → https://app.baasy.nl/registreren
     *   Pro: "Contact opnemen" button → /contact page (high-touch sales)
 
 ---
@@ -162,7 +162,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 ## 4. Waitlist Page (`app/wachtlijst/page.tsx`)
 
-*   **Core Message:** "Join de bèta van Bolbaas." This is a direct and compelling call to action for early adopters.
+*   **Core Message:** "Join de bèta van Baasy." This is a direct and compelling call to action for early adopters.
 
 *   **Purpose:** To generate high-intent leads for the beta program, creating an initial user base and community around the product before its full launch.
 
@@ -176,7 +176,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 
 *   **Headline:** "Automatiseer je store, focus op groei." This headline perfectly encapsulates the core benefit: freeing up time for strategic activities.
 
-*   **Purpose:** To provide a detailed look at how Bolbaas solves major administrative pain points through intelligent automation, allowing sellers to run their business more efficiently.
+*   **Purpose:** To provide a detailed look at how Baasy solves major administrative pain points through intelligent automation, allowing sellers to run their business more efficiently.
 
 *   **Key Features Detailed:**
     *   **Factuur Automatisering:** Solves the problem of manually uploading invoices. The platform handles generating and uploading compliant VAT invoices directly to bol.com and stores them for the user.
@@ -205,7 +205,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Purpose:** To demonstrate the immense strategic value of its proprietary data and the AI-driven tools built on top of it.
 
 *   **Key Features Detailed:**
-    *   **Bolbaas Database:** This is the foundation of the platform's competitive edge. The page emphasizes its scale: **"12 miljoen geanalyseerde keywords"** and **"miljarden datapunten,"** describing it as "de grootste database voor bol, by far."
+    *   **Baasy Database:** This is the foundation of the platform's competitive edge. The page emphasizes its scale: **"12 miljoen geanalyseerde keywords"** and **"miljarden datapunten,"** describing it as "de grootste database voor bol, by far."
     *   **Keyword Database:** This is more than just a search tool. It allows users to analyze keyword trends, see historical bidding data to inform ad spend, and identify gaps between supply and demand to find profitable niches.
     *   **Listing AI:** An AI-powered assistant that helps optimize product listings for maximum visibility and conversion, taking the guesswork out of SEO for bol.com.
     *   **Profit & ACoS Calculators:** Practical, essential tools that help sellers make sound financial decisions about product pricing and advertising spend.
@@ -244,7 +244,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Messaging Principles:**
     *   **Data-backed claims:** "12 miljoen+ keywords", "80% of reviews come from email follow-ups", "65% of buyers read reviews"
     *   **Specificity over vagueness:** "5-minute setup" not "quick setup", "1 maand gratis" not "free trial"
-    *   **Problem-solution framing:** Acknowledge seller pain points (time waste, lack of reviews, missing data) then show how Bolbaas solves them
+    *   **Problem-solution framing:** Acknowledge seller pain points (time waste, lack of reviews, missing data) then show how Baasy solves them
     *   **Competitor awareness:** Positioned as "de betere oplossing" - better than Bolmate, Bollify, Boloo, Rylee
 
 *   **Visual Identity:**

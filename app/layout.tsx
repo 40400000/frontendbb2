@@ -38,9 +38,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bolbaas.nl'), // Replace with your actual domain in production
+  metadataBase: new URL('https://baasy.nl'), // Replace with your actual domain in production
   title: {
-    default: "Bolbaas - data en automatisering voor bol partners",
+    default: "Baasy - data en automatisering voor bol partners",
     template: "%s",
   },
   description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
@@ -57,18 +57,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: {
-      default: "Bolbaas - data en automatisering voor bol partners",
+      default: "Baasy - data en automatisering voor bol partners",
       template: "%s",
     },
-    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
-    url: new URL('https://bolbaas.nl'), // Should match metadataBase or be the canonical URL
-    siteName: "Bolbaas",
+    description: "Baasy is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
+    url: new URL('https://baasy.nl'), // Should match metadataBase or be the canonical URL
+    siteName: "Baasy",
     images: [
       {
-        url: 'https://bolbaas.nl/icon-512x512.png',
+        url: 'https://baasy.nl/icon-512x512.png',
         width: 512,
         height: 512,
-        alt: 'Bolbaas - AI software voor bol partners',
+        alt: 'Baasy - AI software voor bol partners',
       },
     ],
     type: 'website',
@@ -76,11 +76,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: "Bolbaas - data en automatisering voor bol partners",
-      template: "%s - Bolbaas",
+      default: "Baasy - data en automatisering voor bol partners",
+      template: "%s - Baasy",
     },
-    description: "Bolbaas is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
-    images: ['https://bolbaas.nl/icon-512x512.png'], // Must be an absolute URL
+    description: "Baasy is het nieuwe niveau voor data en automatisering voor bol partners, gedreven door AI. Automatiseer je store, focus op ondernemen. Verregaande data over miljoenen keywords en producten, miljarden datapunten.",
+    images: ['https://baasy.nl/icon-512x512.png'], // Must be an absolute URL
   },
   manifest: '/manifest.webmanifest',
   icons: {
@@ -89,12 +89,12 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   appleWebApp: {
-    title: 'Bolbaas',
+    title: 'Baasy',
     capable: true,
     statusBarStyle: 'default',
   },
   alternates: {
-    canonical: 'https://bolbaas.nl/',
+    canonical: 'https://baasy.nl/',
   },
 };
 
@@ -133,7 +133,7 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-17372857270', {
-                cookie_domain: 'bolbaas.nl',
+                cookie_domain: 'baasy.nl',
               });
               gtag('config', 'G-PM71V62V1Z');
             `,
@@ -154,20 +154,20 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                name: "Bolbaas",
-                url: "https://bolbaas.nl/",
+                name: "Baasy",
+                url: "https://baasy.nl/",
                 potentialAction: {
                   "@type": "SearchAction",
-                  target: "https://bolbaas.nl/features/tools#bolbaas-database?q={search_term_string}",
+                  target: "https://baasy.nl/features/tools#baasy-database?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               },
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                name: "Bolbaas",
-                url: "https://bolbaas.nl/",
-                logo: "https://bolbaas.nl/icon-512x512.png",
+                name: "Baasy",
+                url: "https://baasy.nl/",
+                logo: "https://baasy.nl/icon-512x512.png",
                 sameAs: [],
                 description: "AI-gedreven software voor bol.com partners: automatisering, keyword research, product tracking en store management tools.",
                 address: {
@@ -178,7 +178,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
-                name: "Bolbaas",
+                name: "Baasy",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web Browser",
                 offers: {

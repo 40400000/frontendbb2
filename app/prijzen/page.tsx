@@ -10,23 +10,23 @@ import { InteractivePricingButton } from "@/components/interactive-pricing-butto
 import { Animatedbadge } from "@/components/animatedbadge";
 
 export const metadata: Metadata = {
-  title: "Prijzen - Bolbaas",
-  description: "Ontdek de Bolbaas abonnementen: Start, Plus en Pro. Word founding member en krijg korting voor altijd.",
+  title: "Prijzen - Baasy",
+  description: "Ontdek de Baasy abonnementen: Start, Plus en Pro. Word founding member en krijg korting voor altijd.",
   openGraph: {
-    title: "Prijzen - Bolbaas",
-    description: "Bekijk de Bolbaas abonnementen en word founding member voor exclusieve voordelen.",
+    title: "Prijzen - Baasy",
+    description: "Bekijk de Baasy abonnementen en word founding member voor exclusieve voordelen.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Prijzen Open Graph Image',
+        alt: 'Baasy Prijzen Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Prijzen - Bolbaas",
-    description: "Bekijk de Bolbaas abonnementen en word founding member voor exclusieve voordelen.",
+    title: "Prijzen - Baasy",
+    description: "Bekijk de Baasy abonnementen en word founding member voor exclusieve voordelen.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };
@@ -74,8 +74,8 @@ Word founding member         </h1>
 
               <div className="mb-8">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-[24px] leading-[24px] font-normal text-gray-400 line-through">29</span>
-                  <span className="text-[40px] leading-[40px] font-medium text-black">11</span>
+                  <span className="text-[24px] leading-[24px] font-normal text-gray-400 line-through">19</span>
+                  <span className="text-[40px] leading-[40px] font-medium text-black">9</span>
                   <span className="text-[14px] leading-[14px] font-normal text-gray-500">/maand</span>
                 </div>
                 <p className="text-[12px] leading-[14px] font-normal text-gray-500">
@@ -84,7 +84,7 @@ Word founding member         </h1>
               </div>
 
               <InteractivePricingButton 
-                href="https://app.bolbaas.nl/registreren"
+                href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
                 1 maand gratis
@@ -203,8 +203,8 @@ Word founding member         </h1>
 
               <div className="mb-8">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-[24px] leading-[24px] font-normal text-gray-400 line-through">75</span>
-                  <span className="text-[40px] leading-[40px] font-medium text-black">35</span>
+                  <span className="text-[24px] leading-[24px] font-normal text-gray-400 line-through">59</span>
+                  <span className="text-[40px] leading-[40px] font-medium text-black">29</span>
                   <span className="text-[14px] leading-[14px] font-normal text-gray-500">/maand</span>
                 </div>
                 <p className="text-[12px] leading-[14px] font-normal text-gray-500">
@@ -213,7 +213,7 @@ Word founding member         </h1>
               </div>
 
               <InteractivePricingButton 
-                href="https://app.bolbaas.nl/registreren"
+                href="https://app.baasy.nl/registreren"
                 sendTo="AW-17372857270/1maandcta"
               >
                 1 maand gratis
@@ -265,7 +265,7 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                    <Link href="/features/tools#baasy-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
                       <FaCircleCheck className="w-3 h-3 text-purple-500 group-hover:text-purple-600 transition-colors" />
                        <span className="font-inter text-[15px] leading-[18px] font-medium text-purple-600 group-hover:text-purple-700 transition-colors">
                         Research database & Ranking AI
@@ -391,7 +391,7 @@ Word founding member         </h1>
                     </span>
                   </div>
                   <div className="space-y-1 pl-5">
-                    <Link href="/features/tools#bolbaas-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
+                    <Link href="/features/tools#baasy-database" target="_blank" className="flex items-center gap-2 group decoration-dotted underline-offset-2 hover:underline">
                       <FaCircleCheck className="w-3 h-3 text-purple-500 group-hover:text-purple-600 transition-colors" />
                        <span className="font-inter text-[15px] leading-[18px] font-medium text-purple-600 group-hover:text-purple-700 transition-colors">
                         Research database & Ranking AI
@@ -458,7 +458,7 @@ Word founding member         </h1>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Start</h3>
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-auto px-8 border border-gray-300 text-gray-700 font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:border-gray-400 transition-colors inline-block"
@@ -469,7 +469,7 @@ Word founding member         </h1>
                 <div className="text-center">
                   <h3 className="text-[20px] leading-[24px] font-medium text-gray-900 mb-4">Plus</h3>
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-auto px-8 bg-black text-white font-medium text-[14px] leading-[14px] py-3 rounded-xl hover:bg-gray-800 transition-colors inline-block"

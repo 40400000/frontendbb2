@@ -5,4 +5,4 @@ Allow: /
 Disallow: /_next/
 Disallow: /api/
 
-Sitemap: https://bolbaas.nl/sitemap.xml 
+Sitemap: https://baasy.nl/sitemap.xml 

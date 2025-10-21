@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Direct meer productreviews verzamelen bol.com (5 tips voor retailers) - Bolbaas educatie",
+  title: "Direct meer productreviews verzamelen bol.com (5 tips voor retailers) - Baasy educatie",
   description: "Je hebt een topproduct, maar de reviewteller staat op nul. Volg dit stappenplan voor direct resultaat.",
 };
 
@@ -106,7 +106,7 @@ export default function BlogPostPage() {
                       <div className="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
                       <div>
                         <h5 className="font-semibold text-[#111111]">Blijf binnen de regels</h5>
-                        <p className="text-sm text-[#111111]/80">Volg bol.com richtlijnen voor veilige reviewverzoeken</p>
+                        <p className="text-sm text-[#111111]/80">Volg richtlijnen die bol heeft opgesteld voor partners voor veilige reviewverzoeken</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -180,7 +180,7 @@ export default function BlogPostPage() {
                   </div>
                 </div>
 
-                <p className="text-lg text-[#111111] mb-6">Daarom hebben we in Bolbaas onze <strong className="font-semibold text-[#111111]">'magische e-mail templates'</strong> ontwikkeld. Dit zijn geoptimaliseerde templates die consistent 15-25% conversie behalen - dat is 10x beter dan standaardmails.</p>
+                <p className="text-lg text-[#111111] mb-6">Daarom hebben we in Baasy onze <strong className="font-semibold text-[#111111]">'magische e-mail templates'</strong> ontwikkeld. Dit zijn geoptimaliseerde templates die consistent 15-25% conversie behalen - dat is 10x beter dan standaardmails.</p>
                     
                 <div className="my-12 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
                   <h3 className="text-2xl font-bold text-[#111111]">Krijg 3x meer reviews binnen 30 dagen</h3>
@@ -240,7 +240,7 @@ export default function BlogPostPage() {
                   </div>
                 </div>
 
-                <p className="text-lg text-[#111111] mb-6">De e-mail templates in Bolbaas zijn al ontworpen om aan deze regels te voldoen, zodat jij je daar geen zorgen over hoeft te maken. Je kunt je focussen op het vragen naar een eerlijke mening, in de wetenschap dat je veilig zit.</p>
+                <p className="text-lg text-[#111111] mb-6">De e-mail templates in Baasy zijn al ontworpen om aan deze regels te voldoen, zodat jij je daar geen zorgen over hoeft te maken. Je kunt je focussen op het vragen naar een eerlijke mening, in de wetenschap dat je veilig zit.</p>
                     
                 <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">Stap 4: Voorkom een e-mail blokkade</h2>
                 <p className="text-lg text-[#111111] mb-6">Bol.com kan je blokkeren als je je niet aan hun beleid houdt. We hebben dit zien gebeuren bij verkopers, en het is een risico dat je niet wilt nemen. Daarom hebben we de 5 kernregels voor bol-proof reviewverzoeken:</p>
@@ -280,7 +280,7 @@ export default function BlogPostPage() {
                       <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold">5</div>
                       <div>
                         <h5 className="font-semibold text-[#111111]">BTW-factuur altijd meesturen</h5>
-                        <p className="text-sm text-[#111111]/80">Bolbaas doet dit automatisch voor je bij elke e-mail</p>
+                        <p className="text-sm text-[#111111]/80">Baasy doet dit automatisch voor je bij elke e-mail</p>
                       </div>
                     </div>
                   </div>
@@ -312,17 +312,17 @@ export default function BlogPostPage() {
                   </div>
                 </div>
 
-                <p className="text-lg text-[#111111] mb-6">Focus je energie daarom op wat je wél kunt beïnvloeden: productreviews. Dat is waar klanten op letten en waar jij de controle over hebt. Bolbaas zorgt er automatisch voor dat de juiste productreview-link in elke e-mail komt te staan.</p>
+                <p className="text-lg text-[#111111] mb-6">Focus je energie daarom op wat je wél kunt beïnvloeden: productreviews. Dat is waar klanten op letten en waar jij de controle over hebt. Baasy zorgt er automatisch voor dat de juiste productreview-link in elke e-mail komt te staan.</p>
 
                 <div className="mt-16">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Bolbaas automatische email campagnes dashboard"
+                    alt="Baasy automatische email campagnes dashboard"
                     width={1200}
                     height={800}
                     className="rounded-lg"
                   />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Bolbaas dashboard toont real-time de prestaties van je reviewcampagnes</p>
+                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard toont real-time de prestaties van je reviewcampagnes</p>
                 </div>
 
                 <div className="mt-16 pt-10 border-t border-gray-200 text-center">

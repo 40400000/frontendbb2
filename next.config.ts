@@ -28,6 +28,31 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/waarom-ons/bolbaas-vs-bolbuddy',
+        destination: '/waarom-ons/baasy-vs-bolbuddy',
+        permanent: true,
+      },
+      {
+        source: '/waarom-ons/bolbaas-vs-bollify',
+        destination: '/waarom-ons/baasy-vs-bollify',
+        permanent: true,
+      },
+      {
+        source: '/waarom-ons/bolbaas-vs-bolmate',
+        destination: '/waarom-ons/baasy-vs-bolmate',
+        permanent: true,
+      },
+      {
+        source: '/waarom-ons/bolbaas-vs-boloo',
+        destination: '/waarom-ons/baasy-vs-boloo',
+        permanent: true,
+      },
+      {
+        source: '/waarom-ons/bolbaas-vs-buddli',
+        destination: '/waarom-ons/baasy-vs-buddli',
+        permanent: true,
+      },
     ];
   },
   /* other config options here */

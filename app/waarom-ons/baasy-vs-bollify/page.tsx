@@ -16,11 +16,11 @@ import { ComparisonAccordionItem } from "@/components/comparison-accordion-item"
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
-  title: "Bolbaas vs Bollify - het beste alternatief",
-  description: "Vergelijk Bolbaas met Bollify. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
+  title: "Baasy vs Bollify - het beste alternatief",
+  description: "Vergelijk Baasy met Bollify. Ontdek waarom onze partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering. Probeer 1 maand gratis.",
   keywords: [
     "Bollify alternatief",
-    "Bolbaas vs Bollify",
+    "Baasy vs Bollify",
     "bol partner software",
     "bol automatisering",
     "product research tool",
@@ -29,23 +29,23 @@ export const metadata: Metadata = {
     "factuur automatisering",
     "bol store management"
   ],
-  authors: [{ name: "Bolbaas" }],
-  creator: "Bolbaas",
-  publisher: "Bolbaas",
+  authors: [{ name: "Baasy" }],
+  creator: "Baasy",
+  publisher: "Baasy",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://bolbaas.nl"),
+  metadataBase: new URL("https://baasy.nl"),
   alternates: {
-    canonical: "/waarom-ons/bolbaas-vs-bollify",
+    canonical: "/waarom-ons/baasy-vs-bollify",
   },
   openGraph: {
-    title: "Bolbaas vs Bollify: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bollify. Ontdek waarom tevreden partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
-    url: "/waarom-ons/bolbaas-vs-bollify",
-    siteName: "Bolbaas",
+    title: "Baasy vs Bollify: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Baasy met Bollify. Ontdek waarom tevreden partners kiezen voor onbeperkte orders, 12M+ keywords database, AI tools en complete automatisering.",
+    url: "/waarom-ons/baasy-vs-bollify",
+    siteName: "Baasy",
     locale: "nl_NL",
     type: "website",
     images: [
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
         url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
         width: 1200,
         height: 630,
-        alt: "Bolbaas vs Bollify - Het beste alternatief voor bol partners",
+        alt: "Baasy vs Bollify - Het beste alternatief voor bol partners",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bolbaas vs Bollify: Het Beste Alternatief voor Bol Partners",
-    description: "Vergelijk Bolbaas met Bollify. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
+    title: "Baasy vs Bollify: Het Beste Alternatief voor Bol Partners",
+    description: "Vergelijk Baasy met Bollify. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
     images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
   },
   robots: {
@@ -125,8 +125,8 @@ export default function HomePage() {
           {/* Hero Content */}
           <div className="container max-w-2xl md:max-w-3xl text-center mx-auto pt-4">
             <div className="text-[#111111] text-[14px] leading-[16px] mb-4 flex items-center justify-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-              BOLBAAS
-              <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={32} height={32} className="invert" />
+              BAASY
+              <Image src="/iconnavbar-mode2.png" alt="Baasy" width={32} height={32} className="invert" />
 
               <span className="mx-1">VS</span>
               BOLLIFY
@@ -142,7 +142,7 @@ export default function HomePage() {
           {/* Feature Cards Grid */}
           <div className="container max-w-6xl mx-auto mt-12 md:mt-16">
             <h2 className="text-center text-base md:text-lg font-normal text-[#111111]/75 mb-3 md:mb-4">
-              Waarom mensen voor Bolbaas kiezen¹
+              Waarom mensen voor Baasy kiezen¹
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4">
               {/* Card 1 - Pink Background */}
@@ -284,7 +284,7 @@ export default function HomePage() {
                   fontStyle: 'normal',
                 }}
               >
-                "Bolbaas biedt alle software die je nodig hebt als bol partner.  De emails en facturen automatiseren is een piece of cake."
+                "Baasy biedt alle software die je nodig hebt als bol partner.  De emails en facturen automatiseren is een piece of cake."
               </blockquote>
 
               <div
@@ -351,7 +351,7 @@ export default function HomePage() {
       <section className="bg-[#FBFAF9] py-12 md:py-14 lg:py-24">
         <div className="container mx-auto max-w-2xl px-4 md:px-6">
           <h2 className="text-center text-[28px] md:text-4xl lg:text-5xl leading-[32px] md:leading-[44px] lg:leading-[52px] font-normal text-[#111111] mb-8 md:mb-12 lg:mb-16">
-            5 gebieden waar Bolbaas <br/>
+            5 gebieden waar Baasy <br/>
             <em>domineert</em> over Bollify
           </h2>
 
@@ -359,7 +359,7 @@ export default function HomePage() {
             {/* Item 1 */}
             <ComparisonAccordionItem 
               title="Bollify heeft alleen een zoekterm database - wij hebben complete software"
-              bolbaasContent="Bolbaas biedt complete product research software: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
+              baasyContent="Baasy biedt complete product research software: 12M+ keyword database met CPC data, Ranking AI voor listing optimalisatie, product tracking van concurrenten, keyword tracking, winst & ACoS calculator, A/B testen van listings, en project management. Alles wat je nodig hebt voor succesvolle product research in één platform."
               bolmateContent="Bollify heeft alleen een zoekterm database. Geen inzichten, geen automatisering, geen Baaspilot, geen Ranking AI. Voor een compleet pakket moet je externe tools gebruiken, wat extra kosten en complexiteit betekent."
               competitorName="Bollify"
             />
@@ -367,7 +367,7 @@ export default function HomePage() {
             {/* Item 2 */}
             <ComparisonAccordionItem 
               title="Precision rankings tracking vs veel ontbrekende data"
-              bolbaasContent="Bolbaas heeft precision tracking voor een 100% nauwkeurig beeld van alle rankings per dag. "
+              baasyContent="Baasy heeft precision tracking voor een 100% nauwkeurig beeld van alle rankings per dag. "
               bolmateContent="De rankings tracker van Bollify mist veel data. Hierdoor krijg je onvolledige informatie en mis je belangrijke inzichten."
               competitorName="Bollify"
             />
@@ -375,7 +375,7 @@ export default function HomePage() {
             {/* Item 3 */}
             <ComparisonAccordionItem 
               title="Complete inzichten en automatisering vs alleen basis data"
-              bolbaasContent="Bolbaas biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, e-mail automatisering, factuur automatisering, BTW automatisering en Baaspilot notificaties."
+              baasyContent="Baasy biedt complete store prestatie-inzichten: custom dashboards voor jouw belangrijke KPI's, uitgebreide product prestatie-analyse, Levering Tracker, sales en voorraad voorspellingen, e-mail automatisering, factuur automatisering, BTW automatisering en Baaspilot notificaties."
               bolmateContent="Bollify mist essentiële store prestatie tools: geen levering tracker, geen custom dashboards, beperkte product inzichten, geen automatisering, en geen voorraad of sales voorspellingen. Je krijgt alleen basis rapportage zonder de diepgaande analytics die je nodig hebt om je store te optimaliseren."
               competitorName="Bollify"
             />
@@ -383,7 +383,7 @@ export default function HomePage() {
             {/* Item 4 */}
             <ComparisonAccordionItem 
               title="Software focus vs agency model"
-              bolbaasContent="Bolbaas focust zich uitsluitend op onze software. Wij ontwikkelen de beste tools en automatisering zodat jij zelf je store kunt beheren en laten groeien. Jij houdt de controle over je bedrijf."
+              baasyContent="Baasy focust zich uitsluitend op onze software. Wij ontwikkelen de beste tools en automatisering zodat jij zelf je store kunt beheren en laten groeien. Jij houdt de controle over je bedrijf."
               bolmateContent="Bollify focust zich op hun 'do it for you' agency model. Ze willen je store voor je beheren in plaats van jou de tools te geven om het zelf te doen. Dit betekent minder controle en hogere kosten op lange termijn."
               competitorName="Bollify"
             />
@@ -391,7 +391,7 @@ export default function HomePage() {
             {/* Item 5 */}
             <ComparisonAccordionItem 
               title="Grootste zoekwoorden database met meer inzichten"
-              bolbaasContent="Bolbaas heeft de grootste zoekwoorden database met 12+ miljoen keywords. Elke zoekterm bevat uitgebreide inzichten: CPC data, zoekvolume trends, concurrentie-analyse, seizoensgebonden patronen, en winstmogelijkheden."
+              baasyContent="Baasy heeft de grootste zoekwoorden database met 12+ miljoen keywords. Elke zoekterm bevat uitgebreide inzichten: CPC data, zoekvolume trends, concurrentie-analyse, seizoensgebonden patronen, en winstmogelijkheden."
               bolmateContent="Bollify heeft een kleinere database met beperkte inzichten per zoekwoord. Ze missen een aantal diepgaande analytics die je nodig hebt voor succesvolle product research."
               competitorName="Bollify"
             />
@@ -446,7 +446,7 @@ export default function HomePage() {
               {/* Action Button */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://app.bolbaas.nl/registreren"
+                  href="https://app.baasy.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
@@ -501,7 +501,7 @@ export default function HomePage() {
             <div className="space-y-5 md:space-y-6">
               {/* Description */}
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+                Baasy genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
               </p>
 
               {/* Three Key Points */}
@@ -547,7 +547,7 @@ export default function HomePage() {
               {/* Action Button */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://app.bolbaas.nl/registreren"
+                  href="https://app.baasy.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
@@ -569,7 +569,7 @@ export default function HomePage() {
           <div className="grid grid-cols-12 gap-2 md:gap-3">
             {/* Keyword Database - prominent */}
             <Link
-              href="/features/tools#bolbaas-database"
+              href="/features/tools#baasy-database"
               className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
               style={{ backgroundColor: '#EAF3FF' }}
               aria-label="Keyword database met meer dan 12 miljoen termen"
@@ -615,7 +615,7 @@ export default function HomePage() {
             {/* Quote style tile */}
             <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-black/10 p-2.5 md:p-4 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out">
               <p className="text-[16px] md:text-[18px] leading-[22px] md:leading-[24px]">
-                "Bolbaas biedt alle software die je nodig hebt als bol partner."
+                "Baasy biedt alle software die je nodig hebt als bol partner."
               </p>
               <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/60">Lucas van gasteren — bol partner</p>
             </div>
@@ -758,9 +758,9 @@ export default function HomePage() {
                 <div className="hidden md:block"></div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1.5 md:gap-2">
-                    <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={24} height={24} className="md:w-8 md:h-8 invert" />
+                    <Image src="/iconnavbar-mode2.png" alt="Baasy" width={24} height={24} className="md:w-8 md:h-8 invert" />
                     <span className="text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-medium text-[#111111]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      BOLBAAS
+                      BAASY
                     </span>
                   </div>
                 </div>
@@ -789,8 +789,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -818,8 +818,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -847,8 +847,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -876,8 +876,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -905,8 +905,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -934,8 +934,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -963,8 +963,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1002,8 +1002,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1031,8 +1031,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1060,8 +1060,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <span className="text-[13px] leading-[15px] font-medium text-gray-700">Onbeperkt</span>
                       </div>
@@ -1089,8 +1089,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1118,8 +1118,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1157,8 +1157,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1186,8 +1186,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1215,8 +1215,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1244,8 +1244,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1273,8 +1273,8 @@ export default function HomePage() {
                     <div className="md:hidden grid grid-cols-2 gap-3">
                       <div className="text-center">
                         <div className="text-xs text-gray-600 mb-2 flex items-center justify-center gap-1">
-                          <Image src="/iconnavbar-mode2.png" alt="Bolbaas" width={16} height={16} className="invert" />
-                          <span>Bolbaas</span>
+                          <Image src="/iconnavbar-mode2.png" alt="Baasy" width={16} height={16} className="invert" />
+                          <span>Baasy</span>
                         </div>
                         <YesBadge />
                       </div>
@@ -1302,7 +1302,7 @@ export default function HomePage() {
           {/* Disclaimer */}
           <div className="max-w-5xl mx-auto mt-6 md:mt-8">
             <p className="text-center text-[11px] md:text-xs text-gray-500 italic">
-              Bolbaas Plus vergeleken met Bollify standaard abonnement
+              Baasy Plus vergeleken met Bollify standaard abonnement
             </p>
           </div>
         </div>

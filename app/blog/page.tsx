@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 export const metadata: Metadata = {
-  title: "Educatie - Bolbaas",
+  title: "Educatie - Baasy",
   description: "Artikelen en inzichten over data, automatisering en e-commerce voor bol.com partners.",
 };
 
@@ -61,7 +61,7 @@ export default function BlogPage() {
         <div className="w-full relative z-10 flex flex-col">
           <div className="container max-w-4xl mx-auto text-center">
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-              Bolbaas <em className="italic">Educatie</em>
+              Baasy <em className="italic">Educatie</em>
             </h1>
             
             <p className="mx-auto max-w-2xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-8 md:mb-10">

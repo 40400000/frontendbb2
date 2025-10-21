@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { IoStar } from "react-icons/io5";
+import { ShoppingBag } from "lucide-react";
 
 export function Automatiseringanimation() {
   const [showNotifications, setShowNotifications] = useState(false);
@@ -51,7 +52,7 @@ export function Automatiseringanimation() {
           ease: [0.21, 1.11, 0.81, 0.99]
         }}
       >
-        {/* Bol logo on the left */}
+        {/* Shopping bag icon on the left */}
         <motion.div
           className="flex-shrink-0 mt-1"
           initial={{ opacity: 0 }}
@@ -60,13 +61,9 @@ export function Automatiseringanimation() {
             duration: 0.6
           }}
         >
-          <Image
-            src="/bol.svg.png"
-            alt="Bol logo"
-            width={1200}
-            height={471}
-            className="w-10 h-auto"
-          />
+          <div className="w-10 h-10 flex items-center justify-center">
+            <ShoppingBag className="w-6 h-6 text-gray-600" />
+          </div>
         </motion.div>
 
         {/* Message content */}
@@ -131,7 +128,7 @@ export function Automatiseringanimation() {
         </div>
       </motion.div>
 
-      {/* Second step - Bolbaas processing */}
+      {/* Second step - Baasy processing */}
       <motion.div
         className="flex items-start space-x-3 max-w-sm mx-auto mt-2"
         initial={{ opacity: 0, y: 20 }}
@@ -141,7 +138,7 @@ export function Automatiseringanimation() {
           delay: 0.8
         }}
       >
-        {/* Bolbaas logo on the left */}
+        {/* Baasy logo on the left */}
         <motion.div
           className="flex-shrink-0 mt-1"
           initial={{ opacity: 0 }}
@@ -152,7 +149,7 @@ export function Automatiseringanimation() {
         >
           <Image
             src="/iconnavbar-mode2.png"
-            alt="Bolbaas logo"
+            alt="Baasy logo"
             width={40}
             height={40}
             className="w-10 h-10 filter invert"
@@ -176,7 +173,7 @@ export function Automatiseringanimation() {
               <div className="flex items-center space-x-3">
                 <div className="flex-1">
                   <h3 className="text-sm font-semibold text-gray-900 mb-0.5">
-                    Bolbaas automatisering
+                    Baasy automatisering
                   </h3>
                   <p className="text-xs text-gray-600">
                     Automatisch verwerken van bestelling...

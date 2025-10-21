@@ -9,23 +9,23 @@ import { AffiliateForm } from "@/components/affiliate-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Affiliate partner worden - Bolbaas",
-    description: "Word affiliate partner van Bolbaas. Verdien met Bol coaches, communities en influencers. Samen groeien in de Bol ecosystem.",
+    title: "Affiliate partner worden - Baasy",
+    description: "Word affiliate partner van Baasy. Verdien met Bol coaches, communities en influencers. Samen groeien in de Bol ecosystem.",
     openGraph: {
-      title: "Affiliate partner worden - Bolbaas",
-      description: "Word affiliate partner van Bolbaas. Verdien met Bol coaches, communities en influencers. Samen groeien in de Bol ecosystem.",
+      title: "Affiliate partner worden - Baasy",
+      description: "Word affiliate partner van Baasy. Verdien met Bol coaches, communities en influencers. Samen groeien in de Bol ecosystem.",
       images: [
         {
           url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
           width: 1200,
           height: 630,
-          alt: 'Bolbaas Affiliate Partner Open Graph Image',
+          alt: 'Baasy Affiliate Partner Open Graph Image',
         },
       ],
     },
     twitter: {
-      title: "Affiliate partner worden - Bolbaas",
-      description: "Word affiliate partner van Bolbaas. Verdien met Bol coaches, communities en influencers.",
+      title: "Affiliate partner worden - Baasy",
+      description: "Word affiliate partner van Baasy. Verdien met Bol coaches, communities en influencers.",
       images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
     },
   };
@@ -50,13 +50,13 @@ export default function AffiliatePartnerPage() {
                 <span className="inline-flex items-center bg-[#111111] text-white rounded-xl px-1.5 md:px-2 py-0.5 text-[11px] md:text-xs font-semibold">
                   AFFILIATE
                 </span>
-                <span className="text-xs md:text-sm font-medium text-[#111111]">Verdien met Bolbaas</span>
+                <span className="text-xs md:text-sm font-medium text-[#111111]">Verdien met Baasy</span>
                 <MdOutlineArrowOutward className="h-3 w-3 md:h-3.5 md:w-3.5 text-[#111111] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
 
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-              Verdien <em className="italic">geld</em> door Bolbaas te delen.
+              Verdien <em className="italic">geld</em> door Baasy te delen.
             </h1>
 
             <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-6 md:mb-8">
@@ -111,7 +111,7 @@ export default function AffiliatePartnerPage() {
                 Verdien geld met je Bol expertise
               </h2>
               <p className="text-sm md:text-base text-[#111111]/70 max-w-2xl mx-auto">
-                Of je nu coach bent, community runt of influencer - krijg betaald voor elke Bolbaas referral
+                Of je nu coach bent, community runt of influencer - krijg betaald voor elke Baasy referral
               </p>
             </div>
 
@@ -139,7 +139,7 @@ export default function AffiliatePartnerPage() {
                 <h3 className="text-xl md:text-2xl font-medium text-[#111111]">Bol communities</h3>
               </div>
               <p className="text-sm md:text-base text-[#111111]/70 mb-6">
-                Deel Bolbaas met je community. <strong>Verdien tot €200 per referral + 30% maandelijkse commissie.</strong>
+                Deel Baasy met je community. <strong>Verdien tot €200 per referral + 30% maandelijkse commissie.</strong>
               </p>
               <ul className="space-y-2 text-sm text-[#111111]/80">
                 <li>• Community exclusives</li>

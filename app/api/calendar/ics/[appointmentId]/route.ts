@@ -60,13 +60,13 @@ export async function GET(
     const event: ics.EventAttributes = {
       start: startDateTime,
       end: endDateTime,
-      title: `Afspraak Bolbaas met ${appointment.name}`,
+      title: `Afspraak Baasy met ${appointment.name}`,
       description: `Online gesprek met Thijmen Dreef. ${appointment.notes ? `Notities: ${appointment.notes}` : ''} Teams link volgt voor het gesprek.`,
       location: 'Microsoft Teams',
-      organizer: { name: 'Thijmen Dreef', email: 'afspraak@bolbaas.nl' },
+      organizer: { name: 'Thijmen Dreef', email: 'afspraak@baasy.nl' },
       attendees: [
         { name: appointment.name, email: isValidEmail(appointment.contactInfo) ? appointment.contactInfo : undefined, rsvp: true, partstat: 'NEEDS-ACTION', role: 'REQ-PARTICIPANT' },
-        { name: 'Thijmen Dreef', email: 'afspraak@bolbaas.nl', rsvp: true, partstat: 'ACCEPTED', role: 'CHAIR' }
+        { name: 'Thijmen Dreef', email: 'afspraak@baasy.nl', rsvp: true, partstat: 'ACCEPTED', role: 'CHAIR' }
       ],
       status: 'CONFIRMED',
       busyStatus: 'BUSY',
@@ -87,7 +87,7 @@ export async function GET(
       status: 200,
       headers: {
         'Content-Type': 'text/calendar; charset=utf-8',
-        'Content-Disposition': `attachment; filename="bolbaas_afspraak_${appointmentId.substring(0,8)}.ics"`,
+        'Content-Disposition': `attachment; filename="baasy_afspraak_${appointmentId.substring(0,8)}.ics"`,
       },
     });
 

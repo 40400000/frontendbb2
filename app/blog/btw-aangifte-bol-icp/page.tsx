@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Je bol.com btw-aangifte een chaos? 'Intracommunautaire levering' uitgelegd - Bolbaas",
+  title: "Je bol.com btw-aangifte een chaos? 'Intracommunautaire levering' uitgelegd - Baasy",
   description: "Belgische bestelling van een zakelijke klant? Geen btw rekenen! We leggen uit wat het betekent en hoe je de btw correct berekent, zonder stress.",
 };
 
@@ -104,7 +104,7 @@ export default function BlogPostPage() {
 
                 <p className="text-lg text-[#111111] mb-6">Je hebt niet alleen kennis van draaitabellen nodig, maar ook van btw-regelgeving. Voor veel ondernemers is dit gewoon te complex en tijdrovend - terwijl één fout kostbare gevolgen kan hebben.</p>
 
-                <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">2. De automatische btw-aangifte van Bolbaas: hoe werkt het?</h2>
+                <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">2. De automatische btw-aangifte van Baasy: hoe werkt het?</h2>
                 <p className="text-lg text-[#111111] mb-6">Onze automatische btw-tool is speciaal ontwikkeld voor bol.com sellers die geen tijd willen verspillen aan handmatige berekeningen. Het systeem werkt volledig geautomatiseerd:</p>
                     
                 <div className="bg-green-50 p-6 rounded-xl border border-green-200 mb-6">
@@ -177,7 +177,7 @@ export default function BlogPostPage() {
                 </div>
 
                 <div className="bg-green-50 p-6 rounded-lg border border-green-200 mb-6">
-                  <h4 className="font-semibold text-lg mb-3 text-[#111111]">🤖 Automatische verwerking (met Bolbaas):</h4>
+                  <h4 className="font-semibold text-lg mb-3 text-[#111111]">🤖 Automatische verwerking (met Baasy):</h4>
                   <div className="space-y-2 text-sm text-[#111111]">
                     <div>✅ Systeem herkent automatisch de intracommunautaire levering</div>
                     <div>✅ Berekent correct €100 omzet tegen 0% btw</div>
@@ -220,12 +220,12 @@ export default function BlogPostPage() {
                 <div className="mt-16">
                   <Image
                     src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Bolbaas automatische btw-aangifte dashboard"
+                    alt="Baasy automatische btw-aangifte dashboard"
                     width={1200}
                     height={800}
                     className="rounded-lg"
                   />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Bolbaas dashboard toont al je btw-gegevens overzichtelijk per periode</p>
+                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard toont al je btw-gegevens overzichtelijk per periode</p>
                 </div>
 
                 <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">5. Meer dan alleen btw: complete financiële controle</h2>

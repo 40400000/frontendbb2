@@ -15,7 +15,7 @@ import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata = {
-  title: "Bolbaas - AI software voor bol.com partners | Automatisering & Keyword Research",
+  title: "Baasy - AI software voor bol.com partners | Automatisering & Keyword Research",
   description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 1 maand gratis.",
   keywords: [
     "bol.com partner software",
@@ -32,14 +32,14 @@ export const metadata = {
     "bol omzet verhogen"
   ],
   openGraph: {
-    title: "Bolbaas - AI software voor bol.com partners",
+    title: "Baasy - AI software voor bol.com partners",
     description: "Automatiseer je bol.com store met AI: emails, facturen, keyword research en product tracking. 12M+ keywords database. Probeer 1 maand gratis.",
     images: [
       {
-        url: "https://bolbaas.nl/icon-512x512.png",
+        url: "https://baasy.nl/icon-512x512.png",
         width: 512,
         height: 512,
-        alt: "Bolbaas - AI software voor bol.com partners"
+        alt: "Baasy - AI software voor bol.com partners"
       }
     ]
   }
@@ -124,7 +124,7 @@ export default function HomePage() {
           <div className="container max-w-2xl md:max-w-3xl text-center mx-auto pt-4">
             <div className="flex justify-center mb-5 md:mb-6">
               <Link
-                href="/features/tools#bolbaas-database"
+                href="/features/tools#baasy-database"
                 className="inline-flex items-center gap-1.5 md:gap-2 bg-white rounded-xl px-1.5 py-1.5 shadow-md hover:shadow-lg transition-shadow group"
               >
                 <span className="inline-flex items-center bg-[#111111] text-white rounded-xl px-1.5 md:px-2 py-0.5 text-[11px] md:text-xs font-semibold">
@@ -136,7 +136,7 @@ export default function HomePage() {
             </div>
 
             <h1 className="mx-auto max-w-[28ch] md:max-w-[32ch] text-[32px] md:text-[48px] leading-[36px] md:leading-[48px] font-normal tracking-tight mb-5 md:mb-6 text-balance">
-            Groei je Bol business sneller met slimme automatisering & research tools
+            Slimme automatisering <br/> & research tools <br/> voor bol partners
             </h1>
 
             <p className="mx-auto max-w-xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-80 mb-6 md:mb-8">
@@ -192,7 +192,7 @@ export default function HomePage() {
             <div className="space-y-5 md:space-y-6">
               {/* Description */}
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Bolbaas genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
+                Baasy genereert en verstuurt automatisch BTW-facturen naar bol – snel en foutloos afgehandeld.
               </p>
 
               {/* Three Key Points */}
@@ -238,7 +238,7 @@ export default function HomePage() {
               {/* Action Button */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://app.bolbaas.nl/registreren"
+                  href="https://app.baasy.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl inline-flex items-center justify-center gap-2 transition-all"
@@ -272,8 +272,8 @@ export default function HomePage() {
                 Vestuur bol.com review e-mails
               </h2>
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je bol.com productpagina. 
-                Verbeter je ranking, verhoog je conversie en blijf binnen alle bol.com richtlijnen!
+                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina op bol. 
+                Verbeter je ranking, verhoog je conversie en blijf binnen alle richtlijnen die bol heeft opgesteld voor partners!
               </p>
             </div>
 
@@ -322,7 +322,7 @@ export default function HomePage() {
           <div className="grid grid-cols-12 gap-2 md:gap-3">
             {/* Keyword Database - prominent */}
             <Link
-              href="/features/tools#bolbaas-database"
+              href="/features/tools#baasy-database"
               className="col-span-12 md:col-span-4 rounded-xl md:rounded-2xl border border-transparent p-2.5 md:p-4 hover:opacity-95 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out"
               style={{ backgroundColor: '#EAF3FF' }}
               aria-label="Keyword database met meer dan 12 miljoen termen"
@@ -368,7 +368,7 @@ export default function HomePage() {
             {/* Quote style tile */}
             <div className="col-span-12 md:col-span-5 rounded-xl md:rounded-2xl border border-black/10 p-2.5 md:p-4 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-out">
               <p className="text-[16px] md:text-[18px] leading-[22px] md:leading-[24px]">
-                "Bolbaas biedt alle software die je nodig hebt als bol partner."
+                "Baasy biedt alle software die je nodig hebt als bol partner."
               </p>
               <p className="mt-1 md:mt-2 text-[11px] md:text-xs text-black/75">Lucas van gasteren — bol partner</p>
             </div>
@@ -518,27 +518,27 @@ export default function HomePage() {
             {/* FAQ 2 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Werkt Bolbaas ook met Fulfilment by Bol (Lvb / Vvb)?
+                Werkt Baasy ook met Levering via bol (Lvb / Vvb)?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Absoluut! Bolbaas ondersteunt zowel eigen verzending als Lvb / Vvb bestellingen. Voor alle bestellingen wordt automatisch een BTW-factuur aangemaakt en een reviewverzoek verstuurd.
+                Absoluut! Baasy ondersteunt zowel eigen verzending als Lvb / Vvb bestellingen. Voor alle bestellingen wordt automatisch een BTW-factuur aangemaakt en een reviewverzoek verstuurd.
               </p>
             </div>
 
             {/* FAQ 3 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Is mijn data veilig bij Bolbaas?
+                Is mijn data veilig bij Baasy?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Ja, security staat bij ons voorop. Alle gevoelige data wordt versleuteld opgeslagen in zowel productie als back-ups. We gebruiken alleen beveiligde HTTPS-verbindingen en jouw wachtwoord wordt met dubbele encryptie opgeslagen. Betalingen lopen via Stripe - wij slaan geen creditcardgegevens op. Je API-sleutels kun je altijd zelf intrekken in je bol verkoper-omgeving.
+                Ja, security staat bij ons voorop. Alle gevoelige data wordt versleuteld opgeslagen in zowel productie als back-ups. We gebruiken alleen beveiligde HTTPS-verbindingen en jouw wachtwoord wordt met dubbele encryptie opgeslagen. Betalingen lopen via Stripe - wij slaan geen betaalgegevens op. Je API-sleutels kun je altijd zelf intrekken in je bol verkoper-omgeving.
               </p>
             </div>
 
             {/* FAQ 4 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Hoe verbind ik mijn bol.com account?
+                Hoe verbind ik mijn bol account?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
                 Via API-sleutels die je zelf aanmaakt in je bol verkoper-omgeving. Dit zijn digitale sleutels die je met een paar klikken maakt en aan ons doorgeeft. Het voordeel? Je hoeft nooit je wachtwoord te delen en je kunt de toegang altijd zelf intrekken. Zo blijf je volledig in controle over je eigen data.
@@ -571,7 +571,7 @@ export default function HomePage() {
                 Ziet mijn klant mijn e-mailadres?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Nee, net zoals bij het bol-berichtensysteem blijven e-mailadressen privé. Klanten zien als afzender "Van [Jouw store] via bol.com". Als een klant antwoordt, ontvang je dit in je Bolbaas dashboard en kun je direct reageren - alles op één plek beheerd.
+                Nee, net zoals bij het bol-berichtensysteem blijven e-mailadressen privé. Klanten zien als afzender "Van [Jouw store] via bol.com". Als een klant antwoordt, ontvang je dit in je Baasy dashboard en kun je direct reageren - alles op één plek beheerd.
               </p>
             </div>
 
@@ -581,24 +581,24 @@ export default function HomePage() {
                 Heb ik technische kennis nodig?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Nee, Bolbaas is ontworpen voor eenvoudig gebruik. Alles wordt helder uitgelegd in het Nederlands en de setup is binnen enkele minuten klaar. Mocht je toch vragen hebben, dan helpen we je graag via de chat of e-mail.
+                Nee, Baasy is ontworpen voor eenvoudig gebruik. Alles wordt helder uitgelegd in het Nederlands en de setup is binnen enkele minuten klaar. Mocht je toch vragen hebben, dan helpen we je graag via de chat of e-mail.
               </p>
             </div>
 
             {/* FAQ 9 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Kan ik Bolbaas eerst proberen?
+                Kan ik Baasy eerst proberen?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Zeker! Elk account start met 1 maand gratis proberen - geen creditcard nodig. Ervaar zelf hoe Bolbaas je tijd bespaart en je omzet verhoogt. Niet tevreden? Je kunt op elk moment opzeggen.
+                Zeker! Elk account start met 1 maand gratis proberen - geen creditcard nodig. Ervaar zelf hoe Baasy je tijd bespaart en je omzet verhoogt. Niet tevreden? Je kunt op elk moment opzeggen.
               </p>
             </div>
 
             {/* FAQ 10 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Ondersteunt Bolbaas de kleineondernemersregeling (KOR)?
+                Ondersteunt Baasy de kleineondernemersregeling (KOR)?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
                 Zeker! Bij gebruik van de KOR kun je met één klik alle BTW-percentages naar 0% zetten. De juiste KOR-vermelding wordt automatisch op al je facturen toegepast.
@@ -608,7 +608,7 @@ export default function HomePage() {
             {/* FAQ 11 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Werkt Bolbaas voor teams?
+                Werkt Baasy voor teams?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
                 Ja! Je kunt meerdere teamleden toegang geven, elk met hun eigen inloggegevens. Zo hoef je nooit wachtwoorden te delen en zie je precies wie welke acties heeft uitgevoerd - ideaal voor samenwerking.
@@ -618,10 +618,10 @@ export default function HomePage() {
             {/* FAQ 12 */}
             <div className="space-y-3">
               <h3 className="text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-semibold text-[#111111]">
-                Wat heb je van mij nodig om te starten?
+                Is Baasy onderdeel van bol?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Alleen een actief bol.com verkopersaccount. Na registratie maak je in een paar klikken API-sleutels aan in je bol-omgeving, voert deze in bij Bolbaas en je bent klaar. Meestal ben je binnen 5 minuten operationeel.
+                Baasy is geen onderdeel van bol, en heeft geen juridische of zakelijke banden met bol (of Bol.com B.V.).
               </p>
             </div>
           </div>

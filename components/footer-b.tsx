@@ -30,7 +30,7 @@ export function FooterB() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 text-center text-sm opacity-50">
-          <p>&copy; {new Date().getFullYear()} Bolbaas. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Baasy. All rights reserved.</p>
         </div>
       </div>
     </footer>

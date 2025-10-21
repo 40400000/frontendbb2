@@ -80,7 +80,7 @@ export function BaaspilotAutomatisering() {
                 className="bg-white text-[#111111] text-[14px] leading-[20px] font-normal hover:bg-white/90 px-6 py-3 h-auto rounded-xl"
               >
                 <a 
-                  href="https://app.bolbaas.nl/registreren"
+                  href="https://app.baasy.nl/registreren"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -234,7 +234,7 @@ export default function TrackingPage() { // Renamed function
                   <p className="text-sm text-gray-500 mb-1">04</p>
                   <h3 className="font-semibold text-white my-3">Sales voorspellingen en voorraadbeheer</h3>
                   <ul className="space-y-2 text-sm text-white pr-3">
-                    <li>Bolbaas berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
+                    <li>Baasy berekent op basis van jouw verkopen hoeveel verkopen je de aankomende 12 weken kan verwachten per product.</li>
                   </ul>
                 </div> */}
 
@@ -269,7 +269,7 @@ export default function TrackingPage() { // Renamed function
                 <ul className="space-y-2 text-sm text-black pr-0">
                   <li>Elke dag, rankings die het meest relevant zijn op die dag. Dynamisch rapport. </li>
                     <li>   Goed om een <b>algemeen beeld</b> te krijgen van de ranking van een product. </li>
-                    <li>   Alle producten van Bolbaas worden dagelijks geanalyseerd.</li>
+                    <li>   Alle producten van Baasy worden dagelijks geanalyseerd.</li>
                 </ul>
               </div>
               {/* End dynamic label */}
@@ -312,7 +312,7 @@ export default function TrackingPage() { // Renamed function
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[82%] sm:top-[86%] w-full sm:w-[50%] z-80 text-left text-black space-y-6"> {/* Added text-black and space-y-4 */}
               <h2 className="text-4xl md:text-5xl font-semibold">Geen lege tabellen meer?</h2>
               <p className="text-base">
-                Bolbaas combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals AI-modellen. Meer dan simpele ranking tools.
+                Baasy combineert verschillende data bronnen om een compleet beeld te krijgen van de rankings van producten, zoals AI-modellen. Meer dan simpele ranking tools.
               </p>
             </div>
 
@@ -383,7 +383,7 @@ export default function TrackingPage() { // Renamed function
                       </ul>
                     </div>
                     {/* Button with hover effect */}
-                    <Link href="/features/tools#bolbaas-database" passHref>
+                    <Link href="/features/tools#baasy-database" passHref>
                       <div className="group relative w-full text-left cursor-pointer -mr-1.5 overflow-hidden border-t border-b border-border mt-6" > 
                         {/* Original Content - Slides up on hover */}
                         <span className="font-semibold flex justify-between items-center py-6 pl-4 pr-4 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"> 
@@ -482,7 +482,7 @@ export default function TrackingPage() { // Renamed function
                       <p className="text-sm text-gray-400 mb-1">OMZET ALGORITMES</p>
                       <h3 className="font-semibold text-white my-3">Omzet voor meer dan 4 miljoen producten</h3>
                       <ul className="space-y-2 text-sm text-white pr-3">
-                        <li>Bolbaas gebruikt verschillende algoritmes om de omzet van producten te bepalen. Wij maken geen gebruik van de winkelwagenmethode, omdat deze onbetrouwbaar is. Zo kan je ook gelijk omzet zien, zonder producten te tracken.</li>
+                        <li>Baasy gebruikt verschillende algoritmes om de omzet van producten te bepalen. Wij maken geen gebruik van de winkelwagenmethode, omdat deze onbetrouwbaar is. Zo kan je ook gelijk omzet zien, zonder producten te tracken.</li>
                       </ul>
                     </div>
         {/* Placeholder for where the image was */}

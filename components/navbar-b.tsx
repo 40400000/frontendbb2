@@ -21,7 +21,7 @@ const pathname = usePathname();
   const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
 
   const handlePrijzenClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === '/waarom-ons/bolbaas-vs-bolmate' || pathname === '/waarom-ons/bolbaas-vs-bolbuddy' || pathname === '/waarom-ons/bolbaas-vs-buddli') {
+    if (pathname === '/waarom-ons/baasy-vs-bolmate' || pathname === '/waarom-ons/baasy-vs-bolbuddy' || pathname === '/waarom-ons/baasy-vs-buddli') {
       e.preventDefault();
       const prijzenSection = document.getElementById('prijzen');
       if (prijzenSection) {
@@ -150,7 +150,7 @@ const pathname = usePathname();
       { title: 'Levering tracker', description: 'Track leveringen en verwachte aankomsttijden', href: '/features/store-prestaties#levering-tracker' },
     ],
     tools: [
-      { title: 'Keyword database', description: 'Keywordonderzoek met 12+ miljoen keywords', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
+      { title: 'Keyword database', description: 'Keywordonderzoek met 12+ miljoen keywords', href: '/features/tools#baasy-database', badge: 'NIEUW' },
       { title: 'Ranking AI', description: 'AI-gestuurde listing optimalisatie', href: '/features/tools#ranking-ai' },
       { title: 'Product & keyword tracking', description: 'Track producten en concurrenten nauwkeurig', href: '/features/tools#product-tracking' },
       { title: 'CPC tracker', description: 'Monitor advertising kosten en prestaties', href: '/features/tools#cpc-tracker' },
@@ -162,19 +162,18 @@ const pathname = usePathname();
 
   // Waarom ons dropdown data (no icons)
   const whyCategories: { id: string; label: string; subtitle?: string; href?: string }[] = [
-    { id: 'vergelijkingen', label: 'Bolbaas vs andere tools', subtitle: 'Zie hoe we ons verhouden' },
-    { id: 'partner', label: 'Partner worden', subtitle: 'Word affiliate partner bij groei van Bolbaas', href: '/partner-worden' },
+    { id: 'vergelijkingen', label: 'Baasy vs andere tools', subtitle: 'Zie hoe we ons verhouden' },
     { id: 'educatie', label: 'Educatie', subtitle: 'Handleidingen en blogs', href: '/blog' },
   ];
 
   const whySubsections: Record<string, { title: string; href: string }[]> = {
     vergelijkingen: [
-      { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
-      { title: 'Bolbaas vs. Bolbuddy', href: '/waarom-ons/bolbaas-vs-bolbuddy' },
-      { title: 'Bolbaas vs. Buddli', href: '/waarom-ons/bolbaas-vs-buddli' },
-      { title: 'Bolbaas vs. Bollify', href: '/waarom-ons/bolbaas-vs-bollify' },
-      { title: 'Bolbaas vs. Boloo', href: '/waarom-ons/bolbaas-vs-boloo' },
-      { title: 'Bolbaas vs. Rylee', href: '/waarom-ons/bolbaas-vs-rylee' },
+      { title: 'Baasy vs. Bolmate', href: '/waarom-ons/baasy-vs-bolmate' },
+      { title: 'Baasy vs. Bolbuddy', href: '/waarom-ons/baasy-vs-bolbuddy' },
+      { title: 'Baasy vs. Buddli', href: '/waarom-ons/baasy-vs-buddli' },
+      { title: 'Baasy vs. Bollify', href: '/waarom-ons/baasy-vs-bollify' },
+      { title: 'Baasy vs. Boloo', href: '/waarom-ons/baasy-vs-boloo' },
+      { title: 'Baasy vs. Rylee', href: '/waarom-ons/baasy-vs-rylee' },
     ],
   };
 
@@ -206,7 +205,7 @@ const pathname = usePathname();
             {isScrolled ? (
               <Image
                 src="/iconnavbar-mode2.png"
-                alt="Bolbaas"
+                alt="Baasy"
                 width={40}
                 height={40}
                 className={`filter ${isDarkMode ? '' : 'invert'}`}
@@ -218,7 +217,7 @@ const pathname = usePathname();
                   {isDarkMode ? (
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
-                      alt="Bolbaas"
+                      alt="Baasy"
                       width={220}
                       height={74}
                       className="filter invert"
@@ -226,7 +225,7 @@ const pathname = usePathname();
                   ) : (
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/logo_head_zwart-yUz45E2pM84TsaxNb7K57ZxcaTfTsH.png"
-                      alt="Bolbaas"
+                      alt="Baasy"
                       width={220}
                       height={74}
                     />
@@ -236,7 +235,7 @@ const pathname = usePathname();
                 <div className="md:hidden">
                   <Image
                     src="/iconnavbar-mode2.png"
-                    alt="Bolbaas"
+                    alt="Baasy"
                     width={40}
                     height={40}
                     className={`filter ${isDarkMode ? '' : 'invert'}`}
@@ -422,7 +421,7 @@ const pathname = usePathname();
               }`}>
                 Waarom ons
                 <ChevronDown className="h-3 w-3" />
-                {(pathname.startsWith('/waarom-ons') || pathname.startsWith('/blog') || pathname.startsWith('/partner-worden')) && (
+                {(pathname.startsWith('/waarom-ons') || pathname.startsWith('/blog')) && (
                   <div className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
                     isDarkMode ? 'bg-white' : 'bg-[#111111]'
                   }`} />
@@ -530,11 +529,11 @@ const pathname = usePathname();
                         <div className="relative">
                       <div className="flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-out">
                         {(whySubsections[activeWhyCategory] ?? []).map((item) => {
-                          const isBolmate = item.title === 'Bolbaas vs. Bolmate';
-                          const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
-                          const isBuddli = item.title === 'Bolbaas vs. Buddli';
-                          const isBollify = item.title === 'Bolbaas vs. Bollify';
-                          const isBoloo = item.title === 'Bolbaas vs. Boloo';
+                          const isBolmate = item.title === 'Baasy vs. Bolmate';
+                          const isBolbuddy = item.title === 'Baasy vs. Bolbuddy';
+                          const isBuddli = item.title === 'Baasy vs. Buddli';
+                          const isBollify = item.title === 'Baasy vs. Bollify';
+                          const isBoloo = item.title === 'Baasy vs. Boloo';
                           const isDisabled = !isBolmate && !isBolbuddy && !isBuddli && !isBollify && !isBoloo;
                           
                           return isDisabled ? (
@@ -694,7 +693,7 @@ const pathname = usePathname();
                   : 'border border-[#111111]/30 text-[#111111] bg-transparent hover:bg-[#111111]/5'
               }`}
             >
-              <Link href="https://app.bolbaas.nl" target="_blank" rel="noopener noreferrer">
+              <Link href="https://app.baasy.nl" target="_blank" rel="noopener noreferrer">
                 Naar app
               </Link>
             </Button>
@@ -706,7 +705,7 @@ const pathname = usePathname();
                   : 'bg-[#111111] text-white hover:bg-black/80'
               }`}
             >
-              <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+              <Link href="https://app.baasy.nl/registreren" target="_blank" rel="noopener noreferrer">
                 Probeer gratis
               </Link>
             </Button>
@@ -724,7 +723,7 @@ const pathname = usePathname();
                   : 'bg-[#111111] text-white hover:bg-black/80'
               }`}
             >
-              <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+              <Link href="https://app.baasy.nl/registreren" target="_blank" rel="noopener noreferrer">
                 Probeer gratis
               </Link>
             </Button>
@@ -905,11 +904,11 @@ const pathname = usePathname();
                             {category.id === 'vergelijkingen' && expandedMobileSubmenu === category.id && (
                               <div className="ml-4 mt-2 space-y-2">
                                 {whySubsections[category.id]?.map((item) => {
-                                  const isBolmate = item.title === 'Bolbaas vs. Bolmate';
-                                  const isBolbuddy = item.title === 'Bolbaas vs. Bolbuddy';
-                                  const isBuddli = item.title === 'Bolbaas vs. Buddli';
-                                  const isBollify = item.title === 'Bolbaas vs. Bollify';
-                                  const isBoloo = item.title === 'Bolbaas vs. Boloo';
+                                  const isBolmate = item.title === 'Baasy vs. Bolmate';
+                                  const isBolbuddy = item.title === 'Baasy vs. Bolbuddy';
+                                  const isBuddli = item.title === 'Baasy vs. Buddli';
+                                  const isBollify = item.title === 'Baasy vs. Bollify';
+                                  const isBoloo = item.title === 'Baasy vs. Boloo';
                                   const isDisabled = !isBolmate && !isBolbuddy && !isBuddli && !isBollify && !isBoloo;
                                   
                                   return isDisabled ? (
@@ -983,7 +982,7 @@ const pathname = usePathname();
                     : 'border border-[#111111]/30 text-[#111111] bg-transparent hover:bg-[#111111]/5'
                   }`}
                 >
-                  <Link href="https://app.bolbaas.nl" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://app.baasy.nl" target="_blank" rel="noopener noreferrer">
                     Naar app
                   </Link>
                 </Button>
@@ -995,7 +994,7 @@ const pathname = usePathname();
                       : 'bg-[#111111] text-white hover:bg-black/80'
                   }`}
                 >
-                  <Link href="https://app.bolbaas.nl/registreren" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://app.baasy.nl/registreren" target="_blank" rel="noopener noreferrer">
                     Probeer gratis
                   </Link>
                 </Button>

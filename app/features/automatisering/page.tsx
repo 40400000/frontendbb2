@@ -26,22 +26,22 @@ import { Automatiseringanimation } from "@/components/automatisering-animation";
 import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 
 export const metadata: Metadata = {
-  title: "Automatisering - Bolbaas",
+  title: "Automatisering - Baasy",
   description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
   openGraph: {
-    title: "Automatisering - Bolbaas",
+    title: "Automatisering - Baasy",
     description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Automatisering Open Graph Image',
+        alt: 'Baasy Automatisering Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Automatisering - Bolbaas",
+    title: "Automatisering - Baasy",
     description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
@@ -212,7 +212,7 @@ export default function AutomatiseringPage() {
                   className="bg-[#111111] text-white text-[15px] md:text-[16px] leading-[20px] md:leading-[22px] font-normal hover:bg-[#111111]/90 px-5 md:px-7 py-3 md:py-3.5 h-auto rounded-xl"
                 >
                   <Link 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -255,7 +255,7 @@ export default function AutomatiseringPage() {
                 </div>
               </div>
 
-              {/* Step 2 - Bolbaas Step */}
+              {/* Step 2 - Baasy Step */}
               <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-blue-500" />
@@ -264,7 +264,7 @@ export default function AutomatiseringPage() {
                 
                 <div className="space-y-3">
                   <h3 className="text-[16px] leading-[20px] font-normal text-blue-900">
-                    Bolbaas maakt factuur
+                    Baasy maakt factuur
                   </h3>
                   <p className="text-[14px] leading-[18px] font-normal text-blue-700">
                     Voor de klant wordt automatisch een BTW factuur gemaakt
@@ -274,16 +274,16 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div>
 
-              {/* Step 3 - Bolbaas Step */}
+              {/* Step 3 - Baasy Step */}
               <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <Upload className="w-5 h-5 text-blue-500" />
@@ -302,16 +302,16 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div>
 
-              {/* Step 4 - Bolbaas Step */}
+              {/* Step 4 - Baasy Step */}
               <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <Database className="w-5 h-5 text-blue-500" />
@@ -330,12 +330,12 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div>
             </div>
@@ -386,7 +386,7 @@ export default function AutomatiseringPage() {
                   fontStyle: 'normal',
                 }}
               >
-                "Door Bolbaas kunnen wij ons focussen op ondernemen, en niet op de boekhouding."
+                "Door Baasy kunnen wij ons focussen op ondernemen, en niet op de boekhouding."
               </blockquote>
 
               <div
@@ -419,8 +419,8 @@ export default function AutomatiseringPage() {
                   Vestuur bol review e-mails
                 </h2>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                  Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je bol.com productpagina. 
-                  Verbeter je ranking, verhoog je conversie en blijf binnen alle bol.com richtlijnen!
+                  Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina op bol. 
+                  Verbeter je ranking, verhoog je conversie en blijf binnen alle richtlijnen die bol heeft opgesteld voor partners!
                 </p>
               </div>
             </div>
@@ -450,7 +450,7 @@ export default function AutomatiseringPage() {
                 </div>
               </div> */}
 
-              {/* Step 2 - Bolbaas Step */}
+              {/* Step 2 - Baasy Step */}
               {/* <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-blue-500" />
@@ -469,12 +469,12 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div> */}
 
@@ -515,7 +515,7 @@ export default function AutomatiseringPage() {
                 </div>
               </div> */}
 
-              {/* Step 4 - Bolbaas Step */}
+              {/* Step 4 - Baasy Step */}
               {/* <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <LineChart className="w-5 h-5 text-blue-500" />
@@ -534,7 +534,7 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
@@ -573,7 +573,7 @@ export default function AutomatiseringPage() {
               BTW automatisering
             </h2>
             <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-              Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Bolbaas regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.
+              Nooit meer stress over BTW-aangiftes of zoekraken van facturen. Baasy regelt alles automatisch, zodat je rustig kunt slapen en focussen op wat je leuk vindt: ondernemen.
             </p>
           </div>
 
@@ -593,7 +593,7 @@ export default function AutomatiseringPage() {
                   BTW aangifte automatisch berekend.
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
-                  Bolbaas berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.
+                  Baasy berekent de BTW op basis van jouw orders en rekent facturen van bol zelf mee. Zo weet je altijd precies hoeveel BTW je moet betalen.
                 </p>
               </div>
 
@@ -609,7 +609,7 @@ export default function AutomatiseringPage() {
                   BTW facturen automatisch opgeslagen.
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-md">
-                  Jouw persoonlijke boekhouder. Bolbaas bewaart alle facturen van jouw orders en van bol.
+                  Jouw persoonlijke boekhouder. Baasy bewaart alle facturen van jouw orders en van bol.
                 </p>
               </div>
 
@@ -620,7 +620,7 @@ export default function AutomatiseringPage() {
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-4 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <Link 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -675,7 +675,7 @@ export default function AutomatiseringPage() {
                 </div>
               </div>
 
-              {/* Step 2 - Bolbaas stelt op */}
+              {/* Step 2 - Baasy stelt op */}
               <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 space-y-4 shadow-md shadow-blue-500/10">
                 <div className="flex items-center gap-3">
                   <FileText className="w-5 h-5 text-blue-500" />
@@ -684,7 +684,7 @@ export default function AutomatiseringPage() {
                 
                 <div className="space-y-3">
                   <h3 className="text-[16px] leading-[20px] font-normal text-blue-900">
-                    Bolbaas stelt BTW-aangifte op
+                    Baasy stelt BTW-aangifte op
                   </h3>
                   <p className="text-[14px] leading-[18px] font-normal text-blue-700">
                     Wij stellen een complete BTW-aangifte voor bol op.
@@ -694,12 +694,12 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div>
 
@@ -712,7 +712,7 @@ export default function AutomatiseringPage() {
                 
                 <div className="space-y-3">
                   <h3 className="text-[16px] leading-[20px] font-normal text-blue-900">
-                    Bolbaas bewaart alles 7 jaar
+                    Baasy bewaart alles 7 jaar
                   </h3>
                   <p className="text-[14px] leading-[18px] font-normal text-blue-700">
                     Al jouw facturen en aangiftes worden veilig bewaard voor de Belastingdienst.
@@ -722,12 +722,12 @@ export default function AutomatiseringPage() {
                 <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-blue-900">
                   <Image 
                     src="/icon-512x512.png" 
-                    alt="Bolbaas logo" 
+                    alt="Baasy logo" 
                     width={20} 
                     height={20} 
                     className="flex-shrink-0"
                   />
-                  <span>Geregeld door Bolbaas</span>
+                  <span>Geregeld door Baasy</span>
                 </div>
               </div>
 

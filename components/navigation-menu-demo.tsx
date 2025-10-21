@@ -134,7 +134,7 @@ const featureCategories: {
         title: "Keyword database",
         description: "Geavanceerde keywordonderzoek op basis van meer dan 12 miljoen keywords en producten",
         icon: "Search",
-        href: "/features/tools#bolbaas-database",
+        href: "/features/tools#baasy-database",
         highlight: true,
       },
       {
@@ -296,14 +296,14 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
           <div className="relative w-full h-full overflow-hidden text-white">
             <Image
               src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape_saturnus_ring-7XP26BfqyIei6Htoe3bKyGCLXztD4E.png"
-              alt="Bolbaas AI Tools Achtergrond"
+              alt="Baasy AI Tools Achtergrond"
               fill
               sizes="200px"
               quality={80}
               style={{ objectFit: 'cover' }}
               priority
             />
-            <SidebarContent title="Bolbaas AI Tools" subtitle="" />
+            <SidebarContent title="Baasy AI Tools" subtitle="" />
           </div>
         </Link>
         <div className="flex flex-1 gap-0">
@@ -396,14 +396,14 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                  <div className="relative w-full h-full overflow-hidden text-white">
                    <Image
                      src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshapes_waves-2IT1fSqB0PF3nYQ4v1kl1wnzRS5Jep.png"
-                     alt="Bolbaas Automatisering Achtergrond"
+                     alt="Baasy Automatisering Achtergrond"
                      fill
                      sizes="200px"
                      quality={80}
                      style={{ objectFit: 'cover' }}
                      priority
                    />
-                   <SidebarContent title="Bolbaas Automatisering" subtitle="" />
+                   <SidebarContent title="Baasy Automatisering" subtitle="" />
                 </div>
               </Link>
                <div className="flex flex-1 gap-0">
@@ -468,14 +468,14 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                  <div className="relative w-full h-full overflow-hidden text-white">
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape4_dp-DWgpSDrHRewQcM4gRPYaBvJXfSEwJI.png"
-                      alt="Bolbaas Data Inzichten Achtergrond"
+                      alt="Baasy Data Inzichten Achtergrond"
                       fill
                       sizes="200px"
                       quality={80}
                       style={{ objectFit: 'cover' }}
                       priority
                     />
-                    <SidebarContent title="Bolbaas Data Inzichten" subtitle="" />
+                    <SidebarContent title="Baasy Data Inzichten" subtitle="" />
                 </div>
              </Link>
                <div className="flex flex-1 gap-0">
@@ -540,14 +540,14 @@ function MenuContent({ activeMenu }: { activeMenu: MenuId }) {
                  <div className="relative w-full h-full overflow-hidden text-white">
                     <Image
                       src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/randomshape3_infinity-RQwVTN6n7sFsxxOBmFe5NbkKjawrI8.png"
-                      alt="Bolbaas Educatie Achtergrond"
+                      alt="Baasy Educatie Achtergrond"
                       fill
                       sizes="200px"
                       quality={80}
                       style={{ objectFit: 'cover' }}
                       priority
                     />
-                    <SidebarContent title="Bolbaas Educatie" subtitle="Leer van de experts" />
+                    <SidebarContent title="Baasy Educatie" subtitle="Leer van de experts" />
                 </div>
               </Link>
                <div className="grid grid-cols-4 flex-1">
@@ -672,7 +672,7 @@ export function NavigationMenuDemo() {
   };
 
   const handlePrijzenClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === '/waarom-ons/bolbaas-vs-bolmate') {
+    if (pathname === '/waarom-ons/baasy-vs-bolmate') {
       e.preventDefault();
       const prijzenSection = document.getElementById('prijzen');
       if (prijzenSection) {
@@ -796,7 +796,7 @@ export function NavigationMenuDemo() {
         <Link href="/" className="flex-shrink-0" onClick={() => isMobileMenuOpen && toggleMobileMenu()}>
             <Image
             src={navbarMode === 'light' ? darkLogoUrl : lightLogoUrl}
-            alt="Bolbaas Logo"
+            alt="Baasy Logo"
             width={180} 
             height={48} 
             priority
@@ -902,7 +902,7 @@ export function NavigationMenuDemo() {
                         </Link>
                     </li>
                     <li className="flex items-center space-x-2 ml-auto list-none pl-2">
-                        <Link href="https://app.bolbaas.nl/inloggen" passHref>
+                        <Link href="https://app.baasy.nl/inloggen" passHref>
                           <Button variant="outline"
                           className={cn(
                             navbarMode === 'light' 
@@ -959,7 +959,7 @@ export function NavigationMenuDemo() {
             <Link href="/contact" className={cn(commonMobileLinkClasses, mobileLinkHoverClasses, mobileTextColor)} onClick={toggleMobileMenu}>Contact</Link>
             
             <div className={cn("pt-4 mt-4 border-t", mobileBorderClass)}>
-                <Link href="https://app.bolbaas.nl/inloggen" passHref>
+                <Link href="https://app.baasy.nl/inloggen" passHref>
                   <Button variant="outline" className={cn(
                     "w-full mb-2 bg-transparent cursor-pointer rounded-lg", 
                     navbarMode === 'light' 

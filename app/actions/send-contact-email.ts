@@ -15,7 +15,7 @@ export async function sendContactEmail(
   const email = formData.get('email') as string;
   const question = formData.get('question') as string;
   const foundVia = formData.get('foundVia') as string;
-  const infoEmail = 'info@bolbaas.nl';
+  const infoEmail = 'info@baasy.nl';
   console.log('  Email:', email);
   console.log('  Question:', question);
   console.log('  FoundVia:', foundVia);
@@ -44,7 +44,7 @@ export async function sendContactEmail(
   try {
     console.log('[Server Action] Attempting to send email via Resend...');
     const { data, error } = await resend.emails.send({
-      from: 'Bolbaas contact form <contactform@bolbaas.nl>', // Replace with your verified Resend domain/email
+      from: 'Baasy contact form <contactform@baasy.nl>', // Replace with your verified Resend domain/email
       to: infoEmail,
       subject: 'Nieuwe contactformulier inzending',
       replyTo: infoEmail,
@@ -53,7 +53,7 @@ export async function sendContactEmail(
         <p><strong>E-mail/Telefoon:</strong> ${email}</p>
         <p><strong>Vraag:</strong></p>
         <p>${question.replace(/\n/g, '<br>')}</p>
-        <p><strong>Hoe Bolbaas gevonden:</strong> ${foundVia || 'Niet opgegeven'}</p>
+        <p><strong>Hoe Baasy gevonden:</strong> ${foundVia || 'Niet opgegeven'}</p>
       `,
     });
 

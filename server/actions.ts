@@ -109,10 +109,10 @@ export async function createAppointment(
     console.log(`Attempting to send appointment confirmation email to: ${data.contactInfo} for appointment ID: ${newAppointmentId}`);
     try {
       const { data: emailData, error: emailErrorResponse } = await resend.emails.send({
-        from: 'Bolbaas <afspraak@bolbaas.nl>',
+        from: 'Baasy <afspraak@baasy.nl>',
         to: [data.contactInfo],
-        bcc: ['info@bolbaas.nl'],
-        replyTo: 'info@bolbaas.nl',
+        bcc: ['info@baasy.nl'],
+        replyTo: 'info@baasy.nl',
         subject: 'Afspraak bevestigd ✓',
         react: AppointmentConfirmationEmail({
           name: data.name,
@@ -194,10 +194,10 @@ export async function addToWaitlist(
 
     // Send confirmation email
     await resend.emails.send({
-      from: 'Bolbaas Wachtlijst <wachtlijst@bolbaas.nl>',
+      from: 'Baasy Wachtlijst <wachtlijst@baasy.nl>',
       to: [email],
-      bcc: ['info@bolbaas.nl'],
-      replyTo: 'info@bolbaas.nl',
+      bcc: ['info@baasy.nl'],
+      replyTo: 'info@baasy.nl',
       subject: 'Je staat op de wachtlijst 🎉',
       react: WaitlistConfirmationEmail({ 
         email, 

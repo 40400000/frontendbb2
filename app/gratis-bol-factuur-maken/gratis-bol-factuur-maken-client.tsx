@@ -216,7 +216,7 @@ export function GratisBolFactuurMakenClient() {
         logoUrl: invoiceData.invoiceData.logoUrl
       })
 
-      const apiUrl = 'https://app.bolbaas.nl/api/generate-invoice'
+      const apiUrl = 'https://app.baasy.nl/api/generate-invoice'
       console.log('🌐 Making request to:', apiUrl)
       
       const requestOptions = {
@@ -406,7 +406,7 @@ export function GratisBolFactuurMakenClient() {
   // Sample data for preview
   const getSampleData = () => ({
     businessInfo: {
-      bedrijfsnaam: businessInfo.bedrijfsnaam || 'BolBaas BV',
+      bedrijfsnaam: businessInfo.bedrijfsnaam || 'Baasy BV',
       adres: businessInfo.adres || 'Voorbeeldstraat 123',
       postcode: businessInfo.postcode || '1234AB',
       stad: businessInfo.stad || 'Amsterdam',
@@ -586,7 +586,7 @@ export function GratisBolFactuurMakenClient() {
                     id="bedrijfsnaam"
                     value={businessInfo.bedrijfsnaam}
                     onChange={(e) => updateBusinessInfo('bedrijfsnaam', e.target.value)}
-                    placeholder="BolBaas BV"
+                    placeholder="Baasy BV"
                     className="text-[#111111] border-[#ECECEC] focus:border-[#CFCFCF] rounded-xl"
                   />
                 </div>

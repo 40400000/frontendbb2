@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://bolbaas.nl'; // Ensure this is your production URL
+  const baseUrl = 'https://baasy.nl'; // Ensure this is your production URL
   const today = new Date().toISOString();
 
   return [

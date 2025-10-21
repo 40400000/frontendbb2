@@ -7,22 +7,22 @@ import { InteractiveTopicSection } from "@/components/interactive-topic-section"
 import { MiddleContentSection } from "@/components/middle-content-section";
 
 export const metadata: Metadata = {
-  title: "Wachtlijst - Bolbaas",
+  title: "Wachtlijst - Baasy",
   description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
   openGraph: {
-    title: "Wachtlijst - Bolbaas",
+    title: "Wachtlijst - Baasy",
     description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Wachtlijst Open Graph Image',
+        alt: 'Baasy Wachtlijst Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Bolbaas Wachtlijst",
+    title: "Baasy Wachtlijst",
     description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
@@ -69,10 +69,10 @@ export default function WachtlijstPage() {
               <div className="sm:col-start-3 sm:col-span-1 flex items-center justify-start px-4 sm:px-0 py-3 sm:py-1">
                 <Mail strokeWidth={1.4} className="h-5 w-5 pr-1 text-white flex-shrink-0" />
                 <a 
-                  href="mailto:info@bolbaas.nl" 
+                  href="mailto:info@baasy.nl" 
                   className="text-white hover:text-gray-400 transition-colors text-sm"
                 >
-                  info@bolbaas.nl
+                  info@baasy.nl
                 </a>
                 <ContactStatusDots type="email" />
               </div>
@@ -86,7 +86,7 @@ export default function WachtlijstPage() {
             <div className="grid grid-cols-1 sm:grid-cols-4 w-full">
               <div className="col-span-1 sm:col-span-2 flex flex-col items-start space-y-3 md:space-y-4 w-full">
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50 w-[60%]">
-                  Join de bèta van Bolbaas.
+                  Join de bèta van Baasy.
                 </h1>
                 <p className="w-[71.4%]">
                   Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.

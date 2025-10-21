@@ -10,23 +10,23 @@ import { ContactForm } from "@/components/contact-form";
 import { AppointmentForm } from "@/components/appointment-form";
 
 export const metadata: Metadata = {
-  title: "Contact - Bolbaas",
-  description: "Neem contact op met Bolbaas. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
+  title: "Contact - Baasy",
+  description: "Neem contact op met Baasy. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
   openGraph: {
-    title: "Contact - Bolbaas",
-    description: "Neem contact op met Bolbaas. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
+    title: "Contact - Baasy",
+    description: "Neem contact op met Baasy. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Contact Open Graph Image',
+        alt: 'Baasy Contact Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Contacteer Bolbaas",
-    description: "Stel je vragen of plan een gesprek. Bolbaas helpt je graag verder met data en automatisering voor bol.",
+    title: "Contacteer Baasy",
+    description: "Stel je vragen of plan een gesprek. Baasy helpt je graag verder met data en automatisering voor bol.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
 };
@@ -73,10 +73,10 @@ export default function ContactPage() {
                     <div className="text-white/70 text-sm font-medium mb-1">Email</div>
                     <div className="flex items-center gap-3">
                       <a 
-                        href="mailto:info@bolbaas.nl" 
+                        href="mailto:info@baasy.nl" 
                         className="text-white hover:text-white/80 transition-colors font-medium text-lg"
                       >
-                        info@bolbaas.nl
+                        info@baasy.nl
                       </a>
                       <ContactStatusDots type="email" />
                     </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </h1>
                 
                 <p className="text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-8 md:mb-10">
-                  Ook als je nog geen klant van Bolbaas bent. Samen naar het volgende niveau.
+                  Ook als je nog geen klant van Baasy bent. Samen naar het volgende niveau.
                 </p>
 
                 <Link 

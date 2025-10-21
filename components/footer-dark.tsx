@@ -27,13 +27,13 @@ export function FooterDark() {
     { title: 'Automatisering', href: '/features/automatisering' },
     { title: 'Store prestaties', href: '/features/store-prestaties' },
     { title: 'Product tracking', href: '/features/tools#product-tracking' },
-    { title: 'Keyword database', href: '/features/tools#bolbaas-database', badge: 'NIEUW' },
+    { title: 'Keyword database', href: '/features/tools#baasy-database', badge: 'NIEUW' },
     { title: 'Ranking AI', href: '/features/tools#ranking-ai' },
   ];
 
   const whyUsLinks: FooterLink[] = [
     { title: 'Prijzen', href: '/prijzen' },
-    { title: 'Bolbaas vs. Bolmate', href: '/waarom-ons/bolbaas-vs-bolmate' },
+    { title: 'Baasy vs. Bolmate', href: '/waarom-ons/baasy-vs-bolmate' },
     { title: 'Partner worden', href: '/partner-worden' },
     { title: 'Educatie & Blog', href: '/blog' },
     { title: 'Contact', href: '/contact' },
@@ -86,7 +86,7 @@ export function FooterDark() {
             <Link href="/" className="flex items-center mb-6">
               <Image
                 src="/iconnavbar-mode2.png"
-                alt="Bolbaas"
+                alt="Baasy"
                 width={120}
                 height={40}
                 className=""
@@ -166,7 +166,7 @@ export function FooterDark() {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/60">
-              © 2025 Bolbaas
+              © 2025 Baasy
             </p>
             
             <div className="flex flex-wrap gap-6 text-sm text-white/60">

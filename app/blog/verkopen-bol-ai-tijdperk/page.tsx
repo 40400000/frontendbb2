@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent - Bolbaas",
+  title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent - Baasy",
   description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
   openGraph: {
     title: "Verkopen op bol.com in het AI tijdperk: hoe je met Ranking AI de concurrentie voor bent",
@@ -162,8 +162,8 @@ export default function BlogPostPage() {
 
                 <p className="text-lg text-[#111111] mb-6">ChatGPT is een goede start, maar voor echte resultaten op bol.com heb je realtime data en gespecialiseerde AI-modellen nodig. Data over wat werkt, wanneer het werkt, en waarom het werkt. Precies dat is wat onze Ranking AI doet.</p>
 
-                <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">Waarom Bolbaas Ranking AI beter werkt dan ChatGPT</h2>
-                <p className="text-lg text-[#111111] mb-6">De Bolbaas Ranking AI is een model dat getraind is op bol.com data. Het gebruikt realtime data van keywords om te zorgen dat jij de perfecte listing krijgt. Zo kijkt onze AI bijvoorbeeld naar de best presterende concurrenten, zoektrends, gedrag van klanten en meer.</p>
+                <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">Waarom Baasy Ranking AI beter werkt dan ChatGPT</h2>
+                <p className="text-lg text-[#111111] mb-6">De Baasy Ranking AI is een model dat getraind is op bol.com data. Het gebruikt realtime data van keywords om te zorgen dat jij de perfecte listing krijgt. Zo kijkt onze AI bijvoorbeeld naar de best presterende concurrenten, zoektrends, gedrag van klanten en meer.</p>
 
                 <div className="bg-green-50 p-6 rounded-lg border border-green-200 mb-8">
                   <h4 className="font-semibold text-lg mb-3 text-[#111111]">✅ Wat je direct krijgt met Ranking AI:</h4>

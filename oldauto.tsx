@@ -137,7 +137,7 @@ export default function AutomatiseringPage() {
 
               <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl my-6">Minder werk, meer omzet: <br /> bol store automatisering die werkt.
               </h2>
-              <p className="mb-4 text-base">Werk slimmer, niet harder. Laat Bolbaas je store automatiseren en groeien.</p>
+              <p className="mb-4 text-base">Werk slimmer, niet harder. Laat Baasy je store automatiseren en groeien.</p>
             </div>
 
           </section> {/* End bleed section */}
@@ -201,7 +201,7 @@ export default function AutomatiseringPage() {
                   <Download className="h-4 w-4 mr-1 ml-1" strokeWidth={1.5} /> {/* Added icon */}
                   Gegevens opgehaald
                 </p> {/* Main text - Larger */}
-                <p className="text-sm mt-1 text-white">Bolbaas haalt orderinformatie op</p> {/* Subtitle - Updated styling */}
+                <p className="text-sm mt-1 text-white">Baasy haalt orderinformatie op</p> {/* Subtitle - Updated styling */}
               </div>
               {/* Number 3 */}
               <div className="w-1/4 p-0 text-md"> {/* Added text-sm */}
@@ -226,8 +226,8 @@ export default function AutomatiseringPage() {
 
           <div className="relative text-white row-span-2 w-[35%] pt-5 z-65"> {/* Make this span 2 rows - Added relative and z-65 */}
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatisch facturen uploaden naar bol</h2>
-                <p className="mb-4 text-base">Bespaar tijd en voorkom fouten door facturen automatisch naar het bol platform te uploaden. Bolbaas integreert naadloos met je verkoopaccount.</p>
-                <p className="text-base">Zodra een bestelling is verwerkt en de factuur is gegenereerd, zorgt Bolbaas ervoor dat deze direct en correct wordt geüpload, conform de eisen van bol.</p>
+                <p className="mb-4 text-base">Bespaar tijd en voorkom fouten door facturen automatisch naar het bol platform te uploaden. Baasy integreert naadloos met je verkoopaccount.</p>
+                <p className="text-base">Zodra een bestelling is verwerkt en de factuur is gegenereerd, zorgt Baasy ervoor dat deze direct en correct wordt geüpload, conform de eisen van bol.</p>
               </div>
 
 
@@ -294,7 +294,7 @@ export default function AutomatiseringPage() {
               <div className="text-white col-span-2"> {/* Added col-span-2 */}
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Automatiseer e-mails, voorkom klantvragen en ontvang meer reviews</h2>
                 <p className="mb-4 text-base">Verstuur automatisch gepersonaliseerde e-mails om klanten proactief te informeren over hun bestelling en verzending. Dit vermindert het aantal klantvragen aanzienlijk.</p>
-                <p className="text-base">Stimuleer positieve klantervaringen en verzamel automatisch meer productreviews. Bolbaas stroomlijnt je aftersales, zodat jij kunt focussen op de groei van je bedrijf.</p>
+                <p className="text-base">Stimuleer positieve klantervaringen en verzamel automatisch meer productreviews. Baasy stroomlijnt je aftersales, zodat jij kunt focussen op de groei van je bedrijf.</p>
               </div>
 
               {/* Row 1, Column 3: Empty (25%) */}

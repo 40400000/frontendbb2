@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogThemeHandler } from "@/components/blog-theme-handler";
 
 export const metadata: Metadata = {
-  title: "Privacy statement - Bolbaas",
+  title: "Privacy statement - Baasy",
   description:
-    "Kort privacy statement van Bolbaas: jouw data blijft altijd van jou. Geen verkoop of eigen gebruik; we verwerken uitsluitend voor functies die jij gebruikt.",
+    "Kort privacy statement van Baasy: jouw data blijft altijd van jou. Geen verkoop of eigen gebruik; we verwerken uitsluitend voor functies die jij gebruikt.",
 };
 
 export default function PrivacyPage() {
@@ -103,7 +103,7 @@ export default function PrivacyPage() {
                 <ul>
                   <li><strong>Toestemming</strong>: je koppelt je bol store via OAuth/bol API. We gebruiken tokens om data te synchroniseren voor door jou ingeschakelde functies.</li>
                   <li><strong>Intrekken</strong>: trek je tokens in of verbreek je de koppeling, dan stopt synchronisatie direct.</li>
-                  <li><strong>Verwijdering</strong>: verwijderen van historische sync‑data gebeurt alleen op verzoek via <Link href="mailto:info@bolbaas.nl">info@bolbaas.nl</Link> en is binnen 24 uur geregeld.</li>
+                  <li><strong>Verwijdering</strong>: verwijderen van historische sync‑data gebeurt alleen op verzoek via <Link href="mailto:info@baasy.nl">info@baasy.nl</Link> en is binnen 24 uur geregeld.</li>
                 </ul>
 
                 <h2 className="mt-10 text-2xl sm:text-3xl font-semibold">Automatisering/AI</h2>
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
                 <div className="mt-4 mb-6 h-px w-1/3 bg-gradient-to-r from-border via-border/50 to-transparent" />
                 <ul>
                   <li>Inzage, rectificatie, verwijdering, beperking en dataportabiliteit.</li>
-                  <li>Stuur je verzoek naar <Link href="mailto:info@bolbaas.nl">info@bolbaas.nl</Link>. We reageren snel en handelen verwijderverzoeken binnen 24 uur af. Export verzoeken kunnen tot 5 werkdagen duren.</li>
+                  <li>Stuur je verzoek naar <Link href="mailto:info@baasy.nl">info@baasy.nl</Link>. We reageren snel en handelen verwijderverzoeken binnen 24 uur af. Export verzoeken kunnen tot 5 werkdagen duren.</li>
                 </ul>
 
                 <p className="mt-6">

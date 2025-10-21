@@ -22,22 +22,22 @@ import { Animatedbadge } from "@/components/animatedbadge";
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata: Metadata = {
-  title: "Research tools - Bolbaas",
+  title: "Research tools - Baasy",
   description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
   openGraph: {
-    title: "Research tools - Bolbaas",
+    title: "Research tools - Baasy",
     description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
     images: [
       {
         url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
         width: 1200,
         height: 630,
-        alt: 'Bolbaas Research Tools Open Graph Image',
+        alt: 'Baasy Research Tools Open Graph Image',
       },
     ],
   },
   twitter: {
-    title: "Research tools - Bolbaas",
+    title: "Research tools - Baasy",
     description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
     images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
   },
@@ -98,7 +98,7 @@ export default function ToolsPage() {
       </section>
 
       {/* Database Section */}
-      <section id="bolbaas-database" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
+      <section id="baasy-database" className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-left mb-8 md:mb-12">
@@ -154,7 +154,7 @@ export default function ToolsPage() {
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -232,7 +232,7 @@ export default function ToolsPage() {
                   className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -284,7 +284,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-3 text-[12px] leading-[16px] font-normal text-white py-1 bg-white/10 px-3 rounded-xl mt-6">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={32} 
                   height={32} 
                   className="flex-shrink-0"
@@ -317,7 +317,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-3 text-[12px] leading-[16px] font-normal text-white py-1 bg-white/10 px-3 rounded-xl mt-6">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={32} 
                   height={32} 
                   className="flex-shrink-0"
@@ -350,7 +350,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-3 text-[12px] leading-[16px] font-normal text-white py-1 bg-white/10 px-3 rounded-xl mt-6">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={32} 
                   height={32} 
                   className="flex-shrink-0"
@@ -383,7 +383,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-3 text-[12px] leading-[16px] font-normal text-white py-1 bg-white/10 px-3 rounded-xl mt-6">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={32} 
                   height={32} 
                   className="flex-shrink-0"
@@ -432,7 +432,7 @@ export default function ToolsPage() {
                   className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -494,7 +494,7 @@ export default function ToolsPage() {
                   className="bg-[#111111] text-white text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-[#111111]/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -534,7 +534,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-[#111111]">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -562,7 +562,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-[#111111]">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -590,7 +590,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-[#111111]">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -618,7 +618,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-[#111111]">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -640,7 +640,7 @@ export default function ToolsPage() {
               CPC Tracker
             </h2>
             <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 max-w-2xl">
-              Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod. Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen.
+              Optimaliseer je biedstrategie met data, volg niet alleen het gemiddelde bod. Baasy analyseert elk keyword elk uur om het beste bod te bepalen.
             </p>
           </div>
 
@@ -660,7 +660,7 @@ export default function ToolsPage() {
                   Win keywords met lagere biedingen.
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-white/70 md:max-w-md">
-                  Bolbaas analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst.
+                  Baasy analyseert elk keyword elk uur om het beste bod te bepalen. Win keywords met lagere biedingen, verlaag ACoS en verhoog winst.
                 </p>
               </div>
 
@@ -671,7 +671,7 @@ export default function ToolsPage() {
                   className="bg-white text-[#111111] text-[13px] md:text-[14px] leading-[18px] md:leading-[20px] font-normal hover:bg-white/90 px-3 md:px-6 py-2.5 md:py-3 h-auto rounded-xl"
                 >
                   <a 
-                    href="https://app.bolbaas.nl/registreren"
+                    href="https://app.baasy.nl/registreren"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -711,7 +711,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-white">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -739,7 +739,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-white">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -767,7 +767,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-white">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -795,7 +795,7 @@ export default function ToolsPage() {
               <div className="flex items-center gap-2 text-[12px] leading-[16px] font-normal text-white">
                 <Image 
                   src="/icon-512x512.png" 
-                  alt="Bolbaas logo" 
+                  alt="Baasy logo" 
                   width={20} 
                   height={20} 
                   className="flex-shrink-0"
@@ -833,7 +833,7 @@ export default function ToolsPage() {
                   A/B testen
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                  Test nieuwe listings, Bolbaas houdt automatisch de prestaties bij. Zo weet je altijd wat de beste listing is.
+                  Test nieuwe listings, Baasy houdt automatisch de prestaties bij. Zo weet je altijd wat de beste listing is.
                 </p>
               </div>
 
@@ -902,7 +902,7 @@ export default function ToolsPage() {
               className="bg-[#111111] text-white text-[14px] leading-[20px] font-normal hover:bg-[#111111]/90 px-6 py-3 h-auto rounded-xl"
             >
               <a 
-                href="https://app.bolbaas.nl/registreren"
+                href="https://app.baasy.nl/registreren"
                 target="_blank"
                 rel="noopener noreferrer"
               >
