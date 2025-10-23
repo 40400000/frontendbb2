@@ -40,7 +40,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://baasy.nl'), // Replace with your actual domain in production
   title: {
-    default: "Baasy - data en automatisering voor bol partners",
+    default: "Baasy - Automatisering & AI research tools voor bol.com partners",
     template: "%s",
   },
   description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 14 dagen gratis.",
