@@ -15,7 +15,7 @@ import { ReviewAutomationGrid } from "@/components/review-automation-grid";
 import { DatabaseGrid } from "@/components/database-grid";
 
 export const metadata = {
-  title: "Baasy - AI software voor bol.com partners | Automatisering & Keyword Research",
+  title: "Baasy - Automatisering & AI research tools voor bol.com partners",
   description: "AI software voor bol.com partners: automatiseer emails & facturen, 12M+ keyword database, product tracking. Verhoog omzet met data-inzichten en store automatisering. Probeer 14 dagen gratis.",
   keywords: [
     "bol.com partner software",
