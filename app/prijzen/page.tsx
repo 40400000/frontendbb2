@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Bekijk de Baasy abonnementen en word founding member voor exclusieve voordelen.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Prijzen Open Graph Image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Prijzen - Baasy",
     description: "Bekijk de Baasy abonnementen en word founding member voor exclusieve voordelen.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

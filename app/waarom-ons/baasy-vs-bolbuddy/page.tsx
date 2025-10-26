@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
+        url: "https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png",
         width: 1200,
         height: 630,
         alt: "Baasy vs Bolbuddy - Het beste alternatief voor bol partners",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Baasy vs Bolbuddy: Het Beste Alternatief voor Bol Partners",
     description: "Vergelijk Baasy met Bolbuddy. Tevreden partners, 12M+ keywords, meer functies en AI automatisering.",
-    images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
+    images: ["https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png"],
   },
   robots: {
     index: true,

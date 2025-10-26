@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Maak BTW facturen voor je Bol bestellingen. Vul de gegevens in en zie direct een live preview van je factuur.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Gratis Bol factuur maken Open Graph Image',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Gratis BTW factuur maken - Baasy",
     description: "Maak BTW facturen voor je Bol bestellingen. Vul de gegevens in en zie direct een live preview van je factuur.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Automatisering Open Graph Image',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Automatisering - Baasy",
     description: "Automatiseer je bol store. Focus op ondernemen en groei. Automatische e-mail campagnes, BTW facturen uploaden en meer.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

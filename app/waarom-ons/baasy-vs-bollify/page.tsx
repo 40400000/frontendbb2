@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png",
+        url: "https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png",
         width: 1200,
         height: 630,
         alt: "Baasy vs Bollify - Het beste alternatief voor bol partners",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Baasy vs Bollify: Het Beste Alternatief voor Bol Partners",
     description: "Vergelijk Baasy met Bollify. Tevreden partners, 12M+ keywords, onbeperkte orders en AI automatisering.",
-    images: ["https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png"],
+    images: ["https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png"],
   },
   robots: {
     index: true,

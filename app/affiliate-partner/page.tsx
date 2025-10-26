@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       description: "Word affiliate partner van Baasy. Verdien met Bol coaches, communities en influencers. Samen groeien in de Bol ecosystem.",
       images: [
         {
-          url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+          url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
           width: 1200,
           height: 630,
           alt: 'Baasy Affiliate Partner Open Graph Image',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     twitter: {
       title: "Affiliate partner worden - Baasy",
       description: "Word affiliate partner van Baasy. Verdien met Bol coaches, communities en influencers.",
-      images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+      images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
     },
   };
 

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Research Tools Open Graph Image',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Research tools - Baasy",
     description: "AI gedreven research tools, gebaseerd op miljoenen geanalyseerde producten en keywords.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Krijg diepgaande data inzichten in je bol prestaties met Baasy. Analyseer product prestaties, maak custom dashboards en beheer bestellingen.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Data Inzichten Open Graph Image',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Store prestaties - Baasy",
     description: "Krijg volledig inzicht in je bol store prestaties met de data tools van Baasy.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

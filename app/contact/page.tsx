@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Neem contact op met Baasy. Wij staan stand-by, ook als je nog geen klant bent. Samen naar het volgende niveau.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Contact Open Graph Image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Contacteer Baasy",
     description: "Stel je vragen of plan een gesprek. Baasy helpt je graag verder met data en automatisering voor bol.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 

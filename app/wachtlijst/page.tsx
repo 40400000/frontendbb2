@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
     images: [
       {
-        url: 'https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png',
+        url: 'https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png',
         width: 1200,
         height: 630,
         alt: 'Baasy Wachtlijst Open Graph Image',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Baasy Wachtlijst",
     description: "Krijg een voorsprong op je concurrenten. Schrijf je in en ontvang als eerste exclusieve toegang tot onze tool.",
-    images: ['https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/frontend/openGraphImage-tTIUrEjUXMWiho6PBlQhwBGhEnD6Zg.png'],
+    images: ['https://glrob7hsjras0ozc.public.blob.vercel-storage.com/baasy_opengraph.png'],
   },
 };
 
