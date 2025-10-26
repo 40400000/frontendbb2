@@ -47,7 +47,7 @@ PRIJZEN              </span>
             <h1 className="text-[45px] leading-[45px] font-normal text-black tracking-tight mb-6">
 Word founding member         </h1>
             <p className="text-[16px] leading-[21px] font-normal text-gray-600 max-w-md mx-auto mb-8">
-                Korting voor de eerste leden, voor altijd. <br /> Wij hebben het juiste plan voor jouw bol avontuur.
+                Korting voor de eerste leden, voor altijd. <br /> Wij hebben het juiste plan voor jouw avontuur.
             </p>
             
             {/* Founding Member Banner */}
@@ -68,7 +68,7 @@ Word founding member         </h1>
                   Start
                 </h3>
                 <p className="text-[14px] leading-[18px] font-normal text-gray-600">
-                  Voor ambitieuze beginners die hun bol avontuur willen lanceren.
+                  Voor ambitieuze beginners die hun avontuur willen lanceren.
                 </p>
               </div>
 

@@ -116,7 +116,7 @@ export default function ToolsPage() {
               Research Database
             </h2>
             <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-              Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.
+              Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database, by far.
             </p>
           </div>
 
@@ -816,7 +816,7 @@ export default function ToolsPage() {
               Andere features
             </h2>
             <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70 max-w-2xl">
-              Automatiseer je Bol strategie met slimme tools die je tijd besparen en je winst verhogen.
+              Automatiseer je strategie met slimme tools die je tijd besparen en je winst verhogen.
             </p>
           </div>
 
@@ -887,7 +887,7 @@ export default function ToolsPage() {
                   Project management
                 </h3>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/70">
-                  Breng getrackte producten en keywords onder in verschillende projecten. Maak een project aan voor een product research of voor een klant van jouw bol agency.
+                  Breng getrackte producten en keywords onder in verschillende projecten. Maak een project aan voor een product research of voor een klant van jouw agency.
                 </p>
               </div>
 

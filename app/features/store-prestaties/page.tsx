@@ -201,7 +201,7 @@ export default function StorePrestatiesPage() {
                   <span className="text-xs font-mono text-white/60 tracking-wider">02</span>
                 </div>
                 <div className="mb-6">
-                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors min-h-[3.5rem] flex items-start">Hoe klanten jouw product vinden op Bol</h3>
+                  <h3 className="font-semibold text-white text-xl mb-3 group-hover:text-white transition-colors min-h-[3.5rem] flex items-start">Hoe klanten jouw product vinden</h3>
                   <div className="flex items-start gap-3">
                     <svg className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

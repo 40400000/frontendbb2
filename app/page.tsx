@@ -174,7 +174,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                  Automatische bol facturen
+                  Automatische facturen
                 </h3>
               </div>
 
@@ -269,10 +269,10 @@ export default function HomePage() {
                 </span>
               </div>
               <h2 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
-                Vestuur bol.com review e-mails
+                Vestuur review e-mails
               </h2>
               <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina op bol. 
+                Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina. 
                 Verbeter je ranking, verhoog je conversie en blijf binnen alle richtlijnen die bol heeft opgesteld voor partners!
               </p>
             </div>
@@ -299,7 +299,7 @@ export default function HomePage() {
           </div>
           <h2 className="text-3xl md:text-4xl font-medium mb-5 md:mb-6">Product research <br/> op een <i>nieuw</i> niveau.</h2>
           <p className="mx-auto text-white/85 font-normal text-sm md:text-base leading-[18px] md:leading-[21px]">
-          Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far.          </p>
+          Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database, by far.          </p>
         </div>
 
         {/* Database Grid */}
@@ -511,7 +511,7 @@ export default function HomePage() {
                 Waarom heb ik automatisering nodig als bol-verkoper?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Reviews zijn cruciaal voor groei op bol.com - meer dan 65% van kopers leest reviews voordat ze kopen. Het probleem? Tevreden klanten laten zelden uit zichzelf een review achter, terwijl ontevreden klanten dat wél doen. Door actief reviewverzoeken te versturen houd je dit in balans. Studies tonen aan dat 80% van alle reviews voortkomt uit e-mail follow-ups. Daarnaast kost handmatig facturen maken veel tijd - tijd die je beter kunt besteden aan je groei.
+                Reviews zijn cruciaal voor groei - meer dan 65% van kopers leest reviews voordat ze kopen. Het probleem? Tevreden klanten laten zelden uit zichzelf een review achter, terwijl ontevreden klanten dat wél doen. Door actief reviewverzoeken te versturen houd je dit in balans. Studies tonen aan dat 80% van alle reviews voortkomt uit e-mail follow-ups. Daarnaast kost handmatig facturen maken veel tijd - tijd die je beter kunt besteden aan je groei.
               </p>
             </div>
 
@@ -531,7 +531,7 @@ export default function HomePage() {
                 Is mijn data veilig bij Baasy?
               </h3>
               <p className="text-[14px] md:text-[15px] leading-[20px] md:leading-[22px] text-[#111111]/70">
-                Ja, security staat bij ons voorop. Alle gevoelige data wordt versleuteld opgeslagen in zowel productie als back-ups. We gebruiken alleen beveiligde HTTPS-verbindingen en jouw wachtwoord wordt met dubbele encryptie opgeslagen. Betalingen lopen via Stripe - wij slaan geen betaalgegevens op. Je API-sleutels kun je altijd zelf intrekken in je bol verkoper-omgeving.
+                Ja, security staat bij ons voorop. Alle gevoelige data wordt versleuteld opgeslagen in zowel productie als back-ups. We gebruiken alleen beveiligde HTTPS-verbindingen en jouw wachtwoord wordt met dubbele encryptie opgeslagen. Betalingen lopen via Stripe - wij slaan geen betaalgegevens op. Je API-sleutels kun je altijd zelf intrekken op het partnerplatform.
               </p>
             </div>
 

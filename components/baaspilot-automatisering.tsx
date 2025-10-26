@@ -66,7 +66,7 @@ export function BaaspilotAutomatisering() {
                 </span>
               </div>
               <h3 className="text-[45px] leading-[45px] font-normal text-white tracking-tight max-w-lg">
-                Jouw copiloot voor bol.
+                Jouw copiloot.
               </h3>
               <p className="text-[16px] leading-[21px] font-normal text-white/70 max-w-md">
                 Baaspilot houdt je op de hoogte van alle belangrijkste gebeurtenissen in jouw store en getrackte producten. Van nieuwe reviews tot prijswijzigingen van concurrenten.

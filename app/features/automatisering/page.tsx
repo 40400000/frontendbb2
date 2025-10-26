@@ -139,7 +139,7 @@ export default function AutomatiseringPage() {
                   </span>
                 </div>
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                  Automatische bol facturen
+                  Automatische facturen
                 </h3>
               </div>
 
@@ -295,7 +295,7 @@ export default function AutomatiseringPage() {
                     Upload naar Bol & e-mail
                   </h3>
                   <p className="text-[14px] leading-[18px] font-normal text-blue-700">
-                    De factuur wordt geüpload naar bol.com en optioneel naar de klant gemaild.
+                    De factuur wordt geüpload naar bol en optioneel naar de klant gemaild.
                   </p>
                 </div>
 
@@ -416,10 +416,10 @@ export default function AutomatiseringPage() {
                   </span>
                 </div>
                 <h2 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight">
-                  Vestuur bol review e-mails
+                  Vestuur review e-mails
                 </h2>
                 <p className="text-sm md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-md">
-                  Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina op bol. 
+                  Verstuur automatisch reviewverzoeken een week na levering met een directe link naar je productpagina. 
                   Verbeter je ranking, verhoog je conversie en blijf binnen alle richtlijnen die bol heeft opgesteld voor partners!
                 </p>
               </div>

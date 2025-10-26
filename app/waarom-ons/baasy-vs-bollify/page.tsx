@@ -320,7 +320,7 @@ export default function HomePage() {
 
                 {/* Subtitle */}
                 <p className="text-[14px] md:text-[16px] leading-[18px] md:leading-[21px] font-normal text-[#111111]/80 max-w-2xl">
-                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. Een van de grootste databases voor bol.
+                  Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. Een van de grootste databases.
                 </p>
               </div>
 
@@ -478,7 +478,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h3 className="text-[28px] md:text-[45px] leading-[32px] md:leading-[45px] font-normal text-[#111111] tracking-tight max-w-lg">
-                  Automatische bol facturen
+                  Automatische facturen
                 </h3>
               </div>
 

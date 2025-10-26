@@ -45,7 +45,7 @@ This document provides a detailed summary of the content, messaging, and strateg
 *   **Key Sections (In Order):**
 
     1.  **BTW Facturen Automatisering:**
-        *   Headline: "Automatische bol facturen"
+        *   Headline: "Automatische facturen"
         *   Shows video demo of invoice automation
         *   Three key benefits with checkmarks:
             *   Proactief versturen naar bol (prevents customer questions)
@@ -54,7 +54,7 @@ This document provides a detailed summary of the content, messaging, and strateg
         *   CTA: "14 dagen gratis" → app.baasy.nl
 
     2.  **Email Campagnes:**
-        *   Headline: "Verstuur bol.com review e-mails"
+        *   Headline: "Verstuur review e-mails"
         *   Subheadline: Automatic review requests one week after delivery with direct product links
         *   Feature cards showcasing:
             *   Reviewverzoeken (get more reviews automatically)
@@ -65,7 +65,7 @@ This document provides a detailed summary of the content, messaging, and strateg
     3.  **Research Database (Dark Section):**
         *   Badge: "NIEUW - Research database"
         *   Headline: "Product research op een *nieuw* niveau."
-        *   Subheadline: "Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database voor bol, by far."
+        *   Subheadline: "Ontdek welke keywords en producten écht werken, met 12 miljoen geanalyseerde zoektermen en miljarden datapunten. De grootste database, by far."
         *   Large visual showcasing database interface
         *   CTA: "Onze database"
 
@@ -267,7 +267,7 @@ This document provides a detailed summary of the content, messaging, and strateg
     *   "Maandelijks opzegbaar" (monthly cancellation) to reduce commitment anxiety
 
 *   **Key Phrases & Slogans:**
-    *   "De grootste database voor bol, by far"
+    *   "De grootste database, by far"
     *   "Product research op een nieuw niveau"
     *   "Focus op groei en ondernemen door data en automatisering"
     *   "De zekerheid van data en automatisering voor bol partners"
