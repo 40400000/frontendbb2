@@ -197,7 +197,7 @@ Word founding member         </h1>
                   <Animatedbadge label="POPULAIR" />
                 </div>
                 <p className="text-[14px] leading-[18px] font-normal text-gray-600">
-                  De perfecte toolkit voor verkopers die klaar zijn voor serieuze groei.
+                  De perfecte toolkit voor partners die klaar zijn voor serieuze groei.
                 </p>
               </div>
 
@@ -323,7 +323,7 @@ Word founding member         </h1>
                   Pro
                 </h3>
                 <p className="text-[14px] leading-[18px] font-normal text-gray-600">
-                  Voor bol ondernemers en agencies die willen excelleren.
+                  Voor partners en agencies die willen excelleren.
                 </p>
               </div>
 

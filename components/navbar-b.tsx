@@ -650,7 +650,7 @@ const pathname = usePathname();
                         <div className={`text-[13px] leading-[16px] mt-1 ${
                           isDarkMode ? 'text-white/60' : 'text-[rgba(17,17,17,0.6)]'
                         }`}>
-                          Maak gratis BTW facturen voor je Bol bestellingen
+                          Maak gratis BTW facturen voor je bol bestellingen
                         </div>
                       </div>
                     </Link>
