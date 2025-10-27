@@ -15,7 +15,7 @@ export default function BlogPage() {
       description: "50.000+ verkopers op bol.com, maar AI geeft je het voordeel. Ontdek hoe onze Ranking AI je producten automatisch optimaliseert voor betere vindbaarheid en meer verkopen.",
       author: "Thijmen Dreef",
       date: "22 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png",
+      imageUrl: "",
       href: "/blog/verkopen-bol-ai-tijdperk",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
@@ -24,7 +24,7 @@ export default function BlogPage() {
       description: "Wil je gaan verkopen op bol.com? Deze complete gids legt uit welke wettelijke verplichtingen je hebt, welke documenten je nodig hebt en hoe je alles correct opzet.",
       author: "Thijmen Dreef",
       date: "15 juli 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/partnerstartblog.png",
+      imageUrl: "",
       href: "/blog/starten-als-bol-partner-in-2025",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
@@ -33,7 +33,7 @@ export default function BlogPage() {
       description: "Belgische bestelling van een zakelijke klant? Geen btw rekenen! We leggen uit wat het betekent en hoe je de btw correct berekent, zonder stress.",
       author: "Thijmen Dreef",
       date: "28 juni 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/icpfactuurblog2.png",
+      imageUrl: "",
       href: "/blog/btw-aangifte-bol-icp",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
@@ -42,7 +42,7 @@ export default function BlogPage() {
       description: "Je hebt een topproduct, maar de reviewteller staat op nul. Volg dit stappenplan voor direct resultaat.",
       author: "Thijmen Dreef",
       date: "12 juni 2025",
-      imageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/reviewblog.png",
+      imageUrl: "",
       href: "/blog/meer-reviews-op-bol",
       authorImageUrl: "https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/blogfoto.JPG",
     },
@@ -74,8 +74,8 @@ export default function BlogPage() {
       {/* Featured Post Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Left Column - Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-12">
+            {/* Content */}
             <div className="flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-medium px-3 py-1 rounded-xl mb-4 w-fit">
                 Nieuwste artikel
@@ -111,18 +111,6 @@ export default function BlogPage() {
               </div>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="flex items-center">
-              <Link href={featuredPost.href} className="block w-full">
-                <Image
-                  src={featuredPost.imageUrl}
-                  alt={featuredPost.title}
-                  width={600}
-                  height={400}
-                  className="object-contain rounded-2xl aspect-[3/2] transition-transform hover:scale-105 w-full bg-gray-50"
-                />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -142,15 +130,6 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherPosts.map((post) => (
               <div key={post.href} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <Link href={post.href} className="block">
-                  <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    width={400}
-                    height={240}
-                    className="object-contain w-full aspect-[5/3] transition-transform hover:scale-105 bg-gray-50"
-                  />
-                </Link>
                 <div className="p-6">
                   <p className="text-sm text-[#111111]/60 mb-2">{post.date}</p>
                   <h3 className="text-lg md:text-xl font-medium mb-3 leading-tight text-[#111111]">

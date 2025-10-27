@@ -61,15 +61,6 @@ export default function BlogPostPage() {
           <div className="max-w-none mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="sm:col-start-1 sm:col-span-4">
-                <div className="mb-8">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/reviewblog.png"
-                    alt={post.title}
-                    width={420}
-                    height={420}
-                    className="rounded-lg aspect-square object-cover w-full max-w-md mx-auto invert"
-                  />
-                </div>
                 <p className="text-lg text-[#111111] mb-6">Je hebt een topproduct, maar de reviewteller staat op nul. Frustrerend, want je ziet concurrenten met tientallen beoordelingen wel verkopen. Je weet dat je hierdoor omzet misloopt - studies tonen aan dat producten met reviews 270% vaker worden gekocht.</p>
                     
                 <div className="bg-red-50 p-6 rounded-xl border border-red-200 mb-6">
@@ -314,16 +305,6 @@ export default function BlogPostPage() {
 
                 <p className="text-lg text-[#111111] mb-6">Focus je energie daarom op wat je wél kunt beïnvloeden: productreviews. Dat is waar klanten op letten en waar jij de controle over hebt. Baasy zorgt er automatisch voor dat de juiste productreview-link in elke e-mail komt te staan.</p>
 
-                <div className="mt-16">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Baasy automatische email campagnes dashboard"
-                    width={1200}
-                    height={800}
-                    className="rounded-lg"
-                  />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard toont real-time de prestaties van je reviewcampagnes</p>
-                </div>
 
                 <div className="mt-16 pt-10 border-t border-gray-200 text-center">
                   <h3 className="text-2xl font-semibold text-[#111111]">Klaar om direct meer reviews te verzamelen?</h3>

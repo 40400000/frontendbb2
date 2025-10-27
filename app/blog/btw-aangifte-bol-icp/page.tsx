@@ -61,15 +61,6 @@ export default function BlogPostPage() {
           <div className="max-w-none mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="sm:col-start-1 sm:col-span-4">
-                <div className="mb-8">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/icpfactuurblog2.png"
-                    alt={post.title}
-                    width={420}
-                    height={420}
-                    className="rounded-lg aspect-square object-cover w-full max-w-md mx-auto invert"
-                  />
-                </div>
                 <p className="text-lg text-[#111111] mb-6">Je krijgt je factuurspecificatie van bol.com binnen en ziet ineens: 'intracommunautaire levering'. Wat betekent dit precies? En hoe ga je hiermee om in je btw-aangifte? Voor veel ondernemers is dit een bron van verwarring en stress, maar het hoeft niet ingewikkeld te zijn.</p>
                 <p className="text-lg text-[#111111] mb-6">Simpel gezegd: bol.com laat de btw-berekening aan jou over bij bestellingen naar andere EU-landen. Zij kennen de btw-tarieven van jouw producten niet, dus jij bent verantwoordelijk voor de juiste btw-afdracht. Dit betekent handmatig uitzoeken welke producten welk tarief hebben - en dat is precies waar het mis gaat voor veel sellers.</p>
                     
@@ -217,16 +208,6 @@ export default function BlogPostPage() {
 
                 <p className="text-lg text-[#111111] mb-6">Daarnaast krijg je met automatisering real-time inzicht in je werkelijke winstmarges. Je kunt vooruit plannen met betrouwbare cijfers in plaats van achteraf verrast worden door btw-correcties.</p>
                     
-                <div className="mt-16">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Baasy automatische btw-aangifte dashboard"
-                    width={1200}
-                    height={800}
-                    className="rounded-lg"
-                  />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard toont al je btw-gegevens overzichtelijk per periode</p>
-                </div>
 
                 <h2 className="text-[28px] md:text-[36px] leading-[32px] md:leading-[40px] font-normal text-[#111111] mt-10 mb-6">5. Meer dan alleen btw: complete financiële controle</h2>
                 <p className="text-lg text-[#111111] mb-6">Onze automatische btw-tool is onderdeel van een compleet pakket voor bol.com sellers. Naast btw-berekeningen krijg je ook:</p>

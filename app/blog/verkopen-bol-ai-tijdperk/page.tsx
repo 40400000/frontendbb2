@@ -80,15 +80,6 @@ export default function BlogPostPage() {
           <div className="max-w-none mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="sm:col-start-1 sm:col-span-4">
-                <div className="mb-8">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/RANKINGAIBLOG_BG.png"
-                    alt={post.title}
-                    width={420}
-                    height={420}
-                    className="rounded-lg aspect-square object-cover w-full max-w-md mx-auto invert"
-                  />
-                </div>
                 <p className="text-lg text-[#111111] mb-6">Je hebt het vast gemerkt: bol.com wordt steeds drukker. Meer dan 50.000 actieve verkopers vechten om dezelfde klanten. Waar je vroeger met een beetje SEO-kennis al op pagina 1 kon komen, is de concurrentie nu veel groter. De vraag is niet meer óf je tools nodig hebt, maar welke tools je echt een groot voordeel geven.</p>
                 <p className="text-lg text-[#111111] mb-6">Hier komt AI om de hoek kijken. Nee geen ChatGPT (wrapper), maar modellen die speciaal getraind zijn voor bol.com listings. Terwijl andere verkopers nog handmatig hun listings optimaliseren, analyseert onze Ranking AI in real-time wat werkt en wat niet.</p>
                     

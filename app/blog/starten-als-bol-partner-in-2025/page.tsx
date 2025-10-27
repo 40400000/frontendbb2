@@ -61,15 +61,6 @@ export default function BlogPostPage() {
           <div className="max-w-none mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-4">
               <div className="sm:col-start-1 sm:col-span-4">
-                <div className="mb-8">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/partnerstartblog.png"
-                    alt={post.title}
-                    width={420}
-                    height={420}
-                    className="rounded-lg aspect-square object-cover w-full max-w-md mx-auto invert"
-                  />
-                </div>
                 <p className="text-lg text-[#111111] mb-6">Je wilt gaan ondernemen en verkopen op bol.com. Gaaf, vele successen zijn al geboekt door je toekomstige concullega's! Maar voordat je je eerste product online zet, moet je aan verschillende wettelijke eisen voldoen. Lang leven regeltjes... KVK-inschrijving, btw-registratie, factuurverplichtingen - het voelt overweldigend. Wat heb je écht nodig om te starten, en hoe kan je zo snel mogelijk beginnen met ondernemen?</p>
                 <p className="text-lg text-[#111111] mb-6">Het probleem is dat veel nieuwe verkopers beginnen zonder de juiste papieren op orde te hebben. Gevolg? Problemen met bol partnerservice, Belastingdienst, boetes, en (zakelijke)klanten die hun facturen niet krijgen. Daarom is goede voorbereiding, ook op bol, het halve werk..</p>
                     
@@ -413,16 +404,6 @@ export default function BlogPostPage() {
                   </div>
                 </div>
 
-                <div className="mt-16">
-                  <Image
-                    src="https://vhtnlfbnq3ecybmn.public.blob.vercel-storage.com/Scherm%C2%ADafbeelding%202025-07-21%20om%2016.30.38.png"
-                    alt="Baasy btw-aangifte dashboard voor bol.com partners"
-                    width={1200}
-                    height={800}
-                    className="rounded-lg"
-                  />
-                  <p className="text-sm text-center text-[#111111]/60 mt-2">Het Baasy dashboard houdt automatisch alle btw-eisen in de gaten</p>
-                </div>
 
                 <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mb-6 mt-12">
                   <h4 className="font-semibold text-lg mb-3 text-[#111111]">✅ Praktische checklist: ben je klaar voor de start?</h4>
