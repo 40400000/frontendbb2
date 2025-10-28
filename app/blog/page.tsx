@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { EducationDisclaimer } from "@/components/education-disclaimer";
 
 export const metadata: Metadata = {
   title: "Educatie - Baasy",
@@ -67,6 +68,7 @@ export default function BlogPage() {
             <p className="mx-auto max-w-2xl text-sm md:text-lg leading-[20px] md:leading-[24px] opacity-70 mb-8 md:mb-10">
               Artikelen en inzichten over gebruik van AI voor bol.com partners, automatisering, en alles wat je nodig hebt om te groeien op bol.com.
             </p>
+            <EducationDisclaimer />
           </div>
         </div>
       </section>

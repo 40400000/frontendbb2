@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
+import { EducationDisclaimer } from "@/components/education-disclaimer";
 
 export const metadata: Metadata = {
   title: "Bol.com partner worden: alle wettelijke eisen en administratie op een rij (6 essentiële stappen) - Baasy",
@@ -51,6 +52,7 @@ export default function BlogPostPage() {
                 </div>
               </div>
             </div>
+            <EducationDisclaimer />
           </div>
         </div>
       </section>

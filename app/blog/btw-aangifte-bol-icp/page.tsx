@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
+import { EducationDisclaimer } from "@/components/education-disclaimer";
 
 export const metadata: Metadata = {
   title: "Je bol.com btw-aangifte een chaos? 'Intracommunautaire levering' uitgelegd - Baasy",
@@ -51,6 +52,7 @@ export default function BlogPostPage() {
                 </div>
               </div>
             </div>
+            <EducationDisclaimer />
           </div>
         </div>
       </section>
